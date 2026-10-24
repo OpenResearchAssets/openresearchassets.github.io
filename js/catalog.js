@@ -34,20 +34,24 @@
         '<span class="ora-curated-mark">'+safe(tr('原创分析图','ORIGINAL ANALYSIS'))+'</span></div>';
     }
     if (rights.preview==='original-svg' && /^assets\/templates\/[\w-]+\.svg$/.test(entry.links?.editable || '')) {
-      return '<div class="ora-preview ora-template"><img loading="lazy" decoding="async" alt="'+safe(tr('原创可编辑 SVG','Editable original SVG'))+'" src="'+safe(entry.links.editable)+'"></div>';
+      return '<div class="ora-preview ora-template"><img loading="lazy" decoding="async" alt="'+safe(tr('原创可编辑 SVG','Editable original SVG'))+'" src="'+safe(entry.links.editable)+'"><span class="ora-curated-mark">'+safe(tr('原创可编辑 · SVG','EDITABLE ORIGINAL · SVG'))+'</span></div>';
     }
     if(entry.kind==='resource-index') {
-      const words=(local(entry.keywords)||[]).slice(0,3);
-      return '<div class="ora-preview ora-editorial-index"><div class="ora-index-art"><span>'+safe(tr('检索与资源索引','RESEARCH RESOURCE INDEX'))+'</span>'+
-        '<strong>'+safe(entry.title)+'</strong>'+
-        '<div class="ora-index-rule"></div><div class="ora-index-keywords">'+words.map(w=>'<em>'+safe(w)+'</em>').join('')+'</div>'+
-        '</div><span class="ora-curated-mark">'+safe(tr('资源目录 · 有来源','CURATED DIRECTORY'))+'</span></div>';
+      const terms=(local(entry.keywords)||[]).slice(0,3);
+      return '<div class="ora-preview ora-directory"><div class="ora-cover-panel"><div class="ora-cover-eyebrow">'+
+        safe(tr('RESOURCE DIRECTORY  /  EXPLORE','RESOURCE DIRECTORY  /  EXPLORE'))+'</div>'+
+        '<strong class="ora-cover-heading">'+safe(entry.title)+'</strong>'+
+        '<div class="ora-directory-hits">'+terms.map((w,i)=>'<div class="ora-hit"><b>'+String(i+1).padStart(2,'0')+'</b><span>'+safe(w)+'</span><i></i></div>').join('')+'</div></div>'+
+        '<span class="ora-curated-mark">'+safe(tr('外部资源 · 参考','EXTERNAL REFERENCE'))+'</span></div>';
     }
     if(entry.kind==='workflow') {
+      const skill=entry.id==='quality-critic-skill';
       const lessons=(local(entry.applicability?.learn)||[]).slice(0,3);
-      return '<div class="ora-preview ora-workflow-art"><div class="ora-workflow-cover"><span>'+safe(tr('实用研究流程','ACTIONABLE RESEARCH PROCESS'))+'</span>'+
-        '<strong>'+safe(entry.title.split('/')[0].trim())+'</strong><div class="ora-flow-list">'+lessons.map((w,i)=>'<div><b>'+String(i+1).padStart(2,'0')+'</b><span>'+safe(w)+'</span></div>').join('')+'</div></div>'+
-        '<span class="ora-curated-mark">'+safe(tr('流程 / Skill','WORKFLOW / SKILL'))+'</span></div>';
+      return '<div class="ora-preview '+(skill?'ora-skill-preview':'ora-workflow-preview')+'"><div class="ora-cover-panel">'+
+        '<div class="ora-cover-eyebrow">'+safe(skill?tr('REVIEW PROTOCOL / SKILL','REVIEW PROTOCOL / SKILL'):tr('RESEARCH WORKFLOW','RESEARCH WORKFLOW'))+'</div>'+
+        '<strong class="ora-cover-heading">'+safe(entry.title.split('/')[0].trim())+'</strong>'+
+        '<div class="ora-cover-steps">'+lessons.map((w,i)=>'<div class="ora-cover-step" title="'+safe(w)+'"><b>'+String(i+1).padStart(2,'0')+'</b><span>'+safe(w)+'</span></div>').join('')+'</div></div>'+
+        '<span class="ora-curated-mark">'+safe(skill?tr('审核规范 · 非自动审图','REVIEW PROTOCOL · MANUAL'):tr('工作流程 · 可阅读','READABLE WORKFLOW'))+'</span></div>';
     }
     return '<div class="ora-preview ora-empty"><span>'+safe(tr('暂无经审查的预览 · 请阅读资产详情','No reviewed preview · Read asset details'))+'</span></div>';
   }
@@ -143,17 +147,20 @@
       '<div class="ora-study-grid"><section><h3>'+safe(tr('视觉与信息结构','Visual / information structure'))+'</h3>'+points(local(study.composition))+'</section>'+
       '<section><h3>'+safe(tr('迁移到自己论文的步骤','How to transfer the design'))+'</h3>'+points(local(study.reuseSteps))+'</section></div>'+
       '<div class="ora-case-check"><h3>'+safe(tr('事实、风险与授权检查','Scientific and rights checks'))+'</h3>'+points(local(study.verification))+'</div></section>' : '';
+    const baseLessons='<div class="ora-lesson"><h2>'+safe(tr('什么时候使用','When to use'))+'</h2>'+points(local(app.use_when))+'</div>'+
+      (study ? '' : '<div class="ora-lesson"><h2>'+safe(tr('值得学习的做法','Transferable lessons'))+'</h2>'+points(local(app.learn))+'</div>'+
+        '<div class="ora-lesson"><h2>'+safe(tr('需要避免','What to avoid'))+'</h2>'+points(local(app.avoid))+'</div>');
+    const rightsNote=e.kind==='editable-template' || (e.kind==='workflow' && e.rights?.third_party_media==='none')
+      ? tr('本站原创资产，不含第三方图像','Original site asset, no third-party image')
+      : tr('仅供学习参考，第三方原图未在本站再分发','Reference only; external artwork not republished');
     detail.innerHTML='<div class="ora-detail-heading"><p class="ora-eyebrow">'+safe(kind(e))+' / '+safe(e.id)+'</p>'+
       '<h1>'+safe(e.title)+'</h1><p>'+safe(local(e.description))+'</p></div>'+
-      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.label))+' · '+safe(tr('请打开官方来源查看原始视觉内容','Open the official source to inspect the original artwork'))+'</p>' : '')+editorial+
-      '<div class="ora-lesson"><h2>'+safe(tr('什么时候使用','When to use'))+'</h2>'+points(local(app.use_when))+'</div>'+
-      '<div class="ora-lesson"><h2>'+safe(tr('值得学习的做法','Transferable lessons'))+'</h2>'+points(local(app.learn))+'</div>'+
-      '<div class="ora-lesson"><h2>'+safe(tr('需要避免','What to avoid'))+'</h2>'+points(local(app.avoid))+'</div></section>'+
+      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.label))+' · '+safe(tr('请打开官方来源查看原始视觉内容','Open the official source to inspect the original artwork'))+'</p>' : '')+baseLessons+editorial+'</section>'+
       '<aside class="ora-detail-sidebar"><h2>'+safe(tr('资产档案','Asset metadata'))+'</h2>'+
       '<dl><dt>'+safe(tr('科研阶段','Stages'))+'</dt><dd>'+e.stages.map(x=>safe(facetText('stages',x))).join(' · ')+'</dd>'+
       '<dt>'+safe(tr('领域','Domains'))+'</dt><dd>'+e.domains.map(x=>safe(facetText('domains',x))).join(' · ')+'</dd>'+
       '<dt>'+safe(tr('使用性质','Reuse'))+'</dt><dd>'+safe(e.rights?.reuse || 'unknown')+'</dd>'+
-      '<dt>'+safe(tr('第三方图片','Third-party media'))+'</dt><dd>'+safe(tr('未在本站重新分发','Not redistributed by this site'))+'</dd></dl>'+
+      '<dt>'+safe(tr('素材来源与边界','Asset media status'))+'</dt><dd>'+safe(rightsNote)+'</dd></dl>'+
       '<div class="ora-detail-links">'+Object.entries(e.links || {}).map(([key,url])=>link(url,{source:tr('原始来源','Original source'),paper:tr('论文','Paper'),officialFigure:tr('在官方媒体服务器查看原图','Open original figure on the official media server'),editable:tr('获取可编辑文件/说明','Editable source / instructions')}[key] || key)).join('')+
       '<a href="catalog/entries/'+encodeURIComponent(e.id)+'.json" target="_blank" rel="noopener noreferrer">'+safe(tr('供 AI 使用的单项 JSON','Single-entry JSON for AI'))+' ↗</a></div>'+
       '<button type="button" id="ora-copy-brief">'+safe(tr('复制给 AI 的使用说明','Copy AI usage brief'))+'</button>'+
