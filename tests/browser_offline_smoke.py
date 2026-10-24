@@ -45,7 +45,7 @@ with sync_playwright() as pw:
         errors=[]
         page.on('pageerror',lambda error:errors.append(str(error)))
         page.route('https://ora.local/assets/**',local_asset)
-        page.route(re.compile(r'^https://(?:depth-anything-3\\.github\\.io|media\\.luminis-sim\\.com|tianxingchen\\.github\\.io|supermimic\\.github\\.io|raw\\.githubusercontent\\.com|opengraph\\.githubassets\\.com)/'),lambda route:route.abort())
+        page.route(re.compile(r'^https://(?:depth-anything-3\.github\.io|media\.luminis-sim\.com|tianxingchen\.github\.io|supermimic\.github\.io|raw\.githubusercontent\.com|opengraph\.githubassets\.com)/'),lambda route:route.abort())
         page.route('https://ora.local/asset.html*',lambda route:route.fulfill(status=200,body=page_html('asset.html'),content_type='text/html'))
         page.set_content(page_html('index.html'),wait_until='load')
         page.locator('.ora-resource-card').first.wait_for()
