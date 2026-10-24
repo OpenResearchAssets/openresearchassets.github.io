@@ -36,3 +36,25 @@ jobs:
           path: tests/_local_*.png
           retention-days: 7
           if-no-files-found: ignore
+
+      - name: Lightweight visual preview for audit
+        if: success()
+        run: |
+          python -m pip install --quiet pillow
+          python - <<'PY'
+          from PIL import Image
+          from io import BytesIO
+          import base64
+          for name in ["home", "detail"]:
+              image = Image.open("tests/_local_" + name + "_desktop.png").convert("RGB")
+              image = image.crop((0, 0, image.width, min(image.height, 2700)))
+              if image.width > 850:
+                  image = image.resize((850, round(image.height*850/image.width)))
+              buffer = BytesIO()
+              image.save(buffer, format="JPEG", quality=57, optimize=True)
+              encoded = base64.b64encode(buffer.getvalue()).decode("ascii")
+              print("ORA_UI_START:" + name)
+              for i in range(0, len(encoded), 4000):
+                  print("ORA_UI_DATA:" + encoded[i:i+4000])
+              print("ORA_UI_END:" + name)
+          PY
