@@ -14,4 +14,4 @@ The visual reference direction is **SuperMimic × Apple**: research evidence and
 
 ## Maintenance
 
-`css/site.css` contains the existing layout and shared components; `css/v2.css` is the current canonical visual layer loaded second. When refactoring, consolidate rather than proliferating versions. The `v2` basename describes the historical migration; new styling should update this layer rather than adding another numbered stylesheet. Original template source artwork may use more colors; do not silently recolor third-party work or trade scientific meaning for monochrome branding.
+`css/site.css` contains the existing layout and shared components; `css/design.css` is the current canonical visual layer loaded second. When refactoring, consolidate rather than proliferating versions. The `v2` basename describes the historical migration; new styling should update this layer rather than adding another numbered stylesheet. Original template source artwork may use more colors; do not silently recolor third-party work or trade scientific meaning for monochrome branding.
