@@ -1,0 +1,72 @@
+{
+  "id": "experiment-planning",
+  "title": "论点驱动的实验规划 / Claim–Evidence Planning",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "experiments",
+    "evaluation"
+  ],
+  "domains": [
+    "general"
+  ],
+  "tasks": [
+    "experiment-planning",
+    "ablation",
+    "claim-evidence"
+  ],
+  "description": {
+    "zh": "建立科学主张到实验、指标、基线和图表的可证伪映射。",
+    "en": "A claim-to-evidence experiment protocol for baselines, ablations and reproducibility."
+  },
+  "keywords": {
+    "zh": [
+      "实验设计",
+      "消融",
+      "论文证据"
+    ],
+    "en": [
+      "experiments",
+      "ablation",
+      "evaluation"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/Suchenl/OpenResearchAssets/blob/main/workflows/experiment-planning.md",
+    "editable": "workflows/experiment-planning.md"
+  },
+  "rights": {
+    "reuse": "original-workflow; check repository policy",
+    "preview": "authored-diagram",
+    "third_party_media": "none"
+  },
+  "previewStyle": "workflow",
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "准备规划主实验与消融实验"
+      ],
+      "en": [
+        "Designing main experiments and ablations"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "先确定公平比较，再固定评估协议"
+      ],
+      "en": [
+        "Freeze evaluation protocols and fair comparisons before interpreting outcomes"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "禁止补造结果或选择性隐藏失败"
+      ],
+      "en": [
+        "Never fabricate results or conceal failures"
+      ]
+    }
+  }
+}

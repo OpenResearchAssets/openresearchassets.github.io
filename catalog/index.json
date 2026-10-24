@@ -400,21 +400,25 @@
         "evidence-storytelling"
       ],
       "description": {
-        "zh": "研究强科学主张与简洁证据如何在首屏形成清晰信息层级。",
-        "en": "A reference for connecting a strong claim with legible first-screen evidence."
+        "zh": "论文 Figure 1 左侧用连续人形运动轨迹展示世界模型 rollout，右侧以 128 L40 GPU 与 1 H100 GPU 的训练投入形成直观对照。",
+        "en": "Paper Figure 1 pairs overlapping humanoid world-model rollouts with a concrete training-compute contrast: 128 L40 GPUs versus one H100 GPU."
       },
       "keywords": {
         "zh": [
           "论文主图",
           "人形机器人",
           "世界模型",
-          "论点证据"
+          "论点证据",
+          "运动轨迹",
+          "GPU 训练投入"
         ],
         "en": [
           "teaser",
           "humanoid",
           "world model",
-          "claim and evidence"
+          "claim and evidence",
+          "world-model rollout",
+          "GPU-hours"
         ]
       },
       "year": "2026",
@@ -439,22 +443,22 @@
         },
         "learn": {
           "zh": [
-            "重要主张应该一眼读懂",
-            "用可验证的结果支持视觉强调"
+            "用左右双栏分别解释方法机制与核心收益",
+            "把视觉冲击力和明确的实验设置、数值证据放在一起"
           ],
           "en": [
-            "Make the main claim legible",
-            "Tie emphasis to verifiable evidence"
+            "Use two panels for the mechanism and the central benefit",
+            "Pair compelling visual evidence with explicit numeric comparisons and experimental conditions"
           ]
         },
         "avoid": {
           "zh": [
-            "不要移植论文结论或其数值",
-            "不要为了戏剧性牺牲严谨性"
+            "异构 GPU 的训练投入不能被误读为严格控制硬件后的纯速度比较",
+            "不可把项目主页的首屏视觉误称为论文 Figure 1"
           ],
           "en": [
-            "Never copy the paper's claims or results",
-            "Do not trade rigor for drama"
+            "Cross-hardware training costs are not a controlled same-hardware speed benchmark",
+            "The website hero and the paper's Figure 1 are distinct assets"
           ]
         }
       },

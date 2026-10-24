@@ -1,0 +1,80 @@
+{
+  "id": "roborender-teaser",
+  "title": "RoboRender · 论文 Teaser",
+  "kind": "visual-reference",
+  "stages": [
+    "writing",
+    "communication"
+  ],
+  "domains": [
+    "robotics",
+    "vision"
+  ],
+  "tasks": [
+    "teaser-design",
+    "visual-comparison"
+  ],
+  "description": {
+    "zh": "以输入、生成结果和视觉条件的对应关系，组织机器人视觉迁移的第一印象。",
+    "en": "Use aligned inputs, generated results and conditions to introduce visual sim-to-real transfer."
+  },
+  "keywords": {
+    "zh": [
+      "论文主图",
+      "视觉迁移",
+      "成对对比",
+      "sim2real"
+    ],
+    "en": [
+      "figure 1",
+      "sim-to-real",
+      "paired comparison",
+      "teaser"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://robo-render.github.io/",
+    "paper": "https://arxiv.org/abs/2610.09254"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "authored-diagram",
+    "third_party_media": "not-republished"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要让读者快速识别输入与输出的视觉差异",
+        "需要对比多个场景或摄像机视角"
+      ],
+      "en": [
+        "Showing visual changes between input and output",
+        "Comparing scenes or camera viewpoints"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "让比较对象有一致排列和标注",
+        "视觉证据先于繁复说明"
+      ],
+      "en": [
+        "Align paired panels and labels",
+        "Lead with visual evidence rather than prose"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不要将合成视觉结果冒充实拍",
+        "不能直接复制未经授权的论文截图"
+      ],
+      "en": [
+        "Never present generated scenes as real captures",
+        "Do not reproduce figures without permission"
+      ]
+    }
+  },
+  "parent": "roborender-site",
+  "previewStyle": "comparison"
+}

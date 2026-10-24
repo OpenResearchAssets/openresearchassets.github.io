@@ -94,7 +94,7 @@
       link(e.links?.source,tr('原始来源','Original source'))+'</div></div></article>').join('') :
       '<p class="empty-state">'+safe(empty())+'</p>';
     const status=document.getElementById('reference-status');
-    if(status)status.textContent=tr('已显示 ','Showing ')+shown.length+' / '+catalog.entries.length
+    if(status)status.textContent=tr('已显示 ','Showing ')+shown.length+' / '+catalog.entries.length+
       tr(' 项 · 第三方图像未复制入库，预览为本站原创结构示意。',' entries · Third-party images are not copied; structural previews are authored.');
     const more=document.getElementById('catalog-more');
     if(more) more.hidden = (shown.length === items.length);

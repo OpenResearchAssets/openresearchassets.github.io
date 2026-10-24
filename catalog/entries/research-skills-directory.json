@@ -1,0 +1,69 @@
+{
+  "id": "research-skills-directory",
+  "title": "Awesome Research Skills",
+  "kind": "resource-index",
+  "stages": [
+    "research",
+    "experiments",
+    "writing"
+  ],
+  "domains": [
+    "general"
+  ],
+  "tasks": [
+    "agent-handoff",
+    "workflow-discovery"
+  ],
+  "description": {
+    "zh": "按研究环节整理的外部 Agent Skills 目录，具体 Skill 需要独立验收。",
+    "en": "Directory of research-agent skills; each workflow requires independent validation."
+  },
+  "keywords": {
+    "zh": [
+      "科研技能",
+      "工具目录",
+      "Agent"
+    ],
+    "en": [
+      "research skills",
+      "agent tools"
+    ]
+  },
+  "year": "Community",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/neverbiasu/awesome-research-skills"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "authored-diagram",
+    "third_party_media": "not-republished"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要了解现有科研 Agent 技能与工具"
+      ],
+      "en": [
+        "Finding existing research-agent workflows and tools"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "优先选择输入输出清晰且可验证的 Skill"
+      ],
+      "en": [
+        "Prefer workflows with defined inputs, outputs and checks"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "目录收录不代表我们实测其有效"
+      ],
+      "en": [
+        "Directory listing is not evidence of independent validation"
+      ]
+    }
+  },
+  "previewStyle": "workflow"
+}

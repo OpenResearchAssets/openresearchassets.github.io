@@ -1,0 +1,74 @@
+{
+  "id": "roborender-site",
+  "title": "RoboRender · 项目主页",
+  "kind": "website-reference",
+  "stages": [
+    "communication"
+  ],
+  "domains": [
+    "robotics",
+    "vision"
+  ],
+  "tasks": [
+    "project-website",
+    "visual-comparison"
+  ],
+  "description": {
+    "zh": "从整体叙事、视频演示和多条件对比观察科研主页如何解释技术价值。",
+    "en": "A project-page reference for scientific storytelling, video demos and condition comparisons."
+  },
+  "keywords": {
+    "zh": [
+      "项目主页",
+      "视频展示",
+      "多视角",
+      "视觉迁移"
+    ],
+    "en": [
+      "project website",
+      "video demo",
+      "multi-view"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://robo-render.github.io/",
+    "paper": "https://arxiv.org/abs/2610.09254"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "authored-diagram",
+    "third_party_media": "not-republished"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要制作展示视觉变换的研究主页"
+      ],
+      "en": [
+        "Building a project page for visual transformation results"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "以直接对比展示方法价值",
+        "把主要演示放在简介附近"
+      ],
+      "en": [
+        "Show value through direct contrasts",
+        "Keep primary demos near the main claim"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不要仅参考视觉设计而忽略科学解释"
+      ],
+      "en": [
+        "Do not copy presentation without validating scientific context"
+      ]
+    }
+  },
+  "parent": "roborender-teaser",
+  "previewStyle": "comparison"
+}

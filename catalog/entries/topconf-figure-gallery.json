@@ -1,0 +1,69 @@
+{
+  "id": "topconf-figure-gallery",
+  "title": "Top-Conf Figure Gallery",
+  "kind": "resource-index",
+  "stages": [
+    "writing"
+  ],
+  "domains": [
+    "general",
+    "vision"
+  ],
+  "tasks": [
+    "figure-discovery",
+    "teaser-design"
+  ],
+  "description": {
+    "zh": "大量论文 Figure 1 检索入口；收录并不意味着图片获得再分发许可。",
+    "en": "Searchable paper Figure 1 gallery; inclusion does not grant image reuse rights."
+  },
+  "keywords": {
+    "zh": [
+      "论文主图",
+      "画廊",
+      "检索"
+    ],
+    "en": [
+      "gallery",
+      "figure 1",
+      "teaser"
+    ]
+  },
+  "year": "Community",
+  "language": "zh+en",
+  "links": {
+    "source": "https://qwdwqfwq.github.io/topconf-paper-figure-gallery/"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "authored-diagram",
+    "third_party_media": "not-republished"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要快速浏览不同论文的 Figure 1 构图"
+      ],
+      "en": [
+        "Finding Figure 1 compositions across papers"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "对照多种视觉叙事模式后再构建自己的图"
+      ],
+      "en": [
+        "Compare varied visual narratives before designing your own"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "先核对原论文与图像使用权"
+      ],
+      "en": [
+        "Verify the original paper and image rights first"
+      ]
+    }
+  },
+  "previewStyle": "gallery"
+}

@@ -1,0 +1,589 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_source": "catalog/index.json",
+  "generated_on": "2026-10-24",
+  "instructions": {
+    "zh": "先匹配此轻量目录，再沿 entry 路径只读取最相关条目。第三方图片默认不可复制。",
+    "en": "Select from this lightweight manifest, then fetch only relevant entry JSON files. External visuals are not licensed for copying by default."
+  },
+  "facets": {
+    "stages": {
+      "research": {
+        "zh": "文献调研",
+        "en": "Literature"
+      },
+      "ideation": {
+        "zh": "研究选题",
+        "en": "Ideation"
+      },
+      "methods": {
+        "zh": "方法设计",
+        "en": "Methods"
+      },
+      "experiments": {
+        "zh": "实验实施",
+        "en": "Experiments"
+      },
+      "evaluation": {
+        "zh": "评估分析",
+        "en": "Evaluation"
+      },
+      "writing": {
+        "zh": "论文写作",
+        "en": "Writing"
+      },
+      "communication": {
+        "zh": "成果展示",
+        "en": "Presentation"
+      }
+    },
+    "kinds": {
+      "visual-reference": {
+        "zh": "论文视觉案例",
+        "en": "Paper visuals"
+      },
+      "website-reference": {
+        "zh": "项目主页案例",
+        "en": "Project sites"
+      },
+      "resource-index": {
+        "zh": "外部资源目录",
+        "en": "Resource directories"
+      },
+      "editable-template": {
+        "zh": "可编辑素材",
+        "en": "Editable templates"
+      },
+      "workflow": {
+        "zh": "工具与工作流",
+        "en": "Tools & workflows"
+      }
+    },
+    "domains": {
+      "general": {
+        "zh": "通用",
+        "en": "General"
+      },
+      "robotics": {
+        "zh": "机器人",
+        "en": "Robotics"
+      },
+      "vision": {
+        "zh": "视觉",
+        "en": "Computer vision"
+      },
+      "rl": {
+        "zh": "强化学习",
+        "en": "Reinforcement learning"
+      }
+    }
+  },
+  "entries": [
+    {
+      "id": "roborender-teaser",
+      "title": "RoboRender · 论文 Teaser",
+      "kind": "visual-reference",
+      "stages": [
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "teaser-design",
+        "visual-comparison"
+      ],
+      "keywords": [
+        "论文主图",
+        "视觉迁移",
+        "成对对比",
+        "sim2real",
+        "figure 1",
+        "sim-to-real",
+        "paired comparison",
+        "teaser"
+      ],
+      "description_zh": "以输入、生成结果和视觉条件的对应关系，组织机器人视觉迁移的第一印象。",
+      "entry": "catalog/entries/roborender-teaser.json"
+    },
+    {
+      "id": "roborender-site",
+      "title": "RoboRender · 项目主页",
+      "kind": "website-reference",
+      "stages": [
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "project-website",
+        "visual-comparison"
+      ],
+      "keywords": [
+        "项目主页",
+        "视频展示",
+        "多视角",
+        "视觉迁移",
+        "project website",
+        "video demo",
+        "multi-view"
+      ],
+      "description_zh": "从整体叙事、视频演示和多条件对比观察科研主页如何解释技术价值。",
+      "entry": "catalog/entries/roborender-site.json"
+    },
+    {
+      "id": "robodojo-teaser",
+      "title": "RoboDojo · 论文总览图",
+      "kind": "visual-reference",
+      "stages": [
+        "writing",
+        "evaluation"
+      ],
+      "domains": [
+        "robotics"
+      ],
+      "tasks": [
+        "teaser-design",
+        "benchmark-presentation"
+      ],
+      "keywords": [
+        "论文主图",
+        "真实机器人",
+        "仿真",
+        "多任务总览",
+        "teaser",
+        "robot benchmark",
+        "sim-and-real",
+        "task overview"
+      ],
+      "description_zh": "用统一的多场景视觉布局解释仿真与真实机器人评估范围。",
+      "entry": "catalog/entries/robodojo-teaser.json"
+    },
+    {
+      "id": "robodojo-site",
+      "title": "RoboDojo · 项目主页",
+      "kind": "website-reference",
+      "stages": [
+        "communication",
+        "evaluation"
+      ],
+      "domains": [
+        "robotics"
+      ],
+      "tasks": [
+        "project-website",
+        "benchmark-presentation"
+      ],
+      "keywords": [
+        "主页设计",
+        "实验展示",
+        "机器人",
+        "任务画廊",
+        "website",
+        "robotics",
+        "gallery",
+        "evaluation"
+      ],
+      "description_zh": "参考任务画廊、真实演示与项目叙事的组织，帮助大量实验内容保持可读。",
+      "entry": "catalog/entries/robodojo-site.json"
+    },
+    {
+      "id": "supermimic-teaser",
+      "title": "SuperMimic · 论文主图",
+      "kind": "visual-reference",
+      "stages": [
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "rl"
+      ],
+      "tasks": [
+        "teaser-design",
+        "evidence-storytelling"
+      ],
+      "keywords": [
+        "论文主图",
+        "人形机器人",
+        "世界模型",
+        "论点证据",
+        "运动轨迹",
+        "GPU 训练投入",
+        "teaser",
+        "humanoid",
+        "world model",
+        "claim and evidence",
+        "world-model rollout",
+        "GPU-hours"
+      ],
+      "description_zh": "论文 Figure 1 左侧用连续人形运动轨迹展示世界模型 rollout，右侧以 128 L40 GPU 与 1 H100 GPU 的训练投入形成直观对照。",
+      "entry": "catalog/entries/supermimic-teaser.json"
+    },
+    {
+      "id": "supermimic-site",
+      "title": "SuperMimic · 项目主页",
+      "kind": "website-reference",
+      "stages": [
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "rl"
+      ],
+      "tasks": [
+        "project-website",
+        "evidence-storytelling"
+      ],
+      "keywords": [
+        "主页设计",
+        "交互展示",
+        "冷白极简",
+        "视觉叙事",
+        "website",
+        "editorial design",
+        "minimal",
+        "storytelling"
+      ],
+      "description_zh": "冷白、黑色大标题、宽松留白与分段证据；主页的视觉节奏服务于科研论证。",
+      "entry": "catalog/entries/supermimic-site.json"
+    },
+    {
+      "id": "topconf-figure-gallery",
+      "title": "Top-Conf Figure Gallery",
+      "kind": "resource-index",
+      "stages": [
+        "writing"
+      ],
+      "domains": [
+        "general",
+        "vision"
+      ],
+      "tasks": [
+        "figure-discovery",
+        "teaser-design"
+      ],
+      "keywords": [
+        "论文主图",
+        "画廊",
+        "检索",
+        "gallery",
+        "figure 1",
+        "teaser"
+      ],
+      "description_zh": "大量论文 Figure 1 检索入口；收录并不意味着图片获得再分发许可。",
+      "entry": "catalog/entries/topconf-figure-gallery.json"
+    },
+    {
+      "id": "awesome-academic-figures",
+      "title": "Awesome Academic Figures",
+      "kind": "resource-index",
+      "stages": [
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "figure-discovery",
+        "agent-handoff"
+      ],
+      "keywords": [
+        "论文配图",
+        "参考包",
+        "Agent",
+        "paper figures",
+        "reference pack",
+        "agent"
+      ],
+      "description_zh": "跨论文视觉参考与 Agent 辅助整理工作流的目录。",
+      "entry": "catalog/entries/awesome-academic-figures.json"
+    },
+    {
+      "id": "figure-atlas",
+      "title": "Figure Atlas",
+      "kind": "resource-index",
+      "stages": [
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "editable-figure",
+        "figure-discovery"
+      ],
+      "keywords": [
+        "可编辑",
+        "科研图元",
+        "SVG",
+        "editable",
+        "SVG",
+        "figure components"
+      ],
+      "description_zh": "科研图元和可编辑组成部分的外部索引，具体许可逐项判断。",
+      "entry": "catalog/entries/figure-atlas.json"
+    },
+    {
+      "id": "ml-visuals",
+      "title": "ML Visuals",
+      "kind": "resource-index",
+      "stages": [
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "editable-figure"
+      ],
+      "keywords": [
+        "机器学习插画",
+        "幻灯片",
+        "ML visuals",
+        "slides"
+      ],
+      "description_zh": "机器学习视觉内容社区资源，可作为开放协作及可编辑交付形式的参考。",
+      "entry": "catalog/entries/ml-visuals.json"
+    },
+    {
+      "id": "research-skills-directory",
+      "title": "Awesome Research Skills",
+      "kind": "resource-index",
+      "stages": [
+        "research",
+        "experiments",
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "agent-handoff",
+        "workflow-discovery"
+      ],
+      "keywords": [
+        "科研技能",
+        "工具目录",
+        "Agent",
+        "research skills",
+        "agent tools"
+      ],
+      "description_zh": "按研究环节整理的外部 Agent Skills 目录，具体 Skill 需要独立验收。",
+      "entry": "catalog/entries/research-skills-directory.json"
+    },
+    {
+      "id": "teaser-story",
+      "title": "对照式 Teaser 模板",
+      "kind": "editable-template",
+      "stages": [
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "teaser-design",
+        "editable-figure"
+      ],
+      "keywords": [
+        "原创",
+        "可编辑",
+        "SVG",
+        "original",
+        "editable",
+        "SVG"
+      ],
+      "description_zh": "原创 SVG 概念模板，适合把关键视觉对比排在一起。",
+      "entry": "catalog/entries/teaser-story.json"
+    },
+    {
+      "id": "method-flow",
+      "title": "三阶段方法流程模板",
+      "kind": "editable-template",
+      "stages": [
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "method-diagram",
+        "editable-figure"
+      ],
+      "keywords": [
+        "原创",
+        "可编辑",
+        "SVG",
+        "original",
+        "editable",
+        "SVG"
+      ],
+      "description_zh": "原创 SVG 概念模板，含三个步骤和反馈关系。",
+      "entry": "catalog/entries/method-flow.json"
+    },
+    {
+      "id": "results-panel",
+      "title": "结果对照面板模板",
+      "kind": "editable-template",
+      "stages": [
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "results-figure",
+        "editable-figure"
+      ],
+      "keywords": [
+        "原创",
+        "可编辑",
+        "SVG",
+        "original",
+        "editable",
+        "SVG"
+      ],
+      "description_zh": "原创 SVG 概念模板，数值均为占位符。",
+      "entry": "catalog/entries/results-panel.json"
+    },
+    {
+      "id": "quality-critic-skill",
+      "title": "Quality Critic · 人工审核与 Agent 指南",
+      "kind": "workflow",
+      "stages": [
+        "writing",
+        "evaluation"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "quality-review",
+        "agent-handoff"
+      ],
+      "keywords": [
+        "质量自查",
+        "论文图",
+        "科学真实性",
+        "quality critic",
+        "figure review",
+        "faithfulness"
+      ],
+      "description_zh": "面向科研图表的检查维度和 Agent 审核说明；效果尚未经过独立专家验证。",
+      "entry": "catalog/entries/quality-critic-skill.json"
+    },
+    {
+      "id": "literature-triage",
+      "title": "文献检索与证据筛选 / Literature Triage",
+      "kind": "workflow",
+      "stages": [
+        "ideation",
+        "research"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "literature-review",
+        "research-gap"
+      ],
+      "keywords": [
+        "文献调研",
+        "选题",
+        "检索策略",
+        "literature",
+        "reading",
+        "novelty"
+      ],
+      "description_zh": "从研究问题到可核实的相关工作对比矩阵和可证伪假设，减少无效检索。",
+      "entry": "catalog/entries/literature-triage.json"
+    },
+    {
+      "id": "experiment-planning",
+      "title": "论点驱动的实验规划 / Claim–Evidence Planning",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "experiment-planning",
+        "ablation",
+        "claim-evidence"
+      ],
+      "keywords": [
+        "实验设计",
+        "消融",
+        "论文证据",
+        "experiments",
+        "ablation",
+        "evaluation"
+      ],
+      "description_zh": "建立科学主张到实验、指标、基线和图表的可证伪映射。",
+      "entry": "catalog/entries/experiment-planning.json"
+    },
+    {
+      "id": "paper-evidence-story",
+      "title": "论文叙事与图表组织 / Paper Evidence Story",
+      "kind": "workflow",
+      "stages": [
+        "writing",
+        "evaluation"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "paper-writing",
+        "figure-plan",
+        "evidence-storytelling"
+      ],
+      "keywords": [
+        "科研写作",
+        "叙事",
+        "论文结构",
+        "writing",
+        "narrative",
+        "figures"
+      ],
+      "description_zh": "把 Introduction、方法、RQ 与实验图表重新组织成一条可被证据支持的论文主线。",
+      "entry": "catalog/entries/paper-evidence-story.json"
+    },
+    {
+      "id": "research-release",
+      "title": "项目主页与研究成果发布 / Research Release",
+      "kind": "workflow",
+      "stages": [
+        "communication"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "project-website",
+        "research-release",
+        "reproducibility"
+      ],
+      "keywords": [
+        "项目主页",
+        "研究传播",
+        "README",
+        "project page",
+        "release",
+        "README"
+      ],
+      "description_zh": "面向读者与 Agent 的项目主页发布清单，覆盖可核实主张、演示、链接与版权。",
+      "entry": "catalog/entries/research-release.json"
+    }
+  ]
+}

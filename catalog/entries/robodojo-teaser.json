@@ -1,0 +1,75 @@
+{
+  "id": "robodojo-teaser",
+  "title": "RoboDojo · 论文总览图",
+  "kind": "visual-reference",
+  "stages": [
+    "writing",
+    "evaluation"
+  ],
+  "domains": [
+    "robotics"
+  ],
+  "tasks": [
+    "teaser-design",
+    "benchmark-presentation"
+  ],
+  "description": {
+    "zh": "用统一的多场景视觉布局解释仿真与真实机器人评估范围。",
+    "en": "A visual organization pattern for simulated and physical robot evaluation coverage."
+  },
+  "keywords": {
+    "zh": [
+      "论文主图",
+      "真实机器人",
+      "仿真",
+      "多任务总览"
+    ],
+    "en": [
+      "teaser",
+      "robot benchmark",
+      "sim-and-real",
+      "task overview"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://robodojo-benchmark.com/",
+    "paper": "https://arxiv.org/abs/2607.04434"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "authored-diagram",
+    "third_party_media": "not-republished"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要呈现大量任务类别与评估场景"
+      ],
+      "en": [
+        "Presenting multiple robot task families or evaluation environments"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "建立任务类别间明确视觉分组",
+        "区分真实与仿真证据"
+      ],
+      "en": [
+        "Group related tasks visibly",
+        "Differentiate simulated versus physical demonstrations"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不要暗示不同任务的测试条件完全一致"
+      ],
+      "en": [
+        "Do not imply incomparable settings are identical"
+      ]
+    }
+  },
+  "parent": "robodojo-site",
+  "previewStyle": "benchmark"
+}

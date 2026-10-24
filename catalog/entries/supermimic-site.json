@@ -1,0 +1,79 @@
+{
+  "id": "supermimic-site",
+  "title": "SuperMimic · 项目主页",
+  "kind": "website-reference",
+  "stages": [
+    "communication"
+  ],
+  "domains": [
+    "robotics",
+    "rl"
+  ],
+  "tasks": [
+    "project-website",
+    "evidence-storytelling"
+  ],
+  "description": {
+    "zh": "冷白、黑色大标题、宽松留白与分段证据；主页的视觉节奏服务于科研论证。",
+    "en": "Minimal typography, whitespace and evidence-led sections in a robotics project homepage."
+  },
+  "keywords": {
+    "zh": [
+      "主页设计",
+      "交互展示",
+      "冷白极简",
+      "视觉叙事"
+    ],
+    "en": [
+      "website",
+      "editorial design",
+      "minimal",
+      "storytelling"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://supermimic.github.io/",
+    "paper": "https://arxiv.org/abs/2610.28480"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "authored-diagram",
+    "third_party_media": "not-republished"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要把强研究结论制作成简洁的项目主页"
+      ],
+      "en": [
+        "Presenting a strong scientific result in a minimalist site"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "强标题之后紧接可查证的结果",
+        "控制页面节奏和信息密度",
+        "用研究视频而非装饰图主导视觉"
+      ],
+      "en": [
+        "Follow claims with evidence",
+        "Use pacing and whitespace intentionally",
+        "Prioritize research demos over decoration"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不要照搬原站图片和代码",
+        "不要将审美判断当作研究指标"
+      ],
+      "en": [
+        "Do not copy original site artwork or code",
+        "Do not confuse taste with a research metric"
+      ]
+    }
+  },
+  "parent": "supermimic-teaser",
+  "previewStyle": "editorial"
+}

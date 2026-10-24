@@ -1,0 +1,68 @@
+{
+  "id": "figure-atlas",
+  "title": "Figure Atlas",
+  "kind": "resource-index",
+  "stages": [
+    "writing"
+  ],
+  "domains": [
+    "general"
+  ],
+  "tasks": [
+    "editable-figure",
+    "figure-discovery"
+  ],
+  "description": {
+    "zh": "科研图元和可编辑组成部分的外部索引，具体许可逐项判断。",
+    "en": "External index of editable figure components; verify licenses item by item."
+  },
+  "keywords": {
+    "zh": [
+      "可编辑",
+      "科研图元",
+      "SVG"
+    ],
+    "en": [
+      "editable",
+      "SVG",
+      "figure components"
+    ]
+  },
+  "year": "Community",
+  "language": "zh+en",
+  "links": {
+    "source": "https://runtimewarning.github.io/research-figure-library/"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "authored-diagram",
+    "third_party_media": "not-republished"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要寻找图元与可编辑的基础元素"
+      ],
+      "en": [
+        "Finding editable scientific figure components"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "把独立图元组合成清晰的科学表达"
+      ],
+      "en": [
+        "Compose components into meaningful scientific communication"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "逐个检查素材许可与源文件编辑性"
+      ],
+      "en": [
+        "Check each component license and real editability"
+      ]
+    }
+  },
+  "previewStyle": "gallery"
+}

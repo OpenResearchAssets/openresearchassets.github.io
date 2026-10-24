@@ -1,0 +1,66 @@
+{
+  "id": "ml-visuals",
+  "title": "ML Visuals",
+  "kind": "resource-index",
+  "stages": [
+    "writing",
+    "communication"
+  ],
+  "domains": [
+    "general"
+  ],
+  "tasks": [
+    "editable-figure"
+  ],
+  "description": {
+    "zh": "机器学习视觉内容社区资源，可作为开放协作及可编辑交付形式的参考。",
+    "en": "ML illustrations and community editing practices."
+  },
+  "keywords": {
+    "zh": [
+      "机器学习插画",
+      "幻灯片"
+    ],
+    "en": [
+      "ML visuals",
+      "slides"
+    ]
+  },
+  "year": "Community",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/dair-ai/ml-visuals"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "authored-diagram",
+    "third_party_media": "not-republished"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要机器学习教学或展示类视觉图元"
+      ],
+      "en": [
+        "Looking for ML presentation or educational visuals"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "借鉴开放协作和可编辑幻灯片的交付方式"
+      ],
+      "en": [
+        "Learn from community editing and slide-based delivery"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不要假定每项素材都允许商业再分发"
+      ],
+      "en": [
+        "Do not assume every visual grants commercial redistribution"
+      ]
+    }
+  },
+  "previewStyle": "gallery"
+}

@@ -34,6 +34,8 @@ for name in ('teaser-story','method-flow','results-panel'):
 for js in ('js/catalog.js','js/i18n.js','js/navigation.js','js/quality.js'):
     run=subprocess.run(['node','--check',str(ROOT/js)],capture_output=True,text=True)
     if run.returncode:errors.append(f'{js}: JS syntax: {run.stderr}')
+sync=subprocess.run(['python3',str(ROOT/'tools/sync_catalog.py'),'--check'],capture_output=True,text=True)
+if sync.returncode:errors.append('derived catalog out of date: '+sync.stdout+sync.stderr)
 catalog=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))
 if catalog.get('schema_version')!='1.0.0':errors.append('catalog: unsupported schema version')
 entries=catalog.get('entries',[])

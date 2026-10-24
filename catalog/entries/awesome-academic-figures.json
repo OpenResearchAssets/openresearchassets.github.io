@@ -1,0 +1,68 @@
+{
+  "id": "awesome-academic-figures",
+  "title": "Awesome Academic Figures",
+  "kind": "resource-index",
+  "stages": [
+    "writing"
+  ],
+  "domains": [
+    "general"
+  ],
+  "tasks": [
+    "figure-discovery",
+    "agent-handoff"
+  ],
+  "description": {
+    "zh": "跨论文视觉参考与 Agent 辅助整理工作流的目录。",
+    "en": "Figure discovery and reference-packet workflows for drawing agents."
+  },
+  "keywords": {
+    "zh": [
+      "论文配图",
+      "参考包",
+      "Agent"
+    ],
+    "en": [
+      "paper figures",
+      "reference pack",
+      "agent"
+    ]
+  },
+  "year": "Community",
+  "language": "zh+en",
+  "links": {
+    "source": "https://doczbs.github.io/Awesome-Academic-Figures/"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "authored-diagram",
+    "third_party_media": "not-republished"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要搜集多个研究配图参考供 AI 理解"
+      ],
+      "en": [
+        "Assembling multiple figure references for an agent"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "保留参考图的上下文及来源"
+      ],
+      "en": [
+        "Keep provenance and context in reference packets"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不要把 Agent 生成结果当作已验收科学图"
+      ],
+      "en": [
+        "Do not treat agent outputs as scientifically verified"
+      ]
+    }
+  },
+  "previewStyle": "gallery"
+}

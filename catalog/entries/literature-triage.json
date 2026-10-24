@@ -1,0 +1,70 @@
+{
+  "id": "literature-triage",
+  "title": "文献检索与证据筛选 / Literature Triage",
+  "kind": "workflow",
+  "stages": [
+    "ideation",
+    "research"
+  ],
+  "domains": [
+    "general"
+  ],
+  "tasks": [
+    "literature-review",
+    "research-gap"
+  ],
+  "description": {
+    "zh": "从研究问题到可核实的相关工作对比矩阵和可证伪假设，减少无效检索。",
+    "en": "A primary-source literature triage workflow from problem framing to falsifiable research gaps."
+  },
+  "keywords": {
+    "zh": [
+      "文献调研",
+      "选题",
+      "检索策略"
+    ],
+    "en": [
+      "literature",
+      "reading",
+      "novelty"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/Suchenl/OpenResearchAssets/blob/main/workflows/literature-triage.md",
+    "editable": "workflows/literature-triage.md"
+  },
+  "rights": {
+    "reuse": "original-workflow; check repository policy",
+    "preview": "authored-diagram",
+    "third_party_media": "none"
+  },
+  "previewStyle": "workflow",
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要了解最新相关工作与技术空缺"
+      ],
+      "en": [
+        "Surveying literature and research gaps"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "保留检索覆盖与证据级别，主动寻找反例"
+      ],
+      "en": [
+        "Track search coverage and seek counterexamples"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不能把没找到论文当作没人做过"
+      ],
+      "en": [
+        "Not finding a paper is not proof of novelty"
+      ]
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "supermimic-teaser",
+  "title": "SuperMimic · 论文主图",
+  "kind": "visual-reference",
+  "stages": [
+    "writing",
+    "communication"
+  ],
+  "domains": [
+    "robotics",
+    "rl"
+  ],
+  "tasks": [
+    "teaser-design",
+    "evidence-storytelling"
+  ],
+  "description": {
+    "zh": "论文 Figure 1 左侧用连续人形运动轨迹展示世界模型 rollout，右侧以 128 L40 GPU 与 1 H100 GPU 的训练投入形成直观对照。",
+    "en": "Paper Figure 1 pairs overlapping humanoid world-model rollouts with a concrete training-compute contrast: 128 L40 GPUs versus one H100 GPU."
+  },
+  "keywords": {
+    "zh": [
+      "论文主图",
+      "人形机器人",
+      "世界模型",
+      "论点证据",
+      "运动轨迹",
+      "GPU 训练投入"
+    ],
+    "en": [
+      "teaser",
+      "humanoid",
+      "world model",
+      "claim and evidence",
+      "world-model rollout",
+      "GPU-hours"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://supermimic.github.io/",
+    "paper": "https://arxiv.org/abs/2610.28480"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "authored-diagram",
+    "third_party_media": "not-republished"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "有一个明确、可用实验支撑的核心结论"
+      ],
+      "en": [
+        "A central claim is supported by strong experiments"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "用左右双栏分别解释方法机制与核心收益",
+        "把视觉冲击力和明确的实验设置、数值证据放在一起"
+      ],
+      "en": [
+        "Use two panels for the mechanism and the central benefit",
+        "Pair compelling visual evidence with explicit numeric comparisons and experimental conditions"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "异构 GPU 的训练投入不能被误读为严格控制硬件后的纯速度比较",
+        "不可把项目主页的首屏视觉误称为论文 Figure 1"
+      ],
+      "en": [
+        "Cross-hardware training costs are not a controlled same-hardware speed benchmark",
+        "The website hero and the paper's Figure 1 are distinct assets"
+      ]
+    }
+  },
+  "parent": "supermimic-site",
+  "previewStyle": "editorial"
+}

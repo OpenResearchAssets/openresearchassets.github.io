@@ -1,0 +1,75 @@
+{
+  "id": "robodojo-site",
+  "title": "RoboDojo · 项目主页",
+  "kind": "website-reference",
+  "stages": [
+    "communication",
+    "evaluation"
+  ],
+  "domains": [
+    "robotics"
+  ],
+  "tasks": [
+    "project-website",
+    "benchmark-presentation"
+  ],
+  "description": {
+    "zh": "参考任务画廊、真实演示与项目叙事的组织，帮助大量实验内容保持可读。",
+    "en": "Study task galleries and physical demonstrations as scalable evidence presentation."
+  },
+  "keywords": {
+    "zh": [
+      "主页设计",
+      "实验展示",
+      "机器人",
+      "任务画廊"
+    ],
+    "en": [
+      "website",
+      "robotics",
+      "gallery",
+      "evaluation"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://robodojo-benchmark.com/",
+    "paper": "https://arxiv.org/abs/2607.04434"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "authored-diagram",
+    "third_party_media": "not-republished"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "研究包含许多任务、环境或机器人平台"
+      ],
+      "en": [
+        "Research spans many tasks or embodiments"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "按任务或平台分组，而不是堆图片",
+        "视频与文字介绍建立一一对应"
+      ],
+      "en": [
+        "Organize demos by task or embodiment",
+        "Tie captions directly to demos"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不要把项目主页截图视作开放许可"
+      ],
+      "en": [
+        "A website screenshot does not imply redistribution rights"
+      ]
+    }
+  },
+  "parent": "robodojo-teaser",
+  "previewStyle": "benchmark"
+}

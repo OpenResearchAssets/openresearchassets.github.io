@@ -1,0 +1,70 @@
+{
+  "id": "quality-critic-skill",
+  "title": "Quality Critic · 人工审核与 Agent 指南",
+  "kind": "workflow",
+  "stages": [
+    "writing",
+    "evaluation"
+  ],
+  "domains": [
+    "general"
+  ],
+  "tasks": [
+    "quality-review",
+    "agent-handoff"
+  ],
+  "description": {
+    "zh": "面向科研图表的检查维度和 Agent 审核说明；效果尚未经过独立专家验证。",
+    "en": "A figure-review protocol and Agent instructions, not a validated automatic judge."
+  },
+  "keywords": {
+    "zh": [
+      "质量自查",
+      "论文图",
+      "科学真实性"
+    ],
+    "en": [
+      "quality critic",
+      "figure review",
+      "faithfulness"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/Suchenl/OpenResearchAssets/blob/main/skills/quality-critic/SKILL.md",
+    "editable": "skills/quality-critic/SKILL.md"
+  },
+  "rights": {
+    "reuse": "MIT",
+    "preview": "none",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要审查已有图是否表达准确"
+      ],
+      "en": [
+        "Reviewing an existing scientific figure"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "定位问题并给出可验证修复建议"
+      ],
+      "en": [
+        "Report grounded findings and verifiable fixes"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不要把模型自评当作专家验证"
+      ],
+      "en": [
+        "Do not treat model self-ratings as expert validation"
+      ]
+    }
+  },
+  "previewStyle": "workflow"
+}

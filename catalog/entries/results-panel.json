@@ -1,0 +1,69 @@
+{
+  "id": "results-panel",
+  "title": "结果对照面板模板",
+  "kind": "editable-template",
+  "stages": [
+    "writing"
+  ],
+  "domains": [
+    "general"
+  ],
+  "tasks": [
+    "results-figure",
+    "editable-figure"
+  ],
+  "description": {
+    "zh": "原创 SVG 概念模板，数值均为占位符。",
+    "en": "Editable comparison template with placeholder values only."
+  },
+  "keywords": {
+    "zh": [
+      "原创",
+      "可编辑",
+      "SVG"
+    ],
+    "en": [
+      "original",
+      "editable",
+      "SVG"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/Suchenl/OpenResearchAssets",
+    "editable": "assets/templates/results-panel.svg"
+  },
+  "rights": {
+    "reuse": "CC-BY-4.0",
+    "preview": "original-svg",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要一个从零修改的示意布局"
+      ],
+      "en": [
+        "Starting from an editable layout"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "替换占位内容并重新检查图意"
+      ],
+      "en": [
+        "Replace placeholders and validate scientific meaning"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不得把概念数值作为真实实验结果"
+      ],
+      "en": [
+        "Never use illustrative numbers as experimental results"
+      ]
+    }
+  },
+  "previewStyle": "comparison"
+}

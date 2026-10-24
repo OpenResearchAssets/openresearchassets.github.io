@@ -1,0 +1,70 @@
+{
+  "id": "research-release",
+  "title": "项目主页与研究成果发布 / Research Release",
+  "kind": "workflow",
+  "stages": [
+    "communication"
+  ],
+  "domains": [
+    "general"
+  ],
+  "tasks": [
+    "project-website",
+    "research-release",
+    "reproducibility"
+  ],
+  "description": {
+    "zh": "面向读者与 Agent 的项目主页发布清单，覆盖可核实主张、演示、链接与版权。",
+    "en": "A release checklist for research project sites, reproducibility, attribution and real demonstrations."
+  },
+  "keywords": {
+    "zh": [
+      "项目主页",
+      "研究传播",
+      "README"
+    ],
+    "en": [
+      "project page",
+      "release",
+      "README"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/Suchenl/OpenResearchAssets/blob/main/workflows/research-release.md",
+    "editable": "workflows/research-release.md"
+  },
+  "rights": {
+    "reuse": "original-workflow; check repository policy",
+    "preview": "authored-diagram",
+    "third_party_media": "none"
+  },
+  "previewStyle": "workflow",
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "准备公开论文、代码和研究演示"
+      ],
+      "en": [
+        "Publishing a paper, code and research demos"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "按论点—证据的顺序组织主页与复现入口"
+      ],
+      "en": [
+        "Organize releases from claims to evidence and reproducible artifacts"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "未授权材料不得作为公开截图或视频发布"
+      ],
+      "en": [
+        "Never publish unlicensed manuscripts, figures or videos"
+      ]
+    }
+  }
+}
