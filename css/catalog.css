@@ -112,3 +112,59 @@
 .ora-flow-list span{font-size:9px;color:#6f8194;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden}
 .ora-empty{background:#eef1f6;color:#728092;font-size:12px}
 @media(max-width:720px){.ora-study-grid{grid-template-columns:1fr}.ora-study-grid section+section{border-left:0;border-top:1px solid #e5eaf1}.ora-detail-preview .ora-curated{min-height:160px}.ora-case-intro{padding:19px}.ora-study-grid section,.ora-case-check{padding:18px}}
+
+
+/* Unified preview contract: one 5:3 image plane, truthful type-specific content. */
+.ora-resource-visual{overflow:hidden}
+.ora-resource-card .ora-preview{height:auto;aspect-ratio:5/3}
+.ora-preview.ora-curated img{object-fit:contain;background:#f5f8fb}
+.ora-template img{object-fit:contain;padding:17px;background:#eff4f9}
+.ora-resource-content h3{line-height:1.3;overflow-wrap:anywhere}
+.ora-resource-content>p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden;min-height:3.9em}
+.ora-resource-card:focus-within{outline:2px solid #2862a5;outline-offset:3px}
+.ora-preview.ora-directory{background:#eaf0f8}
+.ora-preview.ora-workflow-preview{background:#edf2f7}
+.ora-preview.ora-skill-preview{background:#e7f1f0}
+.ora-cover-panel{position:relative;width:83%;height:82%;border:1px solid #d5e0ea;border-radius:13px;background:#fff;padding:13px 15px;box-shadow:0 8px 24px rgba(24,56,91,.045);display:flex;flex-direction:column;gap:8px;overflow:hidden}
+.ora-cover-eyebrow{font-size:9px;letter-spacing:.12em;color:#66809c;font-weight:800;line-height:1.3}
+.ora-cover-heading{font-size:clamp(13px,1.35vw,19px);line-height:1.22;color:#1e3550;font-weight:780;letter-spacing:-.35px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:anywhere}
+.ora-directory-hits,.ora-cover-steps{display:flex;flex-direction:column;gap:5px;margin-top:auto}
+.ora-hit,.ora-cover-step{display:flex;align-items:center;gap:8px;min-width:0}
+.ora-hit b,.ora-cover-step b{font-size:10px;color:#396b92;flex:0 0 19px}
+.ora-hit span,.ora-cover-step span{color:#61758d;font-size:10px;line-height:1.4;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1}
+.ora-hit i{flex:0 0 24px;height:3px;background:#c0d4e7;border-radius:2px}
+.ora-cover-step b{color:#367e86}
+.ora-skill-preview .ora-cover-panel{border-color:#b9d9d4}
+.ora-skill-preview .ora-cover-eyebrow,.ora-skill-preview .ora-cover-step b{color:#277a74}
+.ora-detail-preview .ora-preview{height:auto;aspect-ratio:5/3;min-height:0}
+.ora-detail-preview .ora-template img{padding:18px}
+.ora-detail-preview .ora-cover-panel{width:80%;height:78%;padding:20px 25px;gap:12px}
+.ora-detail-preview .ora-cover-eyebrow{font-size:12px}
+.ora-detail-preview .ora-cover-heading{font-size:clamp(20px,2.1vw,28px)}
+.ora-detail-preview .ora-hit span,.ora-detail-preview .ora-cover-step span{font-size:13px}
+.ora-detail-preview .ora-hit b,.ora-detail-preview .ora-cover-step b{font-size:13px;flex-basis:25px}
+.ora-detail-preview .ora-curated-mark{bottom:12px;right:12px}
+.ora-lesson{padding:25px 0}
+.ora-lesson h2{font-size:21px}
+.ora-lesson li{font-size:14px;line-height:1.7}
+.ora-case-study{margin:18px 0 24px}
+.ora-resource-card .ora-curated-mark{max-width:90%;text-align:right}
+@media(max-width:1080px){.ora-cover-heading{font-size:18px}}
+@media(max-width:720px){
+  .ora-detail-heading h1{font-size:clamp(33px,9vw,48px);letter-spacing:-1.6px;overflow-wrap:anywhere}
+  .ora-detail-heading>p:last-child{font-size:15px}
+  .ora-resource-grid{gap:16px}
+  .ora-resource-content{padding:18px}
+  .ora-resource-content h3{font-size:18px}
+  .ora-cover-panel{padding:16px 20px}
+  .ora-cover-heading{font-size:clamp(17px,4vw,22px)}
+  .ora-detail-preview .ora-cover-panel{width:86%;padding:11px 12px;gap:5px}
+  .ora-detail-preview .ora-cover-eyebrow{font-size:9px}
+  .ora-detail-preview .ora-cover-heading{font-size:clamp(13px,4vw,18px)}
+  .ora-detail-preview .ora-hit span,.ora-detail-preview .ora-cover-step span{font-size:10px}
+  .ora-detail-preview .ora-hit b,.ora-detail-preview .ora-cover-step b{font-size:10px;flex-basis:18px}
+  .ora-detail{padding-top:38px;padding-bottom:78px}
+  .ora-disclosure{padding-bottom:5px}
+  .ora-case-intro h2{font-size:21px}
+  .ora-lesson h2{font-size:20px}
+}
