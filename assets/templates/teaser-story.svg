@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+<title id="title">From simulation to reality — conceptual teaser template</title>
+<desc id="desc">Original fully editable SVG, not copied from any paper; illustrative scene shapes and no empirical claims.</desc>
+<defs><style>text{font-family:Arial,Helvetica,sans-serif}.k{font-size:14px;letter-spacing:2.2px;font-weight:bold;fill:#6c7986}.big{font-size:34px;font-weight:bold;fill:#293d49;letter-spacing:-1px}.sub{font-size:18px;fill:#73828b}.m{font-size:18px;font-weight:bold;fill:#314652}.sm{font-size:14px;fill:#76848d}</style><linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d9e2e8"/><stop offset="1" stop-color="#eef2f1"/></linearGradient><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8e0d4"/><stop offset="1" stop-color="#f8ede0"/></linearGradient></defs>
+<rect x="1" y="1" width="1198" height="618" rx="28" fill="#fff" stroke="#dfe6e4"/>
+<text x="55" y="60" class="k">EDITORIAL TEASER / CONCEPTUAL STUDY</text><text x="55" y="106" class="big">A clear contrast tells the story.</text><text x="55" y="140" class="sub">Use evidence-driven visual comparisons instead of dense explanatory paragraphs.</text>
+<g transform="translate(56 196)"><rect width="470" height="284" rx="20" fill="url(#a)" stroke="#cad5db"/>
+<path d="M15 192L208 113L454 184V264H15Z" fill="#b9c8cf" opacity=".55"/><path d="M40 198H440" stroke="#afc0c8" stroke-width="3"/>
+<rect x="54" y="69" width="118" height="100" rx="10" fill="#aabec5" opacity=".9"/><rect x="78" y="84" width="68" height="70" rx="5" fill="#c8d7dc"/>
+<path d="M257 238L300 189L344 210L389 142" stroke="#6e90a1" stroke-width="24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="300" cy="189" r="15" fill="#e7f1f1" stroke="#628b9c" stroke-width="5"/><circle cx="389" cy="142" r="15" fill="#e7f1f1" stroke="#628b9c" stroke-width="5"/>
+<path d="M387 143L424 123M387 143L423 163" stroke="#6e90a1" stroke-width="9" stroke-linecap="round"/>
+<rect x="201" y="171" width="45" height="54" rx="7" fill="#c7b9a5"/><path d="M223 164V154" stroke="#a99986" stroke-width="5"/>
+</g>
+<g transform="translate(672 196)"><rect width="470" height="284" rx="20" fill="url(#b)" stroke="#e4d6c7"/>
+<rect x="15" y="16" width="440" height="245" rx="15" fill="#f3e5d7"/><path d="M26 188L220 125L448 191V260H26Z" fill="#decab5"/><path d="M40 198H440" stroke="#d3baa0" stroke-width="3"/>
+<rect x="54" y="69" width="118" height="100" rx="10" fill="#c6b8ac"/><rect x="78" y="84" width="68" height="70" rx="5" fill="#e9ddd3"/>
+<path d="M257 238L300 189L344 210L389 142" stroke="#bb9075" stroke-width="24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="300" cy="189" r="15" fill="#fff7ee" stroke="#b6886b" stroke-width="5"/><circle cx="389" cy="142" r="15" fill="#fff7ee" stroke="#b6886b" stroke-width="5"/>
+<path d="M387 143L424 123M387 143L423 163" stroke="#bb9075" stroke-width="9" stroke-linecap="round"/>
+<rect x="201" y="171" width="45" height="54" rx="7" fill="#9a785f"/><path d="M223 164V154" stroke="#86604b" stroke-width="5"/>
+</g>
+<circle cx="599" cy="337" r="39" fill="#fff" stroke="#e0dfdc"/><path d="M581 337H618M610 329L618 337L610 345" fill="none" stroke="#7c8f94" stroke-width="3.2" stroke-linecap="round"/>
+<rect x="56" y="499" width="119" height="30" rx="15" fill="#e6edf0"/><text x="115" y="519" text-anchor="middle" class="k" fill="#557182" style="font-size:12px">REFERENCE</text>
+<text x="56" y="556" class="m">Before / source domain</text><text x="56" y="580" class="sm">Keep layout and camera framing consistent</text>
+<rect x="672" y="499" width="110" height="30" rx="15" fill="#faeee3"/><text x="727" y="519" text-anchor="middle" class="k" fill="#c49776" style="font-size:12px">OUTCOME</text>
+<text x="672" y="556" class="m">After / target domain</text><text x="672" y="580" class="sm">Highlight the relevant transformation, not decoration</text>
+</svg>

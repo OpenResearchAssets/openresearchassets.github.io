@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+<title id="title">Results storytelling — editable comparison panel</title>
+<desc id="desc">Original experiment-figure layout with illustrative placeholder values only, not results from any study.</desc>
+<defs><style>text{font-family:Arial,Helvetica,sans-serif}.tiny{font-size:14px;letter-spacing:2px;font-weight:700;fill:#8b99a0}.h{font-size:31px;font-weight:700;fill:#233b48}.sub{font-size:17px;fill:#74838a}.lab{font-size:17px;font-weight:700;fill:#394b55}.num{font-size:16px;font-weight:700;fill:#2f5261}</style></defs>
+<rect x="1" y="1" width="1198" height="598" rx="25" fill="#fff" stroke="#dae3e0"/>
+<text x="55" y="58" class="tiny">RESULTS FIGURE / EDITABLE TEMPLATE</text><text x="55" y="101" class="h">Lead with the comparison that matters.</text><text x="55" y="132" class="sub">Illustrative values only — replace with your real measurements, uncertainties and definitions.</text>
+<g transform="translate(55 183)"><rect width="730" height="348" rx="17" fill="#f7f9f9" stroke="#e5ebea"/>
+<text x="25" y="39" class="lab">Performance across controlled settings</text>
+<g stroke="#e1e9e7" stroke-width="1.6"><path d="M98 100H690M98 154H690M98 208H690M98 262H690"/></g>
+<g font-family="Arial" font-size="14" fill="#7f9298"><text x="23" y="116">Task A</text><text x="23" y="170">Task B</text><text x="23" y="224">Task C</text><text x="23" y="278">Task D</text></g>
+<g fill="#d0dcd9"><rect x="99" y="90" width="214" height="15" rx="5"/><rect x="99" y="144" width="265" height="15" rx="5"/><rect x="99" y="198" width="197" height="15" rx="5"/><rect x="99" y="252" width="300" height="15" rx="5"/></g>
+<g fill="#6f9c9d"><rect x="99" y="108" width="364" height="15" rx="5"/><rect x="99" y="162" width="395" height="15" rx="5"/><rect x="99" y="216" width="316" height="15" rx="5"/><rect x="99" y="270" width="447" height="15" rx="5"/></g>
+<rect x="24" y="310" width="13" height="13" rx="3" fill="#d0dcd9"/><text x="44" y="322" font-family="Arial" font-size="13" fill="#667980">Baseline</text><rect x="150" y="310" width="13" height="13" rx="3" fill="#6f9c9d"/><text x="170" y="322" font-family="Arial" font-size="13" fill="#667980">Method</text><text x="500" y="322" font-family="Arial" font-size="12" fill="#85949a">Schematic bars · no data claim</text>
+</g>
+<g transform="translate(808 183)"><rect width="335" height="348" rx="17" fill="#f3f4f0" stroke="#e1e5dd"/>
+<text x="23" y="41" class="tiny">INTERPRETATION</text><text x="23" y="84" class="lab">Evidence before prose</text>
+<rect x="23" y="116" width="289" height="76" rx="12" fill="#fff"/><rect x="40" y="133" width="58" height="8" rx="4" fill="#b1c0bc"/><rect x="40" y="151" width="222" height="8" rx="4" fill="#dce4e2"/><rect x="40" y="167" width="186" height="8" rx="4" fill="#e9eeec"/>
+<rect x="23" y="210" width="289" height="90" rx="12" fill="#fff"/><circle cx="53" cy="244" r="12" fill="#e4edea"/><path d="M47 244l4 4 8-9" stroke="#6f9c9d" stroke-width="3" fill="none" stroke-linecap="round"/><text x="77" y="245" font-family="Arial" font-size="15" fill="#566b70">Report uncertainty.</text><text x="77" y="267" font-family="Arial" font-size="15" fill="#566b70">State the comparison.</text>
+</g>
+<text x="56" y="569" font-family="Arial" font-size="12" fill="#a0aaab">ORIGINAL OPENRESEARCHASSETS DESIGN STUDY · EDIT LABELS, DATA AND CAPTION BEFORE PUBLICATION</text>
+</svg>

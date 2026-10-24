@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+<title id="title">Observation to Action — editable method diagram template</title>
+<desc id="desc">Original conceptual method figure. All labels and shapes are individually editable. Not empirical results.</desc>
+<defs><style>text{font-family:Arial,Helvetica,sans-serif}.tiny{font-size:15px;letter-spacing:2px;fill:#85919b;font-weight:700}.h{font-size:32px;letter-spacing:-.7px;fill:#233746;font-weight:700}.sub{font-size:17px;fill:#687984}.lbl{font-size:18px;fill:#294354;font-weight:700}.sm{font-size:14px;fill:#79909b}.stroke{stroke:#cbd9db;stroke-width:1.6}</style>
+<linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#f7f9f8"/></linearGradient>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dbe9ed"/><stop offset="1" stop-color="#e8eff0"/></linearGradient>
+</defs>
+<rect x="1" y="1" width="1198" height="598" rx="26" fill="url(#paper)" stroke="#dce3e1"/>
+<text x="56" y="57" class="tiny">DESIGN SYSTEM · METHOD FIGURE</text>
+<text x="56" y="101" class="h">From observation to grounded action</text>
+<text x="56" y="133" class="sub">A conceptual template · replace every label with your validated methodology</text>
+<g transform="translate(56 177)"><rect width="326" height="294" rx="18" fill="#edf3f2" stroke="#d1dddb"/>
+<text x="22" y="35" class="tiny">01 / PERCEIVE</text><rect x="22" y="56" width="282" height="135" rx="12" fill="#dce8e7"/>
+<rect x="45" y="82" width="105" height="82" rx="9" fill="#bbcdd0"/><rect x="163" y="82" width="117" height="82" rx="9" fill="#c7d4cf"/>
+<path d="M83 144L107 123L125 140" fill="none" stroke="#5f8090" stroke-width="6" stroke-linecap="round"/><circle cx="112" cy="116" r="13" fill="#f5faf9" stroke="#678d94" stroke-width="4"/>
+<path d="M192 146L216 113L247 145" fill="none" stroke="#678b80" stroke-width="6" stroke-linecap="round"/>
+<text x="22" y="225" class="lbl">Observe the world</text><text x="22" y="252" class="sm">Images · state · instructions</text><rect x="22" y="272" width="78" height="5" rx="2.5" fill="#83a6ac"/></g>
+<g transform="translate(436 177)"><rect width="326" height="294" rx="18" fill="#f1eff4" stroke="#dfdae6"/>
+<text x="22" y="35" class="tiny">02 / REASON</text><rect x="22" y="56" width="282" height="135" rx="12" fill="#e7e4ee"/>
+<circle cx="76" cy="124" r="23" fill="#d3d0e1" stroke="#aaa8c8" stroke-width="2"/><circle cx="152" cy="90" r="23" fill="#d3d0e1" stroke="#aaa8c8" stroke-width="2"/><circle cx="231" cy="124" r="23" fill="#d3d0e1" stroke="#aaa8c8" stroke-width="2"/>
+<path d="M98 115L128 97M176 98L208 115" fill="none" stroke="#aaa8c8" stroke-width="5" stroke-linecap="round"/>
+<circle cx="76" cy="124" r="5" fill="#fff"/><circle cx="152" cy="90" r="5" fill="#fff"/><circle cx="231" cy="124" r="5" fill="#fff"/>
+<text x="22" y="225" class="lbl">Compose a decision</text><text x="22" y="252" class="sm">Context · reasoning · constraints</text><rect x="22" y="272" width="78" height="5" rx="2.5" fill="#b0a4c6"/></g>
+<g transform="translate(816 177)"><rect width="326" height="294" rx="18" fill="#f8f0e8" stroke="#eadccc"/>
+<text x="22" y="35" class="tiny">03 / ACT</text><rect x="22" y="56" width="282" height="135" rx="12" fill="#f4e5d5"/>
+<path d="M56 154L106 117L143 135L191 92L239 118" fill="none" stroke="#c48a67" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="106" cy="117" r="12" fill="#fff7f0" stroke="#c48a67" stroke-width="4"/><circle cx="191" cy="92" r="12" fill="#fff7f0" stroke="#c48a67" stroke-width="4"/>
+<path d="M239 118L259 104M239 118L260 133" fill="none" stroke="#ac7759" stroke-width="7" stroke-linecap="round"/>
+<text x="22" y="225" class="lbl">Execute and verify</text><text x="22" y="252" class="sm">Action · evidence · feedback</text><rect x="22" y="272" width="78" height="5" rx="2.5" fill="#dba478"/></g>
+<path d="M385 322H425M417 315L425 322L417 329" fill="none" stroke="#80919d" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M765 322H805M797 315L805 322L797 329" fill="none" stroke="#80919d" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M980 492V526Q980 544 962 544H239Q220 544 220 525V492" fill="none" stroke="#d9a87e" stroke-width="2.5" stroke-dasharray="7 7"/>
+<rect x="503" y="530" width="190" height="28" rx="14" fill="#fff" stroke="#e3d9cd"/>
+<text x="598" y="549" text-anchor="middle" font-family="Arial" font-size="13" fill="#ad8463">FEEDBACK LOOP</text>
+</svg>
