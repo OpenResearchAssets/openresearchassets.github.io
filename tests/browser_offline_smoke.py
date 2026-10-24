@@ -6,6 +6,7 @@ network access required. Not proof that GitHub Pages deployment is healthy.
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 import base64,re
+from shutil import which
 ROOT=Path(__file__).resolve().parents[1]
 
 def page_html(name):
@@ -35,7 +36,10 @@ def local_asset(route):
     route.fulfill(status=200,body=path.read_bytes(),content_type=content_type)
 
 with sync_playwright() as pw:
-    browser=pw.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox','--disable-gpu'])
+    opts={'headless':True,'args':['--no-sandbox','--disable-gpu']}
+    local_chromium=which('chromium') or which('chromium-browser')
+    if local_chromium:opts['executable_path']=local_chromium
+    browser=pw.chromium.launch(**opts)
     for w,h,label in ((1440,900,'desktop'),(768,900,'tablet'),(390,844,'mobile'),(320,720,'small-mobile')):
         page=browser.new_page(viewport={'width':w,'height':h})
         errors=[]
