@@ -155,7 +155,7 @@
       : tr('仅供学习参考，第三方原图未在本站再分发','Reference only; external artwork not republished');
     detail.innerHTML='<div class="ora-detail-heading"><p class="ora-eyebrow">'+safe(kind(e))+' / '+safe(e.id)+'</p>'+
       '<h1>'+safe(e.title)+'</h1><p>'+safe(local(e.description))+'</p></div>'+
-      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.label))+' · '+safe(tr('请打开官方来源查看原始视觉内容','Open the official source to inspect the original artwork'))+'</p>' : '')+baseLessons+editorial+'</section>'+
+      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.label))+' · '+safe(tr('请打开官方来源查看原始视觉内容','Open the official source to inspect the original artwork'))+' · <a href="'+safe(e.visual.src)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('放大查看本站分析 SVG','Open full-size analysis SVG'))+' ↗</a></p>' : '')+baseLessons+editorial+'</section>'+
       '<aside class="ora-detail-sidebar"><h2>'+safe(tr('资产档案','Asset metadata'))+'</h2>'+
       '<dl><dt>'+safe(tr('科研阶段','Stages'))+'</dt><dd>'+e.stages.map(x=>safe(facetText('stages',x))).join(' · ')+'</dd>'+
       '<dt>'+safe(tr('领域','Domains'))+'</dt><dd>'+e.domains.map(x=>safe(facetText('domains',x))).join(' · ')+'</dd>'+
