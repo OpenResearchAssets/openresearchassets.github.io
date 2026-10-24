@@ -1,78 +1,62 @@
-# Research Quality Standard · Edition 01
+# 科研表达质量规范 · 首版 / Research Quality Standard
 
-This is an **editorial rubric**, not a validated psychometric instrument. Reviewer judgments should be traceable to the artifact and its evidence, and aesthetic preferences should be separated from factual issues.
+> 本规范是一套**人工审核准则**，不是已验证的心理测量量表，也不是已训练的自动审美模型。应区分科学事实、可读性缺陷和主观设计偏好。
 
-## 1. Scientific faithfulness (non-negotiable)
+## 1. 科学真实性（硬门槛）
 
-- **Claim alignment:** figure title, labels, caption and manuscript must describe the same supported claim.
-- **Numeric integrity:** no invented values; axes, scales, units, denominator, uncertainty and sample sizes must match source data.
-- **Fair comparison:** compare like-for-like controls and report material differences in hardware, settings, baselines or budgets.
-- **Causal restraint:** arrows and grouping must not visually imply causality where there is only correlation or architecture adjacency.
-- **Image integrity:** no manipulated scientific imagery masquerading as observations; simulated or conceptual illustrations must be labeled.
+- **论点一致**：图标题、坐标轴、caption 和正文必须共同支持同一结论。
+- **数值保真**：不得捏造数据；量纲、指标分母、样本量、误差区间和刻度均需与来源一致。
+- **公平比较**：说明硬件、数据、训练与实验预算等关键差异，避免暗示无法证明的优势。
+- **箭头与因果**：信息流、模块连接和因果关系不可混为一谈。
+- **图像真实性**：概念、仿真和实测图必须明确区分；不接受篡改的观测冒充实际结果。
 
-**Hard-stop:** unsupported claims, material numerical inconsistencies, intentionally misleading transformations and unlicensed reuse cannot be offset by aesthetic quality.
+上述事实性问题不能因“图很好看”而被抵消。
 
-## 2. Communication and narrative
+## 2. 信息表达
 
-- Can a reader identify the figure's *single main purpose* at a glance?
-- Does the reading order follow a natural flow without forcing repetitive backtracking?
-- Is every panel necessary to support a distinct claim?
-- Is the graphic complementing, rather than reprinting, the manuscript and caption?
-- Are abbreviations, notations and roles interpretable without guessing?
+- 读者是否能快速找到图的**一个最重要的目的**？
+- 面板的阅读顺序是否可预测，箭头与符号是否一致？
+- 各面板是否各自提供独立信息？
+- 图是否与 caption 和正文互补，而非机械复制文字？
 
-## 3. Visual craft
+## 3. 视觉工艺
 
-- Aesthetic coherence: controlled palette, limited type scale, consistent stroke and radius vocabulary.
-- Visual hierarchy: deliberate emphasis through size, contrast, position and negative space.
-- Alignment: meaningful grid, shared baselines and stable spacing rhythm.
-- Visual encoding: colors/shapes represent concepts consistently across figures.
-- Accessibility: sufficient contrast, color-independent legends, non-tiny essential labels.
+- 字体、字阶、间距、对齐、线宽和圆角语言是否有一致规则？
+- 颜色是否代表稳定的语义？是否仅靠颜色区分类别、损害可访问性？
+- 视觉层次是否服务于科学重点？
+- 简约不是目的：当科学内容需要密度时，应该合理组织而不是省掉必要信息。
 
-Visual language is not prescribed as a single universal style. Minimalism is valuable only when it improves scientific communication; complex evidence sometimes requires dense graphics.
+## 4. 发表准备度
 
-## 4. Publication readiness
+**必须在实际编译的论文 PDF 或演示尺寸下判断**。检查图例文字、箭头、线条、分辨率、导出矢量、子图标识、留白、表格宽度和 caption 距离。放大编辑器中看着精致不算完成验收。
 
-- Inspect actual embedded figure on the **compiled final-size PDF**, not just a 4K source image.
-- Ensure fonts, arrows, subfigures and tick labels survive print-scale reduction.
-- Check margins, vector fidelity, raster source resolution and line weights.
-- Check table width, row spacing, typographic hierarchy, alignment, references and page flow.
-- Review accessibility requirements and actual target-venue formatting rules.
+## 5. 全文一致性
 
-## 5. Document-level coherence
+建立 `claim → evidence → figure/table` 的明确对应。核查重复配图、主文与附录的证据布局、术语与颜色语义、上下文的对照公平性。
 
-- Make a **claim → evidence → figure/table** map before selecting visuals for the paper body.
-- Check redundant figure/table pairs and identify evidence missing from the main text.
-- Keep terminology, semantic colors, panel nomenclature and visual grammar consistent.
-- Prioritize space for distinct scientific evidence; do not choose a large figure solely for beauty.
-- Test reading rhythm: introduction/teaser → method → experiment → conclusion.
+## 不同科研内容的检查侧重
 
-## Context-specific criteria
-
-| Artifact | Essential checks | Common failure modes |
+| 类型 | 核心目标 | 常见问题 |
 |---|---|---|
-| Teaser | Scientific story, focal evidence, fair visual comparison | Dense text, ornamental imagery, claim inflation |
-| Method Figure | Distinct module roles, directional information flow, real assumptions | Ambiguous arrows, redundant boxes, opaque symbols |
-| Results Figure | Units, baselines, intervals, ordering, data fidelity | Truncated scales, missing `n`, incompatible settings |
-| Table | Emphasis, precision, caption completeness, source consistency | Small unreadable font, redundant columns, cryptic notation |
-| Writing | Claim sequencing, evidence anchors, clarity and economy | Unsubstantiated conclusions, repetition, overlong problem setup |
-| Full Paper | Evidence allocation, cohesion, layout, figure/table balance | Important experiments buried in appendix, redundant figure/table |
+| Teaser | 一眼看懂重要主张与关键证据 | 文字过密、视觉噪声、夸大效果 |
+| Method Figure | 输入—模块—输出的逻辑正确且清晰 | 语义含糊的箭头、冗余方框 |
+| Results Figure | 数据来源、比较范围、趋势表达可信 | 单位缺失、尺度误导、置信区间不明 |
+| Table | 重要比较易定位、数字一致、版面易读 | 密集表线、字体过小、信息重复 |
+| Writing | 主张顺序清晰，有证据支撑 | 空泛句、过度重复、不准确的概括 |
+| Whole Paper | 主线与证据分配相协调 | 重要结果被埋没、图表重复、排版失衡 |
 
-## Output of a good review
+## 一条合格的问题诊断应包含
 
-Each actionable issue should contain:
+`位置 → 可见现象 → 受影响的质量维度 → 优先级 → 相关证据/不确定性 → 最小修改建议 → 复核方法`
 
-- **Location:** figure / panel / coordinate region / caption / manuscript section.
-- **Observation:** what is directly visible or stated.
-- **Concern:** why this materially affects fidelity, comprehension or craft.
-- **Issue type:** `factual`, `visual`, `narrative`, `publication`, or `preference`.
-- **Priority:** `blocking`, `high`, `medium`, `low` (no global score needed).
-- **Evidence / uncertainty:** cite the source or say `needs verification`.
-- **Change proposal:** one specific, minimal fix and how to validate it.
+- **Blocking**：严重科学事实错误或权利风险，应先解决。
+- **High**：显著影响理解和最终可读性。
+- **Medium/Low**：次要排版或个人偏好，不强制统一风格。
 
-### Acceptance gate
+结论需保留哪些内容未经核实。单次模型输出不是外部专家审核，也不是发表认证。
 
-Blocking scientific issues must be resolved or explicitly documented; high-priority readability issues must be inspected at target size. Record the remaining known limitations. Do not claim that a model-only review constitutes empirical validation or formal publication approval.
+## 现有工具边界
 
-## Use of AI
+`quality.html` 是**纯浏览器、人工选择问题的检查清单**，不读取图片、不执行计算机视觉诊断。`skills/quality-critic/SKILL.md` 是可供用户自带 Agent 执行的说明；执行效果仍依赖文件访问、模型能力和人工验证。
 
-A VLM can propose diagnostic hypotheses, identify likely clutter or inconsistency, and offer redesign ideas. It cannot establish truth of unseen data. When reviewing a PDF, render and inspect the pages as they will be read. Treat model confidence as uncertainty to report, not as a substitute for evidence.
+**English summary:** Scientific fidelity is a hard gate. Evaluate clarity, visual craft, information efficiency and actual publication layout. Each finding needs a location, visible evidence, priority and verifiable fix. The current browser tool is a manual checklist, not an AI judge.

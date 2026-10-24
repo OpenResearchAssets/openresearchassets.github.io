@@ -142,3 +142,17 @@ body{background:#fff;color:var(--ink)}
   .story-toc a{border-color:#dce3ee}
 }
 @media(prefers-reduced-motion:reduce){.btn,.reference-card{transition:none}}
+/* Bilingual navigation: cool, compact, keyboard accessible */
+.lang-toggle{flex:none;border:1px solid #dde3eb;border-radius:999px;background:#fff;color:#263246;cursor:pointer;padding:8px 12px;font:600 12px var(--font);min-width:49px;line-height:1.25}
+.lang-toggle:hover{background:#f5f7fa}
+.lang-toggle:focus-visible{outline:2px solid #315fb7;outline-offset:3px}
+html[lang="zh-CN"]{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+html[lang="zh-CN"] .hero-v2 h1{letter-spacing:-.055em;line-height:1.15}
+html[lang="zh-CN"] .hero-sub{letter-spacing:.005em}
+html[lang="zh-CN"] .section-head h2,html[lang="zh-CN"] .invitation h2{letter-spacing:-.04em;line-height:1.16}
+html[lang="zh-CN"] .story-hero h1,html[lang="zh-CN"] .audit-hero h1{letter-spacing:-.045em;line-height:1.18}
+@media(max-width:720px){
+ .lang-toggle{margin-left:0;padding:8px 11px}
+ html[lang="zh-CN"] .hero-v2 h1{font-size:clamp(36px,9.7vw,60px)}
+ html[lang="zh-CN"] .section-head h2{font-size:clamp(38px,9.2vw,52px)}
+}

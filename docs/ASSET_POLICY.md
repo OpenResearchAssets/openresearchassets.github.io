@@ -1,28 +1,34 @@
-# Asset Policy: provenance, licenses and privacy
+# 资产来源、许可与隐私规范 / Asset Policy
 
-## Repository content classes
+## 内容及版权
 
-1. **Original templates** (`assets/templates/*.svg`): designed for this project; released under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). Attribution: “OpenResearchAssets contributors,” with a link to the canonical source repository once published. Contributors must confirm their original work is legally theirs to license.
-2. **Original previews** (`assets/previews/*`): raster renderings of the original templates, same CC BY 4.0 license.
-3. **Open code, checklist and Skill**: MIT license in `LICENSE`.
-4. **Third-party references** (`data/references.js`): URLs, bibliographic/context metadata and our own short descriptions. Their figures, diagrams, logos and downloads remain governed by original owners and are NOT part of this asset license.
+| 内容 | 当前许可/边界 |
+|---|---|
+| `assets/templates/*.svg` 原创可编辑模板 | CC BY 4.0，署名 OpenResearchAssets contributors，标注原仓库链接 |
+| `assets/previews/*` 原创模板预览 | 同对应 SVG 的 CC BY 4.0 |
+| 网站源码、JavaScript、测试脚本、Skill | MIT（参见仓库 `LICENSE`） |
+| `data/references.js` 外部参考 | 只包含链接与我们原创的短评；原论文图片、Logo 和下载物并**未**因此获得我们的许可 |
 
-## Do not copy by default
+贡献者应确认作品确有相应授权。单纯署名不能替代转载、修改或商业再分发许可。
 
-Do not upload screenshots, figure crops, full papers, protected fonts, original project assets or third-party icons to this public repository without explicit permission or a compatible license. Attribution alone does not grant redistribution rights. Use links and original explanatory diagrams instead. Clearly distinguish **design study**, **reference**, **concept sketch**, and **empirical figure**.
+## 不要默认复制第三方内容
 
-## Scientific integrity
+未经明确许可，不批量下载或将论文截图、PDF、图标、字体、商业模板、原项目图片放进仓库。优先提供原站 URL、作者与我们的设计分析。必须区分：原创模板、概念草图、外部参考、真实实验结果。
 
-The three included template figures contain illustrative labels and conceptual or schematic data, **not verified scientific results**. Do not pass template bars or diagrams off as empirical findings. Any contribution with real statistics must provide underlying evidence and stated experimental conditions.
+## 科学真实性
 
-## Data privacy
+当前三张 SVG 模板中的数据、示例标签均为**概念性内容**，不能作为任何真实论文实证结果发布。提供实际数值时应附相关实验设置、数据和对应引用。
 
-No submitted paper, manuscript or image is collected by the static website. The manual review checklist executes locally in the visitor's browser. Users who invoke the Quality Critic Skill in other tools are responsible for selecting appropriate model providers and their data policies. Never publish private lab data, submitted manuscript content or unpublished repository details without authorization.
+## 隐私与数据处理
 
-## Future commercial offerings
+静态网页的人工自查功能不上传图片、论文和使用记录。用户自行调用外部模型与 Agent Skill 时，应了解模型供应商的数据使用政策。不要未经许可收录未发表论文、内部实验、私人仓库信息或联系方式。
 
-A proprietary service may coexist with this open project, but community materials are not implicitly licensed for proprietary resale. A separate paid asset must be independently created or separately and explicitly licensed by its rights holder. Respect contributor attribution, opt-outs and license requirements. Publish any material changes to the open/paid boundary before adopting them.
+## 商业化边界
 
-## Removal requests
+未来商业产品可以独立存在，但开放社区素材不会自动变成专有商品；有收费项目时，必须重新明确创作者授权、贡献者权利和第三方许可。
 
-If you own content accidentally included here, open an issue identifying the affected file and your rights; while the community process is being established, maintainers should promptly disable disputed material pending review.
+## 下架申请
+
+权利人可以通过 GitHub Issue 指出存在争议的具体素材和权属。维护者应及时限制问题素材的展示并核实合法性。
+
+**English summary:** Original SVG templates and previews are CC BY 4.0; site code and the Skill are MIT. Linked third-party resources retain their own rights. Do not upload private manuscripts or unlicensed figures. Community contributions are not implicitly licensed for proprietary resale.

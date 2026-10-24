@@ -1,91 +1,81 @@
 ---
 name: research-quality-critic
-description: Diagnose and improve the quality of scientific figures, tables and manuscript visual narratives. Check scientific faithfulness, clarity, aesthetic craft, editability and final-publication fit. Produce prioritized, evidence-bound design advice rather than generic scores.
+description: 用证据约束审查并改进科研配图、图表及论文视觉叙事。Scientific figure quality review: scientific fidelity, clarity, editability and final-page legibility.
 license: MIT
 ---
 
-# Research Quality Critic
+# Research Quality Critic · 科研表达质量审核
 
-This Skill reviews **teasers, method figures, result charts, tables, writing and whole-paper figure organization**. It is a structured reviewing protocol, not proof that an AI can judge all aesthetics or independently validate experimental results.
+> 中文为权威说明，末尾附 English summary。**这是一份可供 Agent 执行的审核 Skill，不是已训练或已验证准确率的独立质量模型，也不等于网页已经能自动分析科研图片。**
 
-## User inputs
+## 目标
 
-1. **Artifact:** image, SVG, PPTX, table, or PDF; inspect the actual provided asset. If the artifact is unavailable, ask for it rather than pretending to have evaluated its appearance.
-2. **Type:** teaser / method / results / table / manuscript / other.
-3. **Scientific context:** research question, precise claim, caption, relevant method and underlying evidence when available.
-4. **Publication context:** target venue, single/two column target size, page or slide constraints, intended reader.
-5. **Editing goal:** diagnose only, prioritized plan, redesign proposal or source-file revisions.
+帮助研究者把已经存在、但表达不够理想的 Teaser / Method Figure / Results / Table / Paper 改得更准确、更清晰、更有审美完成度，避免泛泛地“优化布局”。**优先形成可执行修改方法，而不是只建立评分 Benchmark。**
 
-If optional inputs are absent, proceed with what is available and label uncertain claims. Never invent source data, target margins, numerical measurements or publication requirements.
+## 输入
 
-## Review workflow
+- **真实素材**：用户提供的图像、SVG、PPTX、表格或论文 PDF。没有看到文件不得宣称已看过或评过美学质量。
+- **科学上下文**：论文主张、caption、方法、数据以及已知实验条件。缺什么证据明确标注。
+- **排版要求**：单/双栏、目标论文模板、最终图宽及读者群体（如果已知）。
+- **任务范围**：只诊断、建议修改、实际改源文件或检查成品。
 
-### A. First classify the artifact
+## 工作流程
 
-- What is it attempting to communicate? State its **one-sentence reader takeaway**.
-- Is it a scientific result, schematic illustration, visual analogy, reference screenshot or speculative design? Mark the class explicitly.
-- Identify what **cannot be checked** without data, text, original source, screenshots or compiled PDF.
+### 1. 首先确定表达目标
 
-### B. Fidelity gate (blocking issues first)
+用一句话写清楚读者应该从图中学到什么。标记素材类型：真实实证图、概念示意、生成参考图、设计草图。明确哪些事实无法验证。
 
-Cross-check numerics, axes, units, conditions, citations, labels, arrow semantics, image authenticity, data comparability and consistency with the manuscript. Unsupported or suspicious claims should be marked **needs verification**, not silently accepted.
+### 2. 科学真实性硬门槛
 
-### C. Reader-comprehension test
+核对数值、轴、单位、分母、对照条件、caption、箭头含义、视觉比较公正性、图像真实性。缺乏证据时写“待核验”，**不得猜测正确或错误的实验结果**。
 
-Examine information hierarchy, reading path, redundancy, main-finding visibility, semantic grouping, cross-panel consistency and caption dependence. For each problem, specify **where** it occurs and why it matters.
+### 3. 信息结构与可读性
 
-### D. Visual-craft diagnosis
+定位具体面板、坐标或文字区域：重点是否明确、阅读路径是否顺畅、面板是否重复、图例是否明确、缩小后是否可读。
 
-Inspect typography, contrast, whitespace, alignment, color semantics, stroke weight, balance, focal point, artifact quality and unnecessary decorative content. Separate objective legibility issues from taste-dependent suggestions. A high-quality result may be dense when the content demands it; do not enforce a single minimalist style.
+### 4. 审美与视觉工艺
 
-### E. Publication reality check
+检查字体层级、配色语义、线宽、对齐、留白、视觉均衡。客观可读性问题与个人风格偏好必须分别列出。不要把所有作品强制改成同一种极简风。
 
-When a manuscript PDF or layout is available, inspect at the **final intended size**. Check float placement, figure/table duplication, key evidence location, caption distance, tiny labels, excess whitespace, split panels and consistent style. An attractive full-resolution image that fails after downscaling is not publication ready.
+### 5. 真实版面检查
 
-### F. Output actionable review
+如果有 PDF 或源文件，在**最终论文排版尺寸**检查图表、caption、浮动体顺序、表格宽度和重点证据；没有真实排版不得宣称出版级验证完成。
 
-Provide:
+### 6. 给出可执行输出
 
-1. **Short verdict:** current communication strengths and the single most important obstacle. Do not give an unsupported aggregate numerical score.
-2. **Findings:** each as location → observed issue → category → priority → why it matters → minimal fix → validation step. Priorities: blocking / high / medium / low.
-3. **Keep / change:** what is already working and must not be damaged by a redesign.
-4. **Revision plan:** up to five changes ordered by impact and implementation cost; call out any changes that could alter scientific meaning.
-5. **Remaining uncertainty:** which judgments rely on subjective preference or absent evidence.
+每个问题必须包含：`位置 → 实际观察 → 影响 → 严重程度 → 最小修改方案 → 验证方法`。
 
-### G. If asked to revise the artifact
+先列 **Blocking（事实错误）**，再列 **High（阅读问题）**、Medium、Low。尽量只给三个最值得改的问题，保留当前作品中已经做得好的设计。避免缺乏依据的 9.4/10 之类综合分数。
 
-- Preserve scientific content and editable structure; do not substitute a flattened screenshot for an editable SVG/PPTX.
-- Favor targeted changes over wholesale redesign of established figures.
-- Render the revised result; inspect clipping, alignment, fonts, final dimensions and readability; compare against original.
-- Report exactly which files changed and which checks were actually run. Never imply a human or publisher verified the result if they did not.
+### 7. 当用户要求实际改稿
 
-## Example response contract
+- 优先**局部修改**，保留内容、原有矢量编辑性和已经满足的要求；多轮修改时列出不能破坏的约束。
+- 修改后重新渲染，检查文本溢出、线条、字体和对齐。
+- 将修改前后嵌入相同实际版面比较；有条件时请独立人类给出偏好与原因。
+- 清楚说明哪些检查已执行、哪些尚未执行，以及哪些事实仍需原作者核对。
 
-```
-Artifact: Figure 1 — method overview
-Context received: figure + caption; no underlying experiment data
-Reader takeaway: [one sentence]
+## 输出样例
 
-Keep:
-- [observed strength]
-
-Issues:
-- HIGH · Panel B, lower-left
-  Observation: [specific visible issue]
-  Consequence: [reader/scientific problem]
-  Minimal fix: [concrete edit]
-  Verify: [render/logic check]
-
-Unverified:
-- [claim or number not checkable from supplied evidence]
-
-Revision order:
-1. [highest impact]
-2. [next]
+```text
+素材：Figure 1 · Method overview
+已收到：图 + caption；没有实验数据
+主要意图：……
+保留：……
+问题一：High · Panel B 左下
+  可见现象：……
+  影响：……
+  最小修复：……
+  复核：……
+未验证：……
+修改顺序：1. …… 2. ……
 ```
 
-## For agents with tools
+## 工具和隐私
 
-Use available image viewing/rendering tools, document/PDF inspection and data checks rather than judging from file names. No outside service is required by this Skill. If deploying with a remote VLM, disclose to the user where private files are transmitted and obtain suitable approval. Do not create fake before/after examples or claim quality gains not tested with real readers.
+使用 Agent 实际可用的图片查看、文档/PDF 渲染、代码和科学数据核对能力。用户未授权时，不将未发表稿件传给外部模型服务。**本 Skill 可免费使用，但审核与修改效果取决于执行它的 Agent、实际证据以及人工复核。**
 
-Read `../../docs/QUALITY_STANDARD.md` for the detailed first-edition rubric (when installed alongside the repository). This relative link is optional for standalone Skill installation; this file is usable by itself.
+详细质量边界见 `../../docs/QUALITY_STANDARD.md`（单独安装 Skill 时可不依赖这个文件）。
+
+## English summary
+
+Review real user-provided scientific artifacts against scientific fidelity, communication, craft and final publication layout. Locate issues precisely, propose minimal verifiable edits and preserve existing scientific constraints. Never hallucinate data or claim quality improvements without actual checks. This is an agent instruction protocol, not a separately trained or benchmarked AI reviewer.

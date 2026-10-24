@@ -1,104 +1,60 @@
-# OpenResearchAssets
+# OpenResearchAssets · 科研设计精品资产库
 
-[简体中文说明](README.zh-CN.md) · English (this page)
+**中文（默认）** · [English](README.en.md) · [在线主页](https://suchenl.github.io/OpenResearchAssets/)
 
-[**Explore the live gallery and Quality Critic →**](https://suchenl.github.io/OpenResearchAssets/)
+> **Quality over quantity. 科学真实先于美观。**
+>
+> 面向科研工作者，精选值得研究的视觉表达参考、提供原创可编辑素材，以及可实际使用的质量检查方法。
 
-**Craft better research.** A selective, quality-first library for excellent research communication.
+这个项目不追求收录最多的论文图，也不声称已经开发出自动审美模型。我们希望每项内容都有明确用途、可信来源和可复用的设计经验。
 
-> **Status:** first public-ready starter release (2026-10-24). The initial references are attributed external links, and the SVGs are original **conceptual templates**, not real paper findings. The browser quality checklist is **manual**, not an AI vision judge.
+## 现在能用什么
 
-## What makes this different?
-
-We're not trying to collect the most figures. We're building a **reliable standard of quality**: scientific faithfulness, clarity, composition, editing freedom and final-page legibility. The library combines four things:
-
-1. **Inspiration** — a carefully explained shortlist of external research projects, visual references and creative tools.
-2. **Editable assets** — original, source-editable SVG templates with explicit rights and limitations.
-3. **Quality Critic** — a rigorous, human-readable standard; browser-based self-review and an agent-compatible skill.
-4. **Craft & practice** — workflows, quality checks, contribution protocols and eventually real before/after case studies with permission.
-
-### What's usable today?
-
-| Output | How to use | Status |
+| 功能 | 入口 | 真实状态 |
 |---|---|---|
-| Homepage & reference gallery | Open `index.html` | Functional, searchable; eight external references |
-| Quality Critic self-check | Open `quality.html` | Local-only manual checklist for five artifact types, report-to-Markdown copy |
-| Quality Critic Agent Skill | `skills/quality-critic/SKILL.md` | Usable instructions for a multimodal agent with access to the artifact and relevant evidence; performance not independently validated |
-| Editable SVG templates | `assets/templates/` | Three original conceptual layouts, not empirical results |
-| Quality Standard | `docs/QUALITY_STANDARD.md` | First-edition rubric and evidence requirements |
-| Licensing & provenance | `docs/ASSET_POLICY.md` | Strict separation of original assets from external reference links |
+| 静态双语主页与参考检索 | [首页](https://suchenl.github.io/OpenResearchAssets/) | 支持中文/英文切换，8 条链接式外部参考及分类/关键词过滤 |
+| 原创可编辑 SVG | [首页·原创素材](https://suchenl.github.io/OpenResearchAssets/#assets) | 三张概念示意模板，可直接下载；**不代表真实实验成果** |
+| 科研图表人工质量自查 | [质量自查](https://suchenl.github.io/OpenResearchAssets/quality.html) | 五类对象的手动检查清单；支持标记问题、导出 Markdown 报告；**不会自动识别图片** |
+| Agent 审核指导 Skill | [SKILL.md](skills/quality-critic/SKILL.md) | 可供支持文件查看的 Agent 参考执行；效果未经独立专家评估，运行由用户自行提供 |
+| 设计与版权规范 | [质量规范](docs/QUALITY_STANDARD.md) · [资产授权](docs/ASSET_POLICY.md) | 可阅读的编辑规则和来源约束，不构成学术结论或出版认证 |
 
-## Use locally — no server or AI API required
+## 使用方式
+
+无需注册、托管后端、GPU、数据库或付费 API。下载仓库后，直接在浏览器中打开 HTML，或使用本地服务器：
 
 ```bash
-# Open the two static pages directly in your browser
-open index.html
-open quality.html
-
-# Or serve the directory locally
 python3 -m http.server 8000
-# then browse http://localhost:8000
-
-# Validate files
 python3 tests/check_project.py
-
-# Optional rendered browser QA (requires playwright + local Chromium)
+# 需要已安装 Playwright 与 Chromium 时可选：
 python3 tests/browser_offline_smoke.py
 ```
 
-No dependency installation, database, account, GPU, tracking script or server-side inference. Existing third-party models can use the Skill on user-owned infrastructure, but their running and privacy terms are controlled by the user.
+浏览器质量自查始终是**人工选择问题**：网页无法读取用户论文内容，不自动分析图像或上传文件。如果你选择用外部 Agent 和 Skill 处理未发表稿件，请自行确认模型提供方的数据处理条款。
 
-## Repository map
+## 社区与项目标准
 
-```text
-index.html                   Editorial landing page and curated reference index
-quality.html                 Human-operated, browser-only Quality Critic
-css/site.css                 Shared visual design system
-js/site.js                   Search and category filters
-js/quality.js                Review questionnaire and Markdown output
-data/references.js           Canonical external-reference metadata
-assets/templates/           Three original editable SVG sources
-assets/previews/            PNG previews of original SVGs only
-skills/quality-critic/       Agent Skill and structured review workflow
-docs/QUALITY_STANDARD.md     Quality rubric and review criteria
-docs/ASSET_POLICY.md        Licensing, provenance and privacy
-docs/PRODUCT_STRATEGY.md    Open-first strategy and future commercialization gate
-CONTRIBUTING.md              Editorial rules and community workflow
-tests/                       Offline smoke checks
-```
+1. **科学真实为硬门槛**：图中的数值、比较和研究结论不得随意改写。
+2. **少而精**：每条参考都应说明为什么值得学，不只附链接。
+3. **真正可编辑**：形状与文字需可独立调整，不能把一张截图放进 SVG 外壳。
+4. **实际版面审核**：所有投稿用图需在最终 PDF 尺寸检查可读性。
+5. **版权与隐私优先**：第三方图像优先外链，未公开论文与商业资料不进入公共仓库。
+6. **公开部分保持开放**：未来商业服务需另行确权，不将社区贡献直接转为专有资产。
 
-## Editorial standard
+欢迎通过 [Issue](https://github.com/Suchenl/OpenResearchAssets/issues/new/choose) 和 [Pull Request](https://github.com/Suchenl/OpenResearchAssets/pulls) 贡献高质量参考、原创模板和可复核的问题案例。详情见 [贡献规范](CONTRIBUTING.md) 与 [AI 维护规则](AGENTS.md)。
 
-**Quality over quantity** is a review criterion, not an excuse to exclude unfamiliar aesthetics. Submissions should demonstrate superior clarity and execution **for their stated scientific purpose**. We welcome different research fields, design languages and cultural styles.
+## 仓库结构
 
-- Every public figure reference needs a traceable original source and a reason for inclusion.
-- No unlicensed reposting or redistributing authors' paper images.
-- No fabricated metrics, datasets, model comparisons or experimentally unsupported claims.
-- Original templates must remain edit-friendly; embedding one flattened image into an SVG does not qualify.
-- Review against the *compiled publication layout* where applicable.
-- Distinguish original artwork, third-party reference links, speculative examples and verified experimental figures.
-- Community contributions remain open under their declared license. No automatic conversion to proprietary paid assets.
+- `index.html`、`quality.html`、`principles.html`、`contribute.html`：中文默认、英文可切换的网站页面。
+- `data/references.js`：参考资源的唯一结构化来源，含中英文字段。
+- `assets/templates/`、`assets/previews/`：原创 SVG 与对应 PNG 预览。
+- `skills/quality-critic/`：用于其他 Agent 的质量审核工作说明。
+- `docs/`：公开质量规范、设计规则、许可、部署和公开产品边界。
+- `tests/`：不需要后端的静态检查与浏览器验收脚本。
 
-## Agent review (copy into your local agent)
+## 开源与许可
 
-> Follow `skills/quality-critic/SKILL.md` to review this figure or paper. Read the artifact and the supplied caption, research claim and supporting evidence. Separate objective errors, design problems and subjective style suggestions. Identify affected regions, prioritize specific fixes, and verify changes at final publication size. Do not make up a quality score, scientific results or evidence you have not seen.
+- 程序、网站和 Skill：MIT（参见 [LICENSE](LICENSE)）。
+- 仓库原创 SVG 模板和预览图：CC BY 4.0（参见 [资产政策](docs/ASSET_POLICY.md)）。
+- 第三方参考链接所指内容不因此获得上述许可证，版权仍属于原权利人。
 
-## Distribution and hosting
-
-This is a static website suitable for Cloudflare Pages (or any static hosting platform). Set the publish directory to the repository root, with no build command. Don't treat GitHub Pages as a default commercial SaaS host; select hosting appropriate to the deployment terms. A later product can remain separate without rewriting this open library.
-
-## Project values & contribution
-
-See [CONTRIBUTING.md](CONTRIBUTING.md). Suggestions and pull requests are reviewed for source integrity, copyright, reproducibility, information value and design craft. See [docs/PRODUCT_STRATEGY.md](docs/PRODUCT_STRATEGY.md) for the deliberate choice to start with a free product rather than charging users or incurring server costs.
-
-## Licensing
-
-- Source code (HTML/CSS/JS/Python/Skill instructions): MIT — see [LICENSE](LICENSE).
-- Original editable templates in `assets/templates/` and their previews: **CC BY 4.0** — see [docs/ASSET_POLICY.md](docs/ASSET_POLICY.md).
-- External projects listed in `data/references.js`: **not relicensed or redistributed** here; see their original authors' terms.
-- New contributions require an explicit license and provenance; see [CONTRIBUTING.md](CONTRIBUTING.md).
-
-Made for researchers who care about the science **and** the way it's explained.
-
-
-**Publishing guide:** [Deploy the public website](docs/DEPLOYMENT.md) (GitHub Pages / Cloudflare Pages, including browser acceptance checklist).
+**当前公开项目不提供自动图像诊断、AI 改图服务、在线付费设计或已训练的审美质量模型。** 未来想法不会以未实现的产品功能进行宣传。
