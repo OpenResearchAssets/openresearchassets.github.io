@@ -46,18 +46,20 @@ with sync_playwright() as pw:
         page.locator('.ora-resource-card').first.wait_for()
         assert page.locator('html').get_attribute('lang')=='zh-CN'
         assert page.locator('h1').inner_text().startswith('让已有的经验')
-        assert page.locator('.ora-resource-card').count()==15
+        assert page.locator('.ora-resource-card').count()==9
+        page.locator('#catalog-more').click()
+        assert page.locator('.ora-resource-card').count()==19
         page.locator('#facet-kind').select_option('website-reference')
         assert page.locator('.ora-resource-card').count()==3
         page.locator('#facet-kind').select_option('')
         page.locator('#reference-search').fill('RoboRender')
         assert page.locator('.ora-resource-card').count()==2
         page.locator('#facet-reset').click()
-        assert page.locator('.ora-resource-card').count()==15
+        assert page.locator('.ora-resource-card').count()==9
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='en'
         assert page.locator('h1').inner_text().startswith('Make knowledge useful')
-        assert page.locator('.ora-resource-card').count()==15
+        assert page.locator('.ora-resource-card').count()==9
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='zh-CN'
         if w<=720:
@@ -90,6 +92,6 @@ with sync_playwright() as pw:
             assert page.locator('html').get_attribute('lang')=='zh-CN'
             assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),name
         assert not errors,(label,errors)
-        print('PASS',label,'15 resources, filters, bilingual UI, detail, quality tool, mobile layout')
+        print('PASS',label,'19 resources, filters, bilingual UI, detail, quality tool, mobile layout')
         page.close()
     browser.close()
