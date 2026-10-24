@@ -4,6 +4,7 @@ from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from threading import Thread
 from functools import partial
 from playwright.sync_api import sync_playwright
+from shutil import which
 
 ROOT=Path(__file__).resolve().parents[1]
 httpd=ThreadingHTTPServer(("127.0.0.1",0),partial(SimpleHTTPRequestHandler,directory=str(ROOT)))
@@ -12,7 +13,10 @@ Thread(target=httpd.serve_forever,daemon=True).start()
 
 try:
     with sync_playwright() as pw:
-        browser=pw.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox','--disable-gpu'])
+        opts={'headless':True,'args':['--no-sandbox','--disable-gpu']}
+        local_chromium=which('chromium') or which('chromium-browser')
+        if local_chromium:opts['executable_path']=local_chromium
+        browser=pw.chromium.launch(**opts)
         for w,h,label in [(1440,900,'desktop'),(390,844,'mobile')]:
             page=browser.new_page(viewport={'width':w,'height':h})
             issues=[]
