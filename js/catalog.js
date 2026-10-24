@@ -135,7 +135,8 @@
       '<dt>'+safe(tr('领域','Domains'))+'</dt><dd>'+e.domains.map(x=>safe(facetText('domains',x))).join(' · ')+'</dd>'+
       '<dt>'+safe(tr('使用性质','Reuse'))+'</dt><dd>'+safe(e.rights?.reuse || 'unknown')+'</dd>'+
       '<dt>'+safe(tr('第三方图片','Third-party media'))+'</dt><dd>'+safe(tr('未在本站重新分发','Not redistributed by this site'))+'</dd></dl>'+
-      '<div class="ora-detail-links">'+Object.entries(e.links || {}).map(([key,url])=>link(url,{source:tr('原始来源','Original source'),paper:tr('论文','Paper'),editable:tr('获取可编辑文件/说明','Editable source / instructions')}[key] || key)).join('')+'</div>'+
+      '<div class="ora-detail-links">'+Object.entries(e.links || {}).map(([key,url])=>link(url,{source:tr('原始来源','Original source'),paper:tr('论文','Paper'),editable:tr('获取可编辑文件/说明','Editable source / instructions')}[key] || key)).join('')+
+      '<a href="catalog/entries/'+encodeURIComponent(e.id)+'.json" target="_blank" rel="noopener noreferrer">'+safe(tr('供 AI 使用的单项 JSON','Single-entry JSON for AI'))+' ↗</a></div>'+
       '<button type="button" id="ora-copy-brief">'+safe(tr('复制给 AI 的使用说明','Copy AI usage brief'))+'</button>'+
       (related.length?'<div class="ora-related"><h3>'+safe(tr('关联资产','Related asset'))+'</h3><a href="asset.html?id='+encodeURIComponent(related[0].id)+'">'+safe(related[0].title)+' →</a></div>':'')+
       '</aside></div>';

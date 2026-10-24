@@ -41,6 +41,8 @@ if catalog.get('schema_version')!='1.0.0':errors.append('catalog: unsupported sc
 entries=catalog.get('entries',[])
 if len(entries)<19:errors.append('catalog: missing baseline 19 entries')
 ids=[e.get('id') for e in entries]
+import re
+if any(not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', str(eid)) for eid in ids):errors.append('catalog: unsafe ID; expected kebab-case')
 if len(ids)!=len(set(ids)):errors.append('catalog: duplicate IDs')
 for rid in ('roborender-teaser','roborender-site','robodojo-teaser','robodojo-site','supermimic-teaser','supermimic-site'):
     if rid not in ids:errors.append('missing primary case '+rid)

@@ -27,3 +27,12 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Browser smoke test
         run: python tests/browser_offline_smoke.py
+
+      - name: Archive page screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ora-browser-screenshots
+          path: tests/_local_*.png
+          retention-days: 7
+          if-no-files-found: ignore

@@ -73,14 +73,16 @@ with sync_playwright() as pw:
             assert not page.locator('#site-nav').is_visible()
         assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('home',label,page.evaluate('document.documentElement.scrollWidth'))
         assert page.locator('.showcase img').evaluate_all('(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
-        page.screenshot(path=str(ROOT/'tests'/f'_local_home_{label}.png'),full_page=False)
+        page.screenshot(path=str(ROOT/'tests'/f'_local_home_{label}.png'),full_page=True)
 
         page.goto('https://ora.local/asset.html?id=supermimic-site',wait_until='load')
         page.locator('.ora-lesson').first.wait_for()
         assert 'SuperMimic' in page.locator('h1').inner_text()
         assert page.locator('.ora-lesson').count()==3
         assert page.locator('.ora-detail-links a').count()>=2
+        assert 'catalog/entries/supermimic-site.json' in page.locator('.ora-detail-links a').last.get_attribute('href')
         assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('detail',label)
+        page.screenshot(path=str(ROOT/'tests'/f'_local_detail_{label}.png'),full_page=True)
 
         page.set_content(page_html('quality.html'),wait_until='load')
         assert page.locator('.audit-question').count()==8
