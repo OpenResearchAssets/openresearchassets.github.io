@@ -858,6 +858,119 @@
       }
     },
     {
+      "id": "roborender-model-architecture",
+      "title": "RoboRender · 多视角视频生成模型结构图",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "method-figure",
+        "model-architecture",
+        "multi-view-generation",
+        "robotics-figure"
+      ],
+      "description": {
+        "zh": "官方真实模型结构图：上一帧、视频、机器人掩码、深度和语言条件进入联合多视角潜空间，经 Diffusion Transformer 生成不同相机视角。与论文 Teaser 为不同素材。",
+        "en": "Authentic model-architecture figure from the official RoboRender project, showing prior-frame, video, robot-mask, depth and text conditioning, joint multi-view latents, and diffusion decoding. Not its teaser."
+      },
+      "keywords": {
+        "zh": [
+          "官方原图",
+          "模型结构",
+          "扩散模型",
+          "多视角生成",
+          "机器人掩码",
+          "深度图"
+        ],
+        "en": [
+          "official figure",
+          "robot model diagram",
+          "diffusion transformer",
+          "multiview",
+          "depth",
+          "mask",
+          "conditioned generation"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig2_model.png",
+        "paper": "https://arxiv.org/abs/2610.09254",
+        "officialFigure": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig2_model.png",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "rights": {
+        "reuse": "CC-BY-4.0; attribution required; verify separately credited embedded content",
+        "preview": "third-party-cc-by-4.0",
+        "third_party_media": "official-figure-copied-with-paper-license",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licensing_evidence": "https://arxiv.org/abs/2610.09254",
+        "original_file": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig2_model.png",
+        "original_blob_sha": "2b7aeec5fa5f4aeeabfd1322031ad0cc56f5aab7",
+        "attribution": "Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu, RoboRender, arXiv:2610.09254 (2026)",
+        "modifications": "none; exact upstream PNG blob",
+        "note": "Official project file fig2_model.png. Manuscript is CC BY 4.0; any separately credited embedded third-party media must be assessed independently."
+      },
+      "parent": "roborender-teaser",
+      "visual": {
+        "src": "assets/third-party/roborender/model-architecture.png",
+        "kind": "licensed-paper-figure",
+        "alt": {
+          "zh": "RoboRender 官方多视角视频生成模型结构图，展示前一帧、视频、机器人掩码、深度和文本条件进入扩散生成网络",
+          "en": "RoboRender official multiview video-generation model diagram with previous frame, video, robot mask, depth and text conditioning"
+        },
+        "label": {
+          "zh": "官方真实图 · CC BY 4.0 · 原样收录",
+          "en": "OFFICIAL FIGURE · CC BY 4.0 · UNMODIFIED"
+        }
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要研究多视角机器人视频生成的模块排布与证据标注",
+            "需要参考深度、机器人掩码、文本和上一帧共同条件化的模型示意图"
+          ],
+          "en": [
+            "Studying module layout and explanatory labels for multi-view robot video generation",
+            "Designing a diagram that combines depth, robot masks, text and previous-frame conditions"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "将多模态输入分组对齐到对应视角，并保留明确标签",
+            "用通道/Token 的中间表示桥接条件信号与生成核心",
+            "在右侧显示每个视角的输出，直观说明多视角耦合机制"
+          ],
+          "en": [
+            "Align heterogeneous inputs by camera view and label them explicitly",
+            "Connect conditioning signals to generation via an intermediate token representation",
+            "Show per-camera outputs on the right to communicate multi-view coupling"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不要把此模型结构图标记为 RoboRender 的论文 Teaser 或 Figure 1",
+            "即使 CC BY 允许再分发，也必须保留作者、出处、许可和改动说明",
+            "论文图可作为设计参考，但不能无说明地挪用其他研究的实证内容"
+          ],
+          "en": [
+            "Do not present the model diagram as RoboRender's teaser or Figure 1",
+            "Keep authors, source, license and modification status when redistributing",
+            "Do not reuse the original research evidence as if it were your own results"
+          ]
+        }
+      },
+      "previewStyle": "model-architecture"
+    },
+    {
       "id": "topconf-figure-gallery",
       "title": "Top-Conf Figure Gallery",
       "kind": "resource-index",

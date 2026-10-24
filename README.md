@@ -22,7 +22,7 @@ OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉�
 | 内容 | 实际交付 | 边界 |
 |---|---|---|
 | [任务搜索与多维筛选](https://suchenl.github.io/OpenResearchAssets/#references) | 双语关键词、科研阶段、领域、资产类型过滤；独立详情页 | 当前是浏览器本地筛选，不是语义向量检索 |
-| [结构化资产目录](catalog/index.json) · [轻量 AI 索引](catalog/manifest.json) | **21 项**记录，含 6 个 RoboRender / RoboDojo / SuperMimic 的深入视觉分析案例 | 未在仓库打包第三方论文原图或官网截图 |
+| [结构化资产目录](catalog/index.json) · [轻量 AI 索引](catalog/manifest.json) | **22 项**记录，含 6 个 RoboRender / RoboDojo / SuperMimic 的深入视觉分析案例 | 已有 1 张来源和 CC BY 许可记录齐全的官方模型结构图，其余第三方原图不默认再分发 |
 | [AI 使用指南](for-agents/) · [llms.txt](llms.txt) | 无需认证的 JSON、Markdown 导航和来源链接 | AI 的具体执行能力取决于 Agent 文件与工具权限 |
 | [原创可编辑 SVG](assets/templates/) | 5 份概念模板：Teaser、流程、结果、主页故事板、论点—证据映射 | 只展示结构和占位，不代表真实实验 |
 | [人工质量自查](quality.html) | 五类审核对象、问题手工勾选和 Markdown 报告 | **不自动读取或诊断图片** |
@@ -69,3 +69,7 @@ python3 tests/browser_offline_smoke.py
 | \`docs/\`、\`tests/\` | 资产政策、质量标准、工程验收 |
 
 **License**：程序和 Skill 为 MIT；原创 SVG/预览为 CC BY 4.0；第三方引用内容的版权不随链接归本仓库。详见 [LICENSE](LICENSE) 和 [资产政策](docs/ASSET_POLICY.md)。
+
+## 真实第三方视觉资产
+
+本站现已试点收录 [RoboRender 官方模型结构图](asset.html?id=roborender-model-architecture)（并非论文 Teaser），与对应的原创分析案例分别建档。原始 PNG 保存在 `assets/third-party/roborender/`，作者、原始仓库 blob SHA、论文 CC BY 4.0 许可依据和改动说明记录在 [第三方资产台账](assets/third-party/manifest.json)。其他项目的可见媒体不自动视为获准转载。

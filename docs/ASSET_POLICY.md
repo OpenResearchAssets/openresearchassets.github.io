@@ -7,10 +7,15 @@
 | `assets/templates/*.svg` 原创可编辑模板 | CC BY 4.0，署名 OpenResearchAssets contributors，标注原仓库链接 |
 | `assets/previews/*` 原创模板预览 | 同对应 SVG 的 CC BY 4.0 |
 | `assets/editorials/*.svg` 原创案例分析图 | 本项目独立绘制的研究方法/信息结构分析，CC BY 4.0；不包含原作者论文图片或网站截图。复用时请注明 OpenResearchAssets 和研究原始来源 |
+| `assets/third-party/roborender/model-architecture.png` | 来自 RoboRender 官方项目仓库 `fig2_model.png`，原封不动复制；对应论文 arXiv:2610.09254 标注 CC BY 4.0；作者、来源、许可链接、blob SHA、注意事项见 `assets/third-party/manifest.json`，**不纳入本站原创 SVG/代码统一许可** |
 | 网站源码、JavaScript、测试脚本、Skill | MIT（参见仓库 `LICENSE`） |
 | `catalog/index.json` 外部参考 | 只包含链接、原创简评与复用建议；原论文图片、Logo、截图和下载物并**未**因此获得我们的许可 |
 
 贡献者应确认作品确有相应授权。单纯署名不能替代转载、修改或商业再分发许可。
+
+## 可核实授权的第三方原图优先入库
+
+如果论文/作者已授予允许再分发的许可证（例如 CC BY 4.0），不必另行逐个请求许可；逐文件保留作者、原始地址、许可链接和改动说明。**许可只覆盖其实际权利范围**，图片内部若另有署名或第三方素材，仍需按具体情况检查。论文/网站可访问不等于获得再分发权。新增第三方媒体请统一登记 `assets/third-party/manifest.json`，不把它们混入本站原创 CC BY SVG 或 MIT 软件授权。
 
 ## 不要默认复制第三方内容
 

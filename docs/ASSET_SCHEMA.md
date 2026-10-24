@@ -73,3 +73,9 @@ python3 tests/browser_offline_smoke.py   # Playwright 与 Chromium 可用时
 ## 统一视觉封面与精读密度
 
 所有卡片采用 5:3 可响应的封面区域：重点论文/网站条目显示 6 个本站独立 SVG 分析图；可编辑模板显示原生 SVG 内容；外部资源、Workflow、Skill 根据自身关键词和实践经验生成有内容的结构封面，不能把它冒充原作者图片。重点案例页面避免重复渲染 `caseStudy` 与 `applicability.learn/avoid` 的同义内容；数据文件完整保留，供 AI 单项读取。
+
+## 第三方真实图片记录（已启用）
+
+许可允许时可以收录官方真实图片。此类条目的 `visual.kind=licensed-paper-figure`，`visual.src` 指向 `assets/third-party/<project>/<file>.png`，`rights.preview=third-party-cc-by-4.0`；必填 `rights.license_url`、`rights.licensing_evidence`、`rights.attribution`、`rights.original_file`、`rights.original_blob_sha` 和 `rights.modifications`。第三方文件独立见 `assets/third-party/manifest.json`，不继承本站 MIT/原创 SVG 的统一版权声明。
+
+真实图与本站原创结构分析图为**两种独立资产**，不能将方法结构图误写成论文 Teaser。无需许可的情况仅限拥有适用合法例外或其他授权，必须描述具体依据，而不是把所有互联网图片一概认定为“合理使用”。

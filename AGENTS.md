@@ -26,3 +26,5 @@ OpenResearchAssets 是**面向人类与 AI 的科研全过程可复用资产库*
 **English summary:** Keep the public site Chinese-first with complete English UI support. Show only implemented capabilities. Preserve scientific fidelity, licensing and privacy. Prefer useful methods over benchmark-building. Validate real rendering and interaction before release.
 
 13. **AI 节约上下文**：首选 `catalog/manifest.json`，再沿 `catalog/entries/<id>.json` 取少量详情。唯一手工维护源是 `catalog/index.json`；编辑后运行 `python3 tools/sync_catalog.py` 并用 `--check` 核对派生文件。CI 需要同时验证静态结构与浏览器行为。
+
+15. **真实媒体优先但逐文件确权**：允许复制 CC BY 等已有授权的第三方图片，不需要再发邮件逐项申请，但必须在 `assets/third-party/manifest.json` 登记作者、原始路径、版权依据、原图 Git blob SHA、修改状态，单条 catalog 的 rights 须可查；不要把外部图重新赋予本站 MIT 或原创 SVG 许可。来源不明者默认仅链接，合法例外需针对具体用途单独审查。
