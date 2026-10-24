@@ -58,3 +58,27 @@ jobs:
                   print("ORA_UI_DATA:" + encoded[i:i+4000])
               print("ORA_UI_END:" + name)
           PY
+
+          case_ids = ["roborender-teaser", "roborender-site", "robodojo-teaser",
+                      "robodojo-site", "supermimic-teaser", "supermimic-site"]
+          for view in ["desktop", "mobile"]:
+              tiles = []
+              for case_id in case_ids:
+                  picture = Image.open("tests/_local_case_" + case_id + "_" + view + ".png").convert("RGB")
+                  region = picture.crop((0, 0, picture.width, min(picture.height, 1030 if view=="desktop" else 970)))
+                  w = 410 if view=="desktop" else 280
+                  region = region.resize((w, round(region.height*w/region.width)))
+                  tiles.append(region)
+              tw = tiles[0].width
+              th = max(tile.height for tile in tiles)
+              sheet = Image.new("RGB", (tw*3, th*2), "#eef2f7")
+              for i, tile in enumerate(tiles):
+                  sheet.paste(tile, ((i%3)*tw, (i//3)*th))
+              sheet.save("tests/_local_contact_" + view + ".png")
+              buffer = BytesIO()
+              sheet.save(buffer, format="JPEG", quality=46, optimize=True)
+              encoded = base64.b64encode(buffer.getvalue()).decode("ascii")
+              print("ORA_UI_START:cases-" + view)
+              for i in range(0, len(encoded), 4000):
+                  print("ORA_UI_DATA:" + encoded[i:i+4000])
+              print("ORA_UI_END:cases-" + view)
