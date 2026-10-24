@@ -34,3 +34,7 @@ python3 tests/browser_offline_smoke.py  # Playwright + Chromium 可用时
 [提交 Issue](https://github.com/Suchenl/OpenResearchAssets/issues/new/choose) · [提交 PR](https://github.com/Suchenl/OpenResearchAssets/pulls)
 
 **English:** Contribute a traceable, task-specific research asset with bilingual metadata and actionable \`use_when / learn / avoid\` notes. Add records to the single JSON catalog. Do not repost third-party figures or screenshots without the necessary rights, and do not treat a listed skill as independently validated.
+
+## 结构化资产维护
+
+只编辑 `catalog/index.json`；每个条目需有明确任务、阶段、双语用例、具体可迁移经验、禁忌和可核对来源。执行 `python3 tools/sync_catalog.py` 重新生成 `catalog/manifest.json` 与 `catalog/entries/*.json`。不要手动改派生文件。提交前运行 `python3 tests/check_project.py` 及可能的浏览器测试；不得将第三方截图未经确权作为原创上传。

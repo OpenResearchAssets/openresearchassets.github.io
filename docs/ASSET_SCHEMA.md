@@ -59,3 +59,7 @@ python3 tests/browser_offline_smoke.py   # Playwright 与 Chromium 可用时
 \`\`\`
 
 修改资产记录只更新 \`catalog/index.json\`，并让所有页面从此文件读取。不要重新创建 \`data/references.js\` 或同名目录的不同版本。
+
+## 已实现的轻量 AI 读取流程
+
+唯一**手工维护**的事实源是 `catalog/index.json`。运行 `python3 tools/sync_catalog.py` 自动生成 `catalog/manifest.json`（检索摘要）和 `catalog/entries/<id>.json`（单项全部内容）。Agent 应先读取轻量索引，再按照条目中的 `entry` 路径读取少量相关文件，以减少不必要的上下文。禁止直接修改生成文件；执行 `python3 tools/sync_catalog.py --check` 验证一致性。网站检索当前仍使用完整目录与静态前端筛选，并不是已部署的语义数据库。

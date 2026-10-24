@@ -16,3 +16,5 @@
 12. 文档与代码均保持单一当前版本：直接维护权威文件，避免 `v2`、`final`、`latest` 等平行副本，不以长篇更新日志代替当前状态。
 
 **English summary:** Keep the public site Chinese-first with complete English UI support. Show only implemented capabilities. Preserve scientific fidelity, licensing and privacy. Prefer useful methods over benchmark-building. Validate real rendering and interaction before release.
+
+13. **AI 节约上下文**：首选 `catalog/manifest.json`，再沿 `catalog/entries/<id>.json` 取少量详情。唯一手工维护源是 `catalog/index.json`；编辑后运行 `python3 tools/sync_catalog.py` 并用 `--check` 核对派生文件。CI 需要同时验证静态结构与浏览器行为。
