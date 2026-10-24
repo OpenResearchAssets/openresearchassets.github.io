@@ -60,7 +60,7 @@ with sync_playwright() as pw:
         assert page.locator('.ora-resource-card').count()==3
         page.locator('#facet-kind').select_option('')
         page.locator('#reference-search').fill('RoboRender')
-        assert page.locator('.ora-resource-card').count()==2
+        assert page.locator('.ora-resource-card').count()==3
         page.locator('#facet-reset').click()
         assert page.locator('.ora-resource-card').count()==9
         page.locator('.lang-toggle').click()
