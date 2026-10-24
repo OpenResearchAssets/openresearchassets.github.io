@@ -119,7 +119,7 @@
       '<p class="empty-state">'+safe(empty())+'</p>';
     const status=document.getElementById('reference-status');
     if(status)status.textContent=tr('已显示 ','Showing ')+shown.length+' / '+catalog.entries.length+
-      tr(' 项 · 第三方图像未复制入库，预览为本站原创结构示意。',' entries · Third-party images are not copied; structural previews are authored.');
+      tr(' 项 · ',' entries · ')+catalog.entries.filter(e=>e.visual?.kind==='licensed-paper-figure').length+tr(' 张官方真实图片，其余视觉案例标注原创分析。',' authentic licensed image(s); other visual case studies are marked as authored analyses.');
     const more=document.getElementById('catalog-more');
     if(more) more.hidden = (shown.length === items.length);
     const count=document.getElementById('catalog-count');

@@ -51,6 +51,9 @@ with sync_playwright() as pw:
         assert page.locator('html').get_attribute('lang')=='zh-CN'
         assert page.locator('h1').inner_text().startswith('让已有的经验')
         assert page.locator('.ora-resource-card').count()==9
+        assert page.locator('.ora-resource-card').first.locator('.ora-official img').count()==1
+        assert page.locator('.ora-resource-card').first.locator('.ora-official img').evaluate('(n)=>n.complete&&n.naturalWidth>0')
+        assert '官方真实图片' in page.locator('#reference-status').inner_text()
         assert page.locator('.ora-resource-card .ora-curated img').count()==6
         assert page.locator('.ora-resource-card .ora-curated img').evaluate_all(
             '(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')

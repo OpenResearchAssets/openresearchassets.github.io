@@ -72,4 +72,6 @@ python3 tests/browser_offline_smoke.py
 
 ## 真实第三方视觉资产
 
+**官方真实图优先展示**：首页资产目录首张卡片是 RoboRender 官方模型结构图；后续六项仍分别是原创分析 SVG，不能将模型图误称为论文 Teaser。自动化验收会检查首页首卡真实 PNG 的实际加载和目录展示文案。
+
 本站现已试点收录 [RoboRender 官方模型结构图](asset.html?id=roborender-model-architecture)（并非论文 Teaser），与对应的原创分析案例分别建档。原始 PNG 保存在 `assets/third-party/roborender/`，作者、原始仓库 blob SHA、论文 CC BY 4.0 许可依据和改动说明记录在 [第三方资产台账](assets/third-party/manifest.json)。其他项目的可见媒体不自动视为获准转载。

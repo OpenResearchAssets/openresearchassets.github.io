@@ -80,6 +80,43 @@
   },
   "entries": [
     {
+      "id": "roborender-model-architecture",
+      "title": "RoboRender · 多视角视频生成模型结构图",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "method-figure",
+        "model-architecture",
+        "multi-view-generation",
+        "robotics-figure"
+      ],
+      "keywords": [
+        "官方原图",
+        "模型结构",
+        "扩散模型",
+        "多视角生成",
+        "机器人掩码",
+        "深度图",
+        "official figure",
+        "robot model diagram",
+        "diffusion transformer",
+        "multiview",
+        "depth",
+        "mask",
+        "conditioned generation"
+      ],
+      "description_zh": "官方真实模型结构图：上一帧、视频、机器人掩码、深度和语言条件进入联合多视角潜空间，经 Diffusion Transformer 生成不同相机视角。与论文 Teaser 为不同素材。",
+      "entry": "catalog/entries/roborender-model-architecture.json"
+    },
+    {
       "id": "roborender-teaser",
       "title": "RoboRender · 论文 Teaser",
       "kind": "visual-reference",
@@ -251,43 +288,6 @@
       ],
       "description_zh": "冷白、黑色大标题、宽松留白与分段证据；主页的视觉节奏服务于科研论证。",
       "entry": "catalog/entries/supermimic-site.json"
-    },
-    {
-      "id": "roborender-model-architecture",
-      "title": "RoboRender · 多视角视频生成模型结构图",
-      "kind": "visual-reference",
-      "stages": [
-        "methods",
-        "writing",
-        "communication"
-      ],
-      "domains": [
-        "robotics",
-        "vision"
-      ],
-      "tasks": [
-        "method-figure",
-        "model-architecture",
-        "multi-view-generation",
-        "robotics-figure"
-      ],
-      "keywords": [
-        "官方原图",
-        "模型结构",
-        "扩散模型",
-        "多视角生成",
-        "机器人掩码",
-        "深度图",
-        "official figure",
-        "robot model diagram",
-        "diffusion transformer",
-        "multiview",
-        "depth",
-        "mask",
-        "conditioned generation"
-      ],
-      "description_zh": "官方真实模型结构图：上一帧、视频、机器人掩码、深度和语言条件进入联合多视角潜空间，经 Diffusion Transformer 生成不同相机视角。与论文 Teaser 为不同素材。",
-      "entry": "catalog/entries/roborender-model-architecture.json"
     },
     {
       "id": "topconf-figure-gallery",
