@@ -91,6 +91,9 @@ with sync_playwright() as pw:
         assert page.locator('html').get_attribute('lang')=='en'
         page.locator('#generate-report').click()
         assert '1 selected issues' in page.locator('#audit-report').inner_text()
+        # Language persists between pages; explicitly switch back to Chinese for the next checks.
+        page.locator('.lang-toggle').click()
+        assert page.locator('html').get_attribute('lang')=='zh-CN'
         for name in ('principles.html','contribute.html','for-agents/index.html'):
             page.set_content(page_html(name),wait_until='load')
             assert page.locator('html').get_attribute('lang')=='zh-CN'
