@@ -28,3 +28,26 @@
 /* Dedicated full-width task search and compact asset section rhythm */
 .ora-catalog-search{display:flex;width:100%;max-width:none;min-height:52px;border-radius:12px;padding:10px 18px}.ora-catalog-search input{flex:1;min-width:0;font-size:15px}.ora-search-row>a{font-size:13px;font-weight:700;color:#2c5db2}.ora-discover + #references{padding-top:50px}
 @media(max-width:720px){.ora-catalog-search input{font-size:14px}.ora-search-row>a{font-size:12px}}
+
+/* Website-reference visuals are clearly authored layout dissections, not screenshots.
+   Separate them visually from a paper teaser even when both share the same project. */
+.ora-site-mock{width:82%;height:152px;border:1px solid #cbd6e5;background:#fff;border-radius:9px;overflow:hidden;box-shadow:0 12px 25px rgba(34,51,78,.11)}
+.ora-site-chrome{height:24px;border-bottom:1px solid #e8edf4;display:flex;align-items:center;gap:4px;padding:0 9px;background:#fafbfd}
+.ora-site-chrome i{width:5px;height:5px;border-radius:50%;background:#b5c1d3}
+.ora-site-chrome span{margin-left:auto;font-size:7px;letter-spacing:1.1px;color:#8996a8;font-weight:750}
+.ora-site-content{padding:13px 17px}
+.ora-site-content small{display:block;color:#6e809a;font-size:8px;letter-spacing:.09em;font-weight:700}
+.ora-site-content strong{display:block;max-width:210px;margin:7px 0 12px;font-size:clamp(14px,1.5vw,19px);letter-spacing:-.55px;line-height:1.1;color:#202d40}
+.ora-site-evidence{display:flex;gap:6px;height:33px}
+.ora-site-evidence b{flex:1;border-radius:4px;background:linear-gradient(130deg,#dce5f1,#a3bbd6)}
+.ora-site-benchmark .ora-site-evidence b{background:#a8bcd7;box-shadow:inset 0 -9px 0 #7599c2}
+.ora-site-editorial .ora-site-content strong{font-size:clamp(18px,2.3vw,26px);color:#131a26;letter-spacing:-1px}
+.ora-site-editorial .ora-site-evidence b{height:3px;background:#5375b7;margin-top:10px}
+.ora-site-editorial .ora-site-evidence b:nth-child(n+2){background:#d5dbe6}
+.ora-site-comparison .ora-site-evidence b:nth-child(2){background:#8db6bf}
+.ora-detail-preview .ora-site-mock{width:min(80%,620px);height:245px}
+.ora-detail-preview .ora-site-chrome{height:33px}
+.ora-detail-preview .ora-site-content{padding:25px 28px}
+.ora-detail-preview .ora-site-content strong{font-size:32px;max-width:500px}
+.ora-detail-preview .ora-site-evidence{height:59px}
+@media(max-width:720px){.ora-site-mock{width:88%}.ora-site-content strong{font-size:17px}.ora-detail-preview .ora-site-mock{width:90%;height:190px}.ora-detail-preview .ora-site-content{padding:15px}.ora-detail-preview .ora-site-content strong{font-size:23px}.ora-detail-preview .ora-site-evidence{height:32px}}

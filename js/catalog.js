@@ -31,7 +31,8 @@
     if (rights.preview === 'original-svg' && entry.links && /^assets\/templates\/[\w-]+\.svg$/.test(entry.links.editable || '')) {
       return '<div class="ora-preview ora-template"><img loading="lazy" alt="'+safe(tr('原创可编辑图示预览','Editable original diagram preview'))+'" src="'+safe(entry.links.editable)+'"></div>';
     }
-    const mark=type==='comparison' ? '<div class="ora-pair"><div><i></i><span>SIM</span></div><b>→</b><div><i></i><span>RGB</span></div></div>'
+    const mark=entry.kind==='website-reference' ? '<div class="ora-site-mock ora-site-'+safe(type)+'"><div class="ora-site-chrome"><i></i><i></i><i></i><span>PROJECT / RESEARCH</span></div><div class="ora-site-content"><small>'+safe(entry.title.split(' · ')[0])+'</small><strong>'+safe(type==='editorial'?'ONE CLEAR CLAIM':type==='benchmark'?'TASKS & EVIDENCE':'SEE THE TRANSFER')+'</strong><div class="ora-site-evidence"><b></b><b></b><b></b></div></div></div>'
+      : type==='comparison' ? '<div class="ora-pair"><div><i></i><span>SIM</span></div><b>→</b><div><i></i><span>RGB</span></div></div>'
       : type==='benchmark' ? '<div class="ora-matrix"><span>SIM</span><span>REAL</span><i></i><i></i><i></i><i></i><i></i><i></i></div>'
       : type==='editorial' ? '<div class="ora-editorial"><span>RESEARCH STORY</span><strong>ONE CLEAR<br>CLAIM.</strong><i></i></div>'
       : type==='workflow' ? '<div class="ora-steps"><i></i><b>→</b><i></i><b>→</b><i></i></div>'
