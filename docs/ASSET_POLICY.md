@@ -33,9 +33,17 @@
 
 未来商业产品可以独立存在，但开放社区素材不会自动变成专有商品；有收费项目时，必须重新明确创作者授权、贡献者权利和第三方许可。
 
-## 下架申请
+## 版权异议、撤除与更正（Rights and removal requests）
 
-权利人可以通过 GitHub Issue 指出存在争议的具体素材和权属。维护者应及时限制问题素材的展示并核实合法性。
+**如果您是作者、版权方、出版方或其代理，认为 OpenResearchAssets 的某项图片、截图、预览、文字或链接不适合被收录或展示，请[提交素材撤除 / 更正申请](https://github.com/Suchenl/OpenResearchAssets/issues/new?template=asset-removal.yml)。** 我们会及时核查来源、权利依据及具体争议，并在必要时先停止相关展示，再撤除、替换或更正对应内容。即使我们此前标注了来源与署名，也欢迎权利人表达意愿。
+
+申请时请提供：具体站内 URL 或资产 ID、所涉及作品或媒体的原始链接、您的权利关系或代理身份、希望撤除或更正的部分及简要说明。**Issue 属于公开页面，请勿提交私人证件、未公开文件、敏感联系方式。** 如果不适合公开提交权属材料，可先发起不含个人敏感信息的简短 Issue 询问安全联系方式，或使用 [GitHub 官方版权投诉渠道](https://github.com/contact/dmca)。
+
+维护流程：记录请求 → 检查单条 catalog/index.json 及 assets/third-party/manifest.json → 对有争议的图片酌情先暂停展示 → 同步更新首页卡片、详情、原始文件及派生 AI JSON → 检查部署结果并回复处理结论。Git 历史、镜像和缓存可能保留旧字节；如果需要彻底清除历史，应单独处理，不能保证仅删除当前分支就能撤销已发生的复制。
+
+我们提供的是**科研参考、来源导航和带评述的资源整理**，不是第三方官方发布或通用素材再授权。非盈利、署名、导流和设置撤除入口都**不能替代必要的授权或其他合法使用依据**。
+
+**English:** Copyright owners, authors, publishers and authorized representatives can [request removal or correction](https://github.com/Suchenl/OpenResearchAssets/issues/new?template=asset-removal.yml). Please identify the affected asset URL, source work, rights relationship and requested action. Do not post sensitive personal data in public Issues. We will assess the concern promptly, restrict display where appropriate, and update catalog records, media files and derived indexes. For formal claims, use [GitHub's copyright reporting process](https://github.com/contact/dmca). Attribution, noncommercial operation and this removal channel do not themselves grant permission.
 
 **English summary:** Original SVG templates and previews are CC BY 4.0; site code and the Skill are MIT. Linked third-party resources retain their own rights. Do not upload private manuscripts or unlicensed figures. Community contributions are not implicitly licensed for proprietary resale.
 

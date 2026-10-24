@@ -33,3 +33,7 @@ Agents should first read [the compact manifest](catalog/manifest.json), select a
 ## Authentic media with traceable licenses
 
 An official, unmodified RoboRender multiview architecture PNG is now included as its **own** asset ([model architecture](asset.html?id=roborender-model-architecture)), distinct from the authored teaser dissection. The upstream PNG and paper's CC BY 4.0 record are tracked in [the third-party media ledger](assets/third-party/manifest.json). The license on our own SVG templates and source code does not transfer to third-party images. Other unlicensed source media remain linked only.
+
+## Copyright concerns and removal
+
+Third-party works remain the property of their original rights holders. OpenResearchAssets collects research references with attribution and commentary, not as an official publication or a sublicensed image library. If you are an author, rights holder or authorized representative and object to an item, [request removal or correction](https://github.com/Suchenl/OpenResearchAssets/issues/new?template=asset-removal.yml). Identify the affected page/asset ID, original work and the change requested; do not publish sensitive personal documents in an Issue. We will review the report promptly and restrict, remove or correct the content as appropriate. Our [asset policy](docs/ASSET_POLICY.md) explains the process; [GitHub's formal copyright channel](https://github.com/contact/dmca) is also available. Free access, attribution and this takedown mechanism do not themselves establish permission.

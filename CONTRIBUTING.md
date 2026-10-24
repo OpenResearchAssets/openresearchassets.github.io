@@ -42,3 +42,7 @@ python3 tests/browser_offline_smoke.py  # Playwright + Chromium 可用时
 ## 可供 AI 实际学习的优质案例
 
 高优先级研究案例应提供真实来源支持的 `caseStudy` 四项内容（核心价值、视觉/信息结构、迁移步骤、验收限制），配套经独立设计的可编辑 `assets/editorials/<id>.svg`。SVG 用来分析可迁移的信息结构，必须标注为原创分析，不可冒充原始论文图或网站截图。若有公开的官方原图链接，可使用 `links.officialFigure`；未经图像级确权不下载第三方图到仓库。
+
+## 权利人提出异议 / Removal requests
+
+如权利人认为某个研究资产不适合在本站展示，可使用 [素材撤除 / 更正 Issue 模板](https://github.com/Suchenl/OpenResearchAssets/issues/new?template=asset-removal.yml)。需要提供站内链接、对应原始作品和问题说明。**不要在公开 Issue 里提交身份证明材料或其他私人信息。** 维护者检查后及时停止有争议的展示，并同步处理媒体文件、目录、详情与派生 AI 索引。详见 [资产政策](docs/ASSET_POLICY.md)。署名、非商业用途和“可申请撤除”并非授权替代品。

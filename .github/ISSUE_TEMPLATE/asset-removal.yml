@@ -1,0 +1,52 @@
+name: "素材撤除 / Content removal request"
+description: "针对 OpenResearchAssets 上的第三方图片、截图、图文或来源记录申请撤除或更正 / Request removal or correction of a specific item"
+title: "[Removal Request] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢联系维护者。此 Issue 是**公开可见**的，请勿提交身份证件、私人电话号码、未公开文件或其他敏感材料。请尽量提供具体资产链接和公开的权利来源。我们会及时核实，并在必要时暂停展示、撤除或更正。
+
+        Thanks for contacting us. **This issue is public.** Do not include government IDs, personal phone numbers, unpublished work or other sensitive documents. We will review promptly and remove, restrict or correct material where appropriate.
+  - type: input
+    id: affected
+    attributes:
+      label: "站内资产 / Affected asset URL or ID"
+      description: "请贴出 OpenResearchAssets 详情 URL、预览 URL 或资源 ID / Link to the affected page or asset ID"
+      placeholder: "https://suchenl.github.io/OpenResearchAssets/asset.html?id=..."
+    validations:
+      required: true
+  - type: input
+    id: original
+    attributes:
+      label: "原始来源 / Original work"
+      description: "如果可以，请提供论文、主页或公开原图链接 / Link to the original public source if available"
+      placeholder: "https://..."
+    validations:
+      required: false
+  - type: dropdown
+    id: request
+    attributes:
+      label: "希望采取的措施 / Requested action"
+      options:
+        - "撤除展示 / Remove content"
+        - "更正署名或来源 / Correct attribution or source"
+        - "调整预览范围 / Adjust preview"
+        - "其他 / Other"
+    validations:
+      required: true
+  - type: textarea
+    id: relationship
+    attributes:
+      label: "与作品的关系及问题说明 / Rights relationship and concern"
+      description: "请用非敏感信息说明您是作者、权利人还是代理人以及争议所在 / Explain your relationship and the concern without sensitive details"
+      placeholder: "I am an author / rights holder / authorized representative..."
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: "补充信息（可选） / Additional context (optional)"
+      description: "请勿提交敏感文件；正式版权投诉可直接使用 GitHub 的 DMCA 渠道 / Do not post sensitive documents; use GitHub's DMCA channel for formal copyright claims"
+    validations:
+      required: false

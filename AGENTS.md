@@ -28,3 +28,5 @@ OpenResearchAssets 是**面向人类与 AI 的科研全过程可复用资产库*
 13. **AI 节约上下文**：首选 `catalog/manifest.json`，再沿 `catalog/entries/<id>.json` 取少量详情。唯一手工维护源是 `catalog/index.json`；编辑后运行 `python3 tools/sync_catalog.py` 并用 `--check` 核对派生文件。CI 需要同时验证静态结构与浏览器行为。
 
 15. **真实媒体优先但逐文件确权**：允许复制 CC BY 等已有授权的第三方图片，不需要再发邮件逐项申请，但必须在 `assets/third-party/manifest.json` 登记作者、原始路径、版权依据、原图 Git blob SHA、修改状态，单条 catalog 的 rights 须可查；不要把外部图重新赋予本站 MIT 或原创 SVG 许可。来源不明者默认仅链接，合法例外需针对具体用途单独审查。
+
+16. **版权异议与撤除是产品能力**：网站检索区、资产详情和仓库文档必须保留可见的中英双语撤除入口（Issue 模板 .github/ISSUE_TEMPLATE/asset-removal.yml），收到请求后优先核实并酌情暂停展示，再同步修改 catalog/index.json、媒体、主页详情和自动派生索引。不能把“可撤除”理解成所有第三方截图已经有许可；不要承诺无法保证的固定响应时限。公开 Issue 不收集敏感证件。

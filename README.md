@@ -44,6 +44,12 @@ python3 tests/check_project.py
 python3 tests/browser_offline_smoke.py
 \`\`\`
 
+## 版权异议与素材撤除
+
+第三方作品归原权利人。我们为科研检索、引用导航及具体设计分析整理公开来源，网站代码、原创 SVG 与第三方图片不共享同一许可证。**如您是权利人且对某项收录或展示有异议，请[提交素材撤除或更正申请](https://github.com/Suchenl/OpenResearchAssets/issues/new?template=asset-removal.yml)**，注明站内资产 URL 与原始来源。我们会及时核实并处理。公开 Issue 中请勿提交私人证件或敏感资料；必要时可使用 [GitHub 版权投诉入口](https://github.com/contact/dmca)。
+
+详细步骤和边界见 [资产来源与许可规范](docs/ASSET_POLICY.md)。署名、非盈利与可撤除机制不能替代必要的使用许可。
+
 ## 资产与维护原则
 
 1. **单一数据源：** \`catalog/index.json\` 是人类网站与 Agent 共享的唯一资产目录；[资产模型](docs/ASSET_SCHEMA.md) 明确字段。

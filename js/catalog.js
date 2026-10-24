@@ -177,6 +177,7 @@
         '<dt>'+safe(tr('图片修改','Image modifications'))+'</dt><dd>'+safe(tr('未修改','Unmodified'))+'</dd>':'')+'</dl>'+
       '<div class="ora-detail-links">'+Object.entries(e.links || {}).map(([key,url])=>link(url,{source:tr('原始来源','Original source'),paper:tr('论文','Paper'),officialFigure:tr('官方媒体原图','Original upstream figure'),license:tr('授权条款 CC BY 4.0','License CC BY 4.0'),editable:tr('获取可编辑文件/说明','Editable source / instructions')}[key] || key)).join('')+
       '<a href="catalog/entries/'+encodeURIComponent(e.id)+'.json" target="_blank" rel="noopener noreferrer">'+safe(tr('供 AI 使用的单项 JSON','Single-entry JSON for AI'))+' ↗</a></div>'+
+      '<div class="ora-detail-rights"><p>'+safe(tr('第三方素材归原权利人；署名或免费展示不等于再分发授权。如对展示有异议，可联系撤除或更正。','Third-party materials belong to their rights holders. Attribution and free access do not imply redistribution rights. Request removal or correction if you object.'))+'</p><a href="https://github.com/Suchenl/OpenResearchAssets/issues/new?template=asset-removal.yml" target="_blank" rel="noopener noreferrer">'+safe(tr('联系撤除 / 更正','Request removal / correction'))+' ↗</a></div>'+
       '<button type="button" id="ora-copy-brief">'+safe(tr('复制给 AI 的使用说明','Copy AI usage brief'))+'</button>'+
       (related.length?'<div class="ora-related"><h3>'+safe(tr('关联资产','Related asset'))+'</h3><a href="asset.html?id='+encodeURIComponent(related[0].id)+'">'+safe(related[0].title)+' →</a></div>':'')+
       '</aside></div>';

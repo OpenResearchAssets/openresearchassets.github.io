@@ -50,6 +50,9 @@ with sync_playwright() as pw:
         page.locator('.ora-resource-card').first.wait_for()
         assert page.locator('html').get_attribute('lang')=='zh-CN'
         assert page.locator('h1').inner_text().startswith('让已有的经验')
+        assert page.locator('.ora-rights-notice').count()==1
+        assert '异议' in page.locator('.ora-rights-notice').inner_text()
+        assert 'asset-removal.yml' in page.locator('.ora-rights-notice a').get_attribute('href')
         assert page.locator('.ora-resource-card').count()==9
         assert page.locator('.ora-resource-card').first.locator('.ora-official img').count()==1
         assert page.locator('.ora-resource-card').first.locator('.ora-official img').evaluate('(n)=>n.complete&&n.naturalWidth>0')
@@ -69,6 +72,7 @@ with sync_playwright() as pw:
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='en'
         assert page.locator('h1').inner_text().startswith('Make knowledge useful')
+        assert 'Rights holders may request removal' in page.locator('.ora-rights-notice').inner_text()
         assert page.locator('.ora-resource-card').count()==9
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='zh-CN'
@@ -100,6 +104,8 @@ with sync_playwright() as pw:
             assert page.locator('.ora-detail-links a').count()>=2,(label,asset_id,'source / JSON missing')
             assert 'catalog/entries/'+asset_id+'.json' in page.locator('.ora-detail-links a').last.get_attribute('href')
             assert page.locator('.ora-detail-sidebar').is_visible()
+            assert page.locator('.ora-detail-rights').count()==1
+            assert 'asset-removal.yml' in page.locator('.ora-detail-rights a').get_attribute('href')
             assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),(
                 label,asset_id,'horizontal page overflow')
             assert page.locator('.ora-lesson').count()==(1 if asset_id in cases else 3),(

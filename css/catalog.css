@@ -113,3 +113,12 @@
 .ora-detail-preview .ora-official img{padding:8px}
 .ora-detail-sidebar dd{overflow-wrap:anywhere}
 @media(max-width:720px){.ora-official img{padding:5px}.ora-detail-preview .ora-official img{padding:4px}}
+
+/* Clear, understated rights and removal channel in catalog and asset details. */
+.ora-rights-notice{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 20px;margin:18px 0 0;border-top:1px solid #dfe6ee;border-bottom:1px solid #dfe6ee;background:#f9fbfd}
+.ora-rights-notice p{font-size:12px;line-height:1.75;color:#5c6b7c;margin:0;max-width:840px}
+.ora-rights-notice a,.ora-detail-rights a{font-size:12px;color:#245ba2;font-weight:700;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.ora-rights-footer{font-size:12px}
+.ora-detail-rights{padding:18px 0;margin-top:20px;border-top:1px solid #e0e7ef}
+.ora-detail-rights p{margin:0 0 10px;font-size:12px;color:#66788d;line-height:1.7}
+@media(max-width:720px){.ora-rights-notice{display:block;padding:16px;margin-top:15px}.ora-rights-notice a{display:inline-block;margin-top:9px;white-space:normal}}

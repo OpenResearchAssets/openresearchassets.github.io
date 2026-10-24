@@ -115,6 +115,13 @@ for item in third_party['items']:
     if not item.get('license_url','').startswith('https://'):errors.append(f'Missing verified license URL: {item["path"]}')
     if not any(e.get('visual',{}).get('src')==item['path'] for e in entries):
         errors.append(f'Unlinked third-party media: {item["path"]}')
+if not (ROOT/'.github/ISSUE_TEMPLATE/asset-removal.yml').is_file():
+    errors.append('missing removal request issue template')
+for page in ('index.html','asset.html'):
+    if 'asset-removal.yml' not in (ROOT/page).read_text(encoding='utf-8'):
+        errors.append(f'{page}: missing rights holder removal link')
+if 'asset-removal.yml' not in (ROOT/'js/catalog.js').read_text(encoding='utf-8'):
+    errors.append('asset details missing removal contact')
 for f in ('LICENSE','CONTRIBUTING.md','docs/ASSET_POLICY.md','docs/ASSET_SCHEMA.md','docs/QUALITY_STANDARD.md','docs/PRODUCT_STRATEGY.md','skills/quality-critic/SKILL.md','llms.txt','for-agents/README.md'):
     if not (ROOT/f).exists():errors.append(f'missing {f}')
 index=(ROOT/'index.html').read_text(encoding='utf-8')
