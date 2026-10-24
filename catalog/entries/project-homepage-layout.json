@@ -1,0 +1,85 @@
+{
+  "id": "project-homepage-layout",
+  "title": "科研项目主页结构模板",
+  "kind": "editable-template",
+  "stages": [
+    "communication",
+    "writing"
+  ],
+  "domains": [
+    "general",
+    "robotics",
+    "vision"
+  ],
+  "tasks": [
+    "project-website",
+    "hero-design",
+    "research-release"
+  ],
+  "description": {
+    "zh": "原创可编辑 SVG 主页叙事板，规划主张、结果、演示、方法与局限的展示顺序；不是可运行 HTML。",
+    "en": "Editable SVG visual storyboard for a research homepage hero, evidence, demos and limitations; not a functioning HTML website."
+  },
+  "keywords": {
+    "zh": [
+      "主页结构",
+      "项目主页",
+      "论点",
+      "证据",
+      "可编辑SVG"
+    ],
+    "en": [
+      "homepage",
+      "hero",
+      "website storyboard",
+      "SVG",
+      "research communication"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/Suchenl/OpenResearchAssets",
+    "editable": "assets/templates/project-homepage-layout.svg"
+  },
+  "rights": {
+    "reuse": "CC-BY-4.0",
+    "preview": "original-svg",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要规划论文项目主页的首屏与证据分区",
+        "想先确认信息结构，再实施 HTML 网页"
+      ],
+      "en": [
+        "Planning the first screen and evidence sections of a research project site",
+        "Drafting information architecture before implementing HTML"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "先用可证伪的单句主张建立阅读重点",
+        "主张之后接最有说服力的真实证据和演示",
+        "保持来源、局限与复现入口可见"
+      ],
+      "en": [
+        "Lead with a falsifiable one-sentence claim",
+        "Follow with authentic evidence and demonstrations",
+        "Make attribution, limitations and reproducibility routes visible"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "示例文字和视觉全部为占位，不能原样当成实验结果",
+        "本模板是可编辑静态 SVG，不包含网页交互功能"
+      ],
+      "en": [
+        "Every claim and visual is placeholder content, not experimental results",
+        "This editable SVG is a static design storyboard, not interactive website code"
+      ]
+    }
+  },
+  "previewStyle": "editorial"
+}

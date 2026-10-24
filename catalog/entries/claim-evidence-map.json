@@ -1,0 +1,87 @@
+{
+  "id": "claim-evidence-map",
+  "title": "论点—证据—图表映射模板",
+  "kind": "editable-template",
+  "stages": [
+    "methods",
+    "evaluation",
+    "writing"
+  ],
+  "domains": [
+    "general",
+    "robotics",
+    "vision"
+  ],
+  "tasks": [
+    "experiment-planning",
+    "claim-evidence-mapping",
+    "paper-organization"
+  ],
+  "description": {
+    "zh": "原创可编辑 SVG，将科学主张、控制实验/消融与论文图表对应起来，方便发现缺失证据。",
+    "en": "Editable claim-to-evidence-to-figure map connecting a scientific claim to controlled tests, metrics, ablations, and paper artifacts."
+  },
+  "keywords": {
+    "zh": [
+      "实验组织",
+      "图表映射",
+      "论点证据",
+      "消融",
+      "论文叙事",
+      "SVG"
+    ],
+    "en": [
+      "claim evidence figure",
+      "experiment design",
+      "ablation",
+      "scientific narrative",
+      "editable SVG"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/Suchenl/OpenResearchAssets",
+    "editable": "assets/templates/claim-evidence-map.svg"
+  },
+  "rights": {
+    "reuse": "CC-BY-4.0",
+    "preview": "original-svg",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "论文已有核心论点，但实验还没有清晰组织",
+        "设计消融实验和结果图前需要逐项核对论据"
+      ],
+      "en": [
+        "A paper has a central claim but scattered experimental evidence",
+        "Mapping ablations and figures before writing the results section"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "为每条主张对应可证伪的实验与基线",
+        "记录指标、对照条件、消融及混杂因素",
+        "检查最终图表和 caption 是否真正支持正文"
+      ],
+      "en": [
+        "Connect each claim to falsifiable tests and baselines",
+        "Record metrics, controls, ablations and confounders",
+        "Verify the final figure and caption support the text"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不得把模板里的括号占位内容当成真实实验设置",
+        "漂亮流程图不能替代控制实验和实际结果"
+      ],
+      "en": [
+        "All bracketed labels are placeholders, not real experiments",
+        "A neat chart cannot substitute for controlled experiments and results"
+      ]
+    }
+  },
+  "previewStyle": "workflow"
+}

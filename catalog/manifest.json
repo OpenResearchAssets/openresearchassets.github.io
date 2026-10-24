@@ -453,6 +453,74 @@
       "entry": "catalog/entries/results-panel.json"
     },
     {
+      "id": "project-homepage-layout",
+      "title": "科研项目主页结构模板",
+      "kind": "editable-template",
+      "stages": [
+        "communication",
+        "writing"
+      ],
+      "domains": [
+        "general",
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "project-website",
+        "hero-design",
+        "research-release"
+      ],
+      "keywords": [
+        "主页结构",
+        "项目主页",
+        "论点",
+        "证据",
+        "可编辑SVG",
+        "homepage",
+        "hero",
+        "website storyboard",
+        "SVG",
+        "research communication"
+      ],
+      "description_zh": "原创可编辑 SVG 主页叙事板，规划主张、结果、演示、方法与局限的展示顺序；不是可运行 HTML。",
+      "entry": "catalog/entries/project-homepage-layout.json"
+    },
+    {
+      "id": "claim-evidence-map",
+      "title": "论点—证据—图表映射模板",
+      "kind": "editable-template",
+      "stages": [
+        "methods",
+        "evaluation",
+        "writing"
+      ],
+      "domains": [
+        "general",
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "experiment-planning",
+        "claim-evidence-mapping",
+        "paper-organization"
+      ],
+      "keywords": [
+        "实验组织",
+        "图表映射",
+        "论点证据",
+        "消融",
+        "论文叙事",
+        "SVG",
+        "claim evidence figure",
+        "experiment design",
+        "ablation",
+        "scientific narrative",
+        "editable SVG"
+      ],
+      "description_zh": "原创可编辑 SVG，将科学主张、控制实验/消融与论文图表对应起来，方便发现缺失证据。",
+      "entry": "catalog/entries/claim-evidence-map.json"
+    },
+    {
       "id": "quality-critic-skill",
       "title": "Quality Critic · 人工审核与 Agent 指南",
       "kind": "workflow",
