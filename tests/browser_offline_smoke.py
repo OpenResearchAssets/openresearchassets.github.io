@@ -59,7 +59,7 @@ with sync_playwright() as pw:
         assert 'depth-anything-3.github.io/assets/teaser.png' in page.locator('.ora-resource-card').first.locator('img').get_attribute('src')
         assert '真实来源视觉参考' in page.locator('#reference-status').inner_text()
         assert page.locator('.ora-resource-card .ora-official img').count()==2
-        assert page.locator('.ora-resource-card .ora-official img').evaluate_all('(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
+        page.wait_for_function("()=>[...document.querySelectorAll('.ora-resource-card .ora-official img')].every(n=>n.complete&&n.naturalWidth>0)")
         assert page.locator('.ora-resource-card .ora-curated img').count()==0
         page.locator('#catalog-more').click()
         assert page.locator('.ora-resource-card').count()==22

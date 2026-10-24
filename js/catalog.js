@@ -35,7 +35,7 @@
     if(localLicensed||remote){
       const caption=local(localLicensed ? visual.label : visual.alt);
       const mark=local(visual.label);
-      return '<div class="ora-preview '+(remote?'ora-external':'ora-official')+'"><img loading="lazy" decoding="async" '+(remote?'referrerpolicy="no-referrer" ':'')+'src="'+safe(visual.src)+'" alt="'+safe(caption)+'" onerror="this.closest(\'.ora-preview\').classList.add(\'ora-image-error\')">'+
+      return '<div class="ora-preview '+(remote?'ora-external':'ora-official')+'"><img '+(remote?'loading="lazy" ':'loading="eager" ')+'decoding="async" '+(remote?'referrerpolicy="no-referrer" ':'')+'src="'+safe(visual.src)+'" alt="'+safe(caption)+'" onerror="this.closest(\'.ora-preview\').classList.add(\'ora-image-error\')">'+
         '<span class="ora-curated-mark">'+safe(mark)+'</span><span class="ora-image-fallback">'+safe(tr('来源图片暂不可加载，请打开原始网站查看','Source image unavailable; open the original website'))+'</span></div>';
     }
     if (visual.kind==='authored-analysis' &&
