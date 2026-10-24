@@ -9,6 +9,10 @@ OpenResearchAssets curates reusable research references, editable diagrams, work
 - [AI 使用指南 / Agent guide](https://suchenl.github.io/OpenResearchAssets/for-agents/)
 - [Canonical catalog (JSON)](https://suchenl.github.io/OpenResearchAssets/catalog/index.json)
 - [Interactive discovery](https://suchenl.github.io/OpenResearchAssets/#references)
+- [Actionable workflows: literature](https://suchenl.github.io/OpenResearchAssets/workflows/literature-triage.md)
+- [Actionable workflows: experiments](https://suchenl.github.io/OpenResearchAssets/workflows/experiment-planning.md)
+- [Actionable workflows: writing](https://suchenl.github.io/OpenResearchAssets/workflows/paper-evidence-story.md)
+- [Actionable workflows: release](https://suchenl.github.io/OpenResearchAssets/workflows/research-release.md)
 - [Asset schema & provenance](https://suchenl.github.io/OpenResearchAssets/docs/ASSET_SCHEMA.md)
 - [Rights policy](https://suchenl.github.io/OpenResearchAssets/docs/ASSET_POLICY.md)
 
