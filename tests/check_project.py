@@ -37,7 +37,7 @@ for js in ('js/catalog.js','js/i18n.js','js/navigation.js','js/quality.js'):
 catalog=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))
 if catalog.get('schema_version')!='1.0.0':errors.append('catalog: unsupported schema version')
 entries=catalog.get('entries',[])
-if len(entries)<15:errors.append('catalog: missing baseline 15 entries')
+if len(entries)<19:errors.append('catalog: missing baseline 19 entries')
 ids=[e.get('id') for e in entries]
 if len(ids)!=len(set(ids)):errors.append('catalog: duplicate IDs')
 for rid in ('roborender-teaser','roborender-site','robodojo-teaser','robodojo-site','supermimic-teaser','supermimic-site'):
