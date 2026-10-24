@@ -1,11 +1,12 @@
-# 第三方官方原图 / Third-party media
+# 第三方源站媒体 / Third-party source media
 
-本目录收录**可说明再分发依据**的真实第三方视觉资产，不包含本站自己绘制的 SVG 分析图。文件版权归原作者或对应权利人，本仓库的 MIT 代码许可及原创素材 CC BY 声明**不能覆盖这些图片**。
+本目录仅保留确有可说明使用依据、并且当前网站实际需要的真实媒体；未获重新授权的外链原图不归档到此目录。
 
-| 文件 | 上游出处 | 使用依据 | 修改 |
-|---|---|---|---|
-| [RoboRender 模型结构图](roborender/model-architecture.png) | [官方项目仓库 fig2_model.png](https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig2_model.png) | [arXiv 论文 CC BY 4.0](https://arxiv.org/abs/2610.09254) · [许可全文](https://creativecommons.org/licenses/by/4.0/) | 未修改 |
+| 本地文件 | 原站文件 | 依据 |
+|---|---|---|
+| [RoboRender 训练数据图](roborender/training-data.png) | [上游源文件](https://github.com/robo-render/robo-render.github.io/blob/main/static/images/training-data.png) | [论文 CC BY 4.0](https://arxiv.org/abs/2610.09254) |
+| [RoboRender 生成质量图](roborender/generation-quality.png) | [上游源文件](https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig4_ar_quality.png) | [论文 CC BY 4.0](https://arxiv.org/abs/2610.09254) |
 
-**署名**：Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu. RoboRender: Robot-Oriented Video Generation for Visual Sim-to-Real Transfer (2026), arXiv:2610.09254.
+作者：Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu (RoboRender, 2026)。两张文件均保留与上游相同的 Git blob SHA，未修改。它们**不是论文 Teaser 或整张项目主页截图**。
 
-此图是**多视角视频生成模型结构**，不是 Figure 1/Teaser。任何另行标识的第三方画面、截图、视频或媒体素材应独立检查使用权。元数据与 SHA 见 [manifest.json](manifest.json)。
+详细许可依据、源 Blob 与素材类型见 [manifest.json](manifest.json)；它们不继承本站软件 MIT 与原创素材许可证。其他原站视觉内容通过来源 URL 指向，具体使用仍应遵守权利人的条款。

@@ -40,10 +40,12 @@ if sync.returncode:errors.append('derived catalog out of date: '+sync.stdout+syn
 catalog=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))
 if catalog.get('schema_version')!='1.0.0':errors.append('catalog: unsupported schema version')
 entries=catalog.get('entries',[])
-if len(entries)<22:errors.append('catalog: missing baseline 22 entries')
+if len(entries)!=22:errors.append('catalog: expected 22 current assets')
 ids=[e.get('id') for e in entries]
 if any(not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', str(eid)) for eid in ids):errors.append('catalog: unsafe ID; expected kebab-case')
 if len(ids)!=len(set(ids)):errors.append('catalog: duplicate IDs')
+if 'roborender-model-architecture' in ids:errors.append('unwanted RoboRender model architecture record was reintroduced')
+if 'depth-anything-3-visual' not in ids:errors.append('missing Depth Anything 3 preferred visual')
 for rid in ('roborender-teaser','roborender-site','robodojo-teaser','robodojo-site','supermimic-teaser','supermimic-site','project-homepage-layout','claim-evidence-map'):
     if rid not in ids:errors.append('missing primary case '+rid)
 for e in entries:
@@ -56,28 +58,43 @@ for e in entries:
         if not e.get('caseStudy'):errors.append(f'{where}: missing detailed visual analysis')
     if visual:
         src=visual.get('src','')
-        if visual.get('kind')=='licensed-paper-figure':
-            if not re.fullmatch(r'assets/third-party/[a-z0-9-]+/[a-z0-9-]+\.png',src):
+        kind=visual.get('kind')
+        if kind in ('licensed-source-image','licensed-paper-figure'):
+            if not re.fullmatch(r'assets/third-party/[a-z0-9-]+/[a-z0-9-]+\\.png',src):
                 errors.append(f'{where}: unsafe third-party image path')
-            elif not (ROOT/src).is_file():errors.append(f'{where}: missing official PNG {src}')
-            elif (ROOT/src).read_bytes()[:8]!=b'\x89PNG\r\n\x1a\n':
-                errors.append(f'{where}: file not PNG {src}')
+            elif not (ROOT/src).is_file():errors.append(f'{where}: missing authentic PNG {src}')
+            elif (ROOT/src).read_bytes()[:8]!=b'\\x89PNG\\r\\n\\x1a\\n':
+                errors.append(f'{where}: file is not PNG {src}')
             rights=e.get('rights',{})
-            if rights.get('preview')!='third-party-cc-by-4.0':errors.append(f'{where}: wrong license marker')
+            if rights.get('preview')!='third-party-cc-by-4.0':errors.append(f'{where}: wrong copyright marker')
             for k in ('license_url','licensing_evidence','original_file','original_blob_sha','attribution','modifications'):
-                if not rights.get(k):errors.append(f'{where}: missing media rights {k}')
-        elif not src.startswith('assets/editorials/') or not src.endswith('.svg'):
-            errors.append(f'{where}: visual must point to an original editorial SVG')
-        else:
-            img=ROOT/src
-            if not img.is_file():errors.append(f'{where}: missing visual asset {src}')
+                if not rights.get(k):errors.append(f'{where}: missing source rights field {k}')
+        elif kind=='external-reference-image':
+            if not src.startswith('https://'):errors.append(f'{where}: remote visual must use HTTPS')
+            if urlparse(src).hostname not in {
+                'depth-anything-3.github.io','media.luminis-sim.com','tianxingchen.github.io',
+                'supermimic.github.io','raw.githubusercontent.com','opengraph.githubassets.com'
+            }:errors.append(f'{where}: untrusted remote image host {src}')
+            if e.get('rights',{}).get('preview')!='external-linked-reference':
+                errors.append(f'{where}: missing external rights status')
+        elif kind=='authored-analysis':
+            if not src.startswith('assets/editorials/') or not src.endswith('.svg'):
+                errors.append(f'{where}: invalid editorial SVG path')
             else:
-                try:
-                    tree=ET.parse(img)
-                    nodes=list(tree.iter())
-                    if len(nodes)<25:errors.append(f'{where}: editorial asset suspiciously empty')
-                    if any(n.tag.split('}')[-1]=='image' for n in nodes):errors.append(f'{where}: embedded raster in editorial SVG')
-                except ET.ParseError as err:errors.append(f'{where}: invalid SVG: {err}')
+                img=ROOT/src
+                if not img.is_file():errors.append(f'{where}: missing editorial SVG {src}')
+                else:
+                    try:
+                        tree=ET.parse(img)
+                        nodes=list(tree.iter())
+                        if len(nodes)<25:errors.append(f'{where}: editorial SVG suspiciously empty')
+                        if any(n.tag.split('}')[-1]=='image' for n in nodes):errors.append(f'{where}: raster pasted into SVG')
+                    except ET.ParseError as err:errors.append(f'{where}: invalid SVG: {err}')
+        else: errors.append(f'{where}: unsupported visual kind {kind}')
+        if e.get('analysisVisual'):
+            path=e['analysisVisual'].get('src','')
+            if not re.fullmatch(r'assets/editorials/[a-z0-9-]+\\.svg',path) or not (ROOT/path).is_file():
+                errors.append(f'{where}: invalid linked analysis file')
         for field in ('alt','label'):
             if not all(visual.get(field,{}).get(lang) for lang in ('zh','en')):
                 errors.append(f'{where}: missing bilingual visual {field}')

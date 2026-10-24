@@ -25,10 +25,12 @@ python3 tests/browser_offline_smoke.py   # 需 Python Playwright + Chromium
 python3 -m http.server 8000
 ```
 
-在浏览器中打开 `http://localhost:8000`。确认：中文默认、中英切换、导航、19 条资产的三维筛选与搜索、独立详情页、AI 目录读取、三张原创 SVG 下载、五种人工自查类型、Markdown 报告生成、移动端布局。测试桌面 1440px、平板 768px、手机 390/320px。
+在浏览器中打开 `http://localhost:8000`。确认：中文默认、中英切换、导航、22 条资产的三维筛选与搜索、独立详情页、AI 目录读取、五份原创 SVG 下载、五种人工自查类型、Markdown 报告生成、移动端布局。测试桌面 1440px、平板 768px、手机 390/320px。
 
 **能力边界**：通过测试不意味着审美已经得到用户认可。当前 Quality Critic 网页是**人工自查**，不自动读取、上传或分析论文；Skill 不是训练好的质量模型。外部引用的许可与有效性需要独立复核。
 
 ## English summary
 
 A static bilingual website (Chinese default, English available). Deploy GitHub Pages from `main / (root)`. No backend, API keys, accounts or hosted inference. Run the static and browser smoke tests; never advertise the manual Quality Critic checklist as an AI vision judge.
+
+外链真实媒体必须另外打开官方图片 URL 人工核查。离线 Playwright 测试只验证真实图片的来源地址、加载失败时的占位提示与本地许可媒体是否有效，**不能宣称对外部图片 CDN 的真实可用性已经做了持续测试**。

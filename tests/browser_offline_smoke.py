@@ -45,6 +45,7 @@ with sync_playwright() as pw:
         errors=[]
         page.on('pageerror',lambda error:errors.append(str(error)))
         page.route('https://ora.local/assets/**',local_asset)
+        page.route(re.compile(r'^https://(?:depth-anything-3\\.github\\.io|media\\.luminis-sim\\.com|tianxingchen\\.github\\.io|supermimic\\.github\\.io|raw\\.githubusercontent\\.com|opengraph\\.githubassets\\.com)/'),lambda route:route.abort())
         page.route('https://ora.local/asset.html*',lambda route:route.fulfill(status=200,body=page_html('asset.html'),content_type='text/html'))
         page.set_content(page_html('index.html'),wait_until='load')
         page.locator('.ora-resource-card').first.wait_for()
@@ -54,19 +55,19 @@ with sync_playwright() as pw:
         assert '异议' in page.locator('.ora-rights-notice').inner_text()
         assert 'asset-removal.yml' in page.locator('.ora-rights-notice a').get_attribute('href')
         assert page.locator('.ora-resource-card').count()==9
-        assert page.locator('.ora-resource-card').first.locator('.ora-official img').count()==1
-        assert page.locator('.ora-resource-card').first.locator('.ora-official img').evaluate('(n)=>n.complete&&n.naturalWidth>0')
-        assert '官方真实图片' in page.locator('#reference-status').inner_text()
-        assert page.locator('.ora-resource-card .ora-curated img').count()==6
-        assert page.locator('.ora-resource-card .ora-curated img').evaluate_all(
-            '(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
+        assert page.locator('.ora-resource-card').first.locator('.ora-external img').count()==1
+        assert 'depth-anything-3.github.io/assets/teaser.png' in page.locator('.ora-resource-card').first.locator('img').get_attribute('src')
+        assert '真实来源视觉参考' in page.locator('#reference-status').inner_text()
+        assert page.locator('.ora-resource-card .ora-official img').count()==2
+        assert page.locator('.ora-resource-card .ora-official img').evaluate_all('(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
+        assert page.locator('.ora-resource-card .ora-curated img').count()==0
         page.locator('#catalog-more').click()
         assert page.locator('.ora-resource-card').count()==22
         page.locator('#facet-kind').select_option('website-reference')
         assert page.locator('.ora-resource-card').count()==3
         page.locator('#facet-kind').select_option('')
         page.locator('#reference-search').fill('RoboRender')
-        assert page.locator('.ora-resource-card').count()==3
+        assert page.locator('.ora-resource-card').count()==2
         page.locator('#facet-reset').click()
         assert page.locator('.ora-resource-card').count()==9
         page.locator('.lang-toggle').click()
@@ -92,7 +93,7 @@ with sync_playwright() as pw:
         # are kept for desktop and mobile human visual review.
         cases=('roborender-teaser','roborender-site','robodojo-teaser',
                'robodojo-site','supermimic-teaser','supermimic-site')
-        samples=('roborender-model-architecture','topconf-figure-gallery','teaser-story',
+        samples=('depth-anything-3-visual','topconf-figure-gallery','teaser-story',
                  'quality-critic-skill','experiment-planning')
         entries=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))['entries']
         for entry in entries:
@@ -115,19 +116,22 @@ with sync_playwright() as pw:
                 assert page.locator('.ora-study-grid section').count()==2
                 assert page.locator('.ora-case-check li').count()>=2
                 assert page.locator('.ora-disclosure').is_visible()
-                assert page.locator('.ora-detail-preview .ora-curated img').count()==1
+                assert page.locator('.ora-detail-preview img').count()==1
             else:
                 assert page.locator('.ora-case-study').count()==0
             visual=page.locator('.ora-detail-preview img')
-            if visual.count():
+            if visual.count() and entry.get('visual',{}).get('kind')!='external-reference-image':
                 visual.scroll_into_view_if_needed()
                 page.wait_for_function("()=>[...document.querySelectorAll('.ora-detail-preview img')].every(n=>n.complete&&n.naturalWidth>0)")
-            if asset_id=='roborender-model-architecture':
+            elif visual.count():
+                assert visual.first.get_attribute('src').startswith('https://')
+            if asset_id in ('roborender-teaser','roborender-site'):
                 assert page.locator('.ora-detail-preview .ora-official img').count()==1
                 assert 'CC BY 4.0' in page.locator('.ora-detail-sidebar').inner_text()
-                assert page.locator('.ora-detail-links a').count()>=3
+            if asset_id=='depth-anything-3-visual':
+                assert page.locator('.ora-detail-preview .ora-external img').count()==1
             if entry['kind']=='resource-index':
-                assert page.locator('.ora-detail-preview .ora-directory .ora-hit').count()>=1
+                assert page.locator('.ora-detail-preview .ora-external img').count()==1
             if entry['kind']=='workflow':
                 cls='.ora-skill-preview' if asset_id=='quality-critic-skill' else '.ora-workflow-preview'
                 assert page.locator('.ora-detail-preview '+cls).count()==1,(label,asset_id,'wrong workflow type')
