@@ -41,6 +41,9 @@ python3 -m http.server 8000
 
 # Validate files
 python3 tests/check_project.py
+
+# Optional rendered browser QA (requires playwright + local Chromium)
+python3 tests/browser_offline_smoke.py
 ```
 
 No dependency installation, database, account, GPU, tracking script or server-side inference. Existing third-party models can use the Skill on user-owned infrastructure, but their running and privacy terms are controlled by the user.
