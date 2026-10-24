@@ -19,7 +19,7 @@
 
 ## 当前产品事实
 
-- 3 张原创可编辑 SVG **概念**模板；19 条结构化科研资产（含 6 个论文视觉/主页案例）；5 类人工检查对象。
+- 5 份原创可编辑 SVG **概念**模板；21 条结构化科研资产（含 6 个论文视觉/主页案例）；5 类人工检查对象。
 - `quality.html` 不做自动图像分析，不训练或调用美学模型，不上传论文。
 - 无账号、云端协作、在线收费、托管推理或自动修图；这些不是已上线模块。
 
@@ -28,3 +28,19 @@
 运行 `python3 tests/check_project.py` 和可用时的 `python3 tests/browser_offline_smoke.py`；确认 1440、768、390、320px 的无横向溢出、导航/筛选可用、中英往返、质量问题勾选保留、报告生成正常。真实发布后还需核查 GitHub Pages 加载及浏览器实际效果。只通过构建不等于审美达标。
 
 **English summary:** Neutral-white Apple × SuperMimic direction. Strong scientific claims, real evidence and editable artifacts, precise typography and restraint. Chinese is the default complete UI; English is a working secondary language. Never advertise unimplemented AI features.
+
+## 统一资产预览规范（已实现）
+
+| 类型 | 设计与信息层级 | 真实性边界 |
+|---|---|---|
+| 论文 Figure/Teaser | 每个案例独立的 5:3 原创分析 SVG | 明确注明非原论文图 |
+| 项目主页 | 主页特定的信息架构拆解，5:3 SVG | 与论文主图分开；不冒充官网截图 |
+| 可编辑模板 | 对应真正可编辑的 SVG 源文件预览 | 模板中所有数据都是概念占位 |
+| 外部资源目录 | 标题及条目已有检索关键词组成的封面 | 不伪造原站截图或搜索结果 |
+| Workflow / Skill | 依条目具体经验与步骤构成的过程封面 | Skill 只是方法说明，不是自动执行结果 |
+
+所有类型都使用同一封面比例、统一来源标记、受控卡片描述行数及稳定标题层级；详情页仍提供完整来源、版权与上下文。桌面三列，中屏两列，移动端一列。六个重点案例详情使用“什么时候使用 + 专项视觉拆解”的信息顺序，避免重复展示已经在分析图中讲过的 learn/avoid 段落；完整字段在机器可读 JSON 中保留。
+
+## 本阶段验收完成标准
+
+覆盖全部 21 项资源、六个独立详解案例，测试 1440 / 768 / 390 / 320 四类视口下的图像加载、链接、无横向溢出及双语显示；六个案例生成独立桌面与手机截图。另抽检 Resource Index、可编辑 SVG、Workflow、Skill 的详情预览。静态部署及代码检查通过≠第三方图片有权发布，也≠真实 Agent 对照实验已经证明收益。

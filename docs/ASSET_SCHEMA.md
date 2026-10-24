@@ -69,3 +69,7 @@ python3 tests/browser_offline_smoke.py   # Playwright 与 Chromium 可用时
 已完成案例可填写 `visual: {src, kind, alt:{zh,en}, label:{zh,en}}`。`src` 必须指向 `assets/editorials/<id>.svg` 的本站**原创分析图**；它是对应项目的图文组织学习工具，不是原论文 Figure 或官网截图。`rights.preview=authored-analysis-svg` 记录其性质，媒体版权与来源仍在 `rights` 与 `links` 中注明。另有官方原图链接时可使用 `links.officialFigure`，链接本身不等于本仓库获得了再分发许可。
 
 六个核心案例还包含 `caseStudy`：`insight`（为何值得学习）、`composition`（信息/视觉拆解）、`reuseSteps`（如何迁移到自己的研究）、`verification`（事实、评估与授权检查），以上均提供中英文内容。这使 Agent 不只是看到图，还能回答“怎么用，怎么验证”。独立条目 JSON 与 manifest 仍从 `catalog/index.json` 自动生成。
+
+## 统一视觉封面与精读密度
+
+所有卡片采用 5:3 可响应的封面区域：重点论文/网站条目显示 6 个本站独立 SVG 分析图；可编辑模板显示原生 SVG 内容；外部资源、Workflow、Skill 根据自身关键词和实践经验生成有内容的结构封面，不能把它冒充原作者图片。重点案例页面避免重复渲染 `caseStudy` 与 `applicability.learn/avoid` 的同义内容；数据文件完整保留，供 AI 单项读取。
