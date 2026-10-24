@@ -26,19 +26,30 @@
   const kind = entry => facetText('kinds',entry.kind);
 
   function media(entry) {
-    const type = entry.previewStyle || 'gallery';
     const rights=entry.rights || {};
-    if (rights.preview === 'original-svg' && entry.links && /^assets\/templates\/[\w-]+\.svg$/.test(entry.links.editable || '')) {
-      return '<div class="ora-preview ora-template"><img loading="lazy" alt="'+safe(tr('原创可编辑图示预览','Editable original diagram preview'))+'" src="'+safe(entry.links.editable)+'"></div>';
+    const visual=entry.visual || {};
+    if (visual.kind==='authored-analysis' &&
+      /^assets\/editorials\/[a-z0-9-]+\.svg$/.test(visual.src || '')) {
+      return '<div class="ora-preview ora-curated"><img loading="lazy" decoding="async" src="'+safe(visual.src)+'" alt="'+safe(local(visual.alt))+'">'+
+        '<span class="ora-curated-mark">'+safe(tr('原创分析图','ORIGINAL ANALYSIS'))+'</span></div>';
     }
-    const mark=entry.kind==='website-reference' ? '<div class="ora-site-mock ora-site-'+safe(type)+'"><div class="ora-site-chrome"><i></i><i></i><i></i><span>PROJECT / RESEARCH</span></div><div class="ora-site-content"><small>'+safe(entry.title.split(' · ')[0])+'</small><strong>'+safe(type==='editorial'?'ONE CLEAR CLAIM':type==='benchmark'?'TASKS & EVIDENCE':'SEE THE TRANSFER')+'</strong><div class="ora-site-evidence"><b></b><b></b><b></b></div></div></div>'
-      : type==='comparison' ? '<div class="ora-pair"><div><i></i><span>SIM</span></div><b>→</b><div><i></i><span>RGB</span></div></div>'
-      : type==='benchmark' ? '<div class="ora-matrix"><span>SIM</span><span>REAL</span><i></i><i></i><i></i><i></i><i></i><i></i></div>'
-      : type==='rollout' ? '<div class="ora-rollout"><div class="ora-rollout-motion"><small>WORLD MODEL</small><div class="ora-ghosts"><i></i><i></i><i></i><i></i><i></i></div><span>IMAGINED MOTION</span></div><div class="ora-rollout-budget"><small>TRAINING COMPUTE</small><div class="ora-budget-bars"><b></b><b></b><b></b><b></b></div><strong>128 → 1</strong><span>GPUs · DIFFERENT HARDWARE</span></div></div>'
-      : type==='editorial' ? '<div class="ora-editorial"><span>RESEARCH STORY</span><strong>ONE CLEAR<br>CLAIM.</strong><i></i></div>'
-      : type==='workflow' ? '<div class="ora-steps"><i></i><b>→</b><i></i><b>→</b><i></i></div>'
-      : '<div class="ora-gallery-lines"><i></i><i></i><i></i></div>';
-    return '<div class="ora-preview ora-'+safe(type)+'" aria-label="'+safe(tr('本站原创结构示意，非源作品截图','Authored structural illustration, not an original screenshot'))+'">'+mark+'<span class="ora-preview-caption">'+safe(tr('本站结构示意 · 非原图','Original structure sketch · not source image'))+'</span></div>';
+    if (rights.preview==='original-svg' && /^assets\/templates\/[\w-]+\.svg$/.test(entry.links?.editable || '')) {
+      return '<div class="ora-preview ora-template"><img loading="lazy" decoding="async" alt="'+safe(tr('原创可编辑 SVG','Editable original SVG'))+'" src="'+safe(entry.links.editable)+'"></div>';
+    }
+    if(entry.kind==='resource-index') {
+      const words=(local(entry.keywords)||[]).slice(0,3);
+      return '<div class="ora-preview ora-editorial-index"><div class="ora-index-art"><span>'+safe(tr('检索与资源索引','RESEARCH RESOURCE INDEX'))+'</span>'+
+        '<strong>'+safe(entry.title)+'</strong>'+
+        '<div class="ora-index-rule"></div><div class="ora-index-keywords">'+words.map(w=>'<em>'+safe(w)+'</em>').join('')+'</div>'+
+        '</div><span class="ora-curated-mark">'+safe(tr('资源目录 · 有来源','CURATED DIRECTORY'))+'</span></div>';
+    }
+    if(entry.kind==='workflow') {
+      const lessons=(local(entry.applicability?.learn)||[]).slice(0,3);
+      return '<div class="ora-preview ora-workflow-art"><div class="ora-workflow-cover"><span>'+safe(tr('实用研究流程','ACTIONABLE RESEARCH PROCESS'))+'</span>'+
+        '<strong>'+safe(entry.title.split('/')[0].trim())+'</strong><div class="ora-flow-list">'+lessons.map((w,i)=>'<div><b>'+String(i+1).padStart(2,'0')+'</b><span>'+safe(w)+'</span></div>').join('')+'</div></div>'+
+        '<span class="ora-curated-mark">'+safe(tr('流程 / Skill','WORKFLOW / SKILL'))+'</span></div>';
+    }
+    return '<div class="ora-preview ora-empty"><span>'+safe(tr('暂无经审查的预览 · 请阅读资产详情','No reviewed preview · Read asset details'))+'</span></div>';
   }
 
   function options(selectId,group) {
@@ -72,7 +83,9 @@
     return [entry.id,entry.title,entry.kind,...entry.stages,...entry.domains,...entry.tasks,
       ...(entry.keywords?.zh || []),...(entry.keywords?.en || []),entry.description?.zh,entry.description?.en,
       ...(a.use_when?.zh || []),...(a.use_when?.en || []),
-      ...(a.learn?.zh || []),...(a.learn?.en || [])].filter(Boolean).join(' ').toLowerCase();
+      ...(a.learn?.zh || []),...(a.learn?.en || []),
+      ...(entry.caseStudy?.composition?.zh || []),...(entry.caseStudy?.composition?.en || []),
+      ...(entry.caseStudy?.reuseSteps?.zh || []),...(entry.caseStudy?.reuseSteps?.en || [])].filter(Boolean).join(' ').toLowerCase();
   }
   function renderGrid() {
     if (!grid || !catalog) return;
@@ -125,9 +138,14 @@
     document.title=e.title+' · OpenResearchAssets';
     const app=e.applicability || {};
     const related=catalog.entries.filter(x=>x.id===e.parent).slice(0,1);
+    const study=e.caseStudy;
+    const editorial=study ? '<section class="ora-case-study"><div class="ora-case-intro"><span>'+safe(tr('CASE STUDY / DESIGN EVIDENCE','CASE STUDY / DESIGN EVIDENCE'))+'</span><h2>'+safe(tr('为什么这个案例值得研究？','What makes this case worth studying?'))+'</h2><p>'+safe(local(study.insight))+'</p></div>'+
+      '<div class="ora-study-grid"><section><h3>'+safe(tr('视觉与信息结构','Visual / information structure'))+'</h3>'+points(local(study.composition))+'</section>'+
+      '<section><h3>'+safe(tr('迁移到自己论文的步骤','How to transfer the design'))+'</h3>'+points(local(study.reuseSteps))+'</section></div>'+
+      '<div class="ora-case-check"><h3>'+safe(tr('事实、风险与授权检查','Scientific and rights checks'))+'</h3>'+points(local(study.verification))+'</div></section>' : '';
     detail.innerHTML='<div class="ora-detail-heading"><p class="ora-eyebrow">'+safe(kind(e))+' / '+safe(e.id)+'</p>'+
       '<h1>'+safe(e.title)+'</h1><p>'+safe(local(e.description))+'</p></div>'+
-      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+
+      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.label))+' · '+safe(tr('请打开官方来源查看原始视觉内容','Open the official source to inspect the original artwork'))+'</p>' : '')+editorial+
       '<div class="ora-lesson"><h2>'+safe(tr('什么时候使用','When to use'))+'</h2>'+points(local(app.use_when))+'</div>'+
       '<div class="ora-lesson"><h2>'+safe(tr('值得学习的做法','Transferable lessons'))+'</h2>'+points(local(app.learn))+'</div>'+
       '<div class="ora-lesson"><h2>'+safe(tr('需要避免','What to avoid'))+'</h2>'+points(local(app.avoid))+'</div></section>'+
@@ -136,7 +154,7 @@
       '<dt>'+safe(tr('领域','Domains'))+'</dt><dd>'+e.domains.map(x=>safe(facetText('domains',x))).join(' · ')+'</dd>'+
       '<dt>'+safe(tr('使用性质','Reuse'))+'</dt><dd>'+safe(e.rights?.reuse || 'unknown')+'</dd>'+
       '<dt>'+safe(tr('第三方图片','Third-party media'))+'</dt><dd>'+safe(tr('未在本站重新分发','Not redistributed by this site'))+'</dd></dl>'+
-      '<div class="ora-detail-links">'+Object.entries(e.links || {}).map(([key,url])=>link(url,{source:tr('原始来源','Original source'),paper:tr('论文','Paper'),editable:tr('获取可编辑文件/说明','Editable source / instructions')}[key] || key)).join('')+
+      '<div class="ora-detail-links">'+Object.entries(e.links || {}).map(([key,url])=>link(url,{source:tr('原始来源','Original source'),paper:tr('论文','Paper'),officialFigure:tr('在官方媒体服务器查看原图','Open original figure on the official media server'),editable:tr('获取可编辑文件/说明','Editable source / instructions')}[key] || key)).join('')+
       '<a href="catalog/entries/'+encodeURIComponent(e.id)+'.json" target="_blank" rel="noopener noreferrer">'+safe(tr('供 AI 使用的单项 JSON','Single-entry JSON for AI'))+' ↗</a></div>'+
       '<button type="button" id="ora-copy-brief">'+safe(tr('复制给 AI 的使用说明','Copy AI usage brief'))+'</button>'+
       (related.length?'<div class="ora-related"><h3>'+safe(tr('关联资产','Related asset'))+'</h3><a href="asset.html?id='+encodeURIComponent(related[0].id)+'">'+safe(related[0].title)+' →</a></div>':'')+

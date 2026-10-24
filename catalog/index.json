@@ -121,7 +121,7 @@
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-diagram",
+        "preview": "authored-analysis-svg",
         "third_party_media": "not-republished"
       },
       "applicability": {
@@ -157,7 +157,59 @@
         }
       },
       "parent": "roborender-site",
-      "previewStyle": "comparison"
+      "previewStyle": "comparison",
+      "visual": {
+        "src": "assets/editorials/roborender-teaser.svg",
+        "kind": "authored-analysis",
+        "alt": {
+          "zh": "RoboRender · 论文 Teaser 的原创视觉结构拆解，不是论文原图或官网截图",
+          "en": "Authored structural analysis of RoboRender · 论文 Teaser, not the official figure or webpage screenshot"
+        },
+        "label": {
+          "zh": "原创案例拆解 · 非官方原图",
+          "en": "Authored case study · Not source artwork"
+        }
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "核心构图不是单纯“仿真图变漂亮”，而是把可控输入、生成外观与保持不变的几何/动作关系明确对应。",
+          "en": "The key composition aligns controllable simulation inputs, generated appearance, and the geometry/action information that should remain consistent."
+        },
+        "composition": {
+          "zh": [
+            "左侧展示仿真深度/机器人掩码等条件；右侧展示生成的 RGB 视频效果。",
+            "比较面板应共享任务、相机视角、对象或时刻，避免制造不公平对照。",
+            "少量标注区分生成的画面与真正拍摄的真实实验。"
+          ],
+          "en": [
+            "Contrast simulation depth and robot-mask conditions with generated RGB outcomes.",
+            "Align tasks, camera views, objects and time across comparison panels.",
+            "Clearly label generated imagery rather than passing it off as captured real-world results."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "先固定真实论文要表达的唯一视觉主张。",
+            "选同一场景与同一时刻的输入、生成、真实参考（若有授权）三类证据。",
+            "按比较维度排列面板，caption 明确哪些是生成、哪些是实测。"
+          ],
+          "en": [
+            "State the one comparison your paper can actually support.",
+            "Choose matched input, generated and licensed real-reference conditions.",
+            "Align panels and distinguish synthetic and physical measurements in labels and captions."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "不得从图片好看直接推导策略成功率，需要独立的实验结果。",
+            "展示外部论文画面前需图像级授权；此图为本站原创分析示意。"
+          ],
+          "en": [
+            "Image quality alone does not establish policy success; use separate results.",
+            "Figure-level rights must be verified before embedding external paper imagery."
+          ]
+        }
+      }
     },
     {
       "id": "roborender-site",
@@ -199,7 +251,7 @@
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-diagram",
+        "preview": "authored-analysis-svg",
         "third_party_media": "not-republished"
       },
       "applicability": {
@@ -231,7 +283,59 @@
         }
       },
       "parent": "roborender-teaser",
-      "previewStyle": "comparison"
+      "previewStyle": "comparison",
+      "visual": {
+        "src": "assets/editorials/roborender-site.svg",
+        "kind": "authored-analysis",
+        "alt": {
+          "zh": "RoboRender · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
+          "en": "Authored structural analysis of RoboRender · 项目主页, not the official figure or webpage screenshot"
+        },
+        "label": {
+          "zh": "原创案例拆解 · 非官方原图",
+          "en": "Authored case study · Not source artwork"
+        }
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "先用直观的视觉变化解释方法，再让用户沿多视角视频与真实机器人任务结果逐步核实。",
+          "en": "Lead with an immediately visible transformation, then let readers inspect multi-view video consistency and robot-task evidence."
+        },
+        "composition": {
+          "zh": [
+            "Hero 区承载一句清晰价值主张而非大段摘要。",
+            "模拟输入、生成视频、真实下游结果是不同证据层级，应分区域展示。",
+            "外部视角与腕部视角最好并排且时序同步，以便观察一致性。"
+          ],
+          "en": [
+            "Use a claim-first hero instead of an abstract dump.",
+            "Separate input/output demonstrations from downstream real-world task outcomes.",
+            "Place external/wrist camera views side by side and keep temporal comparisons consistent."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "先列核心主张与一个最有说服力的演示。",
+            "组织“主张 → 成对视觉对比 → 多视角 demo → 实验表格”的阅读顺序。",
+            "为真实实验设置和数据提供可追溯论文入口。"
+          ],
+          "en": [
+            "Open with a verifiable central claim and strongest example.",
+            "Build a claim → paired results → multi-view demo → experiment-evidence sequence.",
+            "Link each real-world result to experimental setup and paper sources."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "不能把生成视频称为真实机器人拍摄。",
+            "站内展示的是主页信息架构拆解，不是官网截图。"
+          ],
+          "en": [
+            "Generated video is not the same as real robot footage.",
+            "The site preview is an authored information-architecture study, not the source screenshot."
+          ]
+        }
+      }
     },
     {
       "id": "robodojo-teaser",
@@ -270,11 +374,12 @@
       "language": "zh+en",
       "links": {
         "source": "https://robodojo-benchmark.com/",
-        "paper": "https://arxiv.org/abs/2607.04434"
+        "paper": "https://arxiv.org/abs/2607.04434",
+        "officialFigure": "https://media.luminis-sim.com/media/home/teaser.png"
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-diagram",
+        "preview": "authored-analysis-svg",
         "third_party_media": "not-republished"
       },
       "applicability": {
@@ -306,7 +411,59 @@
         }
       },
       "parent": "robodojo-site",
-      "previewStyle": "benchmark"
+      "previewStyle": "benchmark",
+      "visual": {
+        "src": "assets/editorials/robodojo-teaser.svg",
+        "kind": "authored-analysis",
+        "alt": {
+          "zh": "RoboDojo · 论文总览图 的原创视觉结构拆解，不是论文原图或官网截图",
+          "en": "Authored structural analysis of RoboDojo · 论文总览图, not the official figure or webpage screenshot"
+        },
+        "label": {
+          "zh": "原创案例拆解 · 非官方原图",
+          "en": "Authored case study · Not source artwork"
+        }
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "评测型工作最重要的是让读者迅速知道评了什么、在什么条件下评、为何仿真与现实共同必要。",
+          "en": "A benchmark overview should answer what is tested, under which conditions, and why simulated and physical evaluations complement one another."
+        },
+        "composition": {
+          "zh": [
+            "将 42 项仿真任务与 18 项真实任务分为两个清楚的视觉区。",
+            "先体现任务多样性，再说明泛化、记忆、精度、长时程与开放指令这五个维度。",
+            "机器人、任务和环境的对应关系要明确，不要只堆满场景小图。"
+          ],
+          "en": [
+            "Keep 42 simulation tasks and 18 real-world tasks in visibly distinct groups.",
+            "Show task diversity before listing generalization, memory, precision, long-horizon and open instruction following.",
+            "Use unambiguous robot-task-environment labels, not an unlabeled image collage."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "定义评估维度与仿真/真实范围。",
+            "每个任务组选取具有代表性的真实素材，并注明平台与条件。",
+            "使用统计汇总说明覆盖面，不能将任务数量当成性能分数。"
+          ],
+          "en": [
+            "Define axes and simulation/real evaluation scope.",
+            "Choose representative, licensed visuals and label the platform and setup.",
+            "Summarize coverage accurately; task counts are not performance scores."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "42/18 为官网描述的任务数量，不能推断每项任务难度相等。",
+            "官网外链媒体图片不能从代码仓库的 MIT 许可自动推断授权。"
+          ],
+          "en": [
+            "The 42/18 figures refer to official task counts, not matched task difficulty.",
+            "An MIT license on a software repo does not automatically license externally hosted imagery."
+          ]
+        }
+      }
     },
     {
       "id": "robodojo-site",
@@ -349,7 +506,7 @@
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-diagram",
+        "preview": "authored-analysis-svg",
         "third_party_media": "not-republished"
       },
       "applicability": {
@@ -381,7 +538,59 @@
         }
       },
       "parent": "robodojo-teaser",
-      "previewStyle": "benchmark"
+      "previewStyle": "benchmark",
+      "visual": {
+        "src": "assets/editorials/robodojo-site.svg",
+        "kind": "authored-analysis",
+        "alt": {
+          "zh": "RoboDojo · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
+          "en": "Authored structural analysis of RoboDojo · 项目主页, not the official figure or webpage screenshot"
+        },
+        "label": {
+          "zh": "原创案例拆解 · 非官方原图",
+          "en": "Authored case study · Not source artwork"
+        }
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "项目主页的价值来自“任务发现 → 演示观察 → 实验协议 → 排名/证据”，而不是单纯堆视频。",
+          "en": "The project site creates value through task discovery, demonstrations, evaluation protocol and evidence, rather than a wall of videos."
+        },
+        "composition": {
+          "zh": [
+            "主页突出任务规模，给初次访问者明确研究范围。",
+            "任务画廊、真实环境评估与 leaderboard 分层组织。",
+            "排行榜之外应该能找到协议、版本、复现实验入口。"
+          ],
+          "en": [
+            "Lead with evaluation scope to orient first-time visitors.",
+            "Separate task galleries, real-world evaluation and leaderboard results.",
+            "Keep protocol, version and reproducibility routes visible next to rankings."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "围绕访问者最重要的三个问题建立导航：评什么、怎么评、结果在哪。",
+            "为任务建立可筛选索引，不使用无法理解的无标签视频列表。",
+            "在 leaderboard 周围明确指标含义与版本/协议。"
+          ],
+          "en": [
+            "Design navigation around what, how, and evidence.",
+            "Use filterable task groups rather than unlabeled video thumbnails.",
+            "Explain leaderboard metrics and their evaluation protocol/version."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "静态封面不等于可操作演示；交互效果需要在实际网站测试。",
+            "排名结果随提交变化，使用时核对官方日期与协议。"
+          ],
+          "en": [
+            "A cover is not a functioning demo; verify the actual website interaction.",
+            "Leaderboard standings evolve; check official dates and protocols."
+          ]
+        }
+      }
     },
     {
       "id": "supermimic-teaser",
@@ -429,7 +638,7 @@
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-diagram",
+        "preview": "authored-analysis-svg",
         "third_party_media": "not-republished"
       },
       "applicability": {
@@ -463,7 +672,59 @@
         }
       },
       "parent": "supermimic-site",
-      "previewStyle": "rollout"
+      "previewStyle": "rollout",
+      "visual": {
+        "src": "assets/editorials/supermimic-teaser.svg",
+        "kind": "authored-analysis",
+        "alt": {
+          "zh": "SuperMimic · 论文主图 的原创视觉结构拆解，不是论文原图或官网截图",
+          "en": "Authored structural analysis of SuperMimic · 论文主图, not the official figure or webpage screenshot"
+        },
+        "label": {
+          "zh": "原创案例拆解 · 非官方原图",
+          "en": "Authored case study · Not source artwork"
+        }
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "将可视化的 world-model motion rollout 与可量化的训练投入并列，让“方法机制”与“价值主张”同时进入视野。",
+          "en": "Juxtapose a visible world-model motion rollout with quantitative compute context, connecting mechanism and claimed value."
+        },
+        "composition": {
+          "zh": [
+            "左边以不同时间的人形姿态轨迹示意动态过程，而不是多个不同机器人。",
+            "右边显示 1 H100、3 小时与 SONIC 128 L40、7 天的官方训练配置对照。",
+            "硬件型号和训练口径与对比结论必须始终同屏标注。"
+          ],
+          "en": [
+            "Depict time-separated motion poses rather than multiple distinct robots.",
+            "Show the officially reported 1 H100/3 h and SONIC 128 L40/7 day settings.",
+            "Retain device models and measurement boundaries alongside any claim."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "把机制与核心实验价值各压缩成一个面板。",
+            "用符合数据的轨迹、截图或图表显示方法，并标注时间关系。",
+            "仅在实验方法可核对时展示资源对照，不凭异构 GPU 计算绝对效率倍数。"
+          ],
+          "en": [
+            "Give mechanism and core measured value one panel each.",
+            "Use evidence-faithful motion imagery and clear time labels.",
+            "Only compare compute figures with documented conditions; avoid hardware-normalized claims without data."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "不同 GPU 型号下的耗时与 GPU-hours 不等于严格等价硬件的消融。",
+            "主页标题与论文 Figure 1 是两类资产；此图为原创内容拆解。"
+          ],
+          "en": [
+            "Cross-GPU wall clock and GPU-hours are not controlled same-hardware ablations.",
+            "The homepage hero is not paper Figure 1; this is an authored deconstruction."
+          ]
+        }
+      }
     },
     {
       "id": "supermimic-site",
@@ -506,7 +767,7 @@
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-diagram",
+        "preview": "authored-analysis-svg",
         "third_party_media": "not-republished"
       },
       "applicability": {
@@ -542,7 +803,59 @@
         }
       },
       "parent": "supermimic-teaser",
-      "previewStyle": "editorial"
+      "previewStyle": "editorial",
+      "visual": {
+        "src": "assets/editorials/supermimic-site.svg",
+        "kind": "authored-analysis",
+        "alt": {
+          "zh": "SuperMimic · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
+          "en": "Authored structural analysis of SuperMimic · 项目主页, not the official figure or webpage screenshot"
+        },
+        "label": {
+          "zh": "原创案例拆解 · 非官方原图",
+          "en": "Authored case study · Not source artwork"
+        }
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "极简标题负责建立问题意识，定量对比、交互 demo 和真实部署证据负责让主张可信。",
+          "en": "A strong, restrained headline creates attention; quantified evidence, demos and physical deployment make it credible."
+        },
+        "composition": {
+          "zh": [
+            "首屏使用有力但简短的主张“Compute is no longer the bottleneck”。",
+            "下一段立即给出 1 GPU/3 h 与 SONIC 配置的数字对照及归一化回报指标。",
+            "之后依次展开交互 demo、方法流程、模拟对照、真实 G1 部署与参考资料。"
+          ],
+          "en": [
+            "The hero leads with the short claim 'Compute is no longer the bottleneck'.",
+            "Follow immediately with compute settings and normalized-return comparisons.",
+            "Continue with interactive demo, method, simulation comparisons, physical G1 evidence and sources."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "先用一句可证伪的话说清方法解决的主要限制。",
+            "把支持该句的一个核心指标放在下一屏，而非堆满特点列表。",
+            "按“主张—核心证据—机制—局限—复现”组织后续页面。"
+          ],
+          "en": [
+            "Open with one falsifiable proposition about the central bottleneck.",
+            "Place a directly supporting metric immediately after the hero.",
+            "Sequence claim, core evidence, mechanism, limitations and reproducibility."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "不要借用官网的比较结果作为自己论文的证据。",
+            "横跨不同硬件的资源比较须注明训练和评测口径。"
+          ],
+          "en": [
+            "Do not transfer another paper's findings to your own work.",
+            "Cross-hardware comparisons need stated training and evaluation settings."
+          ]
+        }
+      }
     },
     {
       "id": "topconf-figure-gallery",
