@@ -1,38 +1,34 @@
-# Publish the website / 网站发布
+# 网站部署与验收 / Deployment
 
-The website is entirely static. No API key, server, database, hosted model, payment processor, or custom GitHub Actions workflow is required.
+> 当前为**静态免费资源网站**：无需自建服务器、API 密钥、数据库、付费模型、支付服务或额外 GitHub Actions。页面默认中文，英文可切换。
 
-## Option A — GitHub Pages (for the current free, non-commercial library)
+## GitHub Pages（当前正在使用）
 
-1. Open [Repository Settings → Pages](https://github.com/Suchenl/OpenResearchAssets/settings/pages).
-2. Under **Build and deployment**, select **Deploy from a branch**.
-3. Choose **main** and **/(root)**, then **Save**.
-4. Once GitHub reports deployment completed, visit **https://suchenl.github.io/OpenResearchAssets/**.
+1. 打开 [Settings → Pages](https://github.com/Suchenl/OpenResearchAssets/settings/pages)。
+2. **Build and deployment** 选择 **Deploy from a branch**。
+3. 选择 **main**、**/(root)**，保存。
+4. 从 [Actions](https://github.com/Suchenl/OpenResearchAssets/actions) 确认部署成功后，打开 [正式网站](https://suchenl.github.io/OpenResearchAssets/)。
 
-If the URL returns 404 before deployment is enabled or finished, it does **not** mean the project files were not committed.
+源码使用相对资源路径，支持 `/OpenResearchAssets/` 子路径。404 可能是 Pages 尚未部署，不代表 Git 内容未提交。
 
-The website uses relative asset links, so it supports the repository subpath without custom routing. GitHub handles its own Pages publishing; this repository includes no custom Actions pipeline.
+**注意**：GitHub Pages 的使用边界应遵循当前 [GitHub 官方规定](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)。将来如果变成商业交易/SaaS，请选择适合商业用途的独立托管平台。
 
-GitHub Pages should **not** be used to host a future commercial SaaS or transaction-focused service. Follow GitHub's current [Pages limits and terms](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages).
+## Cloudflare Pages（未来可选，不是现有服务依赖）
 
-## Option B — Cloudflare Pages (recommended if commercial offerings are added)
+连接 GitHub 仓库，无需构建命令，发布目录是仓库根目录 `/`。只有在真正需要收费产品时再配置域名、认证和支付，不要提前公开未实现的服务。
 
-1. Create a Cloudflare Pages project and connect the GitHub repository.
-2. Use **no build command** and **/** (repository root) as the publish directory for this plain-HTML website.
-3. Deploy and use the provided `*.pages.dev` hostname; add a custom domain only if desired.
-4. Keep user-provided unpublished manuscripts and any payment or AI API keys out of this public repository.
-
-## Verify locally
+## 本地验收
 
 ```bash
 python3 tests/check_project.py
+python3 tests/browser_offline_smoke.py   # 需 Python Playwright + Chromium
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000` for the landing page and `/quality.html` for the manual review checklist.
+在浏览器中打开 `http://localhost:8000`。确认：中文默认、中英切换、导航、8 个外部参考筛选、三张原创 SVG 下载、五种人工自查类型、Markdown 报告生成、移动端布局。测试桌面 1440px、平板 768px、手机 390/320px。
 
-**Acceptance boundary:** the static checks are not visual acceptance. Test desktop/mobile layout in a real browser before actively promoting the site, and independently verify all external reference links. The current Quality Critic browser page is **human self-assessment**, not automated scientific verification.
+**能力边界**：通过测试不意味着审美已经得到用户认可。当前 Quality Critic 网页是**人工自查**，不自动读取、上传或分析论文；Skill 不是训练好的质量模型。外部引用的许可与有效性需要独立复核。
 
----
+## English summary
 
-**中文摘要：** 首版是免费静态网站，无需购买服务器。现在可以在 GitHub 仓库的 Settings → Pages 设置 `main / (root)` 发布；未来如用于商业化收费，建议独立使用 Cloudflare Pages 等适当的托管服务。上线前需要人工检查桌面/移动端实际排版。
+A static bilingual website (Chinese default, English available). Deploy GitHub Pages from `main / (root)`. No backend, API keys, accounts or hosted inference. Run the static and browser smoke tests; never advertise the manual Quality Critic checklist as an AI vision judge.

@@ -1,15 +1,17 @@
 ---
-name: Asset request
-about: Request or propose a high-quality editable research asset
+name: 素材需求 / Asset request
+about: 提议高质量、可编辑的科研设计素材 / Propose a reusable research asset
 labels: enhancement
 ---
 
-### Research communication task
+### 要解决的科研表达问题 / Research communication task
 
-### Why existing assets do not solve it
+### 现有资源为什么不够好 / Why existing assets fall short
 
-### Excellent references (URLs + design reasons)
+### 优质参考与明确理由 / Reference URLs and design rationale
 
-### Format needed (SVG/PPTX/HTML/other)
+### 期望交付格式 / SVG, PPTX, HTML, etc.
 
-### Scientific integrity and source permissions
+### 科学真实性、来源和授权 / Scientific integrity and permissions
+
+请勿上传未获授权的论文、项目截图或私人数据。 / Do not upload private or unlicensed artifacts.
