@@ -1,0 +1,1121 @@
+{
+  "schema_version": "1.0.0",
+  "generated_on": "2026-10-24",
+  "default_language": "zh",
+  "notice": {
+    "zh": "所有第三方论文图、网站图与截图保留原权利；本站未收录其原始图片文件。卡片结构示意为本站原创，不代表原作截图。",
+    "en": "Third-party figures and screenshots retain original rights. No original third-party images are bundled; diagrammatic previews are authored representations, not source screenshots."
+  },
+  "facets": {
+    "stages": {
+      "research": {
+        "zh": "文献调研",
+        "en": "Literature"
+      },
+      "ideation": {
+        "zh": "研究选题",
+        "en": "Ideation"
+      },
+      "methods": {
+        "zh": "方法设计",
+        "en": "Methods"
+      },
+      "experiments": {
+        "zh": "实验实施",
+        "en": "Experiments"
+      },
+      "evaluation": {
+        "zh": "评估分析",
+        "en": "Evaluation"
+      },
+      "writing": {
+        "zh": "论文写作",
+        "en": "Writing"
+      },
+      "communication": {
+        "zh": "成果展示",
+        "en": "Presentation"
+      }
+    },
+    "kinds": {
+      "visual-reference": {
+        "zh": "论文视觉案例",
+        "en": "Paper visuals"
+      },
+      "website-reference": {
+        "zh": "项目主页案例",
+        "en": "Project sites"
+      },
+      "resource-index": {
+        "zh": "外部资源目录",
+        "en": "Resource directories"
+      },
+      "editable-template": {
+        "zh": "可编辑素材",
+        "en": "Editable templates"
+      },
+      "workflow": {
+        "zh": "工具与工作流",
+        "en": "Tools & workflows"
+      }
+    },
+    "domains": {
+      "general": {
+        "zh": "通用",
+        "en": "General"
+      },
+      "robotics": {
+        "zh": "机器人",
+        "en": "Robotics"
+      },
+      "vision": {
+        "zh": "视觉",
+        "en": "Computer vision"
+      },
+      "rl": {
+        "zh": "强化学习",
+        "en": "Reinforcement learning"
+      }
+    }
+  },
+  "entries": [
+    {
+      "id": "roborender-teaser",
+      "title": "RoboRender · 论文 Teaser",
+      "kind": "visual-reference",
+      "stages": [
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "teaser-design",
+        "visual-comparison"
+      ],
+      "description": {
+        "zh": "以输入、生成结果和视觉条件的对应关系，组织机器人视觉迁移的第一印象。",
+        "en": "Use aligned inputs, generated results and conditions to introduce visual sim-to-real transfer."
+      },
+      "keywords": {
+        "zh": [
+          "论文主图",
+          "视觉迁移",
+          "成对对比",
+          "sim2real"
+        ],
+        "en": [
+          "figure 1",
+          "sim-to-real",
+          "paired comparison",
+          "teaser"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://robo-render.github.io/",
+        "paper": "https://arxiv.org/abs/2610.09254"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "authored-diagram",
+        "third_party_media": "not-republished"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要让读者快速识别输入与输出的视觉差异",
+            "需要对比多个场景或摄像机视角"
+          ],
+          "en": [
+            "Showing visual changes between input and output",
+            "Comparing scenes or camera viewpoints"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "让比较对象有一致排列和标注",
+            "视觉证据先于繁复说明"
+          ],
+          "en": [
+            "Align paired panels and labels",
+            "Lead with visual evidence rather than prose"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不要将合成视觉结果冒充实拍",
+            "不能直接复制未经授权的论文截图"
+          ],
+          "en": [
+            "Never present generated scenes as real captures",
+            "Do not reproduce figures without permission"
+          ]
+        }
+      },
+      "parent": "roborender-site",
+      "previewStyle": "comparison"
+    },
+    {
+      "id": "roborender-site",
+      "title": "RoboRender · 项目主页",
+      "kind": "website-reference",
+      "stages": [
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "project-website",
+        "visual-comparison"
+      ],
+      "description": {
+        "zh": "从整体叙事、视频演示和多条件对比观察科研主页如何解释技术价值。",
+        "en": "A project-page reference for scientific storytelling, video demos and condition comparisons."
+      },
+      "keywords": {
+        "zh": [
+          "项目主页",
+          "视频展示",
+          "多视角",
+          "视觉迁移"
+        ],
+        "en": [
+          "project website",
+          "video demo",
+          "multi-view"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://robo-render.github.io/",
+        "paper": "https://arxiv.org/abs/2610.09254"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "authored-diagram",
+        "third_party_media": "not-republished"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要制作展示视觉变换的研究主页"
+          ],
+          "en": [
+            "Building a project page for visual transformation results"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "以直接对比展示方法价值",
+            "把主要演示放在简介附近"
+          ],
+          "en": [
+            "Show value through direct contrasts",
+            "Keep primary demos near the main claim"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不要仅参考视觉设计而忽略科学解释"
+          ],
+          "en": [
+            "Do not copy presentation without validating scientific context"
+          ]
+        }
+      },
+      "parent": "roborender-teaser",
+      "previewStyle": "comparison"
+    },
+    {
+      "id": "robodojo-teaser",
+      "title": "RoboDojo · 论文总览图",
+      "kind": "visual-reference",
+      "stages": [
+        "writing",
+        "evaluation"
+      ],
+      "domains": [
+        "robotics"
+      ],
+      "tasks": [
+        "teaser-design",
+        "benchmark-presentation"
+      ],
+      "description": {
+        "zh": "用统一的多场景视觉布局解释仿真与真实机器人评估范围。",
+        "en": "A visual organization pattern for simulated and physical robot evaluation coverage."
+      },
+      "keywords": {
+        "zh": [
+          "论文主图",
+          "真实机器人",
+          "仿真",
+          "多任务总览"
+        ],
+        "en": [
+          "teaser",
+          "robot benchmark",
+          "sim-and-real",
+          "task overview"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://robodojo-benchmark.com/",
+        "paper": "https://arxiv.org/abs/2607.04434"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "authored-diagram",
+        "third_party_media": "not-republished"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要呈现大量任务类别与评估场景"
+          ],
+          "en": [
+            "Presenting multiple robot task families or evaluation environments"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "建立任务类别间明确视觉分组",
+            "区分真实与仿真证据"
+          ],
+          "en": [
+            "Group related tasks visibly",
+            "Differentiate simulated versus physical demonstrations"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不要暗示不同任务的测试条件完全一致"
+          ],
+          "en": [
+            "Do not imply incomparable settings are identical"
+          ]
+        }
+      },
+      "parent": "robodojo-site",
+      "previewStyle": "benchmark"
+    },
+    {
+      "id": "robodojo-site",
+      "title": "RoboDojo · 项目主页",
+      "kind": "website-reference",
+      "stages": [
+        "communication",
+        "evaluation"
+      ],
+      "domains": [
+        "robotics"
+      ],
+      "tasks": [
+        "project-website",
+        "benchmark-presentation"
+      ],
+      "description": {
+        "zh": "参考任务画廊、真实演示与项目叙事的组织，帮助大量实验内容保持可读。",
+        "en": "Study task galleries and physical demonstrations as scalable evidence presentation."
+      },
+      "keywords": {
+        "zh": [
+          "主页设计",
+          "实验展示",
+          "机器人",
+          "任务画廊"
+        ],
+        "en": [
+          "website",
+          "robotics",
+          "gallery",
+          "evaluation"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://robodojo-benchmark.com/",
+        "paper": "https://arxiv.org/abs/2607.04434"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "authored-diagram",
+        "third_party_media": "not-republished"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "研究包含许多任务、环境或机器人平台"
+          ],
+          "en": [
+            "Research spans many tasks or embodiments"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "按任务或平台分组，而不是堆图片",
+            "视频与文字介绍建立一一对应"
+          ],
+          "en": [
+            "Organize demos by task or embodiment",
+            "Tie captions directly to demos"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不要把项目主页截图视作开放许可"
+          ],
+          "en": [
+            "A website screenshot does not imply redistribution rights"
+          ]
+        }
+      },
+      "parent": "robodojo-teaser",
+      "previewStyle": "benchmark"
+    },
+    {
+      "id": "supermimic-teaser",
+      "title": "SuperMimic · 论文主图",
+      "kind": "visual-reference",
+      "stages": [
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "rl"
+      ],
+      "tasks": [
+        "teaser-design",
+        "evidence-storytelling"
+      ],
+      "description": {
+        "zh": "研究强科学主张与简洁证据如何在首屏形成清晰信息层级。",
+        "en": "A reference for connecting a strong claim with legible first-screen evidence."
+      },
+      "keywords": {
+        "zh": [
+          "论文主图",
+          "人形机器人",
+          "世界模型",
+          "论点证据"
+        ],
+        "en": [
+          "teaser",
+          "humanoid",
+          "world model",
+          "claim and evidence"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://supermimic.github.io/",
+        "paper": "https://arxiv.org/abs/2610.28480"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "authored-diagram",
+        "third_party_media": "not-republished"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "有一个明确、可用实验支撑的核心结论"
+          ],
+          "en": [
+            "A central claim is supported by strong experiments"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "重要主张应该一眼读懂",
+            "用可验证的结果支持视觉强调"
+          ],
+          "en": [
+            "Make the main claim legible",
+            "Tie emphasis to verifiable evidence"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不要移植论文结论或其数值",
+            "不要为了戏剧性牺牲严谨性"
+          ],
+          "en": [
+            "Never copy the paper's claims or results",
+            "Do not trade rigor for drama"
+          ]
+        }
+      },
+      "parent": "supermimic-site",
+      "previewStyle": "editorial"
+    },
+    {
+      "id": "supermimic-site",
+      "title": "SuperMimic · 项目主页",
+      "kind": "website-reference",
+      "stages": [
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "rl"
+      ],
+      "tasks": [
+        "project-website",
+        "evidence-storytelling"
+      ],
+      "description": {
+        "zh": "冷白、黑色大标题、宽松留白与分段证据；主页的视觉节奏服务于科研论证。",
+        "en": "Minimal typography, whitespace and evidence-led sections in a robotics project homepage."
+      },
+      "keywords": {
+        "zh": [
+          "主页设计",
+          "交互展示",
+          "冷白极简",
+          "视觉叙事"
+        ],
+        "en": [
+          "website",
+          "editorial design",
+          "minimal",
+          "storytelling"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://supermimic.github.io/",
+        "paper": "https://arxiv.org/abs/2610.28480"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "authored-diagram",
+        "third_party_media": "not-republished"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要把强研究结论制作成简洁的项目主页"
+          ],
+          "en": [
+            "Presenting a strong scientific result in a minimalist site"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "强标题之后紧接可查证的结果",
+            "控制页面节奏和信息密度",
+            "用研究视频而非装饰图主导视觉"
+          ],
+          "en": [
+            "Follow claims with evidence",
+            "Use pacing and whitespace intentionally",
+            "Prioritize research demos over decoration"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不要照搬原站图片和代码",
+            "不要将审美判断当作研究指标"
+          ],
+          "en": [
+            "Do not copy original site artwork or code",
+            "Do not confuse taste with a research metric"
+          ]
+        }
+      },
+      "parent": "supermimic-teaser",
+      "previewStyle": "editorial"
+    },
+    {
+      "id": "topconf-figure-gallery",
+      "title": "Top-Conf Figure Gallery",
+      "kind": "resource-index",
+      "stages": [
+        "writing"
+      ],
+      "domains": [
+        "general",
+        "vision"
+      ],
+      "tasks": [
+        "figure-discovery",
+        "teaser-design"
+      ],
+      "description": {
+        "zh": "大量论文 Figure 1 检索入口；收录并不意味着图片获得再分发许可。",
+        "en": "Searchable paper Figure 1 gallery; inclusion does not grant image reuse rights."
+      },
+      "keywords": {
+        "zh": [
+          "论文主图",
+          "画廊",
+          "检索"
+        ],
+        "en": [
+          "gallery",
+          "figure 1",
+          "teaser"
+        ]
+      },
+      "year": "Community",
+      "language": "zh+en",
+      "links": {
+        "source": "https://qwdwqfwq.github.io/topconf-paper-figure-gallery/"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "authored-diagram",
+        "third_party_media": "not-republished"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [],
+          "en": []
+        },
+        "learn": {
+          "zh": [],
+          "en": []
+        },
+        "avoid": {
+          "zh": [
+            "不要将第三方作品当作可以自由转载或编辑的素材。"
+          ],
+          "en": [
+            "Do not treat third-party artwork as freely reusable or editable."
+          ]
+        }
+      },
+      "previewStyle": "gallery"
+    },
+    {
+      "id": "awesome-academic-figures",
+      "title": "Awesome Academic Figures",
+      "kind": "resource-index",
+      "stages": [
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "figure-discovery",
+        "agent-handoff"
+      ],
+      "description": {
+        "zh": "跨论文视觉参考与 Agent 辅助整理工作流的目录。",
+        "en": "Figure discovery and reference-packet workflows for drawing agents."
+      },
+      "keywords": {
+        "zh": [
+          "论文配图",
+          "参考包",
+          "Agent"
+        ],
+        "en": [
+          "paper figures",
+          "reference pack",
+          "agent"
+        ]
+      },
+      "year": "Community",
+      "language": "zh+en",
+      "links": {
+        "source": "https://doczbs.github.io/Awesome-Academic-Figures/"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "authored-diagram",
+        "third_party_media": "not-republished"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [],
+          "en": []
+        },
+        "learn": {
+          "zh": [],
+          "en": []
+        },
+        "avoid": {
+          "zh": [
+            "不要将第三方作品当作可以自由转载或编辑的素材。"
+          ],
+          "en": [
+            "Do not treat third-party artwork as freely reusable or editable."
+          ]
+        }
+      },
+      "previewStyle": "gallery"
+    },
+    {
+      "id": "figure-atlas",
+      "title": "Figure Atlas",
+      "kind": "resource-index",
+      "stages": [
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "editable-figure",
+        "figure-discovery"
+      ],
+      "description": {
+        "zh": "科研图元和可编辑组成部分的外部索引，具体许可逐项判断。",
+        "en": "External index of editable figure components; verify licenses item by item."
+      },
+      "keywords": {
+        "zh": [
+          "可编辑",
+          "科研图元",
+          "SVG"
+        ],
+        "en": [
+          "editable",
+          "SVG",
+          "figure components"
+        ]
+      },
+      "year": "Community",
+      "language": "zh+en",
+      "links": {
+        "source": "https://runtimewarning.github.io/research-figure-library/"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "authored-diagram",
+        "third_party_media": "not-republished"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [],
+          "en": []
+        },
+        "learn": {
+          "zh": [],
+          "en": []
+        },
+        "avoid": {
+          "zh": [
+            "不要将第三方作品当作可以自由转载或编辑的素材。"
+          ],
+          "en": [
+            "Do not treat third-party artwork as freely reusable or editable."
+          ]
+        }
+      },
+      "previewStyle": "gallery"
+    },
+    {
+      "id": "ml-visuals",
+      "title": "ML Visuals",
+      "kind": "resource-index",
+      "stages": [
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "editable-figure"
+      ],
+      "description": {
+        "zh": "机器学习视觉内容社区资源，可作为开放协作及可编辑交付形式的参考。",
+        "en": "ML illustrations and community editing practices."
+      },
+      "keywords": {
+        "zh": [
+          "机器学习插画",
+          "幻灯片"
+        ],
+        "en": [
+          "ML visuals",
+          "slides"
+        ]
+      },
+      "year": "Community",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/dair-ai/ml-visuals"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "authored-diagram",
+        "third_party_media": "not-republished"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [],
+          "en": []
+        },
+        "learn": {
+          "zh": [],
+          "en": []
+        },
+        "avoid": {
+          "zh": [
+            "不要将第三方作品当作可以自由转载或编辑的素材。"
+          ],
+          "en": [
+            "Do not treat third-party artwork as freely reusable or editable."
+          ]
+        }
+      },
+      "previewStyle": "gallery"
+    },
+    {
+      "id": "research-skills-directory",
+      "title": "Awesome Research Skills",
+      "kind": "resource-index",
+      "stages": [
+        "research",
+        "experiments",
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "agent-handoff",
+        "workflow-discovery"
+      ],
+      "description": {
+        "zh": "按研究环节整理的外部 Agent Skills 目录，具体 Skill 需要独立验收。",
+        "en": "Directory of research-agent skills; each workflow requires independent validation."
+      },
+      "keywords": {
+        "zh": [
+          "科研技能",
+          "工具目录",
+          "Agent"
+        ],
+        "en": [
+          "research skills",
+          "agent tools"
+        ]
+      },
+      "year": "Community",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/neverbiasu/awesome-research-skills"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "authored-diagram",
+        "third_party_media": "not-republished"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [],
+          "en": []
+        },
+        "learn": {
+          "zh": [],
+          "en": []
+        },
+        "avoid": {
+          "zh": [
+            "不要将第三方作品当作可以自由转载或编辑的素材。"
+          ],
+          "en": [
+            "Do not treat third-party artwork as freely reusable or editable."
+          ]
+        }
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "teaser-story",
+      "title": "对照式 Teaser 模板",
+      "kind": "editable-template",
+      "stages": [
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "teaser-design",
+        "editable-figure"
+      ],
+      "description": {
+        "zh": "原创 SVG 概念模板，适合把关键视觉对比排在一起。",
+        "en": "Editable SVG conceptual template for side-by-side visual evidence."
+      },
+      "keywords": {
+        "zh": [
+          "原创",
+          "可编辑",
+          "SVG"
+        ],
+        "en": [
+          "original",
+          "editable",
+          "SVG"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/Suchenl/OpenResearchAssets",
+        "editable": "assets/templates/teaser-story.svg"
+      },
+      "rights": {
+        "reuse": "CC-BY-4.0",
+        "preview": "original-svg",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要一个从零修改的示意布局"
+          ],
+          "en": [
+            "Starting from an editable layout"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "替换占位内容并重新检查图意"
+          ],
+          "en": [
+            "Replace placeholders and validate scientific meaning"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不得把概念数值作为真实实验结果"
+          ],
+          "en": [
+            "Never use illustrative numbers as experimental results"
+          ]
+        }
+      },
+      "previewStyle": "comparison"
+    },
+    {
+      "id": "method-flow",
+      "title": "三阶段方法流程模板",
+      "kind": "editable-template",
+      "stages": [
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "method-diagram",
+        "editable-figure"
+      ],
+      "description": {
+        "zh": "原创 SVG 概念模板，含三个步骤和反馈关系。",
+        "en": "Editable conceptual three-step method diagram."
+      },
+      "keywords": {
+        "zh": [
+          "原创",
+          "可编辑",
+          "SVG"
+        ],
+        "en": [
+          "original",
+          "editable",
+          "SVG"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/Suchenl/OpenResearchAssets",
+        "editable": "assets/templates/method-flow.svg"
+      },
+      "rights": {
+        "reuse": "CC-BY-4.0",
+        "preview": "original-svg",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要一个从零修改的示意布局"
+          ],
+          "en": [
+            "Starting from an editable layout"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "替换占位内容并重新检查图意"
+          ],
+          "en": [
+            "Replace placeholders and validate scientific meaning"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不得把概念数值作为真实实验结果"
+          ],
+          "en": [
+            "Never use illustrative numbers as experimental results"
+          ]
+        }
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "results-panel",
+      "title": "结果对照面板模板",
+      "kind": "editable-template",
+      "stages": [
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "results-figure",
+        "editable-figure"
+      ],
+      "description": {
+        "zh": "原创 SVG 概念模板，数值均为占位符。",
+        "en": "Editable comparison template with placeholder values only."
+      },
+      "keywords": {
+        "zh": [
+          "原创",
+          "可编辑",
+          "SVG"
+        ],
+        "en": [
+          "original",
+          "editable",
+          "SVG"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/Suchenl/OpenResearchAssets",
+        "editable": "assets/templates/results-panel.svg"
+      },
+      "rights": {
+        "reuse": "CC-BY-4.0",
+        "preview": "original-svg",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要一个从零修改的示意布局"
+          ],
+          "en": [
+            "Starting from an editable layout"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "替换占位内容并重新检查图意"
+          ],
+          "en": [
+            "Replace placeholders and validate scientific meaning"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不得把概念数值作为真实实验结果"
+          ],
+          "en": [
+            "Never use illustrative numbers as experimental results"
+          ]
+        }
+      },
+      "previewStyle": "comparison"
+    },
+    {
+      "id": "quality-critic-skill",
+      "title": "Quality Critic · 人工审核与 Agent 指南",
+      "kind": "workflow",
+      "stages": [
+        "writing",
+        "evaluation"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "quality-review",
+        "agent-handoff"
+      ],
+      "description": {
+        "zh": "面向科研图表的检查维度和 Agent 审核说明；效果尚未经过独立专家验证。",
+        "en": "A figure-review protocol and Agent instructions, not a validated automatic judge."
+      },
+      "keywords": {
+        "zh": [
+          "质量自查",
+          "论文图",
+          "科学真实性"
+        ],
+        "en": [
+          "quality critic",
+          "figure review",
+          "faithfulness"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/Suchenl/OpenResearchAssets/blob/main/skills/quality-critic/SKILL.md",
+        "editable": "skills/quality-critic/SKILL.md"
+      },
+      "rights": {
+        "reuse": "MIT",
+        "preview": "none",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要审查已有图是否表达准确"
+          ],
+          "en": [
+            "Reviewing an existing scientific figure"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "定位问题并给出可验证修复建议"
+          ],
+          "en": [
+            "Report grounded findings and verifiable fixes"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不要把模型自评当作专家验证"
+          ],
+          "en": [
+            "Do not treat model self-ratings as expert validation"
+          ]
+        }
+      },
+      "previewStyle": "workflow"
+    }
+  ]
+}
