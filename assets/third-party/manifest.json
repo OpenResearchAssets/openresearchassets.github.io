@@ -3,13 +3,13 @@
   "scope": "Third-party media bytes packaged in this repository. These are not relicensed by this repository's MIT or original SVG rules.",
   "items": [
     {
-      "id": "roborender-model-architecture",
-      "path": "assets/third-party/roborender/model-architecture.png",
+      "id": "roborender-teaser",
+      "path": "assets/third-party/roborender/training-data.png",
       "media_type": "image/png",
       "upstream_repository": "robo-render/robo-render.github.io",
-      "upstream_path": "static/images/fig2_model.png",
-      "upstream_blob_sha": "2b7aeec5fa5f4aeeabfd1322031ad0cc56f5aab7",
-      "upstream_page": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig2_model.png",
+      "upstream_path": "static/images/training-data.png",
+      "upstream_blob_sha": "f3e29ac4bbd8c7f89444c286aeeac7d186648f1e",
+      "upstream_page": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/training-data.png",
       "paper": "https://arxiv.org/abs/2610.09254",
       "license_evidence": "https://arxiv.org/abs/2610.09254",
       "license_id": "CC-BY-4.0",
@@ -26,9 +26,35 @@
         "Jiajun Wu"
       ],
       "modification": "none",
-      "content_note": "Official RoboRender model architecture diagram, not a teaser or website screenshot. Attribution and license apply to the authors' paper figure; separately credited elements require independent assessment.",
-      "claim_scope": "paper-licensed figure as presented on the official project website",
-      "checked_on": "2026-10-25"
+      "checked_on": "2026-10-25",
+      "content_note": "Official RoboRender project figure; not a paper teaser or full website screenshot. Attribution required."
+    },
+    {
+      "id": "roborender-site",
+      "path": "assets/third-party/roborender/generation-quality.png",
+      "media_type": "image/png",
+      "upstream_repository": "robo-render/robo-render.github.io",
+      "upstream_path": "static/images/fig4_ar_quality.png",
+      "upstream_blob_sha": "1371f1b0f47c556a5273ad6f29444c4269b89052",
+      "upstream_page": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig4_ar_quality.png",
+      "paper": "https://arxiv.org/abs/2610.09254",
+      "license_evidence": "https://arxiv.org/abs/2610.09254",
+      "license_id": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "authors": [
+        "Huang Huang",
+        "Wensi Ai",
+        "Ziyu Chen",
+        "Youhui Wang",
+        "Zijian Du",
+        "Yang Liu",
+        "Jiaolong Yang",
+        "Li Fei-Fei",
+        "Jiajun Wu"
+      ],
+      "modification": "none",
+      "checked_on": "2026-10-25",
+      "content_note": "Official RoboRender project figure; not a paper teaser or full website screenshot. Attribution required."
     }
   ]
 }

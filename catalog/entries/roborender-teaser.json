@@ -36,12 +36,20 @@
   "language": "zh+en",
   "links": {
     "source": "https://robo-render.github.io/",
-    "paper": "https://arxiv.org/abs/2610.09254"
+    "paper": "https://arxiv.org/abs/2610.09254",
+    "officialFigure": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/training-data.png",
+    "license": "https://creativecommons.org/licenses/by/4.0/"
   },
   "rights": {
     "reuse": "reference-only",
-    "preview": "authored-analysis-svg",
-    "third_party_media": "not-republished"
+    "preview": "third-party-cc-by-4.0",
+    "third_party_media": "source-image-copied-with-paper-license",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "licensing_evidence": "https://arxiv.org/abs/2610.09254",
+    "attribution": "Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu. RoboRender (2026), arXiv:2610.09254.",
+    "original_file": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/training-data.png",
+    "original_blob_sha": "f3e29ac4bbd8c7f89444c286aeeac7d186648f1e",
+    "modifications": "none"
   },
   "applicability": {
     "use_when": {
@@ -78,15 +86,15 @@
   "parent": "roborender-site",
   "previewStyle": "comparison",
   "visual": {
-    "src": "assets/editorials/roborender-teaser.svg",
-    "kind": "authored-analysis",
+    "src": "assets/third-party/roborender/training-data.png",
+    "kind": "licensed-source-image",
     "alt": {
-      "zh": "RoboRender · 论文 Teaser 的原创视觉结构拆解，不是论文原图或官网截图",
-      "en": "Authored structural analysis of RoboRender · 论文 Teaser, not the official figure or webpage screenshot"
+      "zh": "官方训练样本条件可视化，非论文 Teaser 原图",
+      "en": "Official training-data condition visualization; not the paper's actual teaser."
     },
     "label": {
-      "zh": "原创案例拆解 · 非官方原图",
-      "en": "Authored case study · Not source artwork"
+      "zh": "官方真实配图 · CC BY 4.0",
+      "en": "OFFICIAL MEDIA · CC BY 4.0"
     }
   },
   "caseStudy": {
@@ -127,6 +135,18 @@
         "Image quality alone does not establish policy success; use separate results.",
         "Figure-level rights must be verified before embedding external paper imagery."
       ]
+    }
+  },
+  "analysisVisual": {
+    "src": "assets/editorials/roborender-teaser.svg",
+    "kind": "authored-analysis",
+    "alt": {
+      "zh": "RoboRender · 论文 Teaser 的原创视觉结构拆解，不是论文原图或官网截图",
+      "en": "Authored structural analysis of RoboRender · 论文 Teaser, not the official figure or webpage screenshot"
+    },
+    "label": {
+      "zh": "原创案例拆解 · 非官方原图",
+      "en": "Authored case study · Not source artwork"
     }
   }
 }

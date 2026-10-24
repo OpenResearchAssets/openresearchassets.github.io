@@ -1,0 +1,101 @@
+{
+  "id": "depth-anything-3-visual",
+  "title": "Depth Anything 3 · 多视角深度与空间重建总览图",
+  "kind": "visual-reference",
+  "stages": [
+    "methods",
+    "writing",
+    "communication"
+  ],
+  "domains": [
+    "vision"
+  ],
+  "tasks": [
+    "method-figure",
+    "teaser-design",
+    "depth-estimation",
+    "multi-view-visualization"
+  ],
+  "description": {
+    "zh": "官方项目总览图把输入图片、深度与 ray map、三维几何和性能证据合在一张图里。作为结构与真实视觉结合的优秀参考。",
+    "en": "The official DA3 overview combines input views, depth/ray maps, 3D geometry and supporting results into one clear visual narrative."
+  },
+  "keywords": {
+    "zh": [
+      "Depth Anything 3",
+      "方法图",
+      "多视角",
+      "深度",
+      "相机姿态",
+      "三维重建"
+    ],
+    "en": [
+      "Depth Anything 3",
+      "teaser",
+      "depth map",
+      "ray map",
+      "geometry reconstruction",
+      "multiview"
+    ]
+  },
+  "year": "2025",
+  "language": "zh+en",
+  "links": {
+    "source": "https://depth-anything-3.github.io/",
+    "paper": "https://arxiv.org/abs/2511.10647",
+    "officialFigure": "https://depth-anything-3.github.io/assets/teaser.png"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "external-linked-not-relicensed",
+    "source_image_url": "https://depth-anything-3.github.io/assets/teaser.png"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "希望一张科研概览图同时展示真实视觉输入、空间输出及方法作用",
+        "需要参考多图深度估计与几何恢复论文如何组织视觉证据"
+      ],
+      "en": [
+        "Planning a scientific overview with real inputs, spatial outputs and measured evidence",
+        "Studying visual storytelling for depth and geometric reconstruction"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "直接展示真实输入照片、深度图、三维几何，不使用模糊图标代替",
+        "一个核心模型连接多种输入与可核对的输出",
+        "结果统计应服务中心主张，不能脱离原始实验"
+      ],
+      "en": [
+        "Show real input images, depth maps and geometry rather than abstract icons",
+        "Use one central model to connect multiple input modes with evidence",
+        "Tie numeric results to experimental context"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "官网总览图不等同于论文中逐模块展开的架构图",
+        "不应将论文中的定量结果未经核实地挪用于自己的实验"
+      ],
+      "en": [
+        "An overview teaser is not the same as a detailed module architecture diagram",
+        "Do not reuse another paper's quantitative claims as your own"
+      ]
+    }
+  },
+  "visual": {
+    "src": "https://depth-anything-3.github.io/assets/teaser.png",
+    "kind": "external-reference-image",
+    "alt": {
+      "zh": "Depth Anything 3 官方总览图：Sydney Opera House 的多视角输入、深度图与三维重建",
+      "en": "Official Depth Anything 3 overview with Sydney Opera House image inputs, depth and ray maps, reconstructed geometry and results"
+    },
+    "label": {
+      "zh": "官方原图链接 · 原作者版权所有",
+      "en": "OFFICIAL LINKED IMAGE · RIGHTS RESERVED"
+    }
+  },
+  "previewStyle": "depth-geometry"
+}

@@ -39,8 +39,9 @@
   },
   "rights": {
     "reuse": "reference-only",
-    "preview": "authored-analysis-svg",
-    "third_party_media": "not-republished"
+    "preview": "external-linked-reference",
+    "third_party_media": "external-linked-not-relicensed",
+    "source_image_url": "https://tianxingchen.github.io/assets/files/work/2026-robodojo.png"
   },
   "applicability": {
     "use_when": {
@@ -73,15 +74,15 @@
   "parent": "robodojo-teaser",
   "previewStyle": "benchmark",
   "visual": {
-    "src": "assets/editorials/robodojo-site.svg",
-    "kind": "authored-analysis",
+    "src": "https://tianxingchen.github.io/assets/files/work/2026-robodojo.png",
+    "kind": "external-reference-image",
     "alt": {
-      "zh": "RoboDojo · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
-      "en": "Authored structural analysis of RoboDojo · 项目主页, not the official figure or webpage screenshot"
+      "zh": "作者个人主页中的 RoboDojo 项目封面（非官网截图）",
+      "en": "Project image on the author's portfolio (not a screenshot of the benchmark website)"
     },
     "label": {
-      "zh": "原创案例拆解 · 非官方原图",
-      "en": "Authored case study · Not source artwork"
+      "zh": "真实来源图 · 原作者版权所有",
+      "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
     }
   },
   "caseStudy": {
@@ -122,6 +123,18 @@
         "A cover is not a functioning demo; verify the actual website interaction.",
         "Leaderboard standings evolve; check official dates and protocols."
       ]
+    }
+  },
+  "analysisVisual": {
+    "src": "assets/editorials/robodojo-site.svg",
+    "kind": "authored-analysis",
+    "alt": {
+      "zh": "RoboDojo · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
+      "en": "Authored structural analysis of RoboDojo · 项目主页, not the official figure or webpage screenshot"
+    },
+    "label": {
+      "zh": "原创案例拆解 · 非官方原图",
+      "en": "Authored case study · Not source artwork"
     }
   }
 }

@@ -40,8 +40,9 @@
   },
   "rights": {
     "reuse": "reference-only",
-    "preview": "authored-analysis-svg",
-    "third_party_media": "not-republished"
+    "preview": "external-linked-reference",
+    "third_party_media": "external-linked-not-relicensed",
+    "source_image_url": "https://media.luminis-sim.com/media/home/teaser.png"
   },
   "applicability": {
     "use_when": {
@@ -74,15 +75,15 @@
   "parent": "robodojo-site",
   "previewStyle": "benchmark",
   "visual": {
-    "src": "assets/editorials/robodojo-teaser.svg",
-    "kind": "authored-analysis",
+    "src": "https://media.luminis-sim.com/media/home/teaser.png",
+    "kind": "external-reference-image",
     "alt": {
-      "zh": "RoboDojo · 论文总览图 的原创视觉结构拆解，不是论文原图或官网截图",
-      "en": "Authored structural analysis of RoboDojo · 论文总览图, not the official figure or webpage screenshot"
+      "zh": "RoboDojo 官方完整概览图",
+      "en": "Official RoboDojo overview figure"
     },
     "label": {
-      "zh": "原创案例拆解 · 非官方原图",
-      "en": "Authored case study · Not source artwork"
+      "zh": "真实来源图 · 原作者版权所有",
+      "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
     }
   },
   "caseStudy": {
@@ -123,6 +124,18 @@
         "The 42/18 figures refer to official task counts, not matched task difficulty.",
         "An MIT license on a software repo does not automatically license externally hosted imagery."
       ]
+    }
+  },
+  "analysisVisual": {
+    "src": "assets/editorials/robodojo-teaser.svg",
+    "kind": "authored-analysis",
+    "alt": {
+      "zh": "RoboDojo · 论文总览图 的原创视觉结构拆解，不是论文原图或官网截图",
+      "en": "Authored structural analysis of RoboDojo · 论文总览图, not the official figure or webpage screenshot"
+    },
+    "label": {
+      "zh": "原创案例拆解 · 非官方原图",
+      "en": "Authored case study · Not source artwork"
     }
   }
 }

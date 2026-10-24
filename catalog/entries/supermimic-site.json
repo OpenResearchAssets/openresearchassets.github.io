@@ -39,8 +39,9 @@
   },
   "rights": {
     "reuse": "reference-only",
-    "preview": "authored-analysis-svg",
-    "third_party_media": "not-republished"
+    "preview": "external-linked-reference",
+    "third_party_media": "external-linked-not-relicensed",
+    "source_image_url": "https://supermimic.github.io/media/demo/demo_poster_F5F5F7.jpg"
   },
   "applicability": {
     "use_when": {
@@ -77,15 +78,15 @@
   "parent": "supermimic-teaser",
   "previewStyle": "editorial",
   "visual": {
-    "src": "assets/editorials/supermimic-site.svg",
-    "kind": "authored-analysis",
+    "src": "https://supermimic.github.io/media/demo/demo_poster_F5F5F7.jpg",
+    "kind": "external-reference-image",
     "alt": {
-      "zh": "SuperMimic · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
-      "en": "Authored structural analysis of SuperMimic · 项目主页, not the official figure or webpage screenshot"
+      "zh": "SuperMimic 官网交互演示中的机器人实景画面（非整页截图）",
+      "en": "Official humanoid web-demo poster (not a full-page site screenshot)"
     },
     "label": {
-      "zh": "原创案例拆解 · 非官方原图",
-      "en": "Authored case study · Not source artwork"
+      "zh": "真实来源图 · 原作者版权所有",
+      "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
     }
   },
   "caseStudy": {
@@ -126,6 +127,18 @@
         "Do not transfer another paper's findings to your own work.",
         "Cross-hardware comparisons need stated training and evaluation settings."
       ]
+    }
+  },
+  "analysisVisual": {
+    "src": "assets/editorials/supermimic-site.svg",
+    "kind": "authored-analysis",
+    "alt": {
+      "zh": "SuperMimic · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
+      "en": "Authored structural analysis of SuperMimic · 项目主页, not the official figure or webpage screenshot"
+    },
+    "label": {
+      "zh": "原创案例拆解 · 非官方原图",
+      "en": "Authored case study · Not source artwork"
     }
   }
 }

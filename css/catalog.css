@@ -122,3 +122,11 @@
 .ora-detail-rights{padding:18px 0;margin-top:20px;border-top:1px solid #e0e7ef}
 .ora-detail-rights p{margin:0 0 10px;font-size:12px;color:#66788d;line-height:1.7}
 @media(max-width:720px){.ora-rights-notice{display:block;padding:16px;margin-top:15px}.ora-rights-notice a{display:inline-block;margin-top:9px;white-space:normal}}
+
+/* Authentic source preview and visible failure handling */
+.ora-preview.ora-external{background:#fff;border-bottom:1px solid #e3e9ef}
+.ora-external img,.ora-official img{width:100%;height:100%;object-fit:contain;background:#fff;display:block;padding:8px}
+.ora-image-fallback{display:none;color:#64788c;font-size:12px;line-height:1.5;text-align:center;padding:24px}
+.ora-image-error img{display:none}
+.ora-image-error .ora-image-fallback{display:block}
+.ora-analysis-link{margin:9px 0 0;font-size:12px}.ora-analysis-link a{color:#35658d}

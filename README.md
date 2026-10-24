@@ -22,7 +22,7 @@ OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉�
 | 内容 | 实际交付 | 边界 |
 |---|---|---|
 | [任务搜索与多维筛选](https://suchenl.github.io/OpenResearchAssets/#references) | 双语关键词、科研阶段、领域、资产类型过滤；独立详情页 | 当前是浏览器本地筛选，不是语义向量检索 |
-| [结构化资产目录](catalog/index.json) · [轻量 AI 索引](catalog/manifest.json) | **22 项**记录，含 6 个 RoboRender / RoboDojo / SuperMimic 的深入视觉分析案例 | 已有 1 张来源和 CC BY 许可记录齐全的官方模型结构图，其余第三方原图不默认再分发 |
+| [结构化资产目录](catalog/index.json) · [轻量 AI 索引](catalog/manifest.json) | **22 项**记录，含 6 个 RoboRender / RoboDojo / SuperMimic 的深入视觉分析案例 | 已收录两张带 CC BY 溯源的 RoboRender 官网视觉图，其他真实预览通过官方外链展示且不由本站再授权 |
 | [AI 使用指南](for-agents/) · [llms.txt](llms.txt) | 无需认证的 JSON、Markdown 导航和来源链接 | AI 的具体执行能力取决于 Agent 文件与工具权限 |
 | [原创可编辑 SVG](assets/templates/) | 5 份概念模板：Teaser、流程、结果、主页故事板、论点—证据映射 | 只展示结构和占位，不代表真实实验 |
 | [人工质量自查](quality.html) | 五类审核对象、问题手工勾选和 Markdown 报告 | **不自动读取或诊断图片** |
@@ -78,6 +78,6 @@ python3 tests/browser_offline_smoke.py
 
 ## 真实第三方视觉资产
 
-**官方真实图优先展示**：首页资产目录首张卡片是 RoboRender 官方模型结构图；后续六项仍分别是原创分析 SVG，不能将模型图误称为论文 Teaser。自动化验收会检查首页首卡真实 PNG 的实际加载和目录展示文案。
+**官方真实图优先展示**：首页首个视觉案例更新为 Depth Anything 3 的真实官网概览图，并保留 RoboRender 的真实项目配图；已移除你不喜欢的 RoboRender 模型结构图资产。自动化验收会检查首页首卡真实 PNG 的实际加载和目录展示文案。
 
-本站现已试点收录 [RoboRender 官方模型结构图](asset.html?id=roborender-model-architecture)（并非论文 Teaser），与对应的原创分析案例分别建档。原始 PNG 保存在 `assets/third-party/roborender/`，作者、原始仓库 blob SHA、论文 CC BY 4.0 许可依据和改动说明记录在 [第三方资产台账](assets/third-party/manifest.json)。其他项目的可见媒体不自动视为获准转载。
+本站已收录 RoboRender 官网训练数据和生成质量图片，并为 Depth Anything 3 等参考型资产优先使用官方原站真实图片链接；明确区分真实官网媒体与原论文 Figure 的身份。原始 PNG 保存在 `assets/third-party/roborender/`，作者、原始仓库 blob SHA、论文 CC BY 4.0 许可依据和改动说明记录在 [第三方资产台账](assets/third-party/manifest.json)。其他项目的可见媒体不自动视为获准转载。

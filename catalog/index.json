@@ -80,8 +80,8 @@
   },
   "entries": [
     {
-      "id": "roborender-model-architecture",
-      "title": "RoboRender · 多视角视频生成模型结构图",
+      "id": "depth-anything-3-visual",
+      "title": "Depth Anything 3 · 多视角深度与空间重建总览图",
       "kind": "visual-reference",
       "stages": [
         "methods",
@@ -89,108 +89,96 @@
         "communication"
       ],
       "domains": [
-        "robotics",
         "vision"
       ],
       "tasks": [
         "method-figure",
-        "model-architecture",
-        "multi-view-generation",
-        "robotics-figure"
+        "teaser-design",
+        "depth-estimation",
+        "multi-view-visualization"
       ],
       "description": {
-        "zh": "官方真实模型结构图：上一帧、视频、机器人掩码、深度和语言条件进入联合多视角潜空间，经 Diffusion Transformer 生成不同相机视角。与论文 Teaser 为不同素材。",
-        "en": "Authentic model-architecture figure from the official RoboRender project, showing prior-frame, video, robot-mask, depth and text conditioning, joint multi-view latents, and diffusion decoding. Not its teaser."
+        "zh": "官方项目总览图把输入图片、深度与 ray map、三维几何和性能证据合在一张图里。作为结构与真实视觉结合的优秀参考。",
+        "en": "The official DA3 overview combines input views, depth/ray maps, 3D geometry and supporting results into one clear visual narrative."
       },
       "keywords": {
         "zh": [
-          "官方原图",
-          "模型结构",
-          "扩散模型",
-          "多视角生成",
-          "机器人掩码",
-          "深度图"
+          "Depth Anything 3",
+          "方法图",
+          "多视角",
+          "深度",
+          "相机姿态",
+          "三维重建"
         ],
         "en": [
-          "official figure",
-          "robot model diagram",
-          "diffusion transformer",
-          "multiview",
-          "depth",
-          "mask",
-          "conditioned generation"
+          "Depth Anything 3",
+          "teaser",
+          "depth map",
+          "ray map",
+          "geometry reconstruction",
+          "multiview"
         ]
       },
-      "year": "2026",
+      "year": "2025",
       "language": "zh+en",
       "links": {
-        "source": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig2_model.png",
-        "paper": "https://arxiv.org/abs/2610.09254",
-        "officialFigure": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig2_model.png",
-        "license": "https://creativecommons.org/licenses/by/4.0/"
+        "source": "https://depth-anything-3.github.io/",
+        "paper": "https://arxiv.org/abs/2511.10647",
+        "officialFigure": "https://depth-anything-3.github.io/assets/teaser.png"
       },
       "rights": {
-        "reuse": "CC-BY-4.0; attribution required; verify separately credited embedded content",
-        "preview": "third-party-cc-by-4.0",
-        "third_party_media": "official-figure-copied-with-paper-license",
-        "license_url": "https://creativecommons.org/licenses/by/4.0/",
-        "licensing_evidence": "https://arxiv.org/abs/2610.09254",
-        "original_file": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig2_model.png",
-        "original_blob_sha": "2b7aeec5fa5f4aeeabfd1322031ad0cc56f5aab7",
-        "attribution": "Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu, RoboRender, arXiv:2610.09254 (2026)",
-        "modifications": "none; exact upstream PNG blob",
-        "note": "Official project file fig2_model.png. Manuscript is CC BY 4.0; any separately credited embedded third-party media must be assessed independently."
-      },
-      "parent": "roborender-teaser",
-      "visual": {
-        "src": "assets/third-party/roborender/model-architecture.png",
-        "kind": "licensed-paper-figure",
-        "alt": {
-          "zh": "RoboRender 官方多视角视频生成模型结构图，展示前一帧、视频、机器人掩码、深度和文本条件进入扩散生成网络",
-          "en": "RoboRender official multiview video-generation model diagram with previous frame, video, robot mask, depth and text conditioning"
-        },
-        "label": {
-          "zh": "官方真实图 · CC BY 4.0 · 原样收录",
-          "en": "OFFICIAL FIGURE · CC BY 4.0 · UNMODIFIED"
-        }
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "external-linked-not-relicensed",
+        "source_image_url": "https://depth-anything-3.github.io/assets/teaser.png"
       },
       "applicability": {
         "use_when": {
           "zh": [
-            "需要研究多视角机器人视频生成的模块排布与证据标注",
-            "需要参考深度、机器人掩码、文本和上一帧共同条件化的模型示意图"
+            "希望一张科研概览图同时展示真实视觉输入、空间输出及方法作用",
+            "需要参考多图深度估计与几何恢复论文如何组织视觉证据"
           ],
           "en": [
-            "Studying module layout and explanatory labels for multi-view robot video generation",
-            "Designing a diagram that combines depth, robot masks, text and previous-frame conditions"
+            "Planning a scientific overview with real inputs, spatial outputs and measured evidence",
+            "Studying visual storytelling for depth and geometric reconstruction"
           ]
         },
         "learn": {
           "zh": [
-            "将多模态输入分组对齐到对应视角，并保留明确标签",
-            "用通道/Token 的中间表示桥接条件信号与生成核心",
-            "在右侧显示每个视角的输出，直观说明多视角耦合机制"
+            "直接展示真实输入照片、深度图、三维几何，不使用模糊图标代替",
+            "一个核心模型连接多种输入与可核对的输出",
+            "结果统计应服务中心主张，不能脱离原始实验"
           ],
           "en": [
-            "Align heterogeneous inputs by camera view and label them explicitly",
-            "Connect conditioning signals to generation via an intermediate token representation",
-            "Show per-camera outputs on the right to communicate multi-view coupling"
+            "Show real input images, depth maps and geometry rather than abstract icons",
+            "Use one central model to connect multiple input modes with evidence",
+            "Tie numeric results to experimental context"
           ]
         },
         "avoid": {
           "zh": [
-            "不要把此模型结构图标记为 RoboRender 的论文 Teaser 或 Figure 1",
-            "即使 CC BY 允许再分发，也必须保留作者、出处、许可和改动说明",
-            "论文图可作为设计参考，但不能无说明地挪用其他研究的实证内容"
+            "官网总览图不等同于论文中逐模块展开的架构图",
+            "不应将论文中的定量结果未经核实地挪用于自己的实验"
           ],
           "en": [
-            "Do not present the model diagram as RoboRender's teaser or Figure 1",
-            "Keep authors, source, license and modification status when redistributing",
-            "Do not reuse the original research evidence as if it were your own results"
+            "An overview teaser is not the same as a detailed module architecture diagram",
+            "Do not reuse another paper's quantitative claims as your own"
           ]
         }
       },
-      "previewStyle": "model-architecture"
+      "visual": {
+        "src": "https://depth-anything-3.github.io/assets/teaser.png",
+        "kind": "external-reference-image",
+        "alt": {
+          "zh": "Depth Anything 3 官方总览图：Sydney Opera House 的多视角输入、深度图与三维重建",
+          "en": "Official Depth Anything 3 overview with Sydney Opera House image inputs, depth and ray maps, reconstructed geometry and results"
+        },
+        "label": {
+          "zh": "官方原图链接 · 原作者版权所有",
+          "en": "OFFICIAL LINKED IMAGE · RIGHTS RESERVED"
+        }
+      },
+      "previewStyle": "depth-geometry"
     },
     {
       "id": "roborender-teaser",
@@ -230,12 +218,20 @@
       "language": "zh+en",
       "links": {
         "source": "https://robo-render.github.io/",
-        "paper": "https://arxiv.org/abs/2610.09254"
+        "paper": "https://arxiv.org/abs/2610.09254",
+        "officialFigure": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/training-data.png",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-analysis-svg",
-        "third_party_media": "not-republished"
+        "preview": "third-party-cc-by-4.0",
+        "third_party_media": "source-image-copied-with-paper-license",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licensing_evidence": "https://arxiv.org/abs/2610.09254",
+        "attribution": "Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu. RoboRender (2026), arXiv:2610.09254.",
+        "original_file": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/training-data.png",
+        "original_blob_sha": "f3e29ac4bbd8c7f89444c286aeeac7d186648f1e",
+        "modifications": "none"
       },
       "applicability": {
         "use_when": {
@@ -272,15 +268,15 @@
       "parent": "roborender-site",
       "previewStyle": "comparison",
       "visual": {
-        "src": "assets/editorials/roborender-teaser.svg",
-        "kind": "authored-analysis",
+        "src": "assets/third-party/roborender/training-data.png",
+        "kind": "licensed-source-image",
         "alt": {
-          "zh": "RoboRender · 论文 Teaser 的原创视觉结构拆解，不是论文原图或官网截图",
-          "en": "Authored structural analysis of RoboRender · 论文 Teaser, not the official figure or webpage screenshot"
+          "zh": "官方训练样本条件可视化，非论文 Teaser 原图",
+          "en": "Official training-data condition visualization; not the paper's actual teaser."
         },
         "label": {
-          "zh": "原创案例拆解 · 非官方原图",
-          "en": "Authored case study · Not source artwork"
+          "zh": "官方真实配图 · CC BY 4.0",
+          "en": "OFFICIAL MEDIA · CC BY 4.0"
         }
       },
       "caseStudy": {
@@ -322,6 +318,18 @@
             "Figure-level rights must be verified before embedding external paper imagery."
           ]
         }
+      },
+      "analysisVisual": {
+        "src": "assets/editorials/roborender-teaser.svg",
+        "kind": "authored-analysis",
+        "alt": {
+          "zh": "RoboRender · 论文 Teaser 的原创视觉结构拆解，不是论文原图或官网截图",
+          "en": "Authored structural analysis of RoboRender · 论文 Teaser, not the official figure or webpage screenshot"
+        },
+        "label": {
+          "zh": "原创案例拆解 · 非官方原图",
+          "en": "Authored case study · Not source artwork"
+        }
       }
     },
     {
@@ -360,12 +368,20 @@
       "language": "zh+en",
       "links": {
         "source": "https://robo-render.github.io/",
-        "paper": "https://arxiv.org/abs/2610.09254"
+        "paper": "https://arxiv.org/abs/2610.09254",
+        "officialFigure": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig4_ar_quality.png",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-analysis-svg",
-        "third_party_media": "not-republished"
+        "preview": "third-party-cc-by-4.0",
+        "third_party_media": "source-image-copied-with-paper-license",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licensing_evidence": "https://arxiv.org/abs/2610.09254",
+        "attribution": "Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu. RoboRender (2026), arXiv:2610.09254.",
+        "original_file": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig4_ar_quality.png",
+        "original_blob_sha": "1371f1b0f47c556a5273ad6f29444c4269b89052",
+        "modifications": "none"
       },
       "applicability": {
         "use_when": {
@@ -398,15 +414,15 @@
       "parent": "roborender-teaser",
       "previewStyle": "comparison",
       "visual": {
-        "src": "assets/editorials/roborender-site.svg",
-        "kind": "authored-analysis",
+        "src": "assets/third-party/roborender/generation-quality.png",
+        "kind": "licensed-source-image",
         "alt": {
-          "zh": "RoboRender · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
-          "en": "Authored structural analysis of RoboRender · 项目主页, not the official figure or webpage screenshot"
+          "zh": "官网真实生成质量对比图，非整页网站截图",
+          "en": "Authentic generation-quality chart from project website; not a full webpage screenshot."
         },
         "label": {
-          "zh": "原创案例拆解 · 非官方原图",
-          "en": "Authored case study · Not source artwork"
+          "zh": "官方真实配图 · CC BY 4.0",
+          "en": "OFFICIAL MEDIA · CC BY 4.0"
         }
       },
       "caseStudy": {
@@ -447,6 +463,18 @@
             "Generated video is not the same as real robot footage.",
             "The site preview is an authored information-architecture study, not the source screenshot."
           ]
+        }
+      },
+      "analysisVisual": {
+        "src": "assets/editorials/roborender-site.svg",
+        "kind": "authored-analysis",
+        "alt": {
+          "zh": "RoboRender · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
+          "en": "Authored structural analysis of RoboRender · 项目主页, not the official figure or webpage screenshot"
+        },
+        "label": {
+          "zh": "原创案例拆解 · 非官方原图",
+          "en": "Authored case study · Not source artwork"
         }
       }
     },
@@ -492,8 +520,9 @@
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-analysis-svg",
-        "third_party_media": "not-republished"
+        "preview": "external-linked-reference",
+        "third_party_media": "external-linked-not-relicensed",
+        "source_image_url": "https://media.luminis-sim.com/media/home/teaser.png"
       },
       "applicability": {
         "use_when": {
@@ -526,15 +555,15 @@
       "parent": "robodojo-site",
       "previewStyle": "benchmark",
       "visual": {
-        "src": "assets/editorials/robodojo-teaser.svg",
-        "kind": "authored-analysis",
+        "src": "https://media.luminis-sim.com/media/home/teaser.png",
+        "kind": "external-reference-image",
         "alt": {
-          "zh": "RoboDojo · 论文总览图 的原创视觉结构拆解，不是论文原图或官网截图",
-          "en": "Authored structural analysis of RoboDojo · 论文总览图, not the official figure or webpage screenshot"
+          "zh": "RoboDojo 官方完整概览图",
+          "en": "Official RoboDojo overview figure"
         },
         "label": {
-          "zh": "原创案例拆解 · 非官方原图",
-          "en": "Authored case study · Not source artwork"
+          "zh": "真实来源图 · 原作者版权所有",
+          "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
         }
       },
       "caseStudy": {
@@ -575,6 +604,18 @@
             "The 42/18 figures refer to official task counts, not matched task difficulty.",
             "An MIT license on a software repo does not automatically license externally hosted imagery."
           ]
+        }
+      },
+      "analysisVisual": {
+        "src": "assets/editorials/robodojo-teaser.svg",
+        "kind": "authored-analysis",
+        "alt": {
+          "zh": "RoboDojo · 论文总览图 的原创视觉结构拆解，不是论文原图或官网截图",
+          "en": "Authored structural analysis of RoboDojo · 论文总览图, not the official figure or webpage screenshot"
+        },
+        "label": {
+          "zh": "原创案例拆解 · 非官方原图",
+          "en": "Authored case study · Not source artwork"
         }
       }
     },
@@ -619,8 +660,9 @@
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-analysis-svg",
-        "third_party_media": "not-republished"
+        "preview": "external-linked-reference",
+        "third_party_media": "external-linked-not-relicensed",
+        "source_image_url": "https://tianxingchen.github.io/assets/files/work/2026-robodojo.png"
       },
       "applicability": {
         "use_when": {
@@ -653,15 +695,15 @@
       "parent": "robodojo-teaser",
       "previewStyle": "benchmark",
       "visual": {
-        "src": "assets/editorials/robodojo-site.svg",
-        "kind": "authored-analysis",
+        "src": "https://tianxingchen.github.io/assets/files/work/2026-robodojo.png",
+        "kind": "external-reference-image",
         "alt": {
-          "zh": "RoboDojo · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
-          "en": "Authored structural analysis of RoboDojo · 项目主页, not the official figure or webpage screenshot"
+          "zh": "作者个人主页中的 RoboDojo 项目封面（非官网截图）",
+          "en": "Project image on the author's portfolio (not a screenshot of the benchmark website)"
         },
         "label": {
-          "zh": "原创案例拆解 · 非官方原图",
-          "en": "Authored case study · Not source artwork"
+          "zh": "真实来源图 · 原作者版权所有",
+          "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
         }
       },
       "caseStudy": {
@@ -702,6 +744,18 @@
             "A cover is not a functioning demo; verify the actual website interaction.",
             "Leaderboard standings evolve; check official dates and protocols."
           ]
+        }
+      },
+      "analysisVisual": {
+        "src": "assets/editorials/robodojo-site.svg",
+        "kind": "authored-analysis",
+        "alt": {
+          "zh": "RoboDojo · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
+          "en": "Authored structural analysis of RoboDojo · 项目主页, not the official figure or webpage screenshot"
+        },
+        "label": {
+          "zh": "原创案例拆解 · 非官方原图",
+          "en": "Authored case study · Not source artwork"
         }
       }
     },
@@ -751,8 +805,9 @@
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-analysis-svg",
-        "third_party_media": "not-republished"
+        "preview": "external-linked-reference",
+        "third_party_media": "external-linked-not-relicensed",
+        "source_image_url": "https://supermimic.github.io/media/compute/compute_single-wall_F5F5F7.jpg"
       },
       "applicability": {
         "use_when": {
@@ -787,15 +842,15 @@
       "parent": "supermimic-site",
       "previewStyle": "rollout",
       "visual": {
-        "src": "assets/editorials/supermimic-teaser.svg",
-        "kind": "authored-analysis",
+        "src": "https://supermimic.github.io/media/compute/compute_single-wall_F5F5F7.jpg",
+        "kind": "external-reference-image",
         "alt": {
-          "zh": "SuperMimic · 论文主图 的原创视觉结构拆解，不是论文原图或官网截图",
-          "en": "Authored structural analysis of SuperMimic · 论文主图, not the official figure or webpage screenshot"
+          "zh": "SuperMimic 官网算力对比配图（非论文 Figure 1 原图）",
+          "en": "Official compute-comparison website image (not the paper's Figure 1)"
         },
         "label": {
-          "zh": "原创案例拆解 · 非官方原图",
-          "en": "Authored case study · Not source artwork"
+          "zh": "真实来源图 · 原作者版权所有",
+          "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
         }
       },
       "caseStudy": {
@@ -836,6 +891,18 @@
             "Cross-GPU wall clock and GPU-hours are not controlled same-hardware ablations.",
             "The homepage hero is not paper Figure 1; this is an authored deconstruction."
           ]
+        }
+      },
+      "analysisVisual": {
+        "src": "assets/editorials/supermimic-teaser.svg",
+        "kind": "authored-analysis",
+        "alt": {
+          "zh": "SuperMimic · 论文主图 的原创视觉结构拆解，不是论文原图或官网截图",
+          "en": "Authored structural analysis of SuperMimic · 论文主图, not the official figure or webpage screenshot"
+        },
+        "label": {
+          "zh": "原创案例拆解 · 非官方原图",
+          "en": "Authored case study · Not source artwork"
         }
       }
     },
@@ -880,8 +947,9 @@
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-analysis-svg",
-        "third_party_media": "not-republished"
+        "preview": "external-linked-reference",
+        "third_party_media": "external-linked-not-relicensed",
+        "source_image_url": "https://supermimic.github.io/media/demo/demo_poster_F5F5F7.jpg"
       },
       "applicability": {
         "use_when": {
@@ -918,15 +986,15 @@
       "parent": "supermimic-teaser",
       "previewStyle": "editorial",
       "visual": {
-        "src": "assets/editorials/supermimic-site.svg",
-        "kind": "authored-analysis",
+        "src": "https://supermimic.github.io/media/demo/demo_poster_F5F5F7.jpg",
+        "kind": "external-reference-image",
         "alt": {
-          "zh": "SuperMimic · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
-          "en": "Authored structural analysis of SuperMimic · 项目主页, not the official figure or webpage screenshot"
+          "zh": "SuperMimic 官网交互演示中的机器人实景画面（非整页截图）",
+          "en": "Official humanoid web-demo poster (not a full-page site screenshot)"
         },
         "label": {
-          "zh": "原创案例拆解 · 非官方原图",
-          "en": "Authored case study · Not source artwork"
+          "zh": "真实来源图 · 原作者版权所有",
+          "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
         }
       },
       "caseStudy": {
@@ -968,6 +1036,18 @@
             "Cross-hardware comparisons need stated training and evaluation settings."
           ]
         }
+      },
+      "analysisVisual": {
+        "src": "assets/editorials/supermimic-site.svg",
+        "kind": "authored-analysis",
+        "alt": {
+          "zh": "SuperMimic · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
+          "en": "Authored structural analysis of SuperMimic · 项目主页, not the official figure or webpage screenshot"
+        },
+        "label": {
+          "zh": "原创案例拆解 · 非官方原图",
+          "en": "Authored case study · Not source artwork"
+        }
       }
     },
     {
@@ -1008,8 +1088,9 @@
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-diagram",
-        "third_party_media": "not-republished"
+        "preview": "external-linked-reference",
+        "third_party_media": "external-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/qwdwqfwq/topconf-paper-figure-gallery/main/docs/banner.jpg"
       },
       "applicability": {
         "use_when": {
@@ -1037,7 +1118,19 @@
           ]
         }
       },
-      "previewStyle": "gallery"
+      "previewStyle": "gallery",
+      "visual": {
+        "src": "https://raw.githubusercontent.com/qwdwqfwq/topconf-paper-figure-gallery/main/docs/banner.jpg",
+        "kind": "external-reference-image",
+        "alt": {
+          "zh": "资源站官方 Banner",
+          "en": "Official resource-gallery banner"
+        },
+        "label": {
+          "zh": "真实来源图 · 原作者版权所有",
+          "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
+        }
+      }
     },
     {
       "id": "awesome-academic-figures",
@@ -1076,8 +1169,9 @@
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-diagram",
-        "third_party_media": "not-republished"
+        "preview": "external-linked-reference",
+        "third_party_media": "external-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/doczbs/Awesome-Academic-Figures/main/docs/assets/figure-showcase.png"
       },
       "applicability": {
         "use_when": {
@@ -1105,7 +1199,19 @@
           ]
         }
       },
-      "previewStyle": "gallery"
+      "previewStyle": "gallery",
+      "visual": {
+        "src": "https://raw.githubusercontent.com/doczbs/Awesome-Academic-Figures/main/docs/assets/figure-showcase.png",
+        "kind": "external-reference-image",
+        "alt": {
+          "zh": "资源库官方 Figure 展示图",
+          "en": "Official figure-gallery showcase image"
+        },
+        "label": {
+          "zh": "真实来源图 · 原作者版权所有",
+          "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
+        }
+      }
     },
     {
       "id": "figure-atlas",
@@ -1144,8 +1250,9 @@
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-diagram",
-        "third_party_media": "not-republished"
+        "preview": "external-linked-reference",
+        "third_party_media": "external-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/runtimewarning/research-figure-library/main/dist/assets/papers/arch-paper-googlenet.png"
       },
       "applicability": {
         "use_when": {
@@ -1173,7 +1280,19 @@
           ]
         }
       },
-      "previewStyle": "gallery"
+      "previewStyle": "gallery",
+      "visual": {
+        "src": "https://raw.githubusercontent.com/runtimewarning/research-figure-library/main/dist/assets/papers/arch-paper-googlenet.png",
+        "kind": "external-reference-image",
+        "alt": {
+          "zh": "该资源库提供的真实论文图形示例",
+          "en": "Real paper figure example hosted by the source library"
+        },
+        "label": {
+          "zh": "真实来源图 · 原作者版权所有",
+          "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
+        }
+      }
     },
     {
       "id": "ml-visuals",
@@ -1210,8 +1329,9 @@
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-diagram",
-        "third_party_media": "not-republished"
+        "preview": "external-linked-reference",
+        "third_party_media": "external-linked-not-relicensed",
+        "source_image_url": "https://opengraph.githubassets.com/1/dair-ai/ml-visuals"
       },
       "applicability": {
         "use_when": {
@@ -1239,7 +1359,19 @@
           ]
         }
       },
-      "previewStyle": "gallery"
+      "previewStyle": "gallery",
+      "visual": {
+        "src": "https://opengraph.githubassets.com/1/dair-ai/ml-visuals",
+        "kind": "external-reference-image",
+        "alt": {
+          "zh": "GitHub 自动生成的项目封面（非主页截图）",
+          "en": "GitHub-generated repository preview, not a site screenshot"
+        },
+        "label": {
+          "zh": "真实来源图 · 原作者版权所有",
+          "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
+        }
+      }
     },
     {
       "id": "research-skills-directory",
@@ -1279,8 +1411,9 @@
       },
       "rights": {
         "reuse": "reference-only",
-        "preview": "authored-diagram",
-        "third_party_media": "not-republished"
+        "preview": "external-linked-reference",
+        "third_party_media": "external-linked-not-relicensed",
+        "source_image_url": "https://opengraph.githubassets.com/1/neverbiasu/awesome-research-skills"
       },
       "applicability": {
         "use_when": {
@@ -1308,7 +1441,19 @@
           ]
         }
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "visual": {
+        "src": "https://opengraph.githubassets.com/1/neverbiasu/awesome-research-skills",
+        "kind": "external-reference-image",
+        "alt": {
+          "zh": "GitHub 自动生成的项目封面（非主页截图）",
+          "en": "GitHub-generated repository preview, not a site screenshot"
+        },
+        "label": {
+          "zh": "真实来源图 · 原作者版权所有",
+          "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
+        }
+      }
     },
     {
       "id": "teaser-story",

@@ -28,10 +28,15 @@
   function media(entry) {
     const rights=entry.rights || {};
     const visual=entry.visual || {};
-    if (visual.kind==='licensed-paper-figure' &&
-        /^assets\/third-party\/[a-z0-9-]+\/[a-z0-9-]+\.png$/.test(visual.src || '')) {
-      return '<div class="ora-preview ora-official"><img loading="eager" decoding="async" src="'+safe(visual.src)+'" alt="'+safe(local(visual.alt))+'">'+
-        '<span class="ora-curated-mark">'+safe(tr('官方原图 · CC BY 4.0','OFFICIAL FIGURE · CC BY 4.0'))+'</span></div>';
+    const localLicensed=(visual.kind==='licensed-source-image'||visual.kind==='licensed-paper-figure') &&
+      /^assets\/third-party\/[a-z0-9-]+\/[a-z0-9-]+\.png$/.test(visual.src || '');
+    const remote=visual.kind==='external-reference-image' &&
+      /^https:\/\/(?:depth-anything-3\.github\.io|media\.luminis-sim\.com|tianxingchen\.github\.io|supermimic\.github\.io|raw\.githubusercontent\.com|opengraph\.githubassets\.com)\//.test(visual.src || '');
+    if(localLicensed||remote){
+      const caption=local(localLicensed ? visual.label : visual.alt);
+      const mark=local(visual.label);
+      return '<div class="ora-preview '+(remote?'ora-external':'ora-official')+'"><img loading="lazy" decoding="async" '+(remote?'referrerpolicy="no-referrer" ':'')+'src="'+safe(visual.src)+'" alt="'+safe(caption)+'" onerror="this.closest(\'.ora-preview\').classList.add(\'ora-image-error\')">'+
+        '<span class="ora-curated-mark">'+safe(mark)+'</span><span class="ora-image-fallback">'+safe(tr('来源图片暂不可加载，请打开原始网站查看','Source image unavailable; open the original website'))+'</span></div>';
     }
     if (visual.kind==='authored-analysis' &&
       /^assets\/editorials\/[a-z0-9-]+\.svg$/.test(visual.src || '')) {
@@ -155,25 +160,26 @@
     const baseLessons='<div class="ora-lesson"><h2>'+safe(tr('什么时候使用','When to use'))+'</h2>'+points(local(app.use_when))+'</div>'+
       (study ? '' : '<div class="ora-lesson"><h2>'+safe(tr('值得学习的做法','Transferable lessons'))+'</h2>'+points(local(app.learn))+'</div>'+
         '<div class="ora-lesson"><h2>'+safe(tr('需要避免','What to avoid'))+'</h2>'+points(local(app.avoid))+'</div>');
-    const rightsNote=e.visual?.kind==='licensed-paper-figure'
+    const rightsNote=(e.visual?.kind==='licensed-paper-figure'||e.visual?.kind==='licensed-source-image')
       ? tr('原作者图像 · 依据论文 CC BY 4.0 收录 · 保留署名','Third-party figure · copied under paper CC BY 4.0 with attribution')
+      : e.visual?.kind==='external-reference-image'?tr('来自原站的外部真实图片链接，未在本站重新授权','External source image link; not relicensed by this site')
       : e.kind==='editable-template' || (e.kind==='workflow' && e.rights?.third_party_media==='none')
       ? tr('本站原创资产，不含第三方图像','Original site asset, no third-party image')
       : tr('仅供学习参考，第三方原图未在本站再分发','Reference only; external artwork not republished');
     detail.innerHTML='<div class="ora-detail-heading"><p class="ora-eyebrow">'+safe(kind(e))+' / '+safe(e.id)+'</p>'+
       '<h1>'+safe(e.title)+'</h1><p>'+safe(local(e.description))+'</p></div>'+
-      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.label))+' · '+
-        (e.visual.kind==='licensed-paper-figure'
+      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+(e.analysisVisual ? '<p class="ora-analysis-link"><a target="_blank" rel="noopener noreferrer" href="'+safe(e.analysisVisual.src)+'">'+safe(tr('查看本站原创结构分析 SVG','View authored structure-analysis SVG'))+' ↗</a></p>' : '')+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.alt||e.visual.label))+' · '+
+        ((e.visual.kind==='licensed-source-image'||e.visual.kind==='licensed-paper-figure')
           ? safe(tr('原始论文许可 CC BY 4.0；作者与来源见右侧档案。','Paper license CC BY 4.0; attribution and source appear in the metadata.'))
           : safe(tr('请打开官方来源查看原始视觉内容','Open the official source to inspect the original artwork')))+
         ' · <a href="'+safe(e.visual.src)+'" target="_blank" rel="noopener noreferrer">'+
-        safe(e.visual.kind==='licensed-paper-figure'?tr('查看真实原图','View the authentic figure'):tr('放大查看本站分析 SVG','Open full-size analysis SVG'))+' ↗</a></p>' : '')+baseLessons+editorial+'</section>'+
+        safe(e.visual.kind==='authored-analysis'?tr('放大查看本站分析 SVG','Open full-size analysis SVG'):tr('查看来源真实图片','Open the source image'))+' ↗</a></p>' : '')+baseLessons+editorial+'</section>'+
       '<aside class="ora-detail-sidebar"><h2>'+safe(tr('资产档案','Asset metadata'))+'</h2>'+
       '<dl><dt>'+safe(tr('科研阶段','Stages'))+'</dt><dd>'+e.stages.map(x=>safe(facetText('stages',x))).join(' · ')+'</dd>'+
       '<dt>'+safe(tr('领域','Domains'))+'</dt><dd>'+e.domains.map(x=>safe(facetText('domains',x))).join(' · ')+'</dd>'+
       '<dt>'+safe(tr('使用性质','Reuse'))+'</dt><dd>'+safe(e.rights?.reuse || 'unknown')+'</dd>'+
       '<dt>'+safe(tr('素材来源与边界','Asset media status'))+'</dt><dd>'+safe(rightsNote)+'</dd>'+
-      (e.visual?.kind==='licensed-paper-figure'?'<dt>'+safe(tr('图片署名','Figure credit'))+'</dt><dd>'+safe(e.rights?.attribution||'')+'</dd>'+
+      ((e.visual?.kind==='licensed-paper-figure'||e.visual?.kind==='licensed-source-image')?'<dt>'+safe(tr('图片署名','Figure credit'))+'</dt><dd>'+safe(e.rights?.attribution||'')+'</dd>'+
         '<dt>'+safe(tr('图片修改','Image modifications'))+'</dt><dd>'+safe(tr('未修改','Unmodified'))+'</dd>':'')+'</dl>'+
       '<div class="ora-detail-links">'+Object.entries(e.links || {}).map(([key,url])=>link(url,{source:tr('原始来源','Original source'),paper:tr('论文','Paper'),officialFigure:tr('官方媒体原图','Original upstream figure'),license:tr('授权条款 CC BY 4.0','License CC BY 4.0'),editable:tr('获取可编辑文件/说明','Editable source / instructions')}[key] || key)).join('')+
       '<a href="catalog/entries/'+encodeURIComponent(e.id)+'.json" target="_blank" rel="noopener noreferrer">'+safe(tr('供 AI 使用的单项 JSON','Single-entry JSON for AI'))+' ↗</a></div>'+

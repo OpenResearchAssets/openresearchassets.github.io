@@ -33,8 +33,9 @@
   },
   "rights": {
     "reuse": "reference-only",
-    "preview": "authored-diagram",
-    "third_party_media": "not-republished"
+    "preview": "external-linked-reference",
+    "third_party_media": "external-linked-not-relicensed",
+    "source_image_url": "https://opengraph.githubassets.com/1/dair-ai/ml-visuals"
   },
   "applicability": {
     "use_when": {
@@ -62,5 +63,17 @@
       ]
     }
   },
-  "previewStyle": "gallery"
+  "previewStyle": "gallery",
+  "visual": {
+    "src": "https://opengraph.githubassets.com/1/dair-ai/ml-visuals",
+    "kind": "external-reference-image",
+    "alt": {
+      "zh": "GitHub 自动生成的项目封面（非主页截图）",
+      "en": "GitHub-generated repository preview, not a site screenshot"
+    },
+    "label": {
+      "zh": "真实来源图 · 原作者版权所有",
+      "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
+    }
+  }
 }

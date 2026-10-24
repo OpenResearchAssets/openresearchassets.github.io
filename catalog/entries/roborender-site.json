@@ -34,12 +34,20 @@
   "language": "zh+en",
   "links": {
     "source": "https://robo-render.github.io/",
-    "paper": "https://arxiv.org/abs/2610.09254"
+    "paper": "https://arxiv.org/abs/2610.09254",
+    "officialFigure": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig4_ar_quality.png",
+    "license": "https://creativecommons.org/licenses/by/4.0/"
   },
   "rights": {
     "reuse": "reference-only",
-    "preview": "authored-analysis-svg",
-    "third_party_media": "not-republished"
+    "preview": "third-party-cc-by-4.0",
+    "third_party_media": "source-image-copied-with-paper-license",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "licensing_evidence": "https://arxiv.org/abs/2610.09254",
+    "attribution": "Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu. RoboRender (2026), arXiv:2610.09254.",
+    "original_file": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig4_ar_quality.png",
+    "original_blob_sha": "1371f1b0f47c556a5273ad6f29444c4269b89052",
+    "modifications": "none"
   },
   "applicability": {
     "use_when": {
@@ -72,15 +80,15 @@
   "parent": "roborender-teaser",
   "previewStyle": "comparison",
   "visual": {
-    "src": "assets/editorials/roborender-site.svg",
-    "kind": "authored-analysis",
+    "src": "assets/third-party/roborender/generation-quality.png",
+    "kind": "licensed-source-image",
     "alt": {
-      "zh": "RoboRender · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
-      "en": "Authored structural analysis of RoboRender · 项目主页, not the official figure or webpage screenshot"
+      "zh": "官网真实生成质量对比图，非整页网站截图",
+      "en": "Authentic generation-quality chart from project website; not a full webpage screenshot."
     },
     "label": {
-      "zh": "原创案例拆解 · 非官方原图",
-      "en": "Authored case study · Not source artwork"
+      "zh": "官方真实配图 · CC BY 4.0",
+      "en": "OFFICIAL MEDIA · CC BY 4.0"
     }
   },
   "caseStudy": {
@@ -121,6 +129,18 @@
         "Generated video is not the same as real robot footage.",
         "The site preview is an authored information-architecture study, not the source screenshot."
       ]
+    }
+  },
+  "analysisVisual": {
+    "src": "assets/editorials/roborender-site.svg",
+    "kind": "authored-analysis",
+    "alt": {
+      "zh": "RoboRender · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
+      "en": "Authored structural analysis of RoboRender · 项目主页, not the official figure or webpage screenshot"
+    },
+    "label": {
+      "zh": "原创案例拆解 · 非官方原图",
+      "en": "Authored case study · Not source artwork"
     }
   }
 }

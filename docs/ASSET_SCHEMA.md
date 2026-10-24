@@ -79,3 +79,7 @@ python3 tests/browser_offline_smoke.py   # Playwright 与 Chromium 可用时
 许可允许时可以收录官方真实图片。此类条目的 `visual.kind=licensed-paper-figure`，`visual.src` 指向 `assets/third-party/<project>/<file>.png`，`rights.preview=third-party-cc-by-4.0`；必填 `rights.license_url`、`rights.licensing_evidence`、`rights.attribution`、`rights.original_file`、`rights.original_blob_sha` 和 `rights.modifications`。第三方文件独立见 `assets/third-party/manifest.json`，不继承本站 MIT/原创 SVG 的统一版权声明。
 
 真实图与本站原创结构分析图为**两种独立资产**，不能将方法结构图误写成论文 Teaser。无需许可的情况仅限拥有适用合法例外或其他授权，必须描述具体依据，而不是把所有互联网图片一概认定为“合理使用”。
+
+## 真实来源图优先
+
+参考型条目支持 `visual.kind=external-reference-image` 和官方 HTTPS `src`；这是对原站媒体的直接链接，不代表本站获得再授权。优先展示原始素材，但仍需在双语 `visual.alt` 中说明它是论文主图、官网配图、作者 portfolio 封面还是截图，不能混称。源图载入失败时显示可见提示，详情保留作者/主页链接。

@@ -35,8 +35,9 @@
   },
   "rights": {
     "reuse": "reference-only",
-    "preview": "authored-diagram",
-    "third_party_media": "not-republished"
+    "preview": "external-linked-reference",
+    "third_party_media": "external-linked-not-relicensed",
+    "source_image_url": "https://raw.githubusercontent.com/doczbs/Awesome-Academic-Figures/main/docs/assets/figure-showcase.png"
   },
   "applicability": {
     "use_when": {
@@ -64,5 +65,17 @@
       ]
     }
   },
-  "previewStyle": "gallery"
+  "previewStyle": "gallery",
+  "visual": {
+    "src": "https://raw.githubusercontent.com/doczbs/Awesome-Academic-Figures/main/docs/assets/figure-showcase.png",
+    "kind": "external-reference-image",
+    "alt": {
+      "zh": "资源库官方 Figure 展示图",
+      "en": "Official figure-gallery showcase image"
+    },
+    "label": {
+      "zh": "真实来源图 · 原作者版权所有",
+      "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
+    }
+  }
 }
