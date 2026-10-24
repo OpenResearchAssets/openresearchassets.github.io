@@ -5,7 +5,7 @@ network access required. Not proof that GitHub Pages deployment is healthy.
 """
 from pathlib import Path
 from playwright.sync_api import sync_playwright
-import base64,re
+import base64,re,json
 from shutil import which
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -81,16 +81,63 @@ with sync_playwright() as pw:
         page.evaluate('window.scrollTo(0,0)')
         page.screenshot(path=str(ROOT/'tests'/f'_local_home_{label}.png'),full_page=True)
 
+        # Full catalog coverage, not a single showcase page. Main-case screenshots
+        # are kept for desktop and mobile human visual review.
+        cases=('roborender-teaser','roborender-site','robodojo-teaser',
+               'robodojo-site','supermimic-teaser','supermimic-site')
+        samples=('topconf-figure-gallery','teaser-story',
+                 'quality-critic-skill','experiment-planning')
+        entries=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))['entries']
+        for entry in entries:
+            asset_id=entry['id']
+            page.goto('https://ora.local/asset.html?id='+asset_id,wait_until='load')
+            page.locator('.ora-detail-heading h1').wait_for()
+            assert asset_id in page.locator('.ora-eyebrow').inner_text(),(label,asset_id,'wrong id')
+            assert page.locator('.ora-detail-preview .ora-preview').count()==1,(label,asset_id,'missing preview')
+            assert page.locator('.ora-detail-links a').count()>=2,(label,asset_id,'source / JSON missing')
+            assert 'catalog/entries/'+asset_id+'.json' in page.locator('.ora-detail-links a').last.get_attribute('href')
+            assert page.locator('.ora-detail-sidebar').is_visible()
+            assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),(
+                label,asset_id,'horizontal page overflow')
+            assert page.locator('.ora-lesson').count()==(1 if asset_id in cases else 3),(
+                label,asset_id,'repeated generic lessons')
+            if asset_id in cases:
+                assert page.locator('.ora-case-study').count()==1,(label,asset_id,'missing editorial')
+                assert page.locator('.ora-study-grid section').count()==2
+                assert page.locator('.ora-case-check li').count()>=2
+                assert page.locator('.ora-disclosure').is_visible()
+                assert page.locator('.ora-detail-preview .ora-curated img').count()==1
+            else:
+                assert page.locator('.ora-case-study').count()==0
+            visual=page.locator('.ora-detail-preview img')
+            if visual.count():
+                visual.scroll_into_view_if_needed()
+                page.wait_for_function("()=>[...document.querySelectorAll('.ora-detail-preview img')].every(n=>n.complete&&n.naturalWidth>0)")
+            if entry['kind']=='resource-index':
+                assert page.locator('.ora-detail-preview .ora-directory .ora-hit').count()>=1
+            if entry['kind']=='workflow':
+                cls='.ora-skill-preview' if asset_id=='quality-critic-skill' else '.ora-workflow-preview'
+                assert page.locator('.ora-detail-preview '+cls).count()==1,(label,asset_id,'wrong workflow type')
+                assert page.locator('.ora-detail-preview .ora-cover-step').count()>=1
+            if entry['kind']=='editable-template':
+                assert page.locator('.ora-detail-preview .ora-template img').count()==1
+                assert 'Original site asset' in page.locator('.ora-detail-sidebar').inner_text() if page.locator('html').get_attribute('lang')=='en' else '本站原创资产' in page.locator('.ora-detail-sidebar').inner_text()
+            if asset_id in cases and label in ('desktop','mobile'):
+                page.screenshot(path=str(ROOT/'tests'/f'_local_case_{asset_id}_{label}.png'),full_page=True)
+            if asset_id in samples and label in ('desktop','mobile'):
+                page.screenshot(path=str(ROOT/'tests'/f'_local_sample_{asset_id}_{label}.png'),full_page=True)
+            if asset_id in cases and label in ('desktop','mobile'):
+                zh=page.locator('.ora-case-intro p').inner_text()
+                page.locator('.lang-toggle').click()
+                assert page.locator('html').get_attribute('lang')=='en'
+                assert page.locator('.ora-case-intro p').inner_text()!=zh,(label,asset_id,'translation missing')
+                assert page.locator('.ora-lesson').count()==1
+                page.locator('.lang-toggle').click()
+                assert page.locator('html').get_attribute('lang')=='zh-CN'
+            print('CHECK',label,asset_id)
+        # Retain the familiar single-detail alias for compact CI logs.
         page.goto('https://ora.local/asset.html?id=supermimic-site',wait_until='load')
-        page.locator('.ora-lesson').first.wait_for()
-        assert 'SuperMimic' in page.locator('h1').inner_text()
-        assert page.locator('.ora-lesson').count()==3
-        assert page.locator('.ora-case-study').count()==1
-        assert page.locator('.ora-study-grid section').count()==2
-        assert page.locator('.ora-detail-links a').count()>=2
-        assert 'catalog/entries/supermimic-site.json' in page.locator('.ora-detail-links a').last.get_attribute('href')
-        assert page.locator('.ora-detail-preview .ora-curated img').evaluate('(n)=>n.complete&&n.naturalWidth>0')
-        assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('detail',label)
+        page.locator('.ora-case-study').wait_for()
         page.screenshot(path=str(ROOT/'tests'/f'_local_detail_{label}.png'),full_page=True)
 
         page.set_content(page_html('quality.html'),wait_until='load')
@@ -110,6 +157,6 @@ with sync_playwright() as pw:
             assert page.locator('html').get_attribute('lang')=='zh-CN'
             assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),name
         assert not errors,(label,errors)
-        print('PASS',label,'21 resources, filters, bilingual UI, detail, quality tool, mobile layout')
+        print('PASS',label,'21 detail pages, 6 curated case studies, 4 asset kinds, bilingual and responsive UI')
         page.close()
     browser.close()
