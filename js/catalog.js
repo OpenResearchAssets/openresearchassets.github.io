@@ -7,6 +7,7 @@
 
   let catalog = null;
   let filtersReady = false;
+  let showAll = false;
   const params = new URLSearchParams(location.search);
   const tr = (zh,en) => document.documentElement.lang === 'en' ? en : zh;
   const local = value => typeof value === 'object' && !Array.isArray(value) && value !== null && 'zh' in value ? value[document.documentElement.lang === 'en' ? 'en' : 'zh'] : value;
@@ -51,17 +52,18 @@
     if (filtersReady) return;
     filtersReady=true;
     const search=document.getElementById('reference-search');
-    if(search) {search.value=params.get('q') || '';search.addEventListener('input',renderGrid);}
-    ['facet-stage','facet-kind','facet-domain'].forEach(id=>document.getElementById(id)?.addEventListener('change',renderGrid));
+    if(search) {search.value=params.get('q') || '';search.addEventListener('input',()=>{showAll=false;renderGrid();});}
+    ['facet-stage','facet-kind','facet-domain'].forEach(id=>document.getElementById(id)?.addEventListener('change',()=>{showAll=false;renderGrid();}));
     document.querySelectorAll('[data-task-query]').forEach(b=>b.addEventListener('click',()=>{
       if(!search)return;
-      search.value=b.dataset.taskQuery;renderGrid();search.focus();
+      search.value=b.dataset.taskQuery;showAll=false;renderGrid();search.focus();
     }));
     document.getElementById('facet-reset')?.addEventListener('click',()=>{
       search.value='';
       ['facet-stage','facet-kind','facet-domain'].forEach(id=>{document.getElementById(id).value='';});
-      renderGrid();
+      showAll=false;renderGrid();
     });
+    document.getElementById('catalog-more')?.addEventListener('click',()=>{showAll=true;renderGrid();});
   }
   function allSearch(entry) {
     const a=entry.applicability || {};
@@ -80,7 +82,8 @@
     const items=catalog.entries.filter(e=>(!stage || e.stages.includes(stage)) &&
       (!kindSelect || e.kind===kindSelect) && (!domain || e.domains.includes(domain)) &&
       words.every(w=>allSearch(e).includes(w)));
-    grid.innerHTML=items.length ? items.map(e=>'<article class="ora-resource-card">'+
+    const shown = (!q && !stage && !kindSelect && !domain && !showAll) ? items.slice(0,9) : items;
+    grid.innerHTML=shown.length ? shown.map(e=>'<article class="ora-resource-card">'+
       '<a class="ora-resource-visual" href="asset.html?id='+encodeURIComponent(e.id)+'" aria-label="'+safe(tr('查看资产：','View asset: ')+e.title)+'">'+media(e)+'</a>'+
       '<div class="ora-resource-content"><div class="ora-resource-kicker">'+safe(kind(e))+' · '+safe(e.year || '')+'</div>'+
       '<h3><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(e.title)+'</a></h3>'+
@@ -91,8 +94,12 @@
       link(e.links?.source,tr('原始来源','Original source'))+'</div></div></article>').join('') :
       '<p class="empty-state">'+safe(empty())+'</p>';
     const status=document.getElementById('reference-status');
-    if(status)status.textContent=tr('已显示 ','Showing ')+items.length+' / '+catalog.entries.length+
+    if(status)status.textContent=tr('已显示 ','Showing ')+shown.length+' / '+catalog.entries.length
       tr(' 项 · 第三方图像未复制入库，预览为本站原创结构示意。',' entries · Third-party images are not copied; structural previews are authored.');
+    const more=document.getElementById('catalog-more');
+    if(more) more.hidden = (shown.length === items.length);
+    const count=document.getElementById('catalog-count');
+    if(count) count.textContent=String(catalog.entries.length);
     const u=new URL(location.href); q?u.searchParams.set('q',q):u.searchParams.delete('q');
     for(const [key,value] of [['stage',stage],['kind',kindSelect],['domain',domain]]) {
       value?u.searchParams.set(key,value):u.searchParams.delete(key);
