@@ -2,6 +2,8 @@
 
 [简体中文说明](README.zh-CN.md) · English (this page)
 
+[**Explore the live gallery and Quality Critic →**](https://suchenl.github.io/OpenResearchAssets/)
+
 **Craft better research.** A selective, quality-first library for excellent research communication.
 
 > **Status:** first public-ready starter release (2026-10-24). The initial references are attributed external links, and the SVGs are original **conceptual templates**, not real paper findings. The browser quality checklist is **manual**, not an AI vision judge.
