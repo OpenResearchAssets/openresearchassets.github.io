@@ -43,4 +43,4 @@ English: Read the catalog first; select 2–5 matching resources by stage, domai
 
 ## 获许可的真实论文图
 
-已收录 `roborender-model-architecture`（真实官方模型结构 PNG，与 `roborender-teaser` 的原创分析 SVG 是不同资产）。AI 使用时请读取 `rights.license_url`、`rights.attribution`、`rights.modifications` 与 [第三方原图台账](../assets/third-party/manifest.json)，别将原图当作自制图或把项目软件许可证套给外部媒体。
+已撤除 `roborender-model-architecture`，不得作为当前资产检索结果引用。现有 RoboRender 两条精选案例的 `visual` 对应真实官网支持性配图，而非论文 Teaser 截图；详细使用条件和 CC BY 来源见 [第三方媒体台账](../assets/third-party/manifest.json)。Depth Anything 3 参考项使用官网真实概览图片的外链，不能将它或其他外链图片重新授权给用户。

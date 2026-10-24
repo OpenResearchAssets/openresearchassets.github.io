@@ -78,6 +78,6 @@ python3 tests/browser_offline_smoke.py
 
 ## 真实第三方视觉资产
 
-**官方真实图优先展示**：首页首个视觉案例更新为 Depth Anything 3 的真实官网概览图，并保留 RoboRender 的真实项目配图；精选方向已改为多视角视觉结果与信息表达；原 RoboRender 模型结构图已从当前目录撤除。自动化验收会检查首页首卡真实 PNG 的实际加载和目录展示文案。
+**官方真实图优先展示**：首页首个视觉案例更新为 Depth Anything 3 的真实官网概览图，并保留 RoboRender 的真实项目配图；精选方向已改为多视角视觉结果与信息表达；原 RoboRender 模型结构图已从当前目录撤除。自动化验收检查首页首卡指向 Depth Anything 3 官方图；第三方外链媒体是否可用需另行联网核验。
 
 本站已收录 RoboRender 官网训练数据和生成质量图片，并为 Depth Anything 3 等参考型资产优先使用官方原站真实图片链接；明确区分真实官网媒体与原论文 Figure 的身份。原始 PNG 保存在 `assets/third-party/roborender/`，作者、原始仓库 blob SHA、论文 CC BY 4.0 许可依据和改动说明记录在 [第三方资产台账](assets/third-party/manifest.json)。其他项目的可见媒体不自动视为获准转载。

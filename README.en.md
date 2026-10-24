@@ -32,7 +32,7 @@ Agents should first read [the compact manifest](catalog/manifest.json), select a
 
 ## Authentic media with traceable licenses
 
-An official, unmodified RoboRender multiview architecture PNG is now included as its **own** asset ([model architecture](asset.html?id=roborender-model-architecture)), distinct from the authored teaser dissection. The upstream PNG and paper's CC BY 4.0 record are tracked in [the third-party media ledger](assets/third-party/manifest.json). The license on our own SVG templates and source code does not transfer to third-party images. Other unlicensed source media remain linked only.
+The currently curated RoboRender source media consist of authentic training-data and generation-quality figures, not the previously listed model-architecture PNG. Their upstream hashes, credit and CC BY basis are recorded in the [third-party media ledger](assets/third-party/manifest.json). Depth Anything 3 and other third-party media use clearly attributed source links, not an implied relicense.
 
 ## Copyright concerns and removal
 
