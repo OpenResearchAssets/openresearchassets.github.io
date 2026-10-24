@@ -51,6 +51,9 @@ with sync_playwright() as pw:
         assert page.locator('html').get_attribute('lang')=='zh-CN'
         assert page.locator('h1').inner_text().startswith('让已有的经验')
         assert page.locator('.ora-resource-card').count()==9
+        assert page.locator('.ora-resource-card .ora-curated img').count()==6
+        assert page.locator('.ora-resource-card .ora-curated img').evaluate_all(
+            '(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
         page.locator('#catalog-more').click()
         assert page.locator('.ora-resource-card').count()==19
         page.locator('#facet-kind').select_option('website-reference')
@@ -80,8 +83,11 @@ with sync_playwright() as pw:
         page.locator('.ora-lesson').first.wait_for()
         assert 'SuperMimic' in page.locator('h1').inner_text()
         assert page.locator('.ora-lesson').count()==3
+        assert page.locator('.ora-case-study').count()==1
+        assert page.locator('.ora-study-grid section').count()==2
         assert page.locator('.ora-detail-links a').count()>=2
         assert 'catalog/entries/supermimic-site.json' in page.locator('.ora-detail-links a').last.get_attribute('href')
+        assert page.locator('.ora-detail-preview .ora-curated img').evaluate('(n)=>n.complete&&n.naturalWidth>0')
         assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('detail',label)
         page.screenshot(path=str(ROOT/'tests'/f'_local_detail_{label}.png'),full_page=True)
 

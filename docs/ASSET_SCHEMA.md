@@ -63,3 +63,9 @@ python3 tests/browser_offline_smoke.py   # Playwright 与 Chromium 可用时
 ## 已实现的轻量 AI 读取流程
 
 唯一**手工维护**的事实源是 `catalog/index.json`。运行 `python3 tools/sync_catalog.py` 自动生成 `catalog/manifest.json`（检索摘要）和 `catalog/entries/<id>.json`（单项全部内容）。Agent 应先读取轻量索引，再按照条目中的 `entry` 路径读取少量相关文件，以减少不必要的上下文。禁止直接修改生成文件；执行 `python3 tools/sync_catalog.py --check` 验证一致性。网站检索当前仍使用完整目录与静态前端筛选，并不是已部署的语义数据库。
+
+## 经过分析的案例与可编辑封面
+
+已完成案例可填写 `visual: {src, kind, alt:{zh,en}, label:{zh,en}}`。`src` 必须指向 `assets/editorials/<id>.svg` 的本站**原创分析图**；它是对应项目的图文组织学习工具，不是原论文 Figure 或官网截图。`rights.preview=authored-analysis-svg` 记录其性质，媒体版权与来源仍在 `rights` 与 `links` 中注明。另有官方原图链接时可使用 `links.officialFigure`，链接本身不等于本仓库获得了再分发许可。
+
+六个核心案例还包含 `caseStudy`：`insight`（为何值得学习）、`composition`（信息/视觉拆解）、`reuseSteps`（如何迁移到自己的研究）、`verification`（事实、评估与授权检查），以上均提供中英文内容。这使 Agent 不只是看到图，还能回答“怎么用，怎么验证”。独立条目 JSON 与 manifest 仍从 `catalog/index.json` 自动生成。

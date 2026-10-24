@@ -21,6 +21,8 @@ OpenResearchAssets 是**面向人类与 AI 的科研全过程可复用资产库*
 11. 每次更改运行 `python3 tests/check_project.py`，重要视觉/交互改动运行 `python3 tests/browser_offline_smoke.py`，包含桌面/平板/手机、中英切换、筛选、手工质量报告和导航。报告必须说明哪些测试执行、哪些没有。
 12. 文档与代码均保持单一当前版本：直接维护权威文件，避免 `v2`、`final`、`latest` 等平行副本，不以长篇更新日志代替当前状态。
 
+14. **用真实内容取代占位图**：关键案例必须提供可核实的原创设计分析图、图像级版权记录，以及事实约束/复用步骤。原始论文图与主页截图只能在具有合适授权或合法依据时入库；原创分析图放入 `assets/editorials/`，保证真正可编辑，不能只是换色的几何占位块。`catalog/index.json` 是视觉路径与正文元数据唯一手工维护源。
+
 **English summary:** Keep the public site Chinese-first with complete English UI support. Show only implemented capabilities. Preserve scientific fidelity, licensing and privacy. Prefer useful methods over benchmark-building. Validate real rendering and interaction before release.
 
 13. **AI 节约上下文**：首选 `catalog/manifest.json`，再沿 `catalog/entries/<id>.json` 取少量详情。唯一手工维护源是 `catalog/index.json`；编辑后运行 `python3 tools/sync_catalog.py` 并用 `--check` 核对派生文件。CI 需要同时验证静态结构与浏览器行为。

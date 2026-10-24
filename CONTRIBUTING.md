@@ -38,3 +38,7 @@ python3 tests/browser_offline_smoke.py  # Playwright + Chromium 可用时
 ## 结构化资产维护
 
 只编辑 `catalog/index.json`；每个条目需有明确任务、阶段、双语用例、具体可迁移经验、禁忌和可核对来源。执行 `python3 tools/sync_catalog.py` 重新生成 `catalog/manifest.json` 与 `catalog/entries/*.json`。不要手动改派生文件。提交前运行 `python3 tests/check_project.py` 及可能的浏览器测试；不得将第三方截图未经确权作为原创上传。
+
+## 可供 AI 实际学习的优质案例
+
+高优先级研究案例应提供真实来源支持的 `caseStudy` 四项内容（核心价值、视觉/信息结构、迁移步骤、验收限制），配套经独立设计的可编辑 `assets/editorials/<id>.svg`。SVG 用来分析可迁移的信息结构，必须标注为原创分析，不可冒充原始论文图或网站截图。若有公开的官方原图链接，可使用 `links.officialFigure`；未经图像级确权不下载第三方图到仓库。

@@ -6,6 +6,7 @@
 |---|---|
 | `assets/templates/*.svg` 原创可编辑模板 | CC BY 4.0，署名 OpenResearchAssets contributors，标注原仓库链接 |
 | `assets/previews/*` 原创模板预览 | 同对应 SVG 的 CC BY 4.0 |
+| `assets/editorials/*.svg` 原创案例分析图 | 本项目独立绘制的研究方法/信息结构分析，CC BY 4.0；不包含原作者论文图片或网站截图。复用时请注明 OpenResearchAssets 和研究原始来源 |
 | 网站源码、JavaScript、测试脚本、Skill | MIT（参见仓库 `LICENSE`） |
 | `catalog/index.json` 外部参考 | 只包含链接、原创简评与复用建议；原论文图片、Logo、截图和下载物并**未**因此获得我们的许可 |
 
@@ -32,3 +33,5 @@
 权利人可以通过 GitHub Issue 指出存在争议的具体素材和权属。维护者应及时限制问题素材的展示并核实合法性。
 
 **English summary:** Original SVG templates and previews are CC BY 4.0; site code and the Skill are MIT. Linked third-party resources retain their own rights. Do not upload private manuscripts or unlicensed figures. Community contributions are not implicitly licensed for proprietary resale.
+
+**原创案例分析 ≠ 原论文原图。** RoboRender、RoboDojo 与 SuperMimic 的六份分析图均由本项目独立绘制，描述原始工作中可迁移的信息组织思路；原作者论文和官网保留其独立版权。RoboDojo 提供其官方媒体服务器上的原图链接，而不是将图像下载进本仓库；官方源码许可证不必然覆盖外链媒体图。

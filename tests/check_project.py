@@ -48,6 +48,36 @@ for rid in ('roborender-teaser','roborender-site','robodojo-teaser','robodojo-si
     if rid not in ids:errors.append('missing primary case '+rid)
 for e in entries:
     where=e.get('id')
+    visual=e.get('visual')
+    if e.get('kind') in ('visual-reference','website-reference') and e.get('id') in (
+        'roborender-teaser','roborender-site','robodojo-teaser','robodojo-site',
+        'supermimic-teaser','supermimic-site'):
+        if not visual:errors.append(f'{where}: missing reviewed case study preview')
+        if not e.get('caseStudy'):errors.append(f'{where}: missing detailed visual analysis')
+    if visual:
+        src=visual.get('src','')
+        if not src.startswith('assets/editorials/') or not src.endswith('.svg'):
+            errors.append(f'{where}: visual must point to an original editorial SVG')
+        else:
+            img=ROOT/src
+            if not img.is_file():errors.append(f'{where}: missing visual asset {src}')
+            else:
+                try:
+                    tree=ET.parse(img)
+                    nodes=list(tree.iter())
+                    if len(nodes)<25:errors.append(f'{where}: editorial asset suspiciously empty')
+                    if any(n.tag.split('}')[-1]=='image' for n in nodes):errors.append(f'{where}: embedded raster in editorial SVG')
+                except ET.ParseError as err:errors.append(f'{where}: invalid SVG: {err}')
+        for field in ('alt','label'):
+            if not all(visual.get(field,{}).get(lang) for lang in ('zh','en')):
+                errors.append(f'{where}: missing bilingual visual {field}')
+        if e.get('rights',{}).get('preview') != 'authored-analysis-svg':
+            errors.append(f'{where}: mismatched visual license labeling')
+    if e.get('caseStudy'):
+        study=e['caseStudy']
+        for field in ('insight','composition','reuseSteps','verification'):
+            if not all(study.get(field,{}).get(lang) for lang in ('zh','en')):
+                errors.append(f'{where}: missing bilingual study {field}')
     if e.get('kind') not in catalog['facets']['kinds']:errors.append(f'{where}: unknown kind')
     for field,group in (('stages','stages'),('domains','domains')):
         values=e.get(field,[])
