@@ -14,12 +14,9 @@
 .ora-resource-card:hover{box-shadow:0 15px 45px rgba(25,43,68,.08);transform:translateY(-2px)}
 .ora-resource-visual{display:block;text-decoration:none}.ora-preview{height:180px;position:relative;background:linear-gradient(145deg,#f2f5f9,#e7ecf4);display:flex;align-items:center;justify-content:center;overflow:hidden}
 .ora-preview-caption{position:absolute;bottom:10px;right:12px;font-size:9px;letter-spacing:.03em;color:#62768e;background:rgba(255,255,255,.85);border:1px solid #e5eaf0;border-radius:5px;padding:5px 8px}
-.ora-pair{width:82%;display:flex;gap:13px;align-items:center}.ora-pair div{flex:1;aspect-ratio:1.4;background:#d6e0ee;border:1px solid #b7c6da;border-radius:10px;position:relative;overflow:hidden}.ora-pair div:last-child{background:#b5d3da}.ora-pair div i{display:block;width:48%;height:55%;background:#829ab5;border-radius:28% 40% 35% 30%;transform:rotate(-24deg);position:absolute;left:27%;top:17%}.ora-pair div:last-child i{background:#3e8795}.ora-pair div span{font-weight:760;letter-spacing:.1em;font-size:10px;color:#344d69;position:absolute;bottom:8px;left:10px}.ora-pair b{color:#57728f;font-size:26px}
-.ora-benchmark{background:#e9eff7}.ora-matrix{width:76%;height:120px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:24px repeat(3,1fr);gap:7px}.ora-matrix span{font-size:9px;font-weight:800;letter-spacing:.13em;color:#506482}.ora-matrix span:first-child{grid-column:1/3}.ora-matrix i{background:#aac0d8;border-radius:5px;box-shadow:inset 0 -8px 0 #789db9}.ora-matrix i:nth-child(odd){background:#cbd7e6;box-shadow:inset 0 -8px 0 #8ea7c7}
-.ora-editorial{width:77%;height:140px;display:flex;flex-direction:column;justify-content:center}.ora-editorial>span{letter-spacing:.22em;font-size:8px;color:#697489;font-weight:750}.ora-editorial strong{margin-top:10px;font-size:clamp(23px,2.9vw,38px);line-height:1.03;font-weight:800;letter-spacing:-1.5px;color:#1a2330}.ora-editorial i{width:90px;background:#3d6cb7;height:3px;margin-top:15px}.ora-gallery-lines{width:77%;display:grid;grid-template-columns:repeat(3,1fr);gap:9px;height:95px}.ora-gallery-lines i{background:#c3d3e9;border:1px solid #aec2d9;border-radius:9px}.ora-gallery-lines i:nth-child(2){background:#9eb8dd}.ora-steps{width:80%;display:flex;align-items:center;gap:10px}.ora-steps i{height:65px;flex:1;border-radius:9px;background:#b3c6dd;border:1px solid #95abc7}.ora-steps b{color:#607f9b}
 .ora-template img{width:100%;height:100%;object-fit:contain;padding:12px}
 .ora-resource-content{padding:21px 22px 23px;display:flex;flex-direction:column;flex:1}.ora-resource-kicker{color:#5b718a;font-size:10px;letter-spacing:.08em;font-weight:800}.ora-resource-content h3{font-size:19px;letter-spacing:-.5px;margin:11px 0 9px}.ora-resource-content h3 a{color:#1b2534;text-decoration:none}.ora-resource-content>p{font-size:13px;color:#677384;line-height:1.7;margin:0 0 15px;flex:1}.ora-tag-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}.ora-tag-row span{background:#f2f5f9;color:#53657b;font-size:10px;border-radius:6px;padding:5px 8px}.ora-resource-actions{padding-top:14px;border-top:1px solid #e6ebf2;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}.ora-resource-actions a{font-size:11px;font-weight:720;color:#295d9f;text-decoration:none}.ora-resource-actions a:last-child{color:#6a7789}
-.ora-detail{padding-top:70px;padding-bottom:140px}.ora-detail-heading{max-width:900px;padding-bottom:32px}.ora-detail-heading h1{font-size:clamp(43px,5.5vw,72px);letter-spacing:-3px;line-height:1.1;margin:10px 0 20px}.ora-detail-heading>p:last-child{color:#657286;line-height:1.75;font-size:17px}.ora-eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#51739f;font-weight:760}.ora-detail-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:38px;align-items:start}.ora-detail-preview .ora-preview{height:300px;border-radius:16px}.ora-detail-preview .ora-editorial{height:230px}.ora-lesson{padding:32px 0;border-bottom:1px solid #e5eaf1}.ora-lesson h2{font-size:23px;letter-spacing:-.8px;margin:0 0 16px}.ora-lesson li{font-size:15px;line-height:1.8;color:#596b7e;margin:7px 0}.ora-detail-sidebar{position:sticky;top:100px;background:#f7f9fc;border:1px solid #e6ebf1;border-radius:14px;padding:24px}.ora-detail-sidebar h2{margin:0 0 20px;font-size:18px}.ora-detail-sidebar dl{margin:0}.ora-detail-sidebar dt{font-size:11px;font-weight:800;color:#758299;margin:18px 0 5px}.ora-detail-sidebar dd{font-size:13px;color:#33465c;line-height:1.6;margin:0}.ora-detail-links{display:flex;flex-direction:column;gap:12px;margin:24px 0}.ora-detail-links a{font-size:13px;font-weight:700;color:#285b9c}.ora-detail-sidebar button{width:100%;border:0;border-radius:9px;background:#18375d;color:white;padding:13px;cursor:pointer;font-weight:650;font-size:12px}.ora-related{margin-top:22px;padding-top:20px;border-top:1px solid #dbe4ed}.ora-related h3{font-size:13px}.ora-related a{font-size:13px;color:#285b9c}
+.ora-detail{padding-top:70px;padding-bottom:140px}.ora-detail-heading{max-width:900px;padding-bottom:32px}.ora-detail-heading h1{font-size:clamp(43px,5.5vw,72px);letter-spacing:-3px;line-height:1.1;margin:10px 0 20px}.ora-detail-heading>p:last-child{color:#657286;line-height:1.75;font-size:17px}.ora-eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#51739f;font-weight:760}.ora-detail-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:38px;align-items:start}.ora-detail-preview .ora-preview{height:300px;border-radius:16px}.ora-lesson{padding:32px 0;border-bottom:1px solid #e5eaf1}.ora-lesson h2{font-size:23px;letter-spacing:-.8px;margin:0 0 16px}.ora-lesson li{font-size:15px;line-height:1.8;color:#596b7e;margin:7px 0}.ora-detail-sidebar{position:sticky;top:100px;background:#f7f9fc;border:1px solid #e6ebf1;border-radius:14px;padding:24px}.ora-detail-sidebar h2{margin:0 0 20px;font-size:18px}.ora-detail-sidebar dl{margin:0}.ora-detail-sidebar dt{font-size:11px;font-weight:800;color:#758299;margin:18px 0 5px}.ora-detail-sidebar dd{font-size:13px;color:#33465c;line-height:1.6;margin:0}.ora-detail-links{display:flex;flex-direction:column;gap:12px;margin:24px 0}.ora-detail-links a{font-size:13px;font-weight:700;color:#285b9c}.ora-detail-sidebar button{width:100%;border:0;border-radius:9px;background:#18375d;color:white;padding:13px;cursor:pointer;font-weight:650;font-size:12px}.ora-related{margin-top:22px;padding-top:20px;border-top:1px solid #dbe4ed}.ora-related h3{font-size:13px}.ora-related a{font-size:13px;color:#285b9c}
 @media(max-width:1080px){.ora-resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.ora-discover{flex-direction:column;align-items:flex-start;padding:21px}.ora-facets{grid-template-columns:1fr}.ora-resource-grid{grid-template-columns:1fr}.ora-search-row{flex-wrap:wrap}.ora-search-row #facet-reset{width:100%}.ora-detail{padding-top:50px}.ora-detail-grid{grid-template-columns:1fr}.ora-detail-sidebar{position:static}.ora-detail-preview .ora-preview{height:230px}}
 
@@ -28,52 +25,6 @@
 /* Dedicated full-width task search and compact asset section rhythm */
 .ora-catalog-search{display:flex;width:100%;max-width:none;min-height:52px;border-radius:12px;padding:10px 18px}.ora-catalog-search input{flex:1;min-width:0;font-size:15px}.ora-search-row>a{font-size:13px;font-weight:700;color:#2c5db2}.ora-discover + #references{padding-top:50px}
 @media(max-width:720px){.ora-catalog-search input{font-size:14px}.ora-search-row>a{font-size:12px}}
-
-/* Website-reference visuals are clearly authored layout dissections, not screenshots.
-   Separate them visually from a paper teaser even when both share the same project. */
-.ora-site-mock{width:82%;height:152px;border:1px solid #cbd6e5;background:#fff;border-radius:9px;overflow:hidden;box-shadow:0 12px 25px rgba(34,51,78,.11)}
-.ora-site-chrome{height:24px;border-bottom:1px solid #e8edf4;display:flex;align-items:center;gap:4px;padding:0 9px;background:#fafbfd}
-.ora-site-chrome i{width:5px;height:5px;border-radius:50%;background:#b5c1d3}
-.ora-site-chrome span{margin-left:auto;font-size:7px;letter-spacing:1.1px;color:#8996a8;font-weight:750}
-.ora-site-content{padding:13px 17px}
-.ora-site-content small{display:block;color:#6e809a;font-size:8px;letter-spacing:.09em;font-weight:700}
-.ora-site-content strong{display:block;max-width:210px;margin:7px 0 12px;font-size:clamp(14px,1.5vw,19px);letter-spacing:-.55px;line-height:1.1;color:#202d40}
-.ora-site-evidence{display:flex;gap:6px;height:33px}
-.ora-site-evidence b{flex:1;border-radius:4px;background:linear-gradient(130deg,#dce5f1,#a3bbd6)}
-.ora-site-benchmark .ora-site-evidence b{background:#a8bcd7;box-shadow:inset 0 -9px 0 #7599c2}
-.ora-site-editorial .ora-site-content strong{font-size:clamp(18px,2.3vw,26px);color:#131a26;letter-spacing:-1px}
-.ora-site-editorial .ora-site-evidence b{height:3px;background:#5375b7;margin-top:10px}
-.ora-site-editorial .ora-site-evidence b:nth-child(n+2){background:#d5dbe6}
-.ora-site-comparison .ora-site-evidence b:nth-child(2){background:#8db6bf}
-.ora-detail-preview .ora-site-mock{width:min(80%,620px);height:245px}
-.ora-detail-preview .ora-site-chrome{height:33px}
-.ora-detail-preview .ora-site-content{padding:25px 28px}
-.ora-detail-preview .ora-site-content strong{font-size:32px;max-width:500px}
-.ora-detail-preview .ora-site-evidence{height:59px}
-@media(max-width:720px){.ora-site-mock{width:88%}.ora-site-content strong{font-size:17px}.ora-detail-preview .ora-site-mock{width:90%;height:190px}.ora-detail-preview .ora-site-content{padding:15px}.ora-detail-preview .ora-site-content strong{font-size:23px}.ora-detail-preview .ora-site-evidence{height:32px}}
-
-/* An authored paper-Figure-1 dissection: mechanism and compute evidence,
-   intentionally not a reproduction of SuperMimic's original images. */
-.ora-rollout{width:87%;height:139px;display:grid;grid-template-columns:1.25fr 1fr;gap:14px}
-.ora-rollout>div{background:rgba(255,255,255,.72);border:1px solid #d0dceb;border-radius:10px;min-width:0;padding:14px 12px}
-.ora-rollout small{display:block;font-size:8px;font-weight:800;letter-spacing:.12em;color:#667991}
-.ora-ghosts{height:51px;display:flex;align-items:center;position:relative;margin:7px auto 2px}
-.ora-ghosts i{position:absolute;display:block;width:21px;height:37px;border-radius:45% 45% 33% 33%;background:#617fbd;opacity:.48;left:8%;transform:rotate(-25deg)}
-.ora-ghosts i:nth-child(2){left:23%;transform:rotate(-12deg);background:#7d8cc9}
-.ora-ghosts i:nth-child(3){left:39%;transform:rotate(0deg);background:#988bcd}
-.ora-ghosts i:nth-child(4){left:55%;transform:rotate(15deg);background:#c08eb5}
-.ora-ghosts i:nth-child(5){left:70%;transform:rotate(30deg);background:#d8a0a7}
-.ora-rollout span{font-size:7px;font-weight:700;letter-spacing:.08em;color:#8190a6}
-.ora-budget-bars{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;height:32px;margin:9px 0 5px}
-.ora-budget-bars b{background:repeating-linear-gradient(0deg,#90a6c5 0 3px,#cad4e3 3px 6px);border:1px solid #abbdd4;border-radius:4px}
-.ora-rollout-budget strong{font-size:19px;letter-spacing:-.6px;color:#284f91;display:block;line-height:1.15}
-.ora-detail-preview .ora-rollout{width:80%;height:236px;gap:20px}
-.ora-detail-preview .ora-rollout>div{padding:24px}
-.ora-detail-preview .ora-ghosts{height:105px}
-.ora-detail-preview .ora-ghosts i{width:40px;height:74px}
-.ora-detail-preview .ora-budget-bars{height:58px;margin:19px 0 12px}
-.ora-detail-preview .ora-rollout-budget strong{font-size:34px}
-@media(max-width:720px){.ora-rollout{width:92%;gap:7px}.ora-rollout>div{padding:10px 8px}.ora-rollout-budget strong{font-size:16px}.ora-detail-preview .ora-rollout{width:90%;height:172px;gap:9px}.ora-detail-preview .ora-rollout>div{padding:12px 8px}.ora-detail-preview .ora-ghosts{height:70px}.ora-detail-preview .ora-ghosts i{width:24px;height:43px}.ora-detail-preview .ora-budget-bars{height:35px;margin:8px 0}.ora-detail-preview .ora-rollout-budget strong{font-size:22px}}
 
 /* Distinct editorial thumbnails: one per project figure/site, all authored and labeled. */
 .ora-preview.ora-curated {background:#edf2f8}
@@ -96,20 +47,6 @@
 .ora-study-grid ul,.ora-case-check ul{padding-left:18px;margin:0}
 .ora-study-grid li,.ora-case-check li{font-size:12px;color:#68788a;line-height:1.8;margin:0 0 8px}
 .ora-case-check{border-top:1px solid #e5eaf1;padding:20px 26px;background:#fcfdff}
-.ora-editorial-index{background:linear-gradient(135deg,#e9eef6,#dbe5f2)}
-.ora-index-art{width:82%;min-height:135px;background:#f7f9fc;padding:19px;border-radius:13px;border:1px solid #d2dfec;box-shadow:0 12px 30px rgba(51,73,104,.07);display:flex;flex-direction:column}
-.ora-index-art>span,.ora-workflow-cover>span{font-size:10px;font-weight:800;letter-spacing:.09em;color:#6f829a}
-.ora-index-art strong{font-size:20px;color:#1b3550;letter-spacing:-.7px;line-height:1.15;margin-top:16px}
-.ora-index-rule{width:72%;height:2px;background:linear-gradient(90deg,#39649b,transparent);margin-top:auto}
-.ora-index-keywords{display:flex;gap:5px;margin-top:10px;flex-wrap:wrap}
-.ora-index-keywords em{font-size:9px;font-weight:600;font-style:normal;color:#69809c}
-.ora-workflow-art{background:linear-gradient(125deg,#ebf3f7,#e0e6f3)}
-.ora-workflow-cover{width:84%;height:150px;padding:17px 18px;border:1px solid #ccdae8;border-radius:13px;background:#fff;overflow:hidden}
-.ora-workflow-cover strong{display:block;font-size:15px;line-height:1.25;color:#1e3d57;margin:9px 0}
-.ora-flow-list{display:flex;flex-direction:column;gap:4px}
-.ora-flow-list div{display:flex;gap:8px;align-items:start;line-height:1.2}
-.ora-flow-list b{color:#3e82a0;font-size:9px}
-.ora-flow-list span{font-size:9px;color:#6f8194;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden}
 .ora-empty{background:#eef1f6;color:#728092;font-size:12px}
 @media(max-width:720px){.ora-study-grid{grid-template-columns:1fr}.ora-study-grid section+section{border-left:0;border-top:1px solid #e5eaf1}.ora-detail-preview .ora-curated{min-height:160px}.ora-case-intro{padding:19px}.ora-study-grid section,.ora-case-check{padding:18px}}
 
