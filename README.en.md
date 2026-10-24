@@ -4,6 +4,14 @@
 
 Research assets should be more than bookmarks. They should tell us **when to use them, what transfers, what to avoid, and where they came from**.
 
+## Mission and intended use
+
+**Our long-term goal is to make research experience directly usable by AI agents.** Given a task and one OpenResearchAssets URL, a web-capable agent should be able to discover relevant, trustworthy research lessons, tools, editable assets, and actionable workflows across the research lifecycle—from ideation and literature review to methods, experiments, evaluation, writing, websites, and release—without repeated manual searches or elaborate instructions. Using the assets in a real project still requires appropriate file and tool permissions.
+
+We are **not merely a gallery of attractive paper figures or a directory of links**. Each curated asset should state when to use it, what can be learned or reused, how to apply it, its scientific and licensing constraints, provenance, and how to verify the result. The goal is to reduce repeated searching, prompting, trial-and-error, human corrections, elapsed time, and unnecessary tokens. Success must be measured on real tasks by relevance, outcome quality, intervention count, time, and token usage—not by collection size alone.
+
+The initial focus is AI, computer vision, robotics and research communication. Full-lifecycle support is an ambition, **not a claim that an autonomous research service is already deployed**.
+
 This Chinese-first, English-supported library spans research design, evaluation, writing and communication. The current public implementation includes:
 
 - **19 structured entries** in [catalog/index.json](catalog/index.json), including separate teaser and project-site references for RoboRender, RoboDojo and SuperMimic.
