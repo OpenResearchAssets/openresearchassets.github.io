@@ -38,7 +38,7 @@
   },
   "rights": {
     "reuse": "reference-only",
-    "preview": "authored-diagram",
+    "preview": "authored-analysis-svg",
     "third_party_media": "not-republished"
   },
   "applicability": {
@@ -70,5 +70,57 @@
     }
   },
   "parent": "roborender-teaser",
-  "previewStyle": "comparison"
+  "previewStyle": "comparison",
+  "visual": {
+    "src": "assets/editorials/roborender-site.svg",
+    "kind": "authored-analysis",
+    "alt": {
+      "zh": "RoboRender · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
+      "en": "Authored structural analysis of RoboRender · 项目主页, not the official figure or webpage screenshot"
+    },
+    "label": {
+      "zh": "原创案例拆解 · 非官方原图",
+      "en": "Authored case study · Not source artwork"
+    }
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "先用直观的视觉变化解释方法，再让用户沿多视角视频与真实机器人任务结果逐步核实。",
+      "en": "Lead with an immediately visible transformation, then let readers inspect multi-view video consistency and robot-task evidence."
+    },
+    "composition": {
+      "zh": [
+        "Hero 区承载一句清晰价值主张而非大段摘要。",
+        "模拟输入、生成视频、真实下游结果是不同证据层级，应分区域展示。",
+        "外部视角与腕部视角最好并排且时序同步，以便观察一致性。"
+      ],
+      "en": [
+        "Use a claim-first hero instead of an abstract dump.",
+        "Separate input/output demonstrations from downstream real-world task outcomes.",
+        "Place external/wrist camera views side by side and keep temporal comparisons consistent."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "先列核心主张与一个最有说服力的演示。",
+        "组织“主张 → 成对视觉对比 → 多视角 demo → 实验表格”的阅读顺序。",
+        "为真实实验设置和数据提供可追溯论文入口。"
+      ],
+      "en": [
+        "Open with a verifiable central claim and strongest example.",
+        "Build a claim → paired results → multi-view demo → experiment-evidence sequence.",
+        "Link each real-world result to experimental setup and paper sources."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "不能把生成视频称为真实机器人拍摄。",
+        "站内展示的是主页信息架构拆解，不是官网截图。"
+      ],
+      "en": [
+        "Generated video is not the same as real robot footage.",
+        "The site preview is an authored information-architecture study, not the source screenshot."
+      ]
+    }
+  }
 }

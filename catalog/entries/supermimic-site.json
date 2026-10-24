@@ -39,7 +39,7 @@
   },
   "rights": {
     "reuse": "reference-only",
-    "preview": "authored-diagram",
+    "preview": "authored-analysis-svg",
     "third_party_media": "not-republished"
   },
   "applicability": {
@@ -75,5 +75,57 @@
     }
   },
   "parent": "supermimic-teaser",
-  "previewStyle": "editorial"
+  "previewStyle": "editorial",
+  "visual": {
+    "src": "assets/editorials/supermimic-site.svg",
+    "kind": "authored-analysis",
+    "alt": {
+      "zh": "SuperMimic · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
+      "en": "Authored structural analysis of SuperMimic · 项目主页, not the official figure or webpage screenshot"
+    },
+    "label": {
+      "zh": "原创案例拆解 · 非官方原图",
+      "en": "Authored case study · Not source artwork"
+    }
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "极简标题负责建立问题意识，定量对比、交互 demo 和真实部署证据负责让主张可信。",
+      "en": "A strong, restrained headline creates attention; quantified evidence, demos and physical deployment make it credible."
+    },
+    "composition": {
+      "zh": [
+        "首屏使用有力但简短的主张“Compute is no longer the bottleneck”。",
+        "下一段立即给出 1 GPU/3 h 与 SONIC 配置的数字对照及归一化回报指标。",
+        "之后依次展开交互 demo、方法流程、模拟对照、真实 G1 部署与参考资料。"
+      ],
+      "en": [
+        "The hero leads with the short claim 'Compute is no longer the bottleneck'.",
+        "Follow immediately with compute settings and normalized-return comparisons.",
+        "Continue with interactive demo, method, simulation comparisons, physical G1 evidence and sources."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "先用一句可证伪的话说清方法解决的主要限制。",
+        "把支持该句的一个核心指标放在下一屏，而非堆满特点列表。",
+        "按“主张—核心证据—机制—局限—复现”组织后续页面。"
+      ],
+      "en": [
+        "Open with one falsifiable proposition about the central bottleneck.",
+        "Place a directly supporting metric immediately after the hero.",
+        "Sequence claim, core evidence, mechanism, limitations and reproducibility."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "不要借用官网的比较结果作为自己论文的证据。",
+        "横跨不同硬件的资源比较须注明训练和评测口径。"
+      ],
+      "en": [
+        "Do not transfer another paper's findings to your own work.",
+        "Cross-hardware comparisons need stated training and evaluation settings."
+      ]
+    }
+  }
 }

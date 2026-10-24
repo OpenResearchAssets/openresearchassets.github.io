@@ -44,7 +44,7 @@
   },
   "rights": {
     "reuse": "reference-only",
-    "preview": "authored-diagram",
+    "preview": "authored-analysis-svg",
     "third_party_media": "not-republished"
   },
   "applicability": {
@@ -78,5 +78,57 @@
     }
   },
   "parent": "supermimic-site",
-  "previewStyle": "rollout"
+  "previewStyle": "rollout",
+  "visual": {
+    "src": "assets/editorials/supermimic-teaser.svg",
+    "kind": "authored-analysis",
+    "alt": {
+      "zh": "SuperMimic · 论文主图 的原创视觉结构拆解，不是论文原图或官网截图",
+      "en": "Authored structural analysis of SuperMimic · 论文主图, not the official figure or webpage screenshot"
+    },
+    "label": {
+      "zh": "原创案例拆解 · 非官方原图",
+      "en": "Authored case study · Not source artwork"
+    }
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "将可视化的 world-model motion rollout 与可量化的训练投入并列，让“方法机制”与“价值主张”同时进入视野。",
+      "en": "Juxtapose a visible world-model motion rollout with quantitative compute context, connecting mechanism and claimed value."
+    },
+    "composition": {
+      "zh": [
+        "左边以不同时间的人形姿态轨迹示意动态过程，而不是多个不同机器人。",
+        "右边显示 1 H100、3 小时与 SONIC 128 L40、7 天的官方训练配置对照。",
+        "硬件型号和训练口径与对比结论必须始终同屏标注。"
+      ],
+      "en": [
+        "Depict time-separated motion poses rather than multiple distinct robots.",
+        "Show the officially reported 1 H100/3 h and SONIC 128 L40/7 day settings.",
+        "Retain device models and measurement boundaries alongside any claim."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "把机制与核心实验价值各压缩成一个面板。",
+        "用符合数据的轨迹、截图或图表显示方法，并标注时间关系。",
+        "仅在实验方法可核对时展示资源对照，不凭异构 GPU 计算绝对效率倍数。"
+      ],
+      "en": [
+        "Give mechanism and core measured value one panel each.",
+        "Use evidence-faithful motion imagery and clear time labels.",
+        "Only compare compute figures with documented conditions; avoid hardware-normalized claims without data."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "不同 GPU 型号下的耗时与 GPU-hours 不等于严格等价硬件的消融。",
+        "主页标题与论文 Figure 1 是两类资产；此图为原创内容拆解。"
+      ],
+      "en": [
+        "Cross-GPU wall clock and GPU-hours are not controlled same-hardware ablations.",
+        "The homepage hero is not paper Figure 1; this is an authored deconstruction."
+      ]
+    }
+  }
 }

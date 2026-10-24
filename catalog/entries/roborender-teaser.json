@@ -40,7 +40,7 @@
   },
   "rights": {
     "reuse": "reference-only",
-    "preview": "authored-diagram",
+    "preview": "authored-analysis-svg",
     "third_party_media": "not-republished"
   },
   "applicability": {
@@ -76,5 +76,57 @@
     }
   },
   "parent": "roborender-site",
-  "previewStyle": "comparison"
+  "previewStyle": "comparison",
+  "visual": {
+    "src": "assets/editorials/roborender-teaser.svg",
+    "kind": "authored-analysis",
+    "alt": {
+      "zh": "RoboRender · 论文 Teaser 的原创视觉结构拆解，不是论文原图或官网截图",
+      "en": "Authored structural analysis of RoboRender · 论文 Teaser, not the official figure or webpage screenshot"
+    },
+    "label": {
+      "zh": "原创案例拆解 · 非官方原图",
+      "en": "Authored case study · Not source artwork"
+    }
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "核心构图不是单纯“仿真图变漂亮”，而是把可控输入、生成外观与保持不变的几何/动作关系明确对应。",
+      "en": "The key composition aligns controllable simulation inputs, generated appearance, and the geometry/action information that should remain consistent."
+    },
+    "composition": {
+      "zh": [
+        "左侧展示仿真深度/机器人掩码等条件；右侧展示生成的 RGB 视频效果。",
+        "比较面板应共享任务、相机视角、对象或时刻，避免制造不公平对照。",
+        "少量标注区分生成的画面与真正拍摄的真实实验。"
+      ],
+      "en": [
+        "Contrast simulation depth and robot-mask conditions with generated RGB outcomes.",
+        "Align tasks, camera views, objects and time across comparison panels.",
+        "Clearly label generated imagery rather than passing it off as captured real-world results."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "先固定真实论文要表达的唯一视觉主张。",
+        "选同一场景与同一时刻的输入、生成、真实参考（若有授权）三类证据。",
+        "按比较维度排列面板，caption 明确哪些是生成、哪些是实测。"
+      ],
+      "en": [
+        "State the one comparison your paper can actually support.",
+        "Choose matched input, generated and licensed real-reference conditions.",
+        "Align panels and distinguish synthetic and physical measurements in labels and captions."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "不得从图片好看直接推导策略成功率，需要独立的实验结果。",
+        "展示外部论文画面前需图像级授权；此图为本站原创分析示意。"
+      ],
+      "en": [
+        "Image quality alone does not establish policy success; use separate results.",
+        "Figure-level rights must be verified before embedding external paper imagery."
+      ]
+    }
+  }
 }

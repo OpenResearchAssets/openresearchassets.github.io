@@ -39,7 +39,7 @@
   },
   "rights": {
     "reuse": "reference-only",
-    "preview": "authored-diagram",
+    "preview": "authored-analysis-svg",
     "third_party_media": "not-republished"
   },
   "applicability": {
@@ -71,5 +71,57 @@
     }
   },
   "parent": "robodojo-teaser",
-  "previewStyle": "benchmark"
+  "previewStyle": "benchmark",
+  "visual": {
+    "src": "assets/editorials/robodojo-site.svg",
+    "kind": "authored-analysis",
+    "alt": {
+      "zh": "RoboDojo · 项目主页 的原创视觉结构拆解，不是论文原图或官网截图",
+      "en": "Authored structural analysis of RoboDojo · 项目主页, not the official figure or webpage screenshot"
+    },
+    "label": {
+      "zh": "原创案例拆解 · 非官方原图",
+      "en": "Authored case study · Not source artwork"
+    }
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "项目主页的价值来自“任务发现 → 演示观察 → 实验协议 → 排名/证据”，而不是单纯堆视频。",
+      "en": "The project site creates value through task discovery, demonstrations, evaluation protocol and evidence, rather than a wall of videos."
+    },
+    "composition": {
+      "zh": [
+        "主页突出任务规模，给初次访问者明确研究范围。",
+        "任务画廊、真实环境评估与 leaderboard 分层组织。",
+        "排行榜之外应该能找到协议、版本、复现实验入口。"
+      ],
+      "en": [
+        "Lead with evaluation scope to orient first-time visitors.",
+        "Separate task galleries, real-world evaluation and leaderboard results.",
+        "Keep protocol, version and reproducibility routes visible next to rankings."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "围绕访问者最重要的三个问题建立导航：评什么、怎么评、结果在哪。",
+        "为任务建立可筛选索引，不使用无法理解的无标签视频列表。",
+        "在 leaderboard 周围明确指标含义与版本/协议。"
+      ],
+      "en": [
+        "Design navigation around what, how, and evidence.",
+        "Use filterable task groups rather than unlabeled video thumbnails.",
+        "Explain leaderboard metrics and their evaluation protocol/version."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "静态封面不等于可操作演示；交互效果需要在实际网站测试。",
+        "排名结果随提交变化，使用时核对官方日期与协议。"
+      ],
+      "en": [
+        "A cover is not a functioning demo; verify the actual website interaction.",
+        "Leaderboard standings evolve; check official dates and protocols."
+      ]
+    }
+  }
 }

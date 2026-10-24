@@ -35,11 +35,12 @@
   "language": "zh+en",
   "links": {
     "source": "https://robodojo-benchmark.com/",
-    "paper": "https://arxiv.org/abs/2607.04434"
+    "paper": "https://arxiv.org/abs/2607.04434",
+    "officialFigure": "https://media.luminis-sim.com/media/home/teaser.png"
   },
   "rights": {
     "reuse": "reference-only",
-    "preview": "authored-diagram",
+    "preview": "authored-analysis-svg",
     "third_party_media": "not-republished"
   },
   "applicability": {
@@ -71,5 +72,57 @@
     }
   },
   "parent": "robodojo-site",
-  "previewStyle": "benchmark"
+  "previewStyle": "benchmark",
+  "visual": {
+    "src": "assets/editorials/robodojo-teaser.svg",
+    "kind": "authored-analysis",
+    "alt": {
+      "zh": "RoboDojo · 论文总览图 的原创视觉结构拆解，不是论文原图或官网截图",
+      "en": "Authored structural analysis of RoboDojo · 论文总览图, not the official figure or webpage screenshot"
+    },
+    "label": {
+      "zh": "原创案例拆解 · 非官方原图",
+      "en": "Authored case study · Not source artwork"
+    }
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "评测型工作最重要的是让读者迅速知道评了什么、在什么条件下评、为何仿真与现实共同必要。",
+      "en": "A benchmark overview should answer what is tested, under which conditions, and why simulated and physical evaluations complement one another."
+    },
+    "composition": {
+      "zh": [
+        "将 42 项仿真任务与 18 项真实任务分为两个清楚的视觉区。",
+        "先体现任务多样性，再说明泛化、记忆、精度、长时程与开放指令这五个维度。",
+        "机器人、任务和环境的对应关系要明确，不要只堆满场景小图。"
+      ],
+      "en": [
+        "Keep 42 simulation tasks and 18 real-world tasks in visibly distinct groups.",
+        "Show task diversity before listing generalization, memory, precision, long-horizon and open instruction following.",
+        "Use unambiguous robot-task-environment labels, not an unlabeled image collage."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "定义评估维度与仿真/真实范围。",
+        "每个任务组选取具有代表性的真实素材，并注明平台与条件。",
+        "使用统计汇总说明覆盖面，不能将任务数量当成性能分数。"
+      ],
+      "en": [
+        "Define axes and simulation/real evaluation scope.",
+        "Choose representative, licensed visuals and label the platform and setup.",
+        "Summarize coverage accurately; task counts are not performance scores."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "42/18 为官网描述的任务数量，不能推断每项任务难度相等。",
+        "官网外链媒体图片不能从代码仓库的 MIT 许可自动推断授权。"
+      ],
+      "en": [
+        "The 42/18 figures refer to official task counts, not matched task difficulty.",
+        "An MIT license on a software repo does not automatically license externally hosted imagery."
+      ]
+    }
+  }
 }
