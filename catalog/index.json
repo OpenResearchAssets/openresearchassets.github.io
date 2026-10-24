@@ -1156,6 +1156,289 @@
         }
       },
       "previewStyle": "workflow"
+    },
+    {
+      "id": "literature-triage",
+      "title": "文献检索与证据筛选 / Literature Triage",
+      "kind": "workflow",
+      "stages": [
+        "ideation",
+        "research"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "literature-review",
+        "research-gap"
+      ],
+      "description": {
+        "zh": "从研究问题到可核实的相关工作对比矩阵和可证伪假设，减少无效检索。",
+        "en": "A primary-source literature triage workflow from problem framing to falsifiable research gaps."
+      },
+      "keywords": {
+        "zh": [
+          "文献调研",
+          "选题",
+          "检索策略"
+        ],
+        "en": [
+          "literature",
+          "reading",
+          "novelty"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/Suchenl/OpenResearchAssets/blob/main/workflows/literature-triage.md",
+        "editable": "workflows/literature-triage.md"
+      },
+      "rights": {
+        "reuse": "original-workflow; check repository policy",
+        "preview": "authored-diagram",
+        "third_party_media": "none"
+      },
+      "previewStyle": "workflow",
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要了解最新相关工作与技术空缺"
+          ],
+          "en": [
+            "Surveying literature and research gaps"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "保留检索覆盖与证据级别，主动寻找反例"
+          ],
+          "en": [
+            "Track search coverage and seek counterexamples"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不能把没找到论文当作没人做过"
+          ],
+          "en": [
+            "Not finding a paper is not proof of novelty"
+          ]
+        }
+      }
+    },
+    {
+      "id": "experiment-planning",
+      "title": "论点驱动的实验规划 / Claim–Evidence Planning",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "experiment-planning",
+        "ablation",
+        "claim-evidence"
+      ],
+      "description": {
+        "zh": "建立科学主张到实验、指标、基线和图表的可证伪映射。",
+        "en": "A claim-to-evidence experiment protocol for baselines, ablations and reproducibility."
+      },
+      "keywords": {
+        "zh": [
+          "实验设计",
+          "消融",
+          "论文证据"
+        ],
+        "en": [
+          "experiments",
+          "ablation",
+          "evaluation"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/Suchenl/OpenResearchAssets/blob/main/workflows/experiment-planning.md",
+        "editable": "workflows/experiment-planning.md"
+      },
+      "rights": {
+        "reuse": "original-workflow; check repository policy",
+        "preview": "authored-diagram",
+        "third_party_media": "none"
+      },
+      "previewStyle": "workflow",
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "准备规划主实验与消融实验"
+          ],
+          "en": [
+            "Designing main experiments and ablations"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "先确定公平比较，再固定评估协议"
+          ],
+          "en": [
+            "Freeze evaluation protocols and fair comparisons before interpreting outcomes"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "禁止补造结果或选择性隐藏失败"
+          ],
+          "en": [
+            "Never fabricate results or conceal failures"
+          ]
+        }
+      }
+    },
+    {
+      "id": "paper-evidence-story",
+      "title": "论文叙事与图表组织 / Paper Evidence Story",
+      "kind": "workflow",
+      "stages": [
+        "writing",
+        "evaluation"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "paper-writing",
+        "figure-plan",
+        "evidence-storytelling"
+      ],
+      "description": {
+        "zh": "把 Introduction、方法、RQ 与实验图表重新组织成一条可被证据支持的论文主线。",
+        "en": "A paper narrative workflow based on claim–evidence–figure mapping."
+      },
+      "keywords": {
+        "zh": [
+          "科研写作",
+          "叙事",
+          "论文结构"
+        ],
+        "en": [
+          "writing",
+          "narrative",
+          "figures"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/Suchenl/OpenResearchAssets/blob/main/workflows/paper-evidence-story.md",
+        "editable": "workflows/paper-evidence-story.md"
+      },
+      "rights": {
+        "reuse": "original-workflow; check repository policy",
+        "preview": "authored-diagram",
+        "third_party_media": "none"
+      },
+      "previewStyle": "workflow",
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "论文有图表但核心主张不突出"
+          ],
+          "en": [
+            "Paper has many figures but a weak central narrative"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "决定每张图的独立信息目的，并在真实 PDF 中验收"
+          ],
+          "en": [
+            "Assign each figure a distinct purpose and inspect final PDF layout"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "避免仅为美观重排已经有效的图表"
+          ],
+          "en": [
+            "Do not rearrange good figures merely for aesthetics"
+          ]
+        }
+      }
+    },
+    {
+      "id": "research-release",
+      "title": "项目主页与研究成果发布 / Research Release",
+      "kind": "workflow",
+      "stages": [
+        "communication"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "project-website",
+        "research-release",
+        "reproducibility"
+      ],
+      "description": {
+        "zh": "面向读者与 Agent 的项目主页发布清单，覆盖可核实主张、演示、链接与版权。",
+        "en": "A release checklist for research project sites, reproducibility, attribution and real demonstrations."
+      },
+      "keywords": {
+        "zh": [
+          "项目主页",
+          "研究传播",
+          "README"
+        ],
+        "en": [
+          "project page",
+          "release",
+          "README"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/Suchenl/OpenResearchAssets/blob/main/workflows/research-release.md",
+        "editable": "workflows/research-release.md"
+      },
+      "rights": {
+        "reuse": "original-workflow; check repository policy",
+        "preview": "authored-diagram",
+        "third_party_media": "none"
+      },
+      "previewStyle": "workflow",
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "准备公开论文、代码和研究演示"
+          ],
+          "en": [
+            "Publishing a paper, code and research demos"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "按论点—证据的顺序组织主页与复现入口"
+          ],
+          "en": [
+            "Organize releases from claims to evidence and reproducible artifacts"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "未授权材料不得作为公开截图或视频发布"
+          ],
+          "en": [
+            "Never publish unlicensed manuscripts, figures or videos"
+          ]
+        }
+      }
     }
   ]
 }
