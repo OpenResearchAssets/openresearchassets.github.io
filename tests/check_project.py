@@ -3,6 +3,7 @@
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlparse
+import re
 import json
 import subprocess
 import xml.etree.ElementTree as ET
@@ -39,9 +40,8 @@ if sync.returncode:errors.append('derived catalog out of date: '+sync.stdout+syn
 catalog=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))
 if catalog.get('schema_version')!='1.0.0':errors.append('catalog: unsupported schema version')
 entries=catalog.get('entries',[])
-if len(entries)<21:errors.append('catalog: missing baseline 21 entries')
+if len(entries)<22:errors.append('catalog: missing baseline 22 entries')
 ids=[e.get('id') for e in entries]
-import re
 if any(not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', str(eid)) for eid in ids):errors.append('catalog: unsafe ID; expected kebab-case')
 if len(ids)!=len(set(ids)):errors.append('catalog: duplicate IDs')
 for rid in ('roborender-teaser','roborender-site','robodojo-teaser','robodojo-site','supermimic-teaser','supermimic-site','project-homepage-layout','claim-evidence-map'):
@@ -56,7 +56,17 @@ for e in entries:
         if not e.get('caseStudy'):errors.append(f'{where}: missing detailed visual analysis')
     if visual:
         src=visual.get('src','')
-        if not src.startswith('assets/editorials/') or not src.endswith('.svg'):
+        if visual.get('kind')=='licensed-paper-figure':
+            if not re.fullmatch(r'assets/third-party/[a-z0-9-]+/[a-z0-9-]+\.png',src):
+                errors.append(f'{where}: unsafe third-party image path')
+            elif not (ROOT/src).is_file():errors.append(f'{where}: missing official PNG {src}')
+            elif (ROOT/src).read_bytes()[:8]!=b'\x89PNG\r\n\x1a\n':
+                errors.append(f'{where}: file not PNG {src}')
+            rights=e.get('rights',{})
+            if rights.get('preview')!='third-party-cc-by-4.0':errors.append(f'{where}: wrong license marker')
+            for k in ('license_url','licensing_evidence','original_file','original_blob_sha','attribution','modifications'):
+                if not rights.get(k):errors.append(f'{where}: missing media rights {k}')
+        elif not src.startswith('assets/editorials/') or not src.endswith('.svg'):
             errors.append(f'{where}: visual must point to an original editorial SVG')
         else:
             img=ROOT/src
@@ -71,7 +81,7 @@ for e in entries:
         for field in ('alt','label'):
             if not all(visual.get(field,{}).get(lang) for lang in ('zh','en')):
                 errors.append(f'{where}: missing bilingual visual {field}')
-        if e.get('rights',{}).get('preview') != 'authored-analysis-svg':
+        if visual.get('kind')=='authored-analysis' and e.get('rights',{}).get('preview') != 'authored-analysis-svg':
             errors.append(f'{where}: mismatched visual license labeling')
     if e.get('caseStudy'):
         study=e['caseStudy']
@@ -95,6 +105,16 @@ for e in entries:
     if e.get('rights',{}).get('preview')=='original-svg':
         target=e.get('links',{}).get('editable','')
         if not target.startswith('assets/templates/') or not (ROOT/target).exists():errors.append(f'{where}: missing editable source')
+third_party=json.loads((ROOT/'assets/third-party/manifest.json').read_text(encoding='utf-8'))
+ledger_paths={item['path'] for item in third_party['items']}
+for path in ROOT.glob('assets/third-party/**/*.png'):
+    if str(path.relative_to(ROOT)) not in ledger_paths:errors.append(f'Untracked third-party image: {path}')
+for item in third_party['items']:
+    image=ROOT/item['path']
+    if not image.is_file():errors.append(f'Missing third-party image: {item["path"]}')
+    if not item.get('license_url','').startswith('https://'):errors.append(f'Missing verified license URL: {item["path"]}')
+    if not any(e.get('visual',{}).get('src')==item['path'] for e in entries):
+        errors.append(f'Unlinked third-party media: {item["path"]}')
 for f in ('LICENSE','CONTRIBUTING.md','docs/ASSET_POLICY.md','docs/ASSET_SCHEMA.md','docs/QUALITY_STANDARD.md','docs/PRODUCT_STRATEGY.md','skills/quality-critic/SKILL.md','llms.txt','for-agents/README.md'):
     if not (ROOT/f).exists():errors.append(f'missing {f}')
 index=(ROOT/'index.html').read_text(encoding='utf-8')

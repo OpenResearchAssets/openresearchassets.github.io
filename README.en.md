@@ -29,3 +29,7 @@ Search the [interactive asset directory](https://suchenl.github.io/OpenResearchA
 ## Low-token AI catalog access
 
 Agents should first read [the compact manifest](catalog/manifest.json), select a few relevant assets by task, stage and domain, then open only the corresponding [per-entry JSON files](catalog/entries/supermimic-teaser.json). The full [canonical catalog](catalog/index.json) remains the only authored data. Edit it, run `python3 tools/sync_catalog.py`, then `python3 tools/sync_catalog.py --check` before publishing. This is not a remotely executing AI service.
+
+## Authentic media with traceable licenses
+
+An official, unmodified RoboRender multiview architecture PNG is now included as its **own** asset ([model architecture](asset.html?id=roborender-model-architecture)), distinct from the authored teaser dissection. The upstream PNG and paper's CC BY 4.0 record are tracked in [the third-party media ledger](assets/third-party/manifest.json). The license on our own SVG templates and source code does not transfer to third-party images. Other unlicensed source media remain linked only.

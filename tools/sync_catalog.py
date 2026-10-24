@@ -18,8 +18,8 @@ manifest = {
     "catalog_source": "catalog/index.json",
     "generated_on": catalog["generated_on"],
     "instructions": {
-        "zh": "先匹配此轻量目录，再沿 entry 路径只读取最相关条目。第三方图片默认不可复制。",
-        "en": "Select from this lightweight manifest, then fetch only relevant entry JSON files. External visuals are not licensed for copying by default."
+        "zh": "先匹配此轻量目录，再沿 entry 路径只读取最相关条目。第三方图片默认不可复制，只有单条 rights 明确授权才可复用。",
+        "en": "Select from this lightweight manifest, then fetch only relevant entry JSON files. External visuals are not licensed for copying by default; inspect each entry's rights."
     },
     "facets": catalog["facets"],
     "entries": [{

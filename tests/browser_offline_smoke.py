@@ -32,7 +32,7 @@ def local_asset(route):
     if ROOT not in path.parents or not path.is_file():
         route.abort()
         return
-    content_type='image/svg+xml' if path.suffix=='.svg' else 'application/octet-stream'
+    content_type='image/svg+xml' if path.suffix=='.svg' else 'image/png' if path.suffix=='.png' else 'application/octet-stream'
     route.fulfill(status=200,body=path.read_bytes(),content_type=content_type)
 
 with sync_playwright() as pw:
@@ -55,7 +55,7 @@ with sync_playwright() as pw:
         assert page.locator('.ora-resource-card .ora-curated img').evaluate_all(
             '(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
         page.locator('#catalog-more').click()
-        assert page.locator('.ora-resource-card').count()==21
+        assert page.locator('.ora-resource-card').count()==22
         page.locator('#facet-kind').select_option('website-reference')
         assert page.locator('.ora-resource-card').count()==3
         page.locator('#facet-kind').select_option('')
@@ -85,7 +85,7 @@ with sync_playwright() as pw:
         # are kept for desktop and mobile human visual review.
         cases=('roborender-teaser','roborender-site','robodojo-teaser',
                'robodojo-site','supermimic-teaser','supermimic-site')
-        samples=('topconf-figure-gallery','teaser-story',
+        samples=('roborender-model-architecture','topconf-figure-gallery','teaser-story',
                  'quality-critic-skill','experiment-planning')
         entries=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))['entries']
         for entry in entries:
@@ -113,6 +113,10 @@ with sync_playwright() as pw:
             if visual.count():
                 visual.scroll_into_view_if_needed()
                 page.wait_for_function("()=>[...document.querySelectorAll('.ora-detail-preview img')].every(n=>n.complete&&n.naturalWidth>0)")
+            if asset_id=='roborender-model-architecture':
+                assert page.locator('.ora-detail-preview .ora-official img').count()==1
+                assert 'CC BY 4.0' in page.locator('.ora-detail-sidebar').inner_text()
+                assert page.locator('.ora-detail-links a').count()>=3
             if entry['kind']=='resource-index':
                 assert page.locator('.ora-detail-preview .ora-directory .ora-hit').count()>=1
             if entry['kind']=='workflow':
@@ -157,6 +161,6 @@ with sync_playwright() as pw:
             assert page.locator('html').get_attribute('lang')=='zh-CN'
             assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),name
         assert not errors,(label,errors)
-        print('PASS',label,'21 detail pages, 6 curated case studies, 4 asset kinds, bilingual and responsive UI')
+        print('PASS',label,'22 detail pages, 6 curated case studies, 4 asset kinds, bilingual and responsive UI')
         page.close()
     browser.close()
