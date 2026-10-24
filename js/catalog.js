@@ -97,7 +97,11 @@
     for(const [key,value] of [['stage',stage],['kind',kindSelect],['domain',domain]]) {
       value?u.searchParams.set(key,value):u.searchParams.delete(key);
     }
-    history.replaceState(null,'',u.pathname+u.search+u.hash);
+    // file:// and inline-browser-test documents may not permit history updates.
+    if (location.protocol === 'http:' || location.protocol === 'https:') {
+      try { history.replaceState(null,'',u.pathname+u.search+u.hash); }
+      catch (err) { console.warn('Catalog URL state unavailable:',err); }
+    }
   }
   function points(list) {
     if(!Array.isArray(list)||!list.length)return '<p>'+safe(tr('尚未整理。','Not yet curated.'))+'</p>';
