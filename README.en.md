@@ -14,11 +14,11 @@ The initial focus is AI, computer vision, robotics and research communication. F
 
 This Chinese-first, English-supported library spans research design, evaluation, writing and communication. The current public implementation includes:
 
-- **19 structured entries** in [catalog/index.json](catalog/index.json), including separate teaser and project-site references for RoboRender, RoboDojo and SuperMimic.
+- **21 structured entries** in [catalog/index.json](catalog/index.json), including separate teaser and project-site references for RoboRender, RoboDojo and SuperMimic.
 - Browser-side search and facets for stages, domains and asset kinds, with per-asset usage and provenance pages.
 - [Agent instructions](for-agents/) and [llms.txt](llms.txt) pointing to an openly readable machine catalog. These files do **not** mean there is an autonomous remote agent service.
 - Four original Markdown research workflows covering literature, experiments, paper narratives and research release.
-- Three original, editable SVG concept diagrams; an author-guided manual [quality checklist](quality.html); and an unvalidated [Quality Critic Skill](skills/quality-critic/SKILL.md).
+- Five original, editable SVG concept designs; an author-guided manual [quality checklist](quality.html); and an unvalidated [Quality Critic Skill](skills/quality-critic/SKILL.md).
 
 Search the [interactive asset directory](https://suchenl.github.io/OpenResearchAssets/#references), or hand its URL to an agent that has web or file-reading capability. The JSON requires HTTP hosting; run \`python3 -m http.server 8000\` locally rather than opening the page with \`file://\`.
 

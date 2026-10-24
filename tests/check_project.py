@@ -39,12 +39,12 @@ if sync.returncode:errors.append('derived catalog out of date: '+sync.stdout+syn
 catalog=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))
 if catalog.get('schema_version')!='1.0.0':errors.append('catalog: unsupported schema version')
 entries=catalog.get('entries',[])
-if len(entries)<19:errors.append('catalog: missing baseline 19 entries')
+if len(entries)<21:errors.append('catalog: missing baseline 21 entries')
 ids=[e.get('id') for e in entries]
 import re
 if any(not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', str(eid)) for eid in ids):errors.append('catalog: unsafe ID; expected kebab-case')
 if len(ids)!=len(set(ids)):errors.append('catalog: duplicate IDs')
-for rid in ('roborender-teaser','roborender-site','robodojo-teaser','robodojo-site','supermimic-teaser','supermimic-site'):
+for rid in ('roborender-teaser','roborender-site','robodojo-teaser','robodojo-site','supermimic-teaser','supermimic-site','project-homepage-layout','claim-evidence-map'):
     if rid not in ids:errors.append('missing primary case '+rid)
 for e in entries:
     where=e.get('id')

@@ -55,7 +55,7 @@ with sync_playwright() as pw:
         assert page.locator('.ora-resource-card .ora-curated img').evaluate_all(
             '(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
         page.locator('#catalog-more').click()
-        assert page.locator('.ora-resource-card').count()==19
+        assert page.locator('.ora-resource-card').count()==21
         page.locator('#facet-kind').select_option('website-reference')
         assert page.locator('.ora-resource-card').count()==3
         page.locator('#facet-kind').select_option('')
@@ -75,6 +75,8 @@ with sync_playwright() as pw:
             page.keyboard.press('Escape')
             assert not page.locator('#site-nav').is_visible()
         assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('home',label,page.evaluate('document.documentElement.scrollWidth'))
+        assert page.locator('.assets-grid .asset-card').count()==5
+        assert page.locator('.assets-grid .asset-card img').evaluate_all('(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
         assert page.locator('.showcase img').evaluate_all('(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
         page.evaluate('window.scrollTo(0,0)')
         page.screenshot(path=str(ROOT/'tests'/f'_local_home_{label}.png'),full_page=True)
@@ -108,6 +110,6 @@ with sync_playwright() as pw:
             assert page.locator('html').get_attribute('lang')=='zh-CN'
             assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),name
         assert not errors,(label,errors)
-        print('PASS',label,'19 resources, filters, bilingual UI, detail, quality tool, mobile layout')
+        print('PASS',label,'21 resources, filters, bilingual UI, detail, quality tool, mobile layout')
         page.close()
     browser.close()
