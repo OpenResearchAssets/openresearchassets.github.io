@@ -21,6 +21,10 @@
 
 - [结构化目录（JSON）](../catalog/index.json)
 - [交互式检索（网页）](../index.html#references)
+- [文献检索与证据筛选](../workflows/literature-triage.md)
+- [论点驱动实验规划](../workflows/experiment-planning.md)
+- [论文叙事与图表组织](../workflows/paper-evidence-story.md)
+- [项目主页与科研成果发布](../workflows/research-release.md)
 - [科研视觉质量检查 Skill](../skills/quality-critic/SKILL.md)
 - [资产模型与贡献要求](../docs/ASSET_SCHEMA.md)
 - [第三方内容与许可政策](../docs/ASSET_POLICY.md)
