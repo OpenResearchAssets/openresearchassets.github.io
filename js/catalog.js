@@ -30,7 +30,7 @@
     const visual=entry.visual || {};
     if (visual.kind==='authored-analysis' &&
       /^assets\/editorials\/[a-z0-9-]+\.svg$/.test(visual.src || '')) {
-      return '<div class="ora-preview ora-curated"><img loading="lazy" decoding="async" src="'+safe(visual.src)+'" alt="'+safe(local(visual.alt))+'">'+
+      return '<div class="ora-preview ora-curated"><img loading="eager" decoding="async" src="'+safe(visual.src)+'" alt="'+safe(local(visual.alt))+'">'+
         '<span class="ora-curated-mark">'+safe(tr('原创分析图','ORIGINAL ANALYSIS'))+'</span></div>';
     }
     if (rights.preview==='original-svg' && /^assets\/templates\/[\w-]+\.svg$/.test(entry.links?.editable || '')) {
