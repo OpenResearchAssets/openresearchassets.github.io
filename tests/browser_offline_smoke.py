@@ -73,6 +73,7 @@ with sync_playwright() as pw:
             assert not page.locator('#site-nav').is_visible()
         assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('home',label,page.evaluate('document.documentElement.scrollWidth'))
         assert page.locator('.showcase img').evaluate_all('(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
+        page.evaluate('window.scrollTo(0,0)')
         page.screenshot(path=str(ROOT/'tests'/f'_local_home_{label}.png'),full_page=True)
 
         page.goto('https://ora.local/asset.html?id=supermimic-site',wait_until='load')

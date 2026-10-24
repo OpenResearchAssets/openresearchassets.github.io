@@ -463,7 +463,7 @@
         }
       },
       "parent": "supermimic-site",
-      "previewStyle": "editorial"
+      "previewStyle": "rollout"
     },
     {
       "id": "supermimic-site",

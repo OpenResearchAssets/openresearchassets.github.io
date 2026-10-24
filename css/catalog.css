@@ -51,3 +51,26 @@
 .ora-detail-preview .ora-site-content strong{font-size:32px;max-width:500px}
 .ora-detail-preview .ora-site-evidence{height:59px}
 @media(max-width:720px){.ora-site-mock{width:88%}.ora-site-content strong{font-size:17px}.ora-detail-preview .ora-site-mock{width:90%;height:190px}.ora-detail-preview .ora-site-content{padding:15px}.ora-detail-preview .ora-site-content strong{font-size:23px}.ora-detail-preview .ora-site-evidence{height:32px}}
+
+/* An authored paper-Figure-1 dissection: mechanism and compute evidence,
+   intentionally not a reproduction of SuperMimic's original images. */
+.ora-rollout{width:87%;height:139px;display:grid;grid-template-columns:1.25fr 1fr;gap:14px}
+.ora-rollout>div{background:rgba(255,255,255,.72);border:1px solid #d0dceb;border-radius:10px;min-width:0;padding:14px 12px}
+.ora-rollout small{display:block;font-size:8px;font-weight:800;letter-spacing:.12em;color:#667991}
+.ora-ghosts{height:51px;display:flex;align-items:center;position:relative;margin:7px auto 2px}
+.ora-ghosts i{position:absolute;display:block;width:21px;height:37px;border-radius:45% 45% 33% 33%;background:#617fbd;opacity:.48;left:8%;transform:rotate(-25deg)}
+.ora-ghosts i:nth-child(2){left:23%;transform:rotate(-12deg);background:#7d8cc9}
+.ora-ghosts i:nth-child(3){left:39%;transform:rotate(0deg);background:#988bcd}
+.ora-ghosts i:nth-child(4){left:55%;transform:rotate(15deg);background:#c08eb5}
+.ora-ghosts i:nth-child(5){left:70%;transform:rotate(30deg);background:#d8a0a7}
+.ora-rollout span{font-size:7px;font-weight:700;letter-spacing:.08em;color:#8190a6}
+.ora-budget-bars{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;height:32px;margin:9px 0 5px}
+.ora-budget-bars b{background:repeating-linear-gradient(0deg,#90a6c5 0 3px,#cad4e3 3px 6px);border:1px solid #abbdd4;border-radius:4px}
+.ora-rollout-budget strong{font-size:19px;letter-spacing:-.6px;color:#284f91;display:block;line-height:1.15}
+.ora-detail-preview .ora-rollout{width:80%;height:236px;gap:20px}
+.ora-detail-preview .ora-rollout>div{padding:24px}
+.ora-detail-preview .ora-ghosts{height:105px}
+.ora-detail-preview .ora-ghosts i{width:40px;height:74px}
+.ora-detail-preview .ora-budget-bars{height:58px;margin:19px 0 12px}
+.ora-detail-preview .ora-rollout-budget strong{font-size:34px}
+@media(max-width:720px){.ora-rollout{width:92%;gap:7px}.ora-rollout>div{padding:10px 8px}.ora-rollout-budget strong{font-size:16px}.ora-detail-preview .ora-rollout{width:90%;height:172px;gap:9px}.ora-detail-preview .ora-rollout>div{padding:12px 8px}.ora-detail-preview .ora-ghosts{height:70px}.ora-detail-preview .ora-ghosts i{width:24px;height:43px}.ora-detail-preview .ora-budget-bars{height:35px;margin:8px 0}.ora-detail-preview .ora-rollout-budget strong{font-size:22px}}
