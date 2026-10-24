@@ -19,7 +19,9 @@ try:
             page.on('pageerror',lambda e:issues.append(str(e)))
             page.goto(f'http://127.0.0.1:{port}/index.html',wait_until='load')
             page.locator('.ora-resource-card').first.wait_for()
-            assert page.locator('.ora-resource-card').count()==15
+            assert page.locator('.ora-resource-card').count()==9
+            page.locator('#catalog-more').click()
+            assert page.locator('.ora-resource-card').count()==19
             page.locator('#facet-kind').select_option('visual-reference')
             assert page.locator('.ora-resource-card').count()==3
             page.locator('#facet-reset').click()
