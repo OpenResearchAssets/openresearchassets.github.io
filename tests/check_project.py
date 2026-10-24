@@ -1,43 +1,71 @@
 #!/usr/bin/env python3
-"""Offline structure/asset/reference sanity checks, not a substitute for visual review."""
+"""Static catalog and source checks. This does not certify a rendered site."""
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlparse
+import json
 import subprocess
 import xml.etree.ElementTree as ET
-import re
 ROOT=Path(__file__).resolve().parents[1]
 class Links(HTMLParser):
-    def __init__(self):super().__init__();self.refs=[]
+    def __init__(self):
+        super().__init__()
+        self.refs=[]
     def handle_starttag(self,tag,attrs):
         for k,v in attrs:
             if k in ('href','src') and v:self.refs.append(v)
 errors=[]
-for h in ('index.html','quality.html','principles.html','contribute.html'):
-    p=Links();p.feed((ROOT/h).read_text())
+pages=['index.html','asset.html','for-agents/index.html','quality.html','principles.html','contribute.html']
+for h in pages:
+    p=Links();p.feed((ROOT/h).read_text(encoding='utf-8'))
     for uri in p.refs:
         u=urlparse(uri)
         if u.scheme in ('http','https','mailto') or uri.startswith('#') or uri.startswith('data:'):continue
-        f=(ROOT/u.path)
-        if not f.exists():errors.append(f'{h}: missing {uri}')
-for file in [*ROOT.glob('assets/templates/*.svg'),ROOT/'assets/mark.svg']:
+        target=(ROOT/h).parent/u.path
+        if not target.exists():errors.append(f'{h}: missing {uri}')
+for file in [*ROOT.glob('assets/templates/*.svg'), ROOT/'assets/mark.svg']:
     try:
         tree=ET.parse(file);nodes=list(tree.iter())
         if len(nodes)<5:errors.append(f'{file}: not meaningfully editable')
-        if any(n.tag.split('}')[-1]=='image' for n in nodes):errors.append(f'{file}: embedded image is not allowed in original vector study')
+        if any(n.tag.split('}')[-1]=='image' for n in nodes):errors.append(f'{file}: unexpected embedded raster image')
     except ET.ParseError as e:errors.append(f'{file}: {e}')
 for name in ('teaser-story','method-flow','results-panel'):
     if not (ROOT/'assets/previews'/f'{name}.png').exists():errors.append(f'missing preview: {name}')
-for js in ('js/site.js','js/quality.js','data/references.js'):
+for js in ('js/catalog.js','js/i18n.js','js/navigation.js','js/quality.js'):
     run=subprocess.run(['node','--check',str(ROOT/js)],capture_output=True,text=True)
-    if run.returncode:errors.append(f'{js}: invalid JS: {run.stderr}')
-refs=(ROOT/'data/references.js').read_text()
-for source in ('https://robodojo-benchmark.com/','https://robo-render.github.io/','https://supermimic.github.io/'):
-    if source not in refs:errors.append(f'missing canonical linked reference {source}')
-if len(re.findall(r"\bid:'",refs))!=8:errors.append('expected 8 reference objects in edition one')
-for f in ('LICENSE','CONTRIBUTING.md','docs/ASSET_POLICY.md','docs/QUALITY_STANDARD.md','docs/PRODUCT_STRATEGY.md','skills/quality-critic/SKILL.md'):
+    if run.returncode:errors.append(f'{js}: JS syntax: {run.stderr}')
+catalog=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))
+if catalog.get('schema_version')!='1.0.0':errors.append('catalog: unsupported schema version')
+entries=catalog.get('entries',[])
+if len(entries)<15:errors.append('catalog: missing baseline 15 entries')
+ids=[e.get('id') for e in entries]
+if len(ids)!=len(set(ids)):errors.append('catalog: duplicate IDs')
+for rid in ('roborender-teaser','roborender-site','robodojo-teaser','robodojo-site','supermimic-teaser','supermimic-site'):
+    if rid not in ids:errors.append('missing primary case '+rid)
+for e in entries:
+    where=e.get('id')
+    if e.get('kind') not in catalog['facets']['kinds']:errors.append(f'{where}: unknown kind')
+    for field,group in (('stages','stages'),('domains','domains')):
+        values=e.get(field,[])
+        if not values or not set(values).issubset(catalog['facets'][group]):errors.append(f'{where}: invalid {field}')
+    if not e.get('tasks'):errors.append(f'{where}: missing task tags')
+    for name in ('description','keywords'):
+        val=e.get(name,{})
+        if not all(val.get(language) for language in ('zh','en')):errors.append(f'{where}: missing bilingual {name}')
+    for name in ('use_when','learn','avoid'):
+        val=e.get('applicability',{}).get(name,{})
+        if not all(val.get(language) for language in ('zh','en')):errors.append(f'{where}: missing bilingual {name}')
+    src=e.get('links',{}).get('source','')
+    if not src.startswith('https://'):errors.append(f'{where}: missing official HTTPS source')
+    if e.get('parent') and e['parent'] not in ids:errors.append(f'{where}: broken related asset')
+    if e.get('rights',{}).get('preview')=='original-svg':
+        target=e.get('links',{}).get('editable','')
+        if not target.startswith('assets/templates/') or not (ROOT/target).exists():errors.append(f'{where}: missing editable source')
+for f in ('LICENSE','CONTRIBUTING.md','docs/ASSET_POLICY.md','docs/ASSET_SCHEMA.md','docs/QUALITY_STANDARD.md','docs/PRODUCT_STRATEGY.md','skills/quality-critic/SKILL.md','llms.txt','for-agents/README.md'):
     if not (ROOT/f).exists():errors.append(f'missing {f}')
+index=(ROOT/'index.html').read_text(encoding='utf-8')
+if 'js/catalog.js' not in index or 'data/references.js' in index:errors.append('index not connected to canonical catalog')
 if errors:
     for e in errors:print('FAIL:',e)
     raise SystemExit(1)
-print('PASS: internal assets, editable SVG parse, JS syntax, first-edition references, key governance files')
+print(f'PASS: {len(entries)} catalog entries, provenance, bilingual fields, source links, original SVG, page references and JS syntax')
