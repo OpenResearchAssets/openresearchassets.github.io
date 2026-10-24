@@ -60,10 +60,10 @@ for e in entries:
         src=visual.get('src','')
         kind=visual.get('kind')
         if kind in ('licensed-source-image','licensed-paper-figure'):
-            if not re.fullmatch(r'assets/third-party/[a-z0-9-]+/[a-z0-9-]+\\.png',src):
+            if not re.fullmatch(r'assets/third-party/[a-z0-9-]+/[a-z0-9-]+\.png',src):
                 errors.append(f'{where}: unsafe third-party image path')
             elif not (ROOT/src).is_file():errors.append(f'{where}: missing authentic PNG {src}')
-            elif (ROOT/src).read_bytes()[:8]!=b'\\x89PNG\\r\\n\\x1a\\n':
+            elif (ROOT/src).read_bytes()[:8]!=b'\x89PNG\r\n\x1a\n':
                 errors.append(f'{where}: file is not PNG {src}')
             rights=e.get('rights',{})
             if rights.get('preview')!='third-party-cc-by-4.0':errors.append(f'{where}: wrong copyright marker')
@@ -93,7 +93,7 @@ for e in entries:
         else: errors.append(f'{where}: unsupported visual kind {kind}')
         if e.get('analysisVisual'):
             path=e['analysisVisual'].get('src','')
-            if not re.fullmatch(r'assets/editorials/[a-z0-9-]+\\.svg',path) or not (ROOT/path).is_file():
+            if not re.fullmatch(r'assets/editorials/[a-z0-9-]+\.svg',path) or not (ROOT/path).is_file():
                 errors.append(f'{where}: invalid linked analysis file')
         for field in ('alt','label'):
             if not all(visual.get(field,{}).get(lang) for lang in ('zh','en')):
