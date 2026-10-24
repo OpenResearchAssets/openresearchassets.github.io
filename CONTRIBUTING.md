@@ -1,41 +1,36 @@
-# 如何向 OpenResearchAssets 贡献内容 / Contributing
+# 贡献指南 · OpenResearchAssets / Contributing
 
-欢迎研究者、设计师、开发者贡献经过认真打磨的作品。这里遵循**质量重于数量、科学真实优先、中文主文档 + 英文辅助**。
+**质量优先、科学真实、来源可追溯；中文权威，英文辅助。**
 
-## 接受哪些贡献
+OpenResearchAssets 收录的不只是论文视觉素材，还包括科研流程、工具、可编辑文件和真正可用的经验。所有贡献需要回答：**何时使用、能学到什么、要避免什么、原始出处在哪里**。
 
-- **优秀参考**：原始官方链接、作者、论文/项目名称和至少一条**具体可学习**的设计分析；禁止只说“很漂亮”。
-- **原创可编辑资产**：SVG、可编辑 PPTX、HTML 或源代码，配预览、使用说明、明确版权归属和许可。
-- **设计诊断案例**：获得合法展示授权的 Before/After，说明原问题、修改、科学事实核对与最终 PDF 复核。
-- **审核标准与 Skill 改进**：指出当前规则错漏的具体案例、建议和最小可复现检查。
+## 欢迎的内容
 
-## 提交规则
+- **视觉参考：** 论文 Teaser、方法图、结果图、优秀项目主页。说明具体设计决策；第三方作品默认只链接，未获许可不要上传图像或截图。
+- **可编辑原创素材：** SVG、PPTX、HTML、代码与真实预览。确认版权与每个元素可原生编辑；概念模板标明非真实实验。
+- **科研方法与工作流：** 文献调查、实验管理、排错、评估、写作、投稿、展示等可执行经验。明确输入、操作步骤、输出、适用范围与验证方式。
+- **工具与 Skill：** 提供版本与实际使用前提。目录收录不代表我们已完成独立评估。
+- **质量案例：** 经过授权的诊断和修订，包含科学约束、原始成果和最终版面复核。
 
-1. 先核验科学事实：图形的标注、数值、轴、实验条件和 caption 不能误导。
-2. 解释信息价值：读者应该能指出这项设计让什么信息变得更易理解。
-3. 检查真实尺寸：在期望发表环境确认字体、线宽、箭头和留白可读。
-4. 确认真正可编辑：不接受用一个位图充当 SVG/PPTX 内容的“伪矢量”。
-5. 说明来源和版权：第三方论文图片默认**只链接**，不能随意镜像或转售。
-6. 不提交未授权的私人论文、用户数据、商业资源和内部实验资料。
-7. 修改站点和元数据时，**中文与英文同步**；网站 `data/references.js` 必须包含简洁的中文注释（`tagZh`、`kindZh`、`noteZh`、`shortZh`），英文保留对应字段。
+## 提交资产
 
-## 两类提交方式
+1. **只编辑 [catalog/index.json](catalog/index.json)**：这是唯一资产登记数据源。字段参见 [docs/ASSET_SCHEMA.md](docs/ASSET_SCHEMA.md)。不要创建第二份参考目录。
+2. 确保每个条目拥有稳定 \`id\`、\`stages\`、\`domains\`、\`tasks\`、\`kind\`、双语 \`description\` 和 \`keywords\`。
+3. 在双语 \`applicability.use_when / learn / avoid\` 中记录能用于真实任务的经验，禁止“画得好看”等无法操作的评语。
+4. 核验 \`links.source\`，如果有论文或合法可编辑源则添加相应链接。第三方截图和论文图**不能因为公开可访问就复制到仓库**。
+5. 明确 \`rights\`：本人创作、第三方引用、明确许可、来源不清必须区分。原始数据、可修改矢量图和最终概念示意也要分别标注。
+6. 禁止提交未公开论文、隐私、商业资料、API key 或无权再分发的素材。
 
-**外部参考**：修改 `data/references.js` 中对应条目或新增经过检验的条目；`category` 使用 `Research`、`Gallery`、`Toolkit`，通过提交说明解释高质量的具体原因，不搬运图片。
+## 验收
 
-**原创模板**：提供 `assets/templates/<name>.svg` 与 `assets/previews/<name>.png`，需有源文件、允许的许可证、概念/实验属性说明及实际编辑检查。公开原创模板按仓库 [资产政策](docs/ASSET_POLICY.md) 授权，贡献前确认同意相应条款。
-
-## 提交与审核
-
-运行：
-
-```bash
+\`\`\`bash
+python3 -m http.server 8000
 python3 tests/check_project.py
-python3 tests/browser_offline_smoke.py  # 若已安装 Playwright 与 Chromium
-```
+python3 tests/browser_offline_smoke.py  # Playwright + Chromium 可用时
+\`\`\`
 
-维护者首先审核科学真实性、授权和隐私，然后审阅表达质量、可编辑性及排版。拒绝投稿时提供可操作原因，而不是空泛审美评价。我们欢迎不同风格和学科。
+维护者按科学真实、授权、出处、适用场景、编辑性、实际科研价值和网页双语可用性审核，不因为数量或漂亮程度自动接受。图片类改动需在真实浏览器中审查。
 
-[提交 Issue](https://github.com/Suchenl/OpenResearchAssets/issues/new/choose) · [查看 Pull Requests](https://github.com/Suchenl/OpenResearchAssets/pulls)
+[提交 Issue](https://github.com/Suchenl/OpenResearchAssets/issues/new/choose) · [提交 PR](https://github.com/Suchenl/OpenResearchAssets/pulls)
 
-**English summary:** Submit traceable references, genuinely editable original artwork, or permission-cleared quality cases. Include source, license, scientific context, design rationale, and Chinese/English metadata. Never upload private manuscripts or unlicensed third-party figures.
+**English:** Contribute a traceable, task-specific research asset with bilingual metadata and actionable \`use_when / learn / avoid\` notes. Add records to the single JSON catalog. Do not repost third-party figures or screenshots without the necessary rights, and do not treat a listed skill as independently validated.
