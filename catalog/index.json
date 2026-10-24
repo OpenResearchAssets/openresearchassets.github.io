@@ -583,19 +583,27 @@
       },
       "applicability": {
         "use_when": {
-          "zh": [],
-          "en": []
+          "zh": [
+            "需要快速浏览不同论文的 Figure 1 构图"
+          ],
+          "en": [
+            "Finding Figure 1 compositions across papers"
+          ]
         },
         "learn": {
-          "zh": [],
-          "en": []
+          "zh": [
+            "对照多种视觉叙事模式后再构建自己的图"
+          ],
+          "en": [
+            "Compare varied visual narratives before designing your own"
+          ]
         },
         "avoid": {
           "zh": [
-            "不要将第三方作品当作可以自由转载或编辑的素材。"
+            "先核对原论文与图像使用权"
           ],
           "en": [
-            "Do not treat third-party artwork as freely reusable or editable."
+            "Verify the original paper and image rights first"
           ]
         }
       },
@@ -643,19 +651,27 @@
       },
       "applicability": {
         "use_when": {
-          "zh": [],
-          "en": []
+          "zh": [
+            "需要搜集多个研究配图参考供 AI 理解"
+          ],
+          "en": [
+            "Assembling multiple figure references for an agent"
+          ]
         },
         "learn": {
-          "zh": [],
-          "en": []
+          "zh": [
+            "保留参考图的上下文及来源"
+          ],
+          "en": [
+            "Keep provenance and context in reference packets"
+          ]
         },
         "avoid": {
           "zh": [
-            "不要将第三方作品当作可以自由转载或编辑的素材。"
+            "不要把 Agent 生成结果当作已验收科学图"
           ],
           "en": [
-            "Do not treat third-party artwork as freely reusable or editable."
+            "Do not treat agent outputs as scientifically verified"
           ]
         }
       },
@@ -703,19 +719,27 @@
       },
       "applicability": {
         "use_when": {
-          "zh": [],
-          "en": []
+          "zh": [
+            "需要寻找图元与可编辑的基础元素"
+          ],
+          "en": [
+            "Finding editable scientific figure components"
+          ]
         },
         "learn": {
-          "zh": [],
-          "en": []
+          "zh": [
+            "把独立图元组合成清晰的科学表达"
+          ],
+          "en": [
+            "Compose components into meaningful scientific communication"
+          ]
         },
         "avoid": {
           "zh": [
-            "不要将第三方作品当作可以自由转载或编辑的素材。"
+            "逐个检查素材许可与源文件编辑性"
           ],
           "en": [
-            "Do not treat third-party artwork as freely reusable or editable."
+            "Check each component license and real editability"
           ]
         }
       },
@@ -761,19 +785,27 @@
       },
       "applicability": {
         "use_when": {
-          "zh": [],
-          "en": []
+          "zh": [
+            "需要机器学习教学或展示类视觉图元"
+          ],
+          "en": [
+            "Looking for ML presentation or educational visuals"
+          ]
         },
         "learn": {
-          "zh": [],
-          "en": []
+          "zh": [
+            "借鉴开放协作和可编辑幻灯片的交付方式"
+          ],
+          "en": [
+            "Learn from community editing and slide-based delivery"
+          ]
         },
         "avoid": {
           "zh": [
-            "不要将第三方作品当作可以自由转载或编辑的素材。"
+            "不要假定每项素材都允许商业再分发"
           ],
           "en": [
-            "Do not treat third-party artwork as freely reusable or editable."
+            "Do not assume every visual grants commercial redistribution"
           ]
         }
       },
@@ -822,19 +854,27 @@
       },
       "applicability": {
         "use_when": {
-          "zh": [],
-          "en": []
+          "zh": [
+            "需要了解现有科研 Agent 技能与工具"
+          ],
+          "en": [
+            "Finding existing research-agent workflows and tools"
+          ]
         },
         "learn": {
-          "zh": [],
-          "en": []
+          "zh": [
+            "优先选择输入输出清晰且可验证的 Skill"
+          ],
+          "en": [
+            "Prefer workflows with defined inputs, outputs and checks"
+          ]
         },
         "avoid": {
           "zh": [
-            "不要将第三方作品当作可以自由转载或编辑的素材。"
+            "目录收录不代表我们实测其有效"
           ],
           "en": [
-            "Do not treat third-party artwork as freely reusable or editable."
+            "Directory listing is not evidence of independent validation"
           ]
         }
       },
