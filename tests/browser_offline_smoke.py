@@ -92,7 +92,7 @@ with sync_playwright() as pw:
             asset_id=entry['id']
             page.goto('https://ora.local/asset.html?id='+asset_id,wait_until='load')
             page.locator('.ora-detail-heading h1').wait_for()
-            assert asset_id in page.locator('.ora-eyebrow').inner_text(),(label,asset_id,'wrong id')
+            assert asset_id in page.locator('.ora-eyebrow').text_content(),(label,asset_id,'wrong id')
             assert page.locator('.ora-detail-preview .ora-preview').count()==1,(label,asset_id,'missing preview')
             assert page.locator('.ora-detail-links a').count()>=2,(label,asset_id,'source / JSON missing')
             assert 'catalog/entries/'+asset_id+'.json' in page.locator('.ora-detail-links a').last.get_attribute('href')
