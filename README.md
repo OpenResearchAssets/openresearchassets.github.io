@@ -94,3 +94,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Suggestions and pull requests are review
 - New contributions require an explicit license and provenance; see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Made for researchers who care about the science **and** the way it's explained.
+
+
+**Publishing guide:** [Deploy the public website](docs/DEPLOYMENT.md) (GitHub Pages / Cloudflare Pages, including browser acceptance checklist).
