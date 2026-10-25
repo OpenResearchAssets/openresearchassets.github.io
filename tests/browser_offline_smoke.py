@@ -69,10 +69,22 @@ with sync_playwright() as pw:
         assert page.locator('.ora-resource-card .ora-verified img').count()==6
         page.wait_for_function("()=>[...document.querySelectorAll('.ora-resource-card .ora-verified img')].every(n=>n.complete&&n.naturalWidth>0)")
         assert page.locator('.ora-resource-card .ora-curated img').count()==0
+        # Four discovery routes must correspond to authored figure functions, not only labels.
+        page.locator('[data-task-query="ablation"]').click()
+        assert page.locator('.ora-resource-card').count()>=2
+        assert 'Specialist Diffusion' in page.locator('#reference-grid').inner_text()
+        assert 'EgoEngine' in page.locator('#reference-grid').inner_text()
+        page.locator('[data-task-query="qualitative-results"]').click()
+        assert 'UltraEdit' in page.locator('#reference-grid').inner_text()
+        assert 'Fast Learning Radiance Fields' in page.locator('#reference-grid').inner_text()
+        page.locator('[data-task-query="project-website"]').click()
+        assert 'Nerfies' in page.locator('#reference-grid').inner_text()
+        assert 'HyperNeRF' in page.locator('#reference-grid').inner_text()
+        page.locator('#facet-reset').click()
         page.locator('#catalog-more').click()
         assert page.locator('.ora-resource-card').count()==29
         page.locator('#facet-kind').select_option('website-reference')
-        assert page.locator('.ora-resource-card').count()==3
+        assert page.locator('.ora-resource-card').count()==5
         page.locator('#facet-kind').select_option('')
         page.locator('#reference-search').fill('RoboRender')
         assert page.locator('.ora-resource-card').count()==2
