@@ -47,7 +47,7 @@ Skills / Workflows **只精选两条正式路径**：
 
 ## 现在实际可用的功能
 
-- [科研资产目录](../catalog/index.json)：22 条独立建档资源，含 Teaser、项目主页、原创 SVG、工具目录、四份原创科研工作流与质量审核 Skill；双语用途、来源和边界。
+- [科研资产目录](../catalog/index.json)：以单一目录持续维护的视觉与技能资产，包含 Teaser、项目主页、原创 SVG、精选热门技能及有证据的实践流程；提供中英双语用途、来源和边界。
 - [任务检索](../index.html#references)：当前支持本地文字匹配与阶段、领域、资产类型组合筛选，非向量语义搜索。
 - [独立详情](../asset.html?id=supermimic-site)：使用条件、可学习点、风险、来源和相关资产。
 - [AI 导航入口](../for-agents/) 和 [llms.txt](../llms.txt)：可公开抓取的指南与 JSON，不是自动执行科研任务的服务。

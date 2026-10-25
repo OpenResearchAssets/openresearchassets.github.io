@@ -67,7 +67,7 @@ OpenResearchAssets 由独立 GitHub Organization 维护，目标是建设**项�
 | 内容 | 实际交付 | 边界 |
 |---|---|---|
 | [任务搜索与多维筛选](https://openresearchassets.github.io/#references) | 双语关键词、科研阶段、领域、资产类型过滤；独立详情页 | 当前是浏览器本地筛选，不是语义向量检索 |
-| [结构化资产目录](catalog/index.json) · [轻量 AI 索引](catalog/manifest.json) | **27 项**记录，含 6 个 RoboRender / RoboDojo / SuperMimic 的深入视觉分析案例 | 精选的六张精选案例封面均已核实对应论文 Figure 1 或官方主页首屏（RoboRender 论文图为 CC BY 4.0；其余按具体来源与评论预览说明处理） |
+| [结构化资产目录](catalog/index.json) · [轻量 AI 索引](catalog/manifest.json) | 以 `catalog/index.json` 为唯一事实源，当前 32 条资产记录，其中包含 6 个既有核实视觉案例与 5 个新增精选四方原始图像 | 既有六张案例封面均已核实对应论文 Figure 1 或官方主页首屏（RoboRender 论文图为 CC BY 4.0；其余按具体来源与评论预览说明处理） |
 | [AI 使用指南](for-agents/) · [llms.txt](llms.txt) | 无需认证的 JSON、Markdown 导航和来源链接 | AI 的具体执行能力取决于 Agent 文件与工具权限 |
 | [原创可编辑 SVG](assets/templates/) | 5 份概念模板：Teaser、流程、结果、主页故事板、论点—证据映射 | 只展示结构和占位，不代表真实实验 |
 | [人工质量自查](quality.html) | 五类审核对象、问题手工勾选和 Markdown 报告 | **不自动读取或诊断图片** |
