@@ -22,7 +22,7 @@ OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉�
 | 内容 | 实际交付 | 边界 |
 |---|---|---|
 | [任务搜索与多维筛选](https://suchenl.github.io/OpenResearchAssets/#references) | 双语关键词、科研阶段、领域、资产类型过滤；独立详情页 | 当前是浏览器本地筛选，不是语义向量检索 |
-| [结构化资产目录](catalog/index.json) · [轻量 AI 索引](catalog/manifest.json) | **22 项**记录，含 6 个 RoboRender / RoboDojo / SuperMimic 的深入视觉分析案例 | 已收录两张带 CC BY 溯源的 RoboRender 官网视觉图，其他真实预览通过官方外链展示且不由本站再授权 |
+| [结构化资产目录](catalog/index.json) · [轻量 AI 索引](catalog/manifest.json) | **22 项**记录，含 6 个 RoboRender / RoboDojo / SuperMimic 的深入视觉分析案例 | 精选的六张案例封面均已核实对应论文 Figure 1 或官方主页首屏（RoboRender 论文图为 CC BY 4.0；其余按具体来源与评论预览说明处理） |
 | [AI 使用指南](for-agents/) · [llms.txt](llms.txt) | 无需认证的 JSON、Markdown 导航和来源链接 | AI 的具体执行能力取决于 Agent 文件与工具权限 |
 | [原创可编辑 SVG](assets/templates/) | 5 份概念模板：Teaser、流程、结果、主页故事板、论点—证据映射 | 只展示结构和占位，不代表真实实验 |
 | [人工质量自查](quality.html) | 五类审核对象、问题手工勾选和 Markdown 报告 | **不自动读取或诊断图片** |
@@ -80,7 +80,7 @@ python3 tests/browser_offline_smoke.py
 
 **官方真实图优先展示**：首页首个视觉案例更新为 Depth Anything 3 的真实官网概览图，并保留 RoboRender 的真实项目配图；精选方向已改为多视角视觉结果与信息表达；原 RoboRender 模型结构图已从当前目录撤除。自动化验收检查首页首卡指向 Depth Anything 3 官方图；第三方外链媒体是否可用需另行联网核验。
 
-本站已收录 RoboRender 官网训练数据和生成质量图片，并为 Depth Anything 3 等参考型资产优先使用官方原站真实图片链接；明确区分真实官网媒体与原论文 Figure 的身份。原始 PNG 保存在 `assets/third-party/roborender/`，作者、原始仓库 blob SHA、论文 CC BY 4.0 许可依据和改动说明记录在 [第三方资产台账](assets/third-party/manifest.json)。其他项目的可见媒体不自动视为获准转载。
+本站现在将 RoboRender / RoboDojo / SuperMimic 的论文 Figure 1 与三个官网首屏截图一一对应，六张核实图片保存在 `assets/third-party/`。每项精确标明是论文图还是主页截图、原始来源、署名和缩略处理，具体使用条件与版权异议处理见 [第三方资产台账](assets/third-party/manifest.json) 和 [资产政策](docs/ASSET_POLICY.md)。
 
 ### 六个精品案例：图像身份逐一核对
 

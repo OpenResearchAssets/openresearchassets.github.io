@@ -43,7 +43,7 @@ English: Read the catalog first; select 2–5 matching resources by stage, domai
 
 ## 获许可的真实论文图
 
-已撤除 `roborender-model-architecture`，不得作为当前资产检索结果引用。现有 RoboRender 两条精选案例的 `visual` 对应真实官网支持性配图，而非论文 Teaser 截图；详细使用条件和 CC BY 来源见 [第三方媒体台账](../assets/third-party/manifest.json)。Depth Anything 3 参考项使用官网真实概览图片的外链，不能将它或其他外链图片重新授权给用户。
+已撤除 `roborender-model-architecture`，不得作为当前资产结果引用。六份 RoboRender/RoboDojo/SuperMimic 精选条目现已匹配原论文 Figure 1 或实际官网首屏，支持 `figureIdentity` 和 [第三方媒体台账](../assets/third-party/manifest.json) 检查来源及权限；Depth Anything 3 使用官方真实总览图外链，不能对其再授权。
 
 ## 六个精准对应的视觉案例
 

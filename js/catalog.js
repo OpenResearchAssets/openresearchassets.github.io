@@ -131,7 +131,7 @@
       '<p class="empty-state">'+safe(empty())+'</p>';
     const status=document.getElementById('reference-status');
     if(status)status.textContent=tr('已显示 ','Showing ')+shown.length+' / '+catalog.entries.length+
-      tr(' 项 · ',' entries · ')+catalog.entries.filter(e=>['licensed-source-image','external-reference-image'].includes(e.visual?.kind)).length+tr(' 项真实来源视觉参考；外部媒体版权仍属原权利人。',' authentic source-media previews; linked media rights remain with original owners.');
+      tr(' 项 · ',' entries · ')+catalog.entries.filter(e=>['licensed-source-image','external-reference-image','verified-paper-figure','verified-site-screenshot'].includes(e.visual?.kind)).length+tr(' 项真实来源视觉参考；外部媒体版权仍属原权利人。',' authentic source-media previews; linked media rights remain with original owners.');
     const more=document.getElementById('catalog-more');
     if(more) more.hidden = (shown.length === items.length);
     const count=document.getElementById('catalog-count');

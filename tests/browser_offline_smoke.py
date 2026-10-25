@@ -129,8 +129,6 @@ with sync_playwright() as pw:
                 assert visual.first.get_attribute('src').startswith('https://')
             if asset_id=='roborender-teaser':
                 assert 'CC BY 4.0' in page.locator('.ora-detail-sidebar').inner_text()
-            if asset_id in cases:
-                assert 'image' not in (page.locator('.ora-disclosure').inner_text().lower()[:0])
             if asset_id=='depth-anything-3-visual':
                 assert page.locator('.ora-detail-preview .ora-external img').count()==1
             if entry['kind']=='resource-index':

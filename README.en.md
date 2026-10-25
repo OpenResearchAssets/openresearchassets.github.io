@@ -14,7 +14,7 @@ The initial focus is AI, computer vision, robotics and research communication. F
 
 This Chinese-first, English-supported library spans research design, evaluation, writing and communication. The current public implementation includes:
 
-- **21 structured entries** in [catalog/index.json](catalog/index.json), including separate teaser and project-site references for RoboRender, RoboDojo and SuperMimic.
+- **22 structured entries** in [catalog/index.json](catalog/index.json), including separate teaser and project-site references for RoboRender, RoboDojo and SuperMimic.
 - Browser-side search and facets for stages, domains and asset kinds, with per-asset usage and provenance pages.
 - [Agent instructions](for-agents/) and [llms.txt](llms.txt) pointing to an openly readable machine catalog. These files do **not** mean there is an autonomous remote agent service.
 - Four original Markdown research workflows covering literature, experiments, paper narratives and research release.
@@ -30,17 +30,13 @@ Search the [interactive asset directory](https://suchenl.github.io/OpenResearchA
 
 Agents should first read [the compact manifest](catalog/manifest.json), select a few relevant assets by task, stage and domain, then open only the corresponding [per-entry JSON files](catalog/entries/supermimic-teaser.json). The full [canonical catalog](catalog/index.json) remains the only authored data. Edit it, run `python3 tools/sync_catalog.py`, then `python3 tools/sync_catalog.py --check` before publishing. This is not a remotely executing AI service.
 
-## Authentic media with traceable licenses
+## Authentic, specifically verified source images
 
-The currently curated RoboRender source media consist of authentic training-data and generation-quality figures, not the previously listed model-architecture PNG. Their upstream hashes, credit and CC BY basis are recorded in the [third-party media ledger](assets/third-party/manifest.json). Depth Anything 3 and other third-party media use clearly attributed source links, not an implied relicense.
-
-## Copyright concerns and removal
-
-Third-party works remain the property of their original rights holders. OpenResearchAssets collects research references with attribution and commentary, not as an official publication or a sublicensed image library. If you are an author, rights holder or authorized representative and object to an item, [request removal or correction](https://github.com/Suchenl/OpenResearchAssets/issues/new?template=asset-removal.yml). Identify the affected page/asset ID, original work and the change requested; do not publish sensitive personal documents in an Issue. We will review the report promptly and restrict, remove or correct the content as appropriate. Our [asset policy](docs/ASSET_POLICY.md) explains the process; [GitHub's formal copyright channel](https://github.com/contact/dmca) is also available. Free access, attribution and this takedown mechanism do not themselves establish permission.
+The three featured papers are represented by their **actual Figure 1** and the corresponding project-site references use actual homepage viewport screenshots. All six media files live in [the third-party ledger](assets/third-party/manifest.json), with precise origin, credit, capture date and transformations. The RoboRender paper figure carries CC BY 4.0 attribution; other previews retain source-owner rights and a correction/removal channel.
 
 ## Real-reference previews
 
-The RoboRender architecture record and its locally stored model-architecture PNG have been removed from the current branch. The site prioritizes authentic, explicitly sourced media from the official Depth Anything 3, RoboRender, RoboDojo and SuperMimic pages, plus actual gallery images from resource projects. Not every image is a literal full-page screenshot or the paper's Figure 1; the asset captions distinguish original project media, supporting figures, and authored breakdowns. Remote source links remain under the original creators' rights, with correction/removal requests available.
+Depth Anything 3 and third-party galleries link to original source images. All six featured RoboRender/RoboDojo/SuperMimic paper/site references instead have individually verified local previews. The discontinued RoboRender model-architecture record is not part of the current catalog.
 
 ### Verified paper figures versus genuine first-view website captures
 
