@@ -233,7 +233,7 @@ with sync_playwright() as pw:
             page.screenshot(path=str(ROOT/'tests'/f'_local_real_case_zh_{label}.png'),full_page=True)
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='en'
-        assert 'from published research' in page.locator('.rc-hero h1').inner_text()
+        assert 'from an open paper' in page.locator('.rc-hero h1').inner_text()
         assert 'have not been independently reproduced' in page.locator('.rc-disclaimer').inner_text()
         assert page.locator('.rc-table tbody tr').count()==8
         assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('real-paper-en',label)
