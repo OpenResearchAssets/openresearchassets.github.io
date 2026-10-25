@@ -198,11 +198,15 @@ with sync_playwright() as pw:
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='zh-CN'
         if label in ('desktop','mobile'):
+            page.evaluate('window.scrollTo(0,0)')
             page.screenshot(path=str(ROOT/'tests'/f'_local_examples_{label}.png'),full_page=True)
         page.set_content(page_html('examples/sample-project.html'),wait_until='load')
         assert page.locator('html').get_attribute('lang')=='zh-CN'
         assert '结果：未采集' in page.locator('main').inner_text()
         assert page.locator('.diagram img.zh').is_visible()
+        if label in ('desktop','mobile'):
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=str(ROOT/'tests'/f'_local_sample_site_zh_{label}.png'),full_page=True)
         page.locator('#toggle').click()
         assert page.locator('html').get_attribute('lang')=='en'
         assert page.locator('.diagram img.en').is_visible()

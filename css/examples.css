@@ -28,3 +28,6 @@
 .ora-example-outro p{font-size:15px;line-height:1.8;color:#5d6d7e;max-width:760px}
 @media(max-width:960px){.ora-example{grid-template-columns:1fr;gap:22px;padding:40px 0 50px}.ora-example-visual{max-width:860px}.ora-example-hero{padding-top:85px}}
 @media(max-width:720px){.ora-example-hero{padding-top:65px;padding-bottom:35px}.ora-example-hero-lead{font-size:14px}.ora-example-warning{margin:22px 0 18px}.ora-example-quicklinks a{font-size:12px}.ora-example-copy h2{font-size:26px}.ora-example-actions{gap:12px 16px}.ora-example-outro{padding:40px 0 65px}}
+/* Break headlines deliberately to avoid a trailing orphan glyph. */
+.ora-example-hero-line{display:block}
+html[lang="en"] .ora-example-hero h1{font-size:clamp(33px,4.5vw,62px)}
