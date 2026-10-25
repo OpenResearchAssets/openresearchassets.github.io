@@ -13,7 +13,7 @@ body:
     attributes:
       label: "站内资产 / Affected asset URL or ID"
       description: "请贴出 OpenResearchAssets 详情 URL、预览 URL 或资源 ID / Link to the affected page or asset ID"
-      placeholder: "https://suchenl.github.io/OpenResearchAssets/asset.html?id=..."
+      placeholder: "https://openresearchassets.github.io/asset.html?id=..."
     validations:
       required: true
   - type: input

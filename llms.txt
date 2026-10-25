@@ -1,21 +1,21 @@
 # OpenResearchAssets · Agent navigation
 
-> 中文权威说明：https://suchenl.github.io/OpenResearchAssets/for-agents/
-> Low-token discovery: https://suchenl.github.io/OpenResearchAssets/catalog/manifest.json
-> Canonical catalog: https://suchenl.github.io/OpenResearchAssets/catalog/index.json
+> 中文权威说明：https://openresearchassets.github.io/for-agents/
+> Low-token discovery: https://openresearchassets.github.io/catalog/manifest.json
+> Canonical catalog: https://openresearchassets.github.io/catalog/index.json
 
 OpenResearchAssets curates reusable research references, editable diagrams, workflows and research-quality guidance. It is Chinese-first with supporting English descriptions. Never assume a third-party figure or webpage screenshot is licensed for redistribution.
 
 ## Read first
-- [AI 使用指南 / Agent guide](https://suchenl.github.io/OpenResearchAssets/for-agents/)
-- [Compact AI manifest (JSON)](https://suchenl.github.io/OpenResearchAssets/catalog/manifest.json)
-- [Canonical catalog (JSON)](https://suchenl.github.io/OpenResearchAssets/catalog/index.json)
-- [Interactive discovery](https://suchenl.github.io/OpenResearchAssets/#references)
-- [Actionable workflows: literature](https://suchenl.github.io/OpenResearchAssets/workflows/literature-triage.md)
-- [Actionable workflows: experiments](https://suchenl.github.io/OpenResearchAssets/workflows/experiment-planning.md)
-- [Actionable workflows: writing](https://suchenl.github.io/OpenResearchAssets/workflows/paper-evidence-story.md)
-- [Actionable workflows: release](https://suchenl.github.io/OpenResearchAssets/workflows/research-release.md)
-- [Asset schema & provenance](https://suchenl.github.io/OpenResearchAssets/docs/ASSET_SCHEMA.md)
-- [Rights policy](https://suchenl.github.io/OpenResearchAssets/docs/ASSET_POLICY.md)
+- [AI 使用指南 / Agent guide](https://openresearchassets.github.io/for-agents/)
+- [Compact AI manifest (JSON)](https://openresearchassets.github.io/catalog/manifest.json)
+- [Canonical catalog (JSON)](https://openresearchassets.github.io/catalog/index.json)
+- [Interactive discovery](https://openresearchassets.github.io/#references)
+- [Actionable workflows: literature](https://openresearchassets.github.io/workflows/literature-triage.md)
+- [Actionable workflows: experiments](https://openresearchassets.github.io/workflows/experiment-planning.md)
+- [Actionable workflows: writing](https://openresearchassets.github.io/workflows/paper-evidence-story.md)
+- [Actionable workflows: release](https://openresearchassets.github.io/workflows/research-release.md)
+- [Asset schema & provenance](https://openresearchassets.github.io/docs/ASSET_SCHEMA.md)
+- [Rights policy](https://openresearchassets.github.io/docs/ASSET_POLICY.md)
 
 Suggested sequence: read compact manifest → select by task/stage/domain/kind → load only relevant `entry` JSON files (relative to site root) → check applicability and rights → verify resulting work.

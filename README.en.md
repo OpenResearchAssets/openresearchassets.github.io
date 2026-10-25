@@ -1,6 +1,6 @@
 # OpenResearchAssets — reusable research assets for humans and AI
 
-**[简体中文](README.md) · English · [Website](https://suchenl.github.io/OpenResearchAssets/) · [For AI agents](https://suchenl.github.io/OpenResearchAssets/for-agents/)**
+**[简体中文](README.md) · English · [Website](https://openresearchassets.github.io/) · [For AI agents](https://openresearchassets.github.io/for-agents/)**
 
 Research assets should be more than bookmarks. They should tell us **when to use them, what transfers, what to avoid, and where they came from**.
 
@@ -12,6 +12,14 @@ We are **not merely a gallery of attractive paper figures or a directory of link
 
 The initial focus is AI, computer vision, robotics and research communication. Full-lifecycle support is an ambition, **not a claim that an autonomous research service is already deployed**.
 
+## Open community trajectory (long-term vision)
+
+OpenResearchAssets is an **independent open-source project**, not a personal portfolio. Its intended progression is: **(1)** a useful project that researchers discover and reuse; **(2)** a healthy community where independent researchers contribute and review assets, methods, and tools; **(3)** open research infrastructure with interoperable asset conventions, workflows, tools, and AI agents.
+
+![Three-stage OpenResearchAssets community vision (Chinese-first source SVG)](assets/diagrams/community-trajectory.svg)
+
+These are **aspirational stages, not shipped features or promised milestones**. We value verified reuse, scientific fidelity, source attribution, contributor retention, and transparent review more than stars alone. [Star the repository](https://github.com/OpenResearchAssets/openresearchassets.github.io), [contribute](CONTRIBUTING.md), or [propose an asset](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new/choose). The [project strategy](docs/PRODUCT_STRATEGY.md) is the authoritative statement of current and future scope.
+
 This Chinese-first, English-supported library spans research design, evaluation, writing and communication. The current public implementation includes:
 
 - **22 structured entries** in [catalog/index.json](catalog/index.json), including separate teaser and project-site references for RoboRender, RoboDojo and SuperMimic.
@@ -20,7 +28,7 @@ This Chinese-first, English-supported library spans research design, evaluation,
 - Four original Markdown research workflows covering literature, experiments, paper narratives and research release.
 - Five original, editable SVG concept designs; an author-guided manual [quality checklist](quality.html); and an unvalidated [Quality Critic Skill](skills/quality-critic/SKILL.md).
 
-Search the [interactive asset directory](https://suchenl.github.io/OpenResearchAssets/#references), or hand its URL to an agent that has web or file-reading capability. The JSON requires HTTP hosting; run \`python3 -m http.server 8000\` locally rather than opening the page with \`file://\`.
+Search the [interactive asset directory](https://openresearchassets.github.io/#references), or hand its URL to an agent that has web or file-reading capability. The JSON requires HTTP hosting; run \`python3 -m http.server 8000\` locally rather than opening the page with \`file://\`.
 
 **Copyright:** Third-party paper figures, videos and website screenshots are not bundled or relicensed; visual previews without explicit authorization are locally authored structural diagrams, clearly labeled. The diagrammatic previews are **not** source figures. Our original SVG templates are CC BY 4.0; the code and Skill are MIT. See [asset policy](docs/ASSET_POLICY.md), [schema](docs/ASSET_SCHEMA.md), [contribution guide](CONTRIBUTING.md) and [AI maintenance rules](AGENTS.md).
 

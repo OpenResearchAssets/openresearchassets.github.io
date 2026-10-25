@@ -4,12 +4,12 @@
 
 ## GitHub Pages（当前正在使用）
 
-1. 打开 [Settings → Pages](https://github.com/Suchenl/OpenResearchAssets/settings/pages)。
+1. 打开 [Settings → Pages](https://github.com/OpenResearchAssets/openresearchassets.github.io/settings/pages)。
 2. **Build and deployment** 选择 **Deploy from a branch**。
 3. 选择 **main**、**/(root)**，保存。
-4. 从 [Actions](https://github.com/Suchenl/OpenResearchAssets/actions) 确认部署成功后，打开 [正式网站](https://suchenl.github.io/OpenResearchAssets/)。
+4. 从 [Actions](https://github.com/OpenResearchAssets/openresearchassets.github.io/actions) 确认部署成功后，打开 [正式网站](https://openresearchassets.github.io/)。
 
-资产清单通过 `fetch('catalog/index.json')` 加载，不能依赖 `file://` 方式打开首页。源码使用相对资源路径，支持 `/OpenResearchAssets/` 子路径。404 可能是 Pages 尚未部署，不代表 Git 内容未提交。
+资产清单通过 `fetch('catalog/index.json')` 加载，不能依赖 `file://` 方式打开首页。当前仓库就是组织根站点仓库 `OpenResearchAssets/openresearchassets.github.io`，源码使用相对路径，正式页面直接从根路径 `/` 访问，不再以 `/OpenResearchAssets/` 为正式前缀。404 可能是 Pages 尚未部署，不代表 Git 内容未提交。
 
 **注意**：GitHub Pages 的使用边界应遵循当前 [GitHub 官方规定](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)。将来如果变成商业交易/SaaS，请选择适合商业用途的独立托管平台。
 

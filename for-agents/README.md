@@ -1,7 +1,7 @@
 # OpenResearchAssets：供 AI 直接使用的科研资产目录
 
-> 公开入口：https://suchenl.github.io/OpenResearchAssets/for-agents/  
-> 唯一资产目录：https://suchenl.github.io/OpenResearchAssets/catalog/index.json
+> 公开入口：https://openresearchassets.github.io/for-agents/  
+> 唯一资产目录：https://openresearchassets.github.io/catalog/index.json
 
 ## 使用流程
 
@@ -39,7 +39,7 @@ English: Read the catalog first; select 2–5 matching resources by stage, domai
 
 ## 低 Token 检索与入口约定
 
-`manifest.json` 的 `entry` 字段相对网站根目录，举例：`https://suchenl.github.io/OpenResearchAssets/catalog/entries/supermimic-teaser.json`。Agent 先选出最相关的 2–5 条，再取详细 JSON；如果不匹配可读取完整目录，但不得虚构已有的资产或授权。所有 JSON 分片都从唯一权威文件 `catalog/index.json` 自动生成；修改后运行 `python3 tools/sync_catalog.py`。只有具备网页读取能力的 AI 可以通过网址访问，实际执行还需要目标项目及工具权限。
+`manifest.json` 的 `entry` 字段相对网站根目录，举例：`https://openresearchassets.github.io/catalog/entries/supermimic-teaser.json`。Agent 先选出最相关的 2–5 条，再取详细 JSON；如果不匹配可读取完整目录，但不得虚构已有的资产或授权。所有 JSON 分片都从唯一权威文件 `catalog/index.json` 自动生成；修改后运行 `python3 tools/sync_catalog.py`。只有具备网页读取能力的 AI 可以通过网址访问，实际执行还需要目标项目及工具权限。
 
 ## 获许可的真实论文图
 

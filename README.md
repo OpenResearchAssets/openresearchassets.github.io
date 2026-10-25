@@ -1,6 +1,6 @@
 # OpenResearchAssets · 面向人类与 AI 的可复用科研资产库
 
-**中文（默认）** · [English](README.en.md) · [在线网站](https://suchenl.github.io/OpenResearchAssets/) · [给 AI 使用](https://suchenl.github.io/OpenResearchAssets/for-agents/)
+**中文（默认）** · [English](README.en.md) · [在线网站](https://openresearchassets.github.io/) · [给 AI 使用](https://openresearchassets.github.io/for-agents/)
 
 > **科研资产不只是收藏，而是可以被发现、理解与复用的经验。**  
 > 科学真实性先于外观；高质量的资产需要说明其用途、来源和使用边界。
@@ -17,11 +17,25 @@ OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉�
 
 **近期建设**从 AI / CV / Robotics 领域和科研视觉表达起步，优先保证资产质量、可追溯性与可复用性，再稳步扩展科研全流程；**长期愿景不等于已上线能力**：目前提供静态检索、结构化 AI 入口和部分工具/工作流，尚不能仅凭一个网址替 AI 获得项目文件权限或自动完成整个科研流程。
 
+## 开放社区的长期方向（愿景）
+
+OpenResearchAssets 由独立 GitHub Organization 维护，目标是建设**项目本身被记住、研究者可以共同建设**的公共科研资源，而非任何人的个人作品集。我们将按价值和社区实际成熟度逐步发展：
+
+![OpenResearchAssets：从有价值的开源项目，到活跃的开放社区，再到开放科研基础设施的三阶段长期愿景](assets/diagrams/community-trajectory.svg)
+
+1. **有价值的开源项目：** 用户真正发现、使用、复用资产，逐步建立独立项目认知。
+2. **有活力的开放社区：** 外部研究者持续贡献可验证的科研资产、工作流和工具，共同维护质量。
+3. **开放科研基础设施：** 在真实使用需求推动下，形成可复用的科研资产标准、工具和 AI Agent 生态。
+
+这三个阶段是**长期愿景，不是已实现功能，也没有预设期限**。我们关心真实使用与复用质量、持续贡献和开放协作；Star 是项目关注度信号，而不是唯一成功指标。社区采用公开 Issue / PR 贡献和透明审核，科学真实性、可追溯性与授权边界优先。
+
+**[在 GitHub Star 项目](https://github.com/OpenResearchAssets/openresearchassets.github.io)** · **[贡献科研资产](CONTRIBUTING.md)** · **[提出建议](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new/choose)** · **[完整定位](docs/PRODUCT_STRATEGY.md)**
+
 ## 现在已经能用
 
 | 内容 | 实际交付 | 边界 |
 |---|---|---|
-| [任务搜索与多维筛选](https://suchenl.github.io/OpenResearchAssets/#references) | 双语关键词、科研阶段、领域、资产类型过滤；独立详情页 | 当前是浏览器本地筛选，不是语义向量检索 |
+| [任务搜索与多维筛选](https://openresearchassets.github.io/#references) | 双语关键词、科研阶段、领域、资产类型过滤；独立详情页 | 当前是浏览器本地筛选，不是语义向量检索 |
 | [结构化资产目录](catalog/index.json) · [轻量 AI 索引](catalog/manifest.json) | **22 项**记录，含 6 个 RoboRender / RoboDojo / SuperMimic 的深入视觉分析案例 | 精选的六张案例封面均已核实对应论文 Figure 1 或官方主页首屏（RoboRender 论文图为 CC BY 4.0；其余按具体来源与评论预览说明处理） |
 | [AI 使用指南](for-agents/) · [llms.txt](llms.txt) | 无需认证的 JSON、Markdown 导航和来源链接 | AI 的具体执行能力取决于 Agent 文件与工具权限 |
 | [原创可编辑 SVG](assets/templates/) | 5 份概念模板：Teaser、流程、结果、主页故事板、论点—证据映射 | 只展示结构和占位，不代表真实实验 |
@@ -30,9 +44,9 @@ OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉�
 
 ## 使用
 
-**人类：** 在[资产目录](https://suchenl.github.io/OpenResearchAssets/#references)输入任务关键词，筛选科研阶段、领域、类型。打开独立详情查看何时适用、可学什么、注意事项和原始链接。
+**人类：** 在[资产目录](https://openresearchassets.github.io/#references)输入任务关键词，筛选科研阶段、领域、类型。打开独立详情查看何时适用、可学什么、注意事项和原始链接。
 
-**AI：** 把[网站地址](https://suchenl.github.io/OpenResearchAssets/)交给有浏览/文件工具的 Agent；使用 [for-agents/README.md](for-agents/README.md) 和 [catalog/manifest.json](catalog/manifest.json) 先定位任务，再按单项 `entry` 路径获取完整资产说明。AI 不能仅凭网页就获得本地文件执行权。
+**AI：** 把[网站地址](https://openresearchassets.github.io/)交给有浏览/文件工具的 Agent；使用 [for-agents/README.md](for-agents/README.md) 和 [catalog/manifest.json](catalog/manifest.json) 先定位任务，再按单项 `entry` 路径获取完整资产说明。AI 不能仅凭网页就获得本地文件执行权。
 
 本地浏览请开启静态服务器（JSON 使用 \`fetch\`，直接打开 \`file://\` 的首页可能无法加载目录）：
 
@@ -46,7 +60,7 @@ python3 tests/browser_offline_smoke.py
 
 ## 版权异议与素材撤除
 
-第三方作品归原权利人。我们为科研检索、引用导航及具体设计分析整理公开来源，网站代码、原创 SVG 与第三方图片不共享同一许可证。**如您是权利人且对某项收录或展示有异议，请[提交素材撤除或更正申请](https://github.com/Suchenl/OpenResearchAssets/issues/new?template=asset-removal.yml)**，注明站内资产 URL 与原始来源。我们会及时核实并处理。公开 Issue 中请勿提交私人证件或敏感资料；必要时可使用 [GitHub 版权投诉入口](https://github.com/contact/dmca)。
+第三方作品归原权利人。我们为科研检索、引用导航及具体设计分析整理公开来源，网站代码、原创 SVG 与第三方图片不共享同一许可证。**如您是权利人且对某项收录或展示有异议，请[提交素材撤除或更正申请](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=asset-removal.yml)**，注明站内资产 URL 与原始来源。我们会及时核实并处理。公开 Issue 中请勿提交私人证件或敏感资料；必要时可使用 [GitHub 版权投诉入口](https://github.com/contact/dmca)。
 
 详细步骤和边界见 [资产来源与许可规范](docs/ASSET_POLICY.md)。署名、非盈利与可撤除机制不能替代必要的使用许可。
 

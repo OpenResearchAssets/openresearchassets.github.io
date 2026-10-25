@@ -12,6 +12,14 @@ OpenResearchAssets 收录的不只是论文视觉素材，还包括科研流程�
 - **工具与 Skill：** 提供版本与实际使用前提。目录收录不代表我们已完成独立评估。
 - **质量案例：** 经过授权的诊断和修订，包含科学约束、原始成果和最终版面复核。
 
+## 第一次参与 / First contribution
+
+欢迎从简单的、可核实的改进开始：通过 [Asset request](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=asset-request.md) 推荐有明确来源与用途的研究资产；报告失效链接、事实错误和说明不清；或提交一个范围清楚的 PR。较大改动建议先通过 Issue 讨论，无须一开始就提交完整素材。
+
+所有社区贡献遵循相同的公开质量与授权标准。随着稳定贡献者增多，项目会按实际需要完善 Maintainer 权限与审核机制，不提前承诺自动接纳投稿。
+
+**English:** Start with a well-sourced suggestion or focused correction; discuss substantial changes in an issue before opening a PR. Contributions are reviewed for accuracy, reuse value, and rights.
+
 ## 提交资产
 
 1. **只编辑 [catalog/index.json](catalog/index.json)**：这是唯一资产登记数据源。字段参见 [docs/ASSET_SCHEMA.md](docs/ASSET_SCHEMA.md)。不要创建第二份参考目录。
@@ -31,7 +39,7 @@ python3 tests/browser_offline_smoke.py  # Playwright + Chromium 可用时
 
 维护者按科学真实、授权、出处、适用场景、编辑性、实际科研价值和网页双语可用性审核，不因为数量或漂亮程度自动接受。图片类改动需在真实浏览器中审查。
 
-[提交 Issue](https://github.com/Suchenl/OpenResearchAssets/issues/new/choose) · [提交 PR](https://github.com/Suchenl/OpenResearchAssets/pulls)
+[提交 Issue](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new/choose) · [提交 PR](https://github.com/OpenResearchAssets/openresearchassets.github.io/pulls)
 
 **English:** Contribute a traceable, task-specific research asset with bilingual metadata and actionable \`use_when / learn / avoid\` notes. Add records to the single JSON catalog. Do not repost third-party figures or screenshots without the necessary rights, and do not treat a listed skill as independently validated.
 
@@ -45,4 +53,4 @@ python3 tests/browser_offline_smoke.py  # Playwright + Chromium 可用时
 
 ## 权利人提出异议 / Removal requests
 
-如权利人认为某个研究资产不适合在本站展示，可使用 [素材撤除 / 更正 Issue 模板](https://github.com/Suchenl/OpenResearchAssets/issues/new?template=asset-removal.yml)。需要提供站内链接、对应原始作品和问题说明。**不要在公开 Issue 里提交身份证明材料或其他私人信息。** 维护者检查后及时停止有争议的展示，并同步处理媒体文件、目录、详情与派生 AI 索引。详见 [资产政策](docs/ASSET_POLICY.md)。署名、非商业用途和“可申请撤除”并非授权替代品。
+如权利人认为某个研究资产不适合在本站展示，可使用 [素材撤除 / 更正 Issue 模板](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=asset-removal.yml)。需要提供站内链接、对应原始作品和问题说明。**不要在公开 Issue 里提交身份证明材料或其他私人信息。** 维护者检查后及时停止有争议的展示，并同步处理媒体文件、目录、详情与派生 AI 索引。详见 [资产政策](docs/ASSET_POLICY.md)。署名、非商业用途和“可申请撤除”并非授权替代品。
