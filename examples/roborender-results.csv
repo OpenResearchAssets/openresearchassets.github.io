@@ -1,0 +1,9 @@
+task_id,task,embodiment,rollouts_per_method,simulation_success_pct,simulation_dr_success_pct,roborender_success_pct,source_url,source_section,provenance,independent_replication
+mug,Mug,Droid,10,40,60,80,https://robo-render.github.io/,Real-world success rate across tasks,author-reported,no
+bowl,Bowl,Droid,10,30,20,80,https://robo-render.github.io/,Real-world success rate across tasks,author-reported,no
+apple,Apple,Droid,10,10,20,60,https://robo-render.github.io/,Real-world success rate across tasks,author-reported,no
+egg,Egg,Droid,10,0,30,50,https://robo-render.github.io/,Real-world success rate across tasks,author-reported,no
+open_fridge,Open Fridge,Droid,10,0,0,70,https://robo-render.github.io/,Real-world success rate across tasks,author-reported,no
+open_drawer,Open Drawer,Droid,10,0,0,90,https://robo-render.github.io/,Real-world success rate across tasks,author-reported,no
+pick_radio,Pick up Radio,R1Pro,10,0,30,70,https://robo-render.github.io/,Real-world success rate across tasks,author-reported,no
+place_marker,Place Green Marker,Yam,10,0,0,70,https://robo-render.github.io/,Real-world success rate across tasks,author-reported,no
