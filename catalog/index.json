@@ -1111,6 +1111,1136 @@
       }
     },
     {
+      "id": "instruct-pix2pix-teaser",
+      "title": "InstructPix2Pix · 指令编辑 Teaser",
+      "kind": "visual-reference",
+      "stages": [
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "teaser",
+        "image-editing",
+        "before-after",
+        "visual-storytelling"
+      ],
+      "description": {
+        "zh": "同一张输入图与不同自然语言指令、输出效果成组展示，任务一眼清楚，适合学习低说明成本的图像编辑 Teaser。",
+        "en": "Pairs a source image with instruction-conditioned outcomes; a strong image-editing teaser that requires little explanation."
+      },
+      "keywords": {
+        "zh": [
+          "InstructPix2Pix",
+          "teaser",
+          "image-editing",
+          "before-after",
+          "visual-storytelling",
+          "高审美"
+        ],
+        "en": [
+          "InstructPix2Pix",
+          "teaser",
+          "image-editing",
+          "before-after",
+          "visual-storytelling",
+          "research-figure",
+          "teaser"
+        ]
+      },
+      "year": "2023",
+      "language": "zh+en",
+      "links": {
+        "source": "https://instruct-pix2pix.timothybrooks.com/",
+        "officialFigure": "https://instruct-pix2pix.timothybrooks.com/teaser.jpg"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://instruct-pix2pix.timothybrooks.com/teaser.jpg"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要通过多个可感知的视觉变化讲清一个 AIGC 方法的作用时。"
+          ],
+          "en": [
+            "Showing the purpose of an AIGC editing method through several visually legible transformations."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "保持输入身份可对齐；重复网格提供稳定比较基准，短指令直接担当图注；复杂编辑故事以视觉变化而不是模块说明展开。"
+          ],
+          "en": [
+            "Repeated source identity anchors comparisons; brief instructions double as captions; visual changes carry the claim without pipeline clutter."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "图中绘画和人像有额外内容权利；外链仅用于学习排版，不授予改编或再分发许可。"
+          ],
+          "en": [
+            "Visual sources may contain separate artwork rights; linking is not permission to adapt or redistribute the images."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://instruct-pix2pix.timothybrooks.com/teaser.jpg",
+        "alt": {
+          "zh": "作者公开站点 Teaser (teaser.jpg)",
+          "en": "作者公开站点 Teaser (teaser.jpg)"
+        },
+        "label": {
+          "zh": "原作者网站图像 · 仅外链参考",
+          "en": "AUTHOR FIGURE · EXTERNAL LINK ONLY"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-figure",
+        "original_name": "作者公开站点 Teaser (teaser.jpg)",
+        "original_source": "https://instruct-pix2pix.timothybrooks.com/teaser.jpg",
+        "capture_date": "2026-10-25",
+        "credit": "Tim Brooks, Aleksander Holynski, Alexei A. Efros",
+        "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "同一张输入图与不同自然语言指令、输出效果成组展示，任务一眼清楚，适合学习低说明成本的图像编辑 Teaser。",
+          "en": "Pairs a source image with instruction-conditioned outcomes; a strong image-editing teaser that requires little explanation."
+        },
+        "composition": {
+          "zh": [
+            "保持输入身份可对齐；重复网格提供稳定比较基准，短指令直接担当图注；复杂编辑故事以视觉变化而不是模块说明展开。"
+          ],
+          "en": [
+            "Repeated source identity anchors comparisons; brief instructions double as captions; visual changes carry the claim without pipeline clutter."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "需要通过多个可感知的视觉变化讲清一个 AIGC 方法的作用时。"
+          ],
+          "en": [
+            "Showing the purpose of an AIGC editing method through several visually legible transformations."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "图中绘画和人像有额外内容权利；外链仅用于学习排版，不授予改编或再分发许可。",
+            "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+          ],
+          "en": [
+            "Visual sources may contain separate artwork rights; linking is not permission to adapt or redistribute the images.",
+            "This is an attributed author-hosted reference, not an independently reproduced result."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "visual_category": "teaser",
+        "selected_on": "2026-10-25",
+        "source_verification": "author-project-and-repository-readme",
+        "verified_site_section": "作者公开站点 Teaser (teaser.jpg)",
+        "editorial_scope": "design-composition-evidence-communication",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual"
+    },
+    {
+      "id": "gridar-teaser",
+      "title": "GridAR · 逐块生成与候选筛选 Teaser",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "teaser",
+        "candidate-comparison",
+        "progressive-generation"
+      ],
+      "description": {
+        "zh": "把局部候选、保留与拒绝、最终生成效果组织成视觉链，让读者在看方法文字之前直观理解为何分配测试时计算。",
+        "en": "A visual story of partial candidates, acceptance/rejection and completed outputs, communicating selective test-time compute without a dense diagram."
+      },
+      "keywords": {
+        "zh": [
+          "GridAR",
+          "teaser",
+          "candidate-comparison",
+          "progressive-generation",
+          "高审美"
+        ],
+        "en": [
+          "GridAR",
+          "teaser",
+          "candidate-comparison",
+          "progressive-generation",
+          "research-figure",
+          "teaser"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://grid-ar.github.io/",
+        "officialFigure": "https://github.com/grid-ar/grid-ar.github.io/blob/main/static/images/GridAR_intro.png"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/grid-ar/grid-ar.github.io/main/static/images/GridAR_intro.png"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "展示生成式搜索、验证器筛选或其他具有候选比较的算法。"
+          ],
+          "en": [
+            "Illustrating generation search, verifier selection or algorithms with candidate-based decisions."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "局部图块与完整图之间具有形状对应；✅ / ❌ 的判定符号比大段文字更快传达差异；候选对照落在真实图像上。"
+          ],
+          "en": [
+            "Partial crops correspond to full outputs; selection marks rapidly communicate decisions; actual generated imagery grounds comparisons."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "Teaser 中的选择标志是论文叙事，不得直接当作我们的外部独立实验核验。"
+          ],
+          "en": [
+            "Selection annotations explain the authors' method; they are not independent replication evidence."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://raw.githubusercontent.com/grid-ar/grid-ar.github.io/main/static/images/GridAR_intro.png",
+        "alt": {
+          "zh": "官网 Teaser Hero（GridAR_intro.png）",
+          "en": "官网 Teaser Hero（GridAR_intro.png）"
+        },
+        "label": {
+          "zh": "原作者网站图像 · 仅外链参考",
+          "en": "AUTHOR FIGURE · EXTERNAL LINK ONLY"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-figure",
+        "original_name": "官网 Teaser Hero（GridAR_intro.png）",
+        "original_source": "https://github.com/grid-ar/grid-ar.github.io/blob/main/static/images/GridAR_intro.png",
+        "capture_date": "2026-10-25",
+        "credit": "GridAR 项目作者（Joonhyung Park 等）",
+        "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "把局部候选、保留与拒绝、最终生成效果组织成视觉链，让读者在看方法文字之前直观理解为何分配测试时计算。",
+          "en": "A visual story of partial candidates, acceptance/rejection and completed outputs, communicating selective test-time compute without a dense diagram."
+        },
+        "composition": {
+          "zh": [
+            "局部图块与完整图之间具有形状对应；✅ / ❌ 的判定符号比大段文字更快传达差异；候选对照落在真实图像上。"
+          ],
+          "en": [
+            "Partial crops correspond to full outputs; selection marks rapidly communicate decisions; actual generated imagery grounds comparisons."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "展示生成式搜索、验证器筛选或其他具有候选比较的算法。"
+          ],
+          "en": [
+            "Illustrating generation search, verifier selection or algorithms with candidate-based decisions."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "Teaser 中的选择标志是论文叙事，不得直接当作我们的外部独立实验核验。",
+            "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+          ],
+          "en": [
+            "Selection annotations explain the authors' method; they are not independent replication evidence.",
+            "This is an attributed author-hosted reference, not an independently reproduced result."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "visual_category": "teaser",
+        "selected_on": "2026-10-25",
+        "source_verification": "author-site-and-repository-path",
+        "verified_site_section": "官网 Teaser Hero（GridAR_intro.png）",
+        "editorial_scope": "design-composition-evidence-communication",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual"
+    },
+    {
+      "id": "ultraedit-qualitative",
+      "title": "UltraEdit · 多方法图像编辑定性对比",
+      "kind": "visual-reference",
+      "stages": [
+        "evaluation",
+        "writing"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "qualitative-results",
+        "results-comparison",
+        "image-editing",
+        "mask-overlay"
+      ],
+      "description": {
+        "zh": "输入、指令、掩码和多种生成结果采用可追踪的对齐网格，适合定性比较而不只陈列漂亮样例。",
+        "en": "Source images, instructions, region cues and method outputs align in a consistent matrix to support fair qualitative reading."
+      },
+      "keywords": {
+        "zh": [
+          "UltraEdit",
+          "qualitative-results",
+          "results-comparison",
+          "image-editing",
+          "mask-overlay",
+          "高审美",
+          "结果图"
+        ],
+        "en": [
+          "UltraEdit",
+          "qualitative-results",
+          "results-comparison",
+          "image-editing",
+          "mask-overlay",
+          "research-figure",
+          "results"
+        ]
+      },
+      "year": "2024",
+      "language": "zh+en",
+      "links": {
+        "source": "https://ultra-editing.github.io/",
+        "officialFigure": "https://github.com/ultra-editing/ultra-editing.github.io/blob/main/ultraEditi_files/figs/qual_eval_mag_single.png"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/ultra-editing/ultra-editing.github.io/main/ultraEditi_files/figs/qual_eval_mag_single.png"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要展示图像编辑、补全、局部约束等任务的定性实验对照。"
+          ],
+          "en": [
+            "Building qualitative result grids for editing, inpainting or local visual-control tasks."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "列与行的语义保持固定，局部编辑的目标区域有可见参照；相同输入的多种输出便于横向复查细节。"
+          ],
+          "en": [
+            "Keep semantics fixed across rows and columns; show edit-region context; align alternative outputs against identical source images."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "只是定性案例，不能从几张精选图片推断平均性能或统计显著性。"
+          ],
+          "en": [
+            "Selected qualitative examples do not prove average superiority or statistical significance."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://raw.githubusercontent.com/ultra-editing/ultra-editing.github.io/main/ultraEditi_files/figs/qual_eval_mag_single.png",
+        "alt": {
+          "zh": "官网 Qualitative Evaluations / Single-turn（qual_eval_mag_single.png）",
+          "en": "官网 Qualitative Evaluations / Single-turn（qual_eval_mag_single.png）"
+        },
+        "label": {
+          "zh": "原作者网站图像 · 仅外链参考",
+          "en": "AUTHOR FIGURE · EXTERNAL LINK ONLY"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-figure",
+        "original_name": "官网 Qualitative Evaluations / Single-turn（qual_eval_mag_single.png）",
+        "original_source": "https://github.com/ultra-editing/ultra-editing.github.io/blob/main/ultraEditi_files/figs/qual_eval_mag_single.png",
+        "capture_date": "2026-10-25",
+        "credit": "UltraEdit 项目作者",
+        "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "输入、指令、掩码和多种生成结果采用可追踪的对齐网格，适合定性比较而不只陈列漂亮样例。",
+          "en": "Source images, instructions, region cues and method outputs align in a consistent matrix to support fair qualitative reading."
+        },
+        "composition": {
+          "zh": [
+            "列与行的语义保持固定，局部编辑的目标区域有可见参照；相同输入的多种输出便于横向复查细节。"
+          ],
+          "en": [
+            "Keep semantics fixed across rows and columns; show edit-region context; align alternative outputs against identical source images."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "需要展示图像编辑、补全、局部约束等任务的定性实验对照。"
+          ],
+          "en": [
+            "Building qualitative result grids for editing, inpainting or local visual-control tasks."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "只是定性案例，不能从几张精选图片推断平均性能或统计显著性。",
+            "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+          ],
+          "en": [
+            "Selected qualitative examples do not prove average superiority or statistical significance.",
+            "This is an attributed author-hosted reference, not an independently reproduced result."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "visual_category": "results",
+        "selected_on": "2026-10-25",
+        "source_verification": "author-site-and-repository-path",
+        "verified_site_section": "官网 Qualitative Evaluations / Single-turn（qual_eval_mag_single.png）",
+        "editorial_scope": "design-composition-evidence-communication",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual"
+    },
+    {
+      "id": "fastnerf-zoom-results",
+      "title": "Fast Learning Radiance Fields · 局部放大式视觉对比",
+      "kind": "visual-reference",
+      "stages": [
+        "evaluation",
+        "writing"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "qualitative-results",
+        "results-comparison",
+        "zoom-inset",
+        "novel-view-synthesis"
+      ],
+      "description": {
+        "zh": "完整场景之外叠加两组彩色边框与对应局部放大图，让画质差异可以定位到具体纹理和几何细节。",
+        "en": "Pairs full rendered scenes with colored detail crops so differences can be inspected at a known image location."
+      },
+      "keywords": {
+        "zh": [
+          "Fast Learning Radiance Fields",
+          "qualitative-results",
+          "results-comparison",
+          "zoom-inset",
+          "novel-view-synthesis",
+          "高审美",
+          "结果图"
+        ],
+        "en": [
+          "Fast Learning Radiance Fields",
+          "qualitative-results",
+          "results-comparison",
+          "zoom-inset",
+          "novel-view-synthesis",
+          "research-figure",
+          "results"
+        ]
+      },
+      "year": "2023",
+      "language": "zh+en",
+      "links": {
+        "source": "https://wen-yuan-zhang.github.io/Fast-Learning-NeRF/",
+        "officialFigure": "https://github.com/wen-yuan-zhang/Fast-Learning-NeRF/blob/main/imgs/compare-mipnerf360.png"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/wen-yuan-zhang/Fast-Learning-NeRF/main/imgs/compare-mipnerf360.png"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "评价重建、NeRF、超分和图像复原结果，差异集中在小区域时。"
+          ],
+          "en": [
+            "Comparing reconstruction, novel-view synthesis or restoration models when differences are localized."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "全局场景保留可解释上下文，局部 crop 用同色边框连接；放大窗口能突出边缘、纹理而不抛弃原视图。"
+          ],
+          "en": [
+            "A full-scene context pairs with matching colored zoom-insets, focusing attention on texture and edge differences."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不同输出应使用同一 crop 坐标、尺度和输入条件；不能只挑某个方法最差的位置。"
+          ],
+          "en": [
+            "Crops must share coordinates, scale and conditions; do not selectively magnify a baseline's weakest region."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://raw.githubusercontent.com/wen-yuan-zhang/Fast-Learning-NeRF/main/imgs/compare-mipnerf360.png",
+        "alt": {
+          "zh": "项目源码 README / Comparison on Mip-NeRF 360（imgs/compare-mipnerf360.png）",
+          "en": "项目源码 README / Comparison on Mip-NeRF 360（imgs/compare-mipnerf360.png）"
+        },
+        "label": {
+          "zh": "原作者网站图像 · 仅外链参考",
+          "en": "AUTHOR FIGURE · EXTERNAL LINK ONLY"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-figure",
+        "original_name": "项目源码 README / Comparison on Mip-NeRF 360（imgs/compare-mipnerf360.png）",
+        "original_source": "https://github.com/wen-yuan-zhang/Fast-Learning-NeRF/blob/main/imgs/compare-mipnerf360.png",
+        "capture_date": "2026-10-25",
+        "credit": "Fast Learning Radiance Fields 作者 Wenyuan Zhang 等",
+        "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "完整场景之外叠加两组彩色边框与对应局部放大图，让画质差异可以定位到具体纹理和几何细节。",
+          "en": "Pairs full rendered scenes with colored detail crops so differences can be inspected at a known image location."
+        },
+        "composition": {
+          "zh": [
+            "全局场景保留可解释上下文，局部 crop 用同色边框连接；放大窗口能突出边缘、纹理而不抛弃原视图。"
+          ],
+          "en": [
+            "A full-scene context pairs with matching colored zoom-insets, focusing attention on texture and edge differences."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "评价重建、NeRF、超分和图像复原结果，差异集中在小区域时。"
+          ],
+          "en": [
+            "Comparing reconstruction, novel-view synthesis or restoration models when differences are localized."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "不同输出应使用同一 crop 坐标、尺度和输入条件；不能只挑某个方法最差的位置。",
+            "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+          ],
+          "en": [
+            "Crops must share coordinates, scale and conditions; do not selectively magnify a baseline's weakest region.",
+            "This is an attributed author-hosted reference, not an independently reproduced result."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "visual_category": "results",
+        "selected_on": "2026-10-25",
+        "source_verification": "author-site-and-repository-path",
+        "verified_site_section": "项目源码 README / Comparison on Mip-NeRF 360（imgs/compare-mipnerf360.png）",
+        "editorial_scope": "design-composition-evidence-communication",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual"
+    },
+    {
+      "id": "specialist-diffusion-ablation",
+      "title": "Specialist Diffusion · 逐组件生成结果消融",
+      "kind": "visual-reference",
+      "stages": [
+        "evaluation",
+        "writing"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "ablation",
+        "component-ablation",
+        "image-generation",
+        "results-comparison"
+      ],
+      "description": {
+        "zh": "以完全相同的 Prompt 对齐完整模型与删除组件后的输出，用组内固定样例帮助读者判断模块贡献。",
+        "en": "A true component-ablation grid contrasting the full model with removed components under shared prompts."
+      },
+      "keywords": {
+        "zh": [
+          "Specialist Diffusion",
+          "ablation",
+          "component-ablation",
+          "image-generation",
+          "results-comparison",
+          "高审美",
+          "消融"
+        ],
+        "en": [
+          "Specialist Diffusion",
+          "ablation",
+          "component-ablation",
+          "image-generation",
+          "results-comparison",
+          "research-figure",
+          "ablation"
+        ]
+      },
+      "year": "2024",
+      "language": "zh+en",
+      "links": {
+        "source": "https://specialist-diffusion.github.io/",
+        "officialFigure": "https://github.com/specialist-diffusion/specialist-diffusion.github.io/blob/main/static/images/ablation.png"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/specialist-diffusion/specialist-diffusion.github.io/main/static/images/ablation.png"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要在视觉生成论文中直观展示一项组件被移除后质量变化时。"
+          ],
+          "en": [
+            "Visualizing component removal under matched image-generation prompts."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "横向区分完整方法和 w/o 变体，纵向固定目标提示；分组、留白和标签让消融差异成为主视觉。"
+          ],
+          "en": [
+            "Treat the full method and component removals as parallel columns, with prompts held constant across examples."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "仅看代表性图片不能证明定量消融；还须给出公平条件、样本量和汇总指标。"
+          ],
+          "en": [
+            "Representative ablation images are not substitute for matched quantitative metrics and reproducibility."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://raw.githubusercontent.com/specialist-diffusion/specialist-diffusion.github.io/main/static/images/ablation.png",
+        "alt": {
+          "zh": "官网 Ablation Study（static/images/ablation.png）",
+          "en": "官网 Ablation Study（static/images/ablation.png）"
+        },
+        "label": {
+          "zh": "原作者网站图像 · 仅外链参考",
+          "en": "AUTHOR FIGURE · EXTERNAL LINK ONLY"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-figure",
+        "original_name": "官网 Ablation Study（static/images/ablation.png）",
+        "original_source": "https://github.com/specialist-diffusion/specialist-diffusion.github.io/blob/main/static/images/ablation.png",
+        "capture_date": "2026-10-25",
+        "credit": "Specialist Diffusion 项目作者",
+        "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "以完全相同的 Prompt 对齐完整模型与删除组件后的输出，用组内固定样例帮助读者判断模块贡献。",
+          "en": "A true component-ablation grid contrasting the full model with removed components under shared prompts."
+        },
+        "composition": {
+          "zh": [
+            "横向区分完整方法和 w/o 变体，纵向固定目标提示；分组、留白和标签让消融差异成为主视觉。"
+          ],
+          "en": [
+            "Treat the full method and component removals as parallel columns, with prompts held constant across examples."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "需要在视觉生成论文中直观展示一项组件被移除后质量变化时。"
+          ],
+          "en": [
+            "Visualizing component removal under matched image-generation prompts."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "仅看代表性图片不能证明定量消融；还须给出公平条件、样本量和汇总指标。",
+            "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+          ],
+          "en": [
+            "Representative ablation images are not substitute for matched quantitative metrics and reproducibility.",
+            "This is an attributed author-hosted reference, not an independently reproduced result."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "visual_category": "ablation",
+        "selected_on": "2026-10-25",
+        "source_verification": "author-site-and-repository-path",
+        "verified_site_section": "官网 Ablation Study（static/images/ablation.png）",
+        "editorial_scope": "design-composition-evidence-communication",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual"
+    },
+    {
+      "id": "egoengine-ablation",
+      "title": "EgoEngine · 视觉与动作生成分支消融",
+      "kind": "visual-reference",
+      "stages": [
+        "evaluation",
+        "writing"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "ablation",
+        "component-ablation",
+        "robotics-benchmark",
+        "quantitative-results"
+      ],
+      "description": {
+        "zh": "官网把不同训练生成分支的作用以真机任务成功率消融图呈现，适合作为“机制贡献—实际指标”的布局参考。",
+        "en": "An author-labeled ablation of visual and action generation branches, tied to real-robot policy evaluation rather than a decorative comparison."
+      },
+      "keywords": {
+        "zh": [
+          "EgoEngine",
+          "ablation",
+          "component-ablation",
+          "robotics-benchmark",
+          "quantitative-results",
+          "高审美",
+          "消融"
+        ],
+        "en": [
+          "EgoEngine",
+          "ablation",
+          "component-ablation",
+          "robotics-benchmark",
+          "quantitative-results",
+          "research-figure",
+          "ablation"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://egoengine.github.io/",
+        "officialFigure": "https://github.com/egoengine/egoengine.github.io/blob/main/fig/ablation.png"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/egoengine/egoengine.github.io/main/fig/ablation.png"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "机器人和多模块系统需要证明究竟哪个子模块产生实际收益时。"
+          ],
+          "en": [
+            "Presenting which module contributes to a robotics system's measured outcomes."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "相同任务和指标下并列不同组件组合；与结果主图放在同一评价章节，便于追踪完整系统收益。"
+          ],
+          "en": [
+            "Align component variants under consistent task and success-rate metrics, adjacent to a separate main-outcome chart."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "原作者结果不等于 OpenResearchAssets 独立复现；图中定量差异应以作者论文和实验设置为准。"
+          ],
+          "en": [
+            "Author-reported ablations are not independent replication; check the source paper and matched evaluation settings."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://raw.githubusercontent.com/egoengine/egoengine.github.io/main/fig/ablation.png",
+        "alt": {
+          "zh": "官网 Rollout Performance / Ablation（fig/ablation.png）",
+          "en": "官网 Rollout Performance / Ablation（fig/ablation.png）"
+        },
+        "label": {
+          "zh": "原作者网站图像 · 仅外链参考",
+          "en": "AUTHOR FIGURE · EXTERNAL LINK ONLY"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-figure",
+        "original_name": "官网 Rollout Performance / Ablation（fig/ablation.png）",
+        "original_source": "https://github.com/egoengine/egoengine.github.io/blob/main/fig/ablation.png",
+        "capture_date": "2026-10-25",
+        "credit": "EgoEngine 项目作者",
+        "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "官网把不同训练生成分支的作用以真机任务成功率消融图呈现，适合作为“机制贡献—实际指标”的布局参考。",
+          "en": "An author-labeled ablation of visual and action generation branches, tied to real-robot policy evaluation rather than a decorative comparison."
+        },
+        "composition": {
+          "zh": [
+            "相同任务和指标下并列不同组件组合；与结果主图放在同一评价章节，便于追踪完整系统收益。"
+          ],
+          "en": [
+            "Align component variants under consistent task and success-rate metrics, adjacent to a separate main-outcome chart."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "机器人和多模块系统需要证明究竟哪个子模块产生实际收益时。"
+          ],
+          "en": [
+            "Presenting which module contributes to a robotics system's measured outcomes."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "原作者结果不等于 OpenResearchAssets 独立复现；图中定量差异应以作者论文和实验设置为准。",
+            "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+          ],
+          "en": [
+            "Author-reported ablations are not independent replication; check the source paper and matched evaluation settings.",
+            "This is an attributed author-hosted reference, not an independently reproduced result."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "visual_category": "ablation",
+        "selected_on": "2026-10-25",
+        "source_verification": "author-site-and-repository-path",
+        "verified_site_section": "官网 Rollout Performance / Ablation（fig/ablation.png）",
+        "editorial_scope": "design-composition-evidence-communication",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual"
+    },
+    {
+      "id": "nerfies-project-site",
+      "title": "Nerfies · 视频优先的交互科研主页",
+      "kind": "website-reference",
+      "stages": [
+        "communication"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "project-website",
+        "interactive-demo",
+        "research-homepage",
+        "video-showcase"
+      ],
+      "description": {
+        "zh": "以自动播放的视频 Hero、极简论文/代码入口和可操作的形变插值滑杆组织科研证据；此缩略图只是其交互模块的一帧。",
+        "en": "A video-first academic site with compact paper/code actions and an interactive deformation slider; its thumbnail is a demo frame, not a viewport screenshot."
+      },
+      "keywords": {
+        "zh": [
+          "Nerfies",
+          "project-website",
+          "interactive-demo",
+          "research-homepage",
+          "video-showcase",
+          "高审美",
+          "项目主页"
+        ],
+        "en": [
+          "Nerfies",
+          "project-website",
+          "interactive-demo",
+          "research-homepage",
+          "video-showcase",
+          "research-figure",
+          "project-site"
+        ]
+      },
+      "year": "2021",
+      "language": "zh+en",
+      "links": {
+        "source": "https://nerfies.github.io/",
+        "officialFigure": "https://github.com/nerfies/nerfies.github.io/blob/main/static/images/interpolate_start.jpg"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/nerfies/nerfies.github.io/main/static/images/interpolate_start.jpg"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "设计以动态视觉结果为核心、需要低门槛交互验证的学术主页。"
+          ],
+          "en": [
+            "Designing project sites whose strongest evidence is a dynamic rendering or user-controllable demo."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "明确标题和资源链接置于首屏，视频演示紧接其后；可交互滑杆让读者主动观察模型在两端状态之间的变化。"
+          ],
+          "en": [
+            "A strong title and canonical links lead into a video hero; an interactive slider invites readers to inspect interpolation rather than view a static gallery."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "本站仅外链一个网站交互素材作识别，不能据此称其为真实首屏截图；交互效果应打开原站体验。"
+          ],
+          "en": [
+            "Preview is one official demo frame, not a captured homepage; inspect the live site for behavior."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://raw.githubusercontent.com/nerfies/nerfies.github.io/main/static/images/interpolate_start.jpg",
+        "alt": {
+          "zh": "官网交互滑杆 Start Frame（static/images/interpolate_start.jpg），并非网站首屏截图",
+          "en": "官网交互滑杆 Start Frame（static/images/interpolate_start.jpg），并非网站首屏截图"
+        },
+        "label": {
+          "zh": "作者官网交互素材 · 非网页截图",
+          "en": "SOURCE SITE MEDIA · NOT A SCREENSHOT"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-media",
+        "original_name": "官网交互滑杆 Start Frame（static/images/interpolate_start.jpg），并非网站首屏截图",
+        "original_source": "https://github.com/nerfies/nerfies.github.io/blob/main/static/images/interpolate_start.jpg",
+        "capture_date": "2026-10-25",
+        "credit": "Nerfies 项目作者 Keunhong Park 等",
+        "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "以自动播放的视频 Hero、极简论文/代码入口和可操作的形变插值滑杆组织科研证据；此缩略图只是其交互模块的一帧。",
+          "en": "A video-first academic site with compact paper/code actions and an interactive deformation slider; its thumbnail is a demo frame, not a viewport screenshot."
+        },
+        "composition": {
+          "zh": [
+            "明确标题和资源链接置于首屏，视频演示紧接其后；可交互滑杆让读者主动观察模型在两端状态之间的变化。"
+          ],
+          "en": [
+            "A strong title and canonical links lead into a video hero; an interactive slider invites readers to inspect interpolation rather than view a static gallery."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "设计以动态视觉结果为核心、需要低门槛交互验证的学术主页。"
+          ],
+          "en": [
+            "Designing project sites whose strongest evidence is a dynamic rendering or user-controllable demo."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "本站仅外链一个网站交互素材作识别，不能据此称其为真实首屏截图；交互效果应打开原站体验。",
+            "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+          ],
+          "en": [
+            "Preview is one official demo frame, not a captured homepage; inspect the live site for behavior.",
+            "This is an attributed author-hosted reference, not an independently reproduced result."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "visual_category": "project-site",
+        "selected_on": "2026-10-25",
+        "source_verification": "author-site-and-repository-path",
+        "verified_site_section": "官网交互滑杆 Start Frame（static/images/interpolate_start.jpg），并非网站首屏截图",
+        "editorial_scope": "design-composition-evidence-communication",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual"
+    },
+    {
+      "id": "hypernerf-project-site",
+      "title": "HyperNeRF · 交互高维空间可视化主页",
+      "kind": "website-reference",
+      "stages": [
+        "communication"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "project-website",
+        "interactive-demo",
+        "research-homepage",
+        "scientific-visualization"
+      ],
+      "description": {
+        "zh": "把抽象高维表示设计成可移动坐标与对应渲染的交互演示；预览来自作者网页交互区，而非整页截图。",
+        "en": "An interactive higher-dimensional representation explorer couples a controllable coordinate to a rendered view; thumbnail is a source demo asset."
+      },
+      "keywords": {
+        "zh": [
+          "HyperNeRF",
+          "project-website",
+          "interactive-demo",
+          "research-homepage",
+          "scientific-visualization",
+          "高审美",
+          "项目主页"
+        ],
+        "en": [
+          "HyperNeRF",
+          "project-website",
+          "interactive-demo",
+          "research-homepage",
+          "scientific-visualization",
+          "research-figure",
+          "project-site"
+        ]
+      },
+      "year": "2021",
+      "language": "zh+en",
+      "links": {
+        "source": "https://hypernerf.github.io/",
+        "officialFigure": "https://github.com/hypernerf/hypernerf.github.io/blob/main/static/figures/hyper_grid.jpg"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/hypernerf/hypernerf.github.io/main/static/figures/hyper_grid.jpg"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "展示抽象潜变量、交互式参数影响或非刚性 3D 表示的科研网页。"
+          ],
+          "en": [
+            "Communicating abstract latent parameters, 3D variation and responsive model demonstrations on a project site."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "抽象坐标和真实结果并排，交互控件承担解释变量的作用；比静态架构图更有助于建立直觉。"
+          ],
+          "en": [
+            "Pair a parameter-space widget with a synchronized rendered scene; interaction becomes part of the scientific explanation."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "源图不包含交互行为；不要用单帧素材替代对官网 JS 动画、可访问性及实际运行的审查。"
+          ],
+          "en": [
+            "A single frame cannot substitute for testing the original interactive widget and its actual behavior."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://raw.githubusercontent.com/hypernerf/hypernerf.github.io/main/static/figures/hyper_grid.jpg",
+        "alt": {
+          "zh": "官网 hyper-space 交互模块中的示例图（hyper_grid.jpg），并非网站首屏截图",
+          "en": "官网 hyper-space 交互模块中的示例图（hyper_grid.jpg），并非网站首屏截图"
+        },
+        "label": {
+          "zh": "作者官网交互素材 · 非网页截图",
+          "en": "SOURCE SITE MEDIA · NOT A SCREENSHOT"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-media",
+        "original_name": "官网 hyper-space 交互模块中的示例图（hyper_grid.jpg），并非网站首屏截图",
+        "original_source": "https://github.com/hypernerf/hypernerf.github.io/blob/main/static/figures/hyper_grid.jpg",
+        "capture_date": "2026-10-25",
+        "credit": "HyperNeRF 项目作者 Keunhong Park 等",
+        "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "把抽象高维表示设计成可移动坐标与对应渲染的交互演示；预览来自作者网页交互区，而非整页截图。",
+          "en": "An interactive higher-dimensional representation explorer couples a controllable coordinate to a rendered view; thumbnail is a source demo asset."
+        },
+        "composition": {
+          "zh": [
+            "抽象坐标和真实结果并排，交互控件承担解释变量的作用；比静态架构图更有助于建立直觉。"
+          ],
+          "en": [
+            "Pair a parameter-space widget with a synchronized rendered scene; interaction becomes part of the scientific explanation."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "展示抽象潜变量、交互式参数影响或非刚性 3D 表示的科研网页。"
+          ],
+          "en": [
+            "Communicating abstract latent parameters, 3D variation and responsive model demonstrations on a project site."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "源图不包含交互行为；不要用单帧素材替代对官网 JS 动画、可访问性及实际运行的审查。",
+            "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+          ],
+          "en": [
+            "A single frame cannot substitute for testing the original interactive widget and its actual behavior.",
+            "This is an attributed author-hosted reference, not an independently reproduced result."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "visual_category": "project-site",
+        "selected_on": "2026-10-25",
+        "source_verification": "author-site-and-repository-path",
+        "verified_site_section": "官网 hyper-space 交互模块中的示例图（hyper_grid.jpg），并非网站首屏截图",
+        "editorial_scope": "design-composition-evidence-communication",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual"
+    },
+    {
       "id": "topconf-figure-gallery",
       "title": "Top-Conf Figure Gallery",
       "kind": "resource-index",

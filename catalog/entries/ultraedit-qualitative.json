@@ -1,0 +1,142 @@
+{
+  "id": "ultraedit-qualitative",
+  "title": "UltraEdit · 多方法图像编辑定性对比",
+  "kind": "visual-reference",
+  "stages": [
+    "evaluation",
+    "writing"
+  ],
+  "domains": [
+    "vision"
+  ],
+  "tasks": [
+    "qualitative-results",
+    "results-comparison",
+    "image-editing",
+    "mask-overlay"
+  ],
+  "description": {
+    "zh": "输入、指令、掩码和多种生成结果采用可追踪的对齐网格，适合定性比较而不只陈列漂亮样例。",
+    "en": "Source images, instructions, region cues and method outputs align in a consistent matrix to support fair qualitative reading."
+  },
+  "keywords": {
+    "zh": [
+      "UltraEdit",
+      "qualitative-results",
+      "results-comparison",
+      "image-editing",
+      "mask-overlay",
+      "高审美",
+      "结果图"
+    ],
+    "en": [
+      "UltraEdit",
+      "qualitative-results",
+      "results-comparison",
+      "image-editing",
+      "mask-overlay",
+      "research-figure",
+      "results"
+    ]
+  },
+  "year": "2024",
+  "language": "zh+en",
+  "links": {
+    "source": "https://ultra-editing.github.io/",
+    "officialFigure": "https://github.com/ultra-editing/ultra-editing.github.io/blob/main/ultraEditi_files/figs/qual_eval_mag_single.png"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "externally-linked-not-relicensed",
+    "source_image_url": "https://raw.githubusercontent.com/ultra-editing/ultra-editing.github.io/main/ultraEditi_files/figs/qual_eval_mag_single.png"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要展示图像编辑、补全、局部约束等任务的定性实验对照。"
+      ],
+      "en": [
+        "Building qualitative result grids for editing, inpainting or local visual-control tasks."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "列与行的语义保持固定，局部编辑的目标区域有可见参照；相同输入的多种输出便于横向复查细节。"
+      ],
+      "en": [
+        "Keep semantics fixed across rows and columns; show edit-region context; align alternative outputs against identical source images."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "只是定性案例，不能从几张精选图片推断平均性能或统计显著性。"
+      ],
+      "en": [
+        "Selected qualitative examples do not prove average superiority or statistical significance."
+      ]
+    }
+  },
+  "visual": {
+    "kind": "external-reference-image",
+    "src": "https://raw.githubusercontent.com/ultra-editing/ultra-editing.github.io/main/ultraEditi_files/figs/qual_eval_mag_single.png",
+    "alt": {
+      "zh": "官网 Qualitative Evaluations / Single-turn（qual_eval_mag_single.png）",
+      "en": "官网 Qualitative Evaluations / Single-turn（qual_eval_mag_single.png）"
+    },
+    "label": {
+      "zh": "原作者网站图像 · 仅外链参考",
+      "en": "AUTHOR FIGURE · EXTERNAL LINK ONLY"
+    }
+  },
+  "figureIdentity": {
+    "type": "project-website-figure",
+    "original_name": "官网 Qualitative Evaluations / Single-turn（qual_eval_mag_single.png）",
+    "original_source": "https://github.com/ultra-editing/ultra-editing.github.io/blob/main/ultraEditi_files/figs/qual_eval_mag_single.png",
+    "capture_date": "2026-10-25",
+    "credit": "UltraEdit 项目作者",
+    "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "输入、指令、掩码和多种生成结果采用可追踪的对齐网格，适合定性比较而不只陈列漂亮样例。",
+      "en": "Source images, instructions, region cues and method outputs align in a consistent matrix to support fair qualitative reading."
+    },
+    "composition": {
+      "zh": [
+        "列与行的语义保持固定，局部编辑的目标区域有可见参照；相同输入的多种输出便于横向复查细节。"
+      ],
+      "en": [
+        "Keep semantics fixed across rows and columns; show edit-region context; align alternative outputs against identical source images."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "需要展示图像编辑、补全、局部约束等任务的定性实验对照。"
+      ],
+      "en": [
+        "Building qualitative result grids for editing, inpainting or local visual-control tasks."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "只是定性案例，不能从几张精选图片推断平均性能或统计显著性。",
+        "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+      ],
+      "en": [
+        "Selected qualitative examples do not prove average superiority or statistical significance.",
+        "This is an attributed author-hosted reference, not an independently reproduced result."
+      ]
+    }
+  },
+  "curation": {
+    "track": "visual",
+    "visual_category": "results",
+    "selected_on": "2026-10-25",
+    "source_verification": "author-site-and-repository-path",
+    "verified_site_section": "官网 Qualitative Evaluations / Single-turn（qual_eval_mag_single.png）",
+    "editorial_scope": "design-composition-evidence-communication",
+    "asset_residency": "external-original-no-hosted-copy"
+  },
+  "previewStyle": "curated-visual"
+}

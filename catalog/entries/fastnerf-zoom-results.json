@@ -1,0 +1,142 @@
+{
+  "id": "fastnerf-zoom-results",
+  "title": "Fast Learning Radiance Fields · 局部放大式视觉对比",
+  "kind": "visual-reference",
+  "stages": [
+    "evaluation",
+    "writing"
+  ],
+  "domains": [
+    "vision"
+  ],
+  "tasks": [
+    "qualitative-results",
+    "results-comparison",
+    "zoom-inset",
+    "novel-view-synthesis"
+  ],
+  "description": {
+    "zh": "完整场景之外叠加两组彩色边框与对应局部放大图，让画质差异可以定位到具体纹理和几何细节。",
+    "en": "Pairs full rendered scenes with colored detail crops so differences can be inspected at a known image location."
+  },
+  "keywords": {
+    "zh": [
+      "Fast Learning Radiance Fields",
+      "qualitative-results",
+      "results-comparison",
+      "zoom-inset",
+      "novel-view-synthesis",
+      "高审美",
+      "结果图"
+    ],
+    "en": [
+      "Fast Learning Radiance Fields",
+      "qualitative-results",
+      "results-comparison",
+      "zoom-inset",
+      "novel-view-synthesis",
+      "research-figure",
+      "results"
+    ]
+  },
+  "year": "2023",
+  "language": "zh+en",
+  "links": {
+    "source": "https://wen-yuan-zhang.github.io/Fast-Learning-NeRF/",
+    "officialFigure": "https://github.com/wen-yuan-zhang/Fast-Learning-NeRF/blob/main/imgs/compare-mipnerf360.png"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "externally-linked-not-relicensed",
+    "source_image_url": "https://raw.githubusercontent.com/wen-yuan-zhang/Fast-Learning-NeRF/main/imgs/compare-mipnerf360.png"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "评价重建、NeRF、超分和图像复原结果，差异集中在小区域时。"
+      ],
+      "en": [
+        "Comparing reconstruction, novel-view synthesis or restoration models when differences are localized."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "全局场景保留可解释上下文，局部 crop 用同色边框连接；放大窗口能突出边缘、纹理而不抛弃原视图。"
+      ],
+      "en": [
+        "A full-scene context pairs with matching colored zoom-insets, focusing attention on texture and edge differences."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不同输出应使用同一 crop 坐标、尺度和输入条件；不能只挑某个方法最差的位置。"
+      ],
+      "en": [
+        "Crops must share coordinates, scale and conditions; do not selectively magnify a baseline's weakest region."
+      ]
+    }
+  },
+  "visual": {
+    "kind": "external-reference-image",
+    "src": "https://raw.githubusercontent.com/wen-yuan-zhang/Fast-Learning-NeRF/main/imgs/compare-mipnerf360.png",
+    "alt": {
+      "zh": "项目源码 README / Comparison on Mip-NeRF 360（imgs/compare-mipnerf360.png）",
+      "en": "项目源码 README / Comparison on Mip-NeRF 360（imgs/compare-mipnerf360.png）"
+    },
+    "label": {
+      "zh": "原作者网站图像 · 仅外链参考",
+      "en": "AUTHOR FIGURE · EXTERNAL LINK ONLY"
+    }
+  },
+  "figureIdentity": {
+    "type": "project-website-figure",
+    "original_name": "项目源码 README / Comparison on Mip-NeRF 360（imgs/compare-mipnerf360.png）",
+    "original_source": "https://github.com/wen-yuan-zhang/Fast-Learning-NeRF/blob/main/imgs/compare-mipnerf360.png",
+    "capture_date": "2026-10-25",
+    "credit": "Fast Learning Radiance Fields 作者 Wenyuan Zhang 等",
+    "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "完整场景之外叠加两组彩色边框与对应局部放大图，让画质差异可以定位到具体纹理和几何细节。",
+      "en": "Pairs full rendered scenes with colored detail crops so differences can be inspected at a known image location."
+    },
+    "composition": {
+      "zh": [
+        "全局场景保留可解释上下文，局部 crop 用同色边框连接；放大窗口能突出边缘、纹理而不抛弃原视图。"
+      ],
+      "en": [
+        "A full-scene context pairs with matching colored zoom-insets, focusing attention on texture and edge differences."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "评价重建、NeRF、超分和图像复原结果，差异集中在小区域时。"
+      ],
+      "en": [
+        "Comparing reconstruction, novel-view synthesis or restoration models when differences are localized."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "不同输出应使用同一 crop 坐标、尺度和输入条件；不能只挑某个方法最差的位置。",
+        "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+      ],
+      "en": [
+        "Crops must share coordinates, scale and conditions; do not selectively magnify a baseline's weakest region.",
+        "This is an attributed author-hosted reference, not an independently reproduced result."
+      ]
+    }
+  },
+  "curation": {
+    "track": "visual",
+    "visual_category": "results",
+    "selected_on": "2026-10-25",
+    "source_verification": "author-site-and-repository-path",
+    "verified_site_section": "项目源码 README / Comparison on Mip-NeRF 360（imgs/compare-mipnerf360.png）",
+    "editorial_scope": "design-composition-evidence-communication",
+    "asset_residency": "external-original-no-hosted-copy"
+  },
+  "previewStyle": "curated-visual"
+}

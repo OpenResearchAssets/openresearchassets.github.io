@@ -1,0 +1,141 @@
+{
+  "id": "nerfies-project-site",
+  "title": "Nerfies · 视频优先的交互科研主页",
+  "kind": "website-reference",
+  "stages": [
+    "communication"
+  ],
+  "domains": [
+    "vision"
+  ],
+  "tasks": [
+    "project-website",
+    "interactive-demo",
+    "research-homepage",
+    "video-showcase"
+  ],
+  "description": {
+    "zh": "以自动播放的视频 Hero、极简论文/代码入口和可操作的形变插值滑杆组织科研证据；此缩略图只是其交互模块的一帧。",
+    "en": "A video-first academic site with compact paper/code actions and an interactive deformation slider; its thumbnail is a demo frame, not a viewport screenshot."
+  },
+  "keywords": {
+    "zh": [
+      "Nerfies",
+      "project-website",
+      "interactive-demo",
+      "research-homepage",
+      "video-showcase",
+      "高审美",
+      "项目主页"
+    ],
+    "en": [
+      "Nerfies",
+      "project-website",
+      "interactive-demo",
+      "research-homepage",
+      "video-showcase",
+      "research-figure",
+      "project-site"
+    ]
+  },
+  "year": "2021",
+  "language": "zh+en",
+  "links": {
+    "source": "https://nerfies.github.io/",
+    "officialFigure": "https://github.com/nerfies/nerfies.github.io/blob/main/static/images/interpolate_start.jpg"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "externally-linked-not-relicensed",
+    "source_image_url": "https://raw.githubusercontent.com/nerfies/nerfies.github.io/main/static/images/interpolate_start.jpg"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "设计以动态视觉结果为核心、需要低门槛交互验证的学术主页。"
+      ],
+      "en": [
+        "Designing project sites whose strongest evidence is a dynamic rendering or user-controllable demo."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "明确标题和资源链接置于首屏，视频演示紧接其后；可交互滑杆让读者主动观察模型在两端状态之间的变化。"
+      ],
+      "en": [
+        "A strong title and canonical links lead into a video hero; an interactive slider invites readers to inspect interpolation rather than view a static gallery."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "本站仅外链一个网站交互素材作识别，不能据此称其为真实首屏截图；交互效果应打开原站体验。"
+      ],
+      "en": [
+        "Preview is one official demo frame, not a captured homepage; inspect the live site for behavior."
+      ]
+    }
+  },
+  "visual": {
+    "kind": "external-reference-image",
+    "src": "https://raw.githubusercontent.com/nerfies/nerfies.github.io/main/static/images/interpolate_start.jpg",
+    "alt": {
+      "zh": "官网交互滑杆 Start Frame（static/images/interpolate_start.jpg），并非网站首屏截图",
+      "en": "官网交互滑杆 Start Frame（static/images/interpolate_start.jpg），并非网站首屏截图"
+    },
+    "label": {
+      "zh": "作者官网交互素材 · 非网页截图",
+      "en": "SOURCE SITE MEDIA · NOT A SCREENSHOT"
+    }
+  },
+  "figureIdentity": {
+    "type": "project-website-media",
+    "original_name": "官网交互滑杆 Start Frame（static/images/interpolate_start.jpg），并非网站首屏截图",
+    "original_source": "https://github.com/nerfies/nerfies.github.io/blob/main/static/images/interpolate_start.jpg",
+    "capture_date": "2026-10-25",
+    "credit": "Nerfies 项目作者 Keunhong Park 等",
+    "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "以自动播放的视频 Hero、极简论文/代码入口和可操作的形变插值滑杆组织科研证据；此缩略图只是其交互模块的一帧。",
+      "en": "A video-first academic site with compact paper/code actions and an interactive deformation slider; its thumbnail is a demo frame, not a viewport screenshot."
+    },
+    "composition": {
+      "zh": [
+        "明确标题和资源链接置于首屏，视频演示紧接其后；可交互滑杆让读者主动观察模型在两端状态之间的变化。"
+      ],
+      "en": [
+        "A strong title and canonical links lead into a video hero; an interactive slider invites readers to inspect interpolation rather than view a static gallery."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "设计以动态视觉结果为核心、需要低门槛交互验证的学术主页。"
+      ],
+      "en": [
+        "Designing project sites whose strongest evidence is a dynamic rendering or user-controllable demo."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "本站仅外链一个网站交互素材作识别，不能据此称其为真实首屏截图；交互效果应打开原站体验。",
+        "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+      ],
+      "en": [
+        "Preview is one official demo frame, not a captured homepage; inspect the live site for behavior.",
+        "This is an attributed author-hosted reference, not an independently reproduced result."
+      ]
+    }
+  },
+  "curation": {
+    "track": "visual",
+    "visual_category": "project-site",
+    "selected_on": "2026-10-25",
+    "source_verification": "author-site-and-repository-path",
+    "verified_site_section": "官网交互滑杆 Start Frame（static/images/interpolate_start.jpg），并非网站首屏截图",
+    "editorial_scope": "design-composition-evidence-communication",
+    "asset_residency": "external-original-no-hosted-copy"
+  },
+  "previewStyle": "curated-visual"
+}

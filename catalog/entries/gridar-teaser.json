@@ -1,0 +1,138 @@
+{
+  "id": "gridar-teaser",
+  "title": "GridAR · 逐块生成与候选筛选 Teaser",
+  "kind": "visual-reference",
+  "stages": [
+    "methods",
+    "writing"
+  ],
+  "domains": [
+    "vision"
+  ],
+  "tasks": [
+    "teaser",
+    "candidate-comparison",
+    "progressive-generation"
+  ],
+  "description": {
+    "zh": "把局部候选、保留与拒绝、最终生成效果组织成视觉链，让读者在看方法文字之前直观理解为何分配测试时计算。",
+    "en": "A visual story of partial candidates, acceptance/rejection and completed outputs, communicating selective test-time compute without a dense diagram."
+  },
+  "keywords": {
+    "zh": [
+      "GridAR",
+      "teaser",
+      "candidate-comparison",
+      "progressive-generation",
+      "高审美"
+    ],
+    "en": [
+      "GridAR",
+      "teaser",
+      "candidate-comparison",
+      "progressive-generation",
+      "research-figure",
+      "teaser"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://grid-ar.github.io/",
+    "officialFigure": "https://github.com/grid-ar/grid-ar.github.io/blob/main/static/images/GridAR_intro.png"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "externally-linked-not-relicensed",
+    "source_image_url": "https://raw.githubusercontent.com/grid-ar/grid-ar.github.io/main/static/images/GridAR_intro.png"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "展示生成式搜索、验证器筛选或其他具有候选比较的算法。"
+      ],
+      "en": [
+        "Illustrating generation search, verifier selection or algorithms with candidate-based decisions."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "局部图块与完整图之间具有形状对应；✅ / ❌ 的判定符号比大段文字更快传达差异；候选对照落在真实图像上。"
+      ],
+      "en": [
+        "Partial crops correspond to full outputs; selection marks rapidly communicate decisions; actual generated imagery grounds comparisons."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "Teaser 中的选择标志是论文叙事，不得直接当作我们的外部独立实验核验。"
+      ],
+      "en": [
+        "Selection annotations explain the authors' method; they are not independent replication evidence."
+      ]
+    }
+  },
+  "visual": {
+    "kind": "external-reference-image",
+    "src": "https://raw.githubusercontent.com/grid-ar/grid-ar.github.io/main/static/images/GridAR_intro.png",
+    "alt": {
+      "zh": "官网 Teaser Hero（GridAR_intro.png）",
+      "en": "官网 Teaser Hero（GridAR_intro.png）"
+    },
+    "label": {
+      "zh": "原作者网站图像 · 仅外链参考",
+      "en": "AUTHOR FIGURE · EXTERNAL LINK ONLY"
+    }
+  },
+  "figureIdentity": {
+    "type": "project-website-figure",
+    "original_name": "官网 Teaser Hero（GridAR_intro.png）",
+    "original_source": "https://github.com/grid-ar/grid-ar.github.io/blob/main/static/images/GridAR_intro.png",
+    "capture_date": "2026-10-25",
+    "credit": "GridAR 项目作者（Joonhyung Park 等）",
+    "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "把局部候选、保留与拒绝、最终生成效果组织成视觉链，让读者在看方法文字之前直观理解为何分配测试时计算。",
+      "en": "A visual story of partial candidates, acceptance/rejection and completed outputs, communicating selective test-time compute without a dense diagram."
+    },
+    "composition": {
+      "zh": [
+        "局部图块与完整图之间具有形状对应；✅ / ❌ 的判定符号比大段文字更快传达差异；候选对照落在真实图像上。"
+      ],
+      "en": [
+        "Partial crops correspond to full outputs; selection marks rapidly communicate decisions; actual generated imagery grounds comparisons."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "展示生成式搜索、验证器筛选或其他具有候选比较的算法。"
+      ],
+      "en": [
+        "Illustrating generation search, verifier selection or algorithms with candidate-based decisions."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "Teaser 中的选择标志是论文叙事，不得直接当作我们的外部独立实验核验。",
+        "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+      ],
+      "en": [
+        "Selection annotations explain the authors' method; they are not independent replication evidence.",
+        "This is an attributed author-hosted reference, not an independently reproduced result."
+      ]
+    }
+  },
+  "curation": {
+    "track": "visual",
+    "visual_category": "teaser",
+    "selected_on": "2026-10-25",
+    "source_verification": "author-site-and-repository-path",
+    "verified_site_section": "官网 Teaser Hero（GridAR_intro.png）",
+    "editorial_scope": "design-composition-evidence-communication",
+    "asset_residency": "external-original-no-hosted-copy"
+  },
+  "previewStyle": "curated-visual"
+}

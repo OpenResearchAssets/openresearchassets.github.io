@@ -288,6 +288,288 @@
       "entry": "catalog/entries/supermimic-site.json"
     },
     {
+      "id": "instruct-pix2pix-teaser",
+      "title": "InstructPix2Pix · 指令编辑 Teaser",
+      "kind": "visual-reference",
+      "stages": [
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "teaser",
+        "image-editing",
+        "before-after",
+        "visual-storytelling"
+      ],
+      "keywords": [
+        "InstructPix2Pix",
+        "teaser",
+        "image-editing",
+        "before-after",
+        "visual-storytelling",
+        "高审美",
+        "InstructPix2Pix",
+        "teaser",
+        "image-editing",
+        "before-after",
+        "visual-storytelling",
+        "research-figure",
+        "teaser"
+      ],
+      "description_zh": "同一张输入图与不同自然语言指令、输出效果成组展示，任务一眼清楚，适合学习低说明成本的图像编辑 Teaser。",
+      "entry": "catalog/entries/instruct-pix2pix-teaser.json"
+    },
+    {
+      "id": "gridar-teaser",
+      "title": "GridAR · 逐块生成与候选筛选 Teaser",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "teaser",
+        "candidate-comparison",
+        "progressive-generation"
+      ],
+      "keywords": [
+        "GridAR",
+        "teaser",
+        "candidate-comparison",
+        "progressive-generation",
+        "高审美",
+        "GridAR",
+        "teaser",
+        "candidate-comparison",
+        "progressive-generation",
+        "research-figure",
+        "teaser"
+      ],
+      "description_zh": "把局部候选、保留与拒绝、最终生成效果组织成视觉链，让读者在看方法文字之前直观理解为何分配测试时计算。",
+      "entry": "catalog/entries/gridar-teaser.json"
+    },
+    {
+      "id": "ultraedit-qualitative",
+      "title": "UltraEdit · 多方法图像编辑定性对比",
+      "kind": "visual-reference",
+      "stages": [
+        "evaluation",
+        "writing"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "qualitative-results",
+        "results-comparison",
+        "image-editing",
+        "mask-overlay"
+      ],
+      "keywords": [
+        "UltraEdit",
+        "qualitative-results",
+        "results-comparison",
+        "image-editing",
+        "mask-overlay",
+        "高审美",
+        "结果图",
+        "UltraEdit",
+        "qualitative-results",
+        "results-comparison",
+        "image-editing",
+        "mask-overlay",
+        "research-figure",
+        "results"
+      ],
+      "description_zh": "输入、指令、掩码和多种生成结果采用可追踪的对齐网格，适合定性比较而不只陈列漂亮样例。",
+      "entry": "catalog/entries/ultraedit-qualitative.json"
+    },
+    {
+      "id": "fastnerf-zoom-results",
+      "title": "Fast Learning Radiance Fields · 局部放大式视觉对比",
+      "kind": "visual-reference",
+      "stages": [
+        "evaluation",
+        "writing"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "qualitative-results",
+        "results-comparison",
+        "zoom-inset",
+        "novel-view-synthesis"
+      ],
+      "keywords": [
+        "Fast Learning Radiance Fields",
+        "qualitative-results",
+        "results-comparison",
+        "zoom-inset",
+        "novel-view-synthesis",
+        "高审美",
+        "结果图",
+        "Fast Learning Radiance Fields",
+        "qualitative-results",
+        "results-comparison",
+        "zoom-inset",
+        "novel-view-synthesis",
+        "research-figure",
+        "results"
+      ],
+      "description_zh": "完整场景之外叠加两组彩色边框与对应局部放大图，让画质差异可以定位到具体纹理和几何细节。",
+      "entry": "catalog/entries/fastnerf-zoom-results.json"
+    },
+    {
+      "id": "specialist-diffusion-ablation",
+      "title": "Specialist Diffusion · 逐组件生成结果消融",
+      "kind": "visual-reference",
+      "stages": [
+        "evaluation",
+        "writing"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "ablation",
+        "component-ablation",
+        "image-generation",
+        "results-comparison"
+      ],
+      "keywords": [
+        "Specialist Diffusion",
+        "ablation",
+        "component-ablation",
+        "image-generation",
+        "results-comparison",
+        "高审美",
+        "消融",
+        "Specialist Diffusion",
+        "ablation",
+        "component-ablation",
+        "image-generation",
+        "results-comparison",
+        "research-figure",
+        "ablation"
+      ],
+      "description_zh": "以完全相同的 Prompt 对齐完整模型与删除组件后的输出，用组内固定样例帮助读者判断模块贡献。",
+      "entry": "catalog/entries/specialist-diffusion-ablation.json"
+    },
+    {
+      "id": "egoengine-ablation",
+      "title": "EgoEngine · 视觉与动作生成分支消融",
+      "kind": "visual-reference",
+      "stages": [
+        "evaluation",
+        "writing"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "ablation",
+        "component-ablation",
+        "robotics-benchmark",
+        "quantitative-results"
+      ],
+      "keywords": [
+        "EgoEngine",
+        "ablation",
+        "component-ablation",
+        "robotics-benchmark",
+        "quantitative-results",
+        "高审美",
+        "消融",
+        "EgoEngine",
+        "ablation",
+        "component-ablation",
+        "robotics-benchmark",
+        "quantitative-results",
+        "research-figure",
+        "ablation"
+      ],
+      "description_zh": "官网把不同训练生成分支的作用以真机任务成功率消融图呈现，适合作为“机制贡献—实际指标”的布局参考。",
+      "entry": "catalog/entries/egoengine-ablation.json"
+    },
+    {
+      "id": "nerfies-project-site",
+      "title": "Nerfies · 视频优先的交互科研主页",
+      "kind": "website-reference",
+      "stages": [
+        "communication"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "project-website",
+        "interactive-demo",
+        "research-homepage",
+        "video-showcase"
+      ],
+      "keywords": [
+        "Nerfies",
+        "project-website",
+        "interactive-demo",
+        "research-homepage",
+        "video-showcase",
+        "高审美",
+        "项目主页",
+        "Nerfies",
+        "project-website",
+        "interactive-demo",
+        "research-homepage",
+        "video-showcase",
+        "research-figure",
+        "project-site"
+      ],
+      "description_zh": "以自动播放的视频 Hero、极简论文/代码入口和可操作的形变插值滑杆组织科研证据；此缩略图只是其交互模块的一帧。",
+      "entry": "catalog/entries/nerfies-project-site.json"
+    },
+    {
+      "id": "hypernerf-project-site",
+      "title": "HyperNeRF · 交互高维空间可视化主页",
+      "kind": "website-reference",
+      "stages": [
+        "communication"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "project-website",
+        "interactive-demo",
+        "research-homepage",
+        "scientific-visualization"
+      ],
+      "keywords": [
+        "HyperNeRF",
+        "project-website",
+        "interactive-demo",
+        "research-homepage",
+        "scientific-visualization",
+        "高审美",
+        "项目主页",
+        "HyperNeRF",
+        "project-website",
+        "interactive-demo",
+        "research-homepage",
+        "scientific-visualization",
+        "research-figure",
+        "project-site"
+      ],
+      "description_zh": "把抽象高维表示设计成可移动坐标与对应渲染的交互演示；预览来自作者网页交互区，而非整页截图。",
+      "entry": "catalog/entries/hypernerf-project-site.json"
+    },
+    {
       "id": "topconf-figure-gallery",
       "title": "Top-Conf Figure Gallery",
       "kind": "resource-index",

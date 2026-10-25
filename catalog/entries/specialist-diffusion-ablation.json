@@ -1,0 +1,142 @@
+{
+  "id": "specialist-diffusion-ablation",
+  "title": "Specialist Diffusion · 逐组件生成结果消融",
+  "kind": "visual-reference",
+  "stages": [
+    "evaluation",
+    "writing"
+  ],
+  "domains": [
+    "vision"
+  ],
+  "tasks": [
+    "ablation",
+    "component-ablation",
+    "image-generation",
+    "results-comparison"
+  ],
+  "description": {
+    "zh": "以完全相同的 Prompt 对齐完整模型与删除组件后的输出，用组内固定样例帮助读者判断模块贡献。",
+    "en": "A true component-ablation grid contrasting the full model with removed components under shared prompts."
+  },
+  "keywords": {
+    "zh": [
+      "Specialist Diffusion",
+      "ablation",
+      "component-ablation",
+      "image-generation",
+      "results-comparison",
+      "高审美",
+      "消融"
+    ],
+    "en": [
+      "Specialist Diffusion",
+      "ablation",
+      "component-ablation",
+      "image-generation",
+      "results-comparison",
+      "research-figure",
+      "ablation"
+    ]
+  },
+  "year": "2024",
+  "language": "zh+en",
+  "links": {
+    "source": "https://specialist-diffusion.github.io/",
+    "officialFigure": "https://github.com/specialist-diffusion/specialist-diffusion.github.io/blob/main/static/images/ablation.png"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "externally-linked-not-relicensed",
+    "source_image_url": "https://raw.githubusercontent.com/specialist-diffusion/specialist-diffusion.github.io/main/static/images/ablation.png"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要在视觉生成论文中直观展示一项组件被移除后质量变化时。"
+      ],
+      "en": [
+        "Visualizing component removal under matched image-generation prompts."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "横向区分完整方法和 w/o 变体，纵向固定目标提示；分组、留白和标签让消融差异成为主视觉。"
+      ],
+      "en": [
+        "Treat the full method and component removals as parallel columns, with prompts held constant across examples."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "仅看代表性图片不能证明定量消融；还须给出公平条件、样本量和汇总指标。"
+      ],
+      "en": [
+        "Representative ablation images are not substitute for matched quantitative metrics and reproducibility."
+      ]
+    }
+  },
+  "visual": {
+    "kind": "external-reference-image",
+    "src": "https://raw.githubusercontent.com/specialist-diffusion/specialist-diffusion.github.io/main/static/images/ablation.png",
+    "alt": {
+      "zh": "官网 Ablation Study（static/images/ablation.png）",
+      "en": "官网 Ablation Study（static/images/ablation.png）"
+    },
+    "label": {
+      "zh": "原作者网站图像 · 仅外链参考",
+      "en": "AUTHOR FIGURE · EXTERNAL LINK ONLY"
+    }
+  },
+  "figureIdentity": {
+    "type": "project-website-figure",
+    "original_name": "官网 Ablation Study（static/images/ablation.png）",
+    "original_source": "https://github.com/specialist-diffusion/specialist-diffusion.github.io/blob/main/static/images/ablation.png",
+    "capture_date": "2026-10-25",
+    "credit": "Specialist Diffusion 项目作者",
+    "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "以完全相同的 Prompt 对齐完整模型与删除组件后的输出，用组内固定样例帮助读者判断模块贡献。",
+      "en": "A true component-ablation grid contrasting the full model with removed components under shared prompts."
+    },
+    "composition": {
+      "zh": [
+        "横向区分完整方法和 w/o 变体，纵向固定目标提示；分组、留白和标签让消融差异成为主视觉。"
+      ],
+      "en": [
+        "Treat the full method and component removals as parallel columns, with prompts held constant across examples."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "需要在视觉生成论文中直观展示一项组件被移除后质量变化时。"
+      ],
+      "en": [
+        "Visualizing component removal under matched image-generation prompts."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "仅看代表性图片不能证明定量消融；还须给出公平条件、样本量和汇总指标。",
+        "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+      ],
+      "en": [
+        "Representative ablation images are not substitute for matched quantitative metrics and reproducibility.",
+        "This is an attributed author-hosted reference, not an independently reproduced result."
+      ]
+    }
+  },
+  "curation": {
+    "track": "visual",
+    "visual_category": "ablation",
+    "selected_on": "2026-10-25",
+    "source_verification": "author-site-and-repository-path",
+    "verified_site_section": "官网 Ablation Study（static/images/ablation.png）",
+    "editorial_scope": "design-composition-evidence-communication",
+    "asset_residency": "external-original-no-hosted-copy"
+  },
+  "previewStyle": "curated-visual"
+}

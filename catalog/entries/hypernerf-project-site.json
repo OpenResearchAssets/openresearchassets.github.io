@@ -1,0 +1,141 @@
+{
+  "id": "hypernerf-project-site",
+  "title": "HyperNeRF · 交互高维空间可视化主页",
+  "kind": "website-reference",
+  "stages": [
+    "communication"
+  ],
+  "domains": [
+    "vision"
+  ],
+  "tasks": [
+    "project-website",
+    "interactive-demo",
+    "research-homepage",
+    "scientific-visualization"
+  ],
+  "description": {
+    "zh": "把抽象高维表示设计成可移动坐标与对应渲染的交互演示；预览来自作者网页交互区，而非整页截图。",
+    "en": "An interactive higher-dimensional representation explorer couples a controllable coordinate to a rendered view; thumbnail is a source demo asset."
+  },
+  "keywords": {
+    "zh": [
+      "HyperNeRF",
+      "project-website",
+      "interactive-demo",
+      "research-homepage",
+      "scientific-visualization",
+      "高审美",
+      "项目主页"
+    ],
+    "en": [
+      "HyperNeRF",
+      "project-website",
+      "interactive-demo",
+      "research-homepage",
+      "scientific-visualization",
+      "research-figure",
+      "project-site"
+    ]
+  },
+  "year": "2021",
+  "language": "zh+en",
+  "links": {
+    "source": "https://hypernerf.github.io/",
+    "officialFigure": "https://github.com/hypernerf/hypernerf.github.io/blob/main/static/figures/hyper_grid.jpg"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "externally-linked-not-relicensed",
+    "source_image_url": "https://raw.githubusercontent.com/hypernerf/hypernerf.github.io/main/static/figures/hyper_grid.jpg"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "展示抽象潜变量、交互式参数影响或非刚性 3D 表示的科研网页。"
+      ],
+      "en": [
+        "Communicating abstract latent parameters, 3D variation and responsive model demonstrations on a project site."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "抽象坐标和真实结果并排，交互控件承担解释变量的作用；比静态架构图更有助于建立直觉。"
+      ],
+      "en": [
+        "Pair a parameter-space widget with a synchronized rendered scene; interaction becomes part of the scientific explanation."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "源图不包含交互行为；不要用单帧素材替代对官网 JS 动画、可访问性及实际运行的审查。"
+      ],
+      "en": [
+        "A single frame cannot substitute for testing the original interactive widget and its actual behavior."
+      ]
+    }
+  },
+  "visual": {
+    "kind": "external-reference-image",
+    "src": "https://raw.githubusercontent.com/hypernerf/hypernerf.github.io/main/static/figures/hyper_grid.jpg",
+    "alt": {
+      "zh": "官网 hyper-space 交互模块中的示例图（hyper_grid.jpg），并非网站首屏截图",
+      "en": "官网 hyper-space 交互模块中的示例图（hyper_grid.jpg），并非网站首屏截图"
+    },
+    "label": {
+      "zh": "作者官网交互素材 · 非网页截图",
+      "en": "SOURCE SITE MEDIA · NOT A SCREENSHOT"
+    }
+  },
+  "figureIdentity": {
+    "type": "project-website-media",
+    "original_name": "官网 hyper-space 交互模块中的示例图（hyper_grid.jpg），并非网站首屏截图",
+    "original_source": "https://github.com/hypernerf/hypernerf.github.io/blob/main/static/figures/hyper_grid.jpg",
+    "capture_date": "2026-10-25",
+    "credit": "HyperNeRF 项目作者 Keunhong Park 等",
+    "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "把抽象高维表示设计成可移动坐标与对应渲染的交互演示；预览来自作者网页交互区，而非整页截图。",
+      "en": "An interactive higher-dimensional representation explorer couples a controllable coordinate to a rendered view; thumbnail is a source demo asset."
+    },
+    "composition": {
+      "zh": [
+        "抽象坐标和真实结果并排，交互控件承担解释变量的作用；比静态架构图更有助于建立直觉。"
+      ],
+      "en": [
+        "Pair a parameter-space widget with a synchronized rendered scene; interaction becomes part of the scientific explanation."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "展示抽象潜变量、交互式参数影响或非刚性 3D 表示的科研网页。"
+      ],
+      "en": [
+        "Communicating abstract latent parameters, 3D variation and responsive model demonstrations on a project site."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "源图不包含交互行为；不要用单帧素材替代对官网 JS 动画、可访问性及实际运行的审查。",
+        "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+      ],
+      "en": [
+        "A single frame cannot substitute for testing the original interactive widget and its actual behavior.",
+        "This is an attributed author-hosted reference, not an independently reproduced result."
+      ]
+    }
+  },
+  "curation": {
+    "track": "visual",
+    "visual_category": "project-site",
+    "selected_on": "2026-10-25",
+    "source_verification": "author-site-and-repository-path",
+    "verified_site_section": "官网 hyper-space 交互模块中的示例图（hyper_grid.jpg），并非网站首屏截图",
+    "editorial_scope": "design-composition-evidence-communication",
+    "asset_residency": "external-original-no-hosted-copy"
+  },
+  "previewStyle": "curated-visual"
+}

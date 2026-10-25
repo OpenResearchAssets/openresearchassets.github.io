@@ -1,0 +1,143 @@
+{
+  "id": "egoengine-ablation",
+  "title": "EgoEngine · 视觉与动作生成分支消融",
+  "kind": "visual-reference",
+  "stages": [
+    "evaluation",
+    "writing"
+  ],
+  "domains": [
+    "robotics",
+    "vision"
+  ],
+  "tasks": [
+    "ablation",
+    "component-ablation",
+    "robotics-benchmark",
+    "quantitative-results"
+  ],
+  "description": {
+    "zh": "官网把不同训练生成分支的作用以真机任务成功率消融图呈现，适合作为“机制贡献—实际指标”的布局参考。",
+    "en": "An author-labeled ablation of visual and action generation branches, tied to real-robot policy evaluation rather than a decorative comparison."
+  },
+  "keywords": {
+    "zh": [
+      "EgoEngine",
+      "ablation",
+      "component-ablation",
+      "robotics-benchmark",
+      "quantitative-results",
+      "高审美",
+      "消融"
+    ],
+    "en": [
+      "EgoEngine",
+      "ablation",
+      "component-ablation",
+      "robotics-benchmark",
+      "quantitative-results",
+      "research-figure",
+      "ablation"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://egoengine.github.io/",
+    "officialFigure": "https://github.com/egoengine/egoengine.github.io/blob/main/fig/ablation.png"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "externally-linked-not-relicensed",
+    "source_image_url": "https://raw.githubusercontent.com/egoengine/egoengine.github.io/main/fig/ablation.png"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "机器人和多模块系统需要证明究竟哪个子模块产生实际收益时。"
+      ],
+      "en": [
+        "Presenting which module contributes to a robotics system's measured outcomes."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "相同任务和指标下并列不同组件组合；与结果主图放在同一评价章节，便于追踪完整系统收益。"
+      ],
+      "en": [
+        "Align component variants under consistent task and success-rate metrics, adjacent to a separate main-outcome chart."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "原作者结果不等于 OpenResearchAssets 独立复现；图中定量差异应以作者论文和实验设置为准。"
+      ],
+      "en": [
+        "Author-reported ablations are not independent replication; check the source paper and matched evaluation settings."
+      ]
+    }
+  },
+  "visual": {
+    "kind": "external-reference-image",
+    "src": "https://raw.githubusercontent.com/egoengine/egoengine.github.io/main/fig/ablation.png",
+    "alt": {
+      "zh": "官网 Rollout Performance / Ablation（fig/ablation.png）",
+      "en": "官网 Rollout Performance / Ablation（fig/ablation.png）"
+    },
+    "label": {
+      "zh": "原作者网站图像 · 仅外链参考",
+      "en": "AUTHOR FIGURE · EXTERNAL LINK ONLY"
+    }
+  },
+  "figureIdentity": {
+    "type": "project-website-figure",
+    "original_name": "官网 Rollout Performance / Ablation（fig/ablation.png）",
+    "original_source": "https://github.com/egoengine/egoengine.github.io/blob/main/fig/ablation.png",
+    "capture_date": "2026-10-25",
+    "credit": "EgoEngine 项目作者",
+    "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "官网把不同训练生成分支的作用以真机任务成功率消融图呈现，适合作为“机制贡献—实际指标”的布局参考。",
+      "en": "An author-labeled ablation of visual and action generation branches, tied to real-robot policy evaluation rather than a decorative comparison."
+    },
+    "composition": {
+      "zh": [
+        "相同任务和指标下并列不同组件组合；与结果主图放在同一评价章节，便于追踪完整系统收益。"
+      ],
+      "en": [
+        "Align component variants under consistent task and success-rate metrics, adjacent to a separate main-outcome chart."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "机器人和多模块系统需要证明究竟哪个子模块产生实际收益时。"
+      ],
+      "en": [
+        "Presenting which module contributes to a robotics system's measured outcomes."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "原作者结果不等于 OpenResearchAssets 独立复现；图中定量差异应以作者论文和实验设置为准。",
+        "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+      ],
+      "en": [
+        "Author-reported ablations are not independent replication; check the source paper and matched evaluation settings.",
+        "This is an attributed author-hosted reference, not an independently reproduced result."
+      ]
+    }
+  },
+  "curation": {
+    "track": "visual",
+    "visual_category": "ablation",
+    "selected_on": "2026-10-25",
+    "source_verification": "author-site-and-repository-path",
+    "verified_site_section": "官网 Rollout Performance / Ablation（fig/ablation.png）",
+    "editorial_scope": "design-composition-evidence-communication",
+    "asset_residency": "external-original-no-hosted-copy"
+  },
+  "previewStyle": "curated-visual"
+}

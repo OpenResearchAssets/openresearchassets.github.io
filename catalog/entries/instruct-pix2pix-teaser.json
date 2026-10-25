@@ -1,0 +1,141 @@
+{
+  "id": "instruct-pix2pix-teaser",
+  "title": "InstructPix2Pix · 指令编辑 Teaser",
+  "kind": "visual-reference",
+  "stages": [
+    "writing",
+    "communication"
+  ],
+  "domains": [
+    "vision"
+  ],
+  "tasks": [
+    "teaser",
+    "image-editing",
+    "before-after",
+    "visual-storytelling"
+  ],
+  "description": {
+    "zh": "同一张输入图与不同自然语言指令、输出效果成组展示，任务一眼清楚，适合学习低说明成本的图像编辑 Teaser。",
+    "en": "Pairs a source image with instruction-conditioned outcomes; a strong image-editing teaser that requires little explanation."
+  },
+  "keywords": {
+    "zh": [
+      "InstructPix2Pix",
+      "teaser",
+      "image-editing",
+      "before-after",
+      "visual-storytelling",
+      "高审美"
+    ],
+    "en": [
+      "InstructPix2Pix",
+      "teaser",
+      "image-editing",
+      "before-after",
+      "visual-storytelling",
+      "research-figure",
+      "teaser"
+    ]
+  },
+  "year": "2023",
+  "language": "zh+en",
+  "links": {
+    "source": "https://instruct-pix2pix.timothybrooks.com/",
+    "officialFigure": "https://instruct-pix2pix.timothybrooks.com/teaser.jpg"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "externally-linked-not-relicensed",
+    "source_image_url": "https://instruct-pix2pix.timothybrooks.com/teaser.jpg"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要通过多个可感知的视觉变化讲清一个 AIGC 方法的作用时。"
+      ],
+      "en": [
+        "Showing the purpose of an AIGC editing method through several visually legible transformations."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "保持输入身份可对齐；重复网格提供稳定比较基准，短指令直接担当图注；复杂编辑故事以视觉变化而不是模块说明展开。"
+      ],
+      "en": [
+        "Repeated source identity anchors comparisons; brief instructions double as captions; visual changes carry the claim without pipeline clutter."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "图中绘画和人像有额外内容权利；外链仅用于学习排版，不授予改编或再分发许可。"
+      ],
+      "en": [
+        "Visual sources may contain separate artwork rights; linking is not permission to adapt or redistribute the images."
+      ]
+    }
+  },
+  "visual": {
+    "kind": "external-reference-image",
+    "src": "https://instruct-pix2pix.timothybrooks.com/teaser.jpg",
+    "alt": {
+      "zh": "作者公开站点 Teaser (teaser.jpg)",
+      "en": "作者公开站点 Teaser (teaser.jpg)"
+    },
+    "label": {
+      "zh": "原作者网站图像 · 仅外链参考",
+      "en": "AUTHOR FIGURE · EXTERNAL LINK ONLY"
+    }
+  },
+  "figureIdentity": {
+    "type": "project-website-figure",
+    "original_name": "作者公开站点 Teaser (teaser.jpg)",
+    "original_source": "https://instruct-pix2pix.timothybrooks.com/teaser.jpg",
+    "capture_date": "2026-10-25",
+    "credit": "Tim Brooks, Aleksander Holynski, Alexei A. Efros",
+    "modifications": "未修改源图；本站只向原作者托管地址提供远程链接"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "同一张输入图与不同自然语言指令、输出效果成组展示，任务一眼清楚，适合学习低说明成本的图像编辑 Teaser。",
+      "en": "Pairs a source image with instruction-conditioned outcomes; a strong image-editing teaser that requires little explanation."
+    },
+    "composition": {
+      "zh": [
+        "保持输入身份可对齐；重复网格提供稳定比较基准，短指令直接担当图注；复杂编辑故事以视觉变化而不是模块说明展开。"
+      ],
+      "en": [
+        "Repeated source identity anchors comparisons; brief instructions double as captions; visual changes carry the claim without pipeline clutter."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "需要通过多个可感知的视觉变化讲清一个 AIGC 方法的作用时。"
+      ],
+      "en": [
+        "Showing the purpose of an AIGC editing method through several visually legible transformations."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "图中绘画和人像有额外内容权利；外链仅用于学习排版，不授予改编或再分发许可。",
+        "资料来自作者公开网站，本站未重新运行实验或复制原图。"
+      ],
+      "en": [
+        "Visual sources may contain separate artwork rights; linking is not permission to adapt or redistribute the images.",
+        "This is an attributed author-hosted reference, not an independently reproduced result."
+      ]
+    }
+  },
+  "curation": {
+    "track": "visual",
+    "visual_category": "teaser",
+    "selected_on": "2026-10-25",
+    "source_verification": "author-project-and-repository-readme",
+    "verified_site_section": "作者公开站点 Teaser (teaser.jpg)",
+    "editorial_scope": "design-composition-evidence-communication",
+    "asset_residency": "external-original-no-hosted-copy"
+  },
+  "previewStyle": "curated-visual"
+}
