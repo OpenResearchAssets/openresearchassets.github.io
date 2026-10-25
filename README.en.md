@@ -20,7 +20,7 @@ Popularity is not validated usefulness. A protocol without usage evidence is a c
 
 ## New authored-source Gallery picks (2026-10-25)
 
-Five additional author-hosted visual references: [VGGT architecture](asset.html?id=vggt-architecture), [DreamDojo method overview](asset.html?id=dreamdojo-overview), [VideoMimic real-to-sim pipeline](asset.html?id=videomimic-real2sim), [VideoMimic approach overview](asset.html?id=videomimic-approach), and [WonderZoom teaser](asset.html?id=wonderzoom-teaser). Each record explains visual composition, reusable design patterns, identity and limits. **Externally linked author artwork only; no redistribution or editable-source claim.** Ordinary dense technical diagrams not meeting the design-first bar were excluded.
+Five additional author-hosted visual references: [VGGT architecture](https://openresearchassets.github.io/asset.html?id=vggt-architecture), [DreamDojo method overview](https://openresearchassets.github.io/asset.html?id=dreamdojo-overview), [VideoMimic real-to-sim pipeline](https://openresearchassets.github.io/asset.html?id=videomimic-real2sim), [VideoMimic approach overview](https://openresearchassets.github.io/asset.html?id=videomimic-approach), and [WonderZoom teaser](https://openresearchassets.github.io/asset.html?id=wonderzoom-teaser). Each record explains visual composition, reusable design patterns, identity and limits. **Externally linked author artwork only; no redistribution or editable-source claim.** Ordinary dense technical diagrams not meeting the design-first bar were excluded.
 
 ## Mission and intended use
 

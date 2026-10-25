@@ -101,8 +101,8 @@
   },
   "caseStudy": {
     "insight": {
-      "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
-      "en": "Selected for transferable visual design, not as a paper walkthrough."
+      "zh": "多项 3D 预测任务共用主干，只需一张图就让读者看懂“共享特征—多头输出”的核心结构，而不必分开重画几条管线。",
+      "en": "One shared backbone communicates several 3D prediction tasks through grouped output heads rather than duplicating whole pipelines."
     },
     "composition": {
       "zh": [

@@ -100,8 +100,8 @@
   },
   "caseStudy": {
     "insight": {
-      "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
-      "en": "Selected for transferable visual design, not as a paper walkthrough."
+      "zh": "视觉上的连续放大本身就是研究问题：一组真实场景带领读者穿越空间尺度，几乎不必先读技术细节就能理解核心主张。",
+      "en": "The visual zoom itself carries the research claim: recurring scene anchors and scale transitions tell the story with minimal technical text."
     },
     "composition": {
       "zh": [

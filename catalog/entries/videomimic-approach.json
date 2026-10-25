@@ -101,8 +101,8 @@
   },
   "caseStudy": {
     "insight": {
-      "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
-      "en": "Selected for transferable visual design, not as a paper walkthrough."
+      "zh": "这张图适合说明一项研究为何常常需要两种不同的视觉资产：过程图展示变化，总览图负责模块关系，两者各司其职。",
+      "en": "This distinct overview illustrates why one project often benefits from both a process illustration and a separate architecture map."
     },
     "composition": {
       "zh": [

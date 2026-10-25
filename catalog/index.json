@@ -2784,8 +2784,8 @@
       },
       "caseStudy": {
         "insight": {
-          "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
-          "en": "Selected for transferable visual design, not as a paper walkthrough."
+          "zh": "多项 3D 预测任务共用主干，只需一张图就让读者看懂“共享特征—多头输出”的核心结构，而不必分开重画几条管线。",
+          "en": "One shared backbone communicates several 3D prediction tasks through grouped output heads rather than duplicating whole pipelines."
         },
         "composition": {
           "zh": [
@@ -2928,8 +2928,8 @@
       },
       "caseStudy": {
         "insight": {
-          "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
-          "en": "Selected for transferable visual design, not as a paper walkthrough."
+          "zh": "把真实人类视频、预训练和机器人动作适配放在不同信息区域，观众可以同时看见训练数据与下游目标，避免只看到抽象模型。",
+          "en": "Separate regions for human data, pretraining and embodiment adaptation let readers see the provenance and final purpose at once."
         },
         "composition": {
           "zh": [
@@ -3071,8 +3071,8 @@
       },
       "caseStudy": {
         "insight": {
-          "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
-          "en": "Selected for transferable visual design, not as a paper walkthrough."
+          "zh": "真实画面与动作/几何重建以并置方式对照，让复杂的 Real-to-Sim 链路拥有视觉证据，而不只是多个文本流程框。",
+          "en": "Paired imagery and geometry/motion stages give a real-to-sim pipeline visual evidence instead of a sequence of labels alone."
         },
         "composition": {
           "zh": [
@@ -3214,8 +3214,8 @@
       },
       "caseStudy": {
         "insight": {
-          "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
-          "en": "Selected for transferable visual design, not as a paper walkthrough."
+          "zh": "这张图适合说明一项研究为何常常需要两种不同的视觉资产：过程图展示变化，总览图负责模块关系，两者各司其职。",
+          "en": "This distinct overview illustrates why one project often benefits from both a process illustration and a separate architecture map."
         },
         "composition": {
           "zh": [
@@ -3356,8 +3356,8 @@
       },
       "caseStudy": {
         "insight": {
-          "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
-          "en": "Selected for transferable visual design, not as a paper walkthrough."
+          "zh": "视觉上的连续放大本身就是研究问题：一组真实场景带领读者穿越空间尺度，几乎不必先读技术细节就能理解核心主张。",
+          "en": "The visual zoom itself carries the research claim: recurring scene anchors and scale transitions tell the story with minimal technical text."
         },
         "composition": {
           "zh": [

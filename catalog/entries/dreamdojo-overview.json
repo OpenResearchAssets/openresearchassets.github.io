@@ -102,8 +102,8 @@
   },
   "caseStudy": {
     "insight": {
-      "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
-      "en": "Selected for transferable visual design, not as a paper walkthrough."
+      "zh": "把真实人类视频、预训练和机器人动作适配放在不同信息区域，观众可以同时看见训练数据与下游目标，避免只看到抽象模型。",
+      "en": "Separate regions for human data, pretraining and embodiment adaptation let readers see the provenance and final purpose at once."
     },
     "composition": {
       "zh": [

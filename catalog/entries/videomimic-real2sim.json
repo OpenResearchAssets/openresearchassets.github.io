@@ -101,8 +101,8 @@
   },
   "caseStudy": {
     "insight": {
-      "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
-      "en": "Selected for transferable visual design, not as a paper walkthrough."
+      "zh": "真实画面与动作/几何重建以并置方式对照，让复杂的 Real-to-Sim 链路拥有视觉证据，而不只是多个文本流程框。",
+      "en": "Paired imagery and geometry/motion stages give a real-to-sim pipeline visual evidence instead of a sequence of labels alone."
     },
     "composition": {
       "zh": [
