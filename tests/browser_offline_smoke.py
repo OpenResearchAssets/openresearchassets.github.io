@@ -66,7 +66,7 @@ with sync_playwright() as pw:
         assert page.locator('.ora-resource-card').first.locator('.ora-external img').count()==1
         assert 'depth-anything-3.github.io/assets/teaser.png' in page.locator('.ora-resource-card').first.locator('img').get_attribute('src')
         assert '真实来源视觉参考' in page.locator('#reference-status').inner_text()
-        assert page.locator('.ora-resource-card .ora-verified img').count()==3
+        assert page.locator('.ora-resource-card .ora-verified img').count()==6
         page.wait_for_function("()=>[...document.querySelectorAll('.ora-resource-card .ora-verified img')].every(n=>n.complete&&n.naturalWidth>0)")
         assert page.locator('.ora-resource-card .ora-curated img').count()==0
         page.locator('#catalog-more').click()
