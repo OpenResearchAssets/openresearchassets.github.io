@@ -32,7 +32,7 @@ def local_asset(route):
     if ROOT not in path.parents or not path.is_file():
         route.abort()
         return
-    content_type='image/svg+xml' if path.suffix=='.svg' else 'image/png' if path.suffix=='.png' else 'application/octet-stream'
+    content_type='image/svg+xml' if path.suffix=='.svg' else 'image/png' if path.suffix=='.png' else 'image/jpeg' if path.suffix in ('.jpg','.jpeg') else 'application/octet-stream'
     route.fulfill(status=200,body=path.read_bytes(),content_type=content_type)
 
 with sync_playwright() as pw:
@@ -58,8 +58,8 @@ with sync_playwright() as pw:
         assert page.locator('.ora-resource-card').first.locator('.ora-external img').count()==1
         assert 'depth-anything-3.github.io/assets/teaser.png' in page.locator('.ora-resource-card').first.locator('img').get_attribute('src')
         assert '真实来源视觉参考' in page.locator('#reference-status').inner_text()
-        assert page.locator('.ora-resource-card .ora-official img').count()==2
-        page.wait_for_function("()=>[...document.querySelectorAll('.ora-resource-card .ora-official img')].every(n=>n.complete&&n.naturalWidth>0)")
+        assert page.locator('.ora-resource-card .ora-verified img').count()==6
+        page.wait_for_function("()=>[...document.querySelectorAll('.ora-resource-card .ora-verified img')].every(n=>n.complete&&n.naturalWidth>0)")
         assert page.locator('.ora-resource-card .ora-curated img').count()==0
         page.locator('#catalog-more').click()
         assert page.locator('.ora-resource-card').count()==22
@@ -112,6 +112,8 @@ with sync_playwright() as pw:
             assert page.locator('.ora-lesson').count()==(1 if asset_id in cases else 3),(
                 label,asset_id,'repeated generic lessons')
             if asset_id in cases:
+                expected='.ora-paper-fig' if asset_id.endswith('teaser') else '.ora-site-capture'
+                assert page.locator('.ora-detail-preview '+expected+' img').count()==1,(label,asset_id,'wrong source identity')
                 assert page.locator('.ora-case-study').count()==1,(label,asset_id,'missing editorial')
                 assert page.locator('.ora-study-grid section').count()==2
                 assert page.locator('.ora-case-check li').count()>=2
@@ -125,9 +127,10 @@ with sync_playwright() as pw:
                 page.wait_for_function("()=>[...document.querySelectorAll('.ora-detail-preview img')].every(n=>n.complete&&n.naturalWidth>0)")
             elif visual.count():
                 assert visual.first.get_attribute('src').startswith('https://')
-            if asset_id in ('roborender-teaser','roborender-site'):
-                assert page.locator('.ora-detail-preview .ora-official img').count()==1
+            if asset_id=='roborender-teaser':
                 assert 'CC BY 4.0' in page.locator('.ora-detail-sidebar').inner_text()
+            if asset_id in cases:
+                assert 'image' not in (page.locator('.ora-disclosure').inner_text().lower()[:0])
             if asset_id=='depth-anything-3-visual':
                 assert page.locator('.ora-detail-preview .ora-external img').count()==1
             if entry['kind']=='resource-index':

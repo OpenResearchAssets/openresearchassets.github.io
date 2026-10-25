@@ -41,3 +41,7 @@ Third-party works remain the property of their original rights holders. OpenRese
 ## Real-reference previews
 
 The RoboRender architecture record and its locally stored model-architecture PNG have been removed from the current branch. The site prioritizes authentic, explicitly sourced media from the official Depth Anything 3, RoboRender, RoboDojo and SuperMimic pages, plus actual gallery images from resource projects. Not every image is a literal full-page screenshot or the paper's Figure 1; the asset captions distinguish original project media, supporting figures, and authored breakdowns. Remote source links remain under the original creators' rights, with correction/removal requests available.
+
+### Verified paper figures versus genuine first-view website captures
+
+The six featured RoboRender/RoboDojo/SuperMimic references now use their actual paper Figure 1 images and actual screenshots of each project's first website viewport, respectively. We do not substitute training-data charts for teasers, GPU decorations for scientific paper figures, or broken author-portfolio links for website captures. Each image records the source, original credit, processing and removal request channel; authored editorial SVG analyses remain optional detail-page aids.

@@ -41,6 +41,10 @@ catalog=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))
 if catalog.get('schema_version')!='1.0.0':errors.append('catalog: unsupported schema version')
 entries=catalog.get('entries',[])
 if len(entries)!=22:errors.append('catalog: expected 22 current assets')
+core_ids={'roborender-teaser','roborender-site','robodojo-teaser','robodojo-site','supermimic-teaser','supermimic-site'}
+for e in entries:
+    if e.get('id') in core_ids and e.get('visual',{}).get('kind') not in ('verified-paper-figure','verified-site-screenshot'):
+        errors.append(f"{e.get('id')}: case hero is not the correct paper figure or homepage")
 ids=[e.get('id') for e in entries]
 if any(not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', str(eid)) for eid in ids):errors.append('catalog: unsafe ID; expected kebab-case')
 if len(ids)!=len(set(ids)):errors.append('catalog: duplicate IDs')
@@ -59,7 +63,20 @@ for e in entries:
     if visual:
         src=visual.get('src','')
         kind=visual.get('kind')
-        if kind in ('licensed-source-image','licensed-paper-figure'):
+        if kind in ('verified-paper-figure','verified-site-screenshot'):
+            if not re.fullmatch(r'assets/third-party/[a-z0-9-]+/[a-z0-9-]+\.jpg',src):
+                errors.append(f'{where}: invalid verified JPEG path')
+            elif not (ROOT/src).is_file():errors.append(f'{where}: missing original-source JPEG {src}')
+            elif (ROOT/src).read_bytes()[:3]!=bytes.fromhex('ffd8ff'):
+                errors.append(f'{where}: malformed JPEG {src}')
+            identity=e.get('figureIdentity',{})
+            expected_type='paper-figure' if kind=='verified-paper-figure' else 'website-viewport'
+            if identity.get('type')!=expected_type:errors.append(f'{where}: wrong exact image type')
+            for k in ('original_name','original_source','capture_date','modifications','credit'):
+                if not identity.get(k):errors.append(f'{where}: incomplete image provenance {k}')
+            if kind=='verified-paper-figure' and not re.search(r'Figure 1',identity.get('original_name','')):
+                errors.append(f'{where}: wrong paper figure')
+        elif kind in ('licensed-source-image','licensed-paper-figure'):
             if not re.fullmatch(r'assets/third-party/[a-z0-9-]+/[a-z0-9-]+\.png',src):
                 errors.append(f'{where}: unsafe third-party image path')
             elif not (ROOT/src).is_file():errors.append(f'{where}: missing authentic PNG {src}')
@@ -124,12 +141,16 @@ for e in entries:
         if not target.startswith('assets/templates/') or not (ROOT/target).exists():errors.append(f'{where}: missing editable source')
 third_party=json.loads((ROOT/'assets/third-party/manifest.json').read_text(encoding='utf-8'))
 ledger_paths={item['path'] for item in third_party['items']}
-for path in ROOT.glob('assets/third-party/**/*.png'):
-    if str(path.relative_to(ROOT)) not in ledger_paths:errors.append(f'Untracked third-party image: {path}')
+for path in ROOT.glob('assets/third-party/**/*'):
+    if path.is_file() and path.suffix.lower() in ('.png','.jpg','.jpeg','.webp') and str(path.relative_to(ROOT)) not in ledger_paths:
+        errors.append(f'Untracked third-party image: {path}')
 for item in third_party['items']:
     image=ROOT/item['path']
     if not image.is_file():errors.append(f'Missing third-party image: {item["path"]}')
-    if not item.get('license_url','').startswith('https://'):errors.append(f'Missing verified license URL: {item["path"]}')
+    if item.get('license_url') and not item['license_url'].startswith('https://'):
+        errors.append(f'Invalid media license URL: {item["path"]}')
+    if not item.get('source_url','').startswith('https://'):
+        errors.append(f'Missing source URL: {item["path"]}')
     if not any(e.get('visual',{}).get('src')==item['path'] for e in entries):
         errors.append(f'Unlinked third-party media: {item["path"]}')
 if not (ROOT/'.github/ISSUE_TEMPLATE/asset-removal.yml').is_file():

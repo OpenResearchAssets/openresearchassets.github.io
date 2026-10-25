@@ -7,7 +7,7 @@
 | `assets/templates/*.svg` 原创可编辑模板 | CC BY 4.0，署名 OpenResearchAssets contributors，标注原仓库链接 |
 | `assets/previews/*` 原创模板预览 | 同对应 SVG 的 CC BY 4.0 |
 | `assets/editorials/*.svg` 原创案例分析图 | 本项目独立绘制的研究方法/信息结构分析，CC BY 4.0；不包含原作者论文图片或网站截图。复用时请注明 OpenResearchAssets 和研究原始来源 |
-| `assets/third-party/roborender/{training-data,generation-quality}.png` | RoboRender 官方网站实际训练数据图与结果图，源字节未修改，依据论文 CC BY 4.0 并保留署名；见 `assets/third-party/manifest.json`，不纳入本站原创媒体许可 |
+| `assets/third-party/{roborender,robodojo,supermimic}/*.jpg` | 三份真实论文 Figure 1 / 官方总览图缩略预览，以及三份 2026-10-25 实拍浏览器主页首屏截图；逐文件注明作者、准确图像类型、来源与裁切/缩放。RoboRender 论文 Figure 1 适用原论文 CC BY 4.0（需署名和注明修改），其余图像版权保留给权利人，本站作为具体评论/研究视觉参考的低清预览，不对第三方内容重新授权；有异议可通过 Issue 要求处理 |
 | 网站源码、JavaScript、测试脚本、Skill | MIT（参见仓库 `LICENSE`） |
 | `catalog/index.json` 外部参考 | 只包含链接、原创简评与复用建议；原论文图片、Logo、截图和下载物并**未**因此获得我们的许可 |
 
@@ -52,3 +52,16 @@
 ## 外链真实源图的边界
 
 除已按照许可保存在仓库的少量原图外，官网及作者页面的真实图片可作为外链预览并附来源和版权异议入口。**外链不是已获授权的图片库副本，也不是独立合法性保证**。当媒体与条目讨论的是同一项目的不同部分（如网站上的训练数据图与论文 Teaser），需标明准确身份，不得错误称为官网截图或论文 Figure 1。遇权利异议应优先停止相应展示并核实。
+
+### 当前六个核心案例的准确媒体身份
+
+| 案例 | 实际展示 | 不可混淆的对象 |
+|---|---|---|
+| RoboRender 论文 | 论文 PDF 首页 Figure 1 / Overview | 训练数据分布、生成质量图、模型架构图 |
+| RoboRender 主页 | 官网当日浏览器首屏截图 | 论文 Teaser |
+| RoboDojo 论文 | 官方 Figure 1 / Unified Benchmark 总览 | 42 个任务的完整场景网格 |
+| RoboDojo 主页 | 官方站真实 Hero 截图 | 已失效的作者作品集图片链接 |
+| SuperMimic 论文 | 论文 Figure 1 / World-Model Rollout 与算力 | 官网单独的 GPU 墙配图 |
+| SuperMimic 主页 | 官方站真实标题与机器人展示首屏 | 网页 Demo poster |
+
+图片原作者、版权、截取/缩放处理信息逐条见 [manifest.json](../assets/third-party/manifest.json)。有权利异议即按上方撤除流程处理；不要把「非商业＋标注出处」当成自动免责。

@@ -28,6 +28,13 @@
   function media(entry) {
     const rights=entry.rights || {};
     const visual=entry.visual || {};
+    const verified=(visual.kind==='verified-paper-figure'||visual.kind==='verified-site-screenshot') &&
+      /^assets\/third-party\/[a-z0-9-]+\/[a-z0-9-]+\.jpg$/.test(visual.src || '');
+    if(verified) {
+      return '<div class="ora-preview ora-verified '+(visual.kind==='verified-paper-figure'?'ora-paper-fig':'ora-site-capture')+'">'+
+        '<img loading="eager" decoding="async" src="'+safe(visual.src)+'" alt="'+safe(local(visual.alt))+'">'+
+        '<span class="ora-curated-mark">'+safe(local(visual.label))+'</span></div>';
+    }
     const localLicensed=(visual.kind==='licensed-source-image'||visual.kind==='licensed-paper-figure') &&
       /^assets\/third-party\/[a-z0-9-]+\/[a-z0-9-]+\.png$/.test(visual.src || '');
     const remote=visual.kind==='external-reference-image' &&
@@ -160,28 +167,34 @@
     const baseLessons='<div class="ora-lesson"><h2>'+safe(tr('什么时候使用','When to use'))+'</h2>'+points(local(app.use_when))+'</div>'+
       (study ? '' : '<div class="ora-lesson"><h2>'+safe(tr('值得学习的做法','Transferable lessons'))+'</h2>'+points(local(app.learn))+'</div>'+
         '<div class="ora-lesson"><h2>'+safe(tr('需要避免','What to avoid'))+'</h2>'+points(local(app.avoid))+'</div>');
-    const rightsNote=(e.visual?.kind==='licensed-paper-figure'||e.visual?.kind==='licensed-source-image')
-      ? tr('原作者图像 · 依据论文 CC BY 4.0 收录 · 保留署名','Third-party figure · copied under paper CC BY 4.0 with attribution')
+    const isFigure=e.visual?.kind==='verified-paper-figure';
+    const isSite=e.visual?.kind==='verified-site-screenshot';
+    const rightsNote=isFigure
+      ? (e.rights?.license_url ? tr('论文 Figure 1 · CC BY 4.0 · 已标注截取修改','Paper Figure 1 · CC BY 4.0 · excerpt modifications disclosed') :
+          tr('论文 Figure 1 评论性低清预览，原权利归作者，可申请撤除','Paper Figure 1 · contextual low-resolution review, authors retain rights'))
+      : isSite ? tr('真实官方主页首屏截图；原网站权利归其作者','Real official project-site first viewport; website rights remain with creators')
       : e.visual?.kind==='external-reference-image'?tr('来自原站的外部真实图片链接，未在本站重新授权','External source image link; not relicensed by this site')
-      : e.kind==='editable-template' || (e.kind==='workflow' && e.rights?.third_party_media==='none')
+      : e.kind==='editable-template'||(e.kind==='workflow'&&e.rights?.third_party_media==='none')
       ? tr('本站原创资产，不含第三方图像','Original site asset, no third-party image')
-      : tr('仅供学习参考，第三方原图未在本站再分发','Reference only; external artwork not republished');
+      : tr('外部参考或原创分析，按单项版权元数据核对','External reference or authored analysis; review item-specific rights');
     detail.innerHTML='<div class="ora-detail-heading"><p class="ora-eyebrow">'+safe(kind(e))+' / '+safe(e.id)+'</p>'+
       '<h1>'+safe(e.title)+'</h1><p>'+safe(local(e.description))+'</p></div>'+
-      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+(e.analysisVisual ? '<p class="ora-analysis-link"><a target="_blank" rel="noopener noreferrer" href="'+safe(e.analysisVisual.src)+'">'+safe(tr('查看本站原创结构分析 SVG','View authored structure-analysis SVG'))+' ↗</a></p>' : '')+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.alt||e.visual.label))+' · '+
-        ((e.visual.kind==='licensed-source-image'||e.visual.kind==='licensed-paper-figure')
-          ? safe(tr('原始论文许可 CC BY 4.0；作者与来源见右侧档案。','Paper license CC BY 4.0; attribution and source appear in the metadata.'))
-          : safe(tr('请打开官方来源查看原始视觉内容','Open the official source to inspect the original artwork')))+
-        ' · <a href="'+safe(e.visual.src)+'" target="_blank" rel="noopener noreferrer">'+
-        safe(e.visual.kind==='authored-analysis'?tr('放大查看本站分析 SVG','Open full-size analysis SVG'):tr('查看来源真实图片','Open the source image'))+' ↗</a></p>' : '')+baseLessons+editorial+'</section>'+
+      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+(e.analysisVisual ? '<p class="ora-analysis-link"><a target="_blank" rel="noopener noreferrer" href="'+safe(e.analysisVisual.src)+'">'+safe(tr('查看本站原创结构分析 SVG','View authored structure-analysis SVG'))+' ↗</a></p>' : '')+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.label))+' · '+
+        (e.figureIdentity ? '<strong>'+safe(e.figureIdentity.original_name)+'</strong> · '+
+          safe(tr('原始作者与来源见资产档案；图片是带出处的缩略预览，不是自制科研结果。','See author/source details; this is an attributed preview, not our experiment.')) :
+          safe(tr('请打开官方来源核对原始内容','Open the official source to verify original media')))+
+        ' · <a href="'+safe(e.figureIdentity?.original_source||e.visual.src)+'" target="_blank" rel="noopener noreferrer">'+
+        safe(tr('打开官方原始来源','Open verified original source'))+' ↗</a></p>' : '')+baseLessons+editorial+'</section>'+
       '<aside class="ora-detail-sidebar"><h2>'+safe(tr('资产档案','Asset metadata'))+'</h2>'+
       '<dl><dt>'+safe(tr('科研阶段','Stages'))+'</dt><dd>'+e.stages.map(x=>safe(facetText('stages',x))).join(' · ')+'</dd>'+
       '<dt>'+safe(tr('领域','Domains'))+'</dt><dd>'+e.domains.map(x=>safe(facetText('domains',x))).join(' · ')+'</dd>'+
       '<dt>'+safe(tr('使用性质','Reuse'))+'</dt><dd>'+safe(e.rights?.reuse || 'unknown')+'</dd>'+
       '<dt>'+safe(tr('素材来源与边界','Asset media status'))+'</dt><dd>'+safe(rightsNote)+'</dd>'+
-      ((e.visual?.kind==='licensed-paper-figure'||e.visual?.kind==='licensed-source-image')?'<dt>'+safe(tr('图片署名','Figure credit'))+'</dt><dd>'+safe(e.rights?.attribution||'')+'</dd>'+
-        '<dt>'+safe(tr('图片修改','Image modifications'))+'</dt><dd>'+safe(tr('未修改','Unmodified'))+'</dd>':'')+'</dl>'+
-      '<div class="ora-detail-links">'+Object.entries(e.links || {}).map(([key,url])=>link(url,{source:tr('原始来源','Original source'),paper:tr('论文','Paper'),officialFigure:tr('官方媒体原图','Original upstream figure'),license:tr('授权条款 CC BY 4.0','License CC BY 4.0'),editable:tr('获取可编辑文件/说明','Editable source / instructions')}[key] || key)).join('')+
+      (e.figureIdentity?'<dt>'+safe(tr('图像准确身份','Exact image identity'))+'</dt><dd>'+safe(e.figureIdentity.original_name)+'</dd>'+
+        '<dt>'+safe(tr('原作者 / 来源','Author / source'))+'</dt><dd>'+safe(e.figureIdentity.credit)+'</dd>'+
+        '<dt>'+safe(tr('截图或裁切处理','Preview transformations'))+'</dt><dd>'+safe(e.figureIdentity.modifications)+'</dd>'+
+        '<dt>'+safe(tr('获取时间','Reference date'))+'</dt><dd>'+safe(e.figureIdentity.capture_date)+'</dd>':'')+'</dl>'+
+      '<div class="ora-detail-links">'+Object.entries(e.links || {}).map(([key,url])=>link(url,{source:tr('原始来源','Original source'),paper:tr('论文','Paper'),officialFigure:tr('原始 Figure / 网页','Original figure / webpage'),license:tr('授权条款 CC BY 4.0','License CC BY 4.0'),editable:tr('获取可编辑文件/说明','Editable source / instructions')}[key] || key)).join('')+
       '<a href="catalog/entries/'+encodeURIComponent(e.id)+'.json" target="_blank" rel="noopener noreferrer">'+safe(tr('供 AI 使用的单项 JSON','Single-entry JSON for AI'))+' ↗</a></div>'+
       '<div class="ora-detail-rights"><p>'+safe(tr('第三方素材归原权利人；署名或免费展示不等于再分发授权。如对展示有异议，可联系撤除或更正。','Third-party materials belong to their rights holders. Attribution and free access do not imply redistribution rights. Request removal or correction if you object.'))+'</p><a href="https://github.com/Suchenl/OpenResearchAssets/issues/new?template=asset-removal.yml" target="_blank" rel="noopener noreferrer">'+safe(tr('联系撤除 / 更正','Request removal / correction'))+' ↗</a></div>'+
       '<button type="button" id="ora-copy-brief">'+safe(tr('复制给 AI 的使用说明','Copy AI usage brief'))+'</button>'+

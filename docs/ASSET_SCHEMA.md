@@ -83,3 +83,7 @@ python3 tests/browser_offline_smoke.py   # Playwright 与 Chromium 可用时
 ## 真实来源图优先
 
 参考型条目支持 `visual.kind=external-reference-image` 和官方 HTTPS `src`；这是对原站媒体的直接链接，不代表本站获得再授权。优先展示原始素材，但仍需在双语 `visual.alt` 中说明它是论文主图、官网配图、作者 portfolio 封面还是截图，不能混称。源图载入失败时显示可见提示，详情保留作者/主页链接。
+
+## Figure 1 / 主页首屏：强制核实原图身份
+
+核心视觉条目的主封面不再允许用其他“同项目官方配图”冒充：`visual.kind=verified-paper-figure` 必须是真正 Figure 1（或在 title 中准确给出论文 Figure 编号）；`visual.kind=verified-site-screenshot` 必须是真实浏览器截取的源站首屏。`figureIdentity` 的 source/type/name/date/credit/modifications 均为必填元数据，第三方低分辨率引用截图不等于自动拥有可再分发许可。对原图有疑义可按权利人撤除机制响应。六案例当前均有内容专属的原图 JPG，同时保留 `analysisVisual` 为原创结构解析辅助。
