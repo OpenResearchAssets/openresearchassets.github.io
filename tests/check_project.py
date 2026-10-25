@@ -40,7 +40,7 @@ if sync.returncode:errors.append('derived catalog out of date: '+sync.stdout+syn
 catalog=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))
 if catalog.get('schema_version')!='1.0.0':errors.append('catalog: unsupported schema version')
 entries=catalog.get('entries',[])
-if len(entries)!=40:errors.append('catalog: expected 40 sourced research records')
+if len(entries)!=39:errors.append('catalog: expected 39 curated records after the GridAR removal')
 core_ids={'roborender-teaser','roborender-site','robodojo-teaser','robodojo-site','supermimic-teaser','supermimic-site'}
 for e in entries:
     if e.get('id') in core_ids and e.get('visual',{}).get('kind') not in ('verified-paper-figure','verified-site-screenshot'):
@@ -340,9 +340,19 @@ for entry in entries:
 if any(entry['id']=='visualmimic-method' for entry in entries):
     errors.append('generic dense diagram must not pass strict design curation')
 
+# Curatorial rejection and direct original access.
+if 'gridar-teaser' in ids:errors.append('GridAR rejected by editorial review but remains in catalog')
+if (ROOT/'catalog/entries/gridar-teaser.json').exists():
+    errors.append('Rejected GridAR record must not be indexed or retained as a candidate')
+if 'id="featured-project-sites"' not in home_html:
+    errors.append('Homepage lacks directly accessible original interactive project sites')
+site_js=(ROOT/'js/catalog.js').read_text(encoding='utf-8')
+if 'function renderFeaturedSites()' not in site_js or 'ora-open-source' not in site_js:
+    errors.append('Gallery cards lack first-class source-site navigation')
+
 # Visual diversity: real teaser/results/ablation/site evidence; never relabel a site frame as a screenshot.
 new_diverse={
- 'teaser':['instruct-pix2pix-teaser','gridar-teaser'],
+ 'teaser':['instruct-pix2pix-teaser'],
  'results':['ultraedit-qualitative','fastnerf-zoom-results'],
  'ablation':['specialist-diffusion-ablation','egoengine-ablation'],
  'project-site':['nerfies-project-site','hypernerf-project-site']

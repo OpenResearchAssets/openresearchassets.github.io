@@ -171,6 +171,23 @@
     const label=labels[name];
     return label ? tr(label[0],label[1]) : '';
   };
+  function renderFeaturedSites() {
+    const mount=document.getElementById('featured-project-sites');
+    if(!mount || !catalog)return;
+    const sites=catalog.entries.filter(e=>e.kind==='website-reference' && e.curation?.visual_category==='project-site');
+    mount.innerHTML=sites.map(e=>{
+      const source=safeUrl(e.links?.source);
+      if(!source)return '';
+      return '<article class="ora-featured-site">'+
+        '<a class="ora-featured-preview" href="'+safe(source)+'" target="_blank" rel="noopener noreferrer" aria-label="'+safe(tr('打开官方研究主页：','Visit original research site: ')+e.title)+'">'+media(e)+'</a>'+
+        '<div class="ora-featured-info"><p class="ora-featured-eyebrow">'+safe(tr('可交互研究主页','Interactive research site'))+'</p>'+
+        '<h4><a href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">'+safe(e.title.split(' · ')[0])+' ↗</a></h4>'+
+        '<p>'+safe(local(e.description))+'</p>'+
+        '<div class="ora-featured-actions"><a class="ora-open-source" href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('立即打开原作者网站','Visit official site'))+' ↗</a>'+
+        '<a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(tr('查看设计分析','Design analysis'))+' →</a></div></div></article>';
+    }).join('') || '<p class="empty-state">'+safe(empty())+'</p>';
+  }
+
   function renderGrid() {
     if (!grid || !catalog) return;
     const q=document.getElementById('reference-search')?.value.trim().toLowerCase() || '';
@@ -183,15 +200,25 @@
       (!kindSelect || e.kind===kindSelect) && (!domain || e.domains.includes(domain)) &&
       words.every(w=>allSearch(e).includes(w)));
     const shown = (!q && !stage && !kindSelect && !domain && !showAll) ? items.slice(0,9) : items;
-    grid.innerHTML=shown.length ? shown.map(e=>'<article class="ora-resource-card">'+
-      '<a class="ora-resource-visual" href="asset.html?id='+encodeURIComponent(e.id)+'" aria-label="'+safe(tr('查看资产：','View asset: ')+e.title)+'">'+media(e)+'</a>'+
-      '<div class="ora-resource-content"><div class="ora-resource-kicker">'+safe(visualCategory(e)||kind(e))+' · '+safe(e.year || '')+'</div>'+
-      '<h3><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(e.title)+'</a></h3>'+
-      '<p>'+safe(local(e.description))+'</p>'+
-      '<div class="ora-tag-row">'+e.stages.slice(0,2).map(x=>'<span>'+safe(facetText('stages',x))+'</span>').join('')+
-      e.domains.slice(0,1).map(x=>'<span>'+safe(facetText('domains',x))+'</span>').join('')+'</div>'+
-      '<div class="ora-resource-actions"><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(tr('查看复用指南','Usage guide'))+' →</a>'+
-      link(e.links?.source,tr('原始来源','Original source'))+'</div></div></article>').join('') :
+    grid.innerHTML=shown.length ? shown.map(e=>{
+      const source=safeUrl(e.links?.source);
+      const details='asset.html?id='+encodeURIComponent(e.id);
+      const href=source || details;
+      const ext=source ? ' target="_blank" rel="noopener noreferrer"' : '';
+      const figure=safeUrl(e.links?.officialFigure);
+      return '<article class="ora-resource-card">'+
+        '<a class="ora-resource-visual" href="'+safe(href)+'"'+ext+' aria-label="'+safe(tr('直接打开原作者：','Open original project: ')+e.title)+'">'+media(e)+'</a>'+
+        '<div class="ora-resource-content"><div class="ora-resource-kicker">'+safe(visualCategory(e)||kind(e))+' · '+safe(e.year || '')+'</div>'+
+        '<h3><a href="'+safe(href)+'"'+ext+'>'+safe(e.title)+'</a></h3>'+
+        '<p>'+safe(local(e.description))+'</p>'+
+        '<div class="ora-tag-row">'+e.stages.slice(0,2).map(x=>'<span>'+safe(facetText('stages',x))+'</span>').join('')+
+        e.domains.slice(0,1).map(x=>'<span>'+safe(facetText('domains',x))+'</span>').join('')+'</div>'+
+        '<div class="ora-resource-actions">'+
+        (source ? '<a class="ora-open-source" href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('直达原作者主页','Open original site'))+' ↗</a>' : '')+
+        (figure && figure!==source ? '<a href="'+safe(figure)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('查看原图','View original figure'))+' ↗</a>' : '')+
+        '<a class="ora-open-details" href="'+safe(details)+'">'+safe(tr('设计拆解','Design notes'))+' →</a>'+
+        '</div></div></article>';
+    }).join('') :
       '<p class="empty-state">'+safe(empty())+'</p>';
     const status=document.getElementById('reference-status');
     if(status)status.textContent=tr('已显示 ','Showing ')+shown.length+' / '+galleryList().length+
@@ -274,7 +301,7 @@
       catch(_) {button.textContent=tr('复制失败，请打开 AI 目录获取文本','Copy blocked: use AI catalog');}
     });
   }
-  function render() {if(!catalog)return;prepareFilters();renderGrid();renderSkills();renderDetail();}
+  function render() {if(!catalog)return;prepareFilters();renderFeaturedSites();renderGrid();renderSkills();renderDetail();}
   const inline=document.getElementById('ora-catalog-data');
   const load=inline ? Promise.resolve(JSON.parse(inline.textContent)) :
     fetch('catalog/index.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json();});

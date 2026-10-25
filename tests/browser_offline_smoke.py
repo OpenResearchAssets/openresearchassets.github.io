@@ -63,6 +63,10 @@ with sync_playwright() as pw:
         assert '异议' in page.locator('.ora-rights-notice').inner_text()
         assert 'asset-removal.yml' in page.locator('.ora-rights-notice a').get_attribute('href')
         assert page.locator('.ora-resource-card').count()==9
+        assert page.locator('.ora-featured-site').count()==2
+        assert page.locator('.ora-featured-site').nth(0).locator('.ora-open-source').get_attribute('href')=='https://nerfies.github.io/'
+        assert page.locator('.ora-featured-site').nth(1).locator('.ora-open-source').get_attribute('href')=='https://hypernerf.github.io/'
+        assert page.locator('.ora-featured-site').nth(0).locator('.ora-featured-preview').get_attribute('href')=='https://nerfies.github.io/'
         assert page.locator('.ora-resource-card').first.locator('.ora-external img').count()==1
         assert 'depth-anything-3.github.io/assets/teaser.png' in page.locator('.ora-resource-card').first.locator('img').get_attribute('src')
         assert '真实来源视觉参考' in page.locator('#reference-status').inner_text()
@@ -82,9 +86,12 @@ with sync_playwright() as pw:
         assert 'HyperNeRF' in page.locator('#reference-grid').inner_text()
         page.locator('#facet-reset').click()
         page.locator('#catalog-more').click()
-        assert page.locator('.ora-resource-card').count()==29
+        assert page.locator('.ora-resource-card').count()==28
         page.locator('#facet-kind').select_option('website-reference')
         assert page.locator('.ora-resource-card').count()==5
+        assert page.locator('.ora-resource-card').filter(has_text='Nerfies').locator('.ora-resource-visual').get_attribute('href')=='https://nerfies.github.io/'
+        assert page.locator('.ora-resource-card').filter(has_text='HyperNeRF').locator('.ora-resource-content h3 a').get_attribute('href')=='https://hypernerf.github.io/'
+        assert page.locator('.ora-resource-card').filter(has_text='Nerfies').locator('.ora-open-source').get_attribute('target')=='_blank'
         page.locator('#facet-kind').select_option('')
         page.locator('#reference-search').fill('RoboRender')
         assert page.locator('.ora-resource-card').count()==2
@@ -94,6 +101,7 @@ with sync_playwright() as pw:
         assert page.locator('html').get_attribute('lang')=='en'
         assert page.locator('h1').inner_text().startswith('Remarkable research figures')
         assert 'Beautiful research visuals' in page.locator('.ora-main-paths').inner_text()
+        assert 'Visit official site' in page.locator('.ora-featured-site').first.inner_text()
         assert 'Popular open-source picks' in page.locator('#skills').inner_text()
         assert 'Rights holders may request removal' in page.locator('.ora-rights-notice').inner_text()
         assert page.locator('.ora-resource-card').count()==9
