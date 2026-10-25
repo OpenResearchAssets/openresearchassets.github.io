@@ -14,7 +14,7 @@
 论文图仅裁切、缩小、JPEG 压缩，保留信息内容；网页首屏在 1370×810 的实际浏览器中截取（视频瞬时帧随时间变化）。
 
 - **RoboRender Figure 1**：原论文以 CC BY 4.0 公开，使用中注明作者、论文和裁切压缩修改。
-- **RoboDojo 和 SuperMimic**：低分辨率、具体研究评论及设计分析参考，原作者保留版权；本仓库不对原图重新授权，有异议可通过 [素材撤除/更正模板](https://github.com/Suchenl/OpenResearchAssets/issues/new?template=asset-removal.yml) 联系。
+- **RoboDojo 和 SuperMimic**：低分辨率、具体研究评论及设计分析参考，原作者保留版权；本仓库不对原图重新授权，有异议可通过 [素材撤除/更正模板](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=asset-removal.yml) 联系。
 - **网站截图**：作为评论网站信息架构的参考，不能当成代码版权许可证、可编辑源码，也不是完整页面归档。
 
 每张图片的独立来源、身份、修改说明和署名参见 [manifest.json](manifest.json)。`assets/editorials/*.svg` 是本站原创的结构分析，与这里的原始媒体**不是同类素材**。
