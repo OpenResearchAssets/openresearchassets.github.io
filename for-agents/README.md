@@ -17,6 +17,14 @@
 
 本目录是人工精选的科研辅助资源，不是一个能自行运行实验或修改本地文件的远程执行服务。AI 必须有相应文件、浏览器或代码执行权限才能执行任务。当前收录只代表经过来源整理与描述，不代表所有工具都经过实测。
 
+## 三个可复用的贯通教学案例（不是实证研究）
+
+如果任务需要**学习如何把一个研究问题转为完整产物**，可以按顺序读取 [案例总索引](../examples/README.md)、[Method Figure 中文教程](../examples/method-figure.zh.md)、[对照实验设计](../examples/experiment-design.zh.md) 和 [项目主页教程](../examples/project-homepage.zh.md)，分别获取原生可编辑 SVG、尚未填写数据的实验 CSV，以及可直接打开的静态 HTML。每个案例都有完整英文版本，直接从索引访问。
+
+这些案例使用一个**明确虚构**的机器人视觉任务，绝不能当作已发表工作、真实机器人演示、实验效果或预训练工具的性能证据；如果用于实际项目，必须替换为自己的方法定义和可追溯数据，独立验收。**案例文档不构成第二份资产 JSON 目录**；结构化科研资产仍以 `catalog/index.json` 为唯一权威源。
+
+**English:** The [worked examples](../examples/README.md) trace a deliberately hypothetical robotics question through an editable method diagram, preregisterable A/B/C experiment plan, blank evidence CSV and runnable homepage template. Each guide has a full English version. These are not measured outcomes or implemented robot capabilities. Always use the canonical catalog for indexed assets and independently validate any adaptation.
+
 ## 主要入口
 
 - [轻量 AI 索引（JSON）](../catalog/manifest.json)
