@@ -6,28 +6,14 @@
 
 OpenResearchAssets curates reusable research references, editable diagrams, workflows and research-quality guidance. It is Chinese-first with supporting English descriptions. Never assume a third-party figure or webpage screenshot is licensed for redistribution.
 
-## Real-paper case with source-grounded evidence
-- [RoboRender editorial study, bilingual](https://openresearchassets.github.io/examples/roborender.html)
-- [Original paper project](https://robo-render.github.io/)
-- [Author-reported per-task CSV](https://openresearchassets.github.io/examples/roborender-results.csv)
-- [Source audit and limitations](https://openresearchassets.github.io/examples/roborender-provenance.md)
-- [Editable method analysis SVG](https://openresearchassets.github.io/assets/examples/roborender-method.svg)
-- [Editable evidence analysis SVG](https://openresearchassets.github.io/assets/examples/roborender-evidence.svg)
+## Two primary asset tracks
+- [Research Gallery (high-aesthetic scientific visuals)](https://openresearchassets.github.io/#gallery)
+- [Research Skills / Workflows (public GitHub stars and evidenced practice)](https://openresearchassets.github.io/#skills)
 
-Author-reported, NOT independently replicated. Video renderer learned from real robot videos; zero-shot deployment describes the downstream policy. Case content is editorial analysis, not a second catalog source-of-truth.
+For skills, inspect each entry's `curation.track`: `popular` means a verified public GitHub repository with a dated Star snapshot, not firsthand evaluation; `practice` links project evidence of actual use, not third-party efficacy trials. Uncurated workflow notes and experimental protocols must not be described as vetted.
 
-## Complete worked examples (teaching scenarios, not empirical results)
-- [Three connected worked examples](https://openresearchassets.github.io/examples.html)
-- [Method figure guide / 中文](https://openresearchassets.github.io/examples/method-figure.zh.md)
-- [Method figure guide / English](https://openresearchassets.github.io/examples/method-figure.en.md)
-- [Experiment design / 中文](https://openresearchassets.github.io/examples/experiment-design.zh.md)
-- [Experiment design / English](https://openresearchassets.github.io/examples/experiment-design.en.md)
-- [Project homepage / 中文](https://openresearchassets.github.io/examples/project-homepage.zh.md)
-- [Project homepage / English](https://openresearchassets.github.io/examples/project-homepage.en.md)
-- [Blank evidence register CSV](https://openresearchassets.github.io/examples/evidence-register.csv)
-- [Runnable teaching HTML](https://openresearchassets.github.io/examples/sample-project.html)
-
-These form an invented, self-contained teaching scenario. Never cite the diagrams as published robot research or infer measured improvements. For authoritative indexed asset metadata, use catalog/index.json instead.
+## Secondary historical examples
+- [Previous editorial example index](https://openresearchassets.github.io/examples/README.md) (supporting reading, not a primary offering)
 
 ## Read first
 - [AI 使用指南 / Agent guide](https://openresearchassets.github.io/for-agents/)

@@ -17,19 +17,16 @@
 
 本目录是人工精选的科研辅助资源，不是一个能自行运行实验或修改本地文件的远程执行服务。AI 必须有相应文件、浏览器或代码执行权限才能执行任务。当前收录只代表经过来源整理与描述，不代表所有工具都经过实测。
 
-## 已公开的真实论文证据链
+## 先选资产类型，再看具体证据
 
-[RoboRender 方法—证据—主页完整解读](../examples/roborender.html) 以作者公开论文和项目网站为来源，提供 [报告数据 CSV](../examples/roborender-results.csv)、原创 SVG 和 [来源审计](../examples/roborender-provenance.md)。AI 复用时必须明确：作者报告平均成功率 71%，涉及 8 项任务、每任务 10 次运行；**OpenResearchAssets 没有独立复现**。不得将策略零样本真机部署误写为视频生成器训练不使用真实世界数据。
+- **视觉 Gallery**：论文图、项目主页、可编辑 SVG；准确区分原作者截图和我们的原创图稿，不能在无授权时直接复制。
+- **高热度 Skill / Tool**：`curation.track=popular`，核对 `github_repo`、`stars_snapshot`、`stars_checked_on`；Star 是社区关注度，不说明此项目曾实际运行。
+- **实践工作流**：`curation.track=practice`，按 `evidence[]` 核对公开产物；不把“制作过网页/图稿”误说成跨任务性能验证。
+- **普通候选**：没有以上证据的旧流程文档或 Quality Critic 候选，仅是可进一步测试的资源，不进入精选榜单。
 
-**English:** [Real-paper editorial case](../examples/roborender.html) with transcribed author-reported outcomes, source audit and editable SVGs. Not an independent reproduction.
+历史论文解读与三份教学示例留在 [examples/](../examples/README.md) 作为附属参考，不是项目的主要入口。
 
-## 三个可复用的贯通教学案例（不是实证研究）
-
-如果任务需要**学习如何把一个研究问题转为完整产物**，可以按顺序读取 [案例总索引](../examples/README.md)、[Method Figure 中文教程](../examples/method-figure.zh.md)、[对照实验设计](../examples/experiment-design.zh.md) 和 [项目主页教程](../examples/project-homepage.zh.md)，分别获取原生可编辑 SVG、尚未填写数据的实验 CSV，以及可直接打开的静态 HTML。每个案例都有完整英文版本，直接从索引访问。
-
-这些案例使用一个**明确虚构**的机器人视觉任务，绝不能当作已发表工作、真实机器人演示、实验效果或预训练工具的性能证据；如果用于实际项目，必须替换为自己的方法定义和可追溯数据，独立验收。**案例文档不构成第二份资产 JSON 目录**；结构化科研资产仍以 `catalog/index.json` 为唯一权威源。
-
-**English:** The [worked examples](../examples/README.md) trace a deliberately hypothetical robotics question through an editable method diagram, preregisterable A/B/C experiment plan, blank evidence CSV and runnable homepage template. Each guide has a full English version. These are not measured outcomes or implemented robot capabilities. Always use the canonical catalog for indexed assets and independently validate any adaptation.
+**English:** The core product is a research-figure Gallery and a curated Skills/Workflows collection. Popular entries have dated repository-star snapshots; practice entries require public evidence. Do not confuse GitHub stars, internal project work or independent effectiveness evaluations.
 
 ## 主要入口
 

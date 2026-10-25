@@ -7,35 +7,16 @@ Research assets should be more than bookmarks. They should tell us **when to use
 
 **Two core collections:** [beautiful, reusable scientific figures](https://openresearchassets.github.io/#gallery) and [select Skills / Workflows](https://openresearchassets.github.io/#skills), curated either by verifiable public GitHub popularity or evidenced firsthand project practice. Stars are not quality evidence; legacy paper analyses are supporting references, not the main product.
 
-## Start here
+## Two core collections
 
-| Goal | First step | Then |
+| Collection | What you get | Selection standard |
 |---|---|---|
-| **Explore yourself** | [Browse the asset catalog](https://openresearchassets.github.io/#references) | Try the [experiment-planning workflow](https://openresearchassets.github.io/asset.html?id=experiment-planning). Check applicability, steps and limitations before use |
-| **Use with an agent** | [Read the agent guide](https://openresearchassets.github.io/for-agents/) | Start from the [compact manifest](catalog/manifest.json), fetch only matching entries; actual execution requires the agent's file/tool permissions |
-| **Contribute** | [Suggest a sourced asset](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=asset-request.md) | Or [read the contribution guide](CONTRIBUTING.md), correct a source, improve a workflow, or submit a PR |
+| **[Research Gallery](https://openresearchassets.github.io/#gallery)** | Exceptional figure references, project websites, and [editable SVGs](https://openresearchassets.github.io/#assets) | Visual excellence, scientific clarity, original provenance and actual transferability |
+| **[Research Skills / Workflows](https://openresearchassets.github.io/#skills)** | Curated skills, tools and workflows for actual research tasks | **Popular**: dated GitHub repository stars, clearly not personally tested; **Practice**: specific public project artifacts showing usage |
 
-Workflows here are guidance, not independently validated outcomes. Editable concept designs must be adapted to real scientific content.
+Popularity is not validated usefulness. A protocol without usage evidence is a candidate, never labeled “field-tested.” Original paper reviews and pedagogical examples remain available under [examples/](examples/README.md) as secondary reference, not the main product.
 
-## Source-traceable real-paper case
-
-**[RoboRender: method, evidence and research communication](https://openresearchassets.github.io/examples/roborender.html)** · [Source audit](examples/roborender-provenance.md) · [Per-task CSV](examples/roborender-results.csv)
-
-The authors' [public results](https://robo-render.github.io/) report mean real-robot success of **Simulation 10%, Sim+DR 20%, RoboRender 71%** over eight tasks (10 rollouts per task per method). Two **original editable SVG** analyses distinguish mechanism from evidence. These are **author-reported outcomes, not our reproduction**. The paper's Figure 1 retains separate authorship and rights.
-
-## Three connected worked examples (editable and downloadable)
-
-[**Explore the examples on the website →**](https://openresearchassets.github.io/examples.html)
-
-An **explicitly hypothetical** vision-guided robotics scenario is carried from question → method figure → controlled evaluation → project site. No unpublished material or empirical outcomes are presented.
-
-| Example | Complete walkthrough | Editable output |
-|---|---|---|
-| **01 Method figure** | [Method walkthrough](examples/method-figure.en.md) | [SVG](assets/examples/method-figure.en.svg) |
-| **02 Controlled evaluation** | [Falsifiable experiment](examples/experiment-design.en.md) | [SVG](assets/examples/experiment-design.en.svg) + [blank evidence CSV](examples/evidence-register.csv) |
-| **03 Project website** | [Responsible research release](examples/project-homepage.en.md) | [SVG](assets/examples/project-homepage.en.svg) + [runnable HTML](examples/sample-project.html) |
-
-These original, fully editable teaching artifacts are **not real robot trials, research claims or a deployed robot service**. Adapt the source and validate all evidence before use. See the [case index](examples/README.md).
+[Agent catalog](for-agents/) · [Contribute](CONTRIBUTING.md) · [Report an issue](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new/choose)
 
 ## Mission and intended use
 

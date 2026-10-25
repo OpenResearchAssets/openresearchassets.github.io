@@ -9,35 +9,18 @@
 
 OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉案例、优秀项目主页、可编辑原创素材、研究工具与可用的工作流。**中文为主、英文为辅**；允许人类按任务搜索，也提供无需付费 API 的结构化 AI 读取入口。
 
-## 从这里开始（3 条路径）
+## 两个核心入口
 
-| 你的目标 | 第一步 | 下一步 |
+| 产品支柱 | 你能直接得到什么 | 选品标准 |
 |---|---|---|
-| **自己找资源** | [浏览科研资产](https://openresearchassets.github.io/#references) | 例如打开[实验规划工作流](https://openresearchassets.github.io/asset.html?id=experiment-planning)，先看适用场景、具体步骤与限制，再用于自己的研究 |
-| **让 Agent 使用** | [阅读 AI 使用入口](https://openresearchassets.github.io/for-agents/) | 先加载 [轻量索引](catalog/manifest.json)，只读取相关资产；真正操作仍需要 Agent 的文件与工具权限 |
-| **参与社区** | [推荐一项科研资产](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=asset-request.md) | 也可以从[贡献指南](CONTRIBUTING.md)开始，修正来源、改进已有工作流或提交 PR |
+| **[Research Gallery · 精选配图](https://openresearchassets.github.io/#gallery)** | 高审美科研 Teaser、Method、Results、优秀项目主页、[可编辑 SVG](https://openresearchassets.github.io/#assets) | 先看真实视觉质量、科学表达、可迁移构图和原始出处，宁缺毋滥 |
+| **[Research Skills / Workflows](https://openresearchassets.github.io/#skills)** | 有用途和限制说明的精选 Agent Skills、工具与可复用研究流程 | **高热度**：核验 GitHub 仓库 Star、注明快照日期；**实践积累**：必须链接公开产物及实际使用证据 |
 
-目前的工作流是指导性材料，不代表已通过独立效果验证；SVG 模板的示意内容也需替换成真实研究信息。
+**Star 与实际效果是两回事。** 高热度项是外部精选，不表示本项目亲自运行；项目实践项有公开成果但未必经过独立效用评测。没有实践证据的普通 Markdown 清单和 Quality Critic 候选 Skill 不冒充“亲测”。
 
-## 已核对公开来源的真实论文案例
+[为 Agent 提供结构化目录](for-agents/) · [投稿优秀视觉或实际用过的 Skills](CONTRIBUTING.md) · [提出问题 / 纠错](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new/choose)
 
-**[RoboRender：从方法到 8 项真机实验再到项目主页的案例](https://openresearchassets.github.io/examples/roborender.html)** · [来源核验](examples/roborender-provenance.md) · [逐任务结果 CSV](examples/roborender-results.csv)
-
-采用作者 [官网](https://robo-render.github.io/) 公开的结果：8 项真机任务、每种方法每任务 10 次 rollout；报告的平均成功率分别为 **Simulation 10%、Sim+DR 20%、RoboRender 71%**。提供两张**原创可编辑分析 SVG**，将方法机制与证据分开。**这不是本站独立复现**；原论文 Figure 1 缩略图保留原作者权利与明确归属。
-
-## 三个贯通式科研案例（可编辑、可下载）
-
-[**打开网站案例页 →**](https://openresearchassets.github.io/examples.html)
-
-以一个**明确标注为虚构**的视觉机器人任务为共同输入，完整示范科学问题 → Method Figure → 对照实验 → 项目主页，不引用未经公开的研究材料，也不伪造实验结果。
-
-| 实践 | 完整步骤 | 实际可复用交付 |
-|---|---|---|
-| **01 方法图** | [Method Figure 教学案例](examples/method-figure.zh.md) | [可编辑 SVG](assets/examples/method-figure.zh.svg) |
-| **02 对照实验** | [科学主张 → 实验协议](examples/experiment-design.zh.md) | [可编辑 SVG](assets/examples/experiment-design.zh.svg) + [待填写证据 CSV](examples/evidence-register.csv) |
-| **03 项目主页** | [证据 → 公开研究页面](examples/project-homepage.zh.md) | [可编辑 SVG](assets/examples/project-homepage.zh.svg) + [可运行 HTML 示例](examples/sample-project.html) |
-
-**真实性边界：** 这些是原创教学产物，不是实际论文结果或部署中的机器人系统。请在真实任务中替换内容、获取许可、执行实验并核对所有结论。中英两套 SVG 和对应完整说明均已提供，见 [案例总索引](examples/README.md)。
+**附属材料**：历史论文分析与教学案例仍保留在 [examples/](examples/README.md) 供查阅、链接兼容和来源核验，不是网站的核心产品或内容增长方向。
 
 ## 项目目标与用途
 
@@ -70,7 +53,7 @@ OpenResearchAssets 由独立 GitHub Organization 维护，目标是建设**项�
 | 内容 | 实际交付 | 边界 |
 |---|---|---|
 | [任务搜索与多维筛选](https://openresearchassets.github.io/#references) | 双语关键词、科研阶段、领域、资产类型过滤；独立详情页 | 当前是浏览器本地筛选，不是语义向量检索 |
-| [结构化资产目录](catalog/index.json) · [轻量 AI 索引](catalog/manifest.json) | **22 项**记录，含 6 个 RoboRender / RoboDojo / SuperMimic 的深入视觉分析案例 | 精选的六张案例封面均已核实对应论文 Figure 1 或官方主页首屏（RoboRender 论文图为 CC BY 4.0；其余按具体来源与评论预览说明处理） |
+| [结构化资产目录](catalog/index.json) · [轻量 AI 索引](catalog/manifest.json) | **27 项**记录，含 6 个 RoboRender / RoboDojo / SuperMimic 的深入视觉分析案例 | 精选的六张精选案例封面均已核实对应论文 Figure 1 或官方主页首屏（RoboRender 论文图为 CC BY 4.0；其余按具体来源与评论预览说明处理） |
 | [AI 使用指南](for-agents/) · [llms.txt](llms.txt) | 无需认证的 JSON、Markdown 导航和来源链接 | AI 的具体执行能力取决于 Agent 文件与工具权限 |
 | [原创可编辑 SVG](assets/templates/) | 5 份概念模板：Teaser、流程、结果、主页故事板、论点—证据映射 | 只展示结构和占位，不代表真实实验 |
 | [人工质量自查](quality.html) | 五类审核对象、问题手工勾选和 Markdown 报告 | **不自动读取或诊断图片** |
