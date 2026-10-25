@@ -1,0 +1,143 @@
+{
+  "id": "videomimic-approach",
+  "title": "VideoMimic · 方法总体架构（Approach Overview）",
+  "kind": "visual-reference",
+  "stages": [
+    "methods",
+    "writing",
+    "communication"
+  ],
+  "domains": [
+    "robotics",
+    "vision"
+  ],
+  "tasks": [
+    "method-figure",
+    "robot-control",
+    "visual-conditioning",
+    "training-pipeline"
+  ],
+  "description": {
+    "zh": "与同项目的 Real-to-Sim 图形成互补：前者强调过程可视化，这张图更强调技术模块和训练关系。",
+    "en": "Complements the real-to-sim walkthrough with an overall technical module map and training structure."
+  },
+  "keywords": {
+    "zh": [
+      "VideoMimic",
+      "method-figure",
+      "robot-control",
+      "visual-conditioning",
+      "training-pipeline",
+      "方法图",
+      "高审美"
+    ],
+    "en": [
+      "VideoMimic",
+      "method-figure",
+      "robot-control",
+      "visual-conditioning",
+      "training-pipeline",
+      "scientific figure",
+      "visual reference"
+    ]
+  },
+  "year": "2025",
+  "language": "zh+en",
+  "links": {
+    "source": "https://www.videomimic.net/",
+    "officialFigure": "https://github.com/VideoMimic/videomimic.github.io/blob/main/figs/4-min.png"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "externally-linked-not-relicensed",
+    "source_image_url": "https://raw.githubusercontent.com/VideoMimic/videomimic.github.io/main/figs/4-min.png"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要寻找原创方法图/Teaser 的构图、模块分层和视觉叙事参考。"
+      ],
+      "en": [
+        "Looking for high-quality visual layout patterns for a scientific teaser or method figure."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "模块分组明确，局部细节依附于主线；同一项目可以用两种图承担不同叙事任务。"
+      ],
+      "en": [
+        "A distinct architecture map separates logical modules from the step-by-step experience illustration."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不能将完整模块解释混成新闻式宣传；实际重用须保留自己的科学结构。"
+      ],
+      "en": [
+        "Avoid using decorative flowchart complexity in place of scientifically correct model structure."
+      ]
+    }
+  },
+  "visual": {
+    "kind": "external-reference-image",
+    "src": "https://raw.githubusercontent.com/VideoMimic/videomimic.github.io/main/figs/4-min.png",
+    "alt": {
+      "zh": "VideoMimic 作者网页 Approach Overview 图，描述不同方法模块连接关系。",
+      "en": "VideoMimic official Approach Overview figure explaining the connections among learning stages and components."
+    },
+    "label": {
+      "zh": "原作者官网实际使用的图 · 仅外链参考",
+      "en": "OFFICIAL WEBSITE IMAGE · EXTERNAL LINK ONLY"
+    }
+  },
+  "figureIdentity": {
+    "type": "project-website-figure",
+    "original_name": "VideoMimic 官方项目页 Approach Overview（figs/4-min.png）",
+    "original_source": "https://github.com/VideoMimic/videomimic.github.io/blob/main/figs/4-min.png",
+    "capture_date": "2026-10-25",
+    "credit": "VideoMimic 项目作者，Arthur Allshire 等",
+    "modifications": "只提供对原始仓库文件的远程链接，未修改或重新分发图像"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
+      "en": "Selected for transferable visual design, not as a paper walkthrough."
+    },
+    "composition": {
+      "zh": [
+        "模块分组明确，局部细节依附于主线；同一项目可以用两种图承担不同叙事任务。"
+      ],
+      "en": [
+        "A distinct architecture map separates logical modules from the step-by-step experience illustration."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "适合学习项目中同时存在总览图、过程图时如何避免功能重复。"
+      ],
+      "en": [
+        "Useful when planning distinct overview and process figures without redundant storytelling."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "不能将完整模块解释混成新闻式宣传；实际重用须保留自己的科学结构。",
+        "请打开原作者链接确认图像身份与使用权限。"
+      ],
+      "en": [
+        "Avoid using decorative flowchart complexity in place of scientifically correct model structure.",
+        "Open the source link and verify identity and reuse rights before adapting."
+      ]
+    }
+  },
+  "curation": {
+    "track": "visual",
+    "selected_on": "2026-10-25",
+    "source_verification": "author-site-and-repository-path",
+    "verified_site_section": "VideoMimic 官方项目页 Approach Overview（figs/4-min.png）",
+    "editorial_scope": "composition-layout-visual-storytelling",
+    "asset_residency": "external-original-no-hosted-copy"
+  },
+  "previewStyle": "curated-visual"
+}

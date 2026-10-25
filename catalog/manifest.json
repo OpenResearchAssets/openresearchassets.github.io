@@ -4,7 +4,7 @@
   "generated_on": "2026-10-25",
   "instructions": {
     "zh": "先匹配此轻量目录，再沿 entry 路径只读取最相关条目。第三方图片默认不可复制，只有单条 rights 明确授权才可复用。",
-    "en": "Select from this lightweight manifest, then fetch only relevant entry JSON files. External visuals are not licensed for copying by default; inspect each entry's rights."
+    "en": "Select from this lightweight manifest, then fetch only relevant detailed JSON records. External visuals are not licensed for copying by default; inspect each entry's rights."
   },
   "facets": {
     "stages": {
@@ -829,6 +829,232 @@
       ],
       "description_zh": "已用于本项目 RoboRender 公开图稿：核对来源与逐项数字、制作独立 SVG、检查双语渲染和版权边界。",
       "entry": "catalog/entries/source-to-figure.json"
+    },
+    {
+      "id": "vggt-architecture",
+      "title": "VGGT · 多视角几何统一预测架构",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "method-figure",
+        "3d-reconstruction",
+        "multi-view-visualization",
+        "transformer-architecture"
+      ],
+      "keywords": [
+        "VGGT",
+        "method-figure",
+        "3d-reconstruction",
+        "multi-view-visualization",
+        "transformer-architecture",
+        "方法图",
+        "高审美",
+        "VGGT",
+        "method-figure",
+        "3d-reconstruction",
+        "multi-view-visualization",
+        "transformer-architecture",
+        "scientific figure",
+        "visual reference"
+      ],
+      "description_zh": "适合学习“统一骨干网络 → 多任务几何输出”的信息分层，技术模块紧凑但主线分明。",
+      "entry": "catalog/entries/vggt-architecture.json"
+    },
+    {
+      "id": "dreamdojo-overview",
+      "title": "DreamDojo · 人类视频到机器人世界模型流程图",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "method-figure",
+        "world-model",
+        "video-generation",
+        "pipeline-storytelling"
+      ],
+      "keywords": [
+        "DreamDojo",
+        "method-figure",
+        "world-model",
+        "video-generation",
+        "pipeline-storytelling",
+        "方法图",
+        "高审美",
+        "DreamDojo",
+        "method-figure",
+        "world-model",
+        "video-generation",
+        "pipeline-storytelling",
+        "scientific figure",
+        "visual reference"
+      ],
+      "description_zh": "通过真实视频素材与结构图结合，表达大规模人类视频预训练到具体机器人动作条件的两阶段训练体系。",
+      "entry": "catalog/entries/dreamdojo-overview.json"
+    },
+    {
+      "id": "visualmimic-method",
+      "title": "VisualMimic · 人形机器人视觉模仿方法图",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "method-figure",
+        "robot-control",
+        "humanoid",
+        "visual-imitation"
+      ],
+      "keywords": [
+        "VisualMimic",
+        "method-figure",
+        "robot-control",
+        "humanoid",
+        "visual-imitation",
+        "方法图",
+        "高审美",
+        "VisualMimic",
+        "method-figure",
+        "robot-control",
+        "humanoid",
+        "visual-imitation",
+        "scientific figure",
+        "visual reference"
+      ],
+      "description_zh": "机器人图像实例和方法流程处于同一图面；可借鉴真实动作/环境视觉与技术模块之间的尺度分配。",
+      "entry": "catalog/entries/visualmimic-method.json"
+    },
+    {
+      "id": "videomimic-real2sim",
+      "title": "VideoMimic · Real-to-Sim-to-Real 路径示意",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "method-figure",
+        "real-to-sim",
+        "robot-control",
+        "motion-retargeting"
+      ],
+      "keywords": [
+        "VideoMimic",
+        "method-figure",
+        "real-to-sim",
+        "robot-control",
+        "motion-retargeting",
+        "方法图",
+        "高审美",
+        "VideoMimic",
+        "method-figure",
+        "real-to-sim",
+        "robot-control",
+        "motion-retargeting",
+        "scientific figure",
+        "visual reference"
+      ],
+      "description_zh": "真实视频、几何/场景与机器人动作沿统一方向排列，是复杂 embodied 方法如何保持可读性的优秀示例。",
+      "entry": "catalog/entries/videomimic-real2sim.json"
+    },
+    {
+      "id": "videomimic-approach",
+      "title": "VideoMimic · 方法总体架构（Approach Overview）",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "method-figure",
+        "robot-control",
+        "visual-conditioning",
+        "training-pipeline"
+      ],
+      "keywords": [
+        "VideoMimic",
+        "method-figure",
+        "robot-control",
+        "visual-conditioning",
+        "training-pipeline",
+        "方法图",
+        "高审美",
+        "VideoMimic",
+        "method-figure",
+        "robot-control",
+        "visual-conditioning",
+        "training-pipeline",
+        "scientific figure",
+        "visual reference"
+      ],
+      "description_zh": "与同项目的 Real-to-Sim 图形成互补：前者强调过程可视化，这张图更强调技术模块和训练关系。",
+      "entry": "catalog/entries/videomimic-approach.json"
+    },
+    {
+      "id": "wonderzoom-teaser",
+      "title": "WonderZoom · 多尺度 3D 世界生成 Teaser",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "teaser-design",
+        "3d-generation",
+        "multiscale-visualization",
+        "world-generation"
+      ],
+      "keywords": [
+        "WonderZoom",
+        "teaser-design",
+        "3d-generation",
+        "multiscale-visualization",
+        "world-generation",
+        "方法图",
+        "高审美",
+        "WonderZoom",
+        "teaser-design",
+        "3d-generation",
+        "multiscale-visualization",
+        "world-generation",
+        "scientific figure",
+        "visual reference"
+      ],
+      "description_zh": "用连续放大和空间尺度变化取代抽象流程，形成一眼能理解的视觉故事；适合作为 3D/生成方向的 Teaser 排版参考。",
+      "entry": "catalog/entries/wonderzoom-teaser.json"
     }
   ]
 }

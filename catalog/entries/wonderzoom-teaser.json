@@ -1,0 +1,142 @@
+{
+  "id": "wonderzoom-teaser",
+  "title": "WonderZoom · 多尺度 3D 世界生成 Teaser",
+  "kind": "visual-reference",
+  "stages": [
+    "methods",
+    "writing",
+    "communication"
+  ],
+  "domains": [
+    "vision"
+  ],
+  "tasks": [
+    "teaser-design",
+    "3d-generation",
+    "multiscale-visualization",
+    "world-generation"
+  ],
+  "description": {
+    "zh": "用连续放大和空间尺度变化取代抽象流程，形成一眼能理解的视觉故事；适合作为 3D/生成方向的 Teaser 排版参考。",
+    "en": "Uses spatial zoom progression rather than abstract boxes to communicate multi-scale 3D world generation at a glance."
+  },
+  "keywords": {
+    "zh": [
+      "WonderZoom",
+      "teaser-design",
+      "3d-generation",
+      "multiscale-visualization",
+      "world-generation",
+      "方法图",
+      "高审美"
+    ],
+    "en": [
+      "WonderZoom",
+      "teaser-design",
+      "3d-generation",
+      "multiscale-visualization",
+      "world-generation",
+      "scientific figure",
+      "visual reference"
+    ]
+  },
+  "year": "2025",
+  "language": "zh+en",
+  "links": {
+    "source": "https://wonderzoom.github.io/",
+    "officialFigure": "https://github.com/wonderzoom/wonderzoom.github.io/blob/main/assets/images/approach/teaser_img.png"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "externally-linked-not-relicensed",
+    "source_image_url": "https://raw.githubusercontent.com/wonderzoom/wonderzoom.github.io/main/assets/images/approach/teaser_img.png"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要寻找原创方法图/Teaser 的构图、模块分层和视觉叙事参考。"
+      ],
+      "en": [
+        "Looking for high-quality visual layout patterns for a scientific teaser or method figure."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "利用统一场景的尺度变化形成自然视觉节奏；重复视觉锚点使跨尺度的关系无需过多解释文字。"
+      ],
+      "en": [
+        "A recurring visual anchor and controlled zoom scale establish narrative rhythm with minimal text."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "高分辨率外链图像可能加载较慢；实际使用须访问作者页面并确认视觉元素来源。"
+      ],
+      "en": [
+        "The author-hosted high-resolution linked image may load slowly; check source and rights before reuse."
+      ]
+    }
+  },
+  "visual": {
+    "kind": "external-reference-image",
+    "src": "https://raw.githubusercontent.com/wonderzoom/wonderzoom.github.io/main/assets/images/approach/teaser_img.png",
+    "alt": {
+      "zh": "WonderZoom 作者公开的 Teaser：同一场景随连续缩放逐渐生成不同空间尺度的细节。",
+      "en": "Official WonderZoom teaser illustrating progressively generated scene details at different spatial scales."
+    },
+    "label": {
+      "zh": "原作者官网实际使用的图 · 仅外链参考",
+      "en": "OFFICIAL WEBSITE IMAGE · EXTERNAL LINK ONLY"
+    }
+  },
+  "figureIdentity": {
+    "type": "project-website-figure",
+    "original_name": "WonderZoom 作者项目站点 Teaser Image（teaser_img.png）",
+    "original_source": "https://github.com/wonderzoom/wonderzoom.github.io/blob/main/assets/images/approach/teaser_img.png",
+    "capture_date": "2026-10-25",
+    "credit": "WonderZoom 项目作者，Jin Cao、Hong-Xing Yu、Jiajun Wu",
+    "modifications": "只提供对原始仓库文件的远程链接，未修改或重新分发图像"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
+      "en": "Selected for transferable visual design, not as a paper walkthrough."
+    },
+    "composition": {
+      "zh": [
+        "利用统一场景的尺度变化形成自然视觉节奏；重复视觉锚点使跨尺度的关系无需过多解释文字。"
+      ],
+      "en": [
+        "A recurring visual anchor and controlled zoom scale establish narrative rhythm with minimal text."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "可迁移的不是原图素材，而是『连续空间状态 + 轻标注 + 视觉重点』的视觉叙事。"
+      ],
+      "en": [
+        "Transfer the progressive visual-sequence pattern, not the original scenes or artwork."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "高分辨率外链图像可能加载较慢；实际使用须访问作者页面并确认视觉元素来源。",
+        "请打开原作者链接确认图像身份与使用权限。"
+      ],
+      "en": [
+        "The author-hosted high-resolution linked image may load slowly; check source and rights before reuse.",
+        "Open the source link and verify identity and reuse rights before adapting."
+      ]
+    }
+  },
+  "curation": {
+    "track": "visual",
+    "selected_on": "2026-10-25",
+    "source_verification": "author-site-and-repository-path",
+    "verified_site_section": "WonderZoom 作者项目站点 Teaser Image（teaser_img.png）",
+    "editorial_scope": "composition-layout-visual-storytelling",
+    "asset_residency": "external-original-no-hosted-copy"
+  },
+  "previewStyle": "curated-visual"
+}

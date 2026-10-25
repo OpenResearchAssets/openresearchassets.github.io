@@ -1,0 +1,144 @@
+{
+  "id": "dreamdojo-overview",
+  "title": "DreamDojo · 人类视频到机器人世界模型流程图",
+  "kind": "visual-reference",
+  "stages": [
+    "methods",
+    "writing",
+    "communication"
+  ],
+  "domains": [
+    "robotics",
+    "vision"
+  ],
+  "tasks": [
+    "method-figure",
+    "world-model",
+    "video-generation",
+    "pipeline-storytelling"
+  ],
+  "description": {
+    "zh": "通过真实视频素材与结构图结合，表达大规模人类视频预训练到具体机器人动作条件的两阶段训练体系。",
+    "en": "A grounded mix of visual samples and schematic stages illustrating pretraining on human video and adaptation to robot embodiments."
+  },
+  "keywords": {
+    "zh": [
+      "DreamDojo",
+      "method-figure",
+      "world-model",
+      "video-generation",
+      "pipeline-storytelling",
+      "方法图",
+      "高审美"
+    ],
+    "en": [
+      "DreamDojo",
+      "method-figure",
+      "world-model",
+      "video-generation",
+      "pipeline-storytelling",
+      "scientific figure",
+      "visual reference"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://dreamdojo-world.github.io/",
+    "paper": "https://arxiv.org/abs/2602.06949",
+    "officialFigure": "https://github.com/dreamdojo-world/dreamdojo-world.github.io/blob/main/public/overview.png"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "externally-linked-not-relicensed",
+    "source_image_url": "https://raw.githubusercontent.com/dreamdojo-world/dreamdojo-world.github.io/main/public/overview.png"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要寻找原创方法图/Teaser 的构图、模块分层和视觉叙事参考。"
+      ],
+      "en": [
+        "Looking for high-quality visual layout patterns for a scientific teaser or method figure."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "视觉实例贯穿数据与训练阶段；预训练/后训练具有明确边界；最终应用不只是空泛模型图标。"
+      ],
+      "en": [
+        "Real visual examples connect data and stages, while training phases remain distinct; downstream usage is visible, not merely symbolic."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不能把作者 Method Overview 误称为训练代码或数据完全开源的证据；不复制源图到自己的论文。"
+      ],
+      "en": [
+        "A method illustration is not evidence that every training asset is open; do not copy the authors' figure into another paper."
+      ]
+    }
+  },
+  "visual": {
+    "kind": "external-reference-image",
+    "src": "https://raw.githubusercontent.com/dreamdojo-world/dreamdojo-world.github.io/main/public/overview.png",
+    "alt": {
+      "zh": "DreamDojo 作者官网 Method Overview：人类视频、隐式动作学习、机器人动作适配等阶段。",
+      "en": "Official DreamDojo method overview illustrating human video pretraining, latent action modeling, and robot-specific adaptation."
+    },
+    "label": {
+      "zh": "原作者官网实际使用的图 · 仅外链参考",
+      "en": "OFFICIAL WEBSITE IMAGE · EXTERNAL LINK ONLY"
+    }
+  },
+  "figureIdentity": {
+    "type": "project-website-figure",
+    "original_name": "DreamDojo 作者站点 Method Overview（public/overview.png）",
+    "original_source": "https://github.com/dreamdojo-world/dreamdojo-world.github.io/blob/main/public/overview.png",
+    "capture_date": "2026-10-25",
+    "credit": "DreamDojo 项目作者，Shenyuan Gao 等",
+    "modifications": "只提供对原始仓库文件的远程链接，未修改或重新分发图像"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
+      "en": "Selected for transferable visual design, not as a paper walkthrough."
+    },
+    "composition": {
+      "zh": [
+        "视觉实例贯穿数据与训练阶段；预训练/后训练具有明确边界；最终应用不只是空泛模型图标。"
+      ],
+      "en": [
+        "Real visual examples connect data and stages, while training phases remain distinct; downstream usage is visible, not merely symbolic."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "优先借鉴阶段色彩分隔、真实样本嵌入模块、来源标签清晰的版式。"
+      ],
+      "en": [
+        "Reuse its phase separation, real-image inserts and explicit data provenance as design strategies."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "不能把作者 Method Overview 误称为训练代码或数据完全开源的证据；不复制源图到自己的论文。",
+        "请打开原作者链接确认图像身份与使用权限。"
+      ],
+      "en": [
+        "A method illustration is not evidence that every training asset is open; do not copy the authors' figure into another paper.",
+        "Open the source link and verify identity and reuse rights before adapting."
+      ]
+    }
+  },
+  "curation": {
+    "track": "visual",
+    "selected_on": "2026-10-25",
+    "source_verification": "author-site-and-repository-path",
+    "verified_site_section": "DreamDojo 作者站点 Method Overview（public/overview.png）",
+    "editorial_scope": "composition-layout-visual-storytelling",
+    "asset_residency": "external-original-no-hosted-copy"
+  },
+  "previewStyle": "curated-visual"
+}

@@ -1,0 +1,143 @@
+{
+  "id": "videomimic-real2sim",
+  "title": "VideoMimic · Real-to-Sim-to-Real 路径示意",
+  "kind": "visual-reference",
+  "stages": [
+    "methods",
+    "writing",
+    "communication"
+  ],
+  "domains": [
+    "robotics",
+    "vision"
+  ],
+  "tasks": [
+    "method-figure",
+    "real-to-sim",
+    "robot-control",
+    "motion-retargeting"
+  ],
+  "description": {
+    "zh": "真实视频、几何/场景与机器人动作沿统一方向排列，是复杂 embodied 方法如何保持可读性的优秀示例。",
+    "en": "A visual-to-geometry-to-action pipeline aligned on a clear reading axis, using real samples to ground a multi-stage embodied learning process."
+  },
+  "keywords": {
+    "zh": [
+      "VideoMimic",
+      "method-figure",
+      "real-to-sim",
+      "robot-control",
+      "motion-retargeting",
+      "方法图",
+      "高审美"
+    ],
+    "en": [
+      "VideoMimic",
+      "method-figure",
+      "real-to-sim",
+      "robot-control",
+      "motion-retargeting",
+      "scientific figure",
+      "visual reference"
+    ]
+  },
+  "year": "2025",
+  "language": "zh+en",
+  "links": {
+    "source": "https://www.videomimic.net/",
+    "officialFigure": "https://github.com/VideoMimic/videomimic.github.io/blob/main/figs/2-min.png"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "externally-linked-not-relicensed",
+    "source_image_url": "https://raw.githubusercontent.com/VideoMimic/videomimic.github.io/main/figs/2-min.png"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要寻找原创方法图/Teaser 的构图、模块分层和视觉叙事参考。"
+      ],
+      "en": [
+        "Looking for high-quality visual layout patterns for a scientific teaser or method figure."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "真实样本在关键节点被用作证据锚点；纵横主线和不同状态的示意保持统一尺度。"
+      ],
+      "en": [
+        "Evidence images anchor pivotal steps while the main reading direction remains stable across transformations."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "官网缩略版不是本项目原创，也不保证为论文 Figure 1；高清源文件可从作者官网获取。"
+      ],
+      "en": [
+        "The website's low-res illustration is not our own work or a verified Figure 1; see original site for full resolution."
+      ]
+    }
+  },
+  "visual": {
+    "kind": "external-reference-image",
+    "src": "https://raw.githubusercontent.com/VideoMimic/videomimic.github.io/main/figs/2-min.png",
+    "alt": {
+      "zh": "VideoMimic 作者页面的 real-to-sim pipeline 图，呈现视频到机器人模拟资产的分阶段过程。",
+      "en": "VideoMimic official real-to-sim pipeline showing staged conversion of observed video into robot learning assets."
+    },
+    "label": {
+      "zh": "原作者官网实际使用的图 · 仅外链参考",
+      "en": "OFFICIAL WEBSITE IMAGE · EXTERNAL LINK ONLY"
+    }
+  },
+  "figureIdentity": {
+    "type": "project-website-figure",
+    "original_name": "VideoMimic 官方项目页 Real-to-Sim Pipeline（figs/2-min.png）",
+    "original_source": "https://github.com/VideoMimic/videomimic.github.io/blob/main/figs/2-min.png",
+    "capture_date": "2026-10-25",
+    "credit": "VideoMimic 项目作者，Arthur Allshire、Hongsuk Choi 等",
+    "modifications": "只提供对原始仓库文件的远程链接，未修改或重新分发图像"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
+      "en": "Selected for transferable visual design, not as a paper walkthrough."
+    },
+    "composition": {
+      "zh": [
+        "真实样本在关键节点被用作证据锚点；纵横主线和不同状态的示意保持统一尺度。"
+      ],
+      "en": [
+        "Evidence images anchor pivotal steps while the main reading direction remains stable across transformations."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "参考多阶段 Real-to-Sim/Sim-to-Real 的分栏与配对方式，而非复制它具体的训练流程。"
+      ],
+      "en": [
+        "Borrow stage-based columns and paired before/after views without transplanting the scientific method."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "官网缩略版不是本项目原创，也不保证为论文 Figure 1；高清源文件可从作者官网获取。",
+        "请打开原作者链接确认图像身份与使用权限。"
+      ],
+      "en": [
+        "The website's low-res illustration is not our own work or a verified Figure 1; see original site for full resolution.",
+        "Open the source link and verify identity and reuse rights before adapting."
+      ]
+    }
+  },
+  "curation": {
+    "track": "visual",
+    "selected_on": "2026-10-25",
+    "source_verification": "author-site-and-repository-path",
+    "verified_site_section": "VideoMimic 官方项目页 Real-to-Sim Pipeline（figs/2-min.png）",
+    "editorial_scope": "composition-layout-visual-storytelling",
+    "asset_residency": "external-original-no-hosted-copy"
+  },
+  "previewStyle": "curated-visual"
+}

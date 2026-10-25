@@ -2680,6 +2680,864 @@
         ]
       },
       "previewStyle": "workflow"
+    },
+    {
+      "id": "vggt-architecture",
+      "title": "VGGT · 多视角几何统一预测架构",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "method-figure",
+        "3d-reconstruction",
+        "multi-view-visualization",
+        "transformer-architecture"
+      ],
+      "description": {
+        "zh": "适合学习“统一骨干网络 → 多任务几何输出”的信息分层，技术模块紧凑但主线分明。",
+        "en": "An information-dense, author-hosted architecture that groups shared backbone and geometry-specific outputs without losing the central flow."
+      },
+      "keywords": {
+        "zh": [
+          "VGGT",
+          "method-figure",
+          "3d-reconstruction",
+          "multi-view-visualization",
+          "transformer-architecture",
+          "方法图",
+          "高审美"
+        ],
+        "en": [
+          "VGGT",
+          "method-figure",
+          "3d-reconstruction",
+          "multi-view-visualization",
+          "transformer-architecture",
+          "scientific figure",
+          "visual reference"
+        ]
+      },
+      "year": "2025",
+      "language": "zh+en",
+      "links": {
+        "source": "https://vgg-t.github.io/",
+        "paper": "https://openaccess.thecvf.com/content/CVPR2025/html/Wang_VGGT_Visual_Geometry_Grounded_Transformer_CVPR_2025_paper.html",
+        "officialFigure": "https://github.com/vgg-t/vgg-t.github.io/blob/main/resources/architecture_v4.png"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/vgg-t/vgg-t.github.io/main/resources/architecture_v4.png"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要寻找原创方法图/Teaser 的构图、模块分层和视觉叙事参考。"
+          ],
+          "en": [
+            "Looking for high-quality visual layout patterns for a scientific teaser or method figure."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "共享主干与任务头采用明确分组；多输出端并置，减少重复箭头；适合信息密度较高的 Method Figure。"
+          ],
+          "en": [
+            "A visually coherent shared trunk, distinct task heads, and parallel output panels keep a dense method understandable."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "官网 Architecture 图不等于已证实是论文 Figure 1；不能直接标成可编辑的原始矢量文件。"
+          ],
+          "en": [
+            "Website architecture image is not verified as paper Figure 1 and is not provided here as editable artwork."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://raw.githubusercontent.com/vgg-t/vgg-t.github.io/main/resources/architecture_v4.png",
+        "alt": {
+          "zh": "VGGT 作者公开的模型结构图：输入图像与相机 token、交替 attention、不同几何输出分支。",
+          "en": "Author-hosted VGGT model architecture with image/camera tokens, attention blocks, and geometry prediction branches."
+        },
+        "label": {
+          "zh": "原作者官网实际使用的图 · 仅外链参考",
+          "en": "OFFICIAL WEBSITE IMAGE · EXTERNAL LINK ONLY"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-figure",
+        "original_name": "VGGT 网站中的 Architecture 图（architecture_v4.png）",
+        "original_source": "https://github.com/vgg-t/vgg-t.github.io/blob/main/resources/architecture_v4.png",
+        "capture_date": "2026-10-25",
+        "credit": "VGGT 项目作者，Jianyuan Wang、Minghao Chen 等",
+        "modifications": "只提供对原始仓库文件的远程链接，未修改或重新分发图像"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
+          "en": "Selected for transferable visual design, not as a paper walkthrough."
+        },
+        "composition": {
+          "zh": [
+            "共享主干与任务头采用明确分组；多输出端并置，减少重复箭头；适合信息密度较高的 Method Figure。"
+          ],
+          "en": [
+            "A visually coherent shared trunk, distinct task heads, and parallel output panels keep a dense method understandable."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "借鉴分层与流向，不照搬 VGGT 架构及内容；按自己的张量、模块与任务重新设计标签。"
+          ],
+          "en": [
+            "Transfer the backbone/head hierarchy, not VGGT's module claims; redraw with your own verified operators and outputs."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "官网 Architecture 图不等于已证实是论文 Figure 1；不能直接标成可编辑的原始矢量文件。",
+            "请打开原作者链接确认图像身份与使用权限。"
+          ],
+          "en": [
+            "Website architecture image is not verified as paper Figure 1 and is not provided here as editable artwork.",
+            "Open the source link and verify identity and reuse rights before adapting."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "selected_on": "2026-10-25",
+        "source_verification": "author-site-and-repository-path",
+        "verified_site_section": "VGGT 网站中的 Architecture 图（architecture_v4.png）",
+        "editorial_scope": "composition-layout-visual-storytelling",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual"
+    },
+    {
+      "id": "dreamdojo-overview",
+      "title": "DreamDojo · 人类视频到机器人世界模型流程图",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "method-figure",
+        "world-model",
+        "video-generation",
+        "pipeline-storytelling"
+      ],
+      "description": {
+        "zh": "通过真实视频素材与结构图结合，表达大规模人类视频预训练到具体机器人动作条件的两阶段训练体系。",
+        "en": "A grounded mix of visual samples and schematic stages illustrating pretraining on human video and adaptation to robot embodiments."
+      },
+      "keywords": {
+        "zh": [
+          "DreamDojo",
+          "method-figure",
+          "world-model",
+          "video-generation",
+          "pipeline-storytelling",
+          "方法图",
+          "高审美"
+        ],
+        "en": [
+          "DreamDojo",
+          "method-figure",
+          "world-model",
+          "video-generation",
+          "pipeline-storytelling",
+          "scientific figure",
+          "visual reference"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://dreamdojo-world.github.io/",
+        "paper": "https://arxiv.org/abs/2602.06949",
+        "officialFigure": "https://github.com/dreamdojo-world/dreamdojo-world.github.io/blob/main/public/overview.png"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/dreamdojo-world/dreamdojo-world.github.io/main/public/overview.png"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要寻找原创方法图/Teaser 的构图、模块分层和视觉叙事参考。"
+          ],
+          "en": [
+            "Looking for high-quality visual layout patterns for a scientific teaser or method figure."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "视觉实例贯穿数据与训练阶段；预训练/后训练具有明确边界；最终应用不只是空泛模型图标。"
+          ],
+          "en": [
+            "Real visual examples connect data and stages, while training phases remain distinct; downstream usage is visible, not merely symbolic."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不能把作者 Method Overview 误称为训练代码或数据完全开源的证据；不复制源图到自己的论文。"
+          ],
+          "en": [
+            "A method illustration is not evidence that every training asset is open; do not copy the authors' figure into another paper."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://raw.githubusercontent.com/dreamdojo-world/dreamdojo-world.github.io/main/public/overview.png",
+        "alt": {
+          "zh": "DreamDojo 作者官网 Method Overview：人类视频、隐式动作学习、机器人动作适配等阶段。",
+          "en": "Official DreamDojo method overview illustrating human video pretraining, latent action modeling, and robot-specific adaptation."
+        },
+        "label": {
+          "zh": "原作者官网实际使用的图 · 仅外链参考",
+          "en": "OFFICIAL WEBSITE IMAGE · EXTERNAL LINK ONLY"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-figure",
+        "original_name": "DreamDojo 作者站点 Method Overview（public/overview.png）",
+        "original_source": "https://github.com/dreamdojo-world/dreamdojo-world.github.io/blob/main/public/overview.png",
+        "capture_date": "2026-10-25",
+        "credit": "DreamDojo 项目作者，Shenyuan Gao 等",
+        "modifications": "只提供对原始仓库文件的远程链接，未修改或重新分发图像"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
+          "en": "Selected for transferable visual design, not as a paper walkthrough."
+        },
+        "composition": {
+          "zh": [
+            "视觉实例贯穿数据与训练阶段；预训练/后训练具有明确边界；最终应用不只是空泛模型图标。"
+          ],
+          "en": [
+            "Real visual examples connect data and stages, while training phases remain distinct; downstream usage is visible, not merely symbolic."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "优先借鉴阶段色彩分隔、真实样本嵌入模块、来源标签清晰的版式。"
+          ],
+          "en": [
+            "Reuse its phase separation, real-image inserts and explicit data provenance as design strategies."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "不能把作者 Method Overview 误称为训练代码或数据完全开源的证据；不复制源图到自己的论文。",
+            "请打开原作者链接确认图像身份与使用权限。"
+          ],
+          "en": [
+            "A method illustration is not evidence that every training asset is open; do not copy the authors' figure into another paper.",
+            "Open the source link and verify identity and reuse rights before adapting."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "selected_on": "2026-10-25",
+        "source_verification": "author-site-and-repository-path",
+        "verified_site_section": "DreamDojo 作者站点 Method Overview（public/overview.png）",
+        "editorial_scope": "composition-layout-visual-storytelling",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual"
+    },
+    {
+      "id": "visualmimic-method",
+      "title": "VisualMimic · 人形机器人视觉模仿方法图",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "method-figure",
+        "robot-control",
+        "humanoid",
+        "visual-imitation"
+      ],
+      "description": {
+        "zh": "机器人图像实例和方法流程处于同一图面；可借鉴真实动作/环境视觉与技术模块之间的尺度分配。",
+        "en": "Humanoid motion examples and the method pipeline share one visual space, balancing convincing real imagery with technical structure."
+      },
+      "keywords": {
+        "zh": [
+          "VisualMimic",
+          "method-figure",
+          "robot-control",
+          "humanoid",
+          "visual-imitation",
+          "方法图",
+          "高审美"
+        ],
+        "en": [
+          "VisualMimic",
+          "method-figure",
+          "robot-control",
+          "humanoid",
+          "visual-imitation",
+          "scientific figure",
+          "visual reference"
+        ]
+      },
+      "year": "2025",
+      "language": "zh+en",
+      "links": {
+        "source": "https://visualmimic.github.io/",
+        "officialFigure": "https://github.com/visualmimic/visualmimic.github.io/blob/main/images/method_v15.png"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/visualmimic/visualmimic.github.io/main/images/method_v15.png"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要寻找原创方法图/Teaser 的构图、模块分层和视觉叙事参考。"
+          ],
+          "en": [
+            "Looking for high-quality visual layout patterns for a scientific teaser or method figure."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "实例优先而非堆满模块；人形动作图承担说服力，箭头和技术说明只解释关键因果关系。"
+          ],
+          "en": [
+            "Visuomotor examples carry the story; callouts and arrows support, rather than overwhelm, the key relations."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "这是官网 Method 图而非已核对 Figure 1；动作样本的版权仍归作者。"
+          ],
+          "en": [
+            "Website Method image is not identified as the paper's Figure 1; imagery remains owned by its creators."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://raw.githubusercontent.com/visualmimic/visualmimic.github.io/main/images/method_v15.png",
+        "alt": {
+          "zh": "VisualMimic 站点中的 Method 图：视觉输入与人形机器人动作迁移训练的总体过程。",
+          "en": "Official VisualMimic Method figure on the project website covering visual input and humanoid skill learning."
+        },
+        "label": {
+          "zh": "原作者官网实际使用的图 · 仅外链参考",
+          "en": "OFFICIAL WEBSITE IMAGE · EXTERNAL LINK ONLY"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-figure",
+        "original_name": "VisualMimic 作者网站 Method 版块（method_v15.png）",
+        "original_source": "https://github.com/visualmimic/visualmimic.github.io/blob/main/images/method_v15.png",
+        "capture_date": "2026-10-25",
+        "credit": "VisualMimic 项目作者，Shaofeng Yin、Yanjie Ze 等",
+        "modifications": "只提供对原始仓库文件的远程链接，未修改或重新分发图像"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
+          "en": "Selected for transferable visual design, not as a paper walkthrough."
+        },
+        "composition": {
+          "zh": [
+            "实例优先而非堆满模块；人形动作图承担说服力，箭头和技术说明只解释关键因果关系。"
+          ],
+          "en": [
+            "Visuomotor examples carry the story; callouts and arrows support, rather than overwhelm, the key relations."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "让真实人形视觉样本承担视觉焦点，搭配一条可追踪的数据或控制主线。"
+          ],
+          "en": [
+            "Use genuine humanoid samples as focal evidence around one traceable training or control path."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "这是官网 Method 图而非已核对 Figure 1；动作样本的版权仍归作者。",
+            "请打开原作者链接确认图像身份与使用权限。"
+          ],
+          "en": [
+            "Website Method image is not identified as the paper's Figure 1; imagery remains owned by its creators.",
+            "Open the source link and verify identity and reuse rights before adapting."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "selected_on": "2026-10-25",
+        "source_verification": "author-site-and-repository-path",
+        "verified_site_section": "VisualMimic 作者网站 Method 版块（method_v15.png）",
+        "editorial_scope": "composition-layout-visual-storytelling",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual"
+    },
+    {
+      "id": "videomimic-real2sim",
+      "title": "VideoMimic · Real-to-Sim-to-Real 路径示意",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "method-figure",
+        "real-to-sim",
+        "robot-control",
+        "motion-retargeting"
+      ],
+      "description": {
+        "zh": "真实视频、几何/场景与机器人动作沿统一方向排列，是复杂 embodied 方法如何保持可读性的优秀示例。",
+        "en": "A visual-to-geometry-to-action pipeline aligned on a clear reading axis, using real samples to ground a multi-stage embodied learning process."
+      },
+      "keywords": {
+        "zh": [
+          "VideoMimic",
+          "method-figure",
+          "real-to-sim",
+          "robot-control",
+          "motion-retargeting",
+          "方法图",
+          "高审美"
+        ],
+        "en": [
+          "VideoMimic",
+          "method-figure",
+          "real-to-sim",
+          "robot-control",
+          "motion-retargeting",
+          "scientific figure",
+          "visual reference"
+        ]
+      },
+      "year": "2025",
+      "language": "zh+en",
+      "links": {
+        "source": "https://www.videomimic.net/",
+        "officialFigure": "https://github.com/VideoMimic/videomimic.github.io/blob/main/figs/2-min.png"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/VideoMimic/videomimic.github.io/main/figs/2-min.png"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要寻找原创方法图/Teaser 的构图、模块分层和视觉叙事参考。"
+          ],
+          "en": [
+            "Looking for high-quality visual layout patterns for a scientific teaser or method figure."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "真实样本在关键节点被用作证据锚点；纵横主线和不同状态的示意保持统一尺度。"
+          ],
+          "en": [
+            "Evidence images anchor pivotal steps while the main reading direction remains stable across transformations."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "官网缩略版不是本项目原创，也不保证为论文 Figure 1；高清源文件可从作者官网获取。"
+          ],
+          "en": [
+            "The website's low-res illustration is not our own work or a verified Figure 1; see original site for full resolution."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://raw.githubusercontent.com/VideoMimic/videomimic.github.io/main/figs/2-min.png",
+        "alt": {
+          "zh": "VideoMimic 作者页面的 real-to-sim pipeline 图，呈现视频到机器人模拟资产的分阶段过程。",
+          "en": "VideoMimic official real-to-sim pipeline showing staged conversion of observed video into robot learning assets."
+        },
+        "label": {
+          "zh": "原作者官网实际使用的图 · 仅外链参考",
+          "en": "OFFICIAL WEBSITE IMAGE · EXTERNAL LINK ONLY"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-figure",
+        "original_name": "VideoMimic 官方项目页 Real-to-Sim Pipeline（figs/2-min.png）",
+        "original_source": "https://github.com/VideoMimic/videomimic.github.io/blob/main/figs/2-min.png",
+        "capture_date": "2026-10-25",
+        "credit": "VideoMimic 项目作者，Arthur Allshire、Hongsuk Choi 等",
+        "modifications": "只提供对原始仓库文件的远程链接，未修改或重新分发图像"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
+          "en": "Selected for transferable visual design, not as a paper walkthrough."
+        },
+        "composition": {
+          "zh": [
+            "真实样本在关键节点被用作证据锚点；纵横主线和不同状态的示意保持统一尺度。"
+          ],
+          "en": [
+            "Evidence images anchor pivotal steps while the main reading direction remains stable across transformations."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "参考多阶段 Real-to-Sim/Sim-to-Real 的分栏与配对方式，而非复制它具体的训练流程。"
+          ],
+          "en": [
+            "Borrow stage-based columns and paired before/after views without transplanting the scientific method."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "官网缩略版不是本项目原创，也不保证为论文 Figure 1；高清源文件可从作者官网获取。",
+            "请打开原作者链接确认图像身份与使用权限。"
+          ],
+          "en": [
+            "The website's low-res illustration is not our own work or a verified Figure 1; see original site for full resolution.",
+            "Open the source link and verify identity and reuse rights before adapting."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "selected_on": "2026-10-25",
+        "source_verification": "author-site-and-repository-path",
+        "verified_site_section": "VideoMimic 官方项目页 Real-to-Sim Pipeline（figs/2-min.png）",
+        "editorial_scope": "composition-layout-visual-storytelling",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual"
+    },
+    {
+      "id": "videomimic-approach",
+      "title": "VideoMimic · 方法总体架构（Approach Overview）",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "vision"
+      ],
+      "tasks": [
+        "method-figure",
+        "robot-control",
+        "visual-conditioning",
+        "training-pipeline"
+      ],
+      "description": {
+        "zh": "与同项目的 Real-to-Sim 图形成互补：前者强调过程可视化，这张图更强调技术模块和训练关系。",
+        "en": "Complements the real-to-sim walkthrough with an overall technical module map and training structure."
+      },
+      "keywords": {
+        "zh": [
+          "VideoMimic",
+          "method-figure",
+          "robot-control",
+          "visual-conditioning",
+          "training-pipeline",
+          "方法图",
+          "高审美"
+        ],
+        "en": [
+          "VideoMimic",
+          "method-figure",
+          "robot-control",
+          "visual-conditioning",
+          "training-pipeline",
+          "scientific figure",
+          "visual reference"
+        ]
+      },
+      "year": "2025",
+      "language": "zh+en",
+      "links": {
+        "source": "https://www.videomimic.net/",
+        "officialFigure": "https://github.com/VideoMimic/videomimic.github.io/blob/main/figs/4-min.png"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/VideoMimic/videomimic.github.io/main/figs/4-min.png"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要寻找原创方法图/Teaser 的构图、模块分层和视觉叙事参考。"
+          ],
+          "en": [
+            "Looking for high-quality visual layout patterns for a scientific teaser or method figure."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "模块分组明确，局部细节依附于主线；同一项目可以用两种图承担不同叙事任务。"
+          ],
+          "en": [
+            "A distinct architecture map separates logical modules from the step-by-step experience illustration."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不能将完整模块解释混成新闻式宣传；实际重用须保留自己的科学结构。"
+          ],
+          "en": [
+            "Avoid using decorative flowchart complexity in place of scientifically correct model structure."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://raw.githubusercontent.com/VideoMimic/videomimic.github.io/main/figs/4-min.png",
+        "alt": {
+          "zh": "VideoMimic 作者网页 Approach Overview 图，描述不同方法模块连接关系。",
+          "en": "VideoMimic official Approach Overview figure explaining the connections among learning stages and components."
+        },
+        "label": {
+          "zh": "原作者官网实际使用的图 · 仅外链参考",
+          "en": "OFFICIAL WEBSITE IMAGE · EXTERNAL LINK ONLY"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-figure",
+        "original_name": "VideoMimic 官方项目页 Approach Overview（figs/4-min.png）",
+        "original_source": "https://github.com/VideoMimic/videomimic.github.io/blob/main/figs/4-min.png",
+        "capture_date": "2026-10-25",
+        "credit": "VideoMimic 项目作者，Arthur Allshire 等",
+        "modifications": "只提供对原始仓库文件的远程链接，未修改或重新分发图像"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
+          "en": "Selected for transferable visual design, not as a paper walkthrough."
+        },
+        "composition": {
+          "zh": [
+            "模块分组明确，局部细节依附于主线；同一项目可以用两种图承担不同叙事任务。"
+          ],
+          "en": [
+            "A distinct architecture map separates logical modules from the step-by-step experience illustration."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "适合学习项目中同时存在总览图、过程图时如何避免功能重复。"
+          ],
+          "en": [
+            "Useful when planning distinct overview and process figures without redundant storytelling."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "不能将完整模块解释混成新闻式宣传；实际重用须保留自己的科学结构。",
+            "请打开原作者链接确认图像身份与使用权限。"
+          ],
+          "en": [
+            "Avoid using decorative flowchart complexity in place of scientifically correct model structure.",
+            "Open the source link and verify identity and reuse rights before adapting."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "selected_on": "2026-10-25",
+        "source_verification": "author-site-and-repository-path",
+        "verified_site_section": "VideoMimic 官方项目页 Approach Overview（figs/4-min.png）",
+        "editorial_scope": "composition-layout-visual-storytelling",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual"
+    },
+    {
+      "id": "wonderzoom-teaser",
+      "title": "WonderZoom · 多尺度 3D 世界生成 Teaser",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "vision"
+      ],
+      "tasks": [
+        "teaser-design",
+        "3d-generation",
+        "multiscale-visualization",
+        "world-generation"
+      ],
+      "description": {
+        "zh": "用连续放大和空间尺度变化取代抽象流程，形成一眼能理解的视觉故事；适合作为 3D/生成方向的 Teaser 排版参考。",
+        "en": "Uses spatial zoom progression rather than abstract boxes to communicate multi-scale 3D world generation at a glance."
+      },
+      "keywords": {
+        "zh": [
+          "WonderZoom",
+          "teaser-design",
+          "3d-generation",
+          "multiscale-visualization",
+          "world-generation",
+          "方法图",
+          "高审美"
+        ],
+        "en": [
+          "WonderZoom",
+          "teaser-design",
+          "3d-generation",
+          "multiscale-visualization",
+          "world-generation",
+          "scientific figure",
+          "visual reference"
+        ]
+      },
+      "year": "2025",
+      "language": "zh+en",
+      "links": {
+        "source": "https://wonderzoom.github.io/",
+        "officialFigure": "https://github.com/wonderzoom/wonderzoom.github.io/blob/main/assets/images/approach/teaser_img.png"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/wonderzoom/wonderzoom.github.io/main/assets/images/approach/teaser_img.png"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要寻找原创方法图/Teaser 的构图、模块分层和视觉叙事参考。"
+          ],
+          "en": [
+            "Looking for high-quality visual layout patterns for a scientific teaser or method figure."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "利用统一场景的尺度变化形成自然视觉节奏；重复视觉锚点使跨尺度的关系无需过多解释文字。"
+          ],
+          "en": [
+            "A recurring visual anchor and controlled zoom scale establish narrative rhythm with minimal text."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "高分辨率外链图像可能加载较慢；实际使用须访问作者页面并确认视觉元素来源。"
+          ],
+          "en": [
+            "The author-hosted high-resolution linked image may load slowly; check source and rights before reuse."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://raw.githubusercontent.com/wonderzoom/wonderzoom.github.io/main/assets/images/approach/teaser_img.png",
+        "alt": {
+          "zh": "WonderZoom 作者公开的 Teaser：同一场景随连续缩放逐渐生成不同空间尺度的细节。",
+          "en": "Official WonderZoom teaser illustrating progressively generated scene details at different spatial scales."
+        },
+        "label": {
+          "zh": "原作者官网实际使用的图 · 仅外链参考",
+          "en": "OFFICIAL WEBSITE IMAGE · EXTERNAL LINK ONLY"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-figure",
+        "original_name": "WonderZoom 作者项目站点 Teaser Image（teaser_img.png）",
+        "original_source": "https://github.com/wonderzoom/wonderzoom.github.io/blob/main/assets/images/approach/teaser_img.png",
+        "capture_date": "2026-10-25",
+        "credit": "WonderZoom 项目作者，Jin Cao、Hong-Xing Yu、Jiajun Wu",
+        "modifications": "只提供对原始仓库文件的远程链接，未修改或重新分发图像"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "优点在于它提供了清晰可借鉴的视觉设计，而不是对整篇论文的复述。",
+          "en": "Selected for transferable visual design, not as a paper walkthrough."
+        },
+        "composition": {
+          "zh": [
+            "利用统一场景的尺度变化形成自然视觉节奏；重复视觉锚点使跨尺度的关系无需过多解释文字。"
+          ],
+          "en": [
+            "A recurring visual anchor and controlled zoom scale establish narrative rhythm with minimal text."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "可迁移的不是原图素材，而是『连续空间状态 + 轻标注 + 视觉重点』的视觉叙事。"
+          ],
+          "en": [
+            "Transfer the progressive visual-sequence pattern, not the original scenes or artwork."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "高分辨率外链图像可能加载较慢；实际使用须访问作者页面并确认视觉元素来源。",
+            "请打开原作者链接确认图像身份与使用权限。"
+          ],
+          "en": [
+            "The author-hosted high-resolution linked image may load slowly; check source and rights before reuse.",
+            "Open the source link and verify identity and reuse rights before adapting."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "selected_on": "2026-10-25",
+        "source_verification": "author-site-and-repository-path",
+        "verified_site_section": "WonderZoom 作者项目站点 Teaser Image（teaser_img.png）",
+        "editorial_scope": "composition-layout-visual-storytelling",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual"
     }
   ]
 }
