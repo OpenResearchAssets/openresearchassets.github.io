@@ -166,8 +166,8 @@ index=(ROOT/'index.html').read_text(encoding='utf-8')
 if 'js/catalog.js' not in index or 'data/references.js' in index:errors.append('index not connected to canonical catalog')
 # Keep the independent project's canonical organization URLs consistent.
 # The org Pages root is not the old personal /OpenResearchAssets/ project path.
-legacy = ('https://suchenl.github.io/OpenResearchAssets/',
-          'https://github.com/Suchenl/OpenResearchAssets')
+legacy = ('https://' + 'suchenl.github.io/OpenResearchAssets/',
+          'https://github.com/' + 'Suchenl/OpenResearchAssets')
 for p in ROOT.rglob('*'):
     if p.is_file() and p.suffix.lower() in {'.md','.html','.js','.json','.txt','.yml','.yaml','.py'}:
         relative = p.relative_to(ROOT)
