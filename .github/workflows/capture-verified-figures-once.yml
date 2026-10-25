@@ -1,0 +1,128 @@
+name: One-time verified paper-figure and site screenshots
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/capture-verified-figures-once.yml"
+permissions:
+  contents: write
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install capture tooling
+        run: |
+          python -m pip install --quiet pymupdf pillow requests playwright
+          python -m playwright install chromium
+      - name: Extract actual paper Figure 1 and capture true website homepages
+        shell: bash
+        run: |
+          python - <<'PY'
+          import io, os, pathlib, time, requests, fitz
+          from PIL import Image, ImageOps
+          from playwright.sync_api import sync_playwright
+          ROOT=pathlib.Path("assets/third-party")
+          S=requests.Session()
+          S.headers["User-Agent"]="OpenResearchAssets/1.0 (public scientific figure analysis; original author credited)"
+          def download(url, limit=80000000):
+              resp=S.get(url,timeout=(20,160),stream=True)
+              resp.raise_for_status()
+              b=bytearray()
+              for piece in resp.iter_content(262144):
+                  if piece: b.extend(piece)
+                  if len(b)>limit: raise ValueError("Source exceeds size limit")
+              return bytes(b)
+          def save_preview(im,path,max_width=1400,quality=83):
+              p=pathlib.Path(path); p.parent.mkdir(parents=True,exist_ok=True)
+              im=im.convert("RGB"); im.thumbnail((max_width,1600),Image.Resampling.LANCZOS)
+              im.save(p,"JPEG",quality=quality,optimize=True,subsampling=0)
+              print("CAPTURE",path,im.width,im.height,p.stat().st_size,flush=True)
+          def figure_from_pdf(urls,out):
+              error=None
+              for url in urls:
+                try:
+                  b=download(url)
+                  doc=fitz.open(stream=b,filetype="pdf")
+                  p=doc[0]; h=p.rect.height
+                  candidates=[]
+                  for block in p.get_text("blocks"):
+                    if len(block)<5:continue
+                    txt=str(block[4]).replace("\\n"," ")
+                    if "Fig. 1" in txt or "Figure 1" in txt:
+                      if 180<float(block[1])<h-30:
+                        candidates.append((block[1],txt[:160]))
+                  if candidates:
+                    cap_y=min(v[0] for v in candidates)
+                    print("FIG_CAPTION",out,"page1 y",round(cap_y),candidates[:3],flush=True)
+                  else:
+                    # No first-page caption found: refuse to pretend a guess is verified.
+                    raise ValueError("Figure 1 caption not located on PDF first page")
+                  clip=fitz.Rect(24,max(50,cap_y-285),p.rect.width-24,cap_y-8)
+                  if clip.height<140:raise ValueError("Figure clip too short")
+                  pix=p.get_pixmap(matrix=fitz.Matrix(2.4,2.4),clip=clip,alpha=False)
+                  im=Image.open(io.BytesIO(pix.tobytes("png")))
+                  save_preview(im,out,max_width=1450)
+                  print("ORIGINAL",url,flush=True)
+                  return True
+                except Exception as e:
+                  error=e
+                  print("ATTEMPT FAILED",out,url,type(e).__name__,str(e)[:280],flush=True)
+              print("MISSING SOURCE IMAGE",out,str(error),flush=True)
+              return False
+          fig_rr=figure_from_pdf([
+             "https://raw.githubusercontent.com/robo-render/robo-render.github.io/main/static/roborender.pdf",
+             "https://arxiv.org/pdf/2610.09254"],
+             str(ROOT/"roborender/figure1-overview.jpg"))
+          fig_sm=figure_from_pdf([
+             "https://arxiv.org/pdf/2610.28480",
+             "https://export.arxiv.org/pdf/2610.28480"],
+             str(ROOT/"supermimic/figure1-overview.jpg"))
+          try:
+              data=download("https://media.luminis-sim.com/media/home/teaser.png",limit=40000000)
+              im=Image.open(io.BytesIO(data))
+              save_preview(im,str(ROOT/"robodojo/figure1-overview.jpg"))
+          except Exception as e:
+              print("MISSING SOURCE IMAGE robodojo",str(e)[:240],flush=True)
+          websites={
+            "roborender":"https://robo-render.github.io/",
+            "robodojo":"https://robodojo-benchmark.com/",
+            "supermimic":"https://supermimic.github.io/",
+          }
+          with sync_playwright() as p:
+            browser=p.chromium.launch(headless=True,args=["--no-sandbox","--disable-gpu"])
+            for key,url in websites.items():
+              page=browser.new_page(viewport={"width":1370,"height":810},device_scale_factor=1)
+              try:
+                page.goto(url,wait_until="domcontentloaded",timeout=45000)
+                page.wait_for_timeout(2600)
+                page.evaluate("window.scrollTo(0,0)")
+                page.wait_for_timeout(300)
+                raw=page.screenshot(full_page=False,type="png",animations="disabled")
+                im=Image.open(io.BytesIO(raw))
+                save_preview(im,str(ROOT/key/"homepage-viewport.jpg"),max_width=1370,quality=78)
+                print("SITE",url,page.title(),flush=True)
+              except Exception as e:
+                print("SITE CAPTURE FAILED",key,str(e)[:240],flush=True)
+              finally: page.close()
+            browser.close()
+          if not fig_rr:
+              raise RuntimeError("RoboRender verified Figure 1 extraction failed; do not publish false teaser")
+          print("CAPTURE_READY",flush=True)
+          PY
+      - name: Commit generated references and remove this one-time workflow
+        shell: bash
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add assets/third-party/
+          git rm --ignore-unmatch .github/workflows/capture-verified-figures-once.yml
+          git diff --cached --stat
+          git diff --cached --quiet || git commit -m "media: capture authentic paper Figure 1 and real project homepage screenshots"
+          git push origin HEAD:main
