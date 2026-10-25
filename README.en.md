@@ -1,7 +1,3 @@
-## Four genuinely different visual design types (October 2026)
-
-Eight new author-hosted examples: **Teasers** ([InstructPix2Pix](https://openresearchassets.github.io/asset.html?id=instruct-pix2pix-teaser), [GridAR](https://openresearchassets.github.io/asset.html?id=gridar-teaser)); **qualitative results** ([UltraEdit](https://openresearchassets.github.io/asset.html?id=ultraedit-qualitative), [Fast Learning Radiance Fields](https://openresearchassets.github.io/asset.html?id=fastnerf-zoom-results)); **real ablations** ([Specialist Diffusion](https://openresearchassets.github.io/asset.html?id=specialist-diffusion-ablation), [EgoEngine](https://openresearchassets.github.io/asset.html?id=egoengine-ablation)); and **interactive project sites** ([Nerfies](https://openresearchassets.github.io/asset.html?id=nerfies-project-site), [HyperNeRF](https://openresearchassets.github.io/asset.html?id=hypernerf-project-site)). The two website thumbnails are explicitly *individual source media*, not captured homepage screenshots. No original art is rehosted.
-
 # Open Research Assets · Curated Research Gallery & Skills
 
 **[简体中文](README.md) · English · [Website](https://openresearchassets.github.io/) · [For AI agents](https://openresearchassets.github.io/for-agents/)**
@@ -21,6 +17,11 @@ Research assets should be more than bookmarks. They should tell us **when to use
 Popularity is not validated usefulness. A protocol without usage evidence is a candidate, never labeled “field-tested.” Original paper reviews and pedagogical examples remain available under [examples/](examples/README.md) as secondary reference, not the main product.
 
 [Agent catalog](for-agents/) · [Contribute](CONTRIBUTING.md) · [Report an issue](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new/choose)
+
+## Four genuinely different visual design types (October 2026)
+
+Eight new author-hosted examples: **Teasers** ([InstructPix2Pix](https://openresearchassets.github.io/asset.html?id=instruct-pix2pix-teaser), [GridAR](https://openresearchassets.github.io/asset.html?id=gridar-teaser)); **qualitative results** ([UltraEdit](https://openresearchassets.github.io/asset.html?id=ultraedit-qualitative), [Fast Learning Radiance Fields](https://openresearchassets.github.io/asset.html?id=fastnerf-zoom-results)); **real ablations** ([Specialist Diffusion](https://openresearchassets.github.io/asset.html?id=specialist-diffusion-ablation), [EgoEngine](https://openresearchassets.github.io/asset.html?id=egoengine-ablation)); and **interactive project sites** ([Nerfies](https://openresearchassets.github.io/asset.html?id=nerfies-project-site), [HyperNeRF](https://openresearchassets.github.io/asset.html?id=hypernerf-project-site)). The two website thumbnails are explicitly *individual source media*, not captured homepage screenshots. No original art is rehosted.
+
 
 ## New authored-source Gallery picks (2026-10-25)
 
