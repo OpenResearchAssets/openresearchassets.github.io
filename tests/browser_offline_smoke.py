@@ -50,12 +50,15 @@ with sync_playwright() as pw:
         page.set_content(page_html('index.html'),wait_until='load')
         page.locator('.ora-resource-card').first.wait_for()
         assert page.locator('html').get_attribute('lang')=='zh-CN'
-        assert page.locator('h1').inner_text().startswith('让已有的经验')
-        assert page.locator('.ora-start-path').count()==3, (label, 'missing first-use paths')
-        assert page.locator('.ora-start-path').nth(0).get_attribute('href')=='examples.html'
-        assert page.locator('.ora-start-path').nth(1).get_attribute('href')=='for-agents/'
-        assert page.locator('.ora-start-path').nth(2).get_attribute('href')=='contribute.html'
-        assert '查看完整科研案例' in page.locator('.ora-start').inner_text()
+        assert page.locator('h1').inner_text().startswith('收藏真正出色的图')
+        assert page.locator('.ora-main-path').count()==2
+        assert page.locator('.ora-main-path').nth(0).get_attribute('href')=='#gallery'
+        assert page.locator('.ora-main-path').nth(1).get_attribute('href')=='#skills'
+        assert page.locator('#popular-skills .ora-skill-card').count()==4
+        assert page.locator('#practice-skills .ora-skill-card').count()==2
+        assert page.locator('#popular-skills [data-star-repo]').count()==4
+        assert '未经本站亲测' in page.locator('#popular-skills').inner_text()
+        assert '公开实践证据' in page.locator('#practice-skills').inner_text()
         assert page.locator('.ora-rights-notice').count()==1
         assert '异议' in page.locator('.ora-rights-notice').inner_text()
         assert 'asset-removal.yml' in page.locator('.ora-rights-notice a').get_attribute('href')
@@ -67,7 +70,7 @@ with sync_playwright() as pw:
         page.wait_for_function("()=>[...document.querySelectorAll('.ora-resource-card .ora-verified img')].every(n=>n.complete&&n.naturalWidth>0)")
         assert page.locator('.ora-resource-card .ora-curated img').count()==0
         page.locator('#catalog-more').click()
-        assert page.locator('.ora-resource-card').count()==22
+        assert page.locator('.ora-resource-card').count()==16
         page.locator('#facet-kind').select_option('website-reference')
         assert page.locator('.ora-resource-card').count()==3
         page.locator('#facet-kind').select_option('')
@@ -77,8 +80,9 @@ with sync_playwright() as pw:
         assert page.locator('.ora-resource-card').count()==9
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='en'
-        assert page.locator('h1').inner_text().startswith('Make knowledge useful')
-        assert 'Explore worked research cases' in page.locator('.ora-start').inner_text()
+        assert page.locator('h1').inner_text().startswith('Remarkable research figures')
+        assert 'Beautiful research visuals' in page.locator('.ora-main-paths').inner_text()
+        assert 'Popular open-source picks' in page.locator('#skills').inner_text()
         assert 'Rights holders may request removal' in page.locator('.ora-rights-notice').inner_text()
         assert page.locator('.ora-resource-card').count()==9
         page.locator('.lang-toggle').click()
@@ -263,6 +267,6 @@ with sync_playwright() as pw:
                 page.locator('.lang-toggle').click()
                 assert page.locator('html').get_attribute('lang')=='zh-CN'
         assert not errors,(label,errors)
-        print('PASS',label,'22 detail pages, 6 curated case studies, 4 asset kinds, bilingual and responsive UI')
+        print('PASS',label,'curated visual Gallery, verified Stars, public practice evidence, bilingual and responsive UI')
         page.close()
     browser.close()
