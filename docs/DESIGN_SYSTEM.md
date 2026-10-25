@@ -4,6 +4,13 @@
 
 强调 SuperMimic 的**论点与真实证据驱动叙事**，借鉴 Apple 的**克制留白与精密排版**。不是抄袭任一网站的素材或样式源码。
 
+## 统一品牌标识（Logo / Avatar）
+
+- 官方品牌图形的唯一可编辑源文件为 [`assets/mark.svg`](../assets/mark.svg)。GitHub Organization 头像、组织 Profile README、官网页头及 favicon 应呈现一致的图形，不分别发明多套标识。
+- 当前图形使用深石板蓝底、浅色几何形和克制的暖橙强调点，适合 GitHub 深浅模式下的高对比小尺寸识别。不要把暖橙扩展为网站的大面积背景色。
+- GitHub 组织头像上传时，使用从该 SVG 导出的 **512 × 512 PNG**。更换图形设计时先更新唯一 SVG，再重新导出头像，并在组织 Settings 手动上传（代码仓库里的文件变化不会自动修改 GitHub 组织头像）。
+- 组织级叙事图 [`assets/diagrams/community-trajectory.svg`](../assets/diagrams/community-trajectory.svg) 是长期愿景示意，不应替代方形 Logo 或误用作组织头像。
+
 ## 视觉硬约束
 
 - 主背景为 `#FFFFFF`，浅冷灰层级为 `#F6F8FB`；不要重新使用大面积象牙白、米黄和奶油色。
