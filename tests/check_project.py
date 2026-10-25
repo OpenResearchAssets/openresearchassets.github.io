@@ -40,7 +40,7 @@ if sync.returncode:errors.append('derived catalog out of date: '+sync.stdout+syn
 catalog=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))
 if catalog.get('schema_version')!='1.0.0':errors.append('catalog: unsupported schema version')
 entries=catalog.get('entries',[])
-if len(entries)!=32:errors.append('catalog: expected 32 sourced research records')
+if len(entries)!=40:errors.append('catalog: expected 40 sourced research records')
 core_ids={'roborender-teaser','roborender-site','robodojo-teaser','robodojo-site','supermimic-teaser','supermimic-site'}
 for e in entries:
     if e.get('id') in core_ids and e.get('visual',{}).get('kind') not in ('verified-paper-figure','verified-site-screenshot'):
@@ -90,7 +90,7 @@ for e in entries:
             if not src.startswith('https://'):errors.append(f'{where}: remote visual must use HTTPS')
             if urlparse(src).hostname not in {
                 'depth-anything-3.github.io','media.luminis-sim.com','tianxingchen.github.io',
-                'supermimic.github.io','raw.githubusercontent.com','opengraph.githubassets.com'
+                'supermimic.github.io','raw.githubusercontent.com','instruct-pix2pix.timothybrooks.com','opengraph.githubassets.com'
             }:errors.append(f'{where}: untrusted remote image host {src}')
             if e.get('rights',{}).get('preview')!='external-linked-reference':
                 errors.append(f'{where}: missing external rights status')
@@ -339,6 +339,36 @@ for entry in entries:
         errors.append(f"{entry['id']}: third-party image incorrectly relicensed")
 if any(entry['id']=='visualmimic-method' for entry in entries):
     errors.append('generic dense diagram must not pass strict design curation')
+
+# Visual diversity: real teaser/results/ablation/site evidence; never relabel a site frame as a screenshot.
+new_diverse={
+ 'teaser':['instruct-pix2pix-teaser','gridar-teaser'],
+ 'results':['ultraedit-qualitative','fastnerf-zoom-results'],
+ 'ablation':['specialist-diffusion-ablation','egoengine-ablation'],
+ 'project-site':['nerfies-project-site','hypernerf-project-site']
+}
+for visual_type,expected in new_diverse.items():
+    for asset_id in expected:
+        matched=next((v for v in entries if v['id']==asset_id),None)
+        if not matched:
+            errors.append(f'new Gallery asset missing: {asset_id}')
+            continue
+        if matched.get('curation',{}).get('visual_category')!=visual_type:
+            errors.append(f'{asset_id}: visual category mismatch')
+        if matched.get('rights',{}).get('reuse')!='reference-only':
+            errors.append(f'{asset_id}: third-party artwork was incorrectly relicensed')
+        identity=matched.get('figureIdentity',{})
+        expected_identity='project-website-media' if visual_type=='project-site' else 'project-website-figure'
+        if identity.get('type')!=expected_identity:
+            errors.append(f'{asset_id}: website media and captured website screenshot are different')
+        if matched.get('visual',{}).get('kind')!='external-reference-image':
+            errors.append(f'{asset_id}: expected source-hosted image link, not a local copy')
+        if not matched.get('links',{}).get('officialFigure','').startswith('https://'):
+            errors.append(f'{asset_id}: original figure link missing')
+        if not matched.get('caseStudy',{}).get('composition',{}).get('zh'):
+            errors.append(f'{asset_id}: no design insight recorded')
+if not all(f'data-task-query="{s}"' in home_html for s in ('teaser','qualitative-results','ablation','project-website')):
+    errors.append('homepage lacks four visual-category discovery paths')
 
 if 'function renderSkills()' not in (ROOT/'js/catalog.js').read_text(encoding='utf-8'):
     errors.append('homepage: curated skills must use the canonical catalog')

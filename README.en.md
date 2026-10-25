@@ -1,3 +1,7 @@
+## Four genuinely different visual design types (October 2026)
+
+Eight new author-hosted examples: **Teasers** ([InstructPix2Pix](https://openresearchassets.github.io/asset.html?id=instruct-pix2pix-teaser), [GridAR](https://openresearchassets.github.io/asset.html?id=gridar-teaser)); **qualitative results** ([UltraEdit](https://openresearchassets.github.io/asset.html?id=ultraedit-qualitative), [Fast Learning Radiance Fields](https://openresearchassets.github.io/asset.html?id=fastnerf-zoom-results)); **real ablations** ([Specialist Diffusion](https://openresearchassets.github.io/asset.html?id=specialist-diffusion-ablation), [EgoEngine](https://openresearchassets.github.io/asset.html?id=egoengine-ablation)); and **interactive project sites** ([Nerfies](https://openresearchassets.github.io/asset.html?id=nerfies-project-site), [HyperNeRF](https://openresearchassets.github.io/asset.html?id=hypernerf-project-site)). The two website thumbnails are explicitly *individual source media*, not captured homepage screenshots. No original art is rehosted.
+
 # Open Research Assets · Curated Research Gallery & Skills
 
 **[简体中文](README.md) · English · [Website](https://openresearchassets.github.io/) · [For AI agents](https://openresearchassets.github.io/for-agents/)**

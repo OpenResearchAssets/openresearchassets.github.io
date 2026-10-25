@@ -70,7 +70,7 @@ with sync_playwright() as pw:
         page.wait_for_function("()=>[...document.querySelectorAll('.ora-resource-card .ora-verified img')].every(n=>n.complete&&n.naturalWidth>0)")
         assert page.locator('.ora-resource-card .ora-curated img').count()==0
         page.locator('#catalog-more').click()
-        assert page.locator('.ora-resource-card').count()==21
+        assert page.locator('.ora-resource-card').count()==29
         page.locator('#facet-kind').select_option('website-reference')
         assert page.locator('.ora-resource-card').count()==3
         page.locator('#facet-kind').select_option('')

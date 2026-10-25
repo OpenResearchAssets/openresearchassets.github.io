@@ -38,7 +38,7 @@
     const localLicensed=(visual.kind==='licensed-source-image'||visual.kind==='licensed-paper-figure') &&
       /^assets\/third-party\/[a-z0-9-]+\/[a-z0-9-]+\.png$/.test(visual.src || '');
     const remote=visual.kind==='external-reference-image' &&
-      /^https:\/\/(?:depth-anything-3\.github\.io|media\.luminis-sim\.com|tianxingchen\.github\.io|supermimic\.github\.io|raw\.githubusercontent\.com|opengraph\.githubassets\.com)\//.test(visual.src || '');
+      /^https:\/\/(?:depth-anything-3\.github\.io|media\.luminis-sim\.com|tianxingchen\.github\.io|supermimic\.github\.io|raw\.githubusercontent\.com|instruct-pix2pix\.timothybrooks\.com|opengraph\.githubassets\.com)\//.test(visual.src || '');
     if(localLicensed||remote){
       const caption=local(localLicensed ? visual.label : visual.alt);
       const mark=local(visual.label);
@@ -160,6 +160,17 @@
       });
     });
   }
+  const visualCategory = e => {
+    const labels={
+      'teaser':[ 'Teaser','Teaser'],
+      'results':['结果展示','Results'],
+      'ablation':['消融实验','Ablation'],
+      'project-site':['交互主页','Project site']
+    };
+    const name=e.curation?.visual_category;
+    const label=labels[name];
+    return label ? (lang()==='zh' ? label[0]:label[1]) : '';
+  };
   function renderGrid() {
     if (!grid || !catalog) return;
     const q=document.getElementById('reference-search')?.value.trim().toLowerCase() || '';
@@ -174,7 +185,7 @@
     const shown = (!q && !stage && !kindSelect && !domain && !showAll) ? items.slice(0,9) : items;
     grid.innerHTML=shown.length ? shown.map(e=>'<article class="ora-resource-card">'+
       '<a class="ora-resource-visual" href="asset.html?id='+encodeURIComponent(e.id)+'" aria-label="'+safe(tr('查看资产：','View asset: ')+e.title)+'">'+media(e)+'</a>'+
-      '<div class="ora-resource-content"><div class="ora-resource-kicker">'+safe(kind(e))+' · '+safe(e.year || '')+'</div>'+
+      '<div class="ora-resource-content"><div class="ora-resource-kicker">'+safe(visualCategory(e)||kind(e))+' · '+safe(e.year || '')+'</div>'+
       '<h3><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(e.title)+'</a></h3>'+
       '<p>'+safe(local(e.description))+'</p>'+
       '<div class="ora-tag-row">'+e.stages.slice(0,2).map(x=>'<span>'+safe(facetText('stages',x))+'</span>').join('')+

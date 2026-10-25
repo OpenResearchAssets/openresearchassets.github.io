@@ -98,3 +98,13 @@ python3 tests/browser_offline_smoke.py   # Playwright 与 Chromium 可用时
 ## Gallery 严选：具体图像而非整篇论文（2026-10-25）
 
 新入选 Gallery 作品必须核实 **作者项目页实际使用的图像**及作者原仓库的精确文件路径，并记录 `figureIdentity.type=project-website-figure` 和原始文件名；此类官网图不自动等于论文 Figure 1，也不等于本站拥有原图许可。优先外链原图，不复制第三方资源到本仓库。写明为什么**构图、层次、配色、真实视觉实例与信息密度**值得借鉴，以及从中能迁移的表达模式和不能复用的具体科学内容。普通拥挤 Method 图不因论文著名而自动入库。示例质量门槛见 README 的本轮新增精选清单。
+
+## Teaser、Results、Ablation、Project Site 类型边界
+
+2026-10-25 起，视觉参考可以在 `curation.visual_category` 填 `teaser`、`results`、`ablation` 或 `project-site`。类别必须由官网用途及真实原始素材支撑：
+
+- Teaser：以最短路径表达研究问题或核心展示；不能把所有结果拼图都标成 Teaser。
+- Results：相同输入和评价口径下的结果对照，特别适合对齐表格、局部放大和区域编辑。
+- Ablation：必须是作者明确的删减组件、控制变量实验，不能把基线对比或失败示例自动称为消融。
+- Project Site：评价站点导航、交互和证据路径；如果预览只是官网某张图或滑杆端点，`figureIdentity.type=project-website-media`，**不得标为实际首屏截图**。
+- 第三方媒体默认只存准确的外链，保留作者原图版权，不重新分发为本站原生 SVG。
