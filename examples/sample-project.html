@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Teaching Example · Research Project Storyboard</title>
+<meta name="description" content="Conceptual and evidence-first research project homepage. No empirical results or published paper."/>
+<style>
+:root{color-scheme:light;--ink:#192838;--sub:#5b6e82;--line:#dce5ed;--blue:#336391}
+*{box-sizing:border-box}body{margin:0;background:white;color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Noto Sans CJK SC",sans-serif}
+.wrap{width:min(1050px,calc(100% - 42px));margin:auto}.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:15px 0}.top b{font-size:15px;letter-spacing:-.03em}
+.top button{background:white;border:1px solid #cbd6e1;padding:7px 16px;border-radius:20px;cursor:pointer;font-weight:700}
+.notice{background:#eef4fa;border-bottom:1px solid #d5e0ee;color:#4a627b;padding:11px 0;font-size:13px}
+.hero{padding:76px 0 68px}.eyebrow{letter-spacing:2px;font-size:12px;font-weight:700;color:#416c96}.hero h1{font-size:clamp(39px,7vw,74px);line-height:1.08;letter-spacing:-.055em;margin:18px 0}.hero p{color:var(--sub);max-width:730px;font-size:17px}
+.status{display:inline-block;margin-top:18px;padding:9px 13px;border:1px solid #d6e1ec;border-radius:25px;color:#53687e;font-size:13px}
+.diagram{background:#f5f8fc;padding:40px 0}.diagram figure{margin:0}.diagram img{width:100%;height:auto;border:1px solid #d9e5ed;background:#fff;border-radius:15px}
+.diagram figcaption{font-size:12px;color:#6c7a8a;margin:10px 0}
+.blocks{display:grid;grid-template-columns:1fr 1fr;gap:35px;padding:62px 0}
+article{border-top:1px solid #dbe4ed;padding-top:12px}h2{font-size:23px;letter-spacing:-.03em}p,li{color:#5b6b7f}
+ul{padding-left:19px}.footer{border-top:1px solid var(--line);padding:25px 0;color:#718297;font-size:13px}
+[lang="zh-CN"] .en{display:none}[lang="en"] .zh{display:none}
+@media(max-width:720px){.hero{padding:46px 0 40px}.hero p{font-size:14px}.blocks{grid-template-columns:1fr;padding:42px 0}.diagram{padding:23px 0}}
+</style></head><body>
+<header class="top"><div class="wrap"><b>RESEARCH PROJECT / TEACHING TEMPLATE</b><button type="button" id="toggle" aria-label="Switch language">English</button></div></header>
+<div class="notice"><div class="wrap"><span class="zh">教学示例 · 虚构研究任务 · 没有真实结果、论文或代码</span><span class="en">Teaching template · hypothetical research · no measured results, paper or code</span></div></div>
+<main><section class="hero wrap"><p class="eyebrow">QUESTION FIRST / EVIDENCE NEXT</p>
+<h1><span class="zh">额外观察，<br/>是否值得？</span><span class="en">Is another view<br/>worth it?</span></h1>
+<p><span class="zh">一个研究问题：在固定资源约束下，有条件的二次观察是否值得增加机器人操作延迟？这是问题而非结论；具体方法尚需实现与验证。</span><span class="en">A research question: Is a conditional second viewpoint worth its time and resource costs in vision-guided manipulation? This is a question, not an outcome. The approach remains conceptual.</span></p>
+<span class="status"><span class="zh">研究状态：概念设计 · 结果待验证</span><span class="en">Status: conceptual design · results pending</span></span>
+</section>
+<section class="diagram"><div class="wrap"><figure>
+<img class="zh" src="../assets/examples/method-figure.zh.svg" alt="机器人有条件二次观察的方法流程概念 SVG" width="1320" height="670"/><img class="en" src="../assets/examples/method-figure.en.svg" alt="Conditional second-view conceptual method diagram" width="1320" height="670"/>
+<figcaption><span class="zh">方法图仅为设计概念。箭头说明可能的信息与控制流，并非真实执行截图。</span><span class="en">Conceptual method diagram. Arrows represent proposed data/control flow, not actual execution.</span></figcaption>
+</figure></div></section>
+<div class="blocks wrap">
+<article><p class="eyebrow">01 / METHOD</p><h2><span class="zh">方法机制</span><span class="en">Proposed mechanism</span></h2>
+<p><span class="zh">初始视角 → 行动候选 → 预设规则判断是否追加观察 → 执行与核验。触发机制、相机条件和回退逻辑尚未实现。</span><span class="en">Initial view → candidate action → predefined re-observation gate → execution and verification. Trigger, sensor conditions and fallback are not implemented.</span></p>
+</article>
+<article><p class="eyebrow">02 / RESULTS</p><h2><span class="zh">结果：未采集</span><span class="en">Results: not available</span></h2>
+<p><span class="zh">目前没有成功率、延迟或观察成本数据。正式研究需先公平比较单视角、固定双视角和条件双视角三组。</span><span class="en">No success-rate, latency or observation-cost measurements are available. A real study must compare single-view, fixed two-view and conditional policies fairly.</span></p>
+</article>
+<article><p class="eyebrow">03 / REPRODUCTION</p><h2><span class="zh">论文与代码：尚未发布</span><span class="en">Paper and code: not released</span></h2>
+<p><span class="zh">本项目不提供虚假的 Paper 或 Code 按钮。真实发布时应增加有效链接、环境、许可和数据版本。</span><span class="en">No fake Paper or Code controls. Real releases must provide working URLs, environments, permissions and dataset versions.</span></p>
+</article>
+<article><p class="eyebrow">04 / LIMITATIONS</p><h2><span class="zh">可能失效的情况</span><span class="en">Possible failure modes</span></h2>
+<ul><li><span class="zh">第二视角无法获取或延迟过高</span><span class="en">Second view unavailable or too slow</span></li><li><span class="zh">触发条件只在测试数据上有效</span><span class="en">Gate overfits the evaluation data</span></li><li><span class="zh">额外观察没有带来新信息</span><span class="en">Additional view contains no new information</span></li></ul>
+</article></div></main>
+<footer class="footer"><div class="wrap">OPEN RESEARCH ASSETS · <span class="zh">仅用于教学，内容与效果尚未验证。</span><span class="en">Teaching scenario only; no empirical validation.</span></div></footer>
+<script>const toggle=document.querySelector("#toggle");toggle.addEventListener("click",()=>{const en=document.documentElement.lang!=="en";document.documentElement.lang=en?"en":"zh-CN";toggle.textContent=en?"中文":"English";toggle.setAttribute("aria-label",en?"切换为中文":"Switch to English")})</script>
+</body></html>
