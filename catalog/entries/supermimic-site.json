@@ -1,6 +1,6 @@
 {
   "id": "supermimic-site",
-  "title": "SuperMimic · 项目主页",
+  "title": "SuperMimic · 官方项目主页首屏",
   "kind": "website-reference",
   "stages": [
     "communication"
@@ -14,8 +14,8 @@
     "evidence-storytelling"
   ],
   "description": {
-    "zh": "冷白、黑色大标题、宽松留白与分段证据；主页的视觉节奏服务于科研论证。",
-    "en": "Minimal typography, whitespace and evidence-led sections in a robotics project homepage."
+    "zh": "2026 年 10 月 25 日实际截取的 SuperMimic 项目主页首屏，以“Compute is no longer the bottleneck.”强主张与人形机器人演示为核心；不是网页 Demo 的静态海报。",
+    "en": "Actual first-viewport screenshot of the SuperMimic website featuring its 'Compute is no longer the bottleneck' hero, humanoid motion and primary actions; not the standalone demo poster."
   },
   "keywords": {
     "zh": [
@@ -35,13 +35,16 @@
   "language": "zh+en",
   "links": {
     "source": "https://supermimic.github.io/",
-    "paper": "https://arxiv.org/abs/2610.28480"
+    "paper": "https://arxiv.org/abs/2610.28480",
+    "officialFigure": "https://supermimic.github.io/"
   },
   "rights": {
-    "reuse": "reference-only",
-    "preview": "external-linked-reference",
-    "third_party_media": "external-linked-not-relicensed",
-    "source_image_url": "https://supermimic.github.io/media/demo/demo_poster_F5F5F7.jpg"
+    "reuse": "source-owner-rights-retained; reference-thumbnail-with-commentary-and-removal-channel",
+    "preview": "attributed-review-thumbnail",
+    "third_party_media": "source-confirmed-thumbnail",
+    "attribution": "Qiayuan Liao et al.; SuperMimic project website",
+    "original_file": "https://supermimic.github.io/",
+    "modifications": "viewport screenshot of published homepage, JPEG compression"
   },
   "applicability": {
     "use_when": {
@@ -76,17 +79,17 @@
     }
   },
   "parent": "supermimic-teaser",
-  "previewStyle": "editorial",
+  "previewStyle": "authentic-site-viewport",
   "visual": {
-    "src": "https://supermimic.github.io/media/demo/demo_poster_F5F5F7.jpg",
-    "kind": "external-reference-image",
+    "src": "assets/third-party/supermimic/homepage-viewport.jpg",
+    "kind": "verified-site-screenshot",
     "alt": {
-      "zh": "SuperMimic 官网交互演示中的机器人实景画面（非整页截图）",
-      "en": "Official humanoid web-demo poster (not a full-page site screenshot)"
+      "zh": "2026 年 10 月 25 日实际截取的 SuperMimic 项目主页首屏，以“Compute is no longer the bottleneck.”强主张与人形机器人演示为核心；不是网页 Demo 的静态海报。",
+      "en": "Actual first-viewport screenshot of the SuperMimic website featuring its 'Compute is no longer the bottleneck' hero, humanoid motion and primary actions; not the standalone demo poster."
     },
     "label": {
-      "zh": "真实来源图 · 原作者版权所有",
-      "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
+      "zh": "真实官网首屏截图 · 带出处",
+      "en": "REAL WEBSITE SCREENSHOT · SOURCED"
     }
   },
   "caseStudy": {
@@ -121,11 +124,13 @@
     "verification": {
       "zh": [
         "不要借用官网的比较结果作为自己论文的证据。",
-        "横跨不同硬件的资源比较须注明训练和评测口径。"
+        "横跨不同硬件的资源比较须注明训练和评测口径。",
+        "当前主图为实际官网首屏的静态截图，网站可交互行为需要在官方主页验证。"
       ],
       "en": [
         "Do not transfer another paper's findings to your own work.",
-        "Cross-hardware comparisons need stated training and evaluation settings."
+        "Cross-hardware comparisons need stated training and evaluation settings.",
+        "The primary preview is a real first-viewport capture, not a replacement for testing the live source site."
       ]
     }
   },
@@ -140,5 +145,13 @@
       "zh": "原创案例拆解 · 非官方原图",
       "en": "Authored case study · Not source artwork"
     }
+  },
+  "figureIdentity": {
+    "type": "website-viewport",
+    "original_name": "Website / first viewport 1370×810",
+    "original_source": "https://supermimic.github.io/",
+    "capture_date": "2026-10-25",
+    "modifications": "viewport screenshot of published homepage, JPEG compression",
+    "credit": "Qiayuan Liao et al.; SuperMimic project website"
   }
 }

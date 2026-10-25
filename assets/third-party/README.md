@@ -1,12 +1,20 @@
-# 第三方源站媒体 / Third-party source media
+# 第三方真实来源图片 / Authentic source media
 
-本目录仅保留确有可说明使用依据、并且当前网站实际需要的真实媒体；未获重新授权的外链原图不归档到此目录。
+本目录当前**仅保留经过原图/原网页核对的六张图片**：三张来自论文 Figure 1 或作者官方 Teaser，三张为当日实际截取的项目主页首屏。此前误用的 RoboRender 训练数据图、生成质量曲线、SuperMimic GPU 墙和 Demo poster，均**不再作为论文 Figure 1 或网站截图出现**。
 
-| 本地文件 | 原站文件 | 依据 |
+| 案例 | 当前实际媒体 | 源头 |
 |---|---|---|
-| [RoboRender 训练数据图](roborender/training-data.png) | [上游源文件](https://github.com/robo-render/robo-render.github.io/blob/main/static/images/training-data.png) | [论文 CC BY 4.0](https://arxiv.org/abs/2610.09254) |
-| [RoboRender 生成质量图](roborender/generation-quality.png) | [上游源文件](https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig4_ar_quality.png) | [论文 CC BY 4.0](https://arxiv.org/abs/2610.09254) |
+| RoboRender · Figure 1 论文首页 Teaser | [roborender/figure1-overview.jpg](roborender/figure1-overview.jpg) | https://arxiv.org/pdf/2610.09254#page=1 |
+| RoboRender · 官方项目主页首屏 | [roborender/homepage-viewport.jpg](roborender/homepage-viewport.jpg) | https://robo-render.github.io/ |
+| RoboDojo · Figure 1 论文总览图 | [robodojo/figure1-overview.jpg](robodojo/figure1-overview.jpg) | https://media.luminis-sim.com/media/home/teaser.png |
+| RoboDojo · 官方项目主页首屏 | [robodojo/homepage-viewport.jpg](robodojo/homepage-viewport.jpg) | https://robodojo-benchmark.com/ |
+| SuperMimic · Figure 1 论文首页图 | [supermimic/figure1-overview.jpg](supermimic/figure1-overview.jpg) | https://arxiv.org/pdf/2610.28480#page=1 |
+| SuperMimic · 官方项目主页首屏 | [supermimic/homepage-viewport.jpg](supermimic/homepage-viewport.jpg) | https://supermimic.github.io/ |
 
-作者：Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu (RoboRender, 2026)。两张文件均保留与上游相同的 Git blob SHA，未修改。它们**不是论文 Teaser 或整张项目主页截图**。
+论文图仅裁切、缩小、JPEG 压缩，保留信息内容；网页首屏在 1370×810 的实际浏览器中截取（视频瞬时帧随时间变化）。
 
-详细许可依据、源 Blob 与素材类型见 [manifest.json](manifest.json)；它们不继承本站软件 MIT 与原创素材许可证。其他原站视觉内容通过来源 URL 指向，具体使用仍应遵守权利人的条款。
+- **RoboRender Figure 1**：原论文以 CC BY 4.0 公开，使用中注明作者、论文和裁切压缩修改。
+- **RoboDojo 和 SuperMimic**：低分辨率、具体研究评论及设计分析参考，原作者保留版权；本仓库不对原图重新授权，有异议可通过 [素材撤除/更正模板](https://github.com/Suchenl/OpenResearchAssets/issues/new?template=asset-removal.yml) 联系。
+- **网站截图**：作为评论网站信息架构的参考，不能当成代码版权许可证、可编辑源码，也不是完整页面归档。
+
+每张图片的独立来源、身份、修改说明和署名参见 [manifest.json](manifest.json)。`assets/editorials/*.svg` 是本站原创的结构分析，与这里的原始媒体**不是同类素材**。

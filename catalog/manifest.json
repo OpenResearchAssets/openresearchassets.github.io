@@ -116,7 +116,7 @@
     },
     {
       "id": "roborender-teaser",
-      "title": "RoboRender · 论文 Teaser",
+      "title": "RoboRender · Figure 1 论文首页 Teaser",
       "kind": "visual-reference",
       "stages": [
         "writing",
@@ -140,12 +140,12 @@
         "paired comparison",
         "teaser"
       ],
-      "description_zh": "以输入、生成结果和视觉条件的对应关系，组织机器人视觉迁移的第一印象。",
+      "description_zh": "RoboRender 论文首页 Figure 1：左侧仿真机器人数据，中间真实感多视角生成视频，右侧真实机器人执行结果；不是训练数据图或方法结构图。",
       "entry": "catalog/entries/roborender-teaser.json"
     },
     {
       "id": "roborender-site",
-      "title": "RoboRender · 项目主页",
+      "title": "RoboRender · 官方项目主页首屏",
       "kind": "website-reference",
       "stages": [
         "communication"
@@ -167,12 +167,12 @@
         "video demo",
         "multi-view"
       ],
-      "description_zh": "从整体叙事、视频演示和多条件对比观察科研主页如何解释技术价值。",
+      "description_zh": "2026 年 10 月 25 日实际截取的 RoboRender 官方网站首屏，包含大标题、作者信息、论文/代码入口和视频 Hero；不是论文 Teaser。",
       "entry": "catalog/entries/roborender-site.json"
     },
     {
       "id": "robodojo-teaser",
-      "title": "RoboDojo · 论文总览图",
+      "title": "RoboDojo · Figure 1 论文总览图",
       "kind": "visual-reference",
       "stages": [
         "writing",
@@ -195,12 +195,12 @@
         "sim-and-real",
         "task overview"
       ],
-      "description_zh": "用统一的多场景视觉布局解释仿真与真实机器人评估范围。",
+      "description_zh": "RoboDojo 论文 Figure 1：左侧仿真任务与模型迭代，右侧真实机器人评测，下方是社区、XPolicyLab、Leaderboard 和任务样本；来自官方 README 总览图。",
       "entry": "catalog/entries/robodojo-teaser.json"
     },
     {
       "id": "robodojo-site",
-      "title": "RoboDojo · 项目主页",
+      "title": "RoboDojo · 官方项目主页首屏",
       "kind": "website-reference",
       "stages": [
         "communication",
@@ -223,12 +223,12 @@
         "gallery",
         "evaluation"
       ],
-      "description_zh": "参考任务画廊、真实演示与项目叙事的组织，帮助大量实验内容保持可读。",
+      "description_zh": "2026 年 10 月 25 日截取的 RoboDojo 官方网站首屏，包含导航、真实机器人视频背景和统一仿真/现实评测定位；替换原先已失效的 404 作品集地址。",
       "entry": "catalog/entries/robodojo-site.json"
     },
     {
       "id": "supermimic-teaser",
-      "title": "SuperMimic · 论文主图",
+      "title": "SuperMimic · Figure 1 论文首页图",
       "kind": "visual-reference",
       "stages": [
         "writing",
@@ -256,12 +256,12 @@
         "world-model rollout",
         "GPU-hours"
       ],
-      "description_zh": "论文 Figure 1 左侧用连续人形运动轨迹展示世界模型 rollout，右侧以 128 L40 GPU 与 1 H100 GPU 的训练投入形成直观对照。",
+      "description_zh": "SuperMimic 论文 Figure 1：左侧人形机器人在世界模型中的连续想象运动，右侧是 SONIC 128 张 L40/168 小时与 SuperMimic 1 张 H100/3 小时的训练开销对照；不是官网 GPU 墙装饰图。",
       "entry": "catalog/entries/supermimic-teaser.json"
     },
     {
       "id": "supermimic-site",
-      "title": "SuperMimic · 项目主页",
+      "title": "SuperMimic · 官方项目主页首屏",
       "kind": "website-reference",
       "stages": [
         "communication"
@@ -284,7 +284,7 @@
         "minimal",
         "storytelling"
       ],
-      "description_zh": "冷白、黑色大标题、宽松留白与分段证据；主页的视觉节奏服务于科研论证。",
+      "description_zh": "2026 年 10 月 25 日实际截取的 SuperMimic 项目主页首屏，以“Compute is no longer the bottleneck.”强主张与人形机器人演示为核心；不是网页 Demo 的静态海报。",
       "entry": "catalog/entries/supermimic-site.json"
     },
     {

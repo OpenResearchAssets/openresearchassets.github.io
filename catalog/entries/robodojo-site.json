@@ -1,6 +1,6 @@
 {
   "id": "robodojo-site",
-  "title": "RoboDojo · 项目主页",
+  "title": "RoboDojo · 官方项目主页首屏",
   "kind": "website-reference",
   "stages": [
     "communication",
@@ -14,8 +14,8 @@
     "benchmark-presentation"
   ],
   "description": {
-    "zh": "参考任务画廊、真实演示与项目叙事的组织，帮助大量实验内容保持可读。",
-    "en": "Study task galleries and physical demonstrations as scalable evidence presentation."
+    "zh": "2026 年 10 月 25 日截取的 RoboDojo 官方网站首屏，包含导航、真实机器人视频背景和统一仿真/现实评测定位；替换原先已失效的 404 作品集地址。",
+    "en": "Actual first-viewport screenshot of the RoboDojo website with navigation, robot video hero and unified simulation/real evaluation tagline; replaces a broken portfolio URL."
   },
   "keywords": {
     "zh": [
@@ -35,13 +35,16 @@
   "language": "zh+en",
   "links": {
     "source": "https://robodojo-benchmark.com/",
-    "paper": "https://arxiv.org/abs/2607.04434"
+    "paper": "https://arxiv.org/abs/2607.04434",
+    "officialFigure": "https://robodojo-benchmark.com/"
   },
   "rights": {
-    "reuse": "reference-only",
-    "preview": "external-linked-reference",
-    "third_party_media": "external-linked-not-relicensed",
-    "source_image_url": "https://tianxingchen.github.io/assets/files/work/2026-robodojo.png"
+    "reuse": "source-owner-rights-retained; reference-thumbnail-with-commentary-and-removal-channel",
+    "preview": "attributed-review-thumbnail",
+    "third_party_media": "source-confirmed-thumbnail",
+    "attribution": "RoboDojo project contributors",
+    "original_file": "https://robodojo-benchmark.com/",
+    "modifications": "viewport screenshot of published homepage, JPEG compression"
   },
   "applicability": {
     "use_when": {
@@ -72,17 +75,17 @@
     }
   },
   "parent": "robodojo-teaser",
-  "previewStyle": "benchmark",
+  "previewStyle": "authentic-site-viewport",
   "visual": {
-    "src": "https://tianxingchen.github.io/assets/files/work/2026-robodojo.png",
-    "kind": "external-reference-image",
+    "src": "assets/third-party/robodojo/homepage-viewport.jpg",
+    "kind": "verified-site-screenshot",
     "alt": {
-      "zh": "作者个人主页中的 RoboDojo 项目封面（非官网截图）",
-      "en": "Project image on the author's portfolio (not a screenshot of the benchmark website)"
+      "zh": "2026 年 10 月 25 日截取的 RoboDojo 官方网站首屏，包含导航、真实机器人视频背景和统一仿真/现实评测定位；替换原先已失效的 404 作品集地址。",
+      "en": "Actual first-viewport screenshot of the RoboDojo website with navigation, robot video hero and unified simulation/real evaluation tagline; replaces a broken portfolio URL."
     },
     "label": {
-      "zh": "真实来源图 · 原作者版权所有",
-      "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
+      "zh": "真实官网首屏截图 · 带出处",
+      "en": "REAL WEBSITE SCREENSHOT · SOURCED"
     }
   },
   "caseStudy": {
@@ -117,11 +120,13 @@
     "verification": {
       "zh": [
         "静态封面不等于可操作演示；交互效果需要在实际网站测试。",
-        "排名结果随提交变化，使用时核对官方日期与协议。"
+        "排名结果随提交变化，使用时核对官方日期与协议。",
+        "当前主图为实际官网首屏的静态截图，网站可交互行为需要在官方主页验证。"
       ],
       "en": [
         "A cover is not a functioning demo; verify the actual website interaction.",
-        "Leaderboard standings evolve; check official dates and protocols."
+        "Leaderboard standings evolve; check official dates and protocols.",
+        "The primary preview is a real first-viewport capture, not a replacement for testing the live source site."
       ]
     }
   },
@@ -136,5 +141,13 @@
       "zh": "原创案例拆解 · 非官方原图",
       "en": "Authored case study · Not source artwork"
     }
+  },
+  "figureIdentity": {
+    "type": "website-viewport",
+    "original_name": "Website / first viewport 1370×810",
+    "original_source": "https://robodojo-benchmark.com/",
+    "capture_date": "2026-10-25",
+    "modifications": "viewport screenshot of published homepage, JPEG compression",
+    "credit": "RoboDojo project contributors"
   }
 }

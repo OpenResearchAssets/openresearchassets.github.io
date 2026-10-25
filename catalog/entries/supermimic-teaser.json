@@ -1,6 +1,6 @@
 {
   "id": "supermimic-teaser",
-  "title": "SuperMimic · 论文主图",
+  "title": "SuperMimic · Figure 1 论文首页图",
   "kind": "visual-reference",
   "stages": [
     "writing",
@@ -15,8 +15,8 @@
     "evidence-storytelling"
   ],
   "description": {
-    "zh": "论文 Figure 1 左侧用连续人形运动轨迹展示世界模型 rollout，右侧以 128 L40 GPU 与 1 H100 GPU 的训练投入形成直观对照。",
-    "en": "Paper Figure 1 pairs overlapping humanoid world-model rollouts with a concrete training-compute contrast: 128 L40 GPUs versus one H100 GPU."
+    "zh": "SuperMimic 论文 Figure 1：左侧人形机器人在世界模型中的连续想象运动，右侧是 SONIC 128 张 L40/168 小时与 SuperMimic 1 张 H100/3 小时的训练开销对照；不是官网 GPU 墙装饰图。",
+    "en": "SuperMimic paper Figure 1: imagined humanoid world-model rollout and 128 L40/168h versus 1 H100/3h compute comparison; not the decorative GPU-wall graphic."
   },
   "keywords": {
     "zh": [
@@ -40,13 +40,16 @@
   "language": "zh+en",
   "links": {
     "source": "https://supermimic.github.io/",
-    "paper": "https://arxiv.org/abs/2610.28480"
+    "paper": "https://arxiv.org/abs/2610.28480",
+    "officialFigure": "https://arxiv.org/pdf/2610.28480#page=1"
   },
   "rights": {
-    "reuse": "reference-only",
-    "preview": "external-linked-reference",
-    "third_party_media": "external-linked-not-relicensed",
-    "source_image_url": "https://supermimic.github.io/media/compute/compute_single-wall_F5F5F7.jpg"
+    "reuse": "source-owner-rights-retained; reference-thumbnail-with-commentary-and-removal-channel",
+    "preview": "attributed-review-thumbnail",
+    "third_party_media": "source-confirmed-thumbnail",
+    "attribution": "Qiayuan Liao, Yiyang Shao, Junfeng Long, Kevin Zakka, Roberto Horowitz, Pieter Abbeel, Koushil Sreenath",
+    "original_file": "https://arxiv.org/pdf/2610.28480#page=1",
+    "modifications": "cropped from first PDF page around Figure 1; downsampled and JPEG-compressed"
   },
   "applicability": {
     "use_when": {
@@ -79,17 +82,17 @@
     }
   },
   "parent": "supermimic-site",
-  "previewStyle": "rollout",
+  "previewStyle": "paper-figure-1",
   "visual": {
-    "src": "https://supermimic.github.io/media/compute/compute_single-wall_F5F5F7.jpg",
-    "kind": "external-reference-image",
+    "src": "assets/third-party/supermimic/figure1-overview.jpg",
+    "kind": "verified-paper-figure",
     "alt": {
-      "zh": "SuperMimic 官网算力对比配图（非论文 Figure 1 原图）",
-      "en": "Official compute-comparison website image (not the paper's Figure 1)"
+      "zh": "SuperMimic 论文 Figure 1：左侧人形机器人在世界模型中的连续想象运动，右侧是 SONIC 128 张 L40/168 小时与 SuperMimic 1 张 H100/3 小时的训练开销对照；不是官网 GPU 墙装饰图。",
+      "en": "SuperMimic paper Figure 1: imagined humanoid world-model rollout and 128 L40/168h versus 1 H100/3h compute comparison; not the decorative GPU-wall graphic."
     },
     "label": {
-      "zh": "真实来源图 · 原作者版权所有",
-      "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
+      "zh": "论文原始 Figure 1 · 带出处",
+      "en": "PAPER FIGURE 1 · SOURCED"
     }
   },
   "caseStudy": {
@@ -124,11 +127,11 @@
     "verification": {
       "zh": [
         "不同 GPU 型号下的耗时与 GPU-hours 不等于严格等价硬件的消融。",
-        "主页标题与论文 Figure 1 是两类资产；此图为原创内容拆解。"
+        "当前主图为论文 Figure 1 的真实缩略预览，细节以原始论文或官方素材为准。"
       ],
       "en": [
         "Cross-GPU wall clock and GPU-hours are not controlled same-hardware ablations.",
-        "The homepage hero is not paper Figure 1; this is an authored deconstruction."
+        "The primary preview is a reduced-size excerpt of the actual paper Figure 1; verify detail in the official source."
       ]
     }
   },
@@ -143,5 +146,13 @@
       "zh": "原创案例拆解 · 非官方原图",
       "en": "Authored case study · Not source artwork"
     }
+  },
+  "figureIdentity": {
+    "type": "paper-figure",
+    "original_name": "Figure 1 / World-Model Rollout + Compute",
+    "original_source": "https://arxiv.org/pdf/2610.28480#page=1",
+    "capture_date": "2026-10-25",
+    "modifications": "cropped from first PDF page around Figure 1; downsampled and JPEG-compressed",
+    "credit": "Qiayuan Liao, Yiyang Shao, Junfeng Long, Kevin Zakka, Roberto Horowitz, Pieter Abbeel, Koushil Sreenath"
   }
 }

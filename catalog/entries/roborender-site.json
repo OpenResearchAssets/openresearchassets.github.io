@@ -1,6 +1,6 @@
 {
   "id": "roborender-site",
-  "title": "RoboRender · 项目主页",
+  "title": "RoboRender · 官方项目主页首屏",
   "kind": "website-reference",
   "stages": [
     "communication"
@@ -14,8 +14,8 @@
     "visual-comparison"
   ],
   "description": {
-    "zh": "从整体叙事、视频演示和多条件对比观察科研主页如何解释技术价值。",
-    "en": "A project-page reference for scientific storytelling, video demos and condition comparisons."
+    "zh": "2026 年 10 月 25 日实际截取的 RoboRender 官方网站首屏，包含大标题、作者信息、论文/代码入口和视频 Hero；不是论文 Teaser。",
+    "en": "Real first-viewport screenshot of the RoboRender project website, including its headline, authors, links and video hero; not the paper teaser."
   },
   "keywords": {
     "zh": [
@@ -35,19 +35,15 @@
   "links": {
     "source": "https://robo-render.github.io/",
     "paper": "https://arxiv.org/abs/2610.09254",
-    "officialFigure": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig4_ar_quality.png",
-    "license": "https://creativecommons.org/licenses/by/4.0/"
+    "officialFigure": "https://robo-render.github.io/"
   },
   "rights": {
-    "reuse": "reference-only",
-    "preview": "third-party-cc-by-4.0",
-    "third_party_media": "source-image-copied-with-paper-license",
-    "license_url": "https://creativecommons.org/licenses/by/4.0/",
-    "licensing_evidence": "https://arxiv.org/abs/2610.09254",
-    "attribution": "Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu. RoboRender (2026), arXiv:2610.09254.",
-    "original_file": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/fig4_ar_quality.png",
-    "original_blob_sha": "1371f1b0f47c556a5273ad6f29444c4269b89052",
-    "modifications": "none"
+    "reuse": "source-owner-rights-retained; reference-thumbnail-with-commentary-and-removal-channel",
+    "preview": "attributed-review-thumbnail",
+    "third_party_media": "source-confirmed-thumbnail",
+    "attribution": "Huang Huang et al.; RoboRender project website",
+    "original_file": "https://robo-render.github.io/",
+    "modifications": "viewport screenshot of published homepage, JPEG compression"
   },
   "applicability": {
     "use_when": {
@@ -78,17 +74,17 @@
     }
   },
   "parent": "roborender-teaser",
-  "previewStyle": "comparison",
+  "previewStyle": "authentic-site-viewport",
   "visual": {
-    "src": "assets/third-party/roborender/generation-quality.png",
-    "kind": "licensed-source-image",
+    "src": "assets/third-party/roborender/homepage-viewport.jpg",
+    "kind": "verified-site-screenshot",
     "alt": {
-      "zh": "官网真实生成质量对比图，非整页网站截图",
-      "en": "Authentic generation-quality chart from project website; not a full webpage screenshot."
+      "zh": "2026 年 10 月 25 日实际截取的 RoboRender 官方网站首屏，包含大标题、作者信息、论文/代码入口和视频 Hero；不是论文 Teaser。",
+      "en": "Real first-viewport screenshot of the RoboRender project website, including its headline, authors, links and video hero; not the paper teaser."
     },
     "label": {
-      "zh": "官方真实配图 · CC BY 4.0",
-      "en": "OFFICIAL MEDIA · CC BY 4.0"
+      "zh": "真实官网首屏截图 · 带出处",
+      "en": "REAL WEBSITE SCREENSHOT · SOURCED"
     }
   },
   "caseStudy": {
@@ -122,12 +118,11 @@
     },
     "verification": {
       "zh": [
-        "不能把生成视频称为真实机器人拍摄。",
-        "站内展示的是主页信息架构拆解，不是官网截图。"
+        "当前主图为实际官网首屏的静态截图，网站可交互行为需要在官方主页验证。"
       ],
       "en": [
         "Generated video is not the same as real robot footage.",
-        "The site preview is an authored information-architecture study, not the source screenshot."
+        "The primary preview is a real first-viewport capture, not a replacement for testing the live source site."
       ]
     }
   },
@@ -142,5 +137,13 @@
       "zh": "原创案例拆解 · 非官方原图",
       "en": "Authored case study · Not source artwork"
     }
+  },
+  "figureIdentity": {
+    "type": "website-viewport",
+    "original_name": "Website / first viewport 1370×810",
+    "original_source": "https://robo-render.github.io/",
+    "capture_date": "2026-10-25",
+    "modifications": "viewport screenshot of published homepage, JPEG compression",
+    "credit": "Huang Huang et al.; RoboRender project website"
   }
 }

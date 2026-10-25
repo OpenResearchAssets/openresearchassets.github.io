@@ -1,6 +1,6 @@
 {
   "id": "robodojo-teaser",
-  "title": "RoboDojo · 论文总览图",
+  "title": "RoboDojo · Figure 1 论文总览图",
   "kind": "visual-reference",
   "stages": [
     "writing",
@@ -14,8 +14,8 @@
     "benchmark-presentation"
   ],
   "description": {
-    "zh": "用统一的多场景视觉布局解释仿真与真实机器人评估范围。",
-    "en": "A visual organization pattern for simulated and physical robot evaluation coverage."
+    "zh": "RoboDojo 论文 Figure 1：左侧仿真任务与模型迭代，右侧真实机器人评测，下方是社区、XPolicyLab、Leaderboard 和任务样本；来自官方 README 总览图。",
+    "en": "RoboDojo paper Figure 1 from the official project overview: simulation/real evaluation, XPolicyLab, leaderboard and benchmark task evidence."
   },
   "keywords": {
     "zh": [
@@ -39,10 +39,12 @@
     "officialFigure": "https://media.luminis-sim.com/media/home/teaser.png"
   },
   "rights": {
-    "reuse": "reference-only",
-    "preview": "external-linked-reference",
-    "third_party_media": "external-linked-not-relicensed",
-    "source_image_url": "https://media.luminis-sim.com/media/home/teaser.png"
+    "reuse": "source-owner-rights-retained; reference-thumbnail-with-commentary-and-removal-channel",
+    "preview": "attributed-review-thumbnail",
+    "third_party_media": "source-confirmed-thumbnail",
+    "attribution": "Tianxing Chen et al.; RoboDojo authors and contributors",
+    "original_file": "https://media.luminis-sim.com/media/home/teaser.png",
+    "modifications": "resized from official PNG and JPEG-compressed"
   },
   "applicability": {
     "use_when": {
@@ -73,17 +75,17 @@
     }
   },
   "parent": "robodojo-site",
-  "previewStyle": "benchmark",
+  "previewStyle": "paper-figure-1",
   "visual": {
-    "src": "https://media.luminis-sim.com/media/home/teaser.png",
-    "kind": "external-reference-image",
+    "src": "assets/third-party/robodojo/figure1-overview.jpg",
+    "kind": "verified-paper-figure",
     "alt": {
-      "zh": "RoboDojo 官方完整概览图",
-      "en": "Official RoboDojo overview figure"
+      "zh": "RoboDojo 论文 Figure 1：左侧仿真任务与模型迭代，右侧真实机器人评测，下方是社区、XPolicyLab、Leaderboard 和任务样本；来自官方 README 总览图。",
+      "en": "RoboDojo paper Figure 1 from the official project overview: simulation/real evaluation, XPolicyLab, leaderboard and benchmark task evidence."
     },
     "label": {
-      "zh": "真实来源图 · 原作者版权所有",
-      "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
+      "zh": "论文原始 Figure 1 · 带出处",
+      "en": "PAPER FIGURE 1 · SOURCED"
     }
   },
   "caseStudy": {
@@ -118,11 +120,13 @@
     "verification": {
       "zh": [
         "42/18 为官网描述的任务数量，不能推断每项任务难度相等。",
-        "官网外链媒体图片不能从代码仓库的 MIT 许可自动推断授权。"
+        "官网外链媒体图片不能从代码仓库的 MIT 许可自动推断授权。",
+        "当前主图为论文 Figure 1 的真实缩略预览，细节以原始论文或官方素材为准。"
       ],
       "en": [
         "The 42/18 figures refer to official task counts, not matched task difficulty.",
-        "An MIT license on a software repo does not automatically license externally hosted imagery."
+        "An MIT license on a software repo does not automatically license externally hosted imagery.",
+        "The primary preview is a reduced-size excerpt of the actual paper Figure 1; verify detail in the official source."
       ]
     }
   },
@@ -137,5 +141,13 @@
       "zh": "原创案例拆解 · 非官方原图",
       "en": "Authored case study · Not source artwork"
     }
+  },
+  "figureIdentity": {
+    "type": "paper-figure",
+    "original_name": "Figure 1 / Unified Benchmark Overview",
+    "original_source": "https://media.luminis-sim.com/media/home/teaser.png",
+    "capture_date": "2026-10-25",
+    "modifications": "resized from official PNG and JPEG-compressed",
+    "credit": "Tianxing Chen et al.; RoboDojo authors and contributors"
   }
 }

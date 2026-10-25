@@ -1,6 +1,6 @@
 {
   "id": "roborender-teaser",
-  "title": "RoboRender · 论文 Teaser",
+  "title": "RoboRender · Figure 1 论文首页 Teaser",
   "kind": "visual-reference",
   "stages": [
     "writing",
@@ -15,8 +15,8 @@
     "visual-comparison"
   ],
   "description": {
-    "zh": "以输入、生成结果和视觉条件的对应关系，组织机器人视觉迁移的第一印象。",
-    "en": "Use aligned inputs, generated results and conditions to introduce visual sim-to-real transfer."
+    "zh": "RoboRender 论文首页 Figure 1：左侧仿真机器人数据，中间真实感多视角生成视频，右侧真实机器人执行结果；不是训练数据图或方法结构图。",
+    "en": "RoboRender paper Figure 1: simulation robot data (left), generated photorealistic videos (center), and real-world robot rollouts (right); not a training-data chart or model architecture."
   },
   "keywords": {
     "zh": [
@@ -37,19 +37,18 @@
   "links": {
     "source": "https://robo-render.github.io/",
     "paper": "https://arxiv.org/abs/2610.09254",
-    "officialFigure": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/training-data.png",
+    "officialFigure": "https://arxiv.org/pdf/2610.09254#page=1",
     "license": "https://creativecommons.org/licenses/by/4.0/"
   },
   "rights": {
-    "reuse": "reference-only",
-    "preview": "third-party-cc-by-4.0",
-    "third_party_media": "source-image-copied-with-paper-license",
+    "reuse": "CC-BY-4.0 with attribution; screenshot thumbnail modified",
+    "preview": "paper-cc-by-thumbnail",
+    "third_party_media": "source-confirmed-thumbnail",
     "license_url": "https://creativecommons.org/licenses/by/4.0/",
     "licensing_evidence": "https://arxiv.org/abs/2610.09254",
-    "attribution": "Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu. RoboRender (2026), arXiv:2610.09254.",
-    "original_file": "https://github.com/robo-render/robo-render.github.io/blob/main/static/images/training-data.png",
-    "original_blob_sha": "f3e29ac4bbd8c7f89444c286aeeac7d186648f1e",
-    "modifications": "none"
+    "attribution": "Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu",
+    "original_file": "https://arxiv.org/pdf/2610.09254#page=1",
+    "modifications": "cropped from page 1 around Figure 1; downsampled and JPEG-compressed"
   },
   "applicability": {
     "use_when": {
@@ -84,17 +83,17 @@
     }
   },
   "parent": "roborender-site",
-  "previewStyle": "comparison",
+  "previewStyle": "paper-figure-1",
   "visual": {
-    "src": "assets/third-party/roborender/training-data.png",
-    "kind": "licensed-source-image",
+    "src": "assets/third-party/roborender/figure1-overview.jpg",
+    "kind": "verified-paper-figure",
     "alt": {
-      "zh": "官方训练样本条件可视化，非论文 Teaser 原图",
-      "en": "Official training-data condition visualization; not the paper's actual teaser."
+      "zh": "RoboRender 论文首页 Figure 1：左侧仿真机器人数据，中间真实感多视角生成视频，右侧真实机器人执行结果；不是训练数据图或方法结构图。",
+      "en": "RoboRender paper Figure 1: simulation robot data (left), generated photorealistic videos (center), and real-world robot rollouts (right); not a training-data chart or model architecture."
     },
     "label": {
-      "zh": "官方真实配图 · CC BY 4.0",
-      "en": "OFFICIAL MEDIA · CC BY 4.0"
+      "zh": "论文原始 Figure 1 · 带出处",
+      "en": "PAPER FIGURE 1 · SOURCED"
     }
   },
   "caseStudy": {
@@ -129,11 +128,11 @@
     "verification": {
       "zh": [
         "不得从图片好看直接推导策略成功率，需要独立的实验结果。",
-        "展示外部论文画面前需图像级授权；此图为本站原创分析示意。"
+        "当前主图为论文 Figure 1 的真实缩略预览，细节以原始论文或官方素材为准。"
       ],
       "en": [
         "Image quality alone does not establish policy success; use separate results.",
-        "Figure-level rights must be verified before embedding external paper imagery."
+        "The primary preview is a reduced-size excerpt of the actual paper Figure 1; verify detail in the official source."
       ]
     }
   },
@@ -148,5 +147,13 @@
       "zh": "原创案例拆解 · 非官方原图",
       "en": "Authored case study · Not source artwork"
     }
+  },
+  "figureIdentity": {
+    "type": "paper-figure",
+    "original_name": "Figure 1 / Overview",
+    "original_source": "https://arxiv.org/pdf/2610.09254#page=1",
+    "capture_date": "2026-10-25",
+    "modifications": "cropped from page 1 around Figure 1; downsampled and JPEG-compressed",
+    "credit": "Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu"
   }
 }
