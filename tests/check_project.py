@@ -164,6 +164,34 @@ for f in ('LICENSE','CONTRIBUTING.md','docs/ASSET_POLICY.md','docs/ASSET_SCHEMA.
     if not (ROOT/f).exists():errors.append(f'missing {f}')
 index=(ROOT/'index.html').read_text(encoding='utf-8')
 if 'js/catalog.js' not in index or 'data/references.js' in index:errors.append('index not connected to canonical catalog')
+# Keep the independent project's canonical organization URLs consistent.
+# The org Pages root is not the old personal /OpenResearchAssets/ project path.
+legacy = ('https://suchenl.github.io/OpenResearchAssets/',
+          'https://github.com/Suchenl/OpenResearchAssets')
+for p in ROOT.rglob('*'):
+    if p.is_file() and p.suffix.lower() in {'.md','.html','.js','.json','.txt','.yml','.yaml','.py'}:
+        relative = p.relative_to(ROOT)
+        if any(part in {'__pycache__','.git'} for part in relative.parts):continue
+        try:content = p.read_text(encoding='utf-8')
+        except UnicodeError:continue
+        if any(old in content for old in legacy):
+            errors.append(f'{relative}: obsolete Suchenl project URL')
+
+# Community vision is an editable illustration, not a pasted screenshot.
+vision = ROOT/'assets/diagrams/community-trajectory.svg'
+if not vision.is_file():
+    errors.append('missing editable community vision SVG')
+else:
+    try:
+        r = ET.parse(vision)
+        nodes = list(r.iter())
+        if sum(el.tag.split('}')[-1]=='text' for el in nodes) < 6:
+            errors.append('community vision: text is not independently editable')
+        if any(el.tag.split('}')[-1]=='image' for el in nodes):
+            errors.append('community vision: embedded raster is not allowed')
+    except ET.ParseError as err:
+        errors.append(f'community vision SVG parse error: {err}')
+
 if errors:
     for e in errors:print('FAIL:',e)
     raise SystemExit(1)
