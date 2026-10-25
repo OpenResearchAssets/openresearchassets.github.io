@@ -17,6 +17,20 @@ OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉�
 
 目前的工作流是指导性材料，不代表已通过独立效果验证；SVG 模板的示意内容也需替换成真实研究信息。
 
+## 三个贯通式科研案例（可编辑、可下载）
+
+[**打开网站案例页 →**](https://openresearchassets.github.io/examples.html)
+
+以一个**明确标注为虚构**的视觉机器人任务为共同输入，完整示范科学问题 → Method Figure → 对照实验 → 项目主页，不引用未经公开的研究材料，也不伪造实验结果。
+
+| 实践 | 完整步骤 | 实际可复用交付 |
+|---|---|---|
+| **01 方法图** | [Method Figure 教学案例](examples/method-figure.zh.md) | [可编辑 SVG](assets/examples/method-figure.zh.svg) |
+| **02 对照实验** | [科学主张 → 实验协议](examples/experiment-design.zh.md) | [可编辑 SVG](assets/examples/experiment-design.zh.svg) + [待填写证据 CSV](examples/evidence-register.csv) |
+| **03 项目主页** | [证据 → 公开研究页面](examples/project-homepage.zh.md) | [可编辑 SVG](assets/examples/project-homepage.zh.svg) + [可运行 HTML 示例](examples/sample-project.html) |
+
+**真实性边界：** 这些是原创教学产物，不是实际论文结果或部署中的机器人系统。请在真实任务中替换内容、获取许可、执行实验并核对所有结论。中英两套 SVG 和对应完整说明均已提供，见 [案例总索引](examples/README.md)。
+
 ## 项目目标与用途
 
 **长期目标：让科研经验真正成为 AI 可使用的生产力。** 我们希望未来的研究者在选题、调研、方法设计、实验、评估、写作、投稿、项目主页和成果传播等任务中，只需给有网页读取能力的 AI **一个 OpenResearchAssets 网址**，AI 就能根据当前任务主动检索并理解相关资产，选择可复用的方法、实践经验、工具、Skill、可编辑素材及工作流程，在获得必要项目文件和工具权限后将其应用于实际工作，而不必反复让人类编写详细提示词或从零检索同类资料。

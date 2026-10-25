@@ -52,10 +52,10 @@ with sync_playwright() as pw:
         assert page.locator('html').get_attribute('lang')=='zh-CN'
         assert page.locator('h1').inner_text().startswith('让已有的经验')
         assert page.locator('.ora-start-path').count()==3, (label, 'missing first-use paths')
-        assert page.locator('.ora-start-path').nth(0).get_attribute('href')=='asset.html?id=experiment-planning'
+        assert page.locator('.ora-start-path').nth(0).get_attribute('href')=='examples.html'
         assert page.locator('.ora-start-path').nth(1).get_attribute('href')=='for-agents/'
         assert page.locator('.ora-start-path').nth(2).get_attribute('href')=='contribute.html'
-        assert '用一份科研工作流' in page.locator('.ora-start').inner_text()
+        assert '查看完整科研案例' in page.locator('.ora-start').inner_text()
         assert page.locator('.ora-rights-notice').count()==1
         assert '异议' in page.locator('.ora-rights-notice').inner_text()
         assert 'asset-removal.yml' in page.locator('.ora-rights-notice a').get_attribute('href')
@@ -78,7 +78,7 @@ with sync_playwright() as pw:
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='en'
         assert page.locator('h1').inner_text().startswith('Make knowledge useful')
-        assert 'Explore a research workflow' in page.locator('.ora-start').inner_text()
+        assert 'Explore worked research cases' in page.locator('.ora-start').inner_text()
         assert 'Rights holders may request removal' in page.locator('.ora-rights-notice').inner_text()
         assert page.locator('.ora-resource-card').count()==9
         page.locator('.lang-toggle').click()
@@ -176,6 +176,39 @@ with sync_playwright() as pw:
         # Language persists between pages; explicitly switch back to Chinese for the next checks.
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='zh-CN'
+        # Worked cases: real image loads, bilingual links, responsive layout.
+        page.set_content(page_html('examples.html'),wait_until='load')
+        assert page.locator('html').get_attribute('lang')=='zh-CN'
+        assert page.locator('.ora-example').count()==3
+        assert page.locator('.ora-example-visual img').count()==3
+        assert page.locator('.ora-example-visual img').evaluate_all(
+            '(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
+        assert '教学' in page.locator('.ora-example-warning').inner_text()
+        assert 'examples/evidence-register.csv' in page.content()
+        assert 'examples/sample-project.html' in page.content()
+        assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('examples',label)
+        page.locator('.lang-toggle').click()
+        assert page.locator('html').get_attribute('lang')=='en'
+        assert 'One research question' in page.locator('.ora-example-hero h1').inner_text()
+        assert page.locator('.ora-example-visual img').first.get_attribute('src').endswith('.en.svg')
+        assert page.locator('.ora-example-visual img').evaluate_all(
+            '(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
+        page.locator('.lang-toggle').click()
+        assert page.locator('html').get_attribute('lang')=='zh-CN'
+        if label in ('desktop','mobile'):
+            page.screenshot(path=str(ROOT/'tests'/f'_local_examples_{label}.png'),full_page=True)
+        page.set_content(page_html('examples/sample-project.html'),wait_until='load')
+        assert page.locator('html').get_attribute('lang')=='zh-CN'
+        assert '结果：未采集' in page.locator('main').inner_text()
+        assert page.locator('.diagram img.zh').is_visible()
+        page.locator('#toggle').click()
+        assert page.locator('html').get_attribute('lang')=='en'
+        assert page.locator('.diagram img.en').is_visible()
+        assert 'Results: not available' in page.locator('main').inner_text()
+        assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('sample-project',label)
+        if label in ('desktop','mobile'):
+            page.screenshot(path=str(ROOT/'tests'/f'_local_sample_site_{label}.png'),full_page=True)
+
         for name in ('principles.html','contribute.html','for-agents/index.html'):
             page.set_content(page_html(name),wait_until='load')
             assert page.locator('html').get_attribute('lang')=='zh-CN'

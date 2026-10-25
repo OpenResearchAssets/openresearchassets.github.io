@@ -16,7 +16,7 @@ class Links(HTMLParser):
         for k,v in attrs:
             if k in ('href','src') and v:self.refs.append(v)
 errors=[]
-pages=['index.html','asset.html','for-agents/index.html','quality.html','principles.html','contribute.html']
+pages=['index.html','asset.html','for-agents/index.html','quality.html','principles.html','contribute.html','examples.html','examples/sample-project.html']
 for h in pages:
     p=Links();p.feed((ROOT/h).read_text(encoding='utf-8'))
     for uri in p.refs:
@@ -215,6 +215,41 @@ elif 'catalog-correction.md' not in contribute_html:
 template=(ROOT/'.github/ISSUE_TEMPLATE/asset-request.md').read_text(encoding='utf-8')
 if not all(word in template for word in ('工作流','工具','来源','授权')):
     errors.append('asset proposal template: still too narrow for research assets')
+
+# P1 worked examples use concrete editable vector assets and never pretend to report results.
+import csv
+for slug in ('method-figure','experiment-design','project-homepage'):
+    for locale in ('zh','en'):
+        svg=ROOT/'assets/examples'/f'{slug}.{locale}.svg'
+        guide=ROOT/'examples'/f'{slug}.{locale}.md'
+        if not guide.is_file():errors.append(f'missing worked example guide: {guide}')
+        elif len(guide.read_text(encoding='utf-8'))<1200:
+            errors.append(f'worked example is too thin: {guide}')
+        if not svg.is_file():
+            errors.append(f'missing worked example SVG: {svg}')
+            continue
+        try:
+            nodes=list(ET.parse(svg).iter())
+            if sum(n.tag.split('}')[-1]=='text' for n in nodes)<10:
+                errors.append(f'{svg}: labels are not independently editable')
+            if any(n.tag.split('}')[-1]=='image' for n in nodes):
+                errors.append(f'{svg}: embedded raster data is prohibited')
+        except ET.ParseError as e:errors.append(f'{svg}: invalid SVG: {e}')
+for p in ('examples/README.md','examples/research-brief.md','examples/evidence-register.csv',
+          'examples/sample-project.html','examples.html','css/examples.css'):
+    if not (ROOT/p).is_file():errors.append(f'missing worked example artifact: {p}')
+with (ROOT/'examples/evidence-register.csv').open(encoding='utf-8',newline='') as sheet:
+    rows=list(csv.DictReader(sheet))
+    if len(rows)<3:errors.append('evidence register: expected multiple falsifiable comparisons')
+    for row in rows:
+        if row.get('result_value') or row.get('uncertainty_or_ci') or row.get('raw_evidence_url'):
+            errors.append('example register: must not contain fictional measurements or URLs')
+case_page=(ROOT/'examples.html').read_text(encoding='utf-8')
+if case_page.count('class="ora-example"')!=3:errors.append('worked example landing: expected three cases')
+if 'examples/sample-project.html' not in case_page or 'examples/evidence-register.csv' not in case_page:
+    errors.append('worked example landing: missing concrete deliverables')
+if 'href="examples.html"' not in (ROOT/'index.html').read_text(encoding='utf-8'):
+    errors.append('homepage: examples not accessible from entry route')
 
 if errors:
     for e in errors:print('FAIL:',e)

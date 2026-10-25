@@ -12,6 +12,8 @@ This is an **invented teaching scenario**, not an empirical study or a deployed 
 | 02 实验设计 / Experimental design | [中文](experiment-design.zh.md) | [English](experiment-design.en.md) | [中文 SVG](../assets/examples/experiment-design.zh.svg) · [English SVG](../assets/examples/experiment-design.en.svg) · [可填写实验表](evidence-register.csv) |
 | 03 项目主页 / Project site | [中文](project-homepage.zh.md) | [English](project-homepage.en.md) | [中文 SVG](../assets/examples/project-homepage.zh.svg) · [English SVG](../assets/examples/project-homepage.en.svg) |
 
+**可运行项目主页示例：** [HTML 源文件](sample-project.html)（直接访问本项目的 GitHub Pages 即可浏览；概念情境、无真实结果）。
+
 **网站版入口：** [examples.html](../examples.html) · [线上案例页](https://openresearchassets.github.io/examples.html)
 
 ## 使用边界与复用

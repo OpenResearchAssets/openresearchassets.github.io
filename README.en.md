@@ -14,6 +14,20 @@ Research assets should be more than bookmarks. They should tell us **when to use
 
 Workflows here are guidance, not independently validated outcomes. Editable concept designs must be adapted to real scientific content.
 
+## Three connected worked examples (editable and downloadable)
+
+[**Explore the examples on the website →**](https://openresearchassets.github.io/examples.html)
+
+An **explicitly hypothetical** vision-guided robotics scenario is carried from question → method figure → controlled evaluation → project site. No unpublished material or empirical outcomes are presented.
+
+| Example | Complete walkthrough | Editable output |
+|---|---|---|
+| **01 Method figure** | [Method walkthrough](examples/method-figure.en.md) | [SVG](assets/examples/method-figure.en.svg) |
+| **02 Controlled evaluation** | [Falsifiable experiment](examples/experiment-design.en.md) | [SVG](assets/examples/experiment-design.en.svg) + [blank evidence CSV](examples/evidence-register.csv) |
+| **03 Project website** | [Responsible research release](examples/project-homepage.en.md) | [SVG](assets/examples/project-homepage.en.svg) + [runnable HTML](examples/sample-project.html) |
+
+These original, fully editable teaching artifacts are **not real robot trials, research claims or a deployed robot service**. Adapt the source and validate all evidence before use. See the [case index](examples/README.md).
+
 ## Mission and intended use
 
 **Our long-term goal is to make research experience directly usable by AI agents.** Given a task and one OpenResearchAssets URL, a web-capable agent should be able to discover relevant, trustworthy research lessons, tools, editable assets, and actionable workflows across the research lifecycle—from ideation and literature review to methods, experiments, evaluation, writing, websites, and release—without repeated manual searches or elaborate instructions. Using the assets in a real project still requires appropriate file and tool permissions.
