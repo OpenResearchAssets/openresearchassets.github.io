@@ -201,8 +201,8 @@ for page_name,html in [('index.html',home_html),('contribute.html',contribute_ht
         errors.append(f'{page_name}: expected three clearly labeled first-use paths')
     if any(text not in html for text in ('data-i18n-zh=', 'data-i18n-en=')):
         errors.append(f'{page_name}: missing bilingual first-use text')
-if 'asset.html?id=experiment-planning' not in home_html:
-    errors.append('homepage: missing directly usable workflow example')
+if 'href="examples.html"' not in home_html:
+    errors.append('homepage: missing direct route to the three worked examples')
 if 'href="for-agents/"' not in home_html or 'href="contribute.html"' not in home_html:
     errors.append('homepage: missing agent or contribution entry')
 if 'id="methods"' not in contribute_html:
