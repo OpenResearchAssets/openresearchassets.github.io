@@ -173,3 +173,13 @@
 .ora-skill-actions{display:flex;gap:12px 22px;flex-wrap:wrap;margin-top:auto;padding-top:12px;border-top:1px solid #ebf0f5;font-size:12px}
 .ora-skill-footer{margin:15px 0 0;color:#728295;font-size:12px;line-height:1.75}
 @media(max-width:720px){.ora-main-paths,.ora-skill-list{grid-template-columns:1fr}.ora-main-path{min-height:116px;padding:20px 25px}.ora-main-path strong{font-size:18px}.ora-skills{padding-top:35px}.ora-skill-group{padding-top:16px;padding-bottom:26px}.ora-skill-group-head h3{font-size:22px}.ora-skill-card{padding:17px}}
+
+
+/* Long source names and bilingual workflow descriptions must not set grid min-content width. */
+.ora-detail-main,.ora-detail-preview,.ora-detail-sidebar,.ora-lesson,.ora-cover-panel{min-width:0}
+.ora-detail-main{overflow-wrap:anywhere}
+@media(max-width:720px){
+  .ora-detail-grid{grid-template-columns:minmax(0,1fr)}
+  .ora-detail-preview .ora-preview{width:100%;max-width:100%}
+  .ora-cover-panel{max-width:100%}
+}
