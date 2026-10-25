@@ -181,8 +181,9 @@ with sync_playwright() as pw:
         assert page.locator('html').get_attribute('lang')=='zh-CN'
         assert page.locator('.ora-example').count()==3
         assert page.locator('.ora-example-visual img').count()==3
-        assert page.locator('.ora-example-visual img').evaluate_all(
-            '(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
+        for image in page.locator('.ora-example-visual img').all():
+            image.scroll_into_view_if_needed()
+            page.wait_for_function('(el)=>el.complete&&el.naturalWidth>0',arg=image.element_handle())
         assert '教学' in page.locator('.ora-example-warning').inner_text()
         assert 'examples/evidence-register.csv' in page.content()
         assert 'examples/sample-project.html' in page.content()
@@ -191,8 +192,9 @@ with sync_playwright() as pw:
         assert page.locator('html').get_attribute('lang')=='en'
         assert 'One research question' in page.locator('.ora-example-hero h1').inner_text()
         assert page.locator('.ora-example-visual img').first.get_attribute('src').endswith('.en.svg')
-        assert page.locator('.ora-example-visual img').evaluate_all(
-            '(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
+        for image in page.locator('.ora-example-visual img').all():
+            image.scroll_into_view_if_needed()
+            page.wait_for_function('(el)=>el.complete&&el.naturalWidth>0',arg=image.element_handle())
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='zh-CN'
         if label in ('desktop','mobile'):
