@@ -31,3 +31,16 @@
 /* Break headlines deliberately to avoid a trailing orphan glyph. */
 .ora-example-hero-line{display:block}
 html[lang="en"] .ora-example-hero h1{font-size:clamp(33px,4.5vw,62px)}
+
+/* Source-grounded featured paper; original Figure 1 remains rights-attributed. */
+.ora-real-feature{display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);align-items:center;gap:clamp(26px,5vw,80px);padding:40px 0 51px;margin-bottom:15px;border-block:1px solid #dce5ed;scroll-margin-top:95px}
+.ora-real-feature-img,.ora-real-feature-copy{min-width:0}
+.ora-real-feature-img img{display:block;width:100%;height:auto;max-height:340px;object-fit:contain;border-radius:14px;border:1px solid #e3e9f0;background:#f6f9fd}
+.ora-real-feature-copy h2{font-size:clamp(25px,3vw,38px);line-height:1.24;letter-spacing:-.035em;color:#172739;margin:14px 0 17px}
+.ora-real-feature-copy>p:not(.ora-example-n){color:#597085;font-size:14px;line-height:1.85}
+.ora-real-feature-metrics{display:flex;gap:23px;flex-wrap:wrap;margin:20px 0 22px}
+.ora-real-feature-metrics span{display:flex;align-items:baseline;gap:6px}
+.ora-real-feature-metrics strong{color:#243e58;font-size:24px}
+.ora-real-feature-metrics small{color:#667c90;font-size:11px}
+.ora-real-feature-disclosure{font-size:11px!important;color:#758599!important;margin-top:15px}
+@media(max-width:850px){.ora-real-feature{grid-template-columns:1fr}.ora-real-feature-img img{max-height:none}.ora-real-feature-copy h2{font-size:27px}}

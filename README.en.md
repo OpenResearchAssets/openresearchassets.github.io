@@ -14,6 +14,12 @@ Research assets should be more than bookmarks. They should tell us **when to use
 
 Workflows here are guidance, not independently validated outcomes. Editable concept designs must be adapted to real scientific content.
 
+## Source-traceable real-paper case
+
+**[RoboRender: method, evidence and research communication](https://openresearchassets.github.io/examples/roborender.html)** · [Source audit](examples/roborender-provenance.md) · [Per-task CSV](examples/roborender-results.csv)
+
+The authors' [public results](https://robo-render.github.io/) report mean real-robot success of **Simulation 10%, Sim+DR 20%, RoboRender 71%** over eight tasks (10 rollouts per task per method). Two **original editable SVG** analyses distinguish mechanism from evidence. These are **author-reported outcomes, not our reproduction**. The paper's Figure 1 retains separate authorship and rights.
+
 ## Three connected worked examples (editable and downloadable)
 
 [**Explore the examples on the website →**](https://openresearchassets.github.io/examples.html)

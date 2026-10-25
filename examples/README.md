@@ -4,6 +4,16 @@
 
 This is an **invented teaching scenario**, not an empirical study or a deployed robot system. It illustrates the transformation of a falsifiable question into an editable method figure, a controlled evaluation protocol and a responsible project-site storyboard. **No quantitative outcomes are claimed.**
 
+## 真实公开研究案例（作者结果可追溯）
+
+**[RoboRender：方法 → 8 项真机实验 → 主页叙事](roborender.html)**
+
+以作者 [官方论文与项目主页](https://robo-render.github.io/) 为主要来源，提供 [报告结果 CSV](roborender-results.csv)、[来源审计](roborender-provenance.md)、[原创可编辑方法 SVG](../assets/examples/roborender-method.svg) 与 [原创证据 SVG](../assets/examples/roborender-evidence.svg)。原论文 Figure 1 的评论缩略图保留其作者版权。作者报告均值 Sim 10%、Sim+DR 20%、RoboRender 71%；**我们未独立复现**。
+
+**English:** [Source-grounded real-paper case](roborender.html) with author-reported outcomes, editable editorial SVGs, a transcribed CSV and explicit limits. This is separate from the hypothetical teaching scenarios below.
+
+## 原创贯通式教学练习（虚构情境）
+
 ## 三条完整路径
 
 | 案例 | 中文步骤 | Full English guide | 真正可编辑交付 |

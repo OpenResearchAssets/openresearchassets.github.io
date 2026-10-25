@@ -17,6 +17,12 @@ OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉�
 
 目前的工作流是指导性材料，不代表已通过独立效果验证；SVG 模板的示意内容也需替换成真实研究信息。
 
+## 已核对公开来源的真实论文案例
+
+**[RoboRender：从方法到 8 项真机实验再到项目主页的案例](https://openresearchassets.github.io/examples/roborender.html)** · [来源核验](examples/roborender-provenance.md) · [逐任务结果 CSV](examples/roborender-results.csv)
+
+采用作者 [官网](https://robo-render.github.io/) 公开的结果：8 项真机任务、每种方法每任务 10 次 rollout；报告的平均成功率分别为 **Simulation 10%、Sim+DR 20%、RoboRender 71%**。提供两张**原创可编辑分析 SVG**，将方法机制与证据分开。**这不是本站独立复现**；原论文 Figure 1 缩略图保留原作者权利与明确归属。
+
 ## 三个贯通式科研案例（可编辑、可下载）
 
 [**打开网站案例页 →**](https://openresearchassets.github.io/examples.html)
