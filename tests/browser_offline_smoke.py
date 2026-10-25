@@ -180,6 +180,17 @@ with sync_playwright() as pw:
             page.set_content(page_html(name),wait_until='load')
             assert page.locator('html').get_attribute('lang')=='zh-CN'
             assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),name
+            if name=='contribute.html':
+                assert page.locator('.ora-start-path').count()==3
+                assert 'catalog-correction.md' in page.locator('.ora-start-path').nth(1).get_attribute('href')
+                assert page.locator('#methods').count()==1
+                assert '分享科研方法' in page.locator('#methods h2').inner_text()
+                page.locator('.lang-toggle').click()
+                assert page.locator('html').get_attribute('lang')=='en'
+                assert 'Share a method' in page.locator('#methods h2').inner_text()
+                assert 'Suggest an asset' in page.locator('.ora-start').inner_text()
+                page.locator('.lang-toggle').click()
+                assert page.locator('html').get_attribute('lang')=='zh-CN'
         assert not errors,(label,errors)
         print('PASS',label,'22 detail pages, 6 curated case studies, 4 asset kinds, bilingual and responsive UI')
         page.close()
