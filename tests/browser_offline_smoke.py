@@ -117,8 +117,15 @@ with sync_playwright() as pw:
             assert page.locator('.ora-detail-sidebar').is_visible()
             assert page.locator('.ora-detail-rights').count()==1
             assert 'asset-removal.yml' in page.locator('.ora-detail-rights a').get_attribute('href')
-            assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),(
-                label,asset_id,'horizontal page overflow')
+            overflow=page.evaluate('''() => ({
+                width: innerWidth, actual: document.documentElement.scrollWidth,
+                offenders:[...document.querySelectorAll('body *')].map(el=>({
+                  tag:el.tagName,cls:el.className,txt:(el.textContent||'').trim().slice(0,60),
+                  right:Math.round(el.getBoundingClientRect().right),
+                  width:Math.round(el.getBoundingClientRect().width)
+                })).filter(e=>e.right>innerWidth+2).slice(0,12)
+            })''')
+            assert overflow['actual']<=w+2, (label,asset_id,'horizontal page overflow',overflow)
             assert page.locator('.ora-lesson').count()==(1 if asset_id in cases else 3),(
                 label,asset_id,'repeated generic lessons')
             if asset_id in cases:
