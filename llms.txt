@@ -6,6 +6,16 @@
 
 OpenResearchAssets curates reusable research references, editable diagrams, workflows and research-quality guidance. It is Chinese-first with supporting English descriptions. Never assume a third-party figure or webpage screenshot is licensed for redistribution.
 
+## Real-paper case with source-grounded evidence
+- [RoboRender editorial study, bilingual](https://openresearchassets.github.io/examples/roborender.html)
+- [Original paper project](https://robo-render.github.io/)
+- [Author-reported per-task CSV](https://openresearchassets.github.io/examples/roborender-results.csv)
+- [Source audit and limitations](https://openresearchassets.github.io/examples/roborender-provenance.md)
+- [Editable method analysis SVG](https://openresearchassets.github.io/assets/examples/roborender-method.svg)
+- [Editable evidence analysis SVG](https://openresearchassets.github.io/assets/examples/roborender-evidence.svg)
+
+Author-reported, NOT independently replicated. Video renderer learned from real robot videos; zero-shot deployment describes the downstream policy. Case content is editorial analysis, not a second catalog source-of-truth.
+
 ## Complete worked examples (teaching scenarios, not empirical results)
 - [Three connected worked examples](https://openresearchassets.github.io/examples.html)
 - [Method figure guide / 中文](https://openresearchassets.github.io/examples/method-figure.zh.md)

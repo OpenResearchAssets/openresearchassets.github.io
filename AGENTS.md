@@ -12,6 +12,8 @@ OpenResearchAssets 是**面向人类与 AI 的科研全过程可复用资产库*
 
 组织与仓库归属 OpenResearchAssets，项目发展以**独立项目价值和开放社区生态**为先，不把项目描述为个人作品集。唯一公开主仓库为 `OpenResearchAssets/openresearchassets.github.io`，当前不拆双仓库。三阶段愿景（有价值的项目 → 活跃社区 → 开放科研基础设施）详见 [产品与社区方向](docs/PRODUCT_STRATEGY.md) 和原生可编辑 [SVG](assets/diagrams/community-trajectory.svg)。这些是未来目标而非已上线功能。维护贡献入口、透明审核和长期可追溯性，不以 Star 代替真实复用。修改官方链接使用组织域名，禁止重新引入旧个人站点路径。
 
+**真实论文案例维护原则**：examples/roborender.html 是基于作者公开论文与官网逐项核对的**原创编辑解读**，非本站实证研究或独立复现。每项任务每方法 10 rollouts、8 项任务；报告均值为 Sim 10%、Sim+DR 20%、RoboRender 71%（逐任务平均 71.25%）。基准数字见 examples/roborender-results.csv，方法与版权说明见 examples/roborender-provenance.md。视频生成器使用真实 DROID/AgiBot 数据训练，不能将下游策略零样本部署误说成系统未使用任何真实机器人数据。任何更改须逐项核对一手来源、保留第三方图像权利、审阅可编辑 SVG 和真实渲染效果。未运行实验绝不称为“复现”。
+
 ## 贯通示例维护规范
 
 [`examples/`](examples/README.md) 和 `assets/examples/` 是三个**虚构科研问题驱动的教学案例**，不是新资产索引或实证研究。更新案例必须同时维护中文与英文的完整步骤、双语 SVG、所展示的真实输入/输出边界和可复用检查标准。若加入结果，必须从实际可追溯实验获得，**不能用合成数值模拟真实科研效果**；`examples/evidence-register.csv` 的结果字段默认空白。案例页与 HTML 示例属于已实现的公开静态内容，必须加入中英、手机端和链接测试。仍以 `catalog/index.json` 为唯一结构化科研资产目录，不再建第二份目录。

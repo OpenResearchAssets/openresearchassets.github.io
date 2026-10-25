@@ -17,6 +17,12 @@
 
 本目录是人工精选的科研辅助资源，不是一个能自行运行实验或修改本地文件的远程执行服务。AI 必须有相应文件、浏览器或代码执行权限才能执行任务。当前收录只代表经过来源整理与描述，不代表所有工具都经过实测。
 
+## 已公开的真实论文证据链
+
+[RoboRender 方法—证据—主页完整解读](../examples/roborender.html) 以作者公开论文和项目网站为来源，提供 [报告数据 CSV](../examples/roborender-results.csv)、原创 SVG 和 [来源审计](../examples/roborender-provenance.md)。AI 复用时必须明确：作者报告平均成功率 71%，涉及 8 项任务、每任务 10 次运行；**OpenResearchAssets 没有独立复现**。不得将策略零样本真机部署误写为视频生成器训练不使用真实世界数据。
+
+**English:** [Real-paper editorial case](../examples/roborender.html) with transcribed author-reported outcomes, source audit and editable SVGs. Not an independent reproduction.
+
 ## 三个可复用的贯通教学案例（不是实证研究）
 
 如果任务需要**学习如何把一个研究问题转为完整产物**，可以按顺序读取 [案例总索引](../examples/README.md)、[Method Figure 中文教程](../examples/method-figure.zh.md)、[对照实验设计](../examples/experiment-design.zh.md) 和 [项目主页教程](../examples/project-homepage.zh.md)，分别获取原生可编辑 SVG、尚未填写数据的实验 CSV，以及可直接打开的静态 HTML。每个案例都有完整英文版本，直接从索引访问。
