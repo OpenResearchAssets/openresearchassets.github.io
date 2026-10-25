@@ -207,6 +207,11 @@ if 'href="for-agents/"' not in home_html or 'href="contribute.html"' not in home
     errors.append('homepage: missing agent or contribution entry')
 if 'id="methods"' not in contribute_html:
     errors.append('contribution page: missing methods and workflows')
+correction = ROOT/'.github/ISSUE_TEMPLATE/catalog-correction.md'
+if not correction.is_file():
+    errors.append('missing general asset correction issue template')
+elif 'catalog-correction.md' not in contribute_html:
+    errors.append('contribution page: no direct correction entry')
 template=(ROOT/'.github/ISSUE_TEMPLATE/asset-request.md').read_text(encoding='utf-8')
 if not all(word in template for word in ('工作流','工具','来源','授权')):
     errors.append('asset proposal template: still too narrow for research assets')
