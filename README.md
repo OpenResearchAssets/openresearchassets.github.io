@@ -7,6 +7,16 @@
 
 OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉案例、优秀项目主页、可编辑原创素材、研究工具与可用的工作流。**中文为主、英文为辅**；允许人类按任务搜索，也提供无需付费 API 的结构化 AI 读取入口。
 
+## 从这里开始（3 条路径）
+
+| 你的目标 | 第一步 | 下一步 |
+|---|---|---|
+| **自己找资源** | [浏览科研资产](https://openresearchassets.github.io/#references) | 例如打开[实验规划工作流](https://openresearchassets.github.io/asset.html?id=experiment-planning)，先看适用场景、具体步骤与限制，再用于自己的研究 |
+| **让 Agent 使用** | [阅读 AI 使用入口](https://openresearchassets.github.io/for-agents/) | 先加载 [轻量索引](catalog/manifest.json)，只读取相关资产；真正操作仍需要 Agent 的文件与工具权限 |
+| **参与社区** | [推荐一项科研资产](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=asset-request.md) | 也可以从[贡献指南](CONTRIBUTING.md)开始，修正来源、改进已有工作流或提交 PR |
+
+目前的工作流是指导性材料，不代表已通过独立效果验证；SVG 模板的示意内容也需替换成真实研究信息。
+
 ## 项目目标与用途
 
 **长期目标：让科研经验真正成为 AI 可使用的生产力。** 我们希望未来的研究者在选题、调研、方法设计、实验、评估、写作、投稿、项目主页和成果传播等任务中，只需给有网页读取能力的 AI **一个 OpenResearchAssets 网址**，AI 就能根据当前任务主动检索并理解相关资产，选择可复用的方法、实践经验、工具、Skill、可编辑素材及工作流程，在获得必要项目文件和工具权限后将其应用于实际工作，而不必反复让人类编写详细提示词或从零检索同类资料。

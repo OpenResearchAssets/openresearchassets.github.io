@@ -51,6 +51,11 @@ with sync_playwright() as pw:
         page.locator('.ora-resource-card').first.wait_for()
         assert page.locator('html').get_attribute('lang')=='zh-CN'
         assert page.locator('h1').inner_text().startswith('让已有的经验')
+        assert page.locator('.ora-start-path').count()==3, (label, 'missing first-use paths')
+        assert page.locator('.ora-start-path').nth(0).get_attribute('href')=='asset.html?id=experiment-planning'
+        assert page.locator('.ora-start-path').nth(1).get_attribute('href')=='for-agents/'
+        assert page.locator('.ora-start-path').nth(2).get_attribute('href')=='contribute.html'
+        assert '用一份科研工作流' in page.locator('.ora-start').inner_text()
         assert page.locator('.ora-rights-notice').count()==1
         assert '异议' in page.locator('.ora-rights-notice').inner_text()
         assert 'asset-removal.yml' in page.locator('.ora-rights-notice a').get_attribute('href')
@@ -73,6 +78,7 @@ with sync_playwright() as pw:
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='en'
         assert page.locator('h1').inner_text().startswith('Make knowledge useful')
+        assert 'Explore a research workflow' in page.locator('.ora-start').inner_text()
         assert 'Rights holders may request removal' in page.locator('.ora-rights-notice').inner_text()
         assert page.locator('.ora-resource-card').count()==9
         page.locator('.lang-toggle').click()

@@ -193,6 +193,24 @@ for vision in (ROOT/'assets/diagrams/community-trajectory.svg',
     except ET.ParseError as err:
         errors.append(f'{vision.name}: SVG parse error: {err}')
 
+# P0: first-visit entry points and general research-asset contribution must be accessible.
+home_html=(ROOT/'index.html').read_text(encoding='utf-8')
+contribute_html=(ROOT/'contribute.html').read_text(encoding='utf-8')
+for page_name,html in [('index.html',home_html),('contribute.html',contribute_html)]:
+    if html.count('class="ora-start-path"') != 3:
+        errors.append(f'{page_name}: expected three clearly labeled first-use paths')
+    if any(text not in html for text in ('data-i18n-zh=', 'data-i18n-en=')):
+        errors.append(f'{page_name}: missing bilingual first-use text')
+if 'asset.html?id=experiment-planning' not in home_html:
+    errors.append('homepage: missing directly usable workflow example')
+if 'href="for-agents/"' not in home_html or 'href="contribute.html"' not in home_html:
+    errors.append('homepage: missing agent or contribution entry')
+if 'id="methods"' not in contribute_html:
+    errors.append('contribution page: missing methods and workflows')
+template=(ROOT/'.github/ISSUE_TEMPLATE/asset-request.md').read_text(encoding='utf-8')
+if not all(word in template for word in ('工作流','工具','来源','授权')):
+    errors.append('asset proposal template: still too narrow for research assets')
+
 if errors:
     for e in errors:print('FAIL:',e)
     raise SystemExit(1)

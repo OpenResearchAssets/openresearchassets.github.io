@@ -14,7 +14,9 @@ OpenResearchAssets 收录的不只是论文视觉素材，还包括科研流程�
 
 ## 第一次参与 / First contribution
 
-欢迎从简单的、可核实的改进开始：通过 [Asset request](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=asset-request.md) 推荐有明确来源与用途的研究资产；报告失效链接、事实错误和说明不清；或提交一个范围清楚的 PR。较大改动建议先通过 Issue 讨论，无须一开始就提交完整素材。
+目前接受五类贡献：论文视觉参考、项目主页案例、原创可编辑文件、科研方法与工作流、科研工具与 Skill。**首次贡献只需提交可信来源与具体使用场景，不必提前制作完整素材。** 欢迎从简单的、可核实的改进开始：通过 [Asset request](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=asset-request.md) 推荐有明确来源与用途的研究资产；报告失效链接、事实错误和说明不清；或提交一个范围清楚的 PR。较大改动建议先通过 Issue 讨论，无须一开始就提交完整素材。
+
+建议 Issue 至少说明：解决哪个具体研究任务、源头在哪里、何时使用、能复用什么、有哪些已知限制。不是所有资产都必须以 SVG/PPTX 形式交付；方法和工作流更重视可操作步骤及验证依据。较大的 schema 改动先讨论，不直接新增平行目录。
 
 所有社区贡献遵循相同的公开质量与授权标准。随着稳定贡献者增多，项目会按实际需要完善 Maintainer 权限与审核机制，不提前承诺自动接纳投稿。
 

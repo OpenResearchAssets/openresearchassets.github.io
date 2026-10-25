@@ -4,6 +4,16 @@
 
 Research assets should be more than bookmarks. They should tell us **when to use them, what transfers, what to avoid, and where they came from**.
 
+## Start here
+
+| Goal | First step | Then |
+|---|---|---|
+| **Explore yourself** | [Browse the asset catalog](https://openresearchassets.github.io/#references) | Try the [experiment-planning workflow](https://openresearchassets.github.io/asset.html?id=experiment-planning). Check applicability, steps and limitations before use |
+| **Use with an agent** | [Read the agent guide](https://openresearchassets.github.io/for-agents/) | Start from the [compact manifest](catalog/manifest.json), fetch only matching entries; actual execution requires the agent's file/tool permissions |
+| **Contribute** | [Suggest a sourced asset](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=asset-request.md) | Or [read the contribution guide](CONTRIBUTING.md), correct a source, improve a workflow, or submit a PR |
+
+Workflows here are guidance, not independently validated outcomes. Editable concept designs must be adapted to real scientific content.
+
 ## Mission and intended use
 
 **Our long-term goal is to make research experience directly usable by AI agents.** Given a task and one OpenResearchAssets URL, a web-capable agent should be able to discover relevant, trustworthy research lessons, tools, editable assets, and actionable workflows across the research lifecycle—from ideation and literature review to methods, experiments, evaluation, writing, websites, and release—without repeated manual searches or elaborate instructions. Using the assets in a real project still requires appropriate file and tool permissions.

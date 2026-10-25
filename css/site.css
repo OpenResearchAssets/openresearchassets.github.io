@@ -40,3 +40,21 @@
   .nav-links .mobile-only{display:block;border-bottom:0;font-weight:700;color:var(--ink)}
 }
 @media(prefers-reduced-motion:reduce){.menu-icon span{transition:none}}
+
+
+/* A compact, task-oriented first-use route — no secondary hero or decorative cards. */
+.ora-start{margin:18px auto 40px;border-top:1px solid #dfe5ed;border-bottom:1px solid #dfe5ed;padding-top:19px;padding-bottom:24px}
+.ora-start-heading{display:flex;align-items:baseline;gap:22px;margin-bottom:17px}
+.ora-start-heading .section-index{margin:0;font-size:11px;letter-spacing:.12em;white-space:nowrap;color:#687483}
+.ora-start-heading h2{margin:0;font-size:18px;line-height:1.5;font-weight:650;letter-spacing:-.02em;color:#17212b}
+.ora-start-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.ora-start-path{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0;padding:9px 22px 6px;color:#17212b;text-decoration:none;border-left:1px solid #dfe5ed;transition:background-color .2s ease}
+.ora-start-path:first-child{padding-left:0;border-left:0}
+.ora-start-path:hover,.ora-start-path:focus-visible{background:#f6f8fb}
+.ora-start-number{font-size:12px;font-variant-numeric:tabular-nums;letter-spacing:.06em;color:#738194}
+.ora-start-path strong{font-size:16px;line-height:1.45;font-weight:650}
+.ora-start-desc{font-size:13px;line-height:1.75;color:#586273}
+.ora-start-link{margin-top:auto;padding-top:3px;font-size:13px;font-weight:600;color:#2c5db2}
+.ora-start-path:focus-visible{outline:2px solid #2c5db2;outline-offset:3px;border-radius:5px}
+.ora-start--contribute{margin-top:3px;margin-bottom:38px}
+@media(max-width:700px){.ora-start{padding-top:17px;padding-bottom:14px;margin-bottom:27px}.ora-start-heading{display:block;margin-bottom:12px}.ora-start-heading h2{margin-top:5px;font-size:17px}.ora-start-grid{grid-template-columns:1fr}.ora-start-path,.ora-start-path:first-child{padding:12px 2px 14px;border-left:0;border-top:1px solid #e5e9f0;gap:5px}.ora-start-desc{font-size:13px}.ora-start-link{margin-top:0}}
