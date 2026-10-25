@@ -78,7 +78,7 @@
     if (!node) return;
     const original=node.value || params.get(selectId.replace('facet-','')) || '';
     node.innerHTML='<option value="">'+safe(tr(group==='stages'?'全部阶段':group==='kinds'?'全部类型':'全部领域',group==='stages'?'All stages':group==='kinds'?'All types':'All domains'))+'</option>'+
-      Object.entries(facets()[group] || {}).map(([key,v])=>'<option value="'+safe(key)+'">'+safe(local(v))+'</option>').join('');
+      Object.entries(facets()[group] || {}).filter(([key])=>group!=='kinds'||key!=='workflow').map(([key,v])=>'<option value="'+safe(key)+'">'+safe(local(v))+'</option>').join('');
     node.value=original;
   }
   function prepareFilters() {
@@ -108,6 +108,58 @@
       ...(entry.caseStudy?.composition?.zh || []),...(entry.caseStudy?.composition?.en || []),
       ...(entry.caseStudy?.reuseSteps?.zh || []),...(entry.caseStudy?.reuseSteps?.en || [])].filter(Boolean).join(' ').toLowerCase();
   }
+
+  const isGallery=e=>e.kind==='visual-reference'||e.kind==='website-reference'||
+    e.kind==='editable-template'||(e.kind==='resource-index'&&e.id!=='research-skills-directory');
+  const galleryList=()=>catalog.entries.filter(isGallery);
+  const starCounts=new Map();
+  let refreshingStars=false;
+  const starText=n=>Number(n).toLocaleString('en-US');
+  function renderSkills() {
+    if (!catalog) return;
+    const popular=document.getElementById('popular-skills');
+    const practice=document.getElementById('practice-skills');
+    if (!popular && !practice) return;
+    const card=e=>{
+      const c=e.curation||{};
+      const repo=c.github_repo||'';
+      const star=Number.isInteger(c.stars_snapshot)
+        ? '<span class="ora-skill-stars" data-star-repo="'+safe(repo)+'" aria-label="GitHub Stars">★ '+safe(starText(starCounts.get(repo)??c.stars_snapshot))+' '+safe(starCounts.has(repo)?tr('Stars · 实时','Stars · live'):tr('Stars · 快照 '+c.stars_checked_on,'Stars · snapshot '+c.stars_checked_on))+'</span>'
+        : '';
+      const proof=c.track==='practice' ? '<div class="ora-skill-evidence"><span>'+safe(tr('公开实践证据','Public usage evidence'))+'</span>'+
+        (c.evidence||[]).slice(0,2).map(p=>'<a href="'+safe(p)+'" target="_blank" rel="noopener noreferrer">'+safe(p.split('/').pop())+' ↗</a>').join('')+'</div>' : '';
+      const state=c.track==='popular'?tr('外部高热度 · 未经本站亲测','Popular external · not tested here'):tr('已有公开项目产物 · 未做独立效益评测','Public project artifacts · no independent evaluation');
+      return '<article class="ora-skill-card"><div class="ora-skill-meta"><span>'+safe(c.type||'workflow')+'</span>'+star+'</div>'+
+       '<h4><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(e.title)+'</a></h4>'+
+       '<p>'+safe(local(e.description))+'</p><p class="ora-skill-status">'+safe(state)+'</p>'+proof+
+       '<div class="ora-skill-actions"><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(tr('用途与边界','Use & limits'))+' ↗</a>'+
+       link(e.links?.source,tr('查看源项目','Source'))+'</div></article>';
+    };
+    if(popular)popular.innerHTML=catalog.entries.filter(e=>e.curation?.track==='popular')
+      .sort((a,b)=>b.curation.stars_snapshot-a.curation.stars_snapshot)
+      .map(card).join('')||'<p>'+safe(empty())+'</p>';
+    if(practice)practice.innerHTML=catalog.entries.filter(e=>e.curation?.track==='practice')
+      .map(card).join('')||'<p>'+safe(empty())+'</p>';
+    if(!popular||refreshingStars||location.protocol==='file:')return;
+    const repos=[...new Set(catalog.entries.filter(e=>e.curation?.track==='popular')
+      .map(e=>e.curation.github_repo).filter(x=>typeof x==='string'&&x.includes('/')))];
+    if(repos.every(x=>starCounts.has(x)))return;
+    refreshingStars=true;
+    Promise.all(repos.filter(x=>!starCounts.has(x)).map(async repo=>{
+      try{
+        const response=await fetch('https://api.github.com/repos/'+repo,{headers:{Accept:'application/vnd.github+json'}});
+        if(!response.ok)return;
+        const data=await response.json();
+        if(Number.isInteger(data.stargazers_count)&&data.stargazers_count>=0)starCounts.set(repo,data.stargazers_count);
+      }catch(_){}
+    })).finally(()=>{
+      refreshingStars=false;
+      popular.querySelectorAll('[data-star-repo]').forEach(node=>{
+        const repo=node.dataset.starRepo;
+        if(starCounts.has(repo))node.textContent='★ '+starText(starCounts.get(repo))+' '+tr('Stars · 实时','Stars · live');
+      });
+    });
+  }
   function renderGrid() {
     if (!grid || !catalog) return;
     const q=document.getElementById('reference-search')?.value.trim().toLowerCase() || '';
@@ -115,7 +167,8 @@
     const kindSelect=document.getElementById('facet-kind')?.value || '';
     const domain=document.getElementById('facet-domain')?.value || '';
     const words=q.split(/\s+/).filter(Boolean);
-    const items=catalog.entries.filter(e=>(!stage || e.stages.includes(stage)) &&
+    const weight={ 'visual-reference':0,'website-reference':0,'editable-template':1,'resource-index':2 };
+    const items=galleryList().sort((a,b)=>weight[a.kind]-weight[b.kind]).filter(e=>(!stage || e.stages.includes(stage)) &&
       (!kindSelect || e.kind===kindSelect) && (!domain || e.domains.includes(domain)) &&
       words.every(w=>allSearch(e).includes(w)));
     const shown = (!q && !stage && !kindSelect && !domain && !showAll) ? items.slice(0,9) : items;
@@ -130,12 +183,12 @@
       link(e.links?.source,tr('原始来源','Original source'))+'</div></div></article>').join('') :
       '<p class="empty-state">'+safe(empty())+'</p>';
     const status=document.getElementById('reference-status');
-    if(status)status.textContent=tr('已显示 ','Showing ')+shown.length+' / '+catalog.entries.length+
+    if(status)status.textContent=tr('已显示 ','Showing ')+shown.length+' / '+galleryList().length+
       tr(' 项 · ',' entries · ')+catalog.entries.filter(e=>['licensed-source-image','external-reference-image','verified-paper-figure','verified-site-screenshot'].includes(e.visual?.kind)).length+tr(' 项真实来源视觉参考；外部媒体版权仍属原权利人。',' authentic source-media previews; linked media rights remain with original owners.');
     const more=document.getElementById('catalog-more');
     if(more) more.hidden = (shown.length === items.length);
     const count=document.getElementById('catalog-count');
-    if(count) count.textContent=String(catalog.entries.length);
+    if(count) count.textContent=String(galleryList().length);
     const u=new URL(location.href); q?u.searchParams.set('q',q):u.searchParams.delete('q');
     for(const [key,value] of [['stage',stage],['kind',kindSelect],['domain',domain]]) {
       value?u.searchParams.set(key,value):u.searchParams.delete(key);
@@ -210,7 +263,7 @@
       catch(_) {button.textContent=tr('复制失败，请打开 AI 目录获取文本','Copy blocked: use AI catalog');}
     });
   }
-  function render() {if(!catalog)return;prepareFilters();renderGrid();renderDetail();}
+  function render() {if(!catalog)return;prepareFilters();renderGrid();renderSkills();renderDetail();}
   const inline=document.getElementById('ora-catalog-data');
   const load=inline ? Promise.resolve(JSON.parse(inline.textContent)) :
     fetch('catalog/index.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json();});
