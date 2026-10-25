@@ -169,7 +169,7 @@
     };
     const name=e.curation?.visual_category;
     const label=labels[name];
-    return label ? (lang()==='zh' ? label[0]:label[1]) : '';
+    return label ? tr(label[0],label[1]) : '';
   };
   function renderGrid() {
     if (!grid || !catalog) return;
