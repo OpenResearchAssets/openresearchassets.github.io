@@ -215,6 +215,34 @@ with sync_playwright() as pw:
         if label in ('desktop','mobile'):
             page.screenshot(path=str(ROOT/'tests'/f'_local_sample_site_{label}.png'),full_page=True)
 
+        # Real-paper editorial case: original cited figure, native editable diagrams,
+        # transcribed author results, bilingual disclosure, and responsive layout.
+        page.set_content(page_html('examples/roborender.html'),wait_until='load')
+        assert page.locator('html').get_attribute('lang')=='zh-CN'
+        assert page.locator('.rc-table tbody tr').count()==8
+        assert page.locator('.rc-table tfoot').inner_text().strip().endswith('71%')
+        assert '非我们的独立复现' in page.locator('.rc-disclaimer').inner_text()
+        assert page.locator('.rc-source-figure img').count()==1
+        assert page.locator('.rc-figure img').count()==2
+        for paper_image in page.locator('.rc-source-figure img, .rc-figure img').all():
+            paper_image.scroll_into_view_if_needed()
+            page.wait_for_function('(el)=>el.complete&&el.naturalWidth>0',arg=paper_image.element_handle())
+        assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('real-paper',label)
+        if label in ('desktop','mobile'):
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=str(ROOT/'tests'/f'_local_real_case_zh_{label}.png'),full_page=True)
+        page.locator('.lang-toggle').click()
+        assert page.locator('html').get_attribute('lang')=='en'
+        assert 'from published research' in page.locator('.rc-hero h1').inner_text()
+        assert 'have not been independently reproduced' in page.locator('.rc-disclaimer').inner_text()
+        assert page.locator('.rc-table tbody tr').count()==8
+        assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('real-paper-en',label)
+        if label in ('desktop','mobile'):
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=str(ROOT/'tests'/f'_local_real_case_{label}.png'),full_page=True)
+        page.locator('.lang-toggle').click()
+        assert page.locator('html').get_attribute('lang')=='zh-CN'
+
         for name in ('principles.html','contribute.html','for-agents/index.html'):
             page.set_content(page_html(name),wait_until='load')
             assert page.locator('html').get_attribute('lang')=='zh-CN'

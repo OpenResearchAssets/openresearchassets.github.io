@@ -16,7 +16,7 @@ class Links(HTMLParser):
         for k,v in attrs:
             if k in ('href','src') and v:self.refs.append(v)
 errors=[]
-pages=['index.html','asset.html','for-agents/index.html','quality.html','principles.html','contribute.html','examples.html','examples/sample-project.html']
+pages=['index.html','asset.html','for-agents/index.html','quality.html','principles.html','contribute.html','examples.html','examples/sample-project.html','examples/roborender.html']
 for h in pages:
     p=Links();p.feed((ROOT/h).read_text(encoding='utf-8'))
     for uri in p.refs:
@@ -250,6 +250,51 @@ if 'examples/sample-project.html' not in case_page or 'examples/evidence-registe
     errors.append('worked example landing: missing concrete deliverables')
 if 'href="examples.html"' not in (ROOT/'index.html').read_text(encoding='utf-8'):
     errors.append('homepage: examples not accessible from entry route')
+
+# P1 real-paper integrity: values must match the authors' table and remain author-reported.
+paper_dir=ROOT/'examples'
+paper_svg=[ROOT/'assets/examples/roborender-method.svg', ROOT/'assets/examples/roborender-evidence.svg']
+for svg in paper_svg:
+    if not svg.exists():
+        errors.append(f'missing real-paper analysis SVG: {svg}')
+        continue
+    try:
+        nodes=list(ET.parse(svg).iter())
+        if sum(x.tag.split('}')[-1]=='text' for x in nodes)<20:
+            errors.append(f'poorly editable real-case diagram: {svg.name}')
+        if any(x.tag.split('}')[-1]=='image' for x in nodes):
+            errors.append(f'real-case diagram contains embedded raster: {svg.name}')
+    except ET.ParseError as exc:errors.append(f'{svg.name}: {exc}')
+expected_rows=[
+    ('mug',40,60,80),('bowl',30,20,80),('apple',10,20,60),('egg',0,30,50),
+    ('open_fridge',0,0,70),('open_drawer',0,0,90),('pick_radio',0,30,70),
+    ('place_marker',0,0,70)]
+with (paper_dir/'roborender-results.csv').open(encoding='utf-8',newline='') as handle:
+    observed=list(csv.DictReader(handle))
+if len(observed)!=8:
+    errors.append('real-paper result CSV: expected exactly 8 author-reported tasks')
+else:
+    for obs,expected in zip(observed,expected_rows):
+        try:
+            actual=(obs['task_id'],int(obs['simulation_success_pct']),int(obs['simulation_dr_success_pct']),int(obs['roborender_success_pct']))
+        except (KeyError,ValueError) as exc:
+            errors.append(f'real-paper CSV schema or values: {exc}')
+            continue
+        if actual!=expected:errors.append(f'real-paper CSV deviates from official table: {actual} vs {expected}')
+        if obs.get('provenance')!='author-reported' or obs.get('independent_replication')!='no':
+            errors.append('real-paper data must be explicitly labelled author-reported, not independently replicated')
+    if sum(int(x['roborender_success_pct']) for x in observed)!=570:
+        errors.append('real-paper: reported average must be 71.25%, rounded to 71%')
+for name in ('examples/roborender.html','examples/roborender-provenance.md','css/real-case.css'):
+    if not (ROOT/name).is_file():errors.append(f'missing source-traceable case file: {name}')
+real_page=(ROOT/'examples/roborender.html').read_text(encoding='utf-8')
+if real_page.count('<tr>')<9:errors.append('real-paper website: per-task data table incomplete')
+if any(path not in real_page for path in ('roborender-provenance.md','roborender-results.csv','roborender-method.svg','roborender-evidence.svg')):
+    errors.append('real-paper page: missing provenance or editables')
+if 'independently reproduced' not in real_page or '非我们的独立复现' not in real_page:
+    errors.append('real-paper page: missing clear bilingual reproduction boundary')
+if 'examples/roborender.html' not in case_page:
+    errors.append('real-paper case not linked from examples index')
 
 if errors:
     for e in errors:print('FAIL:',e)
