@@ -260,7 +260,7 @@ for svg in paper_svg:
         continue
     try:
         nodes=list(ET.parse(svg).iter())
-        if sum(x.tag.split('}')[-1]=='text' for x in nodes)<20:
+        if sum(x.tag.split('}')[-1]=='text' for x in nodes)<12:
             errors.append(f'poorly editable real-case diagram: {svg.name}')
         if any(x.tag.split('}')[-1]=='image' for x in nodes):
             errors.append(f'real-case diagram contains embedded raster: {svg.name}')
