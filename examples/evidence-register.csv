@@ -1,0 +1,6 @@
+claim_id,comparison,task_split,model_and_policy_version,seed,observation_budget,latency_budget_ms,metric,measurement_unit,n_trials,result_value,uncertainty_or_ci,raw_evidence_url,status,notes
+C1,A_single_view_vs_C_conditional,,,,,,task_success,rate,,,,,planned,Matched resources and pre-registered failure criteria required
+C1,B_fixed_two_views_vs_C_conditional,,,,,,task_success,rate,,,,,planned,Separate quality from additional observation cost
+C2,A_single_view_vs_C_conditional,,,,,,elapsed_latency,ms,,,,,planned,Track total end-to-end time including observation
+C2,B_fixed_two_views_vs_C_conditional,,,,,,number_of_views,count,,,,,planned,Count requested and actually delivered views
+C3,A_single_view_vs_C_conditional,,,,,,task_failure,rate,,,,,planned,Record termination and truncation consistently
