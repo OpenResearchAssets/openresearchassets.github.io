@@ -234,6 +234,10 @@ with sync_playwright() as pw:
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='en'
         assert 'from an open paper' in page.locator('.rc-hero h1').inner_text()
+        assert page.locator('.rc-figure img').first.get_attribute('src').endswith('.en.svg')
+        for im in page.locator('.rc-figure img').all():
+            im.scroll_into_view_if_needed()
+            page.wait_for_function('(el)=>el.complete&&el.naturalWidth>0',arg=im.element_handle())
         assert 'have not been independently reproduced' in page.locator('.rc-disclaimer').inner_text()
         assert page.locator('.rc-table tbody tr').count()==8
         assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('real-paper-en',label)

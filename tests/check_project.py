@@ -253,7 +253,7 @@ if 'href="examples.html"' not in (ROOT/'index.html').read_text(encoding='utf-8')
 
 # P1 real-paper integrity: values must match the authors' table and remain author-reported.
 paper_dir=ROOT/'examples'
-paper_svg=[ROOT/'assets/examples/roborender-method.svg', ROOT/'assets/examples/roborender-evidence.svg']
+paper_svg=[ROOT/'assets/examples'/name for name in ('roborender-method.svg','roborender-evidence.svg','roborender-method.en.svg','roborender-evidence.en.svg')]
 for svg in paper_svg:
     if not svg.exists():
         errors.append(f'missing real-paper analysis SVG: {svg}')

@@ -27,7 +27,7 @@
 
 ## 素材与版权边界
 
-- `assets/examples/roborender-method.svg`、`assets/examples/roborender-evidence.svg` 是本站原创**可编辑分析图**。只使用公开事实和我们绘制的文字、框、连线；不含外部论文图片、Logo 或视频。
+- 中文版 `assets/examples/roborender-method.svg`、`assets/examples/roborender-evidence.svg` 与英文版 `assets/examples/roborender-method.en.svg`、`assets/examples/roborender-evidence.en.svg` 是本站原创**可编辑分析图**。只使用公开事实和我们绘制的文字、框、连线；不含外部论文图片、Logo 或视频。
 - 页面里引用已有的 `assets/third-party/roborender/figure1-overview.jpg`，仅作为带作者署名、明示来源的**论文 Figure 1 评论缩略图**，保留既有台账记录和撤除入口。该 JPEG **不获得**本站原创 SVG 的授权。
 - **不能复现**：未下载训练数据、未启动模型训练、未对实际机器人跑实验。任何重新训练、部署或科研数据复用都需要独立核实资源、许可证和环境条件。
 
