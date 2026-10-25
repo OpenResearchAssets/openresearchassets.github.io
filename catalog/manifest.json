@@ -4,7 +4,7 @@
   "generated_on": "2026-10-25",
   "instructions": {
     "zh": "先匹配此轻量目录，再沿 entry 路径只读取最相关条目。第三方图片默认不可复制，只有单条 rights 明确授权才可复用。",
-    "en": "Select from this lightweight manifest, then fetch only relevant detailed JSON records. External visuals are not licensed for copying by default; inspect each entry's rights."
+    "en": "Select from this lightweight manifest, then fetch only relevant entry JSON files. External visuals are not licensed for copying by default; inspect each entry's rights."
   },
   "facets": {
     "stages": {
@@ -904,44 +904,6 @@
       ],
       "description_zh": "通过真实视频素材与结构图结合，表达大规模人类视频预训练到具体机器人动作条件的两阶段训练体系。",
       "entry": "catalog/entries/dreamdojo-overview.json"
-    },
-    {
-      "id": "visualmimic-method",
-      "title": "VisualMimic · 人形机器人视觉模仿方法图",
-      "kind": "visual-reference",
-      "stages": [
-        "methods",
-        "writing",
-        "communication"
-      ],
-      "domains": [
-        "robotics",
-        "vision"
-      ],
-      "tasks": [
-        "method-figure",
-        "robot-control",
-        "humanoid",
-        "visual-imitation"
-      ],
-      "keywords": [
-        "VisualMimic",
-        "method-figure",
-        "robot-control",
-        "humanoid",
-        "visual-imitation",
-        "方法图",
-        "高审美",
-        "VisualMimic",
-        "method-figure",
-        "robot-control",
-        "humanoid",
-        "visual-imitation",
-        "scientific figure",
-        "visual reference"
-      ],
-      "description_zh": "机器人图像实例和方法流程处于同一图面；可借鉴真实动作/环境视觉与技术模块之间的尺度分配。",
-      "entry": "catalog/entries/visualmimic-method.json"
     },
     {
       "id": "videomimic-real2sim",

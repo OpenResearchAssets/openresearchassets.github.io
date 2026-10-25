@@ -18,6 +18,10 @@ Popularity is not validated usefulness. A protocol without usage evidence is a c
 
 [Agent catalog](for-agents/) · [Contribute](CONTRIBUTING.md) · [Report an issue](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new/choose)
 
+## New authored-source Gallery picks (2026-10-25)
+
+Five additional author-hosted visual references: [VGGT architecture](asset.html?id=vggt-architecture), [DreamDojo method overview](asset.html?id=dreamdojo-overview), [VideoMimic real-to-sim pipeline](asset.html?id=videomimic-real2sim), [VideoMimic approach overview](asset.html?id=videomimic-approach), and [WonderZoom teaser](asset.html?id=wonderzoom-teaser). Each record explains visual composition, reusable design patterns, identity and limits. **Externally linked author artwork only; no redistribution or editable-source claim.** Ordinary dense technical diagrams not meeting the design-first bar were excluded.
+
 ## Mission and intended use
 
 **Our long-term goal is to make research experience directly usable by AI agents.** Given a task and one OpenResearchAssets URL, a web-capable agent should be able to discover relevant, trustworthy research lessons, tools, editable assets, and actionable workflows across the research lifecycle—from ideation and literature review to methods, experiments, evaluation, writing, websites, and release—without repeated manual searches or elaborate instructions. Using the assets in a real project still requires appropriate file and tool permissions.

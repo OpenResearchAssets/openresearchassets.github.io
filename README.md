@@ -22,6 +22,20 @@ OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉�
 
 **附属材料**：历史论文分析与教学案例仍保留在 [examples/](examples/README.md) 供查阅、链接兼容和来源核验，不是网站的核心产品或内容增长方向。
 
+## 本轮新增高审美视觉精选（2026-10-25）
+
+新增五条经过原作者**网站内容与公开仓库文件路径**双重核对的图稿参考；不把普通论文解读当作资产，也不将第三方图片复制进本站仓库。
+
+| 原始作品 | 侧重的视觉设计 | 资产档案 |
+|---|---|---|
+| VGGT · Architecture | 统一骨干与多任务输出的分层 | [查看](https://openresearchassets.github.io/asset.html?id=vggt-architecture) |
+| DreamDojo · Method Overview | 真人视频、两阶段训练与机器人视觉结合 | [查看](https://openresearchassets.github.io/asset.html?id=dreamdojo-overview) |
+| VideoMimic · Real-to-Sim | 多阶段真实视觉与几何动作转换 | [查看](https://openresearchassets.github.io/asset.html?id=videomimic-real2sim) |
+| VideoMimic · Approach | 技术模块总览与过程图的分工 | [查看](https://openresearchassets.github.io/asset.html?id=videomimic-approach) |
+| WonderZoom · Teaser | 连续放大、空间尺度与 3D 视觉叙事 | [查看](https://openresearchassets.github.io/asset.html?id=wonderzoom-teaser) |
+
+所有图片均为 **外链原作者文件**，不意味着我们拥有再分发或改编许可。真实原图加载失败时保留原始网站/文件链接。此次另外评估过 VisualMimic Method 图，但它更偏常规技术排布，未进入高审美精选；宁缺毋滥。
+
 ## 项目目标与用途
 
 **长期目标：让科研经验真正成为 AI 可使用的生产力。** 我们希望未来的研究者在选题、调研、方法设计、实验、评估、写作、投稿、项目主页和成果传播等任务中，只需给有网页读取能力的 AI **一个 OpenResearchAssets 网址**，AI 就能根据当前任务主动检索并理解相关资产，选择可复用的方法、实践经验、工具、Skill、可编辑素材及工作流程，在获得必要项目文件和工具权限后将其应用于实际工作，而不必反复让人类编写详细提示词或从零检索同类资料。

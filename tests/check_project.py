@@ -40,7 +40,7 @@ if sync.returncode:errors.append('derived catalog out of date: '+sync.stdout+syn
 catalog=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))
 if catalog.get('schema_version')!='1.0.0':errors.append('catalog: unsupported schema version')
 entries=catalog.get('entries',[])
-if len(entries)!=27:errors.append('catalog: expected 27 current assets')
+if len(entries)!=32:errors.append('catalog: expected 32 sourced research records')
 core_ids={'roborender-teaser','roborender-site','robodojo-teaser','robodojo-site','supermimic-teaser','supermimic-site'}
 for e in entries:
     if e.get('id') in core_ids and e.get('visual',{}).get('kind') not in ('verified-paper-figure','verified-site-screenshot'):
@@ -320,6 +320,26 @@ for e in practice:
     if not c.get('evidence'):errors.append(f"{e['id']}: missing practice evidence")
     for evidence in c.get('evidence',[]):
         if not (ROOT/evidence).is_file():errors.append(f"{e['id']}: missing evidence {evidence}")
+# Gallery gate: new additions are original externally hosted images with explicit attribution.
+new_visual_ids={'vggt-architecture','dreamdojo-overview','videomimic-real2sim','videomimic-approach','wonderzoom-teaser'}
+if not new_visual_ids.issubset(set(ids)):
+    errors.append('new curated visual references are missing')
+for entry in entries:
+    if entry['id'] not in new_visual_ids:continue
+    if entry['kind']!='visual-reference' or entry.get('visual',{}).get('kind')!='external-reference-image':
+        errors.append(f"{entry['id']}: visual original not represented accurately")
+    if entry.get('curation',{}).get('source_verification')!='author-site-and-repository-path':
+        errors.append(f"{entry['id']}: original source verification absent")
+    identity=entry.get('figureIdentity',{})
+    if identity.get('type')!='project-website-figure' or not identity.get('original_name'):
+        errors.append(f"{entry['id']}: image identity not precise")
+    if not entry.get('links',{}).get('officialFigure','').startswith('https://github.com/'):
+        errors.append(f"{entry['id']}: original image link missing")
+    if entry.get('rights',{}).get('reuse')!='reference-only':
+        errors.append(f"{entry['id']}: third-party image incorrectly relicensed")
+if any(entry['id']=='visualmimic-method' for entry in entries):
+    errors.append('generic dense diagram must not pass strict design curation')
+
 if 'function renderSkills()' not in (ROOT/'js/catalog.js').read_text(encoding='utf-8'):
     errors.append('homepage: curated skills must use the canonical catalog')
 

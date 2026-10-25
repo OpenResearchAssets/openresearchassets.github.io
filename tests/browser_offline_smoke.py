@@ -66,11 +66,11 @@ with sync_playwright() as pw:
         assert page.locator('.ora-resource-card').first.locator('.ora-external img').count()==1
         assert 'depth-anything-3.github.io/assets/teaser.png' in page.locator('.ora-resource-card').first.locator('img').get_attribute('src')
         assert '真实来源视觉参考' in page.locator('#reference-status').inner_text()
-        assert page.locator('.ora-resource-card .ora-verified img').count()==6
+        assert page.locator('.ora-resource-card .ora-verified img').count()==3
         page.wait_for_function("()=>[...document.querySelectorAll('.ora-resource-card .ora-verified img')].every(n=>n.complete&&n.naturalWidth>0)")
         assert page.locator('.ora-resource-card .ora-curated img').count()==0
         page.locator('#catalog-more').click()
-        assert page.locator('.ora-resource-card').count()==16
+        assert page.locator('.ora-resource-card').count()==21
         page.locator('#facet-kind').select_option('website-reference')
         assert page.locator('.ora-resource-card').count()==3
         page.locator('#facet-kind').select_option('')
@@ -126,7 +126,7 @@ with sync_playwright() as pw:
                 })).filter(e=>e.right>innerWidth+2).slice(0,12)
             })''')
             assert overflow['actual']<=w+2, (label,asset_id,'horizontal page overflow',overflow)
-            assert page.locator('.ora-lesson').count()==(1 if asset_id in cases else 3),(
+            assert page.locator('.ora-lesson').count()==(1 if entry.get('caseStudy') else 3),(
                 label,asset_id,'repeated generic lessons')
             if asset_id in cases:
                 expected='.ora-paper-fig' if asset_id.endswith('teaser') else '.ora-site-capture'
@@ -136,6 +136,10 @@ with sync_playwright() as pw:
                 assert page.locator('.ora-case-check li').count()>=2
                 assert page.locator('.ora-disclosure').is_visible()
                 assert page.locator('.ora-detail-preview img').count()==1
+            elif entry.get('caseStudy'):
+                assert page.locator('.ora-case-study').count()==1
+                assert page.locator('.ora-detail-preview .ora-external img').count()==1
+                assert entry['rights']['reuse']=='reference-only'
             else:
                 assert page.locator('.ora-case-study').count()==0
             visual=page.locator('.ora-detail-preview img')

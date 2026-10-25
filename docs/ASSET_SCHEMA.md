@@ -94,3 +94,7 @@ python3 tests/browser_offline_smoke.py   # Playwright 与 Chromium 可用时
 - `curation.track="practice"`：实际在本项目或获准公开项目中使用，至少一个可访问的 `evidence[]` 路径，包含产物或验证记录。`verification` 应区分“公开项目实践”与“第三方独立实验验证”，不能混淆。
 - 尚未实践的原创 Skill 或普通流程不应被显示成“我们用过”。目录允许保留未精选条目，主站只展示双轨审核过的精选项。
 - 所有数据仍从 `catalog/index.json` 生成，不得另建 Star 热度或 Workflow 的第二份事实源。
+
+## Gallery 严选：具体图像而非整篇论文（2026-10-25）
+
+新入选 Gallery 作品必须核实 **作者项目页实际使用的图像**及作者原仓库的精确文件路径，并记录 `figureIdentity.type=project-website-figure` 和原始文件名；此类官网图不自动等于论文 Figure 1，也不等于本站拥有原图许可。优先外链原图，不复制第三方资源到本仓库。写明为什么**构图、层次、配色、真实视觉实例与信息密度**值得借鉴，以及从中能迁移的表达模式和不能复用的具体科学内容。普通拥挤 Method 图不因论文著名而自动入库。示例质量门槛见 README 的本轮新增精选清单。
