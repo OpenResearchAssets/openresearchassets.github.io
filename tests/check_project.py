@@ -40,7 +40,7 @@ if sync.returncode:errors.append('derived catalog out of date: '+sync.stdout+syn
 catalog=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))
 if catalog.get('schema_version')!='1.0.0':errors.append('catalog: unsupported schema version')
 entries=catalog.get('entries',[])
-if len(entries)!=22:errors.append('catalog: expected 22 current assets')
+if len(entries)!=27:errors.append('catalog: expected 27 current assets')
 core_ids={'roborender-teaser','roborender-site','robodojo-teaser','robodojo-site','supermimic-teaser','supermimic-site'}
 for e in entries:
     if e.get('id') in core_ids and e.get('visual',{}).get('kind') not in ('verified-paper-figure','verified-site-screenshot'):
@@ -196,13 +196,17 @@ for vision in (ROOT/'assets/diagrams/community-trajectory.svg',
 # P0: first-visit entry points and general research-asset contribution must be accessible.
 home_html=(ROOT/'index.html').read_text(encoding='utf-8')
 contribute_html=(ROOT/'contribute.html').read_text(encoding='utf-8')
+if home_html.count('class="ora-main-path"')!=2:
+    errors.append('homepage: expected Gallery and Skills entry points')
+if contribute_html.count('class="ora-start-path"')!=3:
+    errors.append('contribution page: expected three contribution paths')
 for page_name,html in [('index.html',home_html),('contribute.html',contribute_html)]:
-    if html.count('class="ora-start-path"') != 3:
-        errors.append(f'{page_name}: expected three clearly labeled first-use paths')
     if any(text not in html for text in ('data-i18n-zh=', 'data-i18n-en=')):
         errors.append(f'{page_name}: missing bilingual first-use text')
-if 'href="examples.html"' not in home_html:
-    errors.append('homepage: missing direct route to the three worked examples')
+if 'id="gallery"' not in home_html or 'id="skills"' not in home_html:
+    errors.append('homepage: gallery or skills route missing')
+if 'id="popular-skills"' not in home_html or 'id="practice-skills"' not in home_html:
+    errors.append('homepage: popular and practice tracks not separate')
 if 'href="for-agents/"' not in home_html or 'href="contribute.html"' not in home_html:
     errors.append('homepage: missing agent or contribution entry')
 if 'id="methods"' not in contribute_html:
@@ -248,8 +252,8 @@ case_page=(ROOT/'examples.html').read_text(encoding='utf-8')
 if case_page.count('class="ora-example"')!=3:errors.append('worked example landing: expected three cases')
 if 'examples/sample-project.html' not in case_page or 'examples/evidence-register.csv' not in case_page:
     errors.append('worked example landing: missing concrete deliverables')
-if 'href="examples.html"' not in (ROOT/'index.html').read_text(encoding='utf-8'):
-    errors.append('homepage: examples not accessible from entry route')
+if 'examples/roborender.html' in home_html:
+    errors.append('homepage: deep paper analysis must not be the main entry')
 
 # P1 real-paper integrity: values must match the authors' table and remain author-reported.
 paper_dir=ROOT/'examples'
@@ -295,6 +299,29 @@ if 'independently reproduced' not in real_page or '非我们的独立复现' not
     errors.append('real-paper page: missing clear bilingual reproduction boundary')
 if 'examples/roborender.html' not in case_page:
     errors.append('real-paper case not linked from examples index')
+
+# Curated Skills: popularity snapshots are dated and practice items link to public work.
+popular=[e for e in entries if e.get('curation',{}).get('track')=='popular']
+practice=[e for e in entries if e.get('curation',{}).get('track')=='practice']
+if len(popular)!=4 or len(practice)!=2:
+    errors.append('curation: expected four sourced popular items and two practiced workflows')
+for e in popular:
+    c=e['curation']
+    if not re.fullmatch(r'[a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+',c.get('github_repo','')):
+        errors.append(f"{e['id']}: invalid GitHub repo")
+    if not isinstance(c.get('stars_snapshot'),int) or c['stars_snapshot']<0:
+        errors.append(f"{e['id']}: missing Star snapshot")
+    if not re.fullmatch(r'\d{4}-\d{2}-\d{2}',c.get('stars_checked_on','')):
+        errors.append(f"{e['id']}: missing Star checked date")
+    if e['links']['source'] != 'https://github.com/'+c['github_repo']:
+        errors.append(f"{e['id']}: Star target does not match original source")
+for e in practice:
+    c=e['curation']
+    if not c.get('evidence'):errors.append(f"{e['id']}: missing practice evidence")
+    for evidence in c.get('evidence',[]):
+        if not (ROOT/evidence).is_file():errors.append(f"{e['id']}: missing evidence {evidence}")
+if 'function renderSkills()' not in (ROOT/'js/catalog.js').read_text(encoding='utf-8'):
+    errors.append('homepage: curated skills must use the canonical catalog')
 
 if errors:
     for e in errors:print('FAIL:',e)
