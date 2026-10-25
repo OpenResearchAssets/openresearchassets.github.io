@@ -16,7 +16,7 @@ The initial focus is AI, computer vision, robotics and research communication. F
 
 OpenResearchAssets is an **independent open-source project**, not a personal portfolio. Its intended progression is: **(1)** a useful project that researchers discover and reuse; **(2)** a healthy community where independent researchers contribute and review assets, methods, and tools; **(3)** open research infrastructure with interoperable asset conventions, workflows, tools, and AI agents.
 
-![Three-stage OpenResearchAssets community vision (Chinese-first source SVG)](assets/diagrams/community-trajectory.svg)
+![Three-stage OpenResearchAssets community vision (Chinese-first source SVG)](assets/diagrams/community-trajectory.en.svg)
 
 These are **aspirational stages, not shipped features or promised milestones**. We value verified reuse, scientific fidelity, source attribution, contributor retention, and transparent review more than stars alone. [Star the repository](https://github.com/OpenResearchAssets/openresearchassets.github.io), [contribute](CONTRIBUTING.md), or [propose an asset](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new/choose). The [project strategy](docs/PRODUCT_STRATEGY.md) is the authoritative statement of current and future scope.
 

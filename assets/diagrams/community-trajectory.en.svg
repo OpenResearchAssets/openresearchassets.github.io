@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1580" height="708" viewBox="0 0 1580 708" role="img" aria-labelledby="figure-title figure-description">
+  <title id="figure-title">OpenResearchAssets long-term community trajectory</title>
+  <desc id="figure-description">A long-term community vision: useful open-source project, active open community, and open research infrastructure. All text and shapes are fully editable vectors.</desc>
+  <rect width="1580" height="708" fill="#ffffff"/>
+  <rect x="21" y="23" width="1534" height="662" rx="31" fill="#fafafa" stroke="#dedede" stroke-width="1.7"/>
+  <g fill="#151515" font-family="Arial, Helvetica, Noto Sans, sans-serif">
+    <g transform="translate(72 85)" fill="none" stroke="#111111" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round" aria-label="生长图标">
+      <path d="M12 25V9"/>
+      <path d="M12 13C5 13 3 9 3 4c6 0 9 3 9 9Z"/>
+      <path d="M12 19c0-7 4-12 12-12 0 7-4 12-12 12Z"/>
+      <path d="M6 25h13"/>
+    </g>
+    <text x="118" y="107" font-size="31" font-weight="650" letter-spacing="0.4">Stage 1 — A useful open-source project</text>
+    <text x="69" y="163" fill="#666666" font-size="25" font-weight="400" letter-spacing="-0.15">Researchers discover, use, and star it — building recognition for the project</text>
+
+    <g transform="translate(73 314)" fill="none" stroke="#111111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-label="社区图标">
+      <circle cx="11" cy="8" r="4"/>
+      <path d="M2 25v-3a9 9 0 0 1 18 0v3"/>
+      <path d="M20 5a4 4 0 0 1 0 8"/>
+      <path d="M23 17a7 7 0 0 1 5 7v1"/>
+    </g>
+    <text x="118" y="341" font-size="31" font-weight="650" letter-spacing="0.4">Stage 2 — An active open community</text>
+    <text x="69" y="397" fill="#666666" font-size="25" font-weight="400" letter-spacing="-0.15">Researchers contribute assets, methods, and tools, and maintain quality together</text>
+
+    <g transform="translate(73 547)" fill="none" stroke="#111111" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" aria-label="开放网络图标">
+      <circle cx="13" cy="3.5" r="3.8"/>
+      <circle cx="3.5" cy="23.5" r="3.8"/>
+      <circle cx="22.5" cy="23.5" r="3.8"/>
+      <path d="M13 7.5v8M13 15.5H3.5v4M13 15.5h9.5v4"/>
+    </g>
+    <text x="118" y="575" font-size="31" font-weight="650" letter-spacing="0.4">Stage 3 — Open research infrastructure</text>
+    <text x="69" y="628" fill="#666666" font-size="25" font-weight="400" letter-spacing="-0.15">Shared research-asset standards connect tools, workflows, agents, and communities</text>
+  </g>
+  <g fill="none" stroke="#636363" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M788 219v17m-7-7 7 7 7-7"/>
+    <path d="M788 451v17m-7-7 7 7 7-7"/>
+  </g>
+</svg>

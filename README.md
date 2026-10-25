@@ -23,6 +23,8 @@ OpenResearchAssets 由独立 GitHub Organization 维护，目标是建设**项�
 
 ![OpenResearchAssets：从有价值的开源项目，到活跃的开放社区，再到开放科研基础设施的三阶段长期愿景](assets/diagrams/community-trajectory.svg)
 
+[English SVG](assets/diagrams/community-trajectory.en.svg)
+
 1. **有价值的开源项目：** 用户真正发现、使用、复用资产，逐步建立独立项目认知。
 2. **有活力的开放社区：** 外部研究者持续贡献可验证的科研资产、工作流和工具，共同维护质量。
 3. **开放科研基础设施：** 在真实使用需求推动下，形成可复用的科研资产标准、工具和 AI Agent 生态。

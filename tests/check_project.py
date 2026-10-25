@@ -178,19 +178,20 @@ for p in ROOT.rglob('*'):
             errors.append(f'{relative}: obsolete Suchenl project URL')
 
 # Community vision is an editable illustration, not a pasted screenshot.
-vision = ROOT/'assets/diagrams/community-trajectory.svg'
-if not vision.is_file():
-    errors.append('missing editable community vision SVG')
-else:
+for vision in (ROOT/'assets/diagrams/community-trajectory.svg',
+               ROOT/'assets/diagrams/community-trajectory.en.svg'):
+    if not vision.is_file():
+        errors.append(f'missing editable community vision SVG: {vision.name}')
+        continue
     try:
         r = ET.parse(vision)
         nodes = list(r.iter())
         if sum(el.tag.split('}')[-1]=='text' for el in nodes) < 6:
-            errors.append('community vision: text is not independently editable')
+            errors.append(f'{vision.name}: text is not independently editable')
         if any(el.tag.split('}')[-1]=='image' for el in nodes):
-            errors.append('community vision: embedded raster is not allowed')
+            errors.append(f'{vision.name}: embedded raster is not allowed')
     except ET.ParseError as err:
-        errors.append(f'community vision SVG parse error: {err}')
+        errors.append(f'{vision.name}: SVG parse error: {err}')
 
 if errors:
     for e in errors:print('FAIL:',e)
