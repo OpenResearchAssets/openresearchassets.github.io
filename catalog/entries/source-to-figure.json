@@ -1,0 +1,91 @@
+{
+  "id": "source-to-figure",
+  "title": "真实来源 → 可编辑 SVG · 项目制作流程",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "writing",
+    "communication"
+  ],
+  "domains": [
+    "general"
+  ],
+  "tasks": [
+    "source-verification",
+    "figure-review",
+    "editable-figure",
+    "research-visuals"
+  ],
+  "description": {
+    "zh": "已用于本项目 RoboRender 公开图稿：核对来源与逐项数字、制作独立 SVG、检查双语渲染和版权边界。",
+    "en": "Publicly demonstrated in the RoboRender editorial assets: verified original sources and numbers, authored independent SVGs, and checked bilingual rendering."
+  },
+  "keywords": {
+    "zh": [
+      "Figure",
+      "SVG",
+      "真实来源",
+      "证据图",
+      "科研图"
+    ],
+    "en": [
+      "figure workflow",
+      "source grounded",
+      "editable SVG",
+      "evidence visualization"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/OpenResearchAssets/openresearchassets.github.io/blob/main/workflows/source-to-figure.md",
+    "editable": "workflows/source-to-figure.md"
+  },
+  "rights": {
+    "reuse": "original-workflow; MIT documentation",
+    "preview": "authored-workflow",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要把论文公开事实转化为原创、可编辑的研究图，而非重新发表原图。"
+      ],
+      "en": [
+        "Turning sourced scientific claims into original editable figures."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "先登记来源与数据，再画方法流和真实证据图，最终做实际渲染验收。"
+      ],
+      "en": [
+        "Track primary sources and numbers before drawing and reviewing rendered SVGs."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "本流程的已用证据只是本站公开图稿，非下游论文效果验证。"
+      ],
+      "en": [
+        "Project artifacts prove the workflow was applied, not its performance across studies."
+      ]
+    }
+  },
+  "curation": {
+    "track": "practice",
+    "type": "workflow",
+    "verification": "project-artifacts-exist-not-independent-performance-validation",
+    "used_in": {
+      "zh": "用于 RoboRender 真实公开数据核对与双语原创 SVG 制作",
+      "en": "Used for RoboRender public-source verification and bilingual original SVG figures"
+    },
+    "evidence": [
+      "examples/roborender-provenance.md",
+      "examples/roborender-results.csv",
+      "assets/examples/roborender-method.svg",
+      "tests/browser_offline_smoke.py"
+    ]
+  },
+  "previewStyle": "workflow"
+}

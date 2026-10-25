@@ -1,0 +1,82 @@
+{
+  "id": "codex-skills",
+  "title": "OpenAI Codex Skills · 技能目录",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "writing"
+  ],
+  "domains": [
+    "general"
+  ],
+  "tasks": [
+    "agent-skills",
+    "coding",
+    "research-tools"
+  ],
+  "description": {
+    "zh": "Codex 使用的公开 Skills Catalog，适合按任务选取可安装技能；不代表本项目亲自运行过每个 Skill。",
+    "en": "Public skills catalog for Codex; no claim that this project tested or installed individual skills."
+  },
+  "keywords": {
+    "zh": [
+      "Codex",
+      "Agent Skills",
+      "技能目录"
+    ],
+    "en": [
+      "codex",
+      "skills catalog",
+      "coding"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/openai/skills"
+  },
+  "rights": {
+    "reuse": "external-repository; inspect its current license and individual assets",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要寻找可直接交给 Coding Agent 的任务型技能与安装示例。"
+      ],
+      "en": [
+        "Finding task-specific skills and installation patterns for a coding agent."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "从仓库原始说明筛选当前任务最相关的工具、Skill 或步骤，使用前检查许可证与依赖。"
+      ],
+      "en": [
+        "Select task-relevant skills/tools from the source repository; inspect licensing and dependencies before installing."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "GitHub Star 只是热度指标，不代表我们已安装、实际使用或验证效果。"
+      ],
+      "en": [
+        "GitHub stars signal interest, not our installation, firsthand use, or quality verification."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "openai/skills",
+    "stars_snapshot": 28289,
+    "stars_checked_on": "2026-10-25",
+    "verification": "source-verified-not-personally-tested",
+    "selection_reason": {
+      "zh": "需要寻找可直接交给 Coding Agent 的任务型技能与安装示例。",
+      "en": "Finding task-specific skills and installation patterns for a coding agent."
+    }
+  },
+  "previewStyle": "workflow"
+}

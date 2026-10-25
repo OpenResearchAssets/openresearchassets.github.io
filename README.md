@@ -1,6 +1,8 @@
-# OpenResearchAssets · 面向人类与 AI 的可复用科研资产库
+# Open Research Assets · 精选科研视觉与实用 Skills / Workflows
 
 **中文（默认）** · [English](README.en.md) · [在线网站](https://openresearchassets.github.io/) · [给 AI 使用](https://openresearchassets.github.io/for-agents/)
+
+**目前最重要的只有两件事：** [高审美科研配图与可编辑素材](https://openresearchassets.github.io/#gallery)，以及 [高热度 / 实践积累 Skills 与 Workflows](https://openresearchassets.github.io/#skills)。既有论文解释性页面仅用于必要的来源和设计佐证，不再作为网站的主要产品。外部 Star 是热度，不是使用验证；团队实践记录必须有公开成果证据。
 
 > **科研资产不只是收藏，而是可以被发现、理解与复用的经验。**  
 > 科学真实性先于外观；高质量的资产需要说明其用途、来源和使用边界。

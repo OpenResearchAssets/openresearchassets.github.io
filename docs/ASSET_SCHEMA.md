@@ -87,3 +87,10 @@ python3 tests/browser_offline_smoke.py   # Playwright 与 Chromium 可用时
 ## Figure 1 / 主页首屏：强制核实原图身份
 
 核心视觉条目的主封面不再允许用其他“同项目官方配图”冒充：`visual.kind=verified-paper-figure` 必须是真正 Figure 1（或在 title 中准确给出论文 Figure 编号）；`visual.kind=verified-site-screenshot` 必须是真实浏览器截取的源站首屏。`figureIdentity` 的 source/type/name/date/credit/modifications 均为必填元数据，第三方低分辨率引用截图不等于自动拥有可再分发许可。对原图有疑义可按权利人撤除机制响应。六案例当前均有内容专属的原图 JPG，同时保留 `analysisVisual` 为原创结构解析辅助。
+
+## 精选 Skill / Workflow 双轨资格
+
+- `curation.track="popular"`：仓库级 GitHub Star 快照（`stars_snapshot` 整数、`stars_checked_on` YYYY-MM-DD、`github_repo` 精确 owner/name），以及能力类型 `type`（skill / tool / workflow）；每次人工编辑检查一手仓库。网站可尝试实时刷新 Star，失败显示快照及日期。Star 不代表实际效果。
+- `curation.track="practice"`：实际在本项目或获准公开项目中使用，至少一个可访问的 `evidence[]` 路径，包含产物或验证记录。`verification` 应区分“公开项目实践”与“第三方独立实验验证”，不能混淆。
+- 尚未实践的原创 Skill 或普通流程不应被显示成“我们用过”。目录允许保留未精选条目，主站只展示双轨审核过的精选项。
+- 所有数据仍从 `catalog/index.json` 生成，不得另建 Star 热度或 Workflow 的第二份事实源。

@@ -2,6 +2,19 @@
 
 OpenResearchAssets 是**科研全过程可发现、可理解、可复用的资产库**，服务人类和有文件/网页读取工具的 AI。首批高质量积累集中在 AI / CV / Robotics 的科研视觉表达与工作流，但分类架构不限于论文绘图。
 
+## 选品原则：两个核心资产方向
+
+Open Research Assets 的公开首页只突出 **Research Gallery（高审美科研配图、项目主页和可编辑图）** 与 **Research Skills / Workflows（能够完成具体任务的能力资产）**。论文方法或实验解读仅作为必要的来源、科学事实和设计参考辅助，**不再作为首页、组织主页或增长方向的主产品**；既有页面可以保留旧链接，但不主动作为产品入口推广。
+
+Skills / Workflows **只精选两条正式路径**：
+
+1. **高热度 / Popular**：真实 GitHub 项目、明确用途、公开仓库原始链接和可核对 Star；Star 表示社区关注，不表示实测质量。记录 `curation.track=popular`、`github_repo`、`stars_snapshot` 与 `stars_checked_on`；网页优先实时更新，失败时展示注明日期的快照。禁止为拉数量混入与科研任务无关的仓库或将整个 Skill 目录冒充某个 Skill 已经过测。
+2. **实践积累 / Field notes**：团队公开使用过、具有实际产物与来源/审计记录的具体工作流，记录 `curation.track=practice`、`used_in` 与 `evidence[]`。要求能从公开仓库实际产物追溯使用记录。**代码已写好但没有运行记录、只有设想或教学示例，不能标为已实测**；公开产物证明曾应用，不等于独立效益评估。
+
+未达到两类准入条件的原有模板、普通笔记、待验证 Skill 可保留源文件供进一步改进，但不得混进上述精选区。不擅自把用户私有仓库中的未发表论文、结果或过程迁入公开库。
+
+**产品迭代优先级**：先精选作品/工具和证明复用收益，再做新的信息架构或组织治理；对视觉资产增加构图、科学表达、编辑性和真实尺寸可读性审美门槛。
+
 ## 组织定位与社区发展方向
 
 **OpenResearchAssets 是独立的长期开放科研项目，不是创始人的个人作品集。** 让外部研究者记住并信任项目本身，以明确的准入标准、真实可复用的科研资产、透明的贡献机制积累公共价值。项目归属于 GitHub Organization [OpenResearchAssets](https://github.com/OpenResearchAssets)，当前采用**单一公开主仓库** [openresearchassets.github.io](https://github.com/OpenResearchAssets/openresearchassets.github.io) 和 [组织根域名网站](https://openresearchassets.github.io/)；Star、Issues、PR、代码和文档均围绕主仓库，不为表面规范提前拆分重复网站仓库。

@@ -66,5 +66,18 @@
         "Never publish unlicensed manuscripts, figures or videos"
       ]
     }
+  },
+  "curation": {
+    "track": "practice",
+    "type": "workflow",
+    "verification": "project-artifacts-exist-not-independent-performance-validation",
+    "used_in": {
+      "zh": "已经在本项目的 RoboRender 公开案例网页中执行了来源、图表、版权与发布入口的组织，留有公开页面与出处审计；不是外部用户验证。",
+      "en": "Applied to a public RoboRender evidence-oriented page with an audit trail; not independently validated by external researchers."
+    },
+    "evidence": [
+      "examples/roborender.html",
+      "examples/roborender-provenance.md"
+    ]
   }
 }

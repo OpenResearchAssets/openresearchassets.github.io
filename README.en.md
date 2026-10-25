@@ -1,8 +1,11 @@
-# OpenResearchAssets — reusable research assets for humans and AI
+# Open Research Assets · Curated Research Gallery & Skills
 
 **[简体中文](README.md) · English · [Website](https://openresearchassets.github.io/) · [For AI agents](https://openresearchassets.github.io/for-agents/)**
 
 Research assets should be more than bookmarks. They should tell us **when to use them, what transfers, what to avoid, and where they came from**.
+
+
+**Two core collections:** [beautiful, reusable scientific figures](https://openresearchassets.github.io/#gallery) and [select Skills / Workflows](https://openresearchassets.github.io/#skills), curated either by verifiable public GitHub popularity or evidenced firsthand project practice. Stars are not quality evidence; legacy paper analyses are supporting references, not the main product.
 
 ## Start here
 

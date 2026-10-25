@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_on": "2026-10-24",
+  "generated_on": "2026-10-25",
   "default_language": "zh",
   "notice": {
     "zh": "所有第三方论文图、网站图与截图保留原权利；本站未收录其原始图片文件。卡片结构示意为本站原创，不代表原作截图。",
@@ -2245,7 +2245,441 @@
             "Never publish unlicensed manuscripts, figures or videos"
           ]
         }
+      },
+      "curation": {
+        "track": "practice",
+        "type": "workflow",
+        "verification": "project-artifacts-exist-not-independent-performance-validation",
+        "used_in": {
+          "zh": "已经在本项目的 RoboRender 公开案例网页中执行了来源、图表、版权与发布入口的组织，留有公开页面与出处审计；不是外部用户验证。",
+          "en": "Applied to a public RoboRender evidence-oriented page with an audit trail; not independently validated by external researchers."
+        },
+        "evidence": [
+          "examples/roborender.html",
+          "examples/roborender-provenance.md"
+        ]
       }
+    },
+    {
+      "id": "anthropic-agent-skills",
+      "title": "Anthropic Agent Skills · 开源 Skill 集",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "agent-skills",
+        "research-tools",
+        "document-workflow"
+      ],
+      "description": {
+        "zh": "Agent Skills 官方公共示例与规范入口，适合按任务寻找可装入 Agent 的技能；项目尚未完成亲测。",
+        "en": "Public Agent Skills repository for task-driven skills; not independently used or evaluated by OpenResearchAssets."
+      },
+      "keywords": {
+        "zh": [
+          "Agent Skill",
+          "研究技能",
+          "文件工作流"
+        ],
+        "en": [
+          "agent skills",
+          "documents",
+          "skill catalog"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/anthropics/skills"
+      },
+      "rights": {
+        "reuse": "external-repository; inspect its current license and individual assets",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要参考 Agent Skills 的公开组织方式和已有技能，但必须进一步筛选具体子 Skill。"
+          ],
+          "en": [
+            "Looking for established Agent Skills structures and task-specific candidates; each subskill still needs separate review."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "从仓库原始说明筛选当前任务最相关的工具、Skill 或步骤，使用前检查许可证与依赖。"
+          ],
+          "en": [
+            "Select task-relevant skills/tools from the source repository; inspect licensing and dependencies before installing."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "GitHub Star 只是热度指标，不代表我们已安装、实际使用或验证效果。"
+          ],
+          "en": [
+            "GitHub stars signal interest, not our installation, firsthand use, or quality verification."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "anthropics/skills",
+        "stars_snapshot": 183559,
+        "stars_checked_on": "2026-10-25",
+        "verification": "source-verified-not-personally-tested",
+        "selection_reason": {
+          "zh": "需要参考 Agent Skills 的公开组织方式和已有技能，但必须进一步筛选具体子 Skill。",
+          "en": "Looking for established Agent Skills structures and task-specific candidates; each subskill still needs separate review."
+        }
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "codex-skills",
+      "title": "OpenAI Codex Skills · 技能目录",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "agent-skills",
+        "coding",
+        "research-tools"
+      ],
+      "description": {
+        "zh": "Codex 使用的公开 Skills Catalog，适合按任务选取可安装技能；不代表本项目亲自运行过每个 Skill。",
+        "en": "Public skills catalog for Codex; no claim that this project tested or installed individual skills."
+      },
+      "keywords": {
+        "zh": [
+          "Codex",
+          "Agent Skills",
+          "技能目录"
+        ],
+        "en": [
+          "codex",
+          "skills catalog",
+          "coding"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/openai/skills"
+      },
+      "rights": {
+        "reuse": "external-repository; inspect its current license and individual assets",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要寻找可直接交给 Coding Agent 的任务型技能与安装示例。"
+          ],
+          "en": [
+            "Finding task-specific skills and installation patterns for a coding agent."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "从仓库原始说明筛选当前任务最相关的工具、Skill 或步骤，使用前检查许可证与依赖。"
+          ],
+          "en": [
+            "Select task-relevant skills/tools from the source repository; inspect licensing and dependencies before installing."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "GitHub Star 只是热度指标，不代表我们已安装、实际使用或验证效果。"
+          ],
+          "en": [
+            "GitHub stars signal interest, not our installation, firsthand use, or quality verification."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "openai/skills",
+        "stars_snapshot": 28289,
+        "stars_checked_on": "2026-10-25",
+        "verification": "source-verified-not-personally-tested",
+        "selection_reason": {
+          "zh": "需要寻找可直接交给 Coding Agent 的任务型技能与安装示例。",
+          "en": "Finding task-specific skills and installation patterns for a coding agent."
+        }
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "microsoft-markitdown",
+      "title": "Microsoft MarkItDown · 论文文件转换工具",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "pdf-conversion",
+        "paper-reading",
+        "document-processing"
+      ],
+      "description": {
+        "zh": "把 PDF 与办公文档转换为 Markdown 的开源 Python 工具，可服务科研材料准备和 Agent 阅读；尚无本项目运行记录。",
+        "en": "Open-source PDF/Office-to-Markdown conversion tool for research document preparation; no project-run record yet."
+      },
+      "keywords": {
+        "zh": [
+          "PDF",
+          "Markdown",
+          "文档转换",
+          "科研阅读"
+        ],
+        "en": [
+          "PDF",
+          "Markdown",
+          "document conversion",
+          "research reading"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/microsoft/markitdown"
+      },
+      "rights": {
+        "reuse": "external-repository; inspect its current license and individual assets",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "科研文档解析和 Agent 读取之前需要结构化文本输入。"
+          ],
+          "en": [
+            "Preparing structured text from research PDFs and office documents before agent processing."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "从仓库原始说明筛选当前任务最相关的工具、Skill 或步骤，使用前检查许可证与依赖。"
+          ],
+          "en": [
+            "Select task-relevant skills/tools from the source repository; inspect licensing and dependencies before installing."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "GitHub Star 只是热度指标，不代表我们已安装、实际使用或验证效果。"
+          ],
+          "en": [
+            "GitHub stars signal interest, not our installation, firsthand use, or quality verification."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "tool",
+        "github_repo": "microsoft/markitdown",
+        "stars_snapshot": 192008,
+        "stars_checked_on": "2026-10-25",
+        "verification": "source-verified-not-personally-tested",
+        "selection_reason": {
+          "zh": "科研文档解析和 Agent 读取之前需要结构化文本输入。",
+          "en": "Preparing structured text from research PDFs and office documents before agent processing."
+        }
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "vercel-agent-skills",
+      "title": "Vercel Agent Skills · 前端与网页实践",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "agent-skills",
+        "project-website",
+        "frontend-quality"
+      ],
+      "description": {
+        "zh": "面向前端和网页工程的公开 Agent Skills，适合优化科研项目网站的质量检查；不等于已在此仓库执行过。",
+        "en": "Public web-development Agent Skills relevant to research project websites; not tested here."
+      },
+      "keywords": {
+        "zh": [
+          "项目主页",
+          "前端技能",
+          "网页优化"
+        ],
+        "en": [
+          "agent skills",
+          "frontend",
+          "web design"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/vercel-labs/agent-skills"
+      },
+      "rights": {
+        "reuse": "external-repository; inspect its current license and individual assets",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "构建科研主页时需要可复用的前端与可访问性检查方法。"
+          ],
+          "en": [
+            "Building and checking polished, accessible research project websites."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "从仓库原始说明筛选当前任务最相关的工具、Skill 或步骤，使用前检查许可证与依赖。"
+          ],
+          "en": [
+            "Select task-relevant skills/tools from the source repository; inspect licensing and dependencies before installing."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "GitHub Star 只是热度指标，不代表我们已安装、实际使用或验证效果。"
+          ],
+          "en": [
+            "GitHub stars signal interest, not our installation, firsthand use, or quality verification."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "vercel-labs/agent-skills",
+        "stars_snapshot": 32974,
+        "stars_checked_on": "2026-10-25",
+        "verification": "source-verified-not-personally-tested",
+        "selection_reason": {
+          "zh": "构建科研主页时需要可复用的前端与可访问性检查方法。",
+          "en": "Building and checking polished, accessible research project websites."
+        }
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "source-to-figure",
+      "title": "真实来源 → 可编辑 SVG · 项目制作流程",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "source-verification",
+        "figure-review",
+        "editable-figure",
+        "research-visuals"
+      ],
+      "description": {
+        "zh": "已用于本项目 RoboRender 公开图稿：核对来源与逐项数字、制作独立 SVG、检查双语渲染和版权边界。",
+        "en": "Publicly demonstrated in the RoboRender editorial assets: verified original sources and numbers, authored independent SVGs, and checked bilingual rendering."
+      },
+      "keywords": {
+        "zh": [
+          "Figure",
+          "SVG",
+          "真实来源",
+          "证据图",
+          "科研图"
+        ],
+        "en": [
+          "figure workflow",
+          "source grounded",
+          "editable SVG",
+          "evidence visualization"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/OpenResearchAssets/openresearchassets.github.io/blob/main/workflows/source-to-figure.md",
+        "editable": "workflows/source-to-figure.md"
+      },
+      "rights": {
+        "reuse": "original-workflow; MIT documentation",
+        "preview": "authored-workflow",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要把论文公开事实转化为原创、可编辑的研究图，而非重新发表原图。"
+          ],
+          "en": [
+            "Turning sourced scientific claims into original editable figures."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "先登记来源与数据，再画方法流和真实证据图，最终做实际渲染验收。"
+          ],
+          "en": [
+            "Track primary sources and numbers before drawing and reviewing rendered SVGs."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "本流程的已用证据只是本站公开图稿，非下游论文效果验证。"
+          ],
+          "en": [
+            "Project artifacts prove the workflow was applied, not its performance across studies."
+          ]
+        }
+      },
+      "curation": {
+        "track": "practice",
+        "type": "workflow",
+        "verification": "project-artifacts-exist-not-independent-performance-validation",
+        "used_in": {
+          "zh": "用于 RoboRender 真实公开数据核对与双语原创 SVG 制作",
+          "en": "Used for RoboRender public-source verification and bilingual original SVG figures"
+        },
+        "evidence": [
+          "examples/roborender-provenance.md",
+          "examples/roborender-results.csv",
+          "assets/examples/roborender-method.svg",
+          "tests/browser_offline_smoke.py"
+        ]
+      },
+      "previewStyle": "workflow"
     }
   ]
 }

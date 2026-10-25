@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "catalog_source": "catalog/index.json",
-  "generated_on": "2026-10-24",
+  "generated_on": "2026-10-25",
   "instructions": {
     "zh": "先匹配此轻量目录，再沿 entry 路径只读取最相关条目。第三方图片默认不可复制，只有单条 rights 明确授权才可复用。",
     "en": "Select from this lightweight manifest, then fetch only relevant entry JSON files. External visuals are not licensed for copying by default; inspect each entry's rights."
@@ -687,6 +687,148 @@
       ],
       "description_zh": "面向读者与 Agent 的项目主页发布清单，覆盖可核实主张、演示、链接与版权。",
       "entry": "catalog/entries/research-release.json"
+    },
+    {
+      "id": "anthropic-agent-skills",
+      "title": "Anthropic Agent Skills · 开源 Skill 集",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "agent-skills",
+        "research-tools",
+        "document-workflow"
+      ],
+      "keywords": [
+        "Agent Skill",
+        "研究技能",
+        "文件工作流",
+        "agent skills",
+        "documents",
+        "skill catalog"
+      ],
+      "description_zh": "Agent Skills 官方公共示例与规范入口，适合按任务寻找可装入 Agent 的技能；项目尚未完成亲测。",
+      "entry": "catalog/entries/anthropic-agent-skills.json"
+    },
+    {
+      "id": "codex-skills",
+      "title": "OpenAI Codex Skills · 技能目录",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "agent-skills",
+        "coding",
+        "research-tools"
+      ],
+      "keywords": [
+        "Codex",
+        "Agent Skills",
+        "技能目录",
+        "codex",
+        "skills catalog",
+        "coding"
+      ],
+      "description_zh": "Codex 使用的公开 Skills Catalog，适合按任务选取可安装技能；不代表本项目亲自运行过每个 Skill。",
+      "entry": "catalog/entries/codex-skills.json"
+    },
+    {
+      "id": "microsoft-markitdown",
+      "title": "Microsoft MarkItDown · 论文文件转换工具",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "pdf-conversion",
+        "paper-reading",
+        "document-processing"
+      ],
+      "keywords": [
+        "PDF",
+        "Markdown",
+        "文档转换",
+        "科研阅读",
+        "PDF",
+        "Markdown",
+        "document conversion",
+        "research reading"
+      ],
+      "description_zh": "把 PDF 与办公文档转换为 Markdown 的开源 Python 工具，可服务科研材料准备和 Agent 阅读；尚无本项目运行记录。",
+      "entry": "catalog/entries/microsoft-markitdown.json"
+    },
+    {
+      "id": "vercel-agent-skills",
+      "title": "Vercel Agent Skills · 前端与网页实践",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "writing"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "agent-skills",
+        "project-website",
+        "frontend-quality"
+      ],
+      "keywords": [
+        "项目主页",
+        "前端技能",
+        "网页优化",
+        "agent skills",
+        "frontend",
+        "web design"
+      ],
+      "description_zh": "面向前端和网页工程的公开 Agent Skills，适合优化科研项目网站的质量检查；不等于已在此仓库执行过。",
+      "entry": "catalog/entries/vercel-agent-skills.json"
+    },
+    {
+      "id": "source-to-figure",
+      "title": "真实来源 → 可编辑 SVG · 项目制作流程",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "general"
+      ],
+      "tasks": [
+        "source-verification",
+        "figure-review",
+        "editable-figure",
+        "research-visuals"
+      ],
+      "keywords": [
+        "Figure",
+        "SVG",
+        "真实来源",
+        "证据图",
+        "科研图",
+        "figure workflow",
+        "source grounded",
+        "editable SVG",
+        "evidence visualization"
+      ],
+      "description_zh": "已用于本项目 RoboRender 公开图稿：核对来源与逐项数字、制作独立 SVG、检查双语渲染和版权边界。",
+      "entry": "catalog/entries/source-to-figure.json"
     }
   ]
 }

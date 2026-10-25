@@ -1,0 +1,82 @@
+{
+  "id": "anthropic-agent-skills",
+  "title": "Anthropic Agent Skills · 开源 Skill 集",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "writing"
+  ],
+  "domains": [
+    "general"
+  ],
+  "tasks": [
+    "agent-skills",
+    "research-tools",
+    "document-workflow"
+  ],
+  "description": {
+    "zh": "Agent Skills 官方公共示例与规范入口，适合按任务寻找可装入 Agent 的技能；项目尚未完成亲测。",
+    "en": "Public Agent Skills repository for task-driven skills; not independently used or evaluated by OpenResearchAssets."
+  },
+  "keywords": {
+    "zh": [
+      "Agent Skill",
+      "研究技能",
+      "文件工作流"
+    ],
+    "en": [
+      "agent skills",
+      "documents",
+      "skill catalog"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/anthropics/skills"
+  },
+  "rights": {
+    "reuse": "external-repository; inspect its current license and individual assets",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要参考 Agent Skills 的公开组织方式和已有技能，但必须进一步筛选具体子 Skill。"
+      ],
+      "en": [
+        "Looking for established Agent Skills structures and task-specific candidates; each subskill still needs separate review."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "从仓库原始说明筛选当前任务最相关的工具、Skill 或步骤，使用前检查许可证与依赖。"
+      ],
+      "en": [
+        "Select task-relevant skills/tools from the source repository; inspect licensing and dependencies before installing."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "GitHub Star 只是热度指标，不代表我们已安装、实际使用或验证效果。"
+      ],
+      "en": [
+        "GitHub stars signal interest, not our installation, firsthand use, or quality verification."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "anthropics/skills",
+    "stars_snapshot": 183559,
+    "stars_checked_on": "2026-10-25",
+    "verification": "source-verified-not-personally-tested",
+    "selection_reason": {
+      "zh": "需要参考 Agent Skills 的公开组织方式和已有技能，但必须进一步筛选具体子 Skill。",
+      "en": "Looking for established Agent Skills structures and task-specific candidates; each subskill still needs separate review."
+    }
+  },
+  "previewStyle": "workflow"
+}

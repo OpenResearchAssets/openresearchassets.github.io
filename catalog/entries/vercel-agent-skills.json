@@ -1,0 +1,82 @@
+{
+  "id": "vercel-agent-skills",
+  "title": "Vercel Agent Skills · 前端与网页实践",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "writing"
+  ],
+  "domains": [
+    "general"
+  ],
+  "tasks": [
+    "agent-skills",
+    "project-website",
+    "frontend-quality"
+  ],
+  "description": {
+    "zh": "面向前端和网页工程的公开 Agent Skills，适合优化科研项目网站的质量检查；不等于已在此仓库执行过。",
+    "en": "Public web-development Agent Skills relevant to research project websites; not tested here."
+  },
+  "keywords": {
+    "zh": [
+      "项目主页",
+      "前端技能",
+      "网页优化"
+    ],
+    "en": [
+      "agent skills",
+      "frontend",
+      "web design"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/vercel-labs/agent-skills"
+  },
+  "rights": {
+    "reuse": "external-repository; inspect its current license and individual assets",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "构建科研主页时需要可复用的前端与可访问性检查方法。"
+      ],
+      "en": [
+        "Building and checking polished, accessible research project websites."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "从仓库原始说明筛选当前任务最相关的工具、Skill 或步骤，使用前检查许可证与依赖。"
+      ],
+      "en": [
+        "Select task-relevant skills/tools from the source repository; inspect licensing and dependencies before installing."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "GitHub Star 只是热度指标，不代表我们已安装、实际使用或验证效果。"
+      ],
+      "en": [
+        "GitHub stars signal interest, not our installation, firsthand use, or quality verification."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "vercel-labs/agent-skills",
+    "stars_snapshot": 32974,
+    "stars_checked_on": "2026-10-25",
+    "verification": "source-verified-not-personally-tested",
+    "selection_reason": {
+      "zh": "构建科研主页时需要可复用的前端与可访问性检查方法。",
+      "en": "Building and checking polished, accessible research project websites."
+    }
+  },
+  "previewStyle": "workflow"
+}

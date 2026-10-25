@@ -1,0 +1,84 @@
+{
+  "id": "microsoft-markitdown",
+  "title": "Microsoft MarkItDown · 论文文件转换工具",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "writing"
+  ],
+  "domains": [
+    "general"
+  ],
+  "tasks": [
+    "pdf-conversion",
+    "paper-reading",
+    "document-processing"
+  ],
+  "description": {
+    "zh": "把 PDF 与办公文档转换为 Markdown 的开源 Python 工具，可服务科研材料准备和 Agent 阅读；尚无本项目运行记录。",
+    "en": "Open-source PDF/Office-to-Markdown conversion tool for research document preparation; no project-run record yet."
+  },
+  "keywords": {
+    "zh": [
+      "PDF",
+      "Markdown",
+      "文档转换",
+      "科研阅读"
+    ],
+    "en": [
+      "PDF",
+      "Markdown",
+      "document conversion",
+      "research reading"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/microsoft/markitdown"
+  },
+  "rights": {
+    "reuse": "external-repository; inspect its current license and individual assets",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "科研文档解析和 Agent 读取之前需要结构化文本输入。"
+      ],
+      "en": [
+        "Preparing structured text from research PDFs and office documents before agent processing."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "从仓库原始说明筛选当前任务最相关的工具、Skill 或步骤，使用前检查许可证与依赖。"
+      ],
+      "en": [
+        "Select task-relevant skills/tools from the source repository; inspect licensing and dependencies before installing."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "GitHub Star 只是热度指标，不代表我们已安装、实际使用或验证效果。"
+      ],
+      "en": [
+        "GitHub stars signal interest, not our installation, firsthand use, or quality verification."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "tool",
+    "github_repo": "microsoft/markitdown",
+    "stars_snapshot": 192008,
+    "stars_checked_on": "2026-10-25",
+    "verification": "source-verified-not-personally-tested",
+    "selection_reason": {
+      "zh": "科研文档解析和 Agent 读取之前需要结构化文本输入。",
+      "en": "Preparing structured text from research PDFs and office documents before agent processing."
+    }
+  },
+  "previewStyle": "workflow"
+}
