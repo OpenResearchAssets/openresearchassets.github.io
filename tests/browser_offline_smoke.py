@@ -378,6 +378,7 @@ with sync_playwright() as pw:
         assert page.locator('.findings-item-rank').last.inner_text()=='06'
         assert 'HF upvotes' not in page.locator('.findings-feed').first.inner_text() or page.locator('.findings-item-metric').count()==6
         if label in ('desktop','mobile'):
+            page.evaluate('window.scrollTo(0,0)')
             page.screenshot(path=str(ROOT/'tests'/f'_local_findings_focused_{label}.png'),full_page=True)
         page.locator('.findings-back').click()
         assert page.locator('.findings-feed').count()==4
@@ -401,6 +402,25 @@ with sync_playwright() as pw:
             page.screenshot(path=str(ROOT/'tests'/f'_local_findings_{label}.png'),full_page=True)
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='zh-CN'
+        # Real public snapshot: long GitHub repo names and paper abstracts must
+        # not overflow on desktop, tablet or mobile. Not synthetic rankings.
+        real_snapshot=(ROOT/'data/findings.json').read_text(encoding='utf-8')
+        page.route('https://ora.local/data/findings.json',lambda route:
+                   route.fulfill(status=200,body=real_snapshot,content_type='application/json'))
+        page.set_content(page_html('findings.html'),wait_until='load')
+        page.locator('.findings-feed').first.wait_for()
+        assert page.locator('.findings-feed').count()==4
+        assert page.locator('.findings-item').count()<=12
+        assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('findings-real-overview',label)
+        if label in ('desktop','mobile'):
+            page.screenshot(path=str(ROOT/'tests'/f'_local_findings_real_{label}.png'),full_page=True)
+        page.locator('[data-feed="github"]').click()
+        assert page.locator('.findings-feed-focused').count()==1
+        assert page.locator('.findings-item').count()==len(json.loads(real_snapshot)['feeds']['github']['items'])
+        assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('findings-real-focused',label)
+        if label in ('desktop','mobile'):
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=str(ROOT/'tests'/f'_local_findings_real_focused_{label}.png'),full_page=True)
         assert not errors,(label,errors)
         print('PASS',label,'curated visual Gallery, verified Stars, public practice evidence, bilingual and responsive UI')
         page.close()
