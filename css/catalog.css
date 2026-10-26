@@ -302,3 +302,23 @@
 .ora-skill-more[hidden]{display:none}
 @media(max-width:900px){.ora-facets{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.ora-facets{grid-template-columns:1fr}.ora-skill-finder{padding:19px 17px}.ora-skill-finder-head{flex-direction:column;gap:8px}.ora-skill-filters{grid-template-columns:1fr}.ora-skill-filter-footer{align-items:flex-start;flex-direction:column;gap:7px}.ora-skill-stars b{font-size:16px}#skill-status{white-space:normal}}
+
+/* Real SKILL.md dossiers: a one-line outcome on the card, source-grounded steps only on detail. */
+.ora-skill-card .ora-skill-output{font-size:13px!important;line-height:1.58!important;color:#426477!important;border-left:2px solid #b4cbd9;padding:4px 0 4px 11px;margin:0!important}
+.ora-skill-output strong{font-size:12px;color:#215575;margin-right:8px}
+.ora-execution{margin:22px 0 33px;border:1px solid #dce6f0;border-radius:16px;background:#f8fafc;padding:23px 25px}
+.ora-execution-head>span{font-weight:750;font-size:11px;letter-spacing:.09em;color:#487d8c}
+.ora-execution-head h2{font-size:23px;color:#263e52;letter-spacing:-.03em;margin:9px 0}
+.ora-execution-head p{font-size:13px;line-height:1.75;color:#6a7b8c;margin:0 0 20px}
+.ora-execution-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ora-execution-grid>div{background:#fff;border:1px solid #e1e9f1;border-radius:10px;padding:16px 17px}
+.ora-execution h3{font-size:15px;font-weight:720;color:#244b65;margin:10px 0}
+.ora-execution ul,.ora-execution ol{padding-left:21px;margin:0}
+.ora-execution li{font-size:13px;line-height:1.8;margin:4px 0;color:#4e6272}
+.ora-execution-steps{padding-left:24px!important;margin-bottom:16px!important}
+.ora-execution-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center;padding-top:16px;border-top:1px solid #dfe8ef}
+.ora-execution-actions a{font-size:13px;font-weight:720;text-decoration:none;color:#275e84}
+.ora-execution-actions button{border:1px solid #ccdae7;border-radius:9px;color:#315b75;background:#fff;padding:8px 13px;font-size:12px;font-weight:720;cursor:pointer}
+.ora-execution-provenance{font-size:11px;line-height:1.7;overflow-wrap:anywhere;color:#728294;margin:17px 0 0}
+.ora-execution-provenance code{font-size:11px;overflow-wrap:anywhere}
+@media(max-width:720px){.ora-execution{padding:18px 15px}.ora-execution-grid{grid-template-columns:1fr}.ora-execution-head h2{font-size:21px}}

@@ -195,9 +195,10 @@
       const context=e.domains.slice(0,2).map(k=>'<span>'+safe(facetText('domains',k))+'</span>').join('');
       return '<article class="ora-skill-card"><div class="ora-skill-meta"><span>'+safe(typeLabel)+'</span>'+star+'</div>'+
        '<h4><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(e.title)+'</a></h4>'+
-       '<p>'+safe(local(e.description))+'</p><div class="ora-skill-tags">'+context+topical+'</div>'+provenance(e)+'<p class="ora-skill-status">'+safe(state)+'</p>'+proof+
+       '<p>'+safe(local(e.description))+'</p>'+(e.execution?.outputs?'<p class="ora-skill-output"><strong>'+safe(tr('产出','Output'))+'</strong>'+safe((local(e.execution.outputs)||[])[0]||'')+'</p>':'')+
+       '<div class="ora-skill-tags">'+context+topical+'</div>'+provenance(e)+'<p class="ora-skill-status">'+safe(state)+'</p>'+proof+
        '<div class="ora-skill-actions"><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(tr('详情与讨论','Details & discussion'))+' ↗</a>'+
-       link(e.links?.source,tr('查看源项目','Source'))+'</div></article>';
+       link(e.links?.source,e.execution?.source_file_sha?tr('打开原始 SKILL.md','Open original SKILL.md'):tr('查看源项目','Source'))+'</div></article>';
     };
     const filters=getSkillFilters();
     const active=Boolean(filters.q||filters.domain||filters.topic||filters.type);
@@ -334,6 +335,18 @@
       '<div class="ora-study-grid"><section><h3>'+safe(tr('视觉与信息结构','Visual / information structure'))+'</h3>'+points(local(study.composition))+'</section>'+
       '<section><h3>'+safe(tr('迁移到自己论文的步骤','How to transfer the design'))+'</h3>'+points(local(study.reuseSteps))+'</section></div>'+
       '<div class="ora-case-check"><h3>'+safe(tr('事实、风险与授权检查','Scientific and rights checks'))+'</h3>'+points(local(study.verification))+'</div></section>' : '';
+    const exec=e.execution;
+    const executionGuide=exec ? '<section class="ora-execution"><div class="ora-execution-head"><span>'+safe(tr('来源已核实 · 未实际运行','SOURCE REVIEWED · NOT EXECUTED'))+'</span>'+
+      '<h2>'+safe(tr('如何使用这项能力','How to use this capability'))+'</h2>'+
+      '<p>'+safe(tr('这是一份根据上游 SKILL.md 整理的用法提要，不是已安装的 Skill；请在执行前复核原文、当前依赖、权限与许可。','This is a curated note from the original SKILL.md, not an installed skill. Recheck current dependencies, permissions and license.'))+'</p></div>'+
+      '<div class="ora-execution-grid"><div><h3>'+safe(tr('需要准备','Inputs'))+'</h3>'+points(local(exec.inputs))+'</div>'+
+      '<div><h3>'+safe(tr('预期产出','Outputs'))+'</h3>'+points(local(exec.outputs))+'</div>'+
+      '<div><h3>'+safe(tr('运行条件','Requirements'))+'</h3>'+points(local(exec.requirements))+'</div>'+
+      '<div><h3>'+safe(tr('如何验收','Checks'))+'</h3>'+points(local(exec.checks))+'</div></div>'+
+      '<h3>'+safe(tr('操作步骤','Steps'))+'</h3><ol class="ora-execution-steps">'+(local(exec.steps)||[]).map(v=>'<li>'+safe(v)+'</li>').join('')+'</ol>'+
+      '<div class="ora-execution-actions">'+link(e.links?.source,tr('打开完整 SKILL.md','Read full SKILL.md'))+
+      '<button type="button" id="ora-copy-execution">'+safe(tr('复制使用说明','Copy usage brief'))+'</button></div>'+
+      '<p class="ora-execution-provenance">'+safe(tr('上游文件 Blob SHA','Upstream file blob SHA'))+': <code>'+safe(exec.source_file_sha||'')+'</code> · '+safe(exec.source_checked_on||'')+'</p></section>' : '';
     const baseLessons='<div class="ora-lesson"><h2>'+safe(tr('什么时候使用','When to use'))+'</h2>'+points(local(app.use_when))+'</div>'+
       (study ? '' : '<div class="ora-lesson"><h2>'+safe(tr('值得学习的做法','Transferable lessons'))+'</h2>'+points(local(app.learn))+'</div>'+
         '<div class="ora-lesson"><h2>'+safe(tr('需要避免','What to avoid'))+'</h2>'+points(local(app.avoid))+'</div>');
@@ -349,7 +362,7 @@
       : tr('外部参考或原创分析，按单项版权元数据核对','External reference or authored analysis; review item-specific rights');
     detail.innerHTML='<div class="ora-detail-heading"><p class="ora-eyebrow">'+safe(kind(e))+' / '+safe(e.id)+'</p>'+
       '<h1>'+safe(e.title)+'</h1><p>'+safe(local(e.description))+'</p>'+provenance(e,true)+'</div>'+
-      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+(e.analysisVisual ? '<p class="ora-analysis-link"><a target="_blank" rel="noopener noreferrer" href="'+safe(e.analysisVisual.src)+'">'+safe(tr('查看本站原创结构分析 SVG','View authored structure-analysis SVG'))+' ↗</a></p>' : '')+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.label))+' · '+
+      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+executionGuide+(e.analysisVisual ? '<p class="ora-analysis-link"><a target="_blank" rel="noopener noreferrer" href="'+safe(e.analysisVisual.src)+'">'+safe(tr('查看本站原创结构分析 SVG','View authored structure-analysis SVG'))+' ↗</a></p>' : '')+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.label))+' · '+
         (e.figureIdentity ? '<strong>'+safe(e.figureIdentity.original_name)+'</strong> · '+
           safe(tr('原始作者与来源见资产档案；图片是带出处的缩略预览，不是自制科研结果。','See author/source details; this is an attributed preview, not our experiment.')) :
           safe(tr('请打开官方来源核对原始内容','Open the official source to verify original media')))+
@@ -372,6 +385,17 @@
       (related.length?'<div class="ora-related"><h3>'+safe(tr('关联资产','Related asset'))+'</h3><a href="asset.html?id='+encodeURIComponent(related[0].id)+'">'+safe(related[0].title)+' →</a></div>':'')+
       '</aside></div>';
     window.ORA_COMMUNITY?.mount(e.id);
+    document.getElementById('ora-copy-execution')?.addEventListener('click',async ()=>{
+      if(!exec)return;
+      const sections=[['Inputs',exec.inputs],['Outputs',exec.outputs],['Requirements',exec.requirements],
+        ['Steps',exec.steps],['Checks',exec.checks]];
+      const content=['Skill: '+e.title,'Original: '+(e.links?.source||''),
+        'Source reviewed: '+(exec.source_checked_on||''),'Source-only notes: not independently tested.']
+        .concat(sections.flatMap(([label,field])=>[label+':',...(local(field)||[]).map(x=>'- '+x)])).join('\n');
+      const button=document.getElementById('ora-copy-execution');
+      try{await navigator.clipboard.writeText(content);button.textContent=tr('已复制','Copied');}
+      catch(_){button.textContent=tr('无法复制，请打开源文件','Clipboard unavailable; open original');}
+    });
     document.getElementById('ora-copy-brief')?.addEventListener('click',async ()=>{
       const lines=['Asset: '+e.title,'URL: '+location.href,'Tasks: '+e.tasks.join(', '),
         'Use when: '+(local(app.use_when)||[]).join('；'),'Learn: '+(local(app.learn)||[]).join('；'),
