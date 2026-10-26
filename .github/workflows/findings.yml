@@ -10,6 +10,8 @@ on:
       - tools/update_findings.py
       - tools/findings_enrichment.py
       - tools/findings_offline_translate.py
+      - tools/findings_editorial_zh.py
+      - data/findings_editorial_zh.json
       - tests/check_findings.py
 permissions:
   contents: write
