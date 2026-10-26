@@ -1,38 +1,532 @@
 {
   "schema_version": "1",
-  "generated_at": null,
+  "generated_at": "2026-10-26T04:07:32Z",
   "feeds": {
     "papers": {
       "source": "Hugging Face Papers",
       "url": "https://huggingface.co/papers/trending",
-      "status": "pending",
-      "fetched_at": null,
-      "metric_note": "",
-      "items": []
+      "fetched_at": "2026-10-26T04:07:27Z",
+      "status": "ok",
+      "metric_note": "HF 社区投票 · 官方 trending 排序",
+      "items": [
+        {
+          "title": "Harness^2: Recursive Agent Harnessing for an Open World",
+          "url": "https://huggingface.co/papers/2610.14224",
+          "subtitle": "LLM agents' capabilities depend not only on their underlying models but also on their execution harnesses. Recursive self-improvement (RSI) offers a promising approach to automatically evolve these harnesses. However, deploying RSI in open-world settings still faces two critical challenges. First, open-world tasks are typically unseen during the harness design phase and novel at test time, leaving no ground-truth verifiers to reliably guide online harness edits. Second, the RSI process remains highly task-specific ",
+          "author": "2610.14224",
+          "value": 123,
+          "badge": "2026-10-09T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+          "url": "https://huggingface.co/papers/2412.20138",
+          "subtitle": "Significant progress has been made in automated problem-solving using societies of agents powered by large language models (LLMs). In finance, efforts have largely focused on single-agent systems handling specific tasks or multi-agent frameworks independently gathering data. However, the multi-agent systems' potential to replicate real-world trading firms' collaborative dynamics remains underexplored. TradingAgents proposes a novel stock trading framework inspired by trading firms, featuring LLM-powered agents in s",
+          "author": "2412.20138",
+          "value": 154,
+          "badge": "2024-12-28T12:54:06+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "Kronos: A Foundation Model for the Language of Financial Markets",
+          "url": "https://huggingface.co/papers/2508.02739",
+          "subtitle": "The success of large-scale pre-training paradigm, exemplified by Large Language Models (LLMs), has inspired the development of Time Series Foundation Models (TSFMs). However, their application to financial candlestick (K-line) data remains limited, often underperforming non-pre-trained architectures. Moreover, existing TSFMs often overlook crucial downstream tasks such as volatility prediction and synthetic data generation. To address these limitations, we propose Kronos, a unified, scalable pre-training framework ",
+          "author": "2508.02739",
+          "value": 62,
+          "badge": "2025-08-02T13:15:59+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
+          "url": "https://huggingface.co/papers/2609.18063",
+          "subtitle": "Mixture-of-experts (MoE) inference on consumer hardware is bounded by weight memory: a 35B-class model is 19.5GB at 4-bit, and sparsity shrinks the compute per token, not the bytes that must be held. Naive offloading to SSD does not help on its own, because layer N+1's experts must be chosen before layer N's output exists, so the reads cannot start early enough to hide behind compute. We present Edge0, a streaming MoE inference engine that closes the gap with a prerouter: a per-layer head predicts the next layer's ",
+          "author": "2609.18063",
+          "value": 30,
+          "badge": "2026-09-16T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "MOSS-Image Technical Report",
+          "url": "https://huggingface.co/papers/2610.23374",
+          "subtitle": "Recent closed-source image generation systems can produce diverse visual content from simple compositions to information-dense graphics, yet open-weight text-to-image models still struggle with dense text and intricate layouts. To narrow this gap, we introduce MOSS-Image, an open generation system that combines high-fidelity visual synthesis with intent-aware composition. First, we pretrain a 5B single-stream diffusion transformer (DiT) from scratch with a carefully designed recipe, enabling bilingual long-form tex",
+          "author": "2610.23374",
+          "value": 103,
+          "badge": "2026-10-16T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "nanoMuse: An Open-Source Personal Agent for Every Device You Own",
+          "url": "https://huggingface.co/papers/2610.08699",
+          "subtitle": "Assistants from 2011 answered and waited, and agents from 2023 did a task and stopped. In September 2026 Meta's Muse showed an agent for one person, with accounts, devices, memory and a conversation that lasts, closed, in a vendor's cloud, in one country. Such an agent is expected to act on a person's accounts and devices, remember them across weeks, speak first when it is worth it, and answer for what it did. It is a kind of software, not a model, and until now had no open counterpart. This report defines the pers",
+          "author": "2610.08699",
+          "value": 120,
+          "badge": "2026-10-06T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "StartLux-Decision: AutoThink Decision Models with Reinforcement Learning for Calibrated Deliberative Decisions",
+          "url": "https://huggingface.co/papers/2610.17309",
+          "subtitle": "We introduce StartLux-Decision, decision models from 0.8B to 27B parameters that combine efficient single-pass prediction with adaptive, confidence-guided reasoning. The Instant models use bidirectional attention in full-attention layers to improve decision accuracy while keeping single-pass inference. The AutoThink models invoke explicit reasoning for uncertain decisions and answer confident cases directly. A three-stage training pipeline establishes shared decision capabilities, specializes the two variants, and ",
+          "author": "2610.17309",
+          "value": 81,
+          "badge": "2026-10-12T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "Prism: Dynamic Sparse Attention for Native 2K Joint Video-Audio Generation Model Training",
+          "url": "https://huggingface.co/papers/2610.05416",
+          "subtitle": "Natively training joint video-audio generation models at higher resolutions empowers them to learn richer visual details and sharper motion dynamics. However, full attention incurs quadratic cost and, as resolution increases, spreads attention over increasingly redundant tokens, diluting learning signals for informative content and disrupting pretrained priors. Existing sparse attention methods either target training-free acceleration or overlook the unique structure of joint video-audio data, where cross-modal int",
+          "author": "2610.05416",
+          "value": 23,
+          "badge": "2026-10-04T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation",
+          "url": "https://huggingface.co/papers/2610.14162",
+          "subtitle": "Diffusion language models (DLMs) offer parallel sampling for faster generation than autoregressive models, an increasingly important advantage as inference becomes a dominant computational workload. However, DLMs degrade quickly with fewer sampling steps, process the full sequence at every step, and require many passes over the dataset to reach good quality. We introduce Next-Concept Modeling (NCM), a two-stage, coarse-to-fine framework: a multiscale residual VQ-VAE encodes text into a hierarchy of discrete codes, ",
+          "author": "2610.14162",
+          "value": 16,
+          "badge": "2026-10-09T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "AgentScope 1.0: A Developer-Centric Framework for Building Agentic Applications",
+          "url": "https://huggingface.co/papers/2508.16279",
+          "subtitle": "Driven by rapid advancements of Large Language Models (LLMs), agents are empowered to combine intrinsic knowledge with dynamic tool use, greatly enhancing their capacity to address real-world tasks. In line with such an evolution, AgentScope introduces major improvements in a new version (1.0), towards comprehensively supporting flexible and efficient tool-based agent-environment interactions for building agentic applications. Specifically, we abstract foundational components essential for agentic applications and ",
+          "author": "2508.16279",
+          "value": 71,
+          "badge": "2025-08-22T10:35:56+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "Very Large-Scale Multi-Agent Simulation in AgentScope",
+          "url": "https://huggingface.co/papers/2407.17789",
+          "subtitle": "Recent advances in large language models (LLMs) have opened new avenues for applying multi-agent systems in very large-scale simulations. However, there remain several challenges when conducting multi-agent simulations with existing platforms, such as limited scalability and low efficiency, unsatisfied agent diversity, and effort-intensive management processes. To address these challenges, we develop several new features and components for AgentScope, a user-friendly multi-agent platform, enhancing its convenience ",
+          "author": "2407.17789",
+          "value": 48,
+          "badge": "2024-07-25T05:50:46+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+          "url": "https://huggingface.co/papers/2309.06180",
+          "subtitle": "High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time. However, existing systems struggle because the key-value cache (KV cache) memory for each request is huge and grows and shrinks dynamically. When managed inefficiently, this memory can be significantly wasted by fragmentation and redundant duplication, limiting the batch size. To address this problem, we propose PagedAttention, an attention algorithm inspired by the classical virtual memory and paging tec",
+          "author": "2309.06180",
+          "value": 77,
+          "badge": "2023-09-12T12:50:04+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "OpenDevin: An Open Platform for AI Software Developers as Generalist Agents",
+          "url": "https://huggingface.co/papers/2407.16741",
+          "subtitle": "Software is one of the most powerful tools that we humans have at our disposal; it allows a skilled programmer to interact with the world in complex and profound ways. At the same time, thanks to improvements in large language models (LLMs), there has also been a rapid development in AI agents that interact with and affect change in their surrounding environments. In this paper, we introduce OpenDevin, a platform for the development of powerful and flexible AI agents that interact with the world in similar ways to ",
+          "author": "2407.16741",
+          "value": 90,
+          "badge": "2024-07-23T17:50:43+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "Unlimited OCR Works",
+          "url": "https://huggingface.co/papers/2606.23050",
+          "subtitle": "Recently, end-to-end OCR models, exemplified by DeepSeek OCR, have once again thrust OCR into the spotlight. A widely held view is that employing a large language model (LLM) as the decoder allows the model to leverage the prior distribution of language, leading to improved OCR performance. However, the downside is equally evident: as the output sequence lengthens, the accumulated KV cache drives up memory consumption and progressively slows down generation. This stands in stark contrast to humans, who exhibit no s",
+          "author": "2606.23050",
+          "value": 97,
+          "badge": "2026-06-22T00:00:00+00:00",
+          "metric": "upvotes"
+        }
+      ]
     },
     "github": {
       "source": "GitHub Trending",
       "url": "https://github.com/trending?since=weekly",
-      "status": "pending",
-      "fetched_at": null,
-      "metric_note": "",
-      "items": []
+      "fetched_at": "2026-10-26T04:07:28Z",
+      "status": "ok",
+      "metric_note": "官方 weekly Trending 排名；可见时显示本周新增 Stars",
+      "items": [
+        {
+          "title": "cloudflare/security-audit-skill",
+          "url": "https://github.com/cloudflare/security-audit-skill",
+          "subtitle": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+          "badge": "GitHub Trending · weekly",
+          "value": 15072,
+          "metric": "stars gained this week"
+        },
+        {
+          "title": "ruvnet/ruflo",
+          "url": "https://github.com/ruvnet/ruflo",
+          "subtitle": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+          "badge": "GitHub Trending · weekly",
+          "value": 2987,
+          "metric": "stars gained this week"
+        },
+        {
+          "title": "anthropics/knowledge-work-plugins",
+          "url": "https://github.com/anthropics/knowledge-work-plugins",
+          "subtitle": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+          "badge": "GitHub Trending · weekly",
+          "value": 2790,
+          "metric": "stars gained this week"
+        },
+        {
+          "title": "anomalyco/opencode",
+          "url": "https://github.com/anomalyco/opencode",
+          "subtitle": "The open source coding agent.",
+          "badge": "GitHub Trending · weekly",
+          "value": 5921,
+          "metric": "stars gained this week"
+        },
+        {
+          "title": "stablyai/orca",
+          "url": "https://github.com/stablyai/orca",
+          "subtitle": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+          "badge": "GitHub Trending · weekly",
+          "value": 9622,
+          "metric": "stars gained this week"
+        },
+        {
+          "title": "heygen-com/hyperframes",
+          "url": "https://github.com/heygen-com/hyperframes",
+          "subtitle": "Write HTML. Render video. Built for agents.",
+          "badge": "GitHub Trending · weekly",
+          "value": 5612,
+          "metric": "stars gained this week"
+        },
+        {
+          "title": "android/skills",
+          "url": "https://github.com/android/skills",
+          "subtitle": "",
+          "badge": "GitHub Trending · weekly",
+          "value": 1070,
+          "metric": "stars gained this week"
+        },
+        {
+          "title": "Graphify-Labs/graphify",
+          "url": "https://github.com/Graphify-Labs/graphify",
+          "subtitle": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+          "badge": "GitHub Trending · weekly",
+          "value": 6903,
+          "metric": "stars gained this week"
+        },
+        {
+          "title": "akitaonrails/ai-memory",
+          "url": "https://github.com/akitaonrails/ai-memory",
+          "subtitle": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+          "badge": "GitHub Trending · weekly",
+          "value": 3254,
+          "metric": "stars gained this week"
+        },
+        {
+          "title": "Comfy-Org/ComfyUI",
+          "url": "https://github.com/Comfy-Org/ComfyUI",
+          "subtitle": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+          "badge": "GitHub Trending · weekly",
+          "value": 4790,
+          "metric": "stars gained this week"
+        },
+        {
+          "title": "anthropics/claude-plugins-official",
+          "url": "https://github.com/anthropics/claude-plugins-official",
+          "subtitle": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+          "badge": "GitHub Trending · weekly",
+          "value": 2245,
+          "metric": "stars gained this week"
+        },
+        {
+          "title": "vllm-project/vllm",
+          "url": "https://github.com/vllm-project/vllm",
+          "subtitle": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+          "badge": "GitHub Trending · weekly",
+          "value": 1445,
+          "metric": "stars gained this week"
+        },
+        {
+          "title": "multica-ai/andrej-karpathy-skills",
+          "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+          "subtitle": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+          "badge": "GitHub Trending · weekly",
+          "value": 2937,
+          "metric": "stars gained this week"
+        },
+        {
+          "title": "pingdotgg/t3code",
+          "url": "https://github.com/pingdotgg/t3code",
+          "subtitle": "",
+          "badge": "GitHub Trending · weekly",
+          "value": 1770,
+          "metric": "stars gained this week"
+        }
+      ]
     },
     "skills": {
-      "source": "Skills.sh / GitHub Search",
-      "url": "https://skills.sh/trending",
-      "status": "pending",
-      "fetched_at": null,
-      "metric_note": "",
-      "items": []
+      "source": "GitHub Search",
+      "url": "https://github.com/search?q=topic%3Aagent-skills&type=repositories",
+      "fetched_at": "2026-10-26T04:07:30Z",
+      "status": "ok",
+      "metric_note": "近 60 天创建的 Skills 仓库，按累计 Stars 排序（非增长榜）",
+      "items": [
+        {
+          "title": "lemomo-ai/lemo-opuscar",
+          "url": "https://github.com/lemomo-ai/lemo-opuscar",
+          "subtitle": "A toolbox of film styles made in code for Claude Code: 59 ready to use, and your own. Each style is a style prompt plus a demo film made entirely in code by Claude Opus 5.5, with no video model. By Lemomo. · 一套用代码做片的风格工具箱：59 种现成风格，也能做出你自己的",
+          "badge": "GitHub · 新创建 Skills 仓库",
+          "author": "JavaScript",
+          "value": 7544,
+          "metric": "total stars"
+        },
+        {
+          "title": "Ryze-AI-Adgent/open-seo-mcp-skills",
+          "url": "https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills",
+          "subtitle": "Free SEO MCP server + open-source SEO and GEO skills for Claude: keyword research, rank tracking, audits, backlinks, AI visibility on your real GSC/GA4/ads data. claude mcp add ryze --transport http https://connector.get-ryze.ai/mcp",
+          "badge": "GitHub · 新创建 Skills 仓库",
+          "author": "Shell",
+          "value": 7255,
+          "metric": "total stars"
+        },
+        {
+          "title": "Jakeschincariol/replica-skill",
+          "url": "https://github.com/Jakeschincariol/replica-skill",
+          "subtitle": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
+          "badge": "GitHub · 新创建 Skills 仓库",
+          "author": "Python",
+          "value": 5514,
+          "metric": "total stars"
+        },
+        {
+          "title": "kaankiziltug/logo-design-skill",
+          "url": "https://github.com/kaankiziltug/logo-design-skill",
+          "subtitle": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library.",
+          "badge": "GitHub · 新创建 Skills 仓库",
+          "author": "HTML",
+          "value": 4590,
+          "metric": "total stars"
+        },
+        {
+          "title": "QingYunA/answer-me-with-html",
+          "url": "https://github.com/QingYunA/answer-me-with-html",
+          "subtitle": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。",
+          "badge": "GitHub · 新创建 Skills 仓库",
+          "author": "JavaScript",
+          "value": 4452,
+          "metric": "total stars"
+        },
+        {
+          "title": "Oldcircle/geo-sleuth",
+          "url": "https://github.com/Oldcircle/geo-sleuth",
+          "subtitle": "An agent skill that finds where a photo was taken — OpenStreetMap geometry, elevation skylines, satellite imagery and street view — and shows its work. Works with Claude Code, Codex, Cursor, Gemini CLI, OpenCode and GitHub Copilot.",
+          "badge": "GitHub · 新创建 Skills 仓库",
+          "author": "Python",
+          "value": 4184,
+          "metric": "total stars"
+        },
+        {
+          "title": "Nanako0129/sepia",
+          "url": "https://github.com/Nanako0129/sepia",
+          "subtitle": "De-AI writing skill for any Agent Skills-compatible agent (77+ via the Skills CLI), with native plugins for Claude Code, Codex, Grok Build, and Antigravity. Narrative-architecture repair for fiction, venue-matched rules for professional prose. Based on StoryScope (arXiv:2604.03136).",
+          "badge": "GitHub · 新创建 Skills 仓库",
+          "author": "Python",
+          "value": 3478,
+          "metric": "total stars"
+        },
+        {
+          "title": "kajisho5/ffmpeg-skill",
+          "url": "https://github.com/kajisho5/ffmpeg-skill",
+          "subtitle": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
+          "badge": "GitHub · 新创建 Skills 仓库",
+          "author": "Python",
+          "value": 2876,
+          "metric": "total stars"
+        },
+        {
+          "title": "Vincentwei1021/anything2explainer",
+          "url": "https://github.com/Vincentwei1021/anything2explainer",
+          "subtitle": "Topic in, narrated explainer video out. A Claude Code / Codex skill that turns any topic into a black-canvas motion-graphics explainer video with TTS voiceover, subtitles and a chapter progress bar. Chinese or English; every frame drawn in code with Remotion.",
+          "badge": "GitHub · 新创建 Skills 仓库",
+          "author": "TypeScript",
+          "value": 2751,
+          "metric": "total stars"
+        },
+        {
+          "title": "Jakeschincariol/linkedin-agent-skill",
+          "url": "https://github.com/Jakeschincariol/linkedin-agent-skill",
+          "subtitle": "Eleven free Claude skills that run a LinkedIn account: posts off 21 hook formulas, comments, replies, profile score, weekly plan, and a humanizer that strips the AI fingerprint and scores the draft before it goes out.",
+          "badge": "GitHub · 新创建 Skills 仓库",
+          "author": "Python",
+          "value": 2684,
+          "metric": "total stars"
+        },
+        {
+          "title": "nano-muse/nanoMuse",
+          "url": "https://github.com/nano-muse/nanoMuse",
+          "subtitle": "nanoMuse: an open-source personal agent for every device you own. One agent with a name and a look of its own that does things, keeps working while the app is closed, remembers you, and asks before anything you cannot undo. On Android, iPhone and iPad, Windows / macOS / Linux and in the browser; your phone's screen and your computer as its hands.",
+          "badge": "GitHub · 新创建 Skills 仓库",
+          "author": "Swift",
+          "value": 2595,
+          "metric": "total stars"
+        },
+        {
+          "title": "nanaism/yomiyasu",
+          "url": "https://github.com/nanaism/yomiyasu",
+          "subtitle": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese",
+          "badge": "GitHub · 新创建 Skills 仓库",
+          "author": "Python",
+          "value": 2550,
+          "metric": "total stars"
+        },
+        {
+          "title": "oil-oil/oil-ui",
+          "url": "https://github.com/oil-oil/oil-ui",
+          "subtitle": "UI design skill for Claude Code, Codex and other AI agents: explore distinct directions, compare them side by side, refine against real screenshots. 给 AI Agent 用的 UI 设计 Skill。",
+          "badge": "GitHub · 新创建 Skills 仓库",
+          "author": "Python",
+          "value": 2250,
+          "metric": "total stars"
+        },
+        {
+          "title": "amontlabs/lcu",
+          "url": "https://github.com/amontlabs/lcu",
+          "subtitle": "Codex computer use, decoupled from the app, for usage inside any harness.",
+          "badge": "GitHub · 新创建 Skills 仓库",
+          "author": "JavaScript",
+          "value": 2215,
+          "metric": "total stars"
+        }
+      ]
     },
     "workflows": {
       "source": "GitHub Search",
       "url": "https://github.com/search?q=research+workflow&type=repositories",
-      "status": "pending",
-      "fetched_at": null,
-      "metric_note": "",
-      "items": []
+      "fetched_at": "2026-10-26T04:07:32Z",
+      "status": "ok",
+      "metric_note": "近 60 天创建的工作流项目，按累计 Stars 排序（非 Trending 官方榜）",
+      "items": [
+        {
+          "title": "Git-Agni/prod-FARM-IOS-Core",
+          "url": "https://github.com/Git-Agni/prod-FARM-IOS-Core",
+          "subtitle": "A farm of real iPhones, run from your Mac. Open-source iOS device automation with live control, a Postgres-backed scheduler, and TikTok workflows. Self-hosted, Apache-2.0.",
+          "badge": "GitHub · 新创建工作流",
+          "author": "TypeScript",
+          "value": 1776,
+          "metric": "total stars"
+        },
+        {
+          "title": "Agenta-AI/awesome-ai-agent-platforms",
+          "url": "https://github.com/Agenta-AI/awesome-ai-agent-platforms",
+          "subtitle": "A curated list of open-source AI agent platforms: AI coworkers and teammates, agent builders and frameworks, workflow automation platforms, browser agents, and coding agents, with licenses.",
+          "badge": "GitHub · 新创建工作流",
+          "author": "Astro",
+          "value": 669,
+          "metric": "total stars"
+        },
+        {
+          "title": "ceyyy427/finathink",
+          "url": "https://github.com/ceyyy427/finathink",
+          "subtitle": "Finathink — Financial Research Optimizer for auditable, point-in-time research, mathematical learning, and constrained portfolio analysis.",
+          "badge": "GitHub · 新创建工作流",
+          "author": "Python",
+          "value": 249,
+          "metric": "total stars"
+        },
+        {
+          "title": "WestFox-AwA/dsh-wish-specializer",
+          "url": "https://github.com/WestFox-AwA/dsh-wish-specializer",
+          "subtitle": "许愿特化器 · Wish Specializer — DSH 插件：让模型更出色地，不误解你的意思地，完成你的“愿望”。在短提示词+自带的Wish预设（PTC也可以）+重度的情况下，可以起到巨大的表现增益",
+          "badge": "GitHub · 新创建工作流",
+          "author": "JavaScript",
+          "value": 137,
+          "metric": "total stars"
+        },
+        {
+          "title": "kevinbadi/Kevs-IOS-Agents",
+          "url": "https://github.com/kevinbadi/Kevs-IOS-Agents",
+          "subtitle": "A farm of real iPhones, run from your Mac. Open-source iOS device automation with live control, a Postgres-backed scheduler, and TikTok workflows. Self-hosted, Apache-2.0.",
+          "badge": "GitHub · 新创建工作流",
+          "author": "TypeScript",
+          "value": 112,
+          "metric": "total stars"
+        },
+        {
+          "title": "Gu-kai-lei/Open-Pet-Office",
+          "url": "https://github.com/Gu-kai-lei/Open-Pet-Office",
+          "subtitle": "A visual multi-agent desktop for Codex: live tasks, shared projects, isolated Missions, and OpenCodex models on Windows.",
+          "badge": "GitHub · 新创建工作流",
+          "author": "JavaScript",
+          "value": 90,
+          "metric": "total stars"
+        },
+        {
+          "title": "ScriptedAlchemy/pstack-codex",
+          "url": "https://github.com/ScriptedAlchemy/pstack-codex",
+          "subtitle": "Codex-native port of Lauren Tan's pstack: 47 skills, 23 playbooks, agent personas, multi-agent workflows, and Benny automation adapters. Includes a Codex marketplace and installer.",
+          "badge": "GitHub · 新创建工作流",
+          "author": "JavaScript",
+          "value": 72,
+          "metric": "total stars"
+        },
+        {
+          "title": "bydtesla1609/research-solution-supervisor",
+          "url": "https://github.com/bydtesla1609/research-solution-supervisor",
+          "subtitle": "Supervising whether AI really promotes cross-platform skills in research programs",
+          "badge": "GitHub · 新创建工作流",
+          "author": "",
+          "value": 70,
+          "metric": "total stars"
+        },
+        {
+          "title": "maurinruneacco/luau-diagrams-and-defects",
+          "url": "https://github.com/maurinruneacco/luau-diagrams-and-defects",
+          "subtitle": "Production Data Engineering Cloud Architecture Workflow Automation Portfolio 2026",
+          "badge": "GitHub · 新创建工作流",
+          "author": "HTML",
+          "value": 68,
+          "metric": "total stars"
+        },
+        {
+          "title": "gggamil/mazebreak-flowforge",
+          "url": "https://github.com/gggamil/mazebreak-flowforge",
+          "subtitle": "MazeBreak Trello Automation Power-Up: Ultimate Roblox Game Dev Workflow 2026",
+          "badge": "GitHub · 新创建工作流",
+          "author": "HTML",
+          "value": 68,
+          "metric": "total stars"
+        },
+        {
+          "title": "gxCaesar/open-research-skills",
+          "url": "https://github.com/gxCaesar/open-research-skills",
+          "subtitle": "从选题到可复现发布：十个可独立安装的科研 agent skill —— 顶会/期刊论文、科研绘图、基金 proposal 撰写、方法迭代到 SOTA、冷审与代码数据发布。Ten installable agent skills for research: scientific figures, conference and journal manuscripts, research funding proposals, method development, cold review and artifact release.",
+          "badge": "GitHub · 新创建工作流",
+          "author": "Python",
+          "value": 58,
+          "metric": "total stars"
+        },
+        {
+          "title": "Xiuyiw/CFD-SCIPaper-Agent",
+          "url": "https://github.com/Xiuyiw/CFD-SCIPaper-Agent",
+          "subtitle": "Author-in-the-loop toolkit for turning mature CFD evidence into defensible research directions, reproducible figures, and traceable scientific prose.",
+          "badge": "GitHub · 新创建工作流",
+          "author": "Python",
+          "value": 48,
+          "metric": "total stars"
+        },
+        {
+          "title": "Ariakage/live2d-agent-kit",
+          "url": "https://github.com/Ariakage/live2d-agent-kit",
+          "subtitle": "Live2D creation workflow for Codex and AI agents, with PSD/PNG rigging, anime upscaling, Core/WebGL validation, and an example model for VTube Studio.",
+          "badge": "GitHub · 新创建工作流",
+          "author": "JavaScript",
+          "value": 39,
+          "metric": "total stars"
+        },
+        {
+          "title": "elenahao66/Awesome-billing-automation",
+          "url": "https://github.com/elenahao66/Awesome-billing-automation",
+          "subtitle": "A curated list of awesome automated billing systems, invoicing tools, and payment workflow hacks for freelancers, developers, and SaaS creators.",
+          "badge": "GitHub · 新创建工作流",
+          "author": "",
+          "value": 34,
+          "metric": "total stars"
+        }
+      ]
     }
   }
 }
