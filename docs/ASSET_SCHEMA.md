@@ -34,6 +34,15 @@
 | \`parent\` | 相关条目 ID | 可选，用于 Teaser ↔ 项目主页跳转 |
 | \`previewStyle\` | 原创结构图的样式关键词 | 网站用自身图形示意，不把它叫官方截图 |
 
+
+新收录的投稿来源字段：
+- `submission.github`：真实 GitHub 投稿者 login，必须与公开 Issue / PR 的作者身份一致（新收录必填）。
+- `submission.added_on`：通过审核且正式进入 Gallery / Skills 的日期，格式 `YYYY-MM-DD`（新收录必填）。
+- `submission.original_author`：作品原作者/团队，须依据一手来源核实；不要将上传者当成论文作者。
+- `submission.issue_url`：公开投稿 Issue 或审核 PR 的来源链接（建议填写）。
+
+投稿时间、正式收录日期和论文发表年份彼此不同。历史条目缺少可核验的收录日或投稿人时不猜测、不批量赋值；详情页明确显示待追溯。投稿与收录记录仍只保存在唯一权威目录 `catalog/index.json`，并通过同步工具产生 AI 单项条目。
+
 中文是说明的权威版本；英文为检索与国际读者服务，不得缺失。
 
 ## 收录与版权边界
