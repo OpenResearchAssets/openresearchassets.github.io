@@ -21,7 +21,7 @@
   skills:'https://github.com/search?q=topic%3Aagent-skills&type=repositories',
   workflows:'https://github.com/search?q=research+workflow&type=repositories'
  };
- const zh=()=>document.documentElement.lang!=='en';
+ const zh=()=>window.ORA_I18N?.language ? window.ORA_I18N.language==='zh' : document.documentElement.lang.toLowerCase().startsWith('zh');
  const tr=(cn,en)=>zh()?cn:en;
  const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const safeUrl=value=>{try{const u=new URL(String(value||''));return u.protocol==='https:'&&u.hostname?u.href:''}catch{return ''}};
