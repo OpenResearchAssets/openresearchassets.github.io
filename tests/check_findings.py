@@ -20,7 +20,7 @@ def check_snapshot(path:Path)->None:
     assert data.get('generated_at') is None or re.fullmatch(r'\d{4}-\d\d-\d\dT.+Z',data['generated_at'])
     for key,feed in data['feeds'].items():
         assert feed['status'] in ('pending','ok','stale','unavailable'),(key,'unsupported source state')
-        assert isinstance(feed['items'],list) and len(feed['items'])<=14
+        assert isinstance(feed['items'],list) and len(feed['items'])<=(40 if key=='papers' else 14)
         assert collector.valid_url(feed['url']), (key,'invalid source URL')
         if feed['status'] in ('ok','stale'):
             assert feed['items'] and feed['fetched_at'], (key,'no audited source snapshot')
@@ -29,8 +29,13 @@ def check_snapshot(path:Path)->None:
         for value in feed['items']:
             assert value.get('title') and value.get('url'),(key,'incomplete item')
             assert collector.valid_url(value['url']), (key,'untrusted item URL')
-            assert len(value['title'])<=210 and len(value.get('subtitle',''))<=520
+            assert len(value['title'])<=210 and len(value.get('subtitle',''))<=780 and len(value.get('detail',''))<=2600
             assert 'value' not in value or (type(value['value']) is int and value['value']>=0)
+            if value.get('summary_source'):
+                assert value['summary_source'] in ('paper abstract','repository README')
+            for translated_field in ('title_zh','subtitle_zh','detail_zh'):
+                if translated_field in value:
+                    assert isinstance(value[translated_field],str) and len(value[translated_field])<=3000
             assert value.get('metric') in ('upvotes','total installs','stars gained this week','total stars','position'),(key,'unsupported metric')
     print('PASS: Findings source provenance, freshness and safe metrics')
 
