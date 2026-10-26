@@ -2,6 +2,20 @@
 
 OpenResearchAssets 是**科研全过程可发现、可理解、可复用的资产库**，服务人类和有文件/网页读取工具的 AI。首批高质量积累集中在 AI / CV / Robotics 的科研视觉表达与工作流，但分类架构不限于论文绘图。
 
+## 网站信息架构（当前权威规则）
+
+用户面向的一级入口只有 **精选 Curated / 社区 Community / 投稿 Contribute**，不要再把 Gallery、可编辑 SVG、Skills、质量自查、设计原则、For AI 当作平级产品页面。
+
+| 一级入口 | 内容 | 资产存储 / 操作 |
+|---|---|---|
+| 精选（首页 `index.html`） | Gallery（优秀论文图、项目主页、可编辑 SVG）与 Skills / Workflows 两类正式资产；页面展示仅服务这两条主线 | `catalog/index.json`，人工审核；资产详情 `asset.html?id=...` |
+| 社区（`community.html`） | 所有人发现与讨论未精选投稿，按最新、点赞与类型筛选；不将点赞数当作精选质量 | GitHub Issue Form + Issues API；不维护第二套资产目录 |
+| 投稿（`contribute.html`） | 唯一醒目的投稿入口；三项必要说明（原作者/来源、用途、版权） | GitHub Issue Form，无须仓库权限 |
+
+辅助能力 `quality.html`、`principles.html`、`for-agents/` 与版权政策继续保留，但是从**公共页脚**进入，不与三入口竞争。历史 `examples/` 等教学材料保留旧链接，默认不重新推广成主产品。
+
+站点公共导航/公共页脚的**唯一代码实现**是 `js/navigation.js`（响应式配套 `css/site.css`），所有页面只声明带 `data-page` 的空 `#site-nav` 挂载点；语言切换按统一状态更新。禁止复制页面独立导航，也不增加多个互相矛盾的 IA 文档。 `index.html` 的可编辑 SVG 保留为 Gallery 子分类，放在 Skills 之前；Community 的入口说明尽量简短，让用户先看到实际投稿。维护已设计好的真图及 39 条精选档案，不为收敛导航而重新绘图。
+
 ## 选品原则：两个核心资产方向
 
 Open Research Assets 的公开首页只突出 **Research Gallery（高审美科研配图、项目主页和可编辑图）** 与 **Research Skills / Workflows（能够完成具体任务的能力资产）**。论文方法或实验解读仅作为必要的来源、科学事实和设计参考辅助，**不再作为首页、组织主页或增长方向的主产品**；既有页面可以保留旧链接，但不主动作为产品入口推广。
