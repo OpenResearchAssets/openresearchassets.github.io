@@ -9,6 +9,7 @@ on:
       - .github/workflows/findings.yml
       - tools/update_findings.py
       - tools/findings_enrichment.py
+      - tools/findings_offline_translate.py
       - tests/check_findings.py
 permissions:
   contents: write
@@ -18,7 +19,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
         with:
@@ -26,8 +27,24 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install official Hugging Face API client
-        run: python -m pip install "huggingface_hub>=0.35,<2"
+      - name: Cache English-Chinese translation model
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.local/share/argos-translate
+            ~/.cache/argos-translate
+            ~/.cache/argos
+          key: ora-argos-en-zh-py311-v1
+      - name: Install data and offline translation clients
+        run: python -m pip install "huggingface_hub>=0.35,<2" "argostranslate>=1.9,<2"
+      - name: Verify Argos language pair is available
+        run: |
+          python - <<'PY'
+          from tools.findings_offline_translate import load_translator
+          engine = load_translator()
+          assert engine.translate("The model learns new skills from experience.")
+          print("English → Chinese translation package ready.")
+          PY
       - name: Fetch public trends and preserve last valid per-source data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
