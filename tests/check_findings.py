@@ -11,6 +11,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'tools'))
 import update_findings as collector
 import findings_enrichment as enrichment
+import findings_offline_translate as offline
 from unittest.mock import patch
 
 SOURCES=('papers','github','skills','workflows')
@@ -20,6 +21,12 @@ def check_snapshot(path:Path)->None:
     assert data.get('schema_version')=='1','Unexpected schema version'
     assert set(data['feeds'])==set(SOURCES),'Expected four distinct sources'
     assert data.get('generated_at') is None or re.fullmatch(r'\d{4}-\d\d-\d\dT.+Z',data['generated_at'])
+    if 'translation_coverage' in data:
+        coverage=data['translation_coverage']
+        assert isinstance(coverage['translated'],int)
+        assert isinstance(coverage['total'],int)
+        assert 0<=coverage['translated']<=coverage['total']
+        assert coverage['total']==sum(len(f['items']) for f in data['feeds'].values())
     for key,feed in data['feeds'].items():
         assert feed['status'] in ('pending','ok','stale','unavailable'),(key,'unsupported source state')
         assert isinstance(feed['items'],list) and len(feed['items'])<=(100 if key=='papers' else 14)
@@ -37,7 +44,7 @@ def check_snapshot(path:Path)->None:
                 assert value['summary_source'] in ('paper abstract','repository README')
             for translated_field in ('title_zh','subtitle_zh','detail_zh'):
                 if translated_field in value:
-                    assert isinstance(value[translated_field],str) and len(value[translated_field])<=3000
+                    assert isinstance(value[translated_field],str) and len(value[translated_field])<=8500
             assert value.get('metric') in ('upvotes','total installs','stars gained this week','total stars','position'),(key,'unsupported metric')
     print('PASS: Findings source provenance, freshness and safe metrics')
 
@@ -89,6 +96,36 @@ class FindingsCollectorTests(unittest.TestCase):
         self.assertGreaterEqual(count,2)
         self.assertEqual(feeds['papers']['items'][0]['title_zh'],'原始论文题名')
         self.assertTrue(feeds['papers']['items'][0]['subtitle_zh'])
+
+    def test_offline_translation_and_source_exact_caching(self):
+        class MockEngine:
+            def __init__(self): self.calls=0
+            def translate(self,value):
+                self.calls+=1
+                return '这是一段机器翻译的中文原始资料摘要，保留来源证据。'
+        text='English research abstract about robot agents and visible planning.'
+        paper={'url':'https://huggingface.co/papers/2610.00001','title':'Research on Agents',
+               'detail':text,'subtitle':text[:30]}
+        repo={'url':'https://github.com/author/project','title':'author/project',
+              'subtitle':'An English GitHub repository for research automation and agents.'}
+        feeds={'papers':{'status':'ok','items':[paper]},'github':{'status':'ok','items':[repo]}}
+        engine=MockEngine()
+        state,count=offline.add_offline_translations(feeds,{},translator=engine,seconds=1000)
+        self.assertEqual(state,'offline_argos')
+        self.assertEqual(count,3)
+        self.assertTrue(offline.is_chinese(paper['title_zh']))
+        self.assertTrue(offline.is_chinese(paper['subtitle_zh']))
+        self.assertTrue(offline.is_chinese(repo['subtitle_zh']))
+        self.assertEqual(engine.calls,3)
+        old={k:{'items':[dict(v) for v in feed['items']]} for k,feed in feeds.items()}
+        fresh={'papers':{'status':'ok','items':[{'url':paper['url'],'title':paper['title'],'detail':text}]},
+               'github':{'status':'ok','items':[{'url':repo['url'],'title':repo['title'],
+                         'subtitle':repo['subtitle']}]}}
+        engine2=MockEngine()
+        state,count=offline.add_offline_translations(fresh,old,translator=engine2,seconds=1000)
+        self.assertEqual(state,'cached')
+        self.assertEqual(engine2.calls,0)
+        self.assertEqual(count,3)
 
     def test_missing_translate_key_never_creates_fake_zh(self):
         feeds={'skills':{'status':'ok','items':[{'url':'https://github.com/a/b',
