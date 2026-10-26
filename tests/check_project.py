@@ -16,7 +16,7 @@ class Links(HTMLParser):
         for k,v in attrs:
             if k in ('href','src') and v:self.refs.append(v)
 errors=[]
-pages=['index.html','asset.html','for-agents/index.html','quality.html','principles.html','contribute.html','examples.html','examples/sample-project.html','examples/roborender.html']
+pages=['index.html','asset.html','for-agents/index.html','quality.html','principles.html','contribute.html','community.html','examples.html','examples/sample-project.html','examples/roborender.html']
 for h in pages:
     p=Links();p.feed((ROOT/h).read_text(encoding='utf-8'))
     for uri in p.refs:
@@ -32,7 +32,7 @@ for file in [*ROOT.glob('assets/templates/*.svg'), ROOT/'assets/mark.svg']:
     except ET.ParseError as e:errors.append(f'{file}: {e}')
 for name in ('teaser-story','method-flow','results-panel'):
     if not (ROOT/'assets/previews'/f'{name}.png').exists():errors.append(f'missing preview: {name}')
-for js in ('js/catalog.js','js/i18n.js','js/navigation.js','js/quality.js'):
+for js in ('js/catalog.js','js/i18n.js','js/navigation.js','js/quality.js','js/community-page.js','js/community.js'):
     run=subprocess.run(['node','--check',str(ROOT/js)],capture_output=True,text=True)
     if run.returncode:errors.append(f'{js}: JS syntax: {run.stderr}')
 sync=subprocess.run(['python3',str(ROOT/'tools/sync_catalog.py'),'--check'],capture_output=True,text=True)
@@ -410,6 +410,16 @@ else:
 if 'template=submit-asset.yml' not in home_html or not (ROOT/'.github/ISSUE_TEMPLATE/submit-asset.yml').is_file():
     errors.append('Public submission entry is missing')
 
+community_html=(ROOT/'community.html').read_text(encoding='utf-8')
+community_js=(ROOT/'js/community-page.js').read_text(encoding='utf-8')
+if not all(x in community_html for x in ('id="community-grid"', 'id="community-sort"', 'id="community-kind"', 'js/community-page.js')):
+    errors.append('Community page lacks live feed and working filter controls')
+if not all(x in community_js for x in ('api.github.com/repos/OpenResearchAssets/openresearchassets.github.io/issues','reactions',"'[投稿]'")):
+    errors.append('Community must read real form submissions and GitHub reactions')
+if not all(x in home_html for x in ('href="community.html"','href="#gallery"')):
+    errors.append('Curated homepage must link prominently to Community and Gallery')
+if 'template=submit-asset.yml' not in contribute_html:
+    errors.append('Contribute page must link the public Issue Form')
 if errors:
     for e in errors:print('FAIL:',e)
     raise SystemExit(1)
