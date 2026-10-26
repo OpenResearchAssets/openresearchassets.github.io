@@ -1,11 +1,11 @@
 {
   "schema_version": "1",
-  "generated_at": "2026-10-26T06:13:35Z",
+  "generated_at": "2026-10-26T06:15:12Z",
   "feeds": {
     "papers": {
       "source": "Hugging Face Papers",
       "url": "https://huggingface.co/papers/trending",
-      "fetched_at": "2026-10-26T06:13:25Z",
+      "fetched_at": "2026-10-26T06:15:00Z",
       "status": "ok",
       "metric_note": "HF 社区投票 · 官方 trending 排序",
       "items": [
@@ -985,7 +985,7 @@
           "detail": "As streaming video generation advances, enabling real-time interaction with generated video is becoming increasingly important. We introduce StreamEval, a unified benchmark for interactive streaming video generation spanning five tasks: avatar dialogue, avatar performance, world generation, instruction editing, and reference editing. StreamEval comprises 300 scripted test cases lasting 15-300s, each specifying initial assets, incrementally arriving multimodal requests, and explicit requirements for state changes and content preservation. Performance is assessed along four evaluation dimensions: task execution, state consistency, visual fidelity, and audiovisual coordination, instantiated through ten task-specific metrics on a 0-100 scale. Evaluating 37 distinct models across 300 test cases, we find that high visual quality and identity retention do not necessarily coincide with reliable request execution or sustained state consistency. In particular, request execution remains challenging: the highest task-specific scores are 36.90 for Following among seven avatar-performance models, 25.93 for Following in text-conditioned world generation, and 15.00 for Edit Success among three reported reference-editing models. These findings identify reliable request execution under timing and preservation constraints as a central challenge for advancing omni-modal real-time interactive systems. The leaderboard is available at https://streameval.ai",
           "summary_source": "paper abstract",
           "author": "2610.28402",
-          "value": 589,
+          "value": 590,
           "badge": "2026-10-20T00:00:00+00:00",
           "metric": "upvotes",
           "title_zh": "StreamEval：评价互动流视频生成模式",
@@ -1415,7 +1415,7 @@
     "github": {
       "source": "GitHub Trending",
       "url": "https://github.com/trending?since=weekly",
-      "fetched_at": "2026-10-26T06:13:27Z",
+      "fetched_at": "2026-10-26T06:15:02Z",
       "status": "ok",
       "metric_note": "官方 weekly Trending 排名；可见时显示本周新增 Stars",
       "items": [
@@ -1593,7 +1593,7 @@
     "skills": {
       "source": "GitHub Search",
       "url": "https://github.com/search?q=topic%3Aagent-skills&type=repositories",
-      "fetched_at": "2026-10-26T06:13:29Z",
+      "fetched_at": "2026-10-26T06:15:05Z",
       "status": "ok",
       "metric_note": "近 60 天创建的 Skills 仓库，按累计 Stars 排序（非增长榜）",
       "items": [
@@ -1645,7 +1645,7 @@
           "subtitle": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "HTML",
-          "value": 4600,
+          "value": 4601,
           "metric": "total stars",
           "detail": "A comprehensive logo-design skill that turns Claude — or any agent that supports Agent Skills, such as Gemini CLI, Codex CLI, Cursor or GitHub Copilot — into a disciplined identity designer, from the first brief to production-ready SVG files and brand guidelines. geometric construction, optical corrections (overshoot, bone effect, irradiation…), colour, typography, lockups, testing, presentation, delivery, redesigns and identity systems. geometry, subject, typography, mood and industry — searchable from the command line and browsable in a local gallery. Used to study construction, map category conventions and avoid look-alikes (never to copy).",
           "summary_source": "repository README",
@@ -1684,7 +1684,7 @@
           "subtitle": "De-AI writing skill for any Agent Skills-compatible agent (77+ via the Skills CLI), with native plugins for Claude Code, Codex, Grok Build, and Antigravity. Narrative-architecture repair for fiction, venue-matched rules for professional prose. Based on StoryScope (arXiv:2604.03136).",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 3479,
+          "value": 3480,
           "metric": "total stars",
           "detail": "A portable Agent Skill: any agent that speaks the standard can load it, and the Skills CLI, which supports 77+ agents, installs it with one command. Claude Code, Codex, Grok Build, Antigravity, and QwenPaw additionally get native plugin packaging. One canonical SKILL.md, no per-platform forks. Four operations: write, review (diagnose only), refactor (minimal edits), recreate (full rewrite). Every popular humanizer edits word choice and syntax. StoryScope (Russell et al., 2026: 61,608 stories, human + 5 frontier LLMs) showed that a classifier using narrative-structure features alone detects AI fiction at 93.2% macro-F1. In the same study's LAMP-edited condition, where human editors had rewritten the surface style, detection dropped only from 95.5% to 93.9%. The tells that survive are architectural: themes explained by the narrator, single-track causally-tidy plots, emotions rendered only as bodily sensation, no real-world references, no reader, linear time, endings resolved by protagonist growth and acceptance. sepia turns those measured gaps, together with the related studies digested in research/, into a three-pass writing and revision protocol for fiction:",
           "summary_source": "repository README",
@@ -1697,7 +1697,7 @@
           "subtitle": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 2903,
+          "value": 2904,
           "metric": "total stars",
           "detail": "Give your coding agent a video editor. Claude Code, Cursor, Codex or any MCP client edits your footage with local FFmpeg, then checks its own output. No cloud · No API keys · Python standard library Left half is the input, right half is what the command produced. All 66 before/after demos, with the exact command under each one → — all of it generated from synthetic footage by python3 demos/build.py, so you can rebuild every frame of it yourself. ffmpeg-skill is an Agent Skill for Claude Code, Cursor, Codex and any agent that reads SKILL.md. It teaches the agent a fixed workflow (probe → edit losslessly where possible → check → verify) and ships 42 tools that do the actual work with ffmpeg / ffprobe: cut, join, silence removal, fit to duration and aspect, captions and karaoke, overlays and motion graphics, HDR → SDR and LUTs, audio clean-up and typed dynamics, sync with drift correction, multicam, loudness, delivery checks, whole-edit project rendering, batch folders. Every tool is also callable as an MCP tool (tools/list advertises a core 12 by default to keep client context small, with FFMPEGSKILLMCPFULL=1 listing all 42; every tool is reachable by name through tools/call either way), and the whole set is described by a machine-readable contract.",
           "summary_source": "repository README",
@@ -1736,7 +1736,7 @@
           "subtitle": "nanoMuse: an open-source personal agent for every device you own. One agent with a name and a look of its own that does things, keeps working while the app is closed, remembers you, and asks before anything you cannot undo. On Android, iPhone and iPad, Windows / macOS / Linux and in the browser; your phone's screen and your computer as its hands.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Swift",
-          "value": 2600,
+          "value": 2601,
           "metric": "total stars",
           "detail": "English | 简体中文 | 繁體中文 | Español | Français | Bahasa Indonesia | 日本語 | 한국어 | Русский | Tiếng Việt nanoMuse is an open-source personal agent for every device you own. One agent with a name and a look of its own, in the style of Meta's Muse: it does things instead of answering questions, keeps working while the app is closed, remembers you, and stops to ask before anything you could not undo. nano means the whole set, small enough to run and deploy yourself: the phone app, the desktop app, the web console and the relay that joins them are all in this repository, under GPL-3.0-or-later. Free, open source, non-profit. Let's build it together. Sign in and you get a free allowance of model use on the community relay (the developer pays for it); when it is gone, use your own key. The same relay runs on a server of yours, so nothing has to leave your house. Latest: 1.0.7 Logbook, release notes · try it in the browser.",
           "summary_source": "repository README",
@@ -1749,7 +1749,7 @@
           "subtitle": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 2553,
+          "value": 2554,
           "metric": "total stars",
           "detail": "Claude Code、Codex、CursorをはじめとするAIコーディング環境に読み込ませて使用してください。本体を入れられない環境のために、本体を短くした yomiyasu-mini と yomiyasu-pocket も公開しています（本体を入れられない環境では）。 文章を生成するAIは日常的な道具となりました。 一方で、AIで生成された文章には独特のクセが残りやすく、そのままでは実務や技術発信に使いにくい場面が多くあります。 1. 禁止語の置き換えにとどまる対処 「手触り」「解像度」「泥臭い」といった表層の単語を禁止しても、別の曖昧な語へ置き換わるだけで、不自然な文構造そのものは解消されませんでした。 2. 編集ルールの過剰適用 修辞の規範を与えすぎると、モデルが指示を過剰に解釈し、かえって不自然な造語や大げさな文体を招いていました。 3. 主述関係の曖昧さと非生物主語 誰が何をどうするのかが省略されたまま、概念や道具が比喩的な動詞（壊れる、倒す、効くなど）と結びつき、読み手が文脈を大きく補って読む必要がありました。 4. 形式の偏重と情報密度の低下 太字や箇条書きが増える一方で、手順やコードの仕組みといった核心の部分は抽象的に書かれ、文章の量に比べて実際の情報が少なくなっていました。",
           "summary_source": "repository README",
@@ -1788,7 +1788,7 @@
     "workflows": {
       "source": "GitHub Search",
       "url": "https://github.com/search?q=research+workflow&type=repositories",
-      "fetched_at": "2026-10-26T06:13:32Z",
+      "fetched_at": "2026-10-26T06:15:09Z",
       "status": "ok",
       "metric_note": "近 60 天创建的工作流项目，按累计 Stars 排序（非 Trending 官方榜）",
       "items": [
