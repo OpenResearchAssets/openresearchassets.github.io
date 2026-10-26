@@ -29,7 +29,8 @@
  const date=value=>{const stamp=Date.parse(value||'');return Number.isFinite(stamp)?
    new Intl.DateTimeFormat(zh()?'zh-CN':'en-US',{year:'numeric',month:'short',day:'numeric',timeZone:'UTC'}).format(stamp):''};
  const state={data:null,filter:'all',query:'',limit:BATCH};
- const localized=(entry,key)=>zh()?(entry[key+'_zh']||entry[key]||''):(entry[key]||'');
+ const localized=(entry,key)=>zh()?(entry[key+'_zh']||entry[key]||''):
+   (entry[key+'_en']||entry[key]||'');
  const words=()=>state.query.trim().toLowerCase().split(/\s+/).filter(Boolean);
  const match=(r,terms)=>terms.every(w=>[r.title,r.title_zh,r.subtitle,r.subtitle_zh,r.detail,r.detail_zh,r.author].join(' ').toLowerCase().includes(w));
  function description(key,feed){
@@ -72,14 +73,16 @@
      esc(tr(key==='papers'?'阅读全文摘要':'阅读更完整的介绍',key==='papers'?'Read full abstract':'Read fuller description'))+
      ' <span aria-hidden="true">⌄</span></summary><div class="findings-entry-full"><span>'+
      esc(sourceName)+'</span><p>'+esc(detail)+'</p></div></details>':'';
-   const originalCompare=zh()&&(r.subtitle_zh||r.detail_zh)?
+   const sourceLanguageIsChinese=/[\u3400-\u9fff]/.test(r.detail||r.subtitle||'');
+   const originalCompare=zh()&&(r.subtitle_zh||r.detail_zh)&&!sourceLanguageIsChinese?
      '<details class="findings-original-compare"><summary>'+esc('核对英文原文')+
      ' <span aria-hidden="true">⌄</span></summary>'+
      '<div class="findings-entry-full"><strong>'+esc(r.title)+'</strong><p>'+esc(r.detail||r.subtitle||'')+
      '</p></div></details>':'';
    const published=key==='papers'&&/^\d{4}-\d\d-\d\d/.test(r.badge||'')?date(r.badge):'';
    const originalLabel=key==='papers'?tr('论文原文','Original paper'):tr('项目原站','Original repository');
-   const translated=zh()?'<span class="findings-translation-note">'+esc(r.subtitle_zh||r.detail_zh?
+   const translated=zh()?'<span class="findings-translation-note">'+esc(sourceLanguageIsChinese?
+     '源内容含中文 · 查看原站核对':r.subtitle_zh||r.detail_zh?
      '机器译文 · 可展开英文原文核对':'英文原文 · 等待机器翻译')+'</span>':'';
    return '<article class="findings-item'+(focused?' findings-item-expanded':'')+'">'+
      '<span class="findings-item-rank">'+String(originalRank+1).padStart(2,'0')+'</span>'+
