@@ -1,5 +1,5 @@
 name: "投稿科研资产 / Submit research asset"
-description: "任何 GitHub 用户都可以推荐高审美科研配图、项目主页或真正有用的 Skills / Workflows；人工审核后才入库 / Open to everyone, curated before publishing."
+description: "任何 GitHub 用户都能公开分享科研图和 Skills，先进入 Community，编辑审核后可入选 Curated / Open community submission; curated after review."
 title: "[投稿] "
 labels: ["enhancement"]
 body:
@@ -7,11 +7,11 @@ body:
     attributes:
       value: |
         ## 欢迎共建 OpenResearchAssets / Everyone can contribute
-        只需要提供作品链接与入选理由，不需要写代码。GitHub 自动记录提交者用户名与 Issue 创建时间；**收录日期以审核通过并写入目录的日期为准，不等于投稿日期**。
+        只需要提供作品链接与推荐理由，不需要写代码。**提交公开 Issue 后会直接出现在 Community 页面，并可立即获得点赞与讨论**；无需等待编辑精选。GitHub 自动记录投稿用户名与时间；只有入选 Curated 后才另行记录正式收录日期。
         第三方图片、论文插图和截图默认只提供官方链接，请勿上传无权转载的原图、私有论文或敏感信息；如果是你自己的可编辑作品，可在下方说明并在 Issue 编辑器中附上文件。
-        提交不代表自动发布，编辑者根据真实视觉质量、科学事实、实际用途、许可证和证据决定是否精选。
+        社区公开展示不等于本站认可或授权转载；编辑者依据真实视觉质量、科学事实、用途、许可证与证据决定是否进入 Curated。违规或垃圾投稿可能被隐藏或关闭。
         ---
-        No coding required. Your GitHub account identifies the submitter. Approved entries receive a separate catalog publication date. Do not upload copyrighted media without redistribution rights or unpublished/private materials.
+        No coding required. Your GitHub Issue is immediately discoverable on the Community page and can receive reactions. Curated selection is a separate editorial decision. Do not upload copyrighted images without redistribution rights or unpublished/private materials.
   - type: dropdown
     id: type
     attributes:
@@ -42,7 +42,7 @@ body:
   - type: textarea
     id: why
     attributes:
-      label: "为什么值得精选？/ Why does it belong here?"
+      label: "为什么值得分享或推荐？/ Why is this asset worth sharing?"
       description: "最好指出可借鉴的布局、结果呈现、审美细节，或具体 Skill / Workflow 的科研用途。"
       placeholder: "这份资产最值得学习的是什么？如何复用到真实研究中？"
     validations:
