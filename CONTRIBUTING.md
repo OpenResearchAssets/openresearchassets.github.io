@@ -28,6 +28,8 @@ OpenResearchAssets 收录的不只是论文视觉素材，还包括科研流程�
 
 ## 人人可投稿 · 开放审核
 
+详情参见 [投稿身份、收录日期、GitHub 点赞及评论的当前状态](docs/COMMUNITY.md)。
+
 任何 GitHub 用户都可以从 [网站投稿入口](https://openresearchassets.github.io/contribute.html) 或 [资产投稿表单](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=submit-asset.yml) 提交高审美视觉案例、研究主页、原创可编辑资产、真正有用的 Skills / Workflows。不需要 Fork、仓库写入权限或编程技能。GitHub Issue Form 自动识别提交账号；如拥有原创文件的版权，可附上 SVG/PPTX 等源文件或公开存储链接；第三方图片默认只提供原始链接。
 
 GitHub Issue 仅表示收到投稿，**不自动发布到精选资产库**。维护者审核原创者署名、科学真实性、设计价值、许可边界与具体复用收益后，才把条目写入 `catalog/index.json`。新增正式收录条目必须记录 `submission.github` 与 `submission.added_on`，建议记录 `submission.issue_url`，按需记 `submission.original_author`。已有条目无明确的历史记录时不要补造日期或归属于某位作者。
