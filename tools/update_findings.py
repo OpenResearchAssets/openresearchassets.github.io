@@ -72,7 +72,7 @@ def item(**values: object) -> dict:
     for key in ("title", "subtitle", "author", "badge", "detail", "summary_source"):
         if key in record:
             record[key] = plain(record[key], 210 if key == "title" else
-                                2600 if key == "detail" else MAX_LENGTH)
+                                6000 if key == "detail" else MAX_LENGTH)
     url = valid_url(record.get("url", ""))
     if not url or not record.get("title"):
         raise ValueError("Incomplete sourced item")
@@ -97,7 +97,7 @@ def fetch_papers() -> tuple[list[dict], str, str]:
         abstract = str(getattr(paper, "summary", "") or "")
         entries.append(item(title=getattr(paper, "title", ""),
                             url="https://huggingface.co/papers/" + pid,
-                            subtitle=abstract[:700], detail=abstract[:2500],
+                            subtitle=abstract[:700], detail=abstract[:6000],
                             summary_source="paper abstract",
                             author=pid, value=getattr(paper, "upvotes", None),
                             badge=date_str or "", metric="upvotes"))
