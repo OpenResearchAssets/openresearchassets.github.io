@@ -204,7 +204,7 @@
     const match=e=>(!filters.domain||e.domains.includes(filters.domain))&&
       (!filters.topic||(e.topics||[]).includes(filters.topic))&&
       (!filters.type||e.curation?.type===filters.type)&&
-      filters.q.split(/\\s+/).filter(Boolean).every(w=>allSearch(e).includes(w));
+      filters.q.split(/\s+/).filter(Boolean).every(w=>allSearch(e).includes(w));
     const allPopular=catalog.entries.filter(e=>e.curation?.track==='popular'&&match(e))
       .sort((a,b)=>b.curation.stars_snapshot-a.curation.stars_snapshot);
     const allPractice=catalog.entries.filter(e=>e.curation?.track==='practice'&&match(e));

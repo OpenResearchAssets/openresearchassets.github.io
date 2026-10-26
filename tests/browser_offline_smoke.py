@@ -57,9 +57,29 @@ with sync_playwright() as pw:
         assert page.locator('.ora-main-path').count()==2
         assert page.locator('.ora-main-path').nth(0).get_attribute('href')=='#gallery'
         assert page.locator('.ora-main-path').nth(1).get_attribute('href')=='#skills'
-        assert page.locator('#popular-skills .ora-skill-card').count()==4
-        assert page.locator('#practice-skills .ora-skill-card').count()==2
-        assert page.locator('#popular-skills [data-star-repo]').count()==4
+        catalog_data=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))
+        popular_data=[e for e in catalog_data['entries'] if e.get('curation',{}).get('track')=='popular']
+        practice_data=[e for e in catalog_data['entries'] if e.get('curation',{}).get('track')=='practice']
+        assert page.locator('#popular-skills .ora-skill-card').count()==min(8,len(popular_data))
+        assert page.locator('#practice-skills .ora-skill-card').count()==len(practice_data)
+        assert page.locator('#popular-skills [data-star-repo]').count()==min(8,len(popular_data))
+        assert page.locator('#skill-more').is_visible()==(len(popular_data)>8)
+        assert f"{len(popular_data)+len(practice_data)} / " in page.locator('#skill-status').inner_text()
+        # Domain, topic and capability type are independent, composable filters.
+        page.locator('#skill-topic').select_option('document-parsing')
+        expected_docs=sum('document-parsing' in e['topics'] for e in popular_data+practice_data)
+        assert page.locator('#popular-skills .ora-skill-card').count()+page.locator('#practice-skills .ora-skill-card').count()==expected_docs
+        page.locator('#skill-type').select_option('skill')
+        expected_skills=sum('document-parsing' in e['topics'] and e['curation']['type']=='skill' for e in popular_data+practice_data)
+        assert page.locator('#popular-skills .ora-skill-card').count()+page.locator('#practice-skills .ora-skill-card').count()==expected_skills
+        page.locator('#skill-reset').click()
+        assert page.locator('#popular-skills .ora-skill-card').count()==min(8,len(popular_data))
+        if len(popular_data)>8:
+            page.locator('#skill-more').click()
+            assert page.locator('#popular-skills .ora-skill-card').count()==len(popular_data)
+        # A concrete skill's stars must explicitly be attributed to its parent repository.
+        individual=page.locator('#popular-skills [data-star-scope="parent-repository"]').first
+        assert individual.count()==1 and ('母仓库' in individual.inner_text())
         assert '未经本站亲测' in page.locator('#popular-skills').inner_text()
         assert '公开实践证据' in page.locator('#practice-skills').inner_text()
         assert page.locator('.ora-rights-notice').count()==1
@@ -76,6 +96,11 @@ with sync_playwright() as pw:
         assert page.locator('.ora-resource-card .ora-verified img').count()==6
         page.wait_for_function("()=>[...document.querySelectorAll('.ora-resource-card .ora-verified img')].every(n=>n.complete&&n.naturalWidth>0)")
         assert page.locator('.ora-resource-card .ora-curated img').count()==0
+        page.locator('#facet-topic').select_option('three-d-vision')
+        assert page.locator('.ora-resource-card').count()>0
+        assert all('three-d-vision' in e['topics'] for e in catalog_data['entries'] if e['id'] in
+                   page.locator('.ora-resource-card').evaluate_all('(cards)=>cards.map(c=>new URL(c.querySelector(".ora-open-details").href).searchParams.get("id"))'))
+        page.locator('#facet-reset').click()
         # Four discovery routes must correspond to authored figure functions, not only labels.
         page.locator('[data-task-query="ablation"]').click()
         assert page.locator('.ora-resource-card').count()>=2
