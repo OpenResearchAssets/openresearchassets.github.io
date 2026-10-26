@@ -8,7 +8,7 @@ from __future__ import annotations
 import re
 
 _HAN = re.compile(r"[\u3400-\u9fff]")
-_URL = re.compile(r'https?://[^\s<>\u3000"“”]+', re.IGNORECASE)
+_URL = re.compile(r'https?://[^\s<>\u3000"“”\u3400-\u9fff，。；！？]+', re.IGNORECASE)
 _CODE = re.compile(chr(96) + r"[^" + chr(96) + r"\n]+" + chr(96))
 
 
