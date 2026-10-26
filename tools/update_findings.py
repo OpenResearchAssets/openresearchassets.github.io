@@ -303,6 +303,9 @@ def build(existing: dict | None = None) -> dict:
     translation_status, translations = add_translations(feeds, old_feeds, offline_enabled=True)
     from findings_editorial_zh import apply_editorial_chinese
     reviewed = apply_editorial_chinese(feeds)
+    from findings_zh_typography import normalize_translated_feeds
+    normalized = normalize_translated_feeds(feeds)
+    print(f"Chinese punctuation: normalized {normalized} translated fields")
     print(f"Descriptions: {readme_count} README extracts; translations: "
           f"{translations} fields ({translation_status}); {reviewed} terminology-corrected introductions")
     total = sum(len(feed.get("items", [])) for feed in feeds.values())
