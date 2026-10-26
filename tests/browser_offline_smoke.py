@@ -183,7 +183,8 @@ with sync_playwright() as pw:
                 assert page.locator('.ora-execution').count()==1
                 assert page.locator('.ora-execution-grid>div').count()==4
                 assert page.locator('.ora-execution-steps li').count()>=2
-                assert '未实际运行' in page.locator('.ora-execution-head').inner_text()
+                expected_execution_label='有公开试运行' if entry.get('trial') else '未实际运行'
+                assert expected_execution_label in page.locator('.ora-execution-head').inner_text()
                 assert page.locator('#ora-copy-execution').count()==1
             assert page.locator('.ora-detail-sidebar').is_visible()
             assert page.locator('.ora-detail-rights').count()==1
