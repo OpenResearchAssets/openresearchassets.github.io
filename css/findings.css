@@ -96,6 +96,12 @@
   .findings-metric-value{font-size:22px}
   .findings-feed-focused .findings-feed-body{gap:20px;grid-template-columns:minmax(0,1fr) 240px}
 }
+@media(max-width:1020px){
+  .findings-feed-focused .findings-feed-body{grid-template-columns:1fr;gap:6px}
+  .findings-feed-focused .findings-focus-guide{position:static;margin-top:18px}
+  .findings-feed-focused .findings-feed-context{flex-wrap:wrap}
+  .findings-feed-focused .findings-feed-status{text-align:left;max-width:none}
+}
 @media(max-width:900px){
   .findings-feeds{gap:15px}
   .findings-feed{padding:20px 18px 14px}
