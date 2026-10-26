@@ -27,7 +27,8 @@ HF_SOURCE = "https://huggingface.co/papers/trending"
 SKILL_SOURCE = "https://skills.sh/trending"
 WORKFLOW_SOURCE = "https://github.com/search?q=research+workflow&type=repositories"
 MAX_RESULTS = 14
-MAX_LENGTH = 520
+MAX_PAPERS = 40
+MAX_LENGTH = 780
 
 
 def now() -> str:
@@ -68,9 +69,10 @@ def request_json(url: str) -> object:
 
 def item(**values: object) -> dict:
     record = {key: value for key, value in values.items() if value is not None}
-    for key in ("title", "subtitle", "author", "badge"):
+    for key in ("title", "subtitle", "author", "badge", "detail", "summary_source"):
         if key in record:
-            record[key] = plain(record[key], 210 if key == "title" else MAX_LENGTH)
+            record[key] = plain(record[key], 210 if key == "title" else
+                                2600 if key == "detail" else MAX_LENGTH)
     url = valid_url(record.get("url", ""))
     if not url or not record.get("title"):
         raise ValueError("Incomplete sourced item")
@@ -84,7 +86,7 @@ def fetch_papers() -> tuple[list[dict], str, str]:
     # Official huggingface_hub interface; no API-token or HTML scraping needed.
     from huggingface_hub import HfApi
     api = HfApi(token=False)
-    papers = list(api.list_daily_papers(sort="trending", limit=MAX_RESULTS, token=False))
+    papers = list(api.list_daily_papers(sort="trending", limit=MAX_PAPERS, token=False))
     entries = []
     for paper in papers:
         pid = plain(getattr(paper, "id", ""), 80)
@@ -92,9 +94,11 @@ def fetch_papers() -> tuple[list[dict], str, str]:
             continue
         date = getattr(paper, "published_at", None)
         date_str = date.isoformat() if isinstance(date, (dt.datetime, dt.date)) else None
+        abstract = str(getattr(paper, "summary", "") or "")
         entries.append(item(title=getattr(paper, "title", ""),
                             url="https://huggingface.co/papers/" + pid,
-                            subtitle=getattr(paper, "summary", ""),
+                            subtitle=abstract[:700], detail=abstract[:2500],
+                            summary_source="paper abstract",
                             author=pid, value=getattr(paper, "upvotes", None),
                             badge=date_str or "", metric="upvotes"))
     if not entries:
@@ -289,12 +293,18 @@ def build(existing: dict | None = None) -> dict:
                            if key == "skills" and name == "GitHub Search" else link)
             feeds[key] = {"source": name, "url": source_link, "fetched_at": now(),
                           "status": "ok", "metric_note": note,
-                          "items": entries[:MAX_RESULTS]}
+                          "items": entries[:MAX_PAPERS if key == "papers" else MAX_RESULTS]}
             print(f"{key}: {len(entries)} verified-source items ({name})")
         except Exception as error:
             feeds[key] = fallback_feed(source, link, old_feeds.get(key))
             print(f"{key}: source unavailable ({type(error).__name__}: {str(error)[:160]})", file=sys.stderr)
-    return {"schema_version": "1", "generated_at": now(), "feeds": feeds}
+    from findings_enrichment import enrich_readmes, add_translations
+    readme_count = enrich_readmes(feeds, old_feeds)
+    translation_status, translations = add_translations(feeds, old_feeds)
+    print(f"Descriptions: {readme_count} README extracts; translations: "
+          f"{translations} fields ({translation_status})")
+    return {"schema_version": "1", "generated_at": now(), "feeds": feeds,
+            "translation_status": translation_status}
 
 
 def main() -> int:
