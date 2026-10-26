@@ -303,8 +303,15 @@ def build(existing: dict | None = None) -> dict:
     translation_status, translations = add_translations(feeds, old_feeds, offline_enabled=True)
     print(f"Descriptions: {readme_count} README extracts; translations: "
           f"{translations} fields ({translation_status})")
+    total = sum(len(feed.get("items", [])) for feed in feeds.values())
+    translated_items = sum(
+        1 for feed in feeds.values() for row in feed.get("items", [])
+        if row.get("detail_zh") or row.get("subtitle_zh")
+    )
+    print(f"Chinese text coverage: {translated_items}/{total} source entries")
     return {"schema_version": "1", "generated_at": now(), "feeds": feeds,
-            "translation_status": translation_status}
+            "translation_status": translation_status,
+            "translation_coverage": {"translated": translated_items, "total": total}}
 
 
 def main() -> int:
