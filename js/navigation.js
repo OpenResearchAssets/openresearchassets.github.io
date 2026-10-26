@@ -18,6 +18,6 @@
   document.addEventListener('click',event=>{
     if(button.getAttribute('aria-expanded')==='true'&&!event.target.closest('.nav-shell')) setOpen(false);
   });
-  window.matchMedia('(min-width: 721px)').addEventListener('change',event=>{if(event.matches)setOpen(false)});
+  window.matchMedia('(min-width: 921px)').addEventListener('change',event=>{if(event.matches)setOpen(false)});
   setOpen(false);
 })();
