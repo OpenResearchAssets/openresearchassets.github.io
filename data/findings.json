@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "generated_at": null,
+  "feeds": {
+    "papers": {
+      "source": "Hugging Face Papers",
+      "url": "https://huggingface.co/papers/trending",
+      "status": "pending",
+      "fetched_at": null,
+      "metric_note": "",
+      "items": []
+    },
+    "github": {
+      "source": "GitHub Trending",
+      "url": "https://github.com/trending?since=weekly",
+      "status": "pending",
+      "fetched_at": null,
+      "metric_note": "",
+      "items": []
+    },
+    "skills": {
+      "source": "Skills.sh / GitHub Search",
+      "url": "https://skills.sh/trending",
+      "status": "pending",
+      "fetched_at": null,
+      "metric_note": "",
+      "items": []
+    },
+    "workflows": {
+      "source": "GitHub Search",
+      "url": "https://github.com/search?q=research+workflow&type=repositories",
+      "status": "pending",
+      "fetched_at": null,
+      "metric_note": "",
+      "items": []
+    }
+  }
+}
