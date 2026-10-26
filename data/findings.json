@@ -21,7 +21,8 @@
           "metric": "upvotes",
           "title_zh": "Harness^2：面向开放世界的递归式 Agent Harness 优化",
           "detail_zh": "LLM代理的能力不仅取决于其基本模式,还取决于其执行手段。 递归自我改进(RSI)为自动发展这些绳索提供了一个很有希望的方法. 然而,在开放世界环境中部署区域安全倡议仍然面临两个重大挑战。 首先,开放世界的任务通常在利用设计阶段和试验时不为人知,没有地面实况核查员可靠地指导在线利用编辑。 第二, \" 区域倡议 \" 进程仍然高度具体的任务,未能概括为新情况。 我们引入了Harness ^2,一个插座与游戏,递归剂的利用框架,通过两个相互关联的递归层次来应对这些挑战. 任务层面的重复利用对比性的提议-预测步骤改进了当前任务的利用,该步骤可靠地指导没有地面真实核查员的编辑工作,并通过平行或相继的重复可以进一步缩小。 然后利用这些编辑的经验来更新不断改进的利用率,使代理人能够更好地适应未来的任务。 通过三个专业基准和四个模型harness配置,一个步骤持续改进了GLM-5和双子座3.5 闪烁他们的底盘,在WorkBuddy-Bench上收获高达11.5分,在JobBench上收获4.5分,在LAB上收获11.8个百分点,随着任务层次的递归预算的增加,进一步收益.",
-          "subtitle_zh": "LLM代理的能力不仅取决于其基本模式,还取决于其执行手段。 递归自我改进(RSI)为自动发展这些绳索提供了一个很有希望的方法. 然而,在开放世界环境中部署区域安全倡议仍然面临两个重大挑战。 首先,开放世界的任务通常在利用设计阶段和试验时不为人知,没有地面实况核查员可靠地指导在线利用编辑。 第二, \" 区域倡议 \" 进程仍然高度具体的任务,未能概括为新情况。 我们引入了Harness ^2,一个插座与游戏,递归剂的利用框架,通过两个相互关联的递归层次来应对这些挑战. 任务层面的重复利用对比性的提议-预测步骤改进了当前任务的利用,该步骤可靠地指导没有地面真实核查员的编辑工作,并通过平行或相继的重复可以进一步缩小。 然后利用这些编辑的经验来更新不断改进的利用率,使代理人能够更好地适应未来的任务。 通过三个专业基准和四个模型harness配置,一个步骤持续改进了GLM-5和双子座3.5 闪烁他们的底盘,在WorkBuddy-Bench上收获高达11.5分,在JobBench上收获4.5分,在LAB上收获11.8个百分点,随着任务层次的递归预算的增加,进一步收益."
+          "subtitle_zh": "LLM Agent 的能力不仅取决于底层模型，也取决于执行它的 Harness。递归自我改进（RSI）有望自动优化这些执行框架，但开放世界任务带来两个关键难题：一是测试时遇到的新任务通常没有标准答案验证器，难以可靠指导在线修改；二是现有 RSI 方法高度依赖具体任务，难以迁移到新场景。Harness^2 提出一套即插即用的双层递归框架：任务层通过对比式“提出—探测—组合”过程改进当前 Harness，并支持并行或串行扩展；更高层则尝试积累可迁移的优化经验。",
+          "zh_intro_reviewed": true
         },
         {
           "title": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
@@ -35,7 +36,8 @@
           "metric": "upvotes",
           "title_zh": "TradingAgents：基于多智能体大语言模型的金融交易框架",
           "detail_zh": "在利用由大语言模型提供动力的代理人组成的社会自动解决问题方面取得了重大进展。 在财务方面,工作主要集中于处理具体任务的单一代理系统或独立收集数据的多代理框架。 然而,多种代理系统复制现实世界贸易公司合作动力的潜力仍然没有得到充分利用。 贸易代理公司提出了一个新的股票交易框架,其灵感来自贸易公司,其特点是由LLM驱动的代理公司具有基本分析师、情绪分析师、技术分析师和具有不同风险特征的贸易商等专门作用。 该框架包括公牛和熊的研究人员评估市场状况、风险管理小组监测风险,以及贸易商从辩论和历史数据中综合见解,以作出知情决定。 这个框架通过模拟一个充满活力、协作的贸易环境,旨在改善贸易业绩。 详细的架构和广泛的实验表明其优于基线模型,在累积收益、夏普比率和最大缩减方面有显著改善,突出了多种代理人LLM框架在金融交易中的潜力。 贸易代理商可在https://github.com/TauricResearch/TradingAgents查询。",
-          "subtitle_zh": "在利用由大语言模型提供动力的代理人组成的社会自动解决问题方面取得了重大进展。 在财务方面,工作主要集中于处理具体任务的单一代理系统或独立收集数据的多代理框架。 然而,多种代理系统复制现实世界贸易公司合作动力的潜力仍然没有得到充分利用。 贸易代理公司提出了一个新的股票交易框架,其灵感来自贸易公司,其特点是由LLM驱动的代理公司具有基本分析师、情绪分析师、技术分析师和具有不同风险特征的贸易商等专门作用。 该框架包括公牛和熊的研究人员评估市场状况、风险管理小组监测风险,以及贸易商从辩论和历史数据中综合见解,以作出知情决定。 这个框架通过模拟一个充满活力、协作的贸易环境,旨在改善贸易业绩。 详细的架构和广泛的实验表明其优于基线模型,在累积收益、夏普比率和最大缩减方面有显著改善,突出了多种代理人LLM框架在金融交易中的潜力。 贸易代理商可在https://github.com/TauricResearch/TradingAgents查询。"
+          "subtitle_zh": "虽然大语言模型驱动的多智能体系统已经能够协作解决复杂问题，金融领域的既有研究仍主要依赖单一 Agent，或者让多个 Agent 独立收集信息，尚未充分模拟真实交易公司的协作机制。TradingAgents 借鉴交易机构的组织方式，为基本面、市场情绪、技术分析和不同风险偏好的交易设置专门角色，并加入多空研究员辩论与风险管理团队，最终由交易 Agent 综合辩论与历史数据形成决策。",
+          "zh_intro_reviewed": true
         },
         {
           "title": "Kronos: A Foundation Model for the Language of Financial Markets",
@@ -49,7 +51,8 @@
           "metric": "upvotes",
           "title_zh": "Kronos：面向金融市场 K 线语言的基础模型",
           "detail_zh": "大语言模型(LLMS)为典型的大规模培训前范式的成功,启发了时代系列基础模型(TSFM)的发展. 然而,它们在金融烛台(K线)数据的应用仍然有限,往往表现不佳的未经事先培训的架构. 此外,现有的TSFMs往往忽略了波动预测和合成数据生成等关键的下游任务. 为了克服这些限制,我们提议克罗诺斯(Kronos),一个适合财务K线模型化的统一,可扩展的预培训框架. 克罗诺斯引入了一种专门的代号器,将连续的市场信息曲解成代号序列,同时保留价格动态和贸易活动模式. 我们预先训练克罗诺斯 利用一个自旋目标 在一个巨大的,多市场 超过120亿K线记录 从45个全球交易所, 使其能够学习 细微的时间和跨资产表述。 Kronos在零镜头的设定中表现优异,跨越了各种财务任务。 在基准数据集上,Kronos将价格系列预测RankIC比领先的TSFM提升93%,比最佳非预培训基线提升87%. 它还在波动性预测中实现了9%的MAE,合成K线序列的基因忠诚度提高了22%. 这些结果将Kronos确立为一个强有力的多功能的基础模型,用于对端到端的财务时间序列进行分析。 我们经过预先培训的模型可在https://github.com/shiyu-coder/Kronos上公开查阅。",
-          "subtitle_zh": "大语言模型(LLMS)为典型的大规模培训前范式的成功,启发了时代系列基础模型(TSFM)的发展. 然而,它们在金融烛台(K线)数据的应用仍然有限,往往表现不佳的未经事先培训的架构. 此外,现有的TSFMs往往忽略了波动预测和合成数据生成等关键的下游任务. 为了克服这些限制,我们提议克罗诺斯(Kronos),一个适合财务K线模型化的统一,可扩展的预培训框架. 克罗诺斯引入了一种专门的代号器,将连续的市场信息曲解成代号序列,同时保留价格动态和贸易活动模式. 我们预先训练克罗诺斯 利用一个自旋目标 在一个巨大的,多市场 超过120亿K线记录 从45个全球交易所, 使其能够学习 细微的时间和跨资产表述。 Kronos在零镜头的设定中表现优异,跨越了各种财务任务。 在基准数据集上,Kronos将价格系列预测RankIC比领先的TSFM提升93%,比最佳非预培训基线提升87%. 它还在波动性预测中实现了9%的MAE,合成K线序列的基因忠诚度提高了22%. 这些结果将Kronos确立为一个强有力的多功能的基础模型,用于对端到端的财务时间序列进行分析。 我们经过预先培训的模型可在https://github.com/shiyu-coder/Kronos上公开查阅。"
+          "subtitle_zh": "大规模预训练推动了时间序列基础模型的发展，但这些模型用于金融 K 线数据时仍经常不如专门训练的架构，也容易忽略波动率预测、合成数据生成等下游任务。Kronos 提出面向金融 K 线的统一、可扩展预训练框架：使用专用 Tokenizer 将连续市场信息离散化，同时保留价格变化与交易活动模式，并在涵盖全球多个交易所的大规模跨市场 K 线数据上进行自回归预训练，以学习跨时间和资产的表示。",
+          "zh_intro_reviewed": true
         },
         {
           "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
@@ -1425,8 +1428,9 @@
           "metric": "stars gained this week",
           "detail": "A coding-agent skill that turns your agent into a security auditor. It orchestrates isolated agents through reconnaissance, coverage-led hunting, candidate validation, structured output, independent record verification, and target-neutral reporting. This is the skill that seeded Cloudflare's vulnerability discovery harness, described in Build your own vulnerability harness. The harness grew into a multi-stage, fleet-wide system; this skill is the single-repo starting point it evolved from. 1. Reconnaissance -- map architecture, trust boundaries, input surfaces, prior evidence, and deterministic coverage in architecture.md and coverage-ledger.json. 2. Coverage-led hunting -- assign isolated hunters from ledger units, record their checks, and use coverage critics to find gaps. 3. Candidate validation -- give every unique candidate to a fresh verifier that tries to disprove it. 4. Structured output -- write confirmed, needsvalidation, and rejected records to findings.json and validate them against report-schema.json. 5. Independent record verification -- fresh agents verify final source claims. Material replacements receive another independent verifier. 6. Target-neutral reporting -- derive REPORT.md, FINDINGS-DETAIL.md, and NEEDS-VALIDATION.md from the verified records and coverage ledger.",
           "summary_source": "repository README",
-          "subtitle_zh": "分阶段执行安全审计的 Coding Agent Skill：通过侦察、覆盖率驱动的缺陷搜索、独立验证与机器可读的发现记录，提高安全审计的可追溯性。",
-          "detail_zh": "将你的经纪人变成安全审计师的编码技术 它通过侦察、以覆盖为主导的狩猎、候选人验证、结构化产出、独立记录核查以及目标中立的报告,协调孤立的特工。 这是Cloudflare的弱点发现工具的种子, 在Build自己的弱点工具中描述。 牵引力发展成一个多阶段,全舰队范围的系统;这种技能是它从中演化出来的单回波起点. 1. 侦察 -- -- 地图结构、信任边界、输入面、先前证据以及架构.md和覆盖-引导器.json的确定性覆盖。 2. 覆盖为主的狩猎 -- -- 从分类单元中指派孤立的猎人,记录他们的支票,利用覆盖批评者寻找漏洞。 3. 候选人验证 -- -- 将每个独特的候选人交给一个新的核查者,以试图反驳。 4. 结构化产出 -- -- 书面确认、需要验证和拒绝对调查结果的记录。 5. 独立记录核实 -- -- 新鲜剂核实最终来源声称。 物料取代器得到另一个独立的验证器. 6. 目标中立的报告 -- -- 从经核实的记录和覆盖分类账中得出报告(m),FindingS-DETAIL.m和NeedS-Validation.m。"
+          "subtitle_zh": "分阶段执行安全审计的 Coding Agent Skill：通过架构侦察、覆盖率驱动的缺陷搜索、独立验证和机器可读的发现记录，提高安全审计的可追溯性。",
+          "detail_zh": "将你的经纪人变成安全审计师的编码技术 它通过侦察、以覆盖为主导的狩猎、候选人验证、结构化产出、独立记录核查以及目标中立的报告,协调孤立的特工。 这是Cloudflare的弱点发现工具的种子, 在Build自己的弱点工具中描述。 牵引力发展成一个多阶段,全舰队范围的系统;这种技能是它从中演化出来的单回波起点. 1. 侦察 -- -- 地图结构、信任边界、输入面、先前证据以及架构.md和覆盖-引导器.json的确定性覆盖。 2. 覆盖为主的狩猎 -- -- 从分类单元中指派孤立的猎人,记录他们的支票,利用覆盖批评者寻找漏洞。 3. 候选人验证 -- -- 将每个独特的候选人交给一个新的核查者,以试图反驳。 4. 结构化产出 -- -- 书面确认、需要验证和拒绝对调查结果的记录。 5. 独立记录核实 -- -- 新鲜剂核实最终来源声称。 物料取代器得到另一个独立的验证器. 6. 目标中立的报告 -- -- 从经核实的记录和覆盖分类账中得出报告(m),FindingS-DETAIL.m和NeedS-Validation.m。",
+          "zh_intro_reviewed": true
         },
         {
           "title": "ruvnet/ruflo",
@@ -1438,7 +1442,8 @@
           "detail": "Start in Claude Code with core tools, the visual console and runtime mods. Requires Claude Code 2.1.287 or later. Run inside Claude Code: Core provides foundation tools. Console opens the agent cockpit. Mods add routing and policy enforcement inside Claude Code. Mods run with your account's permissions; review their code before installing. Using Codex or another MCP enabled tool? Use NPX for Ruflo project setup and connect your client to the Ruflo MCP server. Run the setup wizard in your project terminal:",
           "summary_source": "repository README",
           "subtitle_zh": "面向多智能体协作的 Agent Harness，可部署 Agent 群体、协调自主工作流和构建对话式 AI 系统；包含自适应记忆、自学习、向量检索增强，以及对 Claude Code、Codex 等环境的集成。",
-          "detail_zh": "在Claude Code中开始使用核心工具,视觉控制台和运行时的mods. 要求克劳德代码2.1.287或稍后. 在克劳德代码内部运行:核心提供基础工具. 控制台打开驾驶舱 模式在克劳德法典中增加了路线和政策执行. Mods 使用您的账户权限运行; 在安装前审查它们的代码 。 使用 Codex 还是其他 MCP 启用的工具 ? 使用 NPX 来设置 Ruflo 项目,并将客户端连接到 Ruflo MCP 服务器. 在您的工程终端中运行设置向导 :"
+          "detail_zh": "在Claude Code中开始使用核心工具,视觉控制台和运行时的mods. 要求克劳德代码2.1.287或稍后. 在克劳德代码内部运行:核心提供基础工具. 控制台打开驾驶舱 模式在克劳德法典中增加了路线和政策执行. Mods 使用您的账户权限运行; 在安装前审查它们的代码 。 使用 Codex 还是其他 MCP 启用的工具 ? 使用 NPX 来设置 Ruflo 项目,并将客户端连接到 Ruflo MCP 服务器. 在您的工程终端中运行设置向导 :",
+          "zh_intro_reviewed": true
         },
         {
           "title": "anthropics/knowledge-work-plugins",
@@ -1449,8 +1454,9 @@
           "metric": "stars gained this week",
           "detail": "Plugins that turn Claude into a specialist for your role, team, and company. Built for Claude Cowork, also compatible with Claude Code. Cowork lets you set the goal and Claude delivers finished, professional work. Plugins let you go further: tell Claude how you like work done, which tools and data to pull from, how to handle critical workflows, and what slash commands to expose — so your team gets better and more consistent outcomes. Each plugin bundles the skills, connectors, slash commands, and sub-agents for a specific job function. Out of the box, they give Claude a strong starting point for helping anyone in that role. The real power comes when you customize them for your company — your tools, your terminology, your processes — so Claude works like it was built for your team.",
           "summary_source": "repository README",
-          "subtitle_zh": "Anthropic 开源的知识工作插件仓库，主要面向 Claude Cowork 用户，帮助按不同岗位和工作场景扩展专用能力。",
-          "detail_zh": "让克劳德成为你角色、团队和公司专家的插件 建于克劳德合作公司(Claude Cowork),同样兼容克劳德代码. 合作让你设定目标 克劳德完成专业工作 插件让你走得更远:告诉克劳德你如何喜欢做工作,从哪些工具和数据中抽取,如何处理关键的工作流程,以及要暴露什么斜线命令——这样你的团队就能获得更好,更一致的结果. 每个插件会将技能,连接器,斜线命令,以及用于特定工作功能的子代理捆绑起来. 在盒子外,他们给克劳德一个有力的起点来帮助任何扮演这个角色的人. 当你为自己的公司定制它们——你的工具,术语,你的流程——时,真正的力量就来了,所以克劳德的工作就像它是为了你的团队而建造的."
+          "subtitle_zh": "Anthropic 开源的知识工作插件仓库，主要面向 Claude Cowork 用户，帮助按不同岗位与工作场景扩展专用能力。",
+          "detail_zh": "让克劳德成为你角色、团队和公司专家的插件 建于克劳德合作公司(Claude Cowork),同样兼容克劳德代码. 合作让你设定目标 克劳德完成专业工作 插件让你走得更远:告诉克劳德你如何喜欢做工作,从哪些工具和数据中抽取,如何处理关键的工作流程,以及要暴露什么斜线命令——这样你的团队就能获得更好,更一致的结果. 每个插件会将技能,连接器,斜线命令,以及用于特定工作功能的子代理捆绑起来. 在盒子外,他们给克劳德一个有力的起点来帮助任何扮演这个角色的人. 当你为自己的公司定制它们——你的工具,术语,你的流程——时,真正的力量就来了,所以克劳德的工作就像它是为了你的团队而建造的.",
+          "zh_intro_reviewed": true
         },
         {
           "title": "anomalyco/opencode",
@@ -1564,10 +1570,14 @@
         {
           "title": "pingdotgg/t3code",
           "url": "https://github.com/pingdotgg/t3code",
-          "subtitle": "",
+          "subtitle": "T3 Code is an agent harness control surface for managing local AI coding agents from mobile, web, and desktop apps. It works with Claude Code, Codex, Cursor, Grok Build, OpenCode and Google Antigravity.",
           "badge": "GitHub Trending · weekly",
           "value": 1770,
-          "metric": "stars gained this week"
+          "metric": "stars gained this week",
+          "detail": "T3 Code is an agent harness control surface. It enables control of the agents on your machine with mobile apps for iOS and Android, a web app, and an Electron desktop app. It works with supported local Claude Code, Codex, Cursor, Grok Build, OpenCode and Google Antigravity installations. The project emphasizes remote control and an open, forkable coding-agent workflow.",
+          "summary_source": "repository README",
+          "subtitle_zh": "T3 Code 是用于管理本机 AI 编程 Agent 的 Harness 控制界面，可通过手机、网页和桌面应用远程操作本地 Agent，支持 Claude Code、Codex、Cursor、Grok Build、OpenCode 和 Google Antigravity。",
+          "detail_zh": "T3 Code 提供一套 Agent Harness 控制界面，让用户通过 iOS、Android、网页或 Electron 桌面应用操作运行在自己计算机上的编程 Agent。它可以连接本机已配置的 Claude Code、Codex、Cursor、Grok Build、OpenCode 和 Google Antigravity，重点提供远程控制和可自行修改、分叉的开源工作体验。"
         }
       ]
     },
@@ -1588,8 +1598,9 @@
           "metric": "total stars",
           "detail": "A toolbox of film styles made in code: 59 ready to use, and your own. Pick a style or make one from scratch, bring your story, and let your coding agent direct. 59 种影片风格，每种都配一支完全用代码做出来的短片 · 🇨🇳 中文用户请看 简体中文说明 ⚠️ Built for Claude. The styles are tuned for Claude Opus 5.5; other models may not reproduce them well, so use them with care. 🆕 2026-10-22 · Edit & Documentary: 8 styles cut from real footage, documents and data. See them ↓ 🆕 2026-10-22 · Make a style your own: change a style or start blank, and keep it. See how ↓ 🆕 2026-10-16 · Evidence Films: 8 styles that film real material, every number sourced. See them ↓",
           "summary_source": "repository README",
-          "subtitle_zh": "面向 Claude Code 的代码生成式影片风格工具箱：提供 59 种现成风格，并允许创建自定义风格。各风格附带提示词与由 Claude Opus 5.5 纯代码制作的示例影片，不依赖视频生成模型。",
-          "detail_zh": "一个用代码制作的电影风格工具箱:59准备使用,还有你自己的. 选个风格或从头做一个, 带来你的故事, 让你的编码代理指导。 59 种影片风格 每种都配一支完全用代码做出来的短片 🇨🇳 中文用户请看 ⚠️  Bu  Bu  Bu  Bu  Bu  Bu  Bu  Bu  Bu  Bu  Bu  Bu 风格为克劳德·奥普斯(Claude Opus)5.5调制;其他型号可能不善于复制,因此谨慎使用. & Documentary:从真实的镜头,文档和数据中剪切出8种风格. 2026年-10月22日 – 给自己做个样式:改变样式或开始空白,并保留. 参见QQQ 2026-10-16 证据电影:拍摄真实材料的8种风格,每个数字来源. 看他们"
+          "subtitle_zh": "面向 Claude Code 的代码生成式影片风格工具箱：提供 59 种现成风格，并允许创建自定义风格。每种风格包含提示词与由 Claude Opus 5.5 纯代码制作的示例影片，不依赖视频生成模型。",
+          "detail_zh": "一个用代码制作的电影风格工具箱:59准备使用,还有你自己的. 选个风格或从头做一个, 带来你的故事, 让你的编码代理指导。 59 种影片风格 每种都配一支完全用代码做出来的短片 🇨🇳 中文用户请看 ⚠️  Bu  Bu  Bu  Bu  Bu  Bu  Bu  Bu  Bu  Bu  Bu  Bu 风格为克劳德·奥普斯(Claude Opus)5.5调制;其他型号可能不善于复制,因此谨慎使用. & Documentary:从真实的镜头,文档和数据中剪切出8种风格. 2026年-10月22日 – 给自己做个样式:改变样式或开始空白,并保留. 参见QQQ 2026-10-16 证据电影:拍摄真实材料的8种风格,每个数字来源. 看他们",
+          "zh_intro_reviewed": true
         },
         {
           "title": "Ryze-AI-Adgent/open-seo-mcp-skills",
@@ -1601,8 +1612,9 @@
           "metric": "total stars",
           "detail": "Skip the setup: use the hosted Ryze MCP (Google sign-in, Search Console and GA4 connected in one step, approval-gated changes). Open-source SEO + GEO skills for Claude on a free SEO MCP server (the Ryze connector) — keyword research, rank tracking, site audits, backlinks, competitor gaps, AI visibility — running on your own Search Console, Analytics and ads data through the Ryze MCP, with DataForSEO built in for the data Google won't give you. No subscription for the tool. No markup on API calls. The skills are MIT — take them, change them, ship them.",
           "summary_source": "repository README",
-          "subtitle_zh": "为 Claude 提供开源 SEO / GEO 技能及免费的 SEO MCP 服务，支持关键词研究、排名跟踪、网站审计、外链分析与 AI 搜索可见性检查，并可关联 Search Console、GA4 和广告数据。",
-          "detail_zh": "跳过设置:使用主机Ryze MCP(Google sign-in,Search Console和GA4在一步中连接,批准加码更改). Claude在免费的SEO MCP服务器(英语:Ryze connectioner)上的开源SEO + GEO技能——关键词研究,排位跟踪,站点审核,回联,竞争者漏洞,AI能见度——通过Ryze MCP在你自己的搜索控制台,分析器和广告上运行,为数据Google所建的DataFOSEO不会给你. 未订阅此工具 。 API的通话没有标记. 这些技能是麻省理工学院的——把他们带走,改变,运送."
+          "subtitle_zh": "为 Claude 提供开源 SEO / GEO 技能及免费的 SEO MCP 服务，支持关键词研究、排名跟踪、网站审计、外链分析和 AI 搜索可见性检查，并可关联 Search Console、GA4 和广告数据。",
+          "detail_zh": "跳过设置:使用主机Ryze MCP(Google sign-in,Search Console和GA4在一步中连接,批准加码更改). Claude在免费的SEO MCP服务器(英语:Ryze connectioner)上的开源SEO + GEO技能——关键词研究,排位跟踪,站点审核,回联,竞争者漏洞,AI能见度——通过Ryze MCP在你自己的搜索控制台,分析器和广告上运行,为数据Google所建的DataFOSEO不会给你. 未订阅此工具 。 API的通话没有标记. 这些技能是麻省理工学院的——把他们带走,改变,运送.",
+          "zh_intro_reviewed": true
         },
         {
           "title": "Jakeschincariol/replica-skill",
@@ -1615,7 +1627,8 @@
           "detail": "Eleven Claude skills that clone any app. Free, MIT, no signup, no API key, nothing to connect. One reverse-engineers the app you want to clone. One rebuilds it. One tests it for bugs. And one is the Entrepreneur: it reads what the app's users hate and fixes it in yours, so you have an app you can sell. In between, the others plan the stack and the database, rebuild the design system, wire up auth and payments, score your clone against the original, give it a name and a brand of its own, write the landing page and the store listing, and put it live on your domain.",
           "summary_source": "repository README",
           "subtitle_zh": "包含 11 个免费 Claude Skills 的应用复刻工具集，覆盖逆向分析、重新实现、缺陷测试，以及根据用户反馈继续改进；项目采用 MIT 许可证。",
-          "detail_zh": "11 Claude技能克隆任何应用程序 免费 麻省理工学院 没有注册 没有API密钥 没有连接 一个逆向引擎,你想要克隆的应用程序。 一个重建它。 一个测试它为虫。 一个是创业者:它读出应用程序的用户讨厌的东西,并用你的软件修复它,这样你就可以卖掉一个应用程序。 在两者之间,其他人计划堆栈和数据库,重建设计系统,电汇认证和支付,根据原版对你的克隆进行评分,给它一个名字和自己的品牌,写上登陆页和商店上市,并让它在你的域名上直播."
+          "detail_zh": "11 Claude技能克隆任何应用程序 免费 麻省理工学院 没有注册 没有API密钥 没有连接 一个逆向引擎,你想要克隆的应用程序。 一个重建它。 一个测试它为虫。 一个是创业者:它读出应用程序的用户讨厌的东西,并用你的软件修复它,这样你就可以卖掉一个应用程序。 在两者之间,其他人计划堆栈和数据库,重建设计系统,电汇认证和支付,根据原版对你的克隆进行评分,给它一个名字和自己的品牌,写上登陆页和商店上市,并让它在你的域名上直播.",
+          "zh_intro_reviewed": true
         },
         {
           "title": "kaankiziltug/logo-design-skill",
@@ -1768,7 +1781,8 @@
           "detail": "Finathink 将用户提供的数据、证据、因子、量化检验、风险检查、纸面组合和学习记录组织成一条可追溯的研究流程。运行结果保存为结构化记录和可离线打开的 HTML 报告，适合个人研究、量化学习、策略复盘和多代理协作。 研究工作台页面为 /workbench，其结构化接口为 /api/research/workbench，离线报告使用 workbench/index.html。",
           "summary_source": "repository README",
           "subtitle_zh": "Finathink 是面向可审计时间点研究、数学学习与受约束投资组合分析的金融研究工作流优化工具。",
-          "detail_zh": "Finathink 将用户提供的数据、证据、因子、量化检验、风险检查、纸面组合和学习记录组织成一条可追溯的研究流程。运行结果保存为结构化记录和可离线打开的 HTML 报告，适合个人研究、量化学习、策略复盘和多代理协作。 研究工作台页面为 /workbench，其结构化接口为 /api/research/workbench，离线报告使用 workbench/index.html。"
+          "detail_zh": "Finathink 将用户提供的数据、证据、因子、量化检验、风险检查、纸面组合和学习记录组织成一条可追溯的研究流程。运行结果保存为结构化记录和可离线打开的 HTML 报告，适合个人研究、量化学习、策略复盘和多代理协作。 研究工作台页面为 /workbench，其结构化接口为 /api/research/workbench，离线报告使用 workbench/index.html。",
+          "zh_intro_reviewed": true
         },
         {
           "title": "WestFox-AwA/dsh-wish-specializer",
@@ -1780,8 +1794,9 @@
           "metric": "total stars",
           "detail": "中间那些决定成品好坏、但你没说出口的东西—— 审美基调、光影与材质、构图与层次、场景与氛围、交互与状态、以及\"做到什么算过\"—— 由它在你按下发送之前补上，随原话一起交给工作 AI。 环境：Windows + DSH + PTC 预设，一轮直出（OneShot），插件档位「重度」，模型 DeepSeek-V4.1-Flash-0910。 1. 装好插件（见下），面板上把档位拨到「标准」或「重度」（「关闭」不拦截、不注入）； 2. 照常输入，按 回车； 3. 拦截面板里看一眼补充内容：「确认」放行，「跳过并直接发送」按原文直接发； 4. 想更快：双击 Enter 直接跳过本轮优化（默认开，600ms 内两次回车）； 5. 发出去之后，消息下方有「本次注入」卡片，能看到这一轮到底往上下文里塞了什么。",
           "summary_source": "repository README",
-          "subtitle_zh": "许愿特化器 · Wish Specializer — DSH 插件：让模型更出色地，不误解你的意思地，完成你的“愿望”。在短提示词+自带的Wish预设（PTC也可以）+重度的情况下，可以起到巨大的表现增益",
-          "detail_zh": "中间那些决定成品好坏、但你没说出口的东西—— 审美基调、光影与材质、构图与层次、场景与氛围、交互与状态、以及\"做到什么算过\"—— 由它在你按下发送之前补上，随原话一起交给工作 AI。 环境：Windows + DSH + PTC 预设，一轮直出（OneShot），插件档位「重度」，模型 DeepSeek-V4.1-Flash-0910。 1. 装好插件（见下），面板上把档位拨到「标准」或「重度」（「关闭」不拦截、不注入）； 2. 照常输入，按 回车； 3. 拦截面板里看一眼补充内容：「确认」放行，「跳过并直接发送」按原文直接发； 4. 想更快：双击 Enter 直接跳过本轮优化（默认开，600ms 内两次回车）； 5. 发出去之后，消息下方有「本次注入」卡片，能看到这一轮到底往上下文里塞了什么。"
+          "subtitle_zh": "“许愿特化器”是一款 DSH 插件，用于在用户发送简短需求前补充设计、上下文和执行约束，帮助模型更准确地理解并完成任务。",
+          "detail_zh": "中间那些决定成品好坏、但你没说出口的东西—— 审美基调、光影与材质、构图与层次、场景与氛围、交互与状态、以及\"做到什么算过\"—— 由它在你按下发送之前补上，随原话一起交给工作 AI。 环境：Windows + DSH + PTC 预设，一轮直出（OneShot），插件档位「重度」，模型 DeepSeek-V4.1-Flash-0910。 1. 装好插件（见下），面板上把档位拨到「标准」或「重度」（「关闭」不拦截、不注入）； 2. 照常输入，按 回车； 3. 拦截面板里看一眼补充内容：「确认」放行，「跳过并直接发送」按原文直接发； 4. 想更快：双击 Enter 直接跳过本轮优化（默认开，600ms 内两次回车）； 5. 发出去之后，消息下方有「本次注入」卡片，能看到这一轮到底往上下文里塞了什么。",
+          "zh_intro_reviewed": true
         },
         {
           "title": "aaravshah1311/Agent-2",
@@ -1794,7 +1809,8 @@
           "detail": "An autonomous AI agentic harness built to code anything, automate terminals, perform cybersecurity tasks, and execute complex real-world workflows with minimal human intervention. From writing and debugging code to analyzing systems, managing files, running commands, and orchestrating tools, Agent-2 turns simple prompts into autonomous execution. Fluxion AI/Sidrune AI - Reliable, cost-efficient access to GPT, Claude, and other leading AI models Fluxion AI/Sidrune AI provides reliable, cost-efficient access to GPT, Claude, and other leading AI models through one unified API. Save up to 70% compared with official API pricing—and get $3 in API credits when you sign up through this link.",
           "summary_source": "repository README",
           "subtitle_zh": "面向自主编程与复杂任务执行的 Agent Harness，支持终端自动化、安全相关任务、系统分析、文件操作和工具编排，目标是用较少人工干预完成工作流。",
-          "detail_zh": "一个自主的 AI 代理化的牵引装置 用于编码任何东西, 自动化终端, 执行网络安全任务, 从写入和调试代码到分析系统,管理文件,运行命令,以及管弦乐工具,Agent-2将简单的提示转换为自主执行. Fluxion AI/Sidrune AI - 可靠,成本高效的GPT,克劳德,以及其他主要AI模型Fluxion AI/Sidrune AI通过一个统一的API提供可靠,成本高效的GPT,克劳德等主要AI模型访问. 与官方API定价相比,"
+          "detail_zh": "一个自主的 AI 代理化的牵引装置 用于编码任何东西, 自动化终端, 执行网络安全任务, 从写入和调试代码到分析系统,管理文件,运行命令,以及管弦乐工具,Agent-2将简单的提示转换为自主执行. Fluxion AI/Sidrune AI - 可靠,成本高效的GPT,克劳德,以及其他主要AI模型Fluxion AI/Sidrune AI通过一个统一的API提供可靠,成本高效的GPT,克劳德等主要AI模型访问. 与官方API定价相比,",
+          "zh_intro_reviewed": true
         },
         {
           "title": "jtaroreh/agystack",
@@ -1932,7 +1948,7 @@
   },
   "translation_status": "offline_argos",
   "translation_coverage": {
-    "translated": 141,
+    "translated": 142,
     "total": 142
   }
 }
