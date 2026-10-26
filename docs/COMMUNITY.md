@@ -10,6 +10,15 @@
 - 新正式收录必须写 `submission.github`（投稿人的实际 GitHub login）和 `submission.added_on`（实际进入目录的日期，YYYY-MM-DD）；建议写 `submission.issue_url` 和确认的 `submission.original_author`。投稿者和原作者不是同一个概念。
 - 历史条目没有可核对的收录日或贡献者时明确保留未知，不以目录更新时间或论文年份替代。不要以新增互动机制为由稀释 Gallery 审美门槛。
 
+## 公开 Community 与精选 Curated（已实现）
+
+- **Community 页面：** [community.html](../community.html)，通过浏览器直接读取 GitHub REST API `/repos/OpenResearchAssets/openresearchassets.github.io/issues?state=all&per_page=100&page=N`，只收录真实公开投稿 Issue（标题 `[投稿]` 且具备表单的资产类型与原始来源字段）；排除 PR、垃圾/隐藏标签、`not_planned` 关闭状态。避免为社区再建本地 JSON 数据库。
+- **公开即可互动：** 新 Issue 创建后，无需等待精选，Community 页面就可以看到真实的 GitHub 用户、创建日期、👍 Reaction 和评论数。点击点赞/评论进入对应 GitHub Issue 完成登录和操作；网站**没有伪造的本地点赞按钮**，不储存 GitHub Token。页面提供关键词、类型、最新/最多点赞/最多讨论排序。
+- **来源与媒体保护：** 展示投稿标题与纯文本简述，不自动转载第三方图片、不渲染投稿 Markdown/HTML。外部原始链接标为未核实；仅允许 HTTPS/HTTP；字符串做 HTML escaping。失效、滥用或版权异议由 GitHub Issue 管理，管理者可添加 `spam`/`hidden`/`do-not-display`/`invalid` 标签或以 `not_planned` 关闭。
+- **分页与计数：** 默认最多加载 5 页 GitHub Issues（每页最多 100 条 API 返回记录），页面上的数量及热门排序明确是**已加载的**记录，而不是无限全量排行；GitHub 限流或 API 故障时提示失败并提供 Issues 外链，绝不将故障当作真实零投稿。资源多到需要全量计算时再评估自动生成快照。
+- **Curated 仍然独立：** 人工审核后继续只在 `catalog/index.json` 收录，增加真实 `submission.issue_url`、`submission.github` 与 `submission.added_on`。Community 页面据此显示“已入选精选”及详情链接。原始 Issue 不删除，保留署名与社区的互动记录；Issue 点赞与精选 giscus Discussions 是不同的数据源，目前不会自动相加或迁移。
+- **空状态：** 截至 2026-10-26，公开仓库 API 返回零条 Issues。因此上线初期应显示欢迎投稿的真实空状态，不能伪造种子案例或数字。新投稿由 GitHub API 数据即时发现，前端刷新可看到更新（受 API 缓存与频率限制）。
+
 ## 已启用：资产详情页点赞与评论
 
 详情页已内置 giscus 的按资产 ID 独立映射，支持 GitHub 登录后的真实 Reaction 和 Discussion 评论；现已完成仓库授权配置，**`config/community.json` 中 `enabled=true`**。配置使用真实仓库 ID `R_kgDOVVmmmQ` 和 `Assets` 分类 ID `DIC_kwDOVVmmmc4DJn9q`。访客可在已入库资产的详情页通过 GitHub 账号留下点赞与评论；新讨论首次发生真实互动时由 giscus 自动创建，尚无互动的页面可能显示无讨论状态。
