@@ -210,7 +210,7 @@
     if(historyAction){
       const u=new URL(location.href);
       if(next==='all')u.searchParams.delete('feed');else u.searchParams.set('feed',next);
-      window.history.replaceState(null,'',u.pathname+u.search+u.hash);
+      if(u.href!==location.href)window.history.pushState(null,'',u.pathname+u.search+u.hash);
     }
     render();
     const headingTarget=document.querySelector('.findings-shell');
