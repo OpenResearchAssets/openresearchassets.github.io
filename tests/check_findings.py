@@ -13,6 +13,7 @@ import update_findings as collector
 import findings_enrichment as enrichment
 import findings_offline_translate as offline
 import findings_editorial_zh as editorial
+import findings_zh_typography as typography
 from unittest.mock import patch
 
 SOURCES=('papers','github','skills','workflows')
@@ -74,6 +75,40 @@ class FindingsCollectorTests(unittest.TestCase):
         self.assertEqual(saved['status'],'stale')
         self.assertEqual(saved['fetched_at'],old['fetched_at'])
         self.assertEqual(saved['items'],old['items'])
+
+    def test_chinese_punctuation_preserves_versions_urls_code_and_decimals(self):
+        cases = [
+            ('模型改进. 下一步测试,效果更好!', '模型改进。下一步测试，效果更好！'),
+            ('参数为v2.6.3,准确率96.3%. 接下来讨论.', '参数为v2.6.3，准确率96.3%。接下来讨论。'),
+            ('我们记录1,200个样本,处理时间10:30,完毕.', '我们记录1,200个样本，处理时间10:30，完毕。'),
+            ('代码在https://github.com/team/repo,详情见README.md. 继续.',
+             '代码在https://github.com/team/repo，详情见README.md。继续。'),
+            ('中文内容: 模型v1.2.3; 基础结论? 是的!',
+             '中文内容：模型v1.2.3；基础结论？是的！'),
+            ('引用package.json,访问README.md,然后执行测试.',
+             '引用package.json，访问README.md，然后执行测试。'),
+            ('English only. Keep 1.2, and URL https://example.com.', 
+             'English only. Keep 1.2, and URL https://example.com.'),
+        ]
+        for original, expected in cases:
+            with self.subTest(original=original):
+                actual=typography.normalize_zh_typography(original)
+                self.assertEqual(actual,expected)
+                self.assertEqual(typography.normalize_zh_typography(actual),expected)
+
+    def test_chinese_field_only_normalization(self):
+        record={'title':'Model v2.6: Report', 'subtitle':'The model improves.',
+                'title_zh':'模型v2.6: 研究报告',
+                'subtitle_zh':'模型v2.6在这里. 进一步分析,没有问题.',
+                'detail_zh':'准确率为96.3%,模型在github.com发布.'}
+        feeds={'papers':{'items':[record]}}
+        self.assertEqual(typography.normalize_translated_feeds(feeds),3)
+        self.assertEqual(record['title_zh'],'模型v2.6：研究报告')
+        self.assertEqual(record['subtitle_zh'],'模型v2.6在这里。进一步分析，没有问题。')
+        self.assertEqual(record['detail_zh'],'准确率为96.3%，模型在github.com发布。')
+        self.assertEqual(record['title'],'Model v2.6: Report')
+        self.assertEqual(record['subtitle'],'The model improves.')
+        self.assertEqual(typography.normalize_translated_feeds(feeds),0)
 
     def test_readme_extraction_is_sourced_and_clean(self):
         readme = "# Repository Overview\n\nThis research tool collects genuine papers and describes them with source citations.\n\n" \
