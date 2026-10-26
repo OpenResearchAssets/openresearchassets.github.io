@@ -11,7 +11,7 @@
 ## 站内完整阅读与自动翻译
 
 - **默认总览保持四组各前三条。** 选择论文、项目、Skills 或 Workflows 后，浏览器在站内展示详细简介，每次最多加载 8 条，点击“在这里再看”继续阅读；不强制打开 Hugging Face/GitHub 的完整榜单。原站仍提供可选入口用于下载、安装、代码核验和原始出处。
-- **论文最多抓取 100 条。** 使用 Hugging Face 官方 `HfApi.list_daily_papers(sort="trending", limit=100)`，保留真实摘要到约 2500 字符，并提供原论文摘要展开。可能因平台实际返回不足而少于 100 条；仅代表当前自动快照，不声称复制平台所有历史论文。原文发表日期与趋势日期分别显示，不混为一谈。
+- **论文最多抓取 100 条。** 使用 Hugging Face 官方 `HfApi.list_daily_papers(sort="trending", limit=100)`，保留真实摘要到约 6000 字符，并提供原论文摘要展开。可能因平台实际返回不足而少于 100 条；仅代表当前自动快照，不声称复制平台所有历史论文。原文发表日期与趋势日期分别显示，不混为一谈。
 - **项目描述增强。** 对 GitHub Trending、Skills / Workflows 中各前 10 个 GitHub 仓库，尽量读取官方 GitHub README 的介绍性段落；额外内容标记为 `repository README`，不使用 LLM 虚构内容、不执行仓库代码。不成功则只显示原站已公开的 repository description；因请求配额有上限，剩余条目不承诺全文介绍。相同条目优先复用之前快照中抓取的 README，避免反复访问。
 - **Google Cloud Translation（可选、付费 API）**：在仓库 **Settings → Secrets and variables → Actions → New repository secret** 创建 `GOOGLE_TRANSLATE_API_KEY`，密钥来自已开启计费与 Cloud Translation API 的 Google Cloud 项目。配置后定时 GitHub Actions 以 Cloud Translation Basic v2 POST 批量翻译标题/摘要/README，写入与英文原文对应的 `title_zh` / `subtitle_zh` / `detail_zh` 字段，站点中文优先显示译文，英文页面和原始信息保持不变。浏览器不访问 Translation API，也不包含密钥。**用户未提供凭证时不会产生真实译文**，页面会说明保留原文，不会假装已完成翻译。
 - **控制成本与重用**：译文按原始源文本比对缓存；仅新增或变更字段调用翻译，每次最大约 53,000 输入字符，单批最多 12 条；HF 完整摘要译文用于生成摘要预览，避免同一段文字重复计费。Google Cloud 计费按输入字符执行，请配置预算和 API 配额。机器译文可能有专业术语错误，始终留有英文原文和链接用于校核；不将翻译冒充人工学术解读。
