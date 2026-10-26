@@ -198,8 +198,8 @@ home_html=(ROOT/'index.html').read_text(encoding='utf-8')
 contribute_html=(ROOT/'contribute.html').read_text(encoding='utf-8')
 if home_html.count('class="ora-main-path"')!=2:
     errors.append('homepage: expected Gallery and Skills entry points')
-if contribute_html.count('class="ora-start-path"')!=3:
-    errors.append('contribution page: expected three contribution paths')
+if contribute_html.count('class="ora-submit-cta"')!=1 or contribute_html.count('class="ora-submit-guidelines-grid"')!=1:
+    errors.append('contribution page: expected one submission action and one concise guideline grid')
 for page_name,html in [('index.html',home_html),('contribute.html',contribute_html)]:
     if any(text not in html for text in ('data-i18n-zh=', 'data-i18n-en=')):
         errors.append(f'{page_name}: missing bilingual first-use text')
@@ -209,8 +209,8 @@ if 'id="popular-skills"' not in home_html or 'id="practice-skills"' not in home_
     errors.append('homepage: popular and practice tracks not separate')
 if 'href="for-agents/"' not in home_html or 'href="contribute.html"' not in home_html:
     errors.append('homepage: missing agent or contribution entry')
-if 'id="methods"' not in contribute_html:
-    errors.append('contribution page: missing methods and workflows')
+if 'Skills / Workflows' not in contribute_html or 'id="ora-submit-title"' not in contribute_html:
+    errors.append('contribution page: must accept research skills via single public submission flow')
 correction = ROOT/'.github/ISSUE_TEMPLATE/catalog-correction.md'
 if not correction.is_file():
     errors.append('missing general asset correction issue template')
@@ -219,6 +219,27 @@ elif 'catalog-correction.md' not in contribute_html:
 template=(ROOT/'.github/ISSUE_TEMPLATE/asset-request.md').read_text(encoding='utf-8')
 if not all(word in template for word in ('工作流','工具','来源','授权')):
     errors.append('asset proposal template: still too narrow for research assets')
+
+# Shared information architecture: 3 destinations across all entry pages.
+nav_pages=['index.html','community.html','contribute.html','asset.html',
+           'quality.html','principles.html','for-agents/index.html','examples.html']
+nav_js=(ROOT/'js/navigation.js').read_text(encoding='utf-8')
+if 'const links=[' not in nav_js or 'renderNavigation()' not in nav_js or 'renderFooter()' not in nav_js:
+    errors.append('shared navigation/footer script is not authoritative')
+for page_name in nav_pages:
+    markup=(ROOT/page_name).read_text(encoding='utf-8')
+    if markup.count('id="site-nav"')!=1 or 'data-page=' not in markup:
+        errors.append(f'{page_name}: expected one declarative navigation mount')
+    if '>精选 Curated</a>' in markup or '>社区 Community</a>' in markup:
+        errors.append(f'{page_name}: legacy per-page nav markup remains')
+if home_html.index('id="assets"')>home_html.index('id="skills"'):
+    errors.append('homepage: Gallery editable templates should precede Skills')
+if 'id="philosophy"' in home_html or 'id="join"' in home_html:
+    errors.append('homepage: secondary tools/contribution marketing sections should not dominate Curated')
+if 'ora-community-principle' in (ROOT/'community.html').read_text(encoding='utf-8'):
+    errors.append('Community: duplicate curatorial explainer still occupies the feed')
+if 'catalog-correction.md' not in contribute_html:
+    errors.append('Contribute: correction link lost')
 
 # P1 worked examples use concrete editable vector assets and never pretend to report results.
 import csv
