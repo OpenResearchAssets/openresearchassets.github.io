@@ -156,3 +156,10 @@ html[lang="zh-CN"] .story-hero h1,html[lang="zh-CN"] .audit-hero h1{letter-spaci
  html[lang="zh-CN"] .hero-v2 h1{font-size:clamp(36px,9.7vw,60px)}
  html[lang="zh-CN"] .section-head h2{font-size:clamp(38px,9.2vw,52px)}
 }
+
+/* An explicit current-language selector avoids EN/中文 destination-label confusion. */
+.lang-toggle{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-width:95px;padding:8px 11px}
+.ora-lang-option{color:#8f9ead;font-size:12px;font-weight:540;transition:color .14s}
+.ora-lang-option.is-active{color:#213d57;font-weight:820}
+.ora-lang-divider{color:#c5cfd8;font-size:11px;font-weight:500}
+@media(max-width:400px){.lang-toggle{min-width:76px;padding:7px 8px;gap:4px}.ora-lang-option{font-size:11px}}
