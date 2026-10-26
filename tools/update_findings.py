@@ -255,7 +255,8 @@ def fetch_skills() -> tuple[list[dict], str, str]:
 def fetch_workflows() -> tuple[list[dict], str, str]:
     results = repo_records(new_repos([
         "topic:agent-workflow", "topic:research-workflow",
-        "workflow automation in:name,description"
+        "agent orchestration workflow in:name,description",
+        "research agent workflow in:name,description"
     ], 60), badge="GitHub · 新创建工作流")
     if not results:
         raise ValueError("GitHub workflow discovery returned no new repositories")
