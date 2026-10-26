@@ -73,3 +73,7 @@ OpenResearchAssets 是**面向人类与 AI 的科研全过程可复用资产库*
 17. **视觉偏好与真实性**：用户明确不喜欢 RoboRender 方法结构图，禁止恢复为首页资产；优先参考 Depth Anything 3 官方多视角深度/空间重建概览图，并保留 RoboRender Teaser 案例。参考类卡片默认真实源站图片；若配图不是对应论文 Figure 1 或整页截图，必须明确标注真实媒体的身份。原创分析 SVG 只在详情作为辅助，不可冒充官方截图。外链媒体未自动再授权。
 
 18. **严禁 Figure 1 / 主页截图错配**：RoboRender、RoboDojo、SuperMimic 六个核心案例的实际首图已由原论文/官网核实。论文条目必须指向相应 Figure 1，主页条目必须指向实拍网页首屏；官网其他图片不能冒充 Teaser。新增图片先核对实际像素和文字、来源、许可、Figure 编号，再绑定到目录。来源、作者、图片变更记录写入 figureIdentity 与 third-party manifest；自制解析 SVG 仅作为 analysisVisual 辅助。
+
+## Skill 真实运行证据边界
+
+只有留下程序、实测日志、输入源 SHA 与客观验收结果的任务，才可使用「公开试运行」措辞。必须区分 ① 上游文档阅读，② 根据 Skill 指南实施的本站脚本，③ 官方 Skill 辅助脚本实际运行，④ Agent Harness 自动装载/选择 Skill，⑤ 同任务与无 Skill 的受控 A/B。没有 ④、⑤ 的证据时禁止夸大为 AI 性能收益或已验证技能泛化。CI 时间不能充当模型推理延迟；Token 不可用时填写 `null`。参见 [实际试运行](experiments/skill-trials/README.md)。
