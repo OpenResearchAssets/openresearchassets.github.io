@@ -1,3 +1,11 @@
+## 网站收敛规则（2026-10）
+
+- **一级导航只允许 Curated / Community / Contribute 三个入口**。Gallery 与 Skills / Workflows 是 Curated 的两个核心资产类型；可编辑 SVG 属于 Gallery 子板块。Quality、Principles、For AI、版权与更正均退居公共页脚。
+- **单一共享导航组件**：`js/navigation.js` 负责渲染主导航、桌面投稿 CTA、移动菜单、次级页脚；各 HTML 只留 `#site-nav[data-page][data-root]`，不重建独立菜单。导航中英切换、相对路径、active 状态必须自动验证。
+- **无损调整**：不重新绘制或删除用户认可的正式资产图。保留精选 `catalog/index.json`、GitHub Issues 社区源、giscus 详情互动及旧案例链接；不要让 GitHub Stars 与本站点赞混淆。
+- **页面职责**：首页主要呈现 Gallery + Skills；社区页面先展示真实投稿；投稿页只保留一个主要上传 CTA 和三项必要说明。辅助工具继续存在但不占首页整块营销区域。不要把原来的长页面换成同样复杂的新一版。
+- **测试约束跟随真实产品目标**：旧页面重复链接数量不作为质量指标；验证唯一导航挂载、真实资源数、中文英文、手机/平板/桌面、社区真实数据与安全过滤、导航不会遮挡。
+
 ## 选品原则：两个核心资产方向
 
 Open Research Assets 的公开首页只突出 **Research Gallery（高审美科研配图、项目主页和可编辑图）** 与 **Research Skills / Workflows（能够完成具体任务的能力资产）**。论文方法或实验解读仅作为必要的来源、科学事实和设计参考辅助，**不再作为首页、组织主页或增长方向的主产品**；既有页面可以保留旧链接，但不主动作为产品入口推广。
