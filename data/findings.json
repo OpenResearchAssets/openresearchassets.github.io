@@ -1277,7 +1277,8 @@
           "metric": "total stars",
           "detail": "A toolbox of film styles made in code: 59 ready to use, and your own. Pick a style or make one from scratch, bring your story, and let your coding agent direct. 59 种影片风格，每种都配一支完全用代码做出来的短片 · 🇨🇳 中文用户请看 简体中文说明 ⚠️ Built for Claude. The styles are tuned for Claude Opus 5.5; other models may not reproduce them well, so use them with care. 🆕 2026-10-22 · Edit & Documentary: 8 styles cut from real footage, documents and data. See them ↓ 🆕 2026-10-22 · Make a style your own: change a style or start blank, and keep it. See how ↓ 🆕 2026-10-16 · Evidence Films: 8 styles that film real material, every number sourced. See them ↓",
           "summary_source": "repository README",
-          "subtitle_zh": "面向 Claude Code 的代码生成式影片风格工具箱：提供 59 种现成风格，并允许创建自定义风格。各风格附带提示词与由 Claude Opus 5.5 纯代码制作的示例影片，不依赖视频生成模型。"
+          "subtitle_zh": "面向 Claude Code 的代码生成式影片风格工具箱：提供 59 种现成风格，并允许创建自定义风格。各风格附带提示词与由 Claude Opus 5.5 纯代码制作的示例影片，不依赖视频生成模型。",
+          "detail_en": "A code-driven film-style toolbox for Claude Code, featuring 59 ready-to-use styles and support for custom styles. Each style combines a prompt with a sample film created entirely in code using Claude Opus 5.5, without a video generation model. The project is optimized for Claude; results can vary with other models. The README includes documentary editing, evidence-film styles, and guidance on customizing styles."
         },
         {
           "title": "Ryze-AI-Adgent/open-seo-mcp-skills",
@@ -1435,7 +1436,8 @@
           "metric": "total stars",
           "detail": "Finathink 将用户提供的数据、证据、因子、量化检验、风险检查、纸面组合和学习记录组织成一条可追溯的研究流程。运行结果保存为结构化记录和可离线打开的 HTML 报告，适合个人研究、量化学习、策略复盘和多代理协作。 研究工作台页面为 /workbench，其结构化接口为 /api/research/workbench，离线报告使用 workbench/index.html。",
           "summary_source": "repository README",
-          "subtitle_zh": "Finathink 是面向可审计时间点研究、数学学习与受约束投资组合分析的金融研究工作流优化工具。"
+          "subtitle_zh": "Finathink 是面向可审计时间点研究、数学学习与受约束投资组合分析的金融研究工作流优化工具。",
+          "detail_en": "Finathink organizes user-provided data, evidence, factors, quantitative tests, risk assessments, paper portfolios, and learning records into a traceable research workflow. Results are saved as structured records and offline-readable HTML reports. It supports individual research, quantitative learning, strategy reviews, and multi-agent collaboration. The web workbench is available at /workbench, its API at /api/research/workbench, and exported offline reports at workbench/index.html."
         },
         {
           "title": "WestFox-AwA/dsh-wish-specializer",
@@ -1447,7 +1449,9 @@
           "metric": "total stars",
           "detail": "中间那些决定成品好坏、但你没说出口的东西—— 审美基调、光影与材质、构图与层次、场景与氛围、交互与状态、以及\"做到什么算过\"—— 由它在你按下发送之前补上，随原话一起交给工作 AI。 环境：Windows + DSH + PTC 预设，一轮直出（OneShot），插件档位「重度」，模型 DeepSeek-V4.1-Flash-0910。 1. 装好插件（见下），面板上把档位拨到「标准」或「重度」（「关闭」不拦截、不注入）； 2. 照常输入，按 回车； 3. 拦截面板里看一眼补充内容：「确认」放行，「跳过并直接发送」按原文直接发； 4. 想更快：双击 Enter 直接跳过本轮优化（默认开，600ms 内两次回车）； 5. 发出去之后，消息下方有「本次注入」卡片，能看到这一轮到底往上下文里塞了什么。",
           "summary_source": "repository README",
-          "subtitle_zh": "“许愿特化器”是一款 DSH 插件，用于在用户发送简短需求前自动补充设计、上下文与执行约束，帮助模型更准确地理解并完成任务。"
+          "subtitle_zh": "“许愿特化器”是一款 DSH 插件，用于在用户发送简短需求前自动补充设计、上下文与执行约束，帮助模型更准确地理解并完成任务。",
+          "detail_en": "Wish Specializer is a DSH plugin that fills in often-unstated requirements before a user sends a prompt to an AI assistant: aesthetic direction, lighting and materials, composition, scene atmosphere, interactions, state, and acceptance criteria. It operates with Windows, DSH, and PTC presets, offers standard and intensive modes, and lets users review, confirm, or skip additions before sending. After submission, an injection card displays what was added to the model's context.",
+          "subtitle_en": "Wish Specializer is a DSH plugin that expands brief user requests with missing design and execution constraints before passing them to a work AI."
         },
         {
           "title": "aaravshah1311/Agent-2",
