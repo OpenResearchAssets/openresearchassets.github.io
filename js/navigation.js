@@ -13,6 +13,7 @@
   const links=[
     {key:'curated',href:path('index.html'),zh:'精选',en:'Curated'},
     {key:'community',href:path('community.html'),zh:'社区',en:'Community'},
+    {key:'findings',href:path('findings.html'),zh:'发现',en:'Findings'},
     {key:'contribute',href:path('contribute.html'),zh:'投稿',en:'Contribute'}
   ];
   const translate=(zh,en)=>window.ORA_I18N?.t(zh,en)||
@@ -25,13 +26,13 @@
     headerCTA.className='nav-cta';
     main.insertBefore(headerCTA,main.querySelector('.lang-toggle')||button);
   }
-  // Desktop: two destination links plus the action; mobile: all three in the menu.
-  if(headerCTA){headerCTA.href=links[2].href;if(current==='contribute')headerCTA.setAttribute('aria-current','page');else headerCTA.removeAttribute('aria-current');}
+  // Desktop: Curated / Community / Findings plus one Contribute action. Mobile includes all.
+  if(headerCTA){headerCTA.href=links[3].href;if(current==='contribute')headerCTA.setAttribute('aria-current','page');else headerCTA.removeAttribute('aria-current');}
   function renderNavigation(){
     menu.innerHTML=links.map((item,i)=>{
       const active=current===item.key?' aria-current="page"':'';
       return '<a href="'+escapeHtml(item.href)+'"'+active+
-        (i===2?' class="mobile-only"':'')+'>'+escapeHtml(translate(item.zh,item.en))+'</a>';
+        (i===3?' class="mobile-only"':'')+'>'+escapeHtml(translate(item.zh,item.en))+'</a>';
     }).join('');
     if(headerCTA)headerCTA.textContent=translate('投稿 ↗','Contribute ↗');
     button.setAttribute('aria-label',translate('打开导航','Open navigation'));
