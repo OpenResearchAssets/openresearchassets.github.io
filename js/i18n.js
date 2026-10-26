@@ -19,9 +19,16 @@
       Object.entries(attrs).forEach(([name,values])=>el.setAttribute(name, values[language === 'zh' ? 1 : 0]));
     });
     if (toggle) {
-      toggle.textContent = language === 'zh' ? 'EN' : '中文';
-      toggle.setAttribute('aria-label',language === 'zh' ? 'Switch to English' : '切换为中文');
-      toggle.setAttribute('title',language === 'zh' ? 'English' : '简体中文');
+      // Both languages stay visible. Highlight CURRENT language, never
+      // present only the destination language as if it were the active one.
+      toggle.innerHTML = '<span class="ora-lang-option'+(language==='zh'?' is-active':'')+
+        '" lang="zh-CN">中文</span><span class="ora-lang-divider" aria-hidden="true">/</span>'+
+        '<span class="ora-lang-option'+(language==='en'?' is-active':'')+'" lang="en">EN</span>';
+      toggle.setAttribute('aria-label',language==='zh'
+        ? '当前语言：中文。点击切换为 English' : 'Current language: English. Click to switch to 中文');
+      toggle.setAttribute('title',language==='zh'
+        ? '当前：中文 · 切换为 English' : 'Current: English · Switch to 中文');
+      toggle.setAttribute('data-current-lang',language);
     }
     window.dispatchEvent(new CustomEvent('ora-language-change',{detail:{language}}));
   }
