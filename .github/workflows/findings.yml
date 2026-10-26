@@ -8,6 +8,8 @@ on:
     paths:
       - .github/workflows/findings.yml
       - tools/update_findings.py
+      - tools/findings_enrichment.py
+      - tests/check_findings.py
 permissions:
   contents: write
 concurrency:
