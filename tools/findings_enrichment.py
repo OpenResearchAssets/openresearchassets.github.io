@@ -111,7 +111,8 @@ def google_translate(texts: list[str], api_key: str) -> list[str]:
     return [html.unescape(x["translatedText"]) for x in translated]
 
 
-def add_translations(feeds: dict, old_feeds: dict, key: str | None = None) -> tuple[str, int]:
+def add_translations(feeds: dict, old_feeds: dict, key: str | None = None,
+                     offline_enabled: bool = False) -> tuple[str, int]:
     """Reuse identical translations and translate only missing fields up to budget.
 
     Google Translate is opt-in to avoid a billable API call every six hours.
@@ -152,6 +153,11 @@ def add_translations(feeds: dict, old_feeds: dict, key: str | None = None) -> tu
                 entry["subtitle_zh"] = entry["detail_zh"][:650]
 
     if not key:
+        if offline_enabled:
+            from findings_offline_translate import add_offline_translations
+            status, count = add_offline_translations(feeds, old_feeds)
+            copy_abstract_preview()
+            return status, count
         copy_abstract_preview()
         return ("cached" if reused else "not_configured"), reused
     translated_count = 0
