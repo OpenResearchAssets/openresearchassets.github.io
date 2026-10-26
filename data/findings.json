@@ -1,11 +1,11 @@
 {
   "schema_version": "1",
-  "generated_at": "2026-10-26T06:11:47Z",
+  "generated_at": "2026-10-26T06:13:35Z",
   "feeds": {
     "papers": {
       "source": "Hugging Face Papers",
       "url": "https://huggingface.co/papers/trending",
-      "fetched_at": "2026-10-26T06:11:36Z",
+      "fetched_at": "2026-10-26T06:13:25Z",
       "status": "ok",
       "metric_note": "HF 社区投票 · 官方 trending 排序",
       "items": [
@@ -276,7 +276,7 @@
           "metric": "upvotes",
           "title_zh": "YUE2：统一符号和音频音乐生成，以前沿质量",
           "detail_zh": "符号模型使旋律，和谐，节奏，并形成清晰但一般在完成录制之前停止；音频模型产生完整的歌曲，同时隐含成分。我们介绍YUE2，它通过象征性的规划，统一了象征和音频音乐的制作，具有前沿质量。单曲AR-NAR Mixture-of-Transformers(MOT)首先写了一个可读的分数，指定了旋律与和谐，将其扩展为语义音乐符号，并实现为全声乐。在使用同一检查站进行比较时，专家倾向于对整体质量和音乐性进行象征性规划，49.3%的总体偏好，34.6%没有规划。专家们也赞成统一模式，而不是单独的语言模式和传播变形器。在WildSong Bench上，YuE2在Song Bench Global Avg上得分6.73，超过了所有评价的公共基线。从8名候选人(最佳8名)中挑选，YUE2达到6.96，是所有被评价系统中观察到的最高平均值。专家的倾听进一步确立了其与专有歌曲生成器的竞争力，倾向于优胜8胜于Suno v4.5，并产生对Suno v5的近乎平衡的偏好。为了从没有对齐分数的录音中学习这个生成过程，我们引入了MERT2和SeetSage2来提供语义和符号监督。 MERT2设定了音乐表现学习的新艺术水平，超越了15个MARBLE 度量衡中的14个的以往最佳成绩； SheetSage2 领先了15个基准度量配对中的12个，在我们的铅板抄录比较中。同一检查点遵循分数编辑，同时基本上保留未经编辑的音乐内容，并产生零镜头封面，而不进行特定封面训练。它的可读分数也使得代理音乐编辑成为可能，外部语言模型将用户反馈翻译为对构成的修订。",
-          "subtitle_zh": "符号模型使旋律，和谐，节奏，并形成清晰但一般在完成录制之前停止；音频模型产生完整的歌曲，同时隐含成分。我们介绍YUE2，它通过象征性的规划，统一了象征和音频音乐的制作，具有前沿质量。单曲AR-NAR Mixture-of-Transformers(MOT)首先写了一个可读的分数，指定了旋律与和谐，将其扩展为语义音乐符号，并实现为全声乐。在使用同一检查站进行比较时，专家倾向于对整体质量和音乐性进行象征性规划，49.3%的总体偏好，34.6%没有规划。专家们也赞成统一模式，而不是单独的语言模式和传播变形器。在WildSong Bench上，YuE2在Song Bench Global Avg上得分6.73，超过了所有评价的公共基线。从8名候选人(最佳8名)中挑选，YUE2达到6.96，是所有被评价系统中观察到的最高平均值。专家的倾听进一步确立了其与专有歌曲生成器的竞争力，倾向于优胜8胜于Suno v4.5，并产生对Suno v5的近乎平衡的偏好。为了从没有对齐分数的录音中学习这个生成过程，我们引入了MERT2和SeetSage2来提供语义和符号监督。 MERT2设定了音乐表现学习的新艺术水平，超越了15个MARBLE 度量衡中的14个的以往最佳成绩； SheetSage2 领先了15个基准度量配对中的12个，在我们的铅板抄录比较中。同一检查点遵循分数编辑，同时基本上保留未经编辑的音乐内容，并产生零镜头封面，而不进行特定封面训练。它的可读分数也使得代理音乐编辑成为可"
+          "subtitle_zh": "符号模型使旋律，和谐，节奏，并形成清晰但一般在完成录制之前停止；音频模型产生完整的歌曲，同时隐含成分。我们介绍YUE2，它通过象征性的规划，统一了象征和音频音乐的制作，具有前沿质量。单曲AR-NAR Mixture-of-Transformers(MOT)首先写了一个可读的分数，指定了旋律与和谐，将其扩展为语义音乐符号，并实现为全声乐。在使用同一检查站进行比较时，专家倾向于对整体质量和音乐性进行象征性规划，49.3%的总体偏好，34.6%没有规划。专家们也赞成统一模式，而不是单独的语言模式和传播变形器。在WildSong Bench上，YuE2在Song Bench Global Avg上得分6.73，超过了所有评价的公共基线。从8名候选人(最佳8名)中挑选，YUE2达到6.96，是所有被评价系统中观察到的最高平均值。专家的倾听进一步确立了其与专有歌曲生成器的竞争力，倾向于优胜8胜于Suno v4.5，并产生对Suno v5的近乎平衡的偏好。为了从没有对齐分数的录音中学习这个生成过程，我们引入了MERT2和SeetSage2来提供语义和符号监督。 MERT2设定了音乐表现学习的新艺术水平，超越了15个MARBLE 度量衡中的14个的以往最佳成绩； SheetSage2 领先了15个基准度量配对中的12个，在我们的铅板抄录比较中。同一检查点遵循分数编辑，同时基本上保留未经编辑的音乐内容，并产生零镜头封面，而不进行特定封面训练。它的可读分数也使得代理音乐编辑成为可能，外部语言模型将用"
         },
         {
           "title": "MinerU2.5: A Decoupled Vision-Language Model for Efficient High-Resolution Document Parsing",
@@ -458,7 +458,7 @@
           "metric": "upvotes",
           "title_zh": "OpenGCUA：走向一个通用计算机的全张开放堆栈",
           "detail_zh": "计算机的使用已经到了一个转折点：焦点正在从只使用图形界面的交互扩展到通过视觉和程序接口完成用户计算机任务的系统。我们把通用计算机使用代理(GCUA)定义为一个系统，在该系统中，模型选择如何观察，采取行动，并组织其跨越视觉和节目界面的工作。然而，前沿实施，例如GPT-6 Astra的计算机使用系统，基本上仍然关闭，限制了对其设计的系统研究。我们提出开放通用的CUA(OpenGCUA)，这是一个持续进行的项目，旨在开发并开放面向社区的全球CUA的完整堆栈。本报告介绍OpenGCUA的首次发行。代码执行是我们代理设计的一个关键特征：它让中间结果决定后续的操作，并使模型能够将其现有的编程能力直接应用于计算机交互。我们还提议从固定规则到模式的决策转移，将选定的观察和任务状态的决定从固定规则转移到模式。在OSWorld-v2上，我们的全面配置提高了包括GPT-6 Astra和Claude Opus 5在内的所有8个评价模型的任务分数，将平均部分分数提高+19.6分，并将每个任务的报告步骤比批量的GUI只执行平均减少53.0%。我们发布了我们的执行和提示，评估轨迹 从所有8个模型，和初步版本的 真实的装置和交叉的装置SDK。该套接字处理的是基准没有完全捕捉到的真设备挑战，而SDK则提供了一个跨计算机，移动和浏览器的共同编程接口。通过我们真设备的4个真正的macOS任务，被选中的Quen3.8-Max运行时使用的推理符是GPT-6 Astra的19.4倍，凸显了真设备执行效率模型之间的巨大差异。",
-          "subtitle_zh": "计算机的使用已经到了一个转折点：焦点正在从只使用图形界面的交互扩展到通过视觉和程序接口完成用户计算机任务的系统。我们把通用计算机使用代理(GCUA)定义为一个系统，在该系统中，模型选择如何观察，采取行动，并组织其跨越视觉和节目界面的工作。然而，前沿实施，例如GPT-6 Astra的计算机使用系统，基本上仍然关闭，限制了对其设计的系统研究。我们提出开放通用的CUA(OpenGCUA)，这是一个持续进行的项目，旨在开发并开放面向社区的全球CUA的完整堆栈。本报告介绍OpenGCUA的首次发行。代码执行是我们代理设计的一个关键特征：它让中间结果决定后续的操作，并使模型能够将其现有的编程能力直接应用于计算机交互。我们还提议从固定规则到模式的决策转移，将选定的观察和任务状态的决定从固定规则转移到模式。在OSWorld-v2上，我们的全面配置提高了包括GPT-6 Astra和Claude Opus 5在内的所有8个评价模型的任务分数，将平均部分分数提高+19.6分，并将每个任务的报告步骤比批量的GUI只执行平均减少53.0%。我们发布了我们的执行和提示，评估轨迹 从所有8个模型，和初步版本的 真实的装置和交叉的装置SDK。该套接字处理的是基准没有完全捕捉到的真设备挑战，而SDK则提供了一个跨计算机，移动和浏览器的共同编程接口。通过我们真设备的4个真正的macOS任务，被选中的Quen3.8-Max运行时使用的推理符是GPT-6 Astra的19.4倍，凸显了真设备执行"
+          "subtitle_zh": "计算机的使用已经到了一个转折点：焦点正在从只使用图形界面的交互扩展到通过视觉和程序接口完成用户计算机任务的系统。我们把通用计算机使用代理(GCUA)定义为一个系统，在该系统中，模型选择如何观察，采取行动，并组织其跨越视觉和节目界面的工作。然而，前沿实施，例如GPT-6 Astra的计算机使用系统，基本上仍然关闭，限制了对其设计的系统研究。我们提出开放通用的CUA(OpenGCUA)，这是一个持续进行的项目，旨在开发并开放面向社区的全球CUA的完整堆栈。本报告介绍OpenGCUA的首次发行。代码执行是我们代理设计的一个关键特征：它让中间结果决定后续的操作，并使模型能够将其现有的编程能力直接应用于计算机交互。我们还提议从固定规则到模式的决策转移，将选定的观察和任务状态的决定从固定规则转移到模式。在OSWorld-v2上，我们的全面配置提高了包括GPT-6 Astra和Claude Opus 5在内的所有8个评价模型的任务分数，将平均部分分数提高+19.6分，并将每个任务的报告步骤比批量的GUI只执行平均减少53.0%。我们发布了我们的执行和提示，评估轨迹 从所有8个模型，和初步版本的 真实的装置和交叉的装置SDK。该套接字处理的是基准没有完全捕捉到的真设备挑战，而SDK则提供了一个跨计算机，移动和浏览器的共同编程接口。通过我们真设备的4个真正的macOS任务，被选中的Quen3.8-Max运行时使用的推理符是GPT-6 Astra的19.4倍，凸显了真设备执行效率模型之间的巨大差异。"
         },
         {
           "title": "F2G-Pose: Geometry-Aware Foundation Feature Lifting for Direct RGB-D Category-Level Object Pose Estimation",
@@ -822,7 +822,7 @@
           "metric": "upvotes",
           "title_zh": "PrismaCoder：通过分解的Rubric合成来推进开放式多式联运代码智能的边界",
           "detail_zh": "多式联运代码智能将程序的象征世界与它们的执行所创造的视觉世界联系起来。对这种能力的兴趣正在增长，因为人们越来越多地要求模型制作图表、网页、动画和半结构文件。最近，专有模型推进了很远的一步，甚至从文本描述或截图中产生交互式文物。然而，他们的数据和培训仍然关闭，现有数据的数量和质量以及生产数据的管道和方法阻碍了开放的进展。质量是两者中最难的，因为一个样本必须作为一个程序正确，构建良好，最重要的是，一旦渲染出来，就具有视觉权利。没有现有的信号覆盖所有三个。执行通常只返回一个通过或失败，代码相似性不映射到视觉输出，任务特定核查者不概括。为了进一步推动开放进展，我们从数据侧面开始，与PrismaForge，一个分级数据管道，其中心是一个将这些因素分解为可核查标准的合成标题。同一标题既可以过滤，又可以奖励：它可以校准被监管人，然后推动在视觉编码任务方面的强化学习。利用PrismaForge进行数据合成和过滤，我们建造了PrismaCoder-2M，这是用于多式联运代码智能的最多样化开放数据集，也是迄今为止最大的数据集。在模型方面，我们在此数据上对Prisma Coder-9B和Prisma Coder-35B进行训练并发布两者。它们以广阔的优势领导着开放的艺术状态，并竞争着领先的专有系统。我们的分析进一步表明，拟议的基于标题的管道改进了示范骨干之间的多式联运编码工作。我们在https://qiushisun.github.io/PrismaCoder-Home/发布我们的代码和数据。",
-          "subtitle_zh": "多式联运代码智能将程序的象征世界与它们的执行所创造的视觉世界联系起来。对这种能力的兴趣正在增长，因为人们越来越多地要求模型制作图表、网页、动画和半结构文件。最近，专有模型推进了很远的一步，甚至从文本描述或截图中产生交互式文物。然而，他们的数据和培训仍然关闭，现有数据的数量和质量以及生产数据的管道和方法阻碍了开放的进展。质量是两者中最难的，因为一个样本必须作为一个程序正确，构建良好，最重要的是，一旦渲染出来，就具有视觉权利。没有现有的信号覆盖所有三个。执行通常只返回一个通过或失败，代码相似性不映射到视觉输出，任务特定核查者不概括。为了进一步推动开放进展，我们从数据侧面开始，与PrismaForge，一个分级数据管道，其中心是一个将这些因素分解为可核查标准的合成标题。同一标题既可以过滤，又可以奖励：它可以校准被监管人，然后推动在视觉编码任务方面的强化学习。利用PrismaForge进行数据合成和过滤，我们建造了PrismaCoder-2M，这是用于多式联运代码智能的最多样化开放数据集，也是迄今为止最大的数据集。在模型方面，我们在此数据上对Prisma Coder-9B和Prisma Coder-35B进行训练并发布两者。它们以广阔的优势领导着开放的艺术状态，并竞争着领先的专有系统。我们的分析进一步表明，拟议的基于标题的管道改进了示范骨干之间的多式联运编码工作。我们在https://qiushisun.github.io/PrismaCoder-Home/发布"
+          "subtitle_zh": "多式联运代码智能将程序的象征世界与它们的执行所创造的视觉世界联系起来。对这种能力的兴趣正在增长，因为人们越来越多地要求模型制作图表、网页、动画和半结构文件。最近，专有模型推进了很远的一步，甚至从文本描述或截图中产生交互式文物。然而，他们的数据和培训仍然关闭，现有数据的数量和质量以及生产数据的管道和方法阻碍了开放的进展。质量是两者中最难的，因为一个样本必须作为一个程序正确，构建良好，最重要的是，一旦渲染出来，就具有视觉权利。没有现有的信号覆盖所有三个。执行通常只返回一个通过或失败，代码相似性不映射到视觉输出，任务特定核查者不概括。为了进一步推动开放进展，我们从数据侧面开始，与PrismaForge，一个分级数据管道，其中心是一个将这些因素分解为可核查标准的合成标题。同一标题既可以过滤，又可以奖励：它可以校准被监管人，然后推动在视觉编码任务方面的强化学习。利用PrismaForge进行数据合成和过滤，我们建造了PrismaCoder-2M，这是用于多式联运代码智能的最多样化开放数据集，也是迄今为止最大的数据集。在模型方面，我们在此数据上对Prisma Coder-9B和Prisma Coder-35B进行训练并发布两者。它们以广阔的优势领导着开放的艺术状态，并竞争着领先的专有系统。我们的分析进一步表明，拟议的基于标题的管道改进了示范骨干之间的多式联运编码工作。我们在https://qiushisun.github.io/PrismaCoder-Home/发布我们的代码和数据。"
         },
         {
           "title": "Any Time, Any Space: A World-State-Centric Framework for Agentic Video Generation",
@@ -1101,7 +1101,7 @@
           "metric": "upvotes",
           "title_zh": "六舍尔：探索作为机器人编码代理的VLM代理的极限的微弱优势",
           "detail_zh": "以视觉语言模型(VLMs)为基础的代理商现在与关于机器人操纵领导板的学习政策竞争。我们问一个编码代理在控制一个机器人而不是计算机时能走多远，以及它停在哪里。我们的系统，HexaShell，保持了控制：它只会把特工的命令变成机器人运动。特工驾驶一个双臂机器人通过一个命令行。它看到三台RGB摄像头并知道它们的校准。每次尝试失败后，代理会读取日志，找到原因，并写或修正名为工具的小程序。这样它就能保持它作为代码学到的东西，就像它修复失败测试时的编码代理一样。这些工具可能只使用机器人观察到的东西。它们使用三角测量法来寻找物体的位置，相对彼此和捕捉者。如果两个摄像头看到同一点，则点位于两个摄像头射线相遇的地方。如果一个点位于已知的平面上，如桌子或块的顶部，它就位于它的射线与该平面相遇的地方。当头摄像头不够时，机器人会移动手腕摄像头以获得第二个视图。我们每件任务只用一个种子的十种布局来建造工具，然后将其冻结，并用同一个种子的十种新布局来测试。我们在中度推理时使用GPT-6-Astra的Codex。在所有42项RoboDojo任务中，HexoShell都取得了39.7%的成功率，进步分48.0的平均成绩与领跑板相同。这是关于RoboDojo的新艺术 极限是接触，而不是推理：推力达到92.5%，内存任务达到65.0%，但紧插入率只有8.3%。当代理失败时，它通常会看到失败但不能使运动发挥作用。我们开放了迄今在https://github.com/HexaFuture/HexaShell上演变的工具来源。",
-          "subtitle_zh": "以视觉语言模型(VLMs)为基础的代理商现在与关于机器人操纵领导板的学习政策竞争。我们问一个编码代理在控制一个机器人而不是计算机时能走多远，以及它停在哪里。我们的系统，HexaShell，保持了控制：它只会把特工的命令变成机器人运动。特工驾驶一个双臂机器人通过一个命令行。它看到三台RGB摄像头并知道它们的校准。每次尝试失败后，代理会读取日志，找到原因，并写或修正名为工具的小程序。这样它就能保持它作为代码学到的东西，就像它修复失败测试时的编码代理一样。这些工具可能只使用机器人观察到的东西。它们使用三角测量法来寻找物体的位置，相对彼此和捕捉者。如果两个摄像头看到同一点，则点位于两个摄像头射线相遇的地方。如果一个点位于已知的平面上，如桌子或块的顶部，它就位于它的射线与该平面相遇的地方。当头摄像头不够时，机器人会移动手腕摄像头以获得第二个视图。我们每件任务只用一个种子的十种布局来建造工具，然后将其冻结，并用同一个种子的十种新布局来测试。我们在中度推理时使用GPT-6-Astra的Codex。在所有42项RoboDojo任务中，HexoShell都取得了39.7%的成功率，进步分48.0的平均成绩与领跑板相同。这是关于RoboDojo的新艺术 极限是接触，而不是推理：推力达到92.5%，内存任务达到65.0%，但紧插入率只有8.3%。当代理失败时，它通常会看到失败但不能使运动发挥作用。我们开放了迄今在https://github.com/HexaFut"
+          "subtitle_zh": "以视觉语言模型(VLMs)为基础的代理商现在与关于机器人操纵领导板的学习政策竞争。我们问一个编码代理在控制一个机器人而不是计算机时能走多远，以及它停在哪里。我们的系统，HexaShell，保持了控制：它只会把特工的命令变成机器人运动。特工驾驶一个双臂机器人通过一个命令行。它看到三台RGB摄像头并知道它们的校准。每次尝试失败后，代理会读取日志，找到原因，并写或修正名为工具的小程序。这样它就能保持它作为代码学到的东西，就像它修复失败测试时的编码代理一样。这些工具可能只使用机器人观察到的东西。它们使用三角测量法来寻找物体的位置，相对彼此和捕捉者。如果两个摄像头看到同一点，则点位于两个摄像头射线相遇的地方。如果一个点位于已知的平面上，如桌子或块的顶部，它就位于它的射线与该平面相遇的地方。当头摄像头不够时，机器人会移动手腕摄像头以获得第二个视图。我们每件任务只用一个种子的十种布局来建造工具，然后将其冻结，并用同一个种子的十种新布局来测试。我们在中度推理时使用GPT-6-Astra的Codex。在所有42项RoboDojo任务中，HexoShell都取得了39.7%的成功率，进步分48.0的平均成绩与领跑板相同。这是关于RoboDojo的新艺术 极限是接触，而不是推理：推力达到92.5%，内存任务达到65.0%，但紧插入率只有8.3%。当代理失败时，它通常会看到失败但不能使运动发挥作用。我们开放了迄今在https://github.com/HexaFuture/HexaShell上演变的工具"
         },
         {
           "title": "UniForge3D: Joint 3D Reconstruction and Generation in a Shared Anchor-Guided Space",
@@ -1157,7 +1157,7 @@
           "metric": "upvotes",
           "title_zh": "AnyGameRefer：实体- 恒定的跨游戏基因渲染和实体级基准",
           "detail_zh": "AI编码代理现在可以在几分钟内建立小型的可玩游戏，但结果通常看起来像程序员的艺术：灰色屏蔽，彩色几何原始，以及扁平的语义blobs。我们介绍AnyGameRender，一个视频到视频的基因渲染器，将这种镜头变成高质量的视觉，有人物，动作细节，和效果。在整个过程中，它保持了布局，摄像头，以及每个实体的位置和时间的完整。我们的AnyGameRender 概括了特工们建立的各种流派，例如塔楼防御、自动击球手、自上而下的幸存者、回合制战斗、Kart赛车和人群跑车。 AnyGameRender将纯视频作为其游戏状态输入，没有引擎G-buffers，每个对象类标签，或低波代理等复杂的表示。灰色挡板，彩色原始，语义图，以及线框都作为输入工作。它还保存实体函证：组数保持正确，实体出现在右框并消失。我们执行AnyGameRender，由LORA微调MiniMax-H3 ref2va，一种33B参考视频条件的视频生成模型。训练使用来自三个来源的sim10k配对剪辑： (一)来自GEAR输出的38款代理游戏的多流渲染数据，这是AI游戏制作工具； (二)来自Unreal Engine的双流渲染数据，有程序上控制的众，计数变化，以及实体尺度； (三)真实的游戏游戏录音，通过3D盒检测重建对子。为了评价实体的函证，我们提出一个实体一级的基准，即59个搁置案件，有753个实体，对照地面真相箱打分。与基数模型相比，AnyGameRender更好地保存实体对应：时间匹配从50.9\\%上升到62.9\\%，错失的计数变化从34.7\\%下降到21.3\\%，幻觉或未命中的实体较少。",
-          "subtitle_zh": "AI编码代理现在可以在几分钟内建立小型的可玩游戏，但结果通常看起来像程序员的艺术：灰色屏蔽，彩色几何原始，以及扁平的语义blobs。我们介绍AnyGameRender，一个视频到视频的基因渲染器，将这种镜头变成高质量的视觉，有人物，动作细节，和效果。在整个过程中，它保持了布局，摄像头，以及每个实体的位置和时间的完整。我们的AnyGameRender 概括了特工们建立的各种流派，例如塔楼防御、自动击球手、自上而下的幸存者、回合制战斗、Kart赛车和人群跑车。 AnyGameRender将纯视频作为其游戏状态输入，没有引擎G-buffers，每个对象类标签，或低波代理等复杂的表示。灰色挡板，彩色原始，语义图，以及线框都作为输入工作。它还保存实体函证：组数保持正确，实体出现在右框并消失。我们执行AnyGameRender，由LORA微调MiniMax-H3 ref2va，一种33B参考视频条件的视频生成模型。训练使用来自三个来源的sim10k配对剪辑： (一)来自GEAR输出的38款代理游戏的多流渲染数据，这是AI游戏制作工具； (二)来自Unreal Engine的双流渲染数据，有程序上控制的众，计数变化，以及实体尺度； (三)真实的游戏游戏录音，通过3D盒检测重建对子。为了评价实体的函证，我们提出一个实体一级的基准，即59个搁置案件，有753个实体，对照地面真相箱打分。与基数模型相比，AnyGameRender更好地保存实体对应：时间匹配从50.9\\%上升"
+          "subtitle_zh": "AI编码代理现在可以在几分钟内建立小型的可玩游戏，但结果通常看起来像程序员的艺术：灰色屏蔽，彩色几何原始，以及扁平的语义blobs。我们介绍AnyGameRender，一个视频到视频的基因渲染器，将这种镜头变成高质量的视觉，有人物，动作细节，和效果。在整个过程中，它保持了布局，摄像头，以及每个实体的位置和时间的完整。我们的AnyGameRender 概括了特工们建立的各种流派，例如塔楼防御、自动击球手、自上而下的幸存者、回合制战斗、Kart赛车和人群跑车。 AnyGameRender将纯视频作为其游戏状态输入，没有引擎G-buffers，每个对象类标签，或低波代理等复杂的表示。灰色挡板，彩色原始，语义图，以及线框都作为输入工作。它还保存实体函证：组数保持正确，实体出现在右框并消失。我们执行AnyGameRender，由LORA微调MiniMax-H3 ref2va，一种33B参考视频条件的视频生成模型。训练使用来自三个来源的sim10k配对剪辑： (一)来自GEAR输出的38款代理游戏的多流渲染数据，这是AI游戏制作工具； (二)来自Unreal Engine的双流渲染数据，有程序上控制的众，计数变化，以及实体尺度； (三)真实的游戏游戏录音，通过3D盒检测重建对子。为了评价实体的函证，我们提出一个实体一级的基准，即59个搁置案件，有753个实体，对照地面真相箱打分。与基数模型相比，AnyGameRender更好地保存实体对应：时间匹配从50.9\\%上升到62.9\\%，错失的计数"
         },
         {
           "title": "In-Context Learning for Robots: Methods and Applications",
@@ -1415,7 +1415,7 @@
     "github": {
       "source": "GitHub Trending",
       "url": "https://github.com/trending?since=weekly",
-      "fetched_at": "2026-10-26T06:11:38Z",
+      "fetched_at": "2026-10-26T06:13:27Z",
       "status": "ok",
       "metric_note": "官方 weekly Trending 排名；可见时显示本周新增 Stars",
       "items": [
@@ -1593,7 +1593,7 @@
     "skills": {
       "source": "GitHub Search",
       "url": "https://github.com/search?q=topic%3Aagent-skills&type=repositories",
-      "fetched_at": "2026-10-26T06:11:40Z",
+      "fetched_at": "2026-10-26T06:13:29Z",
       "status": "ok",
       "metric_note": "近 60 天创建的 Skills 仓库，按累计 Stars 排序（非增长榜）",
       "items": [
@@ -1603,7 +1603,7 @@
           "subtitle": "A toolbox of film styles made in code for Claude Code: 59 ready to use, and your own. Each style is a style prompt plus a demo film made entirely in code by Claude Opus 5.5, with no video model. By Lemomo. · 一套用代码做片的风格工具箱：59 种现成风格，也能做出你自己的",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "JavaScript",
-          "value": 7608,
+          "value": 7609,
           "metric": "total stars",
           "detail": "A toolbox of film styles made in code: 59 ready to use, and your own. Pick a style or make one from scratch, bring your story, and let your coding agent direct. 59 种影片风格，每种都配一支完全用代码做出来的短片 · 🇨🇳 中文用户请看 简体中文说明 ⚠️ Built for Claude. The styles are tuned for Claude Opus 5.5; other models may not reproduce them well, so use them with care. 🆕 2026-10-22 · Edit & Documentary: 8 styles cut from real footage, documents and data. See them ↓ 🆕 2026-10-22 · Make a style your own: change a style or start blank, and keep it. See how ↓ 🆕 2026-10-16 · Evidence Films: 8 styles that film real material, every number sourced. See them ↓",
           "summary_source": "repository README",
@@ -1631,7 +1631,7 @@
           "subtitle": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 5529,
+          "value": 5530,
           "metric": "total stars",
           "detail": "Eleven Claude skills that clone any app. Free, MIT, no signup, no API key, nothing to connect. One reverse-engineers the app you want to clone. One rebuilds it. One tests it for bugs. And one is the Entrepreneur: it reads what the app's users hate and fixes it in yours, so you have an app you can sell. In between, the others plan the stack and the database, rebuild the design system, wire up auth and payments, score your clone against the original, give it a name and a brand of its own, write the landing page and the store listing, and put it live on your domain.",
           "summary_source": "repository README",
@@ -1658,7 +1658,7 @@
           "subtitle": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "JavaScript",
-          "value": 4457,
+          "value": 4459,
           "metric": "total stars",
           "detail": "An agent skill. Ask a hard question, get a page you can actually read instead of a wall of text. The model writes about 1/8 of the tokens it would need to hand-write the HTML. The agent writes a short Markdown draft and hands it to the CLI that ships with the skill. About 50 ms later you have a page: https://github.com/user-attachments/assets/d3063a28-5dfd-4c44-a562-be901c49b249",
           "summary_source": "repository README",
@@ -1671,7 +1671,7 @@
           "subtitle": "An agent skill that finds where a photo was taken — OpenStreetMap geometry, elevation skylines, satellite imagery and street view — and shows its work. Works with Claude Code, Codex, Cursor, Gemini CLI, OpenCode and GitHub Copilot.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 4199,
+          "value": 4200,
           "metric": "total stars",
           "detail": "No text. No plates. No landmarks. One bridge, one mountain. Located to within 2 m. On first use, ask the agent to run doctor.py from the installed skill’s scripts/ folder and address any failed checks (see Requirements and setup). That is the whole interface. The agent reads SKILL.md, runs the scripts, and comes back with the camera position, the direction it was facing and a satellite evidence image. Prefer to copy the folder yourself? See Installation. None of these photos had GPS data. Each case lists what the skill read from the photo, how it narrowed the search, and how far the result landed from the confirmed camera position.",
           "summary_source": "repository README",
@@ -1697,7 +1697,7 @@
           "subtitle": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 2902,
+          "value": 2903,
           "metric": "total stars",
           "detail": "Give your coding agent a video editor. Claude Code, Cursor, Codex or any MCP client edits your footage with local FFmpeg, then checks its own output. No cloud · No API keys · Python standard library Left half is the input, right half is what the command produced. All 66 before/after demos, with the exact command under each one → — all of it generated from synthetic footage by python3 demos/build.py, so you can rebuild every frame of it yourself. ffmpeg-skill is an Agent Skill for Claude Code, Cursor, Codex and any agent that reads SKILL.md. It teaches the agent a fixed workflow (probe → edit losslessly where possible → check → verify) and ships 42 tools that do the actual work with ffmpeg / ffprobe: cut, join, silence removal, fit to duration and aspect, captions and karaoke, overlays and motion graphics, HDR → SDR and LUTs, audio clean-up and typed dynamics, sync with drift correction, multicam, loudness, delivery checks, whole-edit project rendering, batch folders. Every tool is also callable as an MCP tool (tools/list advertises a core 12 by default to keep client context small, with FFMPEGSKILLMCPFULL=1 listing all 42; every tool is reachable by name through tools/call either way), and the whole set is described by a machine-readable contract.",
           "summary_source": "repository README",
@@ -1788,7 +1788,7 @@
     "workflows": {
       "source": "GitHub Search",
       "url": "https://github.com/search?q=research+workflow&type=repositories",
-      "fetched_at": "2026-10-26T06:11:44Z",
+      "fetched_at": "2026-10-26T06:13:32Z",
       "status": "ok",
       "metric_note": "近 60 天创建的工作流项目，按累计 Stars 排序（非 Trending 官方榜）",
       "items": [
