@@ -185,7 +185,7 @@
     root.classList.toggle('is-focused',focused);
     root.classList.toggle('is-searching',Boolean(words.length));
     root.innerHTML=keys.map(key=>panel(key,feedMap[key]||{status:'pending',items:[]},focused,words)).join('');
-    heading.textContent=focused?t(...definitions[model.feed].name):t('趋势观察台','Trend desk');
+    heading.textContent=focused?t('完整趋势榜单','Full source ranking'):t('趋势观察台','Trend desk');
     const visible=(!focused&&!words.length)?Math.min(PREVIEW_COUNT,countItems(feedMap.papers))+
       Math.min(PREVIEW_COUNT,countItems(feedMap.github))+
       Math.min(PREVIEW_COUNT,countItems(feedMap.skills))+
