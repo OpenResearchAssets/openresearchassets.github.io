@@ -17,7 +17,7 @@ The three primary content destinations are **[Curated](index.html)**, **[Communi
 
 The primary navigation/footer are authored once in `js/navigation.js` rather than duplicated across pages. Existing external artwork, citations and editorial data remain unchanged.
 
-**Findings** automatically captures Hugging Face trending papers, GitHub Trending repositories, Skills and recent workflow projects into a source-attributed [snapshot](data/findings.json), refreshed by [GitHub Actions](.github/workflows/findings.yml). Signals are source-specific and never represented as editorial endorsement; [methodology](docs/FINDINGS.md).
+**Findings** automatically captures Hugging Face trending papers, GitHub Trending repositories, Skills and recent workflow projects into a source-attributed [snapshot](data/findings.json), refreshed by [GitHub Actions](.github/workflows/findings.yml). The Findings page now supports **on-site progressive reading of up to 100 HF abstracts and source-extracted GitHub README descriptions**. Google Cloud Translation is an optional server-only, budgeted, cached integration; original texts remain available, and no browser token is exposed. Signals are source-specific and never represented as editorial endorsement; [methodology and translation setup](docs/FINDINGS.md).
 
 ## Community and Curated are two different collection tiers
 
