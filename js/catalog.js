@@ -156,7 +156,7 @@
       return '<article class="ora-skill-card"><div class="ora-skill-meta"><span>'+safe(c.type||'workflow')+'</span>'+star+'</div>'+
        '<h4><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(e.title)+'</a></h4>'+
        '<p>'+safe(local(e.description))+'</p>'+provenance(e)+'<p class="ora-skill-status">'+safe(state)+'</p>'+proof+
-       '<div class="ora-skill-actions"><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(tr('用途与边界','Use & limits'))+' ↗</a>'+
+       '<div class="ora-skill-actions"><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(tr('详情与讨论','Details & discussion'))+' ↗</a>'+
        link(e.links?.source,tr('查看源项目','Source'))+'</div></article>';
     };
     if(popular)popular.innerHTML=catalog.entries.filter(e=>e.curation?.track==='popular')
@@ -208,7 +208,7 @@
         '<h4><a href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">'+safe(e.title.split(' · ')[0])+' ↗</a></h4>'+
         '<p>'+safe(local(e.description))+'</p>'+provenance(e)+
         '<div class="ora-featured-actions"><a class="ora-open-source" href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('立即打开原作者网站','Visit official site'))+' ↗</a>'+
-        '<a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(tr('查看设计分析','Design analysis'))+' →</a></div></div></article>';
+        '<a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(tr('详情与讨论','Details & discussion'))+' →</a></div></div></article>';
     }).join('') || '<p class="empty-state">'+safe(empty())+'</p>';
   }
 
@@ -240,7 +240,7 @@
         '<div class="ora-resource-actions">'+
         (source ? '<a class="ora-open-source" href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('直达原作者主页','Open original site'))+' ↗</a>' : '')+
         (figure && figure!==source ? '<a href="'+safe(figure)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('查看原图','View original figure'))+' ↗</a>' : '')+
-        '<a class="ora-open-details" href="'+safe(details)+'">'+safe(tr('设计拆解','Design notes'))+' →</a>'+
+        '<a class="ora-open-details" href="'+safe(details)+'">'+safe(tr('详情与讨论','Details & discussion'))+' →</a>'+
         '</div></div></article>';
     }).join('') :
       '<p class="empty-state">'+safe(empty())+'</p>';
