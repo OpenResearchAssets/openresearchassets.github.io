@@ -18,7 +18,7 @@ OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉�
 
 **Star 与实际效果是两回事。** 高热度项是外部精选，不表示本项目亲自运行；项目实践项有公开成果但未必经过独立效用评测。没有实践证据的普通 Markdown 清单和 Quality Critic 候选 Skill 不冒充“亲测”。
 
-[为 Agent 提供结构化目录](for-agents/) · [投稿优秀视觉或实际用过的 Skills](CONTRIBUTING.md) · [提出问题 / 纠错](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new/choose)
+[为 Agent 提供结构化目录](for-agents/) · [任何人均可投稿科研资产](https://openresearchassets.github.io/contribute.html) · [投稿与互动说明](docs/COMMUNITY.md) · [提出问题 / 纠错](https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new/choose)
 
 **附属材料**：历史论文分析与教学案例仍保留在 [examples/](examples/README.md) 供查阅、链接兼容和来源核验，不是网站的核心产品或内容增长方向。
 
