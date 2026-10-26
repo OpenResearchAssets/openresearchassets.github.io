@@ -51,6 +51,8 @@ OpenResearchAssets 是**面向人类与 AI 的科研全过程可复用资产库*
 
 20. **开放互动与精选审核分离**：公开投稿 Issue 无需精选即可获得 GitHub Reaction（👍）与回复；精选资产详情已通过 GitHub Discussions 的 giscus 启用真实点赞和评论，使用 `specific` + `ora-asset:<id>` 保证同一路径 `asset.html?id=...` 下不同资产有不同讨论。`config/community.json` 保存经核实的仓库和分类 ID。Issue 与 Discussions 点赞是两个独立来源，不要伪装成统一排名/合并计数；没有授权不得伪造互动或使用 localStorage 假计数，先保持中文默认和英文可切换。
 
+21. **Community / Curated 双层必须真实分离**：Community 通过 `community.html` + `js/community-page.js` 获取 GitHub 公开投稿 Issue（必须是 `[投稿]` + 表单结构），任何人可投稿后立即在页面看到，GitHub 登录直接给予 👍 / 评论；Curated 仍保持 Gallery + Skills 两个正式支柱，只从 `catalog/index.json` 读取人工审核入选条目。两层不是两份平行 JSON 目录；未精选不许套上已审核认证，也不许自动同步第三方图片。按 GitHub `submission.issue_url` 建立精选回链，不虚构相同点赞数。社区 API 失败不得误显示“零投稿”；空社区不放假种子。维护 `tests/community_feed_smoke.js` 验证 XSS escaping、真实计数、非投稿 Issue 与 PR 排除、精选回链、排序、双语与 API 失败，检查桌面/手机真实样式。
+
 **English summary:** Keep the public site Chinese-first with complete English UI support. Show only implemented capabilities. Preserve scientific fidelity, licensing and privacy. Prefer useful methods over benchmark-building. Validate real rendering and interaction before release.
 
 13. **AI 节约上下文**：首选 `catalog/manifest.json`，再沿 `catalog/entries/<id>.json` 取少量详情。唯一手工维护源是 `catalog/index.json`；编辑后运行 `python3 tools/sync_catalog.py` 并用 `--check` 核对派生文件。CI 需要同时验证静态结构与浏览器行为。
