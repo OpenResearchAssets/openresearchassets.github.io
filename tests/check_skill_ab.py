@@ -12,6 +12,8 @@ g={x["id"]:x["selected"] for x in json.loads((ROOT/"experiments/skill-ab/gold.js
 m.validate_data(d,g)
 pairs=m.schedule(d["tasks"],20261026)
 assert len(pairs)==12
+assert sum(pairs[i]["arm"]=="skill" for i in range(0,12,2))==3
+assert sum(pairs[i]["arm"]=="no_skill" for i in range(0,12,2))==3
 for i in range(0,12,2):
     assert pairs[i]["task_id"]==pairs[i+1]["task_id"]
     assert {x["arm"] for x in pairs[i:i+2]}=={"skill","no_skill"}

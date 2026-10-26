@@ -32,12 +32,17 @@ def make_messages(task,protos,arm):
         s+="\n\n--- SOURCE-GUIDED SKILL ---\n"+protos[task["domain"]]["text"]+"\n--- END SKILL ---"
     return [{"role":"system","content":s},{"role":"user","content":user_prompt(task)}]
 def schedule(tasks,seed):
+    # Equalize potential first-call effects: in exactly half of the six pairs,
+    # the Skill arm runs first, and in half the baseline runs first.
+    rng=random.Random(seed)
+    ordered=list(tasks)
+    rng.shuffle(ordered)
+    first=["skill"]*3+["no_skill"]*3
+    rng.shuffle(first)
     pairs=[]
-    for task in tasks:
-        arms=["no_skill","skill"]
-        rng=random.Random(str(seed)+task["id"])
-        rng.shuffle(arms)
-        pairs.extend({"task_id":task["id"],"arm":arm} for arm in arms)
+    for task,initial in zip(ordered,first):
+        other="no_skill" if initial=="skill" else "skill"
+        pairs.extend({"task_id":task["id"],"arm":arm} for arm in (initial,other))
     return pairs
 def validate_data(data,labels):
     tasks=data["tasks"]
