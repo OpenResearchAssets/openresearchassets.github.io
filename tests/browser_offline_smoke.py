@@ -297,6 +297,45 @@ with sync_playwright() as pw:
                 assert 'Suggest an asset' in page.locator('.ora-start').inner_text()
                 page.locator('.lang-toggle').click()
                 assert page.locator('html').get_attribute('lang')=='zh-CN'
+        # Public Community is separate from curated Gallery. Mock GitHub API without
+        # pretending that there are live submissions or their real reaction counts.
+        fake_issue=lambda number,title,kind,likes,created: {
+            'number':number, 'title':'[投稿] '+title, 'state':'open','labels':[],
+            'created_at':created, 'user':{'login':'mock-author-'+str(number)},
+            'comments':2, 'reactions':{'+1':likes},
+            'body':('### 资产类型 / Asset type\\n'+kind+
+                    '\\n\\n### 作品名称 / Asset title\\n'+title+
+                    '\\n\\n### 官方来源 / Original source URL\\nhttps://example.org/source'+str(number)+
+                    '\\n\\n### 为什么值得分享或推荐？/ Why is this asset worth sharing?\\nConcrete visual and practical lessons.')
+        }
+        test_issues=[
+            fake_issue(2,'Visual asset','高审美论文图 / Research figure',3,'2026-10-26T01:00:00Z'),
+            fake_issue(1,'Popular skill','高热度 Skill / Popular GitHub Skill',21,'2026-10-25T01:00:00Z')
+        ]
+        page.route(re.compile(r'^https://api\\.github\\.com/repos/OpenResearchAssets/openresearchassets\\.github\\.io/issues\\?'),
+                   lambda route:route.fulfill(status=200,body=json.dumps(test_issues),content_type='application/json'))
+        page.route('https://ora.local/catalog/index.json',
+                   lambda route:route.fulfill(status=200,body=(ROOT/'catalog/index.json').read_text(encoding='utf-8'),content_type='application/json'))
+        page.set_content(page_html('community.html'),wait_until='load')
+        page.locator('.ora-community-entry').first.wait_for()
+        assert page.locator('.ora-community-entry').count()==2
+        assert page.locator('a[href="index.html#gallery"]').count()==1
+        assert '👍 3' in page.locator('.ora-community-grid').inner_text()
+        assert '👍 21' in page.locator('.ora-community-grid').inner_text()
+        page.locator('#community-sort').select_option('popular')
+        assert 'Popular skill' in page.locator('.ora-community-entry').first.inner_text()
+        page.locator('#community-kind').select_option('visual')
+        assert page.locator('.ora-community-entry').count()==1
+        assert 'Visual asset' in page.locator('.ora-community-entry').first.inner_text()
+        page.locator('#community-kind').select_option('all')
+        page.locator('.lang-toggle').click()
+        assert page.locator('html').get_attribute('lang')=='en'
+        assert 'Original link (unverified)' in page.locator('.ora-community-entry').first.inner_text()
+        assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('community-en',label)
+        if label in ('desktop','mobile'):
+            page.screenshot(path=str(ROOT/'tests'/f'_local_community_{label}.png'),full_page=True)
+        page.locator('.lang-toggle').click()
+        assert page.locator('html').get_attribute('lang')=='zh-CN'
         assert not errors,(label,errors)
         print('PASS',label,'curated visual Gallery, verified Stars, public practice evidence, bilingual and responsive UI')
         page.close()
