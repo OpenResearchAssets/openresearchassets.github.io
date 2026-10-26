@@ -7,6 +7,8 @@ Research assets should be more than bookmarks. They should tell us **when to use
 
 **Two core collections:** [beautiful, reusable scientific figures](https://openresearchassets.github.io/#gallery) and [select Skills / Workflows](https://openresearchassets.github.io/#skills), curated either by verifiable public GitHub popularity or evidenced firsthand project practice. Stars are not quality evidence; legacy paper analyses are supporting references, not the main product.
 
+**Open contributions:** Any GitHub user can [submit a research asset](https://openresearchassets.github.io/contribute.html) without repository write access. Assets are curated before publication; verified contributors and acceptance dates are recorded separately from original creators. [Community and feedback setup](docs/COMMUNITY.md).
+
 ## Two core collections
 
 | Collection | What you get | Selection standard |
