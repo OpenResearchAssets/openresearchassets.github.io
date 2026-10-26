@@ -1,0 +1,66 @@
+/* Community discovery, distinct from editorial curation; graphite + cool white. */
+.ora-community-hero{padding-top:94px;padding-bottom:78px;max-width:1210px}
+.ora-community-topline{display:flex;align-items:center;gap:11px;letter-spacing:.13em;font-size:11px;font-weight:750;color:#68839a}
+.ora-community-dot{width:7px;height:7px;background:#718daa;border-radius:50%}
+.ora-community-hero h1{max-width:1010px;font-size:clamp(40px,6.3vw,76px);line-height:1.15;letter-spacing:-.055em;font-weight:720;color:#1e2c3b;margin:27px 0 22px}
+.ora-community-lead{max-width:710px;color:#66798a;line-height:1.9;font-size:16px;margin:0}
+.ora-community-hero-actions{display:flex;align-items:center;gap:25px;margin-top:30px;flex-wrap:wrap;font-size:13px}
+.ora-community-primary{display:inline-flex;align-items:center;background:#26394f;color:#fff!important;padding:15px 23px;border-radius:10px;font-weight:700}
+.ora-community-primary:hover{background:#354e69}
+.ora-community-secondary{color:#4c6479;font-weight:700}
+.ora-community-secondary:hover{text-decoration:underline}
+.ora-community-principle{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #dde5ed;border-bottom:1px solid #dde5ed;margin-bottom:72px}
+.ora-community-principle>div{padding:29px 43px 35px 0}
+.ora-community-principle>div+div{border-left:1px solid #dde5ed;padding-left:43px}
+.ora-community-principle-tag{font-size:10px;font-weight:750;letter-spacing:.13em;color:#7690a8}
+.ora-community-principle h2{color:#22354a;margin:12px 0;font-size:23px;letter-spacing:-.035em}
+.ora-community-principle p{max-width:420px;font-size:13px;color:#738294;line-height:1.8;margin:0}
+.ora-community-feed{padding-bottom:100px}
+.ora-community-heading{display:flex;justify-content:space-between;align-items:end;gap:30px}
+.ora-community-heading h2{font-size:clamp(27px,3.7vw,39px);letter-spacing:-.04em;color:#25374a;margin:10px 0 12px}
+.ora-community-heading p:not(.section-index){font-size:13px;color:#748396;max-width:780px;line-height:1.85;margin:0}
+.ora-community-feed-submit{flex:none;font-weight:750;font-size:12px;color:#355d87}
+.ora-community-feed-submit:hover{text-decoration:underline}
+.ora-community-controls{display:grid;grid-template-columns:minmax(0,1fr) 174px 174px;align-items:end;gap:12px;margin:33px 0 16px}
+.ora-community-controls label{display:flex;flex-direction:column;gap:6px;color:#6c7b8c;font-size:12px;font-weight:650;min-width:0}
+.ora-community-controls input,.ora-community-controls select{width:100%;min-height:46px;background:white;border:1px solid #dce4ec;border-radius:10px;color:#24384d;padding:0 14px;font-size:13px;outline-offset:2px}
+.ora-community-controls .ora-community-search{position:relative}
+.ora-community-search>span[aria-hidden]{position:absolute;left:14px;bottom:8px;color:#8b9eae;font-size:24px}
+.ora-community-controls .ora-community-search input{padding-left:40px}
+.ora-community-status{font-size:11px;color:#8592a0;margin:15px 0 13px;line-height:1.65}
+.ora-community-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;min-height:150px}
+.ora-community-entry{background:#fff;border:1px solid #e0e7ef;border-radius:15px;padding:23px;display:grid;grid-template-columns:42px minmax(0,1fr);align-items:start;gap:14px;min-width:0;transition:border .15s,box-shadow .15s}
+.ora-community-entry:hover{border-color:#c6d5e4;box-shadow:0 10px 30px rgba(32,57,81,.035)}
+.ora-community-entry-icon{height:40px;width:40px;border:1px solid #e3eaf1;background:#f5f8fb;border-radius:11px;display:flex;justify-content:center;align-items:center;font-size:21px;color:#557494}
+.ora-community-entry-main{min-width:0;display:flex;flex-direction:column;min-height:175px}
+.ora-community-entry-top{display:flex;align-items:center;gap:11px;flex-wrap:wrap;font-size:10px;letter-spacing:.04em}
+.ora-community-type{font-weight:750;color:#54718d}
+.ora-community-number{color:#9ca9b5;font-variant-numeric:tabular-nums}
+.ora-community-curated{color:#3e6485;font-weight:750;text-decoration:none}
+.ora-community-closed{color:#87929e}
+.ora-community-entry h3{margin:12px 0 10px;line-height:1.42;font-size:18px;font-weight:720;letter-spacing:-.035em;color:#223348;overflow-wrap:anywhere}
+.ora-community-entry h3 a:hover{text-decoration:underline;text-underline-offset:4px}
+.ora-community-entry-description{font-size:12px;line-height:1.7;color:#6a7c8d;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;margin:0}
+.ora-community-entry-source{padding:10px 0;color:#557497;font-size:11px}
+.ora-community-entry-source a:hover{text-decoration:underline}
+.ora-community-entry-foot{display:flex;align-items:center;flex-wrap:wrap;gap:7px 12px;margin-top:auto;padding-top:15px;border-top:1px solid #edf0f4;color:#8795a3;font-size:11px}
+.ora-community-user{display:inline-flex;align-items:center;gap:6px;font-weight:650;color:#506981;min-width:0;overflow-wrap:anywhere}
+.ora-community-user img{height:22px;width:22px;object-fit:cover;border-radius:50%;border:1px solid #e5e9ee}
+.ora-community-entry-foot time{font-variant-numeric:tabular-nums}
+.ora-community-reactions{display:flex;align-items:center;gap:13px;margin-left:auto;font-weight:700;color:#58728c}
+.ora-community-reactions a{white-space:nowrap}
+.ora-community-reactions a:hover{color:#235b98;text-decoration:underline}
+.ora-community-reactions span{font-size:10px;font-weight:500}
+.ora-community-empty{grid-column:1/-1;display:flex;align-items:center;flex-direction:column;justify-content:center;text-align:center;padding:64px 24px;border:1px dashed #d3e0ec;border-radius:15px;background:#fafcfe}
+.ora-community-empty>span{font-size:26px;color:#7992aa}
+.ora-community-empty h3{margin:14px 0 3px;font-size:20px;letter-spacing:-.03em;color:#2f455c}
+.ora-community-empty p{max-width:500px;font-size:13px;color:#7c8b9a;line-height:1.8}
+.ora-community-empty a{font-size:12px;color:#28629b;font-weight:700}
+.ora-community-more{margin:26px 0;text-align:center}
+.ora-community-more button{border:1px solid #d7e2ed;background:#fff;color:#406b94;padding:12px 22px;border-radius:10px;font-size:12px;font-weight:720}
+.ora-community-more button[hidden]{display:none}
+.ora-community-policy{border-top:1px solid #dfe7ef;margin-top:39px;padding:19px 0;color:#8190a0;font-size:11px;line-height:1.85;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.ora-community-policy p{margin:0;max-width:850px}
+.ora-community-policy a{white-space:nowrap;font-weight:700;color:#5d7792}
+@media(max-width:990px){.ora-community-grid{grid-template-columns:1fr}.ora-community-controls{grid-template-columns:minmax(0,1fr) 150px 150px}}
+@media(max-width:720px){.ora-community-hero{padding-top:53px;padding-bottom:51px}.ora-community-lead{font-size:14px}.ora-community-principle{grid-template-columns:1fr;margin-bottom:47px}.ora-community-principle>div{padding:23px 0}.ora-community-principle>div+div{border-left:0;border-top:1px solid #dde5ed;padding:23px 0}.ora-community-heading{display:block}.ora-community-feed-submit{display:inline-block;margin-top:12px}.ora-community-controls{grid-template-columns:1fr 1fr;gap:10px}.ora-community-search{grid-column:1/-1}.ora-community-entry{padding:17px;grid-template-columns:34px minmax(0,1fr);gap:11px}.ora-community-entry-icon{width:34px;height:34px}.ora-community-entry h3{font-size:17px}.ora-community-policy{display:block}.ora-community-policy a{display:inline-block;margin-top:12px}.ora-community-entry-foot{gap:7px 9px}.ora-community-reactions{width:100%;margin-left:0;justify-content:flex-start}}
