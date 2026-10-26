@@ -42,7 +42,7 @@
     const body=issue.body||'';
     if(!body.includes('### 资产类型 / Asset type')||!body.includes('### 官方来源 / Original source URL'))return null;
     const title=clean(section(body,'Asset title'))||clean(issue.title.slice(4))||t('未命名资产','Untitled asset');
-    const details=clean(section(body,'Why does it belong here?'))||clean(section(body,'为什么值得精选'));
+    const details=clean(section(body,'Why is this asset worth sharing?'))||clean(section(body,'为什么值得分享或推荐'))||clean(section(body,'Why does it belong here?'))||clean(section(body,'为什么值得精选'));
     const match=section(body,'Original source URL').match(/https?:\/\/[^\s<>)\]]+/i);
     const source=sourceUrl(match?match[0]:'');
     return {
