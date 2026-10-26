@@ -11,6 +11,13 @@ Research assets should be more than bookmarks. They should tell us **when to use
 
 **Community vs. curated:** Pending submissions receive GitHub Issue reactions and comments without editorial approval; accepted asset detail pages use giscus / GitHub Discussions for independent reactions and comments. These counts are not automatically combined.
 
+## Community and Curated are two different collection tiers
+
+- **[Community](community.html)** automatically displays open GitHub Issue Form submissions, attribution, dates, real 👍 reactions and discussion counts. Contributors do not wait for editorial approval before appearing. Search, type filtering, newest/likes/comments sorting are available. Unreviewed external media is never mirrored.
+- **[Curated](index.html#gallery)** maintains editorial standards for research visuals and Skills / Workflows using the canonical `catalog/index.json`. The curated detail page has a separate giscus discussion.
+
+These are collection tiers, whereas Gallery / Skills are asset types. Issue reactions and giscus reactions remain separate. [Community rules](docs/COMMUNITY.md).
+
 ## Two core collections
 
 | Collection | What you get | Selection standard |
