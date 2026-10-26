@@ -1,18 +1,20 @@
 {
   "schema_version": "1",
-  "generated_at": "2026-10-26T04:11:00Z",
+  "generated_at": "2026-10-26T04:53:18Z",
   "feeds": {
     "papers": {
       "source": "Hugging Face Papers",
       "url": "https://huggingface.co/papers/trending",
-      "fetched_at": "2026-10-26T04:10:52Z",
+      "fetched_at": "2026-10-26T04:53:04Z",
       "status": "ok",
       "metric_note": "HF 社区投票 · 官方 trending 排序",
       "items": [
         {
           "title": "Harness^2: Recursive Agent Harnessing for an Open World",
           "url": "https://huggingface.co/papers/2610.14224",
-          "subtitle": "LLM agents' capabilities depend not only on their underlying models but also on their execution harnesses. Recursive self-improvement (RSI) offers a promising approach to automatically evolve these harnesses. However, deploying RSI in open-world settings still faces two critical challenges. First, open-world tasks are typically unseen during the harness design phase and novel at test time, leaving no ground-truth verifiers to reliably guide online harness edits. Second, the RSI process remains highly task-specific ",
+          "subtitle": "LLM agents' capabilities depend not only on their underlying models but also on their execution harnesses. Recursive self-improvement (RSI) offers a promising approach to automatically evolve these harnesses. However, deploying RSI in open-world settings still faces two critical challenges. First, open-world tasks are typically unseen during the harness design phase and novel at test time, leaving no ground-truth verifiers to reliably guide online harness edits. Second, the RSI process remains highly task-specific and fails to generalize to novel scenarios. We introduce Harness^2, a plug-and-play, recursive agent harnessing framework that addresses these challenges through two connected leve",
+          "detail": "LLM agents' capabilities depend not only on their underlying models but also on their execution harnesses. Recursive self-improvement (RSI) offers a promising approach to automatically evolve these harnesses. However, deploying RSI in open-world settings still faces two critical challenges. First, open-world tasks are typically unseen during the harness design phase and novel at test time, leaving no ground-truth verifiers to reliably guide online harness edits. Second, the RSI process remains highly task-specific and fails to generalize to novel scenarios. We introduce Harness^2, a plug-and-play, recursive agent harnessing framework that addresses these challenges through two connected levels of recursion. Task-level recursion refines the current task's harness using a contrastive Propose-Probe-Compose step that reliably guides edits without ground-truth verifiers, and can be scaled further via parallel or sequential recursion. Harnessing-level recursion then extracts experience from these edits to update a continual improvement harness, enabling the agent to better adapt to future tasks. Across three professional benchmarks and four model-harness configurations, a single step consistently improves GLM-5 and Gemini 3.5 Flash over their base harnesses, yielding gains of up to 11.5 points on WorkBuddy-Bench, 4.5 points on JobBench, and 11.8 percentage points on LAB, with further gains as the task-level recursion budget increases.",
+          "summary_source": "paper abstract",
           "author": "2610.14224",
           "value": 123,
           "badge": "2026-10-09T00:00:00+00:00",
@@ -21,7 +23,9 @@
         {
           "title": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
           "url": "https://huggingface.co/papers/2412.20138",
-          "subtitle": "Significant progress has been made in automated problem-solving using societies of agents powered by large language models (LLMs). In finance, efforts have largely focused on single-agent systems handling specific tasks or multi-agent frameworks independently gathering data. However, the multi-agent systems' potential to replicate real-world trading firms' collaborative dynamics remains underexplored. TradingAgents proposes a novel stock trading framework inspired by trading firms, featuring LLM-powered agents in s",
+          "subtitle": "Significant progress has been made in automated problem-solving using societies of agents powered by large language models (LLMs). In finance, efforts have largely focused on single-agent systems handling specific tasks or multi-agent frameworks independently gathering data. However, the multi-agent systems' potential to replicate real-world trading firms' collaborative dynamics remains underexplored. TradingAgents proposes a novel stock trading framework inspired by trading firms, featuring LLM-powered agents in specialized roles such as fundamental analysts, sentiment analysts, technical analysts, and traders with varied risk profiles. The framework includes Bull and Bear researcher agents",
+          "detail": "Significant progress has been made in automated problem-solving using societies of agents powered by large language models (LLMs). In finance, efforts have largely focused on single-agent systems handling specific tasks or multi-agent frameworks independently gathering data. However, the multi-agent systems' potential to replicate real-world trading firms' collaborative dynamics remains underexplored. TradingAgents proposes a novel stock trading framework inspired by trading firms, featuring LLM-powered agents in specialized roles such as fundamental analysts, sentiment analysts, technical analysts, and traders with varied risk profiles. The framework includes Bull and Bear researcher agents assessing market conditions, a risk management team monitoring exposure, and traders synthesizing insights from debates and historical data to make informed decisions. By simulating a dynamic, collaborative trading environment, this framework aims to improve trading performance. Detailed architecture and extensive experiments reveal its superiority over baseline models, with notable improvements in cumulative returns, Sharpe ratio, and maximum drawdown, highlighting the potential of multi-agent LLM frameworks in financial trading. TradingAgents is available at https://github.com/TauricResearch/TradingAgents.",
+          "summary_source": "paper abstract",
           "author": "2412.20138",
           "value": 154,
           "badge": "2024-12-28T12:54:06+00:00",
@@ -30,7 +34,9 @@
         {
           "title": "Kronos: A Foundation Model for the Language of Financial Markets",
           "url": "https://huggingface.co/papers/2508.02739",
-          "subtitle": "The success of large-scale pre-training paradigm, exemplified by Large Language Models (LLMs), has inspired the development of Time Series Foundation Models (TSFMs). However, their application to financial candlestick (K-line) data remains limited, often underperforming non-pre-trained architectures. Moreover, existing TSFMs often overlook crucial downstream tasks such as volatility prediction and synthetic data generation. To address these limitations, we propose Kronos, a unified, scalable pre-training framework ",
+          "subtitle": "The success of large-scale pre-training paradigm, exemplified by Large Language Models (LLMs), has inspired the development of Time Series Foundation Models (TSFMs). However, their application to financial candlestick (K-line) data remains limited, often underperforming non-pre-trained architectures. Moreover, existing TSFMs often overlook crucial downstream tasks such as volatility prediction and synthetic data generation. To address these limitations, we propose Kronos, a unified, scalable pre-training framework tailored to financial K-line modeling. Kronos introduces a specialized tokenizer that discretizes continuous market information into token sequences, preserving both price dynamics",
+          "detail": "The success of large-scale pre-training paradigm, exemplified by Large Language Models (LLMs), has inspired the development of Time Series Foundation Models (TSFMs). However, their application to financial candlestick (K-line) data remains limited, often underperforming non-pre-trained architectures. Moreover, existing TSFMs often overlook crucial downstream tasks such as volatility prediction and synthetic data generation. To address these limitations, we propose Kronos, a unified, scalable pre-training framework tailored to financial K-line modeling. Kronos introduces a specialized tokenizer that discretizes continuous market information into token sequences, preserving both price dynamics and trade activity patterns. We pre-train Kronos using an autoregressive objective on a massive, multi-market corpus of over 12 billion K-line records from 45 global exchanges, enabling it to learn nuanced temporal and cross-asset representations. Kronos excels in a zero-shot setting across a diverse set of financial tasks. On benchmark datasets, Kronos boosts price series forecasting RankIC by 93% over the leading TSFM and 87% over the best non-pre-trained baseline. It also achieves a 9% lower MAE in volatility forecasting and a 22% improvement in generative fidelity for synthetic K-line sequences. These results establish Kronos as a robust, versatile foundation model for end-to-end financial time series analysis. Our pre-trained model is publicly available at https://github.com/shiyu-coder/Kronos.",
+          "summary_source": "paper abstract",
           "author": "2508.02739",
           "value": 62,
           "badge": "2025-08-02T13:15:59+00:00",
@@ -39,7 +45,9 @@
         {
           "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
           "url": "https://huggingface.co/papers/2609.18063",
-          "subtitle": "Mixture-of-experts (MoE) inference on consumer hardware is bounded by weight memory: a 35B-class model is 19.5GB at 4-bit, and sparsity shrinks the compute per token, not the bytes that must be held. Naive offloading to SSD does not help on its own, because layer N+1's experts must be chosen before layer N's output exists, so the reads cannot start early enough to hide behind compute. We present Edge0, a streaming MoE inference engine that closes the gap with a prerouter: a per-layer head predicts the next layer's ",
+          "subtitle": "Mixture-of-experts (MoE) inference on consumer hardware is bounded by weight memory: a 35B-class model is 19.5GB at 4-bit, and sparsity shrinks the compute per token, not the bytes that must be held. Naive offloading to SSD does not help on its own, because layer N+1's experts must be chosen before layer N's output exists, so the reads cannot start early enough to hide behind compute. We present Edge0, a streaming MoE inference engine that closes the gap with a prerouter: a per-layer head predicts the next layer's routing one token ahead, and the prediction is consumed as the routing itself, so the staged expert set equals the routed set and nothing is dropped. An unmerged recovery LoRA, tra",
+          "detail": "Mixture-of-experts (MoE) inference on consumer hardware is bounded by weight memory: a 35B-class model is 19.5GB at 4-bit, and sparsity shrinks the compute per token, not the bytes that must be held. Naive offloading to SSD does not help on its own, because layer N+1's experts must be chosen before layer N's output exists, so the reads cannot start early enough to hide behind compute. We present Edge0, a streaming MoE inference engine that closes the gap with a prerouter: a per-layer head predicts the next layer's routing one token ahead, and the prediction is consumed as the routing itself, so the staged expert set equals the routed set and nothing is dropped. An unmerged recovery LoRA, trained on the student path, pays back the quality lost to int4 quantization and routing replacement. On a single 24GB machine, Edge0 serves a 35B MoE at 20tok/s inside 3GiB of peak active memory, within a few points of its fp16 teacher on average across five public benchmarks. An 8B tier runs on the same framework, and the framework, checkpoints, and adapters are open source.",
+          "summary_source": "paper abstract",
           "author": "2609.18063",
           "value": 30,
           "badge": "2026-09-16T00:00:00+00:00",
@@ -48,7 +56,9 @@
         {
           "title": "MOSS-Image Technical Report",
           "url": "https://huggingface.co/papers/2610.23374",
-          "subtitle": "Recent closed-source image generation systems can produce diverse visual content from simple compositions to information-dense graphics, yet open-weight text-to-image models still struggle with dense text and intricate layouts. To narrow this gap, we introduce MOSS-Image, an open generation system that combines high-fidelity visual synthesis with intent-aware composition. First, we pretrain a 5B single-stream diffusion transformer (DiT) from scratch with a carefully designed recipe, enabling bilingual long-form tex",
+          "subtitle": "Recent closed-source image generation systems can produce diverse visual content from simple compositions to information-dense graphics, yet open-weight text-to-image models still struggle with dense text and intricate layouts. To narrow this gap, we introduce MOSS-Image, an open generation system that combines high-fidelity visual synthesis with intent-aware composition. First, we pretrain a 5B single-stream diffusion transformer (DiT) from scratch with a carefully designed recipe, enabling bilingual long-form text rendering and precise layout control. Second, we develop an intention-aware agentic prompt enhancement (PE) module that translates diverse user requests into detailed content and",
+          "detail": "Recent closed-source image generation systems can produce diverse visual content from simple compositions to information-dense graphics, yet open-weight text-to-image models still struggle with dense text and intricate layouts. To narrow this gap, we introduce MOSS-Image, an open generation system that combines high-fidelity visual synthesis with intent-aware composition. First, we pretrain a 5B single-stream diffusion transformer (DiT) from scratch with a carefully designed recipe, enabling bilingual long-form text rendering and precise layout control. Second, we develop an intention-aware agentic prompt enhancement (PE) module that translates diverse user requests into detailed content and layout specifications. Together, they enable MOSS-Image to generate text-rich and layout-coherent images. We further introduce LongLongTextBench (LLTB) for evaluating long-form English and Chinese text rendering, and RealLayoutArena (RLA) for end-to-end layout-rich generation. MOSS-Image achieves state-of-the-art performance among open-weight models on LLTB, with an average text coverage of 96.3%. On RLA, MOSS-Image ranks second in the end-to-end system comparison, while its backbone ranks first among generators evaluated with shared enhanced prompts. We will release the model, training recipe, and evaluation framework to support further research and promote the text-to-image community.",
+          "summary_source": "paper abstract",
           "author": "2610.23374",
           "value": 103,
           "badge": "2026-10-16T00:00:00+00:00",
@@ -57,7 +67,9 @@
         {
           "title": "nanoMuse: An Open-Source Personal Agent for Every Device You Own",
           "url": "https://huggingface.co/papers/2610.08699",
-          "subtitle": "Assistants from 2011 answered and waited, and agents from 2023 did a task and stopped. In September 2026 Meta's Muse showed an agent for one person, with accounts, devices, memory and a conversation that lasts, closed, in a vendor's cloud, in one country. Such an agent is expected to act on a person's accounts and devices, remember them across weeks, speak first when it is worth it, and answer for what it did. It is a kind of software, not a model, and until now had no open counterpart. This report defines the pers",
+          "subtitle": "Assistants from 2011 answered and waited, and agents from 2023 did a task and stopped. In September 2026 Meta's Muse showed an agent for one person, with accounts, devices, memory and a conversation that lasts, closed, in a vendor's cloud, in one country. Such an agent is expected to act on a person's accounts and devices, remember them across weeks, speak first when it is worth it, and answer for what it did. It is a kind of software, not a model, and until now had no open counterpart. This report defines the personal agent in five questions and three horizons. It reads how Muse is built from Meta's public record and a copy of its production prompt, each statement marked by its source. It t",
+          "detail": "Assistants from 2011 answered and waited, and agents from 2023 did a task and stopped. In September 2026 Meta's Muse showed an agent for one person, with accounts, devices, memory and a conversation that lasts, closed, in a vendor's cloud, in one country. Such an agent is expected to act on a person's accounts and devices, remember them across weeks, speak first when it is worth it, and answer for what it did. It is a kind of software, not a model, and until now had no open counterpart. This report defines the personal agent in five questions and three horizons. It reads how Muse is built from Meta's public record and a copy of its production prompt, each statement marked by its source. It then presents nanoMuse, the open-source counterpart under the GPL-3.0, one agent on every device a person owns, with hands on the phone's screen and the computer's. They share one conversation over a relay anyone can run; every action goes through a Sentinel, memory is files the person can read, and the model is their choice. Its size and cost are given as estimates. What is open, memory with provenance, an evaluation suite for the hands and an open model for them, is set out as a roadmap.",
+          "summary_source": "paper abstract",
           "author": "2610.08699",
           "value": 120,
           "badge": "2026-10-06T00:00:00+00:00",
@@ -66,7 +78,9 @@
         {
           "title": "StartLux-Decision: AutoThink Decision Models with Reinforcement Learning for Calibrated Deliberative Decisions",
           "url": "https://huggingface.co/papers/2610.17309",
-          "subtitle": "We introduce StartLux-Decision, decision models from 0.8B to 27B parameters that combine efficient single-pass prediction with adaptive, confidence-guided reasoning. The Instant models use bidirectional attention in full-attention layers to improve decision accuracy while keeping single-pass inference. The AutoThink models invoke explicit reasoning for uncertain decisions and answer confident cases directly. A three-stage training pipeline establishes shared decision capabilities, specializes the two variants, and ",
+          "subtitle": "We introduce StartLux-Decision, decision models from 0.8B to 27B parameters that combine efficient single-pass prediction with adaptive, confidence-guided reasoning. The Instant models use bidirectional attention in full-attention layers to improve decision accuracy while keeping single-pass inference. The AutoThink models invoke explicit reasoning for uncertain decisions and answer confident cases directly. A three-stage training pipeline establishes shared decision capabilities, specializes the two variants, and equips AutoThink with reasoning through reasoning supervision and reinforcement learning. We introduce Reinforcement Learning for Calibrated Deliberative Decisions (RLCD^2), which",
+          "detail": "We introduce StartLux-Decision, decision models from 0.8B to 27B parameters that combine efficient single-pass prediction with adaptive, confidence-guided reasoning. The Instant models use bidirectional attention in full-attention layers to improve decision accuracy while keeping single-pass inference. The AutoThink models invoke explicit reasoning for uncertain decisions and answer confident cases directly. A three-stage training pipeline establishes shared decision capabilities, specializes the two variants, and equips AutoThink with reasoning through reasoning supervision and reinforcement learning. We introduce Reinforcement Learning for Calibrated Deliberative Decisions (RLCD^2), which uses a frozen model and proper scoring rules to reward improvements in decision probability quality and applies a soft penalty to overlong reasoning traces. RLCD^2 raises the share of reasoning traces that terminate within the generation limit by up to 48 percentage points and cuts average reasoning length by up to 65%, while largely preserving decision accuracy. On the public subset of Decision Index 0.3, the Instant models outperform the strongest evaluated comparable-scale open-weight decision models by 7.4-16.9 points, and the 27B AutoThink model reaches 73.4. We also introduce DecisionPivot, a programmatically verifiable benchmark of computational decisions built from contrast pairs that differ in a single answer-changing detail. On DecisionPivot, AutoThink outperforms its Instant counterparts by 11.5-18.4 points in pair accuracy and leads among evaluated systems. The models run on vLLM, llama.cpp and MLX, with quantized variants for lower memory use.",
+          "summary_source": "paper abstract",
           "author": "2610.17309",
           "value": 81,
           "badge": "2026-10-12T00:00:00+00:00",
@@ -75,25 +89,20 @@
         {
           "title": "Prism: Dynamic Sparse Attention for Native 2K Joint Video-Audio Generation Model Training",
           "url": "https://huggingface.co/papers/2610.05416",
-          "subtitle": "Natively training joint video-audio generation models at higher resolutions empowers them to learn richer visual details and sharper motion dynamics. However, full attention incurs quadratic cost and, as resolution increases, spreads attention over increasingly redundant tokens, diluting learning signals for informative content and disrupting pretrained priors. Existing sparse attention methods either target training-free acceleration or overlook the unique structure of joint video-audio data, where cross-modal int",
+          "subtitle": "Natively training joint video-audio generation models at higher resolutions empowers them to learn richer visual details and sharper motion dynamics. However, full attention incurs quadratic cost and, as resolution increases, spreads attention over increasingly redundant tokens, diluting learning signals for informative content and disrupting pretrained priors. Existing sparse attention methods either target training-free acceleration or overlook the unique structure of joint video-audio data, where cross-modal interactions are inherently concentrated around sound-producing regions. To address this, we propose Prism, a dynamic sparse attention framework for natively training joint video-audi",
+          "detail": "Natively training joint video-audio generation models at higher resolutions empowers them to learn richer visual details and sharper motion dynamics. However, full attention incurs quadratic cost and, as resolution increases, spreads attention over increasingly redundant tokens, diluting learning signals for informative content and disrupting pretrained priors. Existing sparse attention methods either target training-free acceleration or overlook the unique structure of joint video-audio data, where cross-modal interactions are inherently concentrated around sound-producing regions. To address this, we propose Prism, a dynamic sparse attention framework for natively training joint video-audio generation models at 2K. In particular, Prism organizes the token sequence into spatiotemporal macro-zones, enabling the attention structure to adapt to local content. For each zone, it estimates local information structure via video feature variance along the channel and feature norms from the audio-to-video cross-attention, jointly capturing how visual content varies directionally and how strongly audio influences each visual region. Based on these signals, Prism dynamically assigns a tailored block shape to each zone, applying finer partitioning along axes of rapid visual content variation and strong audio-visual coupling. This encourages tokens within each block to remain semantically coherent, allowing block-level features to capture both visual content and joint video-audio interaction patterns. Prism further adopts a hybrid block selection strategy to dynamically determine per-query sparsity. Experiments show that Prism achieves 2.5times training speedup compared to full attention, while surpassing it in generation quality.",
+          "summary_source": "paper abstract",
           "author": "2610.05416",
           "value": 23,
           "badge": "2026-10-04T00:00:00+00:00",
           "metric": "upvotes"
         },
         {
-          "title": "Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation",
-          "url": "https://huggingface.co/papers/2610.14162",
-          "subtitle": "Diffusion language models (DLMs) offer parallel sampling for faster generation than autoregressive models, an increasingly important advantage as inference becomes a dominant computational workload. However, DLMs degrade quickly with fewer sampling steps, process the full sequence at every step, and require many passes over the dataset to reach good quality. We introduce Next-Concept Modeling (NCM), a two-stage, coarse-to-fine framework: a multiscale residual VQ-VAE encodes text into a hierarchy of discrete codes, ",
-          "author": "2610.14162",
-          "value": 16,
-          "badge": "2026-10-09T00:00:00+00:00",
-          "metric": "upvotes"
-        },
-        {
           "title": "AgentScope 1.0: A Developer-Centric Framework for Building Agentic Applications",
           "url": "https://huggingface.co/papers/2508.16279",
-          "subtitle": "Driven by rapid advancements of Large Language Models (LLMs), agents are empowered to combine intrinsic knowledge with dynamic tool use, greatly enhancing their capacity to address real-world tasks. In line with such an evolution, AgentScope introduces major improvements in a new version (1.0), towards comprehensively supporting flexible and efficient tool-based agent-environment interactions for building agentic applications. Specifically, we abstract foundational components essential for agentic applications and ",
+          "subtitle": "Driven by rapid advancements of Large Language Models (LLMs), agents are empowered to combine intrinsic knowledge with dynamic tool use, greatly enhancing their capacity to address real-world tasks. In line with such an evolution, AgentScope introduces major improvements in a new version (1.0), towards comprehensively supporting flexible and efficient tool-based agent-environment interactions for building agentic applications. Specifically, we abstract foundational components essential for agentic applications and provide unified interfaces and extensible modules, enabling developers to easily leverage the latest progress, such as new models and MCPs. Furthermore, we ground agent behaviors i",
+          "detail": "Driven by rapid advancements of Large Language Models (LLMs), agents are empowered to combine intrinsic knowledge with dynamic tool use, greatly enhancing their capacity to address real-world tasks. In line with such an evolution, AgentScope introduces major improvements in a new version (1.0), towards comprehensively supporting flexible and efficient tool-based agent-environment interactions for building agentic applications. Specifically, we abstract foundational components essential for agentic applications and provide unified interfaces and extensible modules, enabling developers to easily leverage the latest progress, such as new models and MCPs. Furthermore, we ground agent behaviors in the ReAct paradigm and offer advanced agent-level infrastructure based on a systematic asynchronous design, which enriches both human-agent and agent-agent interaction patterns while improving execution efficiency. Building on this foundation, we integrate several built-in agents tailored to specific practical scenarios. AgentScope also includes robust engineering support for developer-friendly experiences. We provide a scalable evaluation module with a visual studio interface, making the development of long-trajectory agentic applications more manageable and easier to trace. In addition, AgentScope offers a runtime sandbox to ensure safe agent execution and facilitates rapid deployment in production environments. With these enhancements, AgentScope provides a practical foundation for building scalable, adaptive, and effective agentic applications.",
+          "summary_source": "paper abstract",
           "author": "2508.16279",
           "value": 71,
           "badge": "2025-08-22T10:35:56+00:00",
@@ -102,7 +111,9 @@
         {
           "title": "Very Large-Scale Multi-Agent Simulation in AgentScope",
           "url": "https://huggingface.co/papers/2407.17789",
-          "subtitle": "Recent advances in large language models (LLMs) have opened new avenues for applying multi-agent systems in very large-scale simulations. However, there remain several challenges when conducting multi-agent simulations with existing platforms, such as limited scalability and low efficiency, unsatisfied agent diversity, and effort-intensive management processes. To address these challenges, we develop several new features and components for AgentScope, a user-friendly multi-agent platform, enhancing its convenience ",
+          "subtitle": "Recent advances in large language models (LLMs) have opened new avenues for applying multi-agent systems in very large-scale simulations. However, there remain several challenges when conducting multi-agent simulations with existing platforms, such as limited scalability and low efficiency, unsatisfied agent diversity, and effort-intensive management processes. To address these challenges, we develop several new features and components for AgentScope, a user-friendly multi-agent platform, enhancing its convenience and flexibility for supporting very large-scale multi-agent simulations. Specifically, we propose an actor-based distributed mechanism as the underlying technological infrastructur",
+          "detail": "Recent advances in large language models (LLMs) have opened new avenues for applying multi-agent systems in very large-scale simulations. However, there remain several challenges when conducting multi-agent simulations with existing platforms, such as limited scalability and low efficiency, unsatisfied agent diversity, and effort-intensive management processes. To address these challenges, we develop several new features and components for AgentScope, a user-friendly multi-agent platform, enhancing its convenience and flexibility for supporting very large-scale multi-agent simulations. Specifically, we propose an actor-based distributed mechanism as the underlying technological infrastructure towards great scalability and high efficiency, and provide flexible environment support for simulating various real-world scenarios, which enables parallel execution of multiple agents, centralized workflow orchestration, and both inter-agent and agent-environment interactions among agents. Moreover, we integrate an easy-to-use configurable tool and an automatic background generation pipeline in AgentScope, simplifying the process of creating agents with diverse yet detailed background settings. Last but not least, we provide a web-based interface for conveniently monitoring and managing a large number of agents that might deploy across multiple devices. We conduct a comprehensive simulation to demonstrate the effectiveness of the proposed enhancements in AgentScope, and provide detailed observations and discussions to highlight the great potential of applying multi-agent systems in large-scale simulations. The source code is released on GitHub at https://github.com/modelscope/agentscope to inspire further research and development in large-scale multi-agent simulations.",
+          "summary_source": "paper abstract",
           "author": "2407.17789",
           "value": 48,
           "badge": "2024-07-25T05:50:46+00:00",
@@ -111,16 +122,31 @@
         {
           "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
           "url": "https://huggingface.co/papers/2309.06180",
-          "subtitle": "High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time. However, existing systems struggle because the key-value cache (KV cache) memory for each request is huge and grows and shrinks dynamically. When managed inefficiently, this memory can be significantly wasted by fragmentation and redundant duplication, limiting the batch size. To address this problem, we propose PagedAttention, an attention algorithm inspired by the classical virtual memory and paging tec",
+          "subtitle": "High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time. However, existing systems struggle because the key-value cache (KV cache) memory for each request is huge and grows and shrinks dynamically. When managed inefficiently, this memory can be significantly wasted by fragmentation and redundant duplication, limiting the batch size. To address this problem, we propose PagedAttention, an attention algorithm inspired by the classical virtual memory and paging techniques in operating systems. On top of it, we build vLLM, an LLM serving system that achieves (1) near-zero waste in KV cache memory and (2) flexible sharing of KV cache within an",
+          "detail": "High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time. However, existing systems struggle because the key-value cache (KV cache) memory for each request is huge and grows and shrinks dynamically. When managed inefficiently, this memory can be significantly wasted by fragmentation and redundant duplication, limiting the batch size. To address this problem, we propose PagedAttention, an attention algorithm inspired by the classical virtual memory and paging techniques in operating systems. On top of it, we build vLLM, an LLM serving system that achieves (1) near-zero waste in KV cache memory and (2) flexible sharing of KV cache within and across requests to further reduce memory usage. Our evaluations show that vLLM improves the throughput of popular LLMs by 2-4times with the same level of latency compared to the state-of-the-art systems, such as FasterTransformer and Orca. The improvement is more pronounced with longer sequences, larger models, and more complex decoding algorithms. vLLM's source code is publicly available at https://github.com/vllm-project/vllm",
+          "summary_source": "paper abstract",
           "author": "2309.06180",
           "value": 77,
           "badge": "2023-09-12T12:50:04+00:00",
           "metric": "upvotes"
         },
         {
+          "title": "Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation",
+          "url": "https://huggingface.co/papers/2610.14162",
+          "subtitle": "Diffusion language models (DLMs) offer parallel sampling for faster generation than autoregressive models, an increasingly important advantage as inference becomes a dominant computational workload. However, DLMs degrade quickly with fewer sampling steps, process the full sequence at every step, and require many passes over the dataset to reach good quality. We introduce Next-Concept Modeling (NCM), a two-stage, coarse-to-fine framework: a multiscale residual VQ-VAE encodes text into a hierarchy of discrete codes, and a transformer generates one level at a time, predicting all codes within a level in parallel. At matched parameter scales, NCM achieves better generative perplexity than the st",
+          "detail": "Diffusion language models (DLMs) offer parallel sampling for faster generation than autoregressive models, an increasingly important advantage as inference becomes a dominant computational workload. However, DLMs degrade quickly with fewer sampling steps, process the full sequence at every step, and require many passes over the dataset to reach good quality. We introduce Next-Concept Modeling (NCM), a two-stage, coarse-to-fine framework: a multiscale residual VQ-VAE encodes text into a hierarchy of discrete codes, and a transformer generates one level at a time, predicting all codes within a level in parallel. At matched parameter scales, NCM achieves better generative perplexity than the strongest DLM baseline on LM1B while running 21times faster. On OpenWebText, NCM is competitive with the strongest DLM while running 10times faster; on XSum, it matches the strongest DLM's ROUGE-L while being 31times faster. On the reasoning task of Sudoku, NCM outperforms autoregressive and diffusion baselines across all difficulty levels, using fewer function evaluations. On the reasoning task of Sudoku, NCM outperforms autoregressive and diffusion baselines across all difficulty levels, using fewer function evaluations.",
+          "summary_source": "paper abstract",
+          "author": "2610.14162",
+          "value": 16,
+          "badge": "2026-10-09T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
           "title": "OpenDevin: An Open Platform for AI Software Developers as Generalist Agents",
           "url": "https://huggingface.co/papers/2407.16741",
-          "subtitle": "Software is one of the most powerful tools that we humans have at our disposal; it allows a skilled programmer to interact with the world in complex and profound ways. At the same time, thanks to improvements in large language models (LLMs), there has also been a rapid development in AI agents that interact with and affect change in their surrounding environments. In this paper, we introduce OpenDevin, a platform for the development of powerful and flexible AI agents that interact with the world in similar ways to ",
+          "subtitle": "Software is one of the most powerful tools that we humans have at our disposal; it allows a skilled programmer to interact with the world in complex and profound ways. At the same time, thanks to improvements in large language models (LLMs), there has also been a rapid development in AI agents that interact with and affect change in their surrounding environments. In this paper, we introduce OpenDevin, a platform for the development of powerful and flexible AI agents that interact with the world in similar ways to those of a human developer: by writing code, interacting with a command line, and browsing the web. We describe how the platform allows for the implementation of new agents, safe i",
+          "detail": "Software is one of the most powerful tools that we humans have at our disposal; it allows a skilled programmer to interact with the world in complex and profound ways. At the same time, thanks to improvements in large language models (LLMs), there has also been a rapid development in AI agents that interact with and affect change in their surrounding environments. In this paper, we introduce OpenDevin, a platform for the development of powerful and flexible AI agents that interact with the world in similar ways to those of a human developer: by writing code, interacting with a command line, and browsing the web. We describe how the platform allows for the implementation of new agents, safe interaction with sandboxed environments for code execution, coordination between multiple agents, and incorporation of evaluation benchmarks. Based on our currently incorporated benchmarks, we perform an evaluation of agents over 15 challenging tasks, including software engineering (e.g., SWE-Bench) and web browsing (e.g., WebArena), among others. Released under the permissive MIT license, OpenDevin is a community project spanning academia and industry with more than 1.3K contributions from over 160 contributors and will improve going forward.",
+          "summary_source": "paper abstract",
           "author": "2407.16741",
           "value": 90,
           "badge": "2024-07-23T17:50:43+00:00",
@@ -129,10 +155,298 @@
         {
           "title": "Unlimited OCR Works",
           "url": "https://huggingface.co/papers/2606.23050",
-          "subtitle": "Recently, end-to-end OCR models, exemplified by DeepSeek OCR, have once again thrust OCR into the spotlight. A widely held view is that employing a large language model (LLM) as the decoder allows the model to leverage the prior distribution of language, leading to improved OCR performance. However, the downside is equally evident: as the output sequence lengthens, the accumulated KV cache drives up memory consumption and progressively slows down generation. This stands in stark contrast to humans, who exhibit no s",
+          "subtitle": "Recently, end-to-end OCR models, exemplified by DeepSeek OCR, have once again thrust OCR into the spotlight. A widely held view is that employing a large language model (LLM) as the decoder allows the model to leverage the prior distribution of language, leading to improved OCR performance. However, the downside is equally evident: as the output sequence lengthens, the accumulated KV cache drives up memory consumption and progressively slows down generation. This stands in stark contrast to humans, who exhibit no such decline in efficiency during long-horizon copying tasks. In this technical report, we propose Unlimited OCR, a model designed to emulate human parsing working memory. Taking De",
+          "detail": "Recently, end-to-end OCR models, exemplified by DeepSeek OCR, have once again thrust OCR into the spotlight. A widely held view is that employing a large language model (LLM) as the decoder allows the model to leverage the prior distribution of language, leading to improved OCR performance. However, the downside is equally evident: as the output sequence lengthens, the accumulated KV cache drives up memory consumption and progressively slows down generation. This stands in stark contrast to humans, who exhibit no such decline in efficiency during long-horizon copying tasks. In this technical report, we propose Unlimited OCR, a model designed to emulate human parsing working memory. Taking DeepSeek OCR as the baseline, we replace all attention layers in the decoder with our proposed Reference Sliding Window Attention (R-SWA), which reduces attention computation costs while maintaining a constant KV cache throughout the entire decoding process. By combining the high compression rate of DeepSeek OCR's encoder with our constant KV cache design, Unlimited OCR can transcribe dozens of pages of documents in a single forward pass under a standard maximum length of 32K. More importantly, R-SWA is a general-purpose parsing attention mechanism - beyond OCR, it is equally applicable to tasks such as ASR, translation, etc. Codes and model weights are publicly available at http://github.com/baidu/Unlimited-OCR.",
+          "summary_source": "paper abstract",
           "author": "2606.23050",
           "value": 97,
           "badge": "2026-06-22T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "Internal Safety Collapse in Frontier Large Language Models",
+          "url": "https://huggingface.co/papers/2603.23509",
+          "subtitle": "This work identifies a critical failure mode in frontier large language models (LLMs), which we term Internal Safety Collapse (ISC): under certain task conditions, models enter a state in which they continuously generate harmful content while executing otherwise benign tasks. We introduce TVD (Task, Validator, Data), a framework that triggers ISC through domain tasks where generating harmful content is the only valid completion, and construct ISC-Bench containing 53 scenarios across 8 professional disciplines. Evaluated on JailbreakBench, three representative scenarios yield worst-case safety failure rates averaging 95.3% across four frontier LLMs (including GPT-5.2 and Claude Sonnet 4.5), s",
+          "detail": "This work identifies a critical failure mode in frontier large language models (LLMs), which we term Internal Safety Collapse (ISC): under certain task conditions, models enter a state in which they continuously generate harmful content while executing otherwise benign tasks. We introduce TVD (Task, Validator, Data), a framework that triggers ISC through domain tasks where generating harmful content is the only valid completion, and construct ISC-Bench containing 53 scenarios across 8 professional disciplines. Evaluated on JailbreakBench, three representative scenarios yield worst-case safety failure rates averaging 95.3% across four frontier LLMs (including GPT-5.2 and Claude Sonnet 4.5), substantially exceeding standard jailbreak attacks. Frontier models are more vulnerable than earlier LLMs: the very capabilities that enable complex task execution become liabilities when tasks intrinsically involve harmful content. This reveals a growing attack surface: almost every professional domain uses tools that process sensitive data, and each new dual-use tool automatically expands this vulnerability--even without any deliberate attack. Despite substantial alignment efforts, frontier LLMs retain inherently unsafe internal capabilities: alignment reshapes observable outputs but does not eliminate the underlying risk profile. These findings underscore the need for caution when deploying LLMs in high-stakes settings. Source code: https://github.com/wuyoscar/ISC-Bench",
+          "summary_source": "paper abstract",
+          "author": "2603.23509",
+          "value": 31,
+          "badge": "2026-03-04T12:55:34+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds",
+          "url": "https://huggingface.co/papers/2610.28698",
+          "subtitle": "Scaling data, diversity and model capacity has improved embodied learning in physical environments, where diverse experiences remain grounded in shared physical laws. Whether these gains extend to virtual worlds with different visual styles, dynamics, controls, and objectives remains unclear. We investigate this question through a controlled study of continued pre-training (CPT) across three axes: data volume, diversity, and model size. Our 120 training configurations span four model sizes from 0.8B to 27B, six data budgets from 50 to 1,600 hours, and five mixtures ranging from Minecraft-only data to diverse multi-world corpora. We assess performance and generalization using three-level vali",
+          "detail": "Scaling data, diversity and model capacity has improved embodied learning in physical environments, where diverse experiences remain grounded in shared physical laws. Whether these gains extend to virtual worlds with different visual styles, dynamics, controls, and objectives remains unclear. We investigate this question through a controlled study of continued pre-training (CPT) across three axes: data volume, diversity, and model size. Our 120 training configurations span four model sizes from 0.8B to 27B, six data budgets from 50 to 1,600 hours, and five mixtures ranging from Minecraft-only data to diverse multi-world corpora. We assess performance and generalization using three-level validation losses and gameplay benchmarks from in-corpus worlds to unseen worlds. Our results show: (1) more data improves in-corpus performance, diversity improves transfer to related worlds with limited gains in distant worlds, and model size improves data efficiency but generalizes worse to distant worlds under single-world training; (2) we observe an early interface phase with broad cross-world benefits and a later world phase with gains narrowed to in-corpus and related worlds, and fit an empirical scaling law relating validation loss to data volume, diversity and model size; and (3) our models are competitive with Minecraft specialists and frontier models in 3D worlds, and perform best in real-time settings. However, the limits of imitation and persistent gaps in distant worlds suggest that building generalist embodied agents requires richer training stages beyond continued pre-training.",
+          "summary_source": "paper abstract",
+          "author": "2610.28698",
+          "value": 78,
+          "badge": "2026-10-20T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "WeVisOne-VL: Unified Visual Perception from Objects to Pixels",
+          "url": "https://huggingface.co/papers/2610.31329",
+          "subtitle": "Existing vision-language models (VLMs) remain unreliable for fine-grained visual perception. In this report, we present WeVisOne-VL (WeChat Vision All-in-One), a powerful VLM that unifies object-level and pixel-level perception through structured next-token prediction. It supports multiple visual tasks including object detection, referring localization, counting, OCR, segmentation, and matting, enabling localization at any user-specific granularity, from points and boxes to masks and alpha mattes. Architecturally, we integrate a lightweight pixel decoder into the VLM via a special <OBJ> token to generate instance-level pixel outputs. We train the model with a three-stage curriculum SFT follo",
+          "detail": "Existing vision-language models (VLMs) remain unreliable for fine-grained visual perception. In this report, we present WeVisOne-VL (WeChat Vision All-in-One), a powerful VLM that unifies object-level and pixel-level perception through structured next-token prediction. It supports multiple visual tasks including object detection, referring localization, counting, OCR, segmentation, and matting, enabling localization at any user-specific granularity, from points and boxes to masks and alpha mattes. Architecturally, we integrate a lightweight pixel decoder into the VLM via a special <OBJ> token to generate instance-level pixel outputs. We train the model with a three-stage curriculum SFT followed by mixed-task RL. Across over 30 benchmarks, WeVisOne-VL demonstrates leading performance on both object-level and pixel-level tasks, while maintaining robust rejection for object-absent queries. By releasing WeVisOne-VL to the open-source community, we hope to advance VLMs from broad visual understanding toward truly reliable perception systems for real-world deployment.",
+          "summary_source": "paper abstract",
+          "author": "2610.31329",
+          "value": 244,
+          "badge": "2026-10-22T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "SmolDocling: An ultra-compact vision-language model for end-to-end multi-modal document conversion",
+          "url": "https://huggingface.co/papers/2503.11576",
+          "subtitle": "We introduce SmolDocling, an ultra-compact vision-language model targeting end-to-end document conversion. Our model comprehensively processes entire pages by generating DocTags, a new universal markup format that captures all page elements in their full context with location. Unlike existing approaches that rely on large foundational models, or ensemble solutions that rely on handcrafted pipelines of multiple specialized models, SmolDocling offers an end-to-end conversion for accurately capturing content, structure and spatial location of document elements in a 256M parameters vision-language model. SmolDocling exhibits robust performance in correctly reproducing document features such as c",
+          "detail": "We introduce SmolDocling, an ultra-compact vision-language model targeting end-to-end document conversion. Our model comprehensively processes entire pages by generating DocTags, a new universal markup format that captures all page elements in their full context with location. Unlike existing approaches that rely on large foundational models, or ensemble solutions that rely on handcrafted pipelines of multiple specialized models, SmolDocling offers an end-to-end conversion for accurately capturing content, structure and spatial location of document elements in a 256M parameters vision-language model. SmolDocling exhibits robust performance in correctly reproducing document features such as code listings, tables, equations, charts, lists, and more across a diverse range of document types including business documents, academic papers, technical reports, patents, and forms -- significantly extending beyond the commonly observed focus on scientific papers. Additionally, we contribute novel publicly sourced datasets for charts, tables, equations, and code recognition. Experimental results demonstrate that SmolDocling competes with other Vision Language Models that are up to 27 times larger in size, while reducing computational requirements substantially. The model is currently available, datasets will be publicly available soon.",
+          "summary_source": "paper abstract",
+          "author": "2503.11576",
+          "value": 180,
+          "badge": "2025-03-14T16:44:14+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "YuE2: Unifying Symbolic and Audio Music Generation at Frontier Quality",
+          "url": "https://huggingface.co/papers/2609.33757",
+          "subtitle": "Symbolic models make melody, harmony, rhythm, and form explicit but typically stop before a finished recording; audio models produce complete songs while leaving composition implicit. We introduce YuE2, which unifies symbolic and audio music generation at frontier quality through symbolic planning. A single AR-NAR Mixture-of-Transformers (MoT) first writes a readable score specifying melody and harmony, expands it into semantic music tokens, and realizes it as full-song audio. In comparisons using the same checkpoint, experts prefer symbolic planning for overall quality and musicality, with 49.3% of overall preferences versus 34.6% without planning. Experts also favor the unified model over",
+          "detail": "Symbolic models make melody, harmony, rhythm, and form explicit but typically stop before a finished recording; audio models produce complete songs while leaving composition implicit. We introduce YuE2, which unifies symbolic and audio music generation at frontier quality through symbolic planning. A single AR-NAR Mixture-of-Transformers (MoT) first writes a readable score specifying melody and harmony, expands it into semantic music tokens, and realizes it as full-song audio. In comparisons using the same checkpoint, experts prefer symbolic planning for overall quality and musicality, with 49.3% of overall preferences versus 34.6% without planning. Experts also favor the unified model over a separate language model and diffusion Transformer. On WildSongBench, YuE2 scores 6.73 on SongBench Global Avg, exceeding all evaluated public baselines. Selecting from eight candidates (best-of-8), YuE2 reaches 6.96, the highest observed mean among all evaluated systems. Expert listening further establishes its competitiveness with proprietary song generators, favoring best-of-8 over Suno v4.5 and yielding nearly balanced preferences against Suno v5. To learn this generation process from recordings without aligned scores, we introduce MERT2 and SheetSage2 to supply semantic and symbolic supervision. MERT2 sets a new state of the art in music representation learning, surpassing previous best results on 14 of 15 MARBLE metrics; SheetSage2 leads 12 of 15 benchmark-metric pairs in our lead-sheet transcription comparison. The same checkpoint follows score edits while largely preserving unedited musical content and generates zero-shot covers without cover-specific training. Its readable score also enables agentic music editing, with external language models translating user feedback into revisions of the composition.",
+          "summary_source": "paper abstract",
+          "author": "2609.33757",
+          "value": 206,
+          "badge": "2026-09-27T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "MinerU2.5: A Decoupled Vision-Language Model for Efficient High-Resolution Document Parsing",
+          "url": "https://huggingface.co/papers/2509.22186",
+          "subtitle": "We introduce MinerU2.5, a 1.2B-parameter document parsing vision-language model that achieves state-of-the-art recognition accuracy while maintaining exceptional computational efficiency. Our approach employs a coarse-to-fine, two-stage parsing strategy that decouples global layout analysis from local content recognition. In the first stage, the model performs efficient layout analysis on downsampled images to identify structural elements, circumventing the computational overhead of processing high-resolution inputs. In the second stage, guided by the global layout, it performs targeted content recognition on native-resolution crops extracted from the original image, preserving fine-grained",
+          "detail": "We introduce MinerU2.5, a 1.2B-parameter document parsing vision-language model that achieves state-of-the-art recognition accuracy while maintaining exceptional computational efficiency. Our approach employs a coarse-to-fine, two-stage parsing strategy that decouples global layout analysis from local content recognition. In the first stage, the model performs efficient layout analysis on downsampled images to identify structural elements, circumventing the computational overhead of processing high-resolution inputs. In the second stage, guided by the global layout, it performs targeted content recognition on native-resolution crops extracted from the original image, preserving fine-grained details in dense text, complex formulas, and tables. To support this strategy, we developed a comprehensive data engine that generates diverse, large-scale training corpora for both pretraining and fine-tuning. Ultimately, MinerU2.5 demonstrates strong document parsing ability, achieving state-of-the-art performance on multiple benchmarks, surpassing both general-purpose and domain-specific models across various recognition tasks, while maintaining significantly lower computational overhead.",
+          "summary_source": "paper abstract",
+          "author": "2509.22186",
+          "value": 181,
+          "badge": "2025-09-26T10:45:48+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory",
+          "url": "https://huggingface.co/papers/2504.19413",
+          "subtitle": "Large Language Models (LLMs) have demonstrated remarkable prowess in generating contextually coherent responses, yet their fixed context windows pose fundamental challenges for maintaining consistency over prolonged multi-session dialogues. We introduce Mem0, a scalable memory-centric architecture that addresses this issue by dynamically extracting, consolidating, and retrieving salient information from ongoing conversations. Building on this foundation, we further propose an enhanced variant that leverages graph-based memory representations to capture complex relational structures among conversational elements. Through comprehensive evaluations on LOCOMO benchmark, we systematically compare",
+          "detail": "Large Language Models (LLMs) have demonstrated remarkable prowess in generating contextually coherent responses, yet their fixed context windows pose fundamental challenges for maintaining consistency over prolonged multi-session dialogues. We introduce Mem0, a scalable memory-centric architecture that addresses this issue by dynamically extracting, consolidating, and retrieving salient information from ongoing conversations. Building on this foundation, we further propose an enhanced variant that leverages graph-based memory representations to capture complex relational structures among conversational elements. Through comprehensive evaluations on LOCOMO benchmark, we systematically compare our approaches against six baseline categories: (i) established memory-augmented systems, (ii) retrieval-augmented generation (RAG) with varying chunk sizes and k-values, (iii) a full-context approach that processes the entire conversation history, (iv) an open-source memory solution, (v) a proprietary model system, and (vi) a dedicated memory management platform. Empirical results show that our methods consistently outperform all existing memory systems across four question categories: single-hop, temporal, multi-hop, and open-domain. Notably, Mem0 achieves 26% relative improvements in the LLM-as-a-Judge metric over OpenAI, while Mem0 with graph memory achieves around 2% higher overall score than the base configuration. Beyond accuracy gains, we also markedly reduce computational overhead compared to full-context method. In particular, Mem0 attains a 91% lower p95 latency and saves more than 90% token cost, offering a compelling balance between advanced reasoning capabilities and practical deployment constraints. Our findings highlight critical role of structured, persistent memory mechanisms for long-term conversational coherence, paving the way for more reliable and efficient LLM-driven AI agents.",
+          "summary_source": "paper abstract",
+          "author": "2504.19413",
+          "value": 75,
+          "badge": "2025-04-28T01:46:35+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "HuggingFace's Transformers: State-of-the-art Natural Language Processing",
+          "url": "https://huggingface.co/papers/1910.03771",
+          "subtitle": "Recent progress in natural language processing has been driven by advances in both model architecture and model pretraining. Transformer architectures have facilitated building higher-capacity models and pretraining has made it possible to effectively utilize this capacity for a wide variety of tasks. Transformers is an open-source library with the goal of opening up these advances to the wider machine learning community. The library consists of carefully engineered state-of-the art Transformer architectures under a unified API. Backing this library is a curated collection of pretrained models made by and available for the community. Transformers is designed to be extensible by researchers,",
+          "detail": "Recent progress in natural language processing has been driven by advances in both model architecture and model pretraining. Transformer architectures have facilitated building higher-capacity models and pretraining has made it possible to effectively utilize this capacity for a wide variety of tasks. Transformers is an open-source library with the goal of opening up these advances to the wider machine learning community. The library consists of carefully engineered state-of-the art Transformer architectures under a unified API. Backing this library is a curated collection of pretrained models made by and available for the community. Transformers is designed to be extensible by researchers, simple for practitioners, and fast and robust in industrial deployments. The library is available at https://github.com/huggingface/transformers.",
+          "summary_source": "paper abstract",
+          "author": "1910.03771",
+          "value": 34,
+          "badge": "2019-10-09T03:23:22+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "ARIS: Autonomous Research via Adversarial Multi-Agent Collaboration",
+          "url": "https://huggingface.co/papers/2605.03042",
+          "subtitle": "This report describes ARIS (Auto-Research-in-sleep), an open-source research harness for autonomous research, including its architecture, assurance mechanisms, and early deployment experience. The performance of agent systems built on LLMs depends on both the model weights and the harness around them, which governs what information to store, retrieve, and present to the model. For long-horizon research workflows, the central failure mode is not a visible breakdown but a plausible unsupported success: a long-running agent can produce claims whose evidential support is incomplete, misreported, or silently inherited from the executor's framing. Therefore, we present ARIS as a research harness t",
+          "detail": "This report describes ARIS (Auto-Research-in-sleep), an open-source research harness for autonomous research, including its architecture, assurance mechanisms, and early deployment experience. The performance of agent systems built on LLMs depends on both the model weights and the harness around them, which governs what information to store, retrieve, and present to the model. For long-horizon research workflows, the central failure mode is not a visible breakdown but a plausible unsupported success: a long-running agent can produce claims whose evidential support is incomplete, misreported, or silently inherited from the executor's framing. Therefore, we present ARIS as a research harness that coordinates machine-learning research workflows through cross-model adversarial collaboration as a default configuration: an executor model drives forward progress while a reviewer from a different model family is recommended to critique intermediate artifacts and request revisions. ARIS has three architectural layers. The execution layer provides more than 65 reusable Markdown-defined skills, model integrations via MCP, a persistent research wiki for iterative reuse of prior findings, and deterministic figure generation. The orchestration layer coordinates five end-to-end workflows with adjustable effort settings and configurable routing to reviewer models. The assurance layer includes a three-stage process for checking whether experimental claims are supported by evidence: integrity verification, result-to-claim mapping, and claim auditing that cross-checks manuscript statements against the claim ledger and raw evidence, as well as a five-pass scientific-editing pipeline, mathematical-proof checks, and visual inspection of the rendered PDF. A prototype self-improvement loop records research traces and proposes harness improvements that are adopted only after reviewer approval.",
+          "summary_source": "paper abstract",
+          "author": "2605.03042",
+          "value": 156,
+          "badge": "2026-05-04T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "Raven: The Harness of Harnesses for Composable Agentic Intelligence",
+          "url": "https://huggingface.co/papers/2609.33439",
+          "subtitle": "As large language models advance, AI agents are moving beyond isolated, domain-specific tasks toward long-horizon, cross-domain workflows. This transition exposes two challenges: increasing harness complexity makes manual design difficult to scale, while tighter coupling to specific domains limits the generality of a single harness. The central question thus shifts from how to engineer a stronger harness for one domain to how to autonomously construct specialized harnesses, improve them through experience, and orchestrate them across domains. We introduce Raven, The Harness of Harnesses, an open-source multi-agent ecosystem that automatically constructs and evolves modular harnesses for spec",
+          "detail": "As large language models advance, AI agents are moving beyond isolated, domain-specific tasks toward long-horizon, cross-domain workflows. This transition exposes two challenges: increasing harness complexity makes manual design difficult to scale, while tighter coupling to specific domains limits the generality of a single harness. The central question thus shifts from how to engineer a stronger harness for one domain to how to autonomously construct specialized harnesses, improve them through experience, and orchestrate them across domains. We introduce Raven, The Harness of Harnesses, an open-source multi-agent ecosystem that automatically constructs and evolves modular harnesses for specific models and domains, treating each executable model--harness pair as a composable unit of intelligence. To support an All-Domain Collaboration Network, its Host Agent decomposes goals, matches subtasks to specialized agents, coordinates execution dependencies, and integrates results, while a host archive and EverOS preserve experience across tasks and Skill Forge makes that experience available as reusable procedures. Our theory establishes sufficient conditions for such composition to expand reliable task coverage beyond that of the available individual agents under a shared resource budget. On complex and long-horizon tasks, Raven significantly outperforms the state-of-the-art agent systems, pushing the frontier of composable agentic intelligence.",
+          "summary_source": "paper abstract",
+          "author": "2609.33439",
+          "value": 711,
+          "badge": "2026-09-27T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "UniAVC: Unified Audio-Video Creation via Progressive Training and Asymmetric Scheduling",
+          "url": "https://huggingface.co/papers/2610.24791",
+          "subtitle": "Unified audio-video creation requires a single model capable of text-conditioned joint synthesis, bidirectional cross-modal generation, and instruction-guided editing across both modalities. Existing methods rely heavily on paired corpora, which are scarce for joint generation and even rarer for editing. Consequently, they are spent learning single-branch generative and editing capabilities that abundant unimodal data could readily teach, rather than on the cross-modal coupling. Furthermore, prevailing systems apply a single shared noise schedule to both modalities, neglecting two critical limitations. First, due to the significant discrepancy in information density, video requires prolonged",
+          "detail": "Unified audio-video creation requires a single model capable of text-conditioned joint synthesis, bidirectional cross-modal generation, and instruction-guided editing across both modalities. Existing methods rely heavily on paired corpora, which are scarce for joint generation and even rarer for editing. Consequently, they are spent learning single-branch generative and editing capabilities that abundant unimodal data could readily teach, rather than on the cross-modal coupling. Furthermore, prevailing systems apply a single shared noise schedule to both modalities, neglecting two critical limitations. First, due to the significant discrepancy in information density, video requires prolonged high noise to organize spatial and motion structure, whereas the sparser audio signal can settle earlier during the synthesis process, the dynamics a uniform schedule might compromise. Second, lockstep denoising leaves asymmetric workflows, such as conditioning on one modality to synthesize or edit another, untrained. We present UniAVC, which addresses both obstacles. It first trains each branch on unimodal dataset to full generative and editing competence, and subsequently dedicates paired data to exploit cross-modal correspondence. Modality-decoupled schedulers meanwhile warp the noise schedule independently from a shared timestep, while subtasks with one clean modality directly supervise asymmetric configurations. These settings respectively enable intent-aware editing, which preserves one modality intact while enlisting it to constrain the other, and post-inference self-refinement, which regenerates only an unsatisfactory branch against an accepted one. UniAVC thus spans multiple creation tasks from a single set of weights without task-specific adapters.",
+          "summary_source": "paper abstract",
+          "author": "2610.24791",
+          "value": 14,
+          "badge": "2026-10-17T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "PaddleOCR-VL-1.6: Expanding the Frontier of Document Parsing with Under-Optimized Region Refinement and Progressive Post-Training",
+          "url": "https://huggingface.co/papers/2606.03264",
+          "subtitle": "We introduce PaddleOCR-VL-1.6, an upgraded compact document parsing model built upon PaddleOCR-VL-1.5. Although PaddleOCR-VL-1.5 establishes a strong 0.9B baseline, its remaining errors concentrate in under-optimized regions where model behavior is unstable, data coverage is sparse, or supervision is unreliable. Rather than expanding the training corpus indiscriminately, PaddleOCR-VL-1.6 introduces a region-aware data optimization framework that identifies weak regions from the previous model, applies targeted enhancement to these regions, and improves the reliability of supervision signals. It further adopts a progressive post-training recipe based on curated data selection and reinforcemen",
+          "detail": "We introduce PaddleOCR-VL-1.6, an upgraded compact document parsing model built upon PaddleOCR-VL-1.5. Although PaddleOCR-VL-1.5 establishes a strong 0.9B baseline, its remaining errors concentrate in under-optimized regions where model behavior is unstable, data coverage is sparse, or supervision is unreliable. Rather than expanding the training corpus indiscriminately, PaddleOCR-VL-1.6 introduces a region-aware data optimization framework that identifies weak regions from the previous model, applies targeted enhancement to these regions, and improves the reliability of supervision signals. It further adopts a progressive post-training recipe based on curated data selection and reinforcement learning, pushing model performance to a higher level through staged optimization. PaddleOCR-VL-1.6 achieves a new state-of-the-art score of 96.33% on OmniDocBench v1.6, demonstrates strong competitiveness against top-tier VLMs, and provides a practical post-training recipe for the PaddleOCR-VL series.",
+          "summary_source": "paper abstract",
+          "author": "2606.03264",
+          "value": 26,
+          "badge": "2026-06-02T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "MemT-1.0: Towards Memory-Native Evolution",
+          "url": "https://huggingface.co/papers/2610.26825",
+          "subtitle": "Memory-native evolution requires making memory an intrinsic capability of foundation models, enabling them to continuously accumulate and utilize information. To this end, we introduce MemT-1.0, a new architecture of memory foundation models that internalize memory as part of model computation. Building on Metis, MemT-1.0 employs Gated DeltaNet-2 with a stable token-level memory update mechanism within each turn. We further introduce Mixture-of-Storage to scale native memory capacity. Following a deliberate backbone preparation, we develop a two-stage training pipeline consisting of continued pre-training and post-training, supported by 34B tokens of training data and efficient training and",
+          "detail": "Memory-native evolution requires making memory an intrinsic capability of foundation models, enabling them to continuously accumulate and utilize information. To this end, we introduce MemT-1.0, a new architecture of memory foundation models that internalize memory as part of model computation. Building on Metis, MemT-1.0 employs Gated DeltaNet-2 with a stable token-level memory update mechanism within each turn. We further introduce Mixture-of-Storage to scale native memory capacity. Following a deliberate backbone preparation, we develop a two-stage training pipeline consisting of continued pre-training and post-training, supported by 34B tokens of training data and efficient training and inference infrastructure. We release a model family comprising MemT-1.0-Nano and MemT-1.0-Flash, and conduct a comprehensive evaluation of memory and general capabilities. The results show that they outperform the parametric memory baselines on average and remain competitive with retrieval-augmented methods, while largely preserving general capabilities. At a history length of 128K tokens, MemT-1.0-Nano achieves approximately 1.86times end-to-end inference speedup and a 66times reduction in persistent storage relative to full context KV cache. By internalizing retrieved procedural experience, MemT-1.0 improves task success on agentic tasks, providing a practical step toward memory-native evolution.",
+          "summary_source": "paper abstract",
+          "author": "2610.26825",
+          "value": 178,
+          "badge": "2026-10-19T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation",
+          "url": "https://huggingface.co/papers/2610.29989",
+          "subtitle": "Autoregressive video diffusion models generate videos chunk by chunk, yet producing plausible continuations does not guarantee that they capture how scenes evolve. Under teacher forcing, strong temporal redundancy may allow local visual continuity to serve as a shortcut for current-chunk denoising, reducing the pressure to model visual evolution. We introduce Future Chunk Prediction (FCP), an auxiliary objective jointly optimized with teacher-forced denoising that predicts temporally separated chunks without access to the intervening visual context. Drawing supervision directly from training videos, FCP requires no additional pretrained visual encoder and leaves autoregressive inference unch",
+          "detail": "Autoregressive video diffusion models generate videos chunk by chunk, yet producing plausible continuations does not guarantee that they capture how scenes evolve. Under teacher forcing, strong temporal redundancy may allow local visual continuity to serve as a shortcut for current-chunk denoising, reducing the pressure to model visual evolution. We introduce Future Chunk Prediction (FCP), an auxiliary objective jointly optimized with teacher-forced denoising that predicts temporally separated chunks without access to the intervening visual context. Drawing supervision directly from training videos, FCP requires no additional pretrained visual encoder and leaves autoregressive inference unchanged. Our method achieves superior physical plausibility over standard teacher-forced autoregressive training with a lower overall training compute budget, highlighting the effectiveness and efficiency of future-chunk supervision for modeling visual evolution. Intriguingly, our visualizations suggest that FCP fosters a more structured representation space, which may be valuable for building autoregressive world models.",
+          "summary_source": "paper abstract",
+          "author": "2610.29989",
+          "value": 172,
+          "badge": "2026-10-21T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "SolarRenderer: Few-Step Generative Reference Rendering",
+          "url": "https://huggingface.co/papers/2610.28630",
+          "subtitle": "Game engines and coding agents can specify the layout, motion, and camera of a scene, yet turning such coarse structure into realistic video requires a renderer that follows the structure and completes the appearance it leaves open. Existing renderers are tied to the representation of one engine, need tens of denoising steps or a costly distillation of their own, and learn from conditions that are not aligned with their target videos. We present SolarRenderer, a structure-conditioned video renderer that adapts a frozen MiniMax-H3 33B backbone with two lightweight LoRAs. Structural videos enter the native reference pathway of the backbone at the positions of the frames they describe, without",
+          "detail": "Game engines and coding agents can specify the layout, motion, and camera of a scene, yet turning such coarse structure into realistic video requires a renderer that follows the structure and completes the appearance it leaves open. Existing renderers are tied to the representation of one engine, need tens of denoising steps or a costly distillation of their own, and learn from conditions that are not aligned with their target videos. We present SolarRenderer, a structure-conditioned video renderer that adapts a frozen MiniMax-H3 33B backbone with two lightweight LoRAs. Structural videos enter the native reference pathway of the backbone at the positions of the frames they describe, without a type identifier and described only in plain text, so that a single control LoRA follows arbitrary structural representations. Starting from a pretrained four-step LoRA, structure-guided distribution matching renders in four steps, 12.3 times faster than 50-step sampling, while preserving the learned control. A block-causal variant extends the same design to streaming and renders 768p video in real time. To train the model, we build a frame-aligned corpus of 136K clips from game engines, simulators, and YouTube videos. Experiments on an in-distribution test set and a generalization benchmark of 16 structural representations show that SolarRenderer achieves state-of-the-art results across both, and generalizes to 11 unseen representations, including pose skeletons, drawings, and point clouds.",
+          "summary_source": "paper abstract",
+          "author": "2610.28630",
+          "value": 53,
+          "badge": "2026-10-20T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "RAG-Anything: All-in-One RAG Framework",
+          "url": "https://huggingface.co/papers/2510.12323",
+          "subtitle": "Retrieval-Augmented Generation (RAG) has emerged as a fundamental paradigm for expanding Large Language Models beyond their static training limitations. However, a critical misalignment exists between current RAG capabilities and real-world information environments. Modern knowledge repositories are inherently multimodal, containing rich combinations of textual content, visual elements, structured tables, and mathematical expressions. Yet existing RAG frameworks are limited to textual content, creating fundamental gaps when processing multimodal documents. We present RAG-Anything, a unified framework that enables comprehensive knowledge retrieval across all modalities. Our approach reconcept",
+          "detail": "Retrieval-Augmented Generation (RAG) has emerged as a fundamental paradigm for expanding Large Language Models beyond their static training limitations. However, a critical misalignment exists between current RAG capabilities and real-world information environments. Modern knowledge repositories are inherently multimodal, containing rich combinations of textual content, visual elements, structured tables, and mathematical expressions. Yet existing RAG frameworks are limited to textual content, creating fundamental gaps when processing multimodal documents. We present RAG-Anything, a unified framework that enables comprehensive knowledge retrieval across all modalities. Our approach reconceptualizes multimodal content as interconnected knowledge entities rather than isolated data types. The framework introduces dual-graph construction to capture both cross-modal relationships and textual semantics within a unified representation. We develop cross-modal hybrid retrieval that combines structural knowledge navigation with semantic matching. This enables effective reasoning over heterogeneous content where relevant evidence spans multiple modalities. RAG-Anything demonstrates superior performance on challenging multimodal benchmarks, achieving significant improvements over state-of-the-art methods. Performance gains become particularly pronounced on long documents where traditional approaches fail. Our framework establishes a new paradigm for multimodal knowledge access, eliminating the architectural fragmentation that constrains current systems. Our framework is open-sourced at: https://github.com/HKUDS/RAG-Anything.",
+          "summary_source": "paper abstract",
+          "author": "2510.12323",
+          "value": 87,
+          "badge": "2025-10-14T09:25:35+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "OpenGCUA: Toward a Fully Open Stack for Generalist Computer Use",
+          "url": "https://huggingface.co/papers/2610.22200",
+          "subtitle": "Computer use has reached a turning point: the focus is expanding from GUI-only interaction to systems that complete tasks on users' computers through visual and programmatic interfaces. We define a generalist computer-use agent (GCUA) as a system in which the model chooses how to observe, act, and organize its work across visual and programmatic interfaces. Yet frontier implementations, such as GPT-6 Astra's computer-use system, remain largely closed, limiting systematic study of their design. We introduce Open Generalist CUA (OpenGCUA), an ongoing project to develop and open the full stack for GCUAs with the community. This report presents the first release of OpenGCUA. Code execution is a",
+          "detail": "Computer use has reached a turning point: the focus is expanding from GUI-only interaction to systems that complete tasks on users' computers through visual and programmatic interfaces. We define a generalist computer-use agent (GCUA) as a system in which the model chooses how to observe, act, and organize its work across visual and programmatic interfaces. Yet frontier implementations, such as GPT-6 Astra's computer-use system, remain largely closed, limiting systematic study of their design. We introduce Open Generalist CUA (OpenGCUA), an ongoing project to develop and open the full stack for GCUAs with the community. This report presents the first release of OpenGCUA. Code execution is a key feature of our agent design: it lets intermediate results determine subsequent operations and enables models to apply their existing programming capabilities directly to computer interaction. We also propose harness-to-model decision transfer, moving selected observations and task-state decisions from fixed harness rules to the model. On OSWorld-v2, our full configuration improves task scores across all eight evaluated models, including GPT-6 Astra and Claude Opus 5, raising mean partial score by +19.6 points and reducing reported steps per task by an average of 53.0% relative to batched GUI-only execution. We release our implementation and prompts, evaluation trajectories from all eight models, and preliminary versions of a real-device harness and a cross-device SDK. The harness addresses real-device challenges not fully captured by benchmarks, while the SDK provides a common programming interface across computers, mobiles and browsers. Across four real macOS tasks under our real-device harness, selected Qwen3.8-Max runs use 19.4 times as many reported reasoning tokens as GPT-6 Astra, highlighting substantial differences between models in real-device execution efficiency.",
+          "summary_source": "paper abstract",
+          "author": "2610.22200",
+          "value": 104,
+          "badge": "2026-10-15T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory",
+          "url": "https://huggingface.co/papers/2610.26860",
+          "subtitle": "Multimodal large language models (MLLMs) have made rapid progress on visual reasoning, yet many tasks require evidence that is difficult to obtain through internal reasoning alone: our controlled study on 22 benchmarks shows that simply increasing the inference budget of the base model yields only modest gains. Such tasks demand grounded perception, external knowledge, and numerical measurements obtained through heterogeneous tools, whose outputs must be made interpretable to the model and retained across reasoning steps. We introduce OpenVLHarness, a multimodal reasoning harness organized around a capability layer and persistent multimodal memory. The capability layer combines task-level to",
+          "detail": "Multimodal large language models (MLLMs) have made rapid progress on visual reasoning, yet many tasks require evidence that is difficult to obtain through internal reasoning alone: our controlled study on 22 benchmarks shows that simply increasing the inference budget of the base model yields only modest gains. Such tasks demand grounded perception, external knowledge, and numerical measurements obtained through heterogeneous tools, whose outputs must be made interpretable to the model and retained across reasoning steps. We introduce OpenVLHarness, a multimodal reasoning harness organized around a capability layer and persistent multimodal memory. The capability layer combines task-level tool interfaces with evidence rendering, providing consistent access to heterogeneous backends and converting their outputs into model-readable observations. Persistent multimodal memory retains the corresponding images, structured data, and web references as addressable artifacts throughout each query. A coding interface executes generated programs over stored data, enabling computations that combine results from multiple tools. Together, these mechanisms support an iterative process of acquiring, inspecting, and composing multimodal evidence. Evaluated on 22 benchmarks with eight open and proprietary backbones, OpenVLHarness improves average scores by 9.7-12.6 points over matched no-tool baselines, including +11.2 with Qwen3-VL-8B, +9.7 with Kimi K3, and +9.9 with GPT-6 Astra. With GPT-6 Luna at medium reasoning effort, OpenVLHarness outperforms the base model, Codex, and Visual Sketchpad at maximum effort by 7.7-8.5 points while incurring at most 37% of their model-token cost.",
+          "summary_source": "paper abstract",
+          "author": "2610.26860",
+          "value": 120,
+          "badge": "2026-10-19T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "REMORY: Learning Residual Memory for Context Compaction",
+          "url": "https://huggingface.co/papers/2610.11287",
+          "subtitle": "Long-horizon agents compact their history to continue within a finite context window, but a textual summary alone may not support every subsequent decision. We introduce REMORY, a neural memory network that supplements the summary with a bounded sequence of soft memory tokens. Given the history and summary, the network learns to generate tokens that help a frozen LLM approximate the continuation it would produce with the full history. The tokens are conditioned on the summary and appended after it, forming an analogue of a residual connection along the sequence dimension. On SummHay, REMORY improves source attribution at nearly unchanged insight coverage and approaches the full-context joint",
+          "detail": "Long-horizon agents compact their history to continue within a finite context window, but a textual summary alone may not support every subsequent decision. We introduce REMORY, a neural memory network that supplements the summary with a bounded sequence of soft memory tokens. Given the history and summary, the network learns to generate tokens that help a frozen LLM approximate the continuation it would produce with the full history. The tokens are conditioned on the summary and appended after it, forming an analogue of a residual connection along the sequence dimension. On SummHay, REMORY improves source attribution at nearly unchanged insight coverage and approaches the full-context joint score using only 5.2% of the input positions. Across long-horizon agent benchmarks, Qwen3.8-27B and GLM-5.3-Flash show consistent gains with residual memory. Both models also exhibit substantially fewer repeated tool outputs and tool errors on BrowseComp and Terminal-Bench 2.1.",
+          "summary_source": "paper abstract",
+          "author": "2610.11287",
+          "value": 64,
+          "badge": "2026-10-08T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "F2G-Pose: Geometry-Aware Foundation Feature Lifting for Direct RGB-D Category-Level Object Pose Estimation",
+          "url": "https://huggingface.co/papers/2610.31623",
+          "subtitle": "This paper studies category-level RGB-D object pose estimation, which recovers an object's 3D rotation and translation without instance-specific CAD models or reference views. This task is highly ambiguous due to intra-class variations, symmetries, and partial observations. Current solutions struggle to balance reliability and efficiency: methods based on intermediate structures are prone to error propagation, while diffusion models suffer from high inference latency and complex post-hoc candidate extraction. To address this, we present F2G-Pose, a real-time direct, single-pass framework that predicts category-level pose, metric size, and camera-frame completed shape from a single RGB-D obse",
+          "detail": "This paper studies category-level RGB-D object pose estimation, which recovers an object's 3D rotation and translation without instance-specific CAD models or reference views. This task is highly ambiguous due to intra-class variations, symmetries, and partial observations. Current solutions struggle to balance reliability and efficiency: methods based on intermediate structures are prone to error propagation, while diffusion models suffer from high inference latency and complex post-hoc candidate extraction. To address this, we present F2G-Pose, a real-time direct, single-pass framework that predicts category-level pose, metric size, and camera-frame completed shape from a single RGB-D observation in one feed-forward pass. F2G-Pose lifts dense visual foundation features to partial point clouds, encodes local geometry with DGCNN tokenization, and integrates object-level structure with a Mixture-of-Experts Transformer. Joint size prediction and camera-frame shape completion encourage metric consistency through dense geometric supervision. With its task-specific network trained only on pose-annotated synthetic SOPE data and its frozen RADIO backbone externally pretrained, F2G-Pose achieves state-of-the-art accuracy on SOPE and ROPE while running at 28 FPS for pose-only inference, and further demonstrates strong camera-frame geometry on HouseCat6D and real-object transfer on HANDAL. Analyses of latency, robustness, shape completion, and GenPose++ candidate behavior further demonstrate the efficiency and reliability of F2G-Pose, with real-world manipulation experiments demonstrating deployment potential under segmented RGB-D inputs. The project page, code, and pretrained models are made available at https://jrryzh.github.io/F2G-Pose/.",
+          "summary_source": "paper abstract",
+          "author": "2610.31623",
+          "value": 14,
+          "badge": "2026-10-22T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "PDFMathTranslate: Scientific Document Translation Preserving Layouts",
+          "url": "https://huggingface.co/papers/2507.03009",
+          "subtitle": "Language barriers in scientific documents hinder the diffusion and development of science and technologies. However, prior efforts in translating such documents largely overlooked the information in layouts. To bridge the gap, we introduce PDFMathTranslate, the world's first open-source software for translating scientific documents while preserving layouts. Leveraging the most recent advances in large language models and precise layout detection, we contribute to the community with key improvements in precision, flexibility, and efficiency. The work has been open-sourced at https://github.com/byaidu/pdfmathtranslate with more than 222k downloads.",
+          "detail": "Language barriers in scientific documents hinder the diffusion and development of science and technologies. However, prior efforts in translating such documents largely overlooked the information in layouts. To bridge the gap, we introduce PDFMathTranslate, the world's first open-source software for translating scientific documents while preserving layouts. Leveraging the most recent advances in large language models and precise layout detection, we contribute to the community with key improvements in precision, flexibility, and efficiency. The work has been open-sourced at https://github.com/byaidu/pdfmathtranslate with more than 222k downloads.",
+          "summary_source": "paper abstract",
+          "author": "2507.03009",
+          "value": 3,
+          "badge": "2025-07-02T10:22:05+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "SANA-Video: Efficient Video Generation with Block Linear Diffusion Transformer",
+          "url": "https://huggingface.co/papers/2509.24695",
+          "subtitle": "We introduce SANA-Video, a small diffusion model that can efficiently generate videos up to 720x1280 resolution and minute-length duration. SANA-Video synthesizes high-resolution, high-quality and long videos with strong text-video alignment at a remarkably fast speed, deployable on RTX 5090 GPU. Two core designs ensure our efficient, effective and long video generation: (1) Linear DiT: We leverage linear attention as the core operation, which is more efficient than vanilla attention given the large number of tokens processed in video generation. (2) Constant-Memory KV cache for Block Linear Attention: we design block-wise autoregressive approach for long video generation by employing a cons",
+          "detail": "We introduce SANA-Video, a small diffusion model that can efficiently generate videos up to 720x1280 resolution and minute-length duration. SANA-Video synthesizes high-resolution, high-quality and long videos with strong text-video alignment at a remarkably fast speed, deployable on RTX 5090 GPU. Two core designs ensure our efficient, effective and long video generation: (1) Linear DiT: We leverage linear attention as the core operation, which is more efficient than vanilla attention given the large number of tokens processed in video generation. (2) Constant-Memory KV cache for Block Linear Attention: we design block-wise autoregressive approach for long video generation by employing a constant-memory state, derived from the cumulative properties of linear attention. This KV cache provides the Linear DiT with global context at a fixed memory cost, eliminating the need for a traditional KV cache and enabling efficient, minute-long video generation. In addition, we explore effective data filters and model training strategies, narrowing the training cost to 12 days on 64 H100 GPUs, which is only 1% of the cost of MovieGen. Given its low cost, SANA-Video achieves competitive performance compared to modern state-of-the-art small diffusion models (e.g., Wan 2.1-1.3B and SkyReel-V2-1.3B) while being 16x faster in measured latency. Moreover, SANA-Video can be deployed on RTX 5090 GPUs with NVFP4 precision, accelerating the inference speed of generating a 5-second 720p video from 71s to 29s (2.4x speedup). In summary, SANA-Video enables low-cost, high-quality video generation.",
+          "summary_source": "paper abstract",
+          "author": "2509.24695",
+          "value": 56,
+          "badge": "2025-09-29T12:28:09+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation",
+          "url": "https://huggingface.co/papers/2605.31264",
+          "subtitle": "LLM agents are increasingly expected not only to complete isolated tasks, but also to carry bounded representations of human expertise, judgment, and interaction style. Building such person-grounded agents remains difficult because actionable knowledge associated with a person or role is usually embedded in heterogeneous traces rather than written as clean instructions. Existing memory and persona systems capture fragments of this evidence, while skill frameworks provide portable packaging formats; however, there is no end-to-end workflow for distilling these traces into inspectable, correctable, and agent-usable skills. We present an automated trace-to-skill distillation system for generati",
+          "detail": "LLM agents are increasingly expected not only to complete isolated tasks, but also to carry bounded representations of human expertise, judgment, and interaction style. Building such person-grounded agents remains difficult because actionable knowledge associated with a person or role is usually embedded in heterogeneous traces rather than written as clean instructions. Existing memory and persona systems capture fragments of this evidence, while skill frameworks provide portable packaging formats; however, there is no end-to-end workflow for distilling these traces into inspectable, correctable, and agent-usable skills. We present an automated trace-to-skill distillation system for generating person-grounded AI skills via expert knowledge distillation. Given materials from a target person or role, COLLEAGUE.SKILL produces a versioned skill package with two coordinated tracks: a capability track for practices, mental models, and decision heuristics, and a bounded behavior track for communication style, interaction rules, and correction history. The package can be inspected, invoked, updated through natural-language feedback, rolled back, installed across agent hosts, and optionally prepared for controlled distribution. We describe the artifact contract, generation workflow, correction lifecycle, deployment surface, and domain presets implemented in the open-source system. At the time of writing, the public repository has approximately 18.5k GitHub stars; the gallery lists 215 skills from 165 contributors and more than 100k cumulative stars across listed skill cards. The system illustrates how person-grounded skills can be represented as portable, correctable packages rather than opaque prompts or hidden memories.",
+          "summary_source": "paper abstract",
+          "author": "2605.31264",
+          "value": 131,
+          "badge": "2026-05-29T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "Has GPT-6-Astra Achieved Embodied Intelligence?",
+          "url": "https://huggingface.co/papers/2610.22471",
+          "subtitle": "GPT-6-Astra demonstrates a level of competence in robotic manipulation and navigation that challenges the conventional paradigm of building specialized models for individual tasks and embodiments. In this report, we ask not only how capable GPT-6-Astra is, but what its capabilities imply for the field. First, we probe the limits of standalone GPT-6-Astra. We conduct a large-scale evaluation across 12 representative benchmarks spanning tabletop manipulation, humanoids, mobile platforms, and dexterous hands. Under a unified protocol that allows in-context learning (ICL) from training-set demonstrations and substantially increases the number of execution steps, GPT-6-Astra achieves unprecedente",
+          "detail": "GPT-6-Astra demonstrates a level of competence in robotic manipulation and navigation that challenges the conventional paradigm of building specialized models for individual tasks and embodiments. In this report, we ask not only how capable GPT-6-Astra is, but what its capabilities imply for the field. First, we probe the limits of standalone GPT-6-Astra. We conduct a large-scale evaluation across 12 representative benchmarks spanning tabletop manipulation, humanoids, mobile platforms, and dexterous hands. Under a unified protocol that allows in-context learning (ICL) from training-set demonstrations and substantially increases the number of execution steps, GPT-6-Astra achieves unprecedented performance (Fig. 1). Future research may focus on improving 1) the generality of ICL 2) cost and execution time, 3) physical-state verification, 4) recovery from irreversible failures, and 5) long-horizon preservation of progress. Second, we study the agentic harness for embodied control. We identify that close-loop coordination between a high-level \"System 2\" reasoner (i.e., GPT-6-Astra) and a low-level \"System 1\" controller (e.g., π0.5) is costly but effective. Third, we examine GPT-6-Astra on real-world deployment. Our experiments on 8 robot configurations reveal substantial gaps: 1) robot demonstrations required for ICL are expensive to collect, and 2) it is implausible to trade longer execution for higher success rates with physical constraints. Fourth, we envision the next generation of embodied benchmarks. We develop a prototype that 1) derives tasks from real-world needs, 2) provides no in-domain demonstrations, and 3) judges agents on a world clock that keeps running while they deliberate. Taken together, our results suggest that GPT-6-Astra has largely crossed the threshold of embodied competence, but not yet that of practical embodied intelligence.",
+          "summary_source": "paper abstract",
+          "author": "2610.22471",
+          "value": 478,
+          "badge": "2026-10-15T00:00:00+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "PyTorch Distributed: Experiences on Accelerating Data Parallel Training",
+          "url": "https://huggingface.co/papers/2006.15704",
+          "subtitle": "This paper presents the design, implementation, and evaluation of the PyTorch distributed data parallel module. PyTorch is a widely-adopted scientific computing package used in deep learning research and applications. Recent advances in deep learning argue for the value of large datasets and large models, which necessitates the ability to scale out model training to more computational resources. Data parallelism has emerged as a popular solution for distributed training thanks to its straightforward principle and broad applicability. In general, the technique of distributed data parallelism replicates the model on every computational resource to generate gradients independently and then comm",
+          "detail": "This paper presents the design, implementation, and evaluation of the PyTorch distributed data parallel module. PyTorch is a widely-adopted scientific computing package used in deep learning research and applications. Recent advances in deep learning argue for the value of large datasets and large models, which necessitates the ability to scale out model training to more computational resources. Data parallelism has emerged as a popular solution for distributed training thanks to its straightforward principle and broad applicability. In general, the technique of distributed data parallelism replicates the model on every computational resource to generate gradients independently and then communicates those gradients at each iteration to keep model replicas consistent. Despite the conceptual simplicity of the technique, the subtle dependencies between computation and communication make it non-trivial to optimize the distributed training efficiency. As of v1.5, PyTorch natively provides several techniques to accelerate distributed data parallel, including bucketing gradients, overlapping computation with communication, and skipping gradient synchronization. Evaluations show that, when configured appropriately, the PyTorch distributed data parallel module attains near-linear scalability using 256 GPUs.",
+          "summary_source": "paper abstract",
+          "author": "2006.15704",
+          "value": 14,
+          "badge": "2020-06-28T20:39:45+00:00",
+          "metric": "upvotes"
+        },
+        {
+          "title": "SUPRA-TEX: 3D Generation with Super-Aligned Texture",
+          "url": "https://huggingface.co/papers/2610.22352",
+          "subtitle": "Single image 3D generation aims to dress a given 3D mesh with relightable materials while faithfully preserving the visual details of a reference image. Existing methods either introduce artifacts when fusing inconsistent multi-view predictions or struggle to preserve fine details through implicit image-feature conditioning. To resolve these challenges, we introduce SUPRA-Tex, built on the principle of decoupling visible-material estimation, surface alignment, and observation-guided 3D completion. This division of labor allows the 3D generator, trained on limited 3D data, to focus its capacity on preserving visible evidence and completing unobserved surfaces. Specifically, we first train an",
+          "detail": "Single image 3D generation aims to dress a given 3D mesh with relightable materials while faithfully preserving the visual details of a reference image. Existing methods either introduce artifacts when fusing inconsistent multi-view predictions or struggle to preserve fine details through implicit image-feature conditioning. To resolve these challenges, we introduce SUPRA-Tex, built on the principle of decoupling visible-material estimation, surface alignment, and observation-guided 3D completion. This division of labor allows the 3D generator, trained on limited 3D data, to focus its capacity on preserving visible evidence and completing unobserved surfaces. Specifically, we first train an MLLM-based image editing model to predict lighting-separated PBR maps in the reference view. We then project these maps onto the visible surface and encode them with the pretrained material VAE encoder into native observation latents that share the generation target's latent space. An interleaved flow transformer holds these latents as fixed, read-only anchors while alternating unobserved-region and full-surface updates to generate complete material latents. This design achieves super-alignment with the reference, delivering What You See Is What You Get fidelity on visible regions and coherent completion on unobserved surfaces. Trained solely on public datasets, SUPRA-Tex achieves SOTA performance in both geometry-conditioned texturing and end-to-end asset generation, matching or even exceeding leading commercial systems on in-the-wild images. Project page: https://supra-3d.github.io/supratex/",
+          "summary_source": "paper abstract",
+          "author": "2610.22352",
+          "value": 17,
+          "badge": "2026-10-15T00:00:00+00:00",
           "metric": "upvotes"
         }
       ]
@@ -140,7 +454,7 @@
     "github": {
       "source": "GitHub Trending",
       "url": "https://github.com/trending?since=weekly",
-      "fetched_at": "2026-10-26T04:10:54Z",
+      "fetched_at": "2026-10-26T04:53:05Z",
       "status": "ok",
       "metric_note": "官方 weekly Trending 排名；可见时显示本周新增 Stars",
       "items": [
@@ -150,7 +464,9 @@
           "subtitle": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
           "badge": "GitHub Trending · weekly",
           "value": 15072,
-          "metric": "stars gained this week"
+          "metric": "stars gained this week",
+          "detail": "A coding-agent skill that turns your agent into a security auditor. It orchestrates isolated agents through reconnaissance, coverage-led hunting, candidate validation, structured output, independent record verification, and target-neutral reporting. This is the skill that seeded Cloudflare's vulnerability discovery harness, described in Build your own vulnerability harness. The harness grew into a multi-stage, fleet-wide system; this skill is the single-repo starting point it evolved from. 1. Reconnaissance -- map architecture, trust boundaries, input surfaces, prior evidence, and deterministic coverage in architecture.md and coverage-ledger.json. 2. Coverage-led hunting -- assign isolated hunters from ledger units, record their checks, and use coverage critics to find gaps. 3. Candidate validation -- give every unique candidate to a fresh verifier that tries to disprove it. 4. Structured output -- write confirmed, needsvalidation, and rejected records to findings.json and validate them against report-schema.json. 5. Independent record verification -- fresh agents verify final source claims. Material replacements receive another independent verifier. 6. Target-neutral reporting -- derive REPORT.md, FINDINGS-DETAIL.md, and NEEDS-VALIDATION.md from the verified records and coverage ledger.",
+          "summary_source": "repository README"
         },
         {
           "title": "ruvnet/ruflo",
@@ -158,7 +474,9 @@
           "subtitle": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
           "badge": "GitHub Trending · weekly",
           "value": 2987,
-          "metric": "stars gained this week"
+          "metric": "stars gained this week",
+          "detail": "Start in Claude Code with core tools, the visual console and runtime mods. Requires Claude Code 2.1.287 or later. Run inside Claude Code: Core provides foundation tools. Console opens the agent cockpit. Mods add routing and policy enforcement inside Claude Code. Mods run with your account's permissions; review their code before installing. Using Codex or another MCP enabled tool? Use NPX for Ruflo project setup and connect your client to the Ruflo MCP server. Run the setup wizard in your project terminal:",
+          "summary_source": "repository README"
         },
         {
           "title": "anthropics/knowledge-work-plugins",
@@ -166,7 +484,9 @@
           "subtitle": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
           "badge": "GitHub Trending · weekly",
           "value": 2790,
-          "metric": "stars gained this week"
+          "metric": "stars gained this week",
+          "detail": "Plugins that turn Claude into a specialist for your role, team, and company. Built for Claude Cowork, also compatible with Claude Code. Cowork lets you set the goal and Claude delivers finished, professional work. Plugins let you go further: tell Claude how you like work done, which tools and data to pull from, how to handle critical workflows, and what slash commands to expose — so your team gets better and more consistent outcomes. Each plugin bundles the skills, connectors, slash commands, and sub-agents for a specific job function. Out of the box, they give Claude a strong starting point for helping anyone in that role. The real power comes when you customize them for your company — your tools, your terminology, your processes — so Claude works like it was built for your team.",
+          "summary_source": "repository README"
         },
         {
           "title": "anomalyco/opencode",
@@ -174,7 +494,9 @@
           "subtitle": "The open source coding agent.",
           "badge": "GitHub Trending · weekly",
           "value": 5921,
-          "metric": "stars gained this week"
+          "metric": "stars gained this week",
+          "detail": "English | 简体中文 | 繁體中文 | 한국어 | Deutsch | Español | Français | Italiano | Dansk | 日本語 | Polski | Русский | Bosanski | العربية | Norsk | Português (Brasil) | ไทย | Türkçe | Українська | বাংলা | Ελληνικά | Tiếng Việt OpenCode is also available as a desktop application. Download it from opencode.ai/download. OpenCode includes two built-in agents you can switch between with the Tab key.",
+          "summary_source": "repository README"
         },
         {
           "title": "stablyai/orca",
@@ -182,7 +504,9 @@
           "subtitle": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
           "badge": "GitHub Trending · weekly",
           "value": 9622,
-          "metric": "stars gained this week"
+          "metric": "stars gained this week",
+          "detail": "The AI Orchestrator for 100x builders. Run Codex, ClaudeCode, OpenCode or Pi side-by-side — each in its own worktree, tracked in one place. Monitor and steer your agents from your phone — get notified when an agent finishes and send follow-ups from anywhere. Fan one prompt across five agents, each in its own isolated git worktree — compare the results and merge the winner.",
+          "summary_source": "repository README"
         },
         {
           "title": "heygen-com/hyperframes",
@@ -190,7 +514,9 @@
           "subtitle": "Write HTML. Render video. Built for agents.",
           "badge": "GitHub Trending · weekly",
           "value": 5612,
-          "metric": "stars gained this week"
+          "metric": "stars gained this week",
+          "detail": "HyperFrames is an open-source framework for turning HTML, CSS, media, and seekable animations into deterministic MP4 videos. Use it locally with the CLI, from AI coding agents with skills, or as the rendering core behind hosted authoring workflows. Using Claude Code, Codex, Cursor, or another coding agent? Run npx hyperframes skills update once, then ask your agent to make a video. To enable auto-update for the hyperframes marketplace, run claude in a terminal in your project. In Claude Code's terminal UI, run /plugin, then select Marketplaces → hyperframes → Enable auto-update. Afterward, use /hyperframes:hyperframes. See the plugin guide for Copilot, VS Code, Cursor, Gemini CLI, updates, and migration.",
+          "summary_source": "repository README"
         },
         {
           "title": "android/skills",
@@ -198,7 +524,9 @@
           "subtitle": "",
           "badge": "GitHub Trending · weekly",
           "value": 1070,
-          "metric": "stars gained this week"
+          "metric": "stars gained this week",
+          "detail": "Android skills are a dedicated repository of AI-optimized, modular instructions and resources, to help agents better understand and execute specific patterns that follow the best practices and guidance on Android development from developer.android.com. Android skills follow the open-standard agent skills - markdown files (SKILL.md) that provide a technical specification of a task, and ground LLMs with information on specialized domains and workflows. Our Android skill development focuses on use cases and workflows where evaluations show LLMs underperform. We aren't prioritizing well-established areas where LLMs are already proficient, such as basic Jetpack Compose best practices.",
+          "summary_source": "repository README"
         },
         {
           "title": "Graphify-Labs/graphify",
@@ -206,7 +534,9 @@
           "subtitle": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
           "badge": "GitHub Trending · weekly",
           "value": 6903,
-          "metric": "stars gained this week"
+          "metric": "stars gained this week",
+          "detail": "English | 简体中文 | 日本語 | 한국어 | Deutsch | Français | Español | हिन्दी | Português | Русский | العربية | فارسی | Italiano | Polski | Nederlands | Türkçe | Українська | Tiếng Việt | Bahasa Indonesia | Svenska | Ελληνικά | Română | Čeština | Suomi | Dansk | Norsk | Magyar | ภาษาไทย | Oʻzbekcha | 繁體中文 | Filipino | עברית Cut agent token spend by 80%. Graphify Cloud is always-on memory that governs your agents, keeps code quality high, and proves correctness with formal verification. Start a free 14-day trial → Type /graphify in your AI coding assistant and it maps your entire project (code, docs, PDFs, images, videos) into a knowledge graph you can query instead of grepping through files.",
+          "summary_source": "repository README"
         },
         {
           "title": "akitaonrails/ai-memory",
@@ -214,7 +544,9 @@
           "subtitle": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
           "badge": "GitHub Trending · weekly",
           "value": 3254,
-          "metric": "stars gained this week"
+          "metric": "stars gained this week",
+          "detail": "Your coding agent probably has a memory feature already. Claude Code takes its own notes, Cursor remembers some things, and every platform is adding more. They all have the same limits: the notes live on one machine, belong to one agent, and drop out of view when you switch tools or hand the work to a teammate. Codex, Cursor, Gemini CLI, OpenCode, Grok, Devin, Kimi, Kiro, and others) feed one shared memory. Quit Claude Code mid-task, open Codex in the same directory, and the next agent picks up a handoff that says where you left off, what failed, and what is still open. Handoffs are a typed protocol: each one has an owner and is claimed exactly once. ai-memory run: quit Claude Code, run ai-memory run codex, and Codex gets the shared workstream plus a private, temporary local projection of Claude's visible native history for exact details the bounded startup packet omitted. The remote server receives only the harness and session identity, never the local transcript path or body. Direct harness launches behave exactly as before.",
+          "summary_source": "repository README"
         },
         {
           "title": "Comfy-Org/ComfyUI",
@@ -222,7 +554,9 @@
           "subtitle": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
           "badge": "GitHub Trending · weekly",
           "value": 4790,
-          "metric": "stars gained this week"
+          "metric": "stars gained this week",
+          "detail": "[![Website][website-shield]][website-url] [![Dynamic JSON Badge][discord-shield]][discord-url] [![Twitter][twitter-shield]][twitter-url] [![Matrix][matrix-shield]][matrix-url] [![][github-release-shield]][github-release-link] [![][github-release-date-shield]][github-release-link] [![][github-downloads-shield]][github-downloads-link] [![][github-downloads-latest-shield]][github-downloads-link] [matrix-shield]: https://img.shields.io/badge/Matrix-000000?style=flat&logo=matrix&logoColor=white [matrix-url]: https://app.element.io/#/room/%23comfyuispace%3Amatrix.org [website-shield]: https://img.shields.io/badge/ComfyOrg-4285F4?style=flat [website-url]: https://www.comfy.org/",
+          "summary_source": "repository README"
         },
         {
           "title": "anthropics/claude-plugins-official",
@@ -261,7 +595,7 @@
     "skills": {
       "source": "GitHub Search",
       "url": "https://github.com/search?q=topic%3Aagent-skills&type=repositories",
-      "fetched_at": "2026-10-26T04:10:56Z",
+      "fetched_at": "2026-10-26T04:53:07Z",
       "status": "ok",
       "metric_note": "近 60 天创建的 Skills 仓库，按累计 Stars 排序（非增长榜）",
       "items": [
@@ -271,8 +605,10 @@
           "subtitle": "A toolbox of film styles made in code for Claude Code: 59 ready to use, and your own. Each style is a style prompt plus a demo film made entirely in code by Claude Opus 5.5, with no video model. By Lemomo. · 一套用代码做片的风格工具箱：59 种现成风格，也能做出你自己的",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "JavaScript",
-          "value": 7546,
-          "metric": "total stars"
+          "value": 7565,
+          "metric": "total stars",
+          "detail": "A toolbox of film styles made in code: 59 ready to use, and your own. Pick a style or make one from scratch, bring your story, and let your coding agent direct. 59 种影片风格，每种都配一支完全用代码做出来的短片 · 🇨🇳 中文用户请看 简体中文说明 ⚠️ Built for Claude. The styles are tuned for Claude Opus 5.5; other models may not reproduce them well, so use them with care. 🆕 2026-10-22 · Edit & Documentary: 8 styles cut from real footage, documents and data. See them ↓ 🆕 2026-10-22 · Make a style your own: change a style or start blank, and keep it. See how ↓ 🆕 2026-10-16 · Evidence Films: 8 styles that film real material, every number sourced. See them ↓",
+          "summary_source": "repository README"
         },
         {
           "title": "Ryze-AI-Adgent/open-seo-mcp-skills",
@@ -280,8 +616,10 @@
           "subtitle": "Free SEO MCP server + open-source SEO and GEO skills for Claude: keyword research, rank tracking, audits, backlinks, AI visibility on your real GSC/GA4/ads data. claude mcp add ryze --transport http https://connector.get-ryze.ai/mcp",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Shell",
-          "value": 7256,
-          "metric": "total stars"
+          "value": 7262,
+          "metric": "total stars",
+          "detail": "Skip the setup: use the hosted Ryze MCP (Google sign-in, Search Console and GA4 connected in one step, approval-gated changes). Open-source SEO + GEO skills for Claude on a free SEO MCP server (the Ryze connector) — keyword research, rank tracking, site audits, backlinks, competitor gaps, AI visibility — running on your own Search Console, Analytics and ads data through the Ryze MCP, with DataForSEO built in for the data Google won't give you. No subscription for the tool. No markup on API calls. The skills are MIT — take them, change them, ship them.",
+          "summary_source": "repository README"
         },
         {
           "title": "Jakeschincariol/replica-skill",
@@ -289,8 +627,10 @@
           "subtitle": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 5514,
-          "metric": "total stars"
+          "value": 5518,
+          "metric": "total stars",
+          "detail": "Eleven Claude skills that clone any app. Free, MIT, no signup, no API key, nothing to connect. One reverse-engineers the app you want to clone. One rebuilds it. One tests it for bugs. And one is the Entrepreneur: it reads what the app's users hate and fixes it in yours, so you have an app you can sell. In between, the others plan the stack and the database, rebuild the design system, wire up auth and payments, score your clone against the original, give it a name and a brand of its own, write the landing page and the store listing, and put it live on your domain.",
+          "summary_source": "repository README"
         },
         {
           "title": "kaankiziltug/logo-design-skill",
@@ -298,8 +638,10 @@
           "subtitle": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "HTML",
-          "value": 4590,
-          "metric": "total stars"
+          "value": 4594,
+          "metric": "total stars",
+          "detail": "A comprehensive logo-design skill that turns Claude — or any agent that supports Agent Skills, such as Gemini CLI, Codex CLI, Cursor or GitHub Copilot — into a disciplined identity designer, from the first brief to production-ready SVG files and brand guidelines. geometric construction, optical corrections (overshoot, bone effect, irradiation…), colour, typography, lockups, testing, presentation, delivery, redesigns and identity systems. geometry, subject, typography, mood and industry — searchable from the command line and browsable in a local gallery. Used to study construction, map category conventions and avoid look-alikes (never to copy).",
+          "summary_source": "repository README"
         },
         {
           "title": "QingYunA/answer-me-with-html",
@@ -307,8 +649,10 @@
           "subtitle": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "JavaScript",
-          "value": 4452,
-          "metric": "total stars"
+          "value": 4453,
+          "metric": "total stars",
+          "detail": "An agent skill. Ask a hard question, get a page you can actually read instead of a wall of text. The model writes about 1/8 of the tokens it would need to hand-write the HTML. The agent writes a short Markdown draft and hands it to the CLI that ships with the skill. About 50 ms later you have a page: https://github.com/user-attachments/assets/d3063a28-5dfd-4c44-a562-be901c49b249",
+          "summary_source": "repository README"
         },
         {
           "title": "Oldcircle/geo-sleuth",
@@ -316,8 +660,10 @@
           "subtitle": "An agent skill that finds where a photo was taken — OpenStreetMap geometry, elevation skylines, satellite imagery and street view — and shows its work. Works with Claude Code, Codex, Cursor, Gemini CLI, OpenCode and GitHub Copilot.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 4184,
-          "metric": "total stars"
+          "value": 4187,
+          "metric": "total stars",
+          "detail": "No text. No plates. No landmarks. One bridge, one mountain. Located to within 2 m. On first use, ask the agent to run doctor.py from the installed skill’s scripts/ folder and address any failed checks (see Requirements and setup). That is the whole interface. The agent reads SKILL.md, runs the scripts, and comes back with the camera position, the direction it was facing and a satellite evidence image. Prefer to copy the folder yourself? See Installation. None of these photos had GPS data. Each case lists what the skill read from the photo, how it narrowed the search, and how far the result landed from the confirmed camera position.",
+          "summary_source": "repository README"
         },
         {
           "title": "Nanako0129/sepia",
@@ -326,7 +672,9 @@
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
           "value": 3478,
-          "metric": "total stars"
+          "metric": "total stars",
+          "detail": "A portable Agent Skill: any agent that speaks the standard can load it, and the Skills CLI, which supports 77+ agents, installs it with one command. Claude Code, Codex, Grok Build, Antigravity, and QwenPaw additionally get native plugin packaging. One canonical SKILL.md, no per-platform forks. Four operations: write, review (diagnose only), refactor (minimal edits), recreate (full rewrite). Every popular humanizer edits word choice and syntax. StoryScope (Russell et al., 2026: 61,608 stories, human + 5 frontier LLMs) showed that a classifier using narrative-structure features alone detects AI fiction at 93.2% macro-F1. In the same study's LAMP-edited condition, where human editors had rewritten the surface style, detection dropped only from 95.5% to 93.9%. The tells that survive are architectural: themes explained by the narrator, single-track causally-tidy plots, emotions rendered only as bodily sensation, no real-world references, no reader, linear time, endings resolved by protagonist growth and acceptance. sepia turns those measured gaps, together with the related studies digested in research/, into a three-pass writing and revision protocol for fiction:",
+          "summary_source": "repository README"
         },
         {
           "title": "kajisho5/ffmpeg-skill",
@@ -334,8 +682,10 @@
           "subtitle": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 2876,
-          "metric": "total stars"
+          "value": 2887,
+          "metric": "total stars",
+          "detail": "Give your coding agent a video editor. Claude Code, Cursor, Codex or any MCP client edits your footage with local FFmpeg, then checks its own output. No cloud · No API keys · Python standard library Left half is the input, right half is what the command produced. All 66 before/after demos, with the exact command under each one → — all of it generated from synthetic footage by python3 demos/build.py, so you can rebuild every frame of it yourself. ffmpeg-skill is an Agent Skill for Claude Code, Cursor, Codex and any agent that reads SKILL.md. It teaches the agent a fixed workflow (probe → edit losslessly where possible → check → verify) and ships 42 tools that do the actual work with ffmpeg / ffprobe: cut, join, silence removal, fit to duration and aspect, captions and karaoke, overlays and motion graphics, HDR → SDR and LUTs, audio clean-up and typed dynamics, sync with drift correction, multicam, loudness, delivery checks, whole-edit project rendering, batch folders. Every tool is also callable as an MCP tool (tools/list advertises a core 12 by default to keep client context small, with FFMPEGSKILLMCPFULL=1 listing all 42; every tool is reachable by name through tools/call either way), and the whole set is described by a machine-readable contract.",
+          "summary_source": "repository README"
         },
         {
           "title": "Vincentwei1021/anything2explainer",
@@ -343,8 +693,10 @@
           "subtitle": "Topic in, narrated explainer video out. A Claude Code / Codex skill that turns any topic into a black-canvas motion-graphics explainer video with TTS voiceover, subtitles and a chapter progress bar. Chinese or English; every frame drawn in code with Remotion.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "TypeScript",
-          "value": 2751,
-          "metric": "total stars"
+          "value": 2752,
+          "metric": "total stars",
+          "detail": "Topic in, narrated explainer video out. anything2explainer is a Claude Code / Codex skill that turns any topic into a black-canvas motion-graphics explainer video with TTS voiceover, subtitles and a chapter progress bar, in Chinese or English. Every frame is drawn in code with Remotion (React + TypeScript). No stock footage, no generative video model, no frames lifted from anyone else's work. It is not a CLI. What ships here is the whole method an AI coding agent needs to finish the film: a compilable Remotion template, a primitives and lighting library, tooling for voiceover / storyboard / rendering / quantitative QC, written style and motion specs, a multi-agent division-of-labour protocol, and one complete reference film as the quality bar. English cut — RAG & Knowledge Bases, 5′02″, 44 lines / 785 words, voiced by kokoro-82m amliam at natural speed:",
+          "summary_source": "repository README"
         },
         {
           "title": "Jakeschincariol/linkedin-agent-skill",
@@ -352,8 +704,10 @@
           "subtitle": "Eleven free Claude skills that run a LinkedIn account: posts off 21 hook formulas, comments, replies, profile score, weekly plan, and a humanizer that strips the AI fingerprint and scores the draft before it goes out.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 2684,
-          "metric": "total stars"
+          "value": 2686,
+          "metric": "total stars",
+          "detail": "Eleven Claude skills that run a LinkedIn account. Free, MIT, no signup, no API key, nothing to connect. One of them writes your posts off 21 hook formulas. One comments on other people's posts. One handles the replies under yours. One scores your profile out of 100 and rewrites what lost points. One plans the week: what to post, when, and who to engage with. And one is the humanizer, which is the reason the rest are usable. It strips the em dashes, the slop vocabulary and the invisible watermark characters out of a draft, then scores what is left against a five-check detection panel before you ever see it.",
+          "summary_source": "repository README"
         },
         {
           "title": "nano-muse/nanoMuse",
@@ -361,7 +715,7 @@
           "subtitle": "nanoMuse: an open-source personal agent for every device you own. One agent with a name and a look of its own that does things, keeps working while the app is closed, remembers you, and asks before anything you cannot undo. On Android, iPhone and iPad, Windows / macOS / Linux and in the browser; your phone's screen and your computer as its hands.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Swift",
-          "value": 2595,
+          "value": 2596,
           "metric": "total stars"
         },
         {
@@ -370,7 +724,7 @@
           "subtitle": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 2550,
+          "value": 2551,
           "metric": "total stars"
         },
         {
@@ -379,7 +733,7 @@
           "subtitle": "UI design skill for Claude Code, Codex and other AI agents: explore distinct directions, compare them side by side, refine against real screenshots. 给 AI Agent 用的 UI 设计 Skill。",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 2251,
+          "value": 2258,
           "metric": "total stars"
         },
         {
@@ -396,7 +750,7 @@
     "workflows": {
       "source": "GitHub Search",
       "url": "https://github.com/search?q=research+workflow&type=repositories",
-      "fetched_at": "2026-10-26T04:11:00Z",
+      "fetched_at": "2026-10-26T04:53:10Z",
       "status": "ok",
       "metric_note": "近 60 天创建的工作流项目，按累计 Stars 排序（非 Trending 官方榜）",
       "items": [
@@ -407,7 +761,9 @@
           "badge": "GitHub · 新创建工作流",
           "author": "Python",
           "value": 249,
-          "metric": "total stars"
+          "metric": "total stars",
+          "detail": "Finathink 将用户提供的数据、证据、因子、量化检验、风险检查、纸面组合和学习记录组织成一条可追溯的研究流程。运行结果保存为结构化记录和可离线打开的 HTML 报告，适合个人研究、量化学习、策略复盘和多代理协作。 研究工作台页面为 /workbench，其结构化接口为 /api/research/workbench，离线报告使用 workbench/index.html。",
+          "summary_source": "repository README"
         },
         {
           "title": "WestFox-AwA/dsh-wish-specializer",
@@ -416,7 +772,9 @@
           "badge": "GitHub · 新创建工作流",
           "author": "JavaScript",
           "value": 137,
-          "metric": "total stars"
+          "metric": "total stars",
+          "detail": "中间那些决定成品好坏、但你没说出口的东西—— 审美基调、光影与材质、构图与层次、场景与氛围、交互与状态、以及\"做到什么算过\"—— 由它在你按下发送之前补上，随原话一起交给工作 AI。 环境：Windows + DSH + PTC 预设，一轮直出（OneShot），插件档位「重度」，模型 DeepSeek-V4.1-Flash-0910。 1. 装好插件（见下），面板上把档位拨到「标准」或「重度」（「关闭」不拦截、不注入）； 2. 照常输入，按 回车； 3. 拦截面板里看一眼补充内容：「确认」放行，「跳过并直接发送」按原文直接发； 4. 想更快：双击 Enter 直接跳过本轮优化（默认开，600ms 内两次回车）； 5. 发出去之后，消息下方有「本次注入」卡片，能看到这一轮到底往上下文里塞了什么。",
+          "summary_source": "repository README"
         },
         {
           "title": "aaravshah1311/Agent-2",
@@ -425,7 +783,9 @@
           "badge": "GitHub · 新创建工作流",
           "author": "Python",
           "value": 136,
-          "metric": "total stars"
+          "metric": "total stars",
+          "detail": "An autonomous AI agentic harness built to code anything, automate terminals, perform cybersecurity tasks, and execute complex real-world workflows with minimal human intervention. From writing and debugging code to analyzing systems, managing files, running commands, and orchestrating tools, Agent-2 turns simple prompts into autonomous execution. Fluxion AI/Sidrune AI - Reliable, cost-efficient access to GPT, Claude, and other leading AI models Fluxion AI/Sidrune AI provides reliable, cost-efficient access to GPT, Claude, and other leading AI models through one unified API. Save up to 70% compared with official API pricing—and get $3 in API credits when you sign up through this link.",
+          "summary_source": "repository README"
         },
         {
           "title": "jtaroreh/agystack",
@@ -434,7 +794,9 @@
           "badge": "GitHub · 新创建工作流",
           "author": "Python",
           "value": 124,
-          "metric": "total stars"
+          "metric": "total stars",
+          "detail": "agystack is an agentic engineering framework for Google Antigravity, created by Joel Taroreh. It equips autonomous agents with a set of rigorous skills, playbooks, and cloud swarms built on the anti-slop foundation of poteto's Cursor pstack. Where pstack brought anti-slop rigor to editor chats, agystack expands it into a distributed, multi-tier engineering fleet: Underneath the platform additions is the core engineering philosophy that started it:",
+          "summary_source": "repository README"
         },
         {
           "title": "Gu-kai-lei/Open-Pet-Office",
@@ -443,7 +805,9 @@
           "badge": "GitHub · 新创建工作流",
           "author": "JavaScript",
           "value": 90,
-          "metric": "total stars"
+          "metric": "total stars",
+          "detail": "一只主管桌宠常驻桌面：实时显示 Codex 任务，集中处理审批与提问，截图和文件拖进来就能问。 需要时再开启分工，召集最多 4 名工作者在隔离工作区并行完成，复核后才安全回写。 🐾 看得见的 Codex 无论任务从 Codex Desktop、CLI 还是桌宠发起，主管都会显示进度；审批和提问在铃铛里集中处理，不用再找原始窗口。 🧭 开箱即用的分工 分工使用内置协调器，只依赖 Codex CLI。主管规划依赖、分波次派工、阶段检查、失败重派并最终复核，而不是把几段回复简单拼起来。",
+          "summary_source": "repository README"
         },
         {
           "title": "Superone77/TraceVista",
@@ -452,7 +816,9 @@
           "badge": "GitHub · 新创建工作流",
           "author": "TypeScript",
           "value": 72,
-          "metric": "total stars"
+          "metric": "total stars",
+          "detail": "Understand complex agent trajectories. Start with the big picture, unfold the details, and check the original evidence. https://github.com/user-attachments/assets/2a7f474b-ba02-4f01-85b6-4652edecaf76 Your agent finishes an overnight run. You're ready to ship, but its reasoning, tool calls, edits, and outputs are scattered across thousands of records.",
+          "summary_source": "repository README"
         },
         {
           "title": "bydtesla1609/research-solution-supervisor",
@@ -461,7 +827,9 @@
           "badge": "GitHub · 新创建工作流",
           "author": "",
           "value": 70,
-          "metric": "total stars"
+          "metric": "total stars",
+          "detail": "Research Solution Supervisor 是一个面向研究型工作的 AI 监督 skill。它不负责把研究重新做一遍，而是判断 AI 的回答、研究 pass 或方案建议是否真正推进了用户的研究目标，并把结论转成下一步可执行动作。 这个 skill 借鉴了 Intent Debugger 的思路：先把目标和判断标准说清楚，再评估当前输出是否满足这些标准。不同点在于，Intent Debugger 更偏“把模糊意图变成可确认需求”，Research Solution Supervisor 更偏“监督 AI 是否让研究方案真的向前走”。 1. 推进判断：当前 AI 工作是否解决了本阶段问题。 2. 关键缺口：哪些缺失、冲突或证据不足会影响继续推进。 3. 下一步动作：下一轮最该做什么，必要时给出可直接发送的 prompt。 4. 当前状态：哪些可以暂时视为成立，哪些仍然不能依赖。",
+          "summary_source": "repository README"
         },
         {
           "title": "gxCaesar/open-research-skills",
@@ -470,7 +838,9 @@
           "badge": "GitHub · 新创建工作流",
           "author": "Python",
           "value": 58,
-          "metric": "total stars"
+          "metric": "total stars",
+          "detail": "这是一个面向日常科研的 agent skill 工具箱。十个完整 skill 在一个仓库中维护，每个都能单独安装、独立使用。您可以从一张图、一段 Results 或一个研究问题开始，不必先启动整套研究流程。 上：Nature 风格机制图。下：顶会风格模型架构图。先用 GPT 图像生成探索构图，再复刻为原生 PPTX 对象。 这里展示的是导出预览；下载 PPTX 后可直接修改文字、细胞轮廓、矩阵、连线和模块位置，也提供矢量 PDF 与 SVG。 两图都是教学示意，不代表真实实验结果。 机制图 PPTX · 架构图 PPTX · 下载矢量文件与学习修改 按本次要交付的东西选择即可。论文 skill 能独立处理论文需要的图件，研究工作流能独立组织成稿；专门的绘图 skill 提供更丰富的设计支持，但不是其他 skill 的强制依赖。",
+          "summary_source": "repository README"
         },
         {
           "title": "vankhangfet/orca-sdlc-kit",
@@ -479,7 +849,9 @@
           "badge": "GitHub · 新创建工作流",
           "author": "JavaScript",
           "value": 52,
-          "metric": "total stars"
+          "metric": "total stars",
+          "detail": "Describe a multi-step job once, in one JSON file. Specialist AI agents each do one step, write the result to disk, and hand it to the next. You can watch the run live, failures loop back automatically, and every verdict can go to your team's chat. No code needed. Driving AI agents by hand doesn't hold up on real work. Prompts get passed between terminals, a new chat forgets earlier decisions, and nothing forces a review or a test to happen. This kit runs on Orca ADE and turns any multi-step job into an assembly line:",
+          "summary_source": "repository README"
         },
         {
           "title": "AliSharjeell/OpenBUA",
@@ -488,7 +860,9 @@
           "badge": "GitHub · 新创建工作流",
           "author": "TypeScript",
           "value": 50,
-          "metric": "total stars"
+          "metric": "total stars",
+          "detail": "OpenBUA was asked to \"Find me 2 students from Australia using Linkedin and email them selling my app Petedoro\" OpenBUA (Open Browser Use Agent) is an open-source, autonomous AI browser agent built as a Chrome Extension (Manifest V3) that runs directly inside your everyday browser. Unlike cloud browser-use tools that require spun-up headless containers, login bypass proxies, or remote servers, OpenBUA operates right inside your existing browser session with all your active cookies, credentials, and logins already available. Built with @earendil-works/pi-agent-core and @earendil-works/pi-ai, OpenBUA equips AI models with real-time DOM perception, intelligent multi-step navigation, synthetic event form-filling, incremental live research previews, and a self-learning memory system.",
+          "summary_source": "repository README"
         },
         {
           "title": "paulklayvc/skills",
@@ -528,5 +902,6 @@
         }
       ]
     }
-  }
+  },
+  "translation_status": "not_configured"
 }
