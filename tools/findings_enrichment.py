@@ -129,7 +129,7 @@ def add_translations(feeds: dict, old_feeds: dict, key: str | None = None) -> tu
         max_records = 35 if kind == "papers" else 12
         for entry in feed.get("items", [])[:max_records]:
             previous = old_lookup.get(entry.get("url"), {})
-            for field in (("title", "subtitle", "detail") if kind == "papers"
+            for field in (("title", "detail") if kind == "papers"
                           else ("subtitle", "detail")):
                 raw = entry.get(field)
                 if not isinstance(raw, str) or len(raw.strip()) < 15:
@@ -141,7 +141,15 @@ def add_translations(feeds: dict, old_feeds: dict, key: str | None = None) -> tu
                 elif key and remaining >= len(raw):
                     queue.append((entry, dest, raw))
                     remaining -= len(raw)
+    def copy_abstract_preview():
+        # Abstract details begin with the same passage as the shorter preview.
+        # Reuse one paid translation instead of billing for overlapping text.
+        for entry in feeds.get("papers", {}).get("items", []):
+            if entry.get("detail_zh"):
+                entry["subtitle_zh"] = entry["detail_zh"][:650]
+
     if not key:
+        copy_abstract_preview()
         return ("cached" if reused else "not_configured"), reused
     translated_count = 0
     # Avoid partial translations for individual batches on remote errors.
@@ -156,5 +164,6 @@ def add_translations(feeds: dict, old_feeds: dict, key: str | None = None) -> tu
             # Never log the request URI or auth parameters.
             print(f"Google Translation failed for a batch: {type(exc).__name__}")
             break
+    copy_abstract_preview()
     return ("translated" if translated_count else "cached" if reused else "unavailable",
             translated_count + reused)
