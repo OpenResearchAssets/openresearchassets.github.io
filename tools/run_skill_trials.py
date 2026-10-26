@@ -126,6 +126,85 @@ def make_figure(metrics, out):
     return {"elapsed_ms": round((time.perf_counter() - start) * 1000, 1),
             "output": ["asset-kind-coverage.svg", "asset-kind-coverage.png", "asset-kind-data.csv"]}
 
+def make_robot_figure(source, out):
+    """Redraw *author-reported* RoboRender task results, not robot replication."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    start = time.perf_counter()
+    with source.open(newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    cols = ("simulation_success_pct", "simulation_dr_success_pct", "roborender_success_pct")
+    assert len(rows) == 8 and len({r["task_id"] for r in rows}) == 8
+    assert all(r["provenance"] == "author-reported" and
+               r["independent_replication"] == "no" and
+               int(r["rollouts_per_method"]) == 10 for r in rows)
+    samples = [[int(r[k]) for k in cols] for r in rows]
+    assert all(all(0 <= x <= 100 and x % 10 == 0 for x in sample) for sample in samples)
+    averages = [sum(s[i] for s in samples) / len(samples) for i in range(3)]
+    # Published as rounded means 10/20/71%; arithmetic mean is 71.25%.
+    assert averages == [10, 20, 71.25], f"Unexpected source table: {averages}"
+    from matplotlib import ticker
+    fig, ax = plt.subplots(figsize=(13, 6.8), layout="constrained")
+    xs = list(range(len(rows)))
+    colors = ["#91a1ad", "#5c85a0", "#d78b51"]
+    names = ["Sim", "Sim + DR", "RoboRender"]
+    for idx in range(3):
+        pos = [x + (idx - 1) * 0.23 for x in xs]
+        ax.bar(pos, [sample[idx] for sample in samples], width=0.21, color=colors[idx],
+               label=names[idx], zorder=3)
+    ax.set_xticks(xs, [r["task"] for r in rows], rotation=25, ha="right", fontsize=9)
+    ax.set_ylim(0, 100)
+    ax.yaxis.set_major_locator(ticker.MultipleLocator(20))
+    ax.set_ylabel("Success rate per task (%) · 10 rollouts per method")
+    ax.set_title("RoboRender · author-reported real-robot task results", loc="left", pad=16, fontsize=16)
+    ax.grid(axis="y", alpha=.18, zorder=0)
+    ax.legend(ncols=3, frameon=False, loc="upper left")
+    fig.text(.01, .015,
+             "Source: examples/roborender-results.csv · authors' public table; NOT independent replication. No fabricated error bars.",
+             fontsize=9, color="#495765")
+    svg = out / "roborender-author-reported.svg"
+    fig.savefig(svg)
+    fig.savefig(out / "roborender-author-reported.png", dpi=150)
+    plt.close(fig)
+    raw = source.read_bytes()
+    summary = {
+        "source": "examples/roborender-results.csv",
+        "source_sha256": hashlib.sha256(raw).hexdigest(),
+        "source_kind": "authors_reported_not_independently_reproduced",
+        "task_count": len(rows),
+        "rollouts_per_task_per_method": 10,
+        "arithmetic_mean_percent": dict(zip(names, averages)),
+        "display_mean_percent_rounded": {"Sim": 10, "Sim + DR": 20, "RoboRender": 71},
+        "artifact": "roborender-author-reported.svg"
+    }
+    write_json(out / "roborender-provenance-check.json", summary)
+    return {"elapsed_ms": round((time.perf_counter() - start) * 1000, 1),
+            "task_count": len(rows), "mean_success_percent": summary["arithmetic_mean_percent"],
+            "source_sha256": summary["source_sha256"],
+            "independent_robot_replication": False}
+
+
+def verify_robot_figure(source, out):
+    data = json.loads((out / "roborender-provenance-check.json").read_text(encoding="utf-8"))
+    svg = (out / "roborender-author-reported.svg").read_text(encoding="utf-8")
+    root = ElementTree.fromstring(svg)
+    with source.open(newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    return {
+        "paper_source_sha_matches": hashlib.sha256(source.read_bytes()).hexdigest() == data["source_sha256"],
+        "paper_means_match_raw_author_table": (
+            len(rows) == 8 and
+            all(r["provenance"] == "author-reported" and r["independent_replication"] == "no" for r in rows) and
+            [sum(int(r[col]) for r in rows) / 8 for col in
+             ("simulation_success_pct", "simulation_dr_success_pct", "roborender_success_pct")] == [10, 20, 71.25]),
+        "paper_svg_is_vector_and_discloses_provenance": (
+            not any(node.tag.rsplit("}", 1)[-1] == "image" for node in root.iter())
+            and "NOT independent replication" in svg
+            and "No fabricated error bars" in svg)
+    }
+
+
 def verify(metrics, out):
     copied = json.loads((out / "notebook-metrics.json").read_text(encoding="utf-8"))
     with (out / "asset-kind-data.csv").open(newline="", encoding="utf-8") as f:
@@ -177,7 +256,9 @@ def main():
         write_json(out / "source-metrics.json", metrics)
         result["notebook"] = make_notebook(args.helper, out)
         result["figure"] = make_figure(metrics, out)
-        result["checks"] = verify(metrics, out)
+        robot_source = ROOT / "examples/roborender-results.csv"
+        result["paper_figure"] = make_robot_figure(robot_source, out)
+        result["checks"] = {**verify(metrics, out), **verify_robot_figure(robot_source, out)}
         assert all(result["checks"].values()), "One or more objective evidence checks failed"
         result["status"] = "passed"
     except Exception as error:
