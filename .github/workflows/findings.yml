@@ -52,15 +52,29 @@ jobs:
         run: python tools/update_findings.py
       - name: Validate snapshot schema and source attribution
         run: python tests/check_findings.py --snapshot
-      - name: Commit changed snapshot (only data/findings.json)
+      - name: Publish snapshot on latest main without file conflicts
         run: |
           if git diff --quiet -- data/findings.json; then
             echo "No source updates; nothing to publish."
             exit 0
           fi
+          cp data/findings.json "$RUNNER_TEMP/ora-findings.json"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/findings.json
-          git commit -m "data: refresh sourced Findings snapshot"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp "$RUNNER_TEMP/ora-findings.json" data/findings.json
+            git add data/findings.json
+            if git diff --cached --quiet; then
+              echo "Snapshot was already published."
+              exit 0
+            fi
+            git commit -m "data: refresh sourced Findings snapshot"
+            if git push origin HEAD:main; then
+              echo "Published verified Findings snapshot."
+              exit 0
+            fi
+            echo "Concurrent main update; retrying snapshot-only commit."
+          done
+          exit 1
