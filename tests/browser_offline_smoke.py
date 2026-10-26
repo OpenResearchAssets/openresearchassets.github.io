@@ -365,7 +365,7 @@ with sync_playwright() as pw:
         assert page.locator('.findings-feed-more').count()==4
         assert 'CI fixture papers' in page.locator('.findings-feed').first.inner_text()
         assert '15,001' in page.locator('.findings-item-metric').first.inner_text()
-        assert 'HF' in page.locator('.findings-item-metric').first.inner_text()
+        assert '社区投票' in page.locator('.findings-item-metric').first.inner_text()
         if label in ('desktop','mobile'):
             page.screenshot(path=str(ROOT/'tests'/f'_local_findings_overview_{label}.png'),full_page=True)
         # Click an overview affordance, not only a category tab: focused full-width reading.
