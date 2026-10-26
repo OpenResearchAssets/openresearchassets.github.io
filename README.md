@@ -15,7 +15,7 @@ OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉�
 |---|---|---|---|
 | [Community · 社区发现](community.html) | 任何 GitHub 用户均可投稿，不需要编辑通过即可公开展示 | GitHub Issue 的真实 👍 / 评论，支持最新、热门排序 | GitHub Issues API |
 | [Curated · 编辑精选](index.html#gallery) | 编辑核实审美、科学表达、复用价值与版权后正式入库 | 独立资产详情页使用 giscus / Discussions | 唯一 `catalog/index.json` |
-| [Findings · 自动发现](findings.html) | 自动采集论文趋势、GitHub Trending、Skills 和 Workflows；不代表本站质量背书 | 点击原始来源查看；不自动进入精选或社区 | GitHub Actions 周期快照 `data/findings.json` |
+| [Findings · 自动发现](findings.html) | 自动采集最多 100 篇 HF 趋势论文及项目、Skills、Workflows，站内分批阅读论文摘要和仓库 README | 页面内展开真实简介；原文/代码链接供深入验证 | GitHub Actions 定时快照 `data/findings.json`，可选服务器端 Google 翻译 |
 
 **三个内容入口：** [精选 Curated](index.html) · [社区 Community](community.html) · [发现 Findings](findings.html)。[投稿 Contribute](contribute.html) 保持为独立行动按钮，不占第四类内容库。精选下面仍仅有 Gallery（含可编辑 SVG）与 Skills / Workflows 两类资产；质量自查、设计原则、AI 使用说明位于公共页脚。
 
@@ -159,3 +159,5 @@ python3 tests/browser_offline_smoke.py
 ### 六个精品案例：图像身份逐一核对
 
 RoboRender、RoboDojo、SuperMimic 的论文类条目现在展示真正的 Figure 1（或官方原版论文总览），主页类展示源网站浏览器首屏截图。**不再用训练数据图充当 Teaser，不用 GPU 墙图充当 SuperMimic Figure 1，也不用 404 的作者图片充当 RoboDojo 主页。** 图像带作者、原始论文/网页地址、裁切或压缩说明和异议撤除渠道；分析型 SVG 退居详情页的辅助材料。
+
+**Findings 中文摘要：** 源站摘要与 README 优先以中文自动译文展示（需要管理员在 GitHub Actions 配置 `GOOGLE_TRANSLATE_API_KEY`，属于 Google Cloud 计费 API）。未配置时页面明确显示原始语言，站点不会伪造翻译、安装量或趋势数据；说明见 [Findings 数据与翻译规范](docs/FINDINGS.md)。
