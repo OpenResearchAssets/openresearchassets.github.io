@@ -47,6 +47,8 @@ OpenResearchAssets 是**面向人类与 AI 的科研全过程可复用资产库*
 
 14. **用真实内容取代占位图**：关键案例必须提供可核实的原创设计分析图、图像级版权记录，以及事实约束/复用步骤。原始论文图与主页截图只能在具有合适授权或合法依据时入库；原创分析图放入 `assets/editorials/`，保证真正可编辑，不能只是换色的几何占位块。`catalog/index.json` 是视觉路径与正文元数据唯一手工维护源。
 
+19. **开放投稿与可追溯署名**：所有 GitHub 用户可使用 `.github/ISSUE_TEMPLATE/submit-asset.yml` 投稿；投稿进入人工审核，不能自动公开无授权图像。新入库条目在 `catalog/index.json` 写 `submission.github`（由 Issue / PR 实际作者核验）和 `submission.added_on`（正式收录日）；作品原作者单独记录，不得与投稿人混同。历史无法核实的值保持缺失，不能用 `catalog.generated_on` 冒充逐项投稿日期。不要伪造点赞或虚构互动计数。
+
 **English summary:** Keep the public site Chinese-first with complete English UI support. Show only implemented capabilities. Preserve scientific fidelity, licensing and privacy. Prefer useful methods over benchmark-building. Validate real rendering and interaction before release.
 
 13. **AI 节约上下文**：首选 `catalog/manifest.json`，再沿 `catalog/entries/<id>.json` 取少量详情。唯一手工维护源是 `catalog/index.json`；编辑后运行 `python3 tools/sync_catalog.py` 并用 `--check` 核对派生文件。CI 需要同时验证静态结构与浏览器行为。
