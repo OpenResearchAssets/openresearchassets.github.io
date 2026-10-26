@@ -1,0 +1,42 @@
+name: Run source-guided research Skill trials
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/run_skill_trials.py'
+      - '.github/workflows/skill-trials.yml'
+      - 'catalog/index.json'
+      - 'experiments/skill-trials/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install analysis dependencies
+        run: python -m pip install --quiet matplotlib nbclient nbformat ipykernel pillow
+      - name: Fetch immutable upstream Notebook Skill scaffold
+        run: |
+          set -euo pipefail
+          rev=49f948faa9258a0c61caceaf225e179651397431
+          base=https://raw.githubusercontent.com/openai/skills/$rev/skills/.curated/jupyter-notebook
+          mkdir -p "$RUNNER_TEMP/upstream-notebook/scripts" "$RUNNER_TEMP/upstream-notebook/assets"
+          curl -fL --retry 3 --max-time 90 "$base/scripts/new_notebook.py" -o "$RUNNER_TEMP/upstream-notebook/scripts/new_notebook.py"
+          curl -fL --retry 3 --max-time 90 "$base/assets/experiment-template.ipynb" -o "$RUNNER_TEMP/upstream-notebook/assets/experiment-template.ipynb"
+          python "$RUNNER_TEMP/upstream-notebook/scripts/new_notebook.py" --help
+      - name: Execute Skill-guided research tasks with objective checks
+        run: python tools/run_skill_trials.py --helper "$RUNNER_TEMP/upstream-notebook/scripts/new_notebook.py"
+      - name: Archive reproducible data, executed notebook and figure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ora-skill-trials
+          path: experiments/skill-trials/_output/
+          retention-days: 60
+          if-no-files-found: warn
