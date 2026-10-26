@@ -77,7 +77,7 @@
       if(model.filter!=='all'&&model.filter!==key)return '';
       const feed=feedMap[key]||{items:[],status:'pending'};
       const sourceLink=cleanUrl(feed.url)||fallback[key];
-      const entries=Array.isArray(feed.items)?feed.items.filter(item=>
+      const entries=Array.isArray(feed.items)?feed.items.map((item,i)=>({item,originalIndex:i})).filter(({item})=>
         !query.length || query.every(word=>[item.title,item.subtitle,item.author,item.badge].join(' ').toLowerCase().includes(word))):[];
       visible+=entries.length;
       const label=t(titles[key][0],titles[key][1]);
@@ -92,7 +92,7 @@
         escapeText(feed.metric_note||t('原站信号 · 不等于编辑精选','Original-source signals, not editorial selection'))+
         '</p></div><a class="findings-feed-source" href="'+escapeText(sourceLink)+
         '" target="_blank" rel="noopener noreferrer nofollow">'+escapeText(sourceName)+' ↗</a></div>';
-      const list=entries.length?entries.map((item,i)=>card(item,i,key)).join(''):
+      const list=entries.length?entries.map(({item,originalIndex})=>card(item,originalIndex,key)).join(''):
         (feed.status==='ok'&&query.length?'<p class="findings-empty">'+
           escapeText(t('没有匹配的条目，请调整关键词。','No matching items; try another search.'))+'</p>':noData(feed));
       const sourceStatus='<div class="findings-feed-status">'+escapeText(sourceState+(stamp?' · '+stamp+' UTC':''))+'</div>';
