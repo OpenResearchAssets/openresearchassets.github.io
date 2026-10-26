@@ -117,7 +117,10 @@ def add_translations(feeds: dict, old_feeds: dict, key: str | None = None) -> tu
     Google Translate is opt-in to avoid a billable API call every six hours.
     """
     key = key or os.getenv("GOOGLE_TRANSLATE_API_KEY", "")
-    remaining = TRANSLATE_LIMIT
+    # Spread the fixed-cost envelope across content families; otherwise 100
+    # paper abstracts would permanently starve project/workflow translations.
+    remaining_by_feed = {"papers": 30000, "github": 8000,
+                         "skills": 7500, "workflows": 7500}
     queue: list[tuple[dict, str, str]] = []
     reused = 0
     for kind in ("papers", "github", "skills", "workflows"):
@@ -126,7 +129,7 @@ def add_translations(feeds: dict, old_feeds: dict, key: str | None = None) -> tu
             continue
         old_lookup = {x.get("url"): x for x in old_feeds.get(kind, {}).get("items", [])
                       if isinstance(x, dict)}
-        max_records = 35 if kind == "papers" else 12
+        max_records = 100 if kind == "papers" else 14
         for entry in feed.get("items", [])[:max_records]:
             previous = old_lookup.get(entry.get("url"), {})
             for field in (("title", "detail") if kind == "papers"
@@ -138,9 +141,9 @@ def add_translations(feeds: dict, old_feeds: dict, key: str | None = None) -> tu
                 if previous.get(field) == raw and previous.get(dest):
                     entry[dest] = previous[dest]
                     reused += 1
-                elif key and remaining >= len(raw):
+                elif key and remaining_by_feed[kind] >= len(raw):
                     queue.append((entry, dest, raw))
-                    remaining -= len(raw)
+                    remaining_by_feed[kind] -= len(raw)
     def copy_abstract_preview():
         # Abstract details begin with the same passage as the shorter preview.
         # Reuse one paid translation instead of billing for overlapping text.
