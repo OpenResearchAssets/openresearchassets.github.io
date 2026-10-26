@@ -9,16 +9,17 @@
 
 OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉案例、优秀项目主页、可编辑原创素材、研究工具与可用的工作流。**中文为主、英文为辅**；允许人类按任务搜索，也提供无需付费 API 的结构化 AI 读取入口。
 
-## 网站导航：精选 / 社区 / 投稿
+## 网站导航：精选 / 社区 / 发现
 
 | 入口 | 内容与权限 | 点赞与反馈 | 数据来源 |
 |---|---|---|---|
 | [Community · 社区发现](community.html) | 任何 GitHub 用户均可投稿，不需要编辑通过即可公开展示 | GitHub Issue 的真实 👍 / 评论，支持最新、热门排序 | GitHub Issues API |
 | [Curated · 编辑精选](index.html#gallery) | 编辑核实审美、科学表达、复用价值与版权后正式入库 | 独立资产详情页使用 giscus / Discussions | 唯一 `catalog/index.json` |
+| [Findings · 自动发现](findings.html) | 自动采集论文趋势、GitHub Trending、Skills 和 Workflows；不代表本站质量背书 | 点击原始来源查看；不自动进入精选或社区 | GitHub Actions 周期快照 `data/findings.json` |
 
-**一级入口仅三个：** [精选 Curated](index.html) · [社区 Community](community.html) · [投稿 Contribute](contribute.html)。精选下面仅有 Gallery（含可编辑 SVG）与 Skills / Workflows 两类资产；质量自查、设计原则、AI 使用说明放在公共页脚，不单独占主导航。
+**三个内容入口：** [精选 Curated](index.html) · [社区 Community](community.html) · [发现 Findings](findings.html)。[投稿 Contribute](contribute.html) 保持为独立行动按钮，不占第四类内容库。精选下面仍仅有 Gallery（含可编辑 SVG）与 Skills / Workflows 两类资产；质量自查、设计原则、AI 使用说明位于公共页脚。
 
-**Gallery / Skills 是资产类型，Community / Curated 是发布层级**，两者正交。热门点赞是发现信号而非精选资格；未审核投稿只展示元数据和原始链接，不自动转载第三方图片，也不伪装审核结果。详情：[社区与审核规则](docs/COMMUNITY.md)。
+**Gallery / Skills 是资产类型，Community / Curated 是人类参与的发布层级；Findings 是独立的自动趋势来源**，三者不要混淆。热门点赞是发现信号而非精选资格；未审核投稿只展示元数据和原始链接，不自动转载第三方图片，也不伪装审核结果。详情：[社区与审核规则](docs/COMMUNITY.md)。
 
 ## 精选库的两个核心资产类型
 
