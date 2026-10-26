@@ -1,9 +1,10 @@
 ## 网站收敛规则（2026-10）
 
-- **一级导航只允许 Curated / Community / Contribute 三个入口**。Gallery 与 Skills / Workflows 是 Curated 的两个核心资产类型；可编辑 SVG 属于 Gallery 子板块。Quality、Principles、For AI、版权与更正均退居公共页脚。
+- **内容一级导航只允许 Curated / Community / Findings 三个入口，Contribute 是独立投稿 CTA**。Gallery 与 Skills / Workflows 是 Curated 的两个核心资产类型；可编辑 SVG 属于 Gallery 子板块。Quality、Principles、For AI、版权与更正均退居公共页脚。
 - **单一共享导航组件**：`js/navigation.js` 负责渲染主导航、桌面投稿 CTA、移动菜单、次级页脚；各 HTML 只留 `#site-nav[data-page][data-root]`，不重建独立菜单。导航中英切换、相对路径、active 状态必须自动验证。
+- **Findings 数据边界**：自动抓取只写 `data/findings.json`（单一 `tools/update_findings.py`，来源与频率解释见 `docs/FINDINGS.md`），不得自动改 `catalog/index.json`、社区 Issues 或已有人类编辑成果。分别明确 HF upvotes、Skills 安装量、GitHub Stars 与 Trending 周榜排序；第三方接口拒绝时透明退化为 GitHub Search 最近新项目，不能冒充官方榜单。标记快照状态与时间，不写假数据，不在浏览器里散发令牌。
 - **无损调整**：不重新绘制或删除用户认可的正式资产图。保留精选 `catalog/index.json`、GitHub Issues 社区源、giscus 详情互动及旧案例链接；不要让 GitHub Stars 与本站点赞混淆。
-- **页面职责**：首页主要呈现 Gallery + Skills；社区页面先展示真实投稿；投稿页只保留一个主要上传 CTA 和三项必要说明。辅助工具继续存在但不占首页整块营销区域。不要把原来的长页面换成同样复杂的新一版。
+- **页面职责**：首页主要呈现 Gallery + Skills；社区页面先展示真实投稿；发现页面先展示独立来源的趋势卡片；投稿页只保留一个主要上传 CTA 和三项必要说明。辅助工具继续存在但不占首页整块营销区域。不要把原来的长页面换成同样复杂的新一版。
 - **测试约束跟随真实产品目标**：旧页面重复链接数量不作为质量指标；验证唯一导航挂载、真实资源数、中文英文、手机/平板/桌面、社区真实数据与安全过滤、导航不会遮挡。
 
 ## 选品原则：两个核心资产方向
