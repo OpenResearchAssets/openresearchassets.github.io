@@ -127,6 +127,26 @@ class FindingsCollectorTests(unittest.TestCase):
         self.assertEqual(engine2.calls,0)
         self.assertEqual(count,3)
 
+    def test_chinese_source_is_translated_back_for_english_page(self):
+        chinese='这是一套中文研究工具，能够组织多智能体流程并生成可追溯的实验报告。'
+        entry={'title':'author/chinese-research', 'url':'https://github.com/author/chinese-research',
+               'subtitle':chinese}
+        feeds={'workflows':{'status':'ok','items':[entry]}}
+        class Reverse:
+            def translate(self,value):
+                return 'A research tool for multi-agent workflows and traceable experimental reports.'
+        with patch.object(offline,'load_translator',return_value=Reverse()):
+            state,n=offline.add_offline_translations(feeds,{},translator=Reverse(),seconds=999)
+        self.assertEqual(state,'offline_argos')
+        self.assertEqual(n,1)
+        self.assertEqual(entry['subtitle_zh'],chinese)
+        self.assertIn('research tool',entry['subtitle_en'])
+
+    def test_bilingual_readme_is_not_misclassified_as_chinese(self):
+        mixed='An agent research tool for advanced workflows with a 中文 installation note.'
+        self.assertFalse(offline.is_chinese(mixed))
+        self.assertTrue(offline.is_chinese('这是一个有完整中文版描述的研究工作流'))
+
     def test_missing_translate_key_never_creates_fake_zh(self):
         feeds={'skills':{'status':'ok','items':[{'url':'https://github.com/a/b',
           'subtitle':'A public skill without translated source information.'}]}}
