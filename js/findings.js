@@ -1,4 +1,6 @@
-/* Findings is a read-only, source-aware snapshot viewer. No combined fake score. */
+/* Findings: editorial overview + focused ranking, based exclusively on sourced snapshots.
+ * A preview never claims to show the whole ranking. Every numeric signal has its own unit.
+ */
 (() => {
   'use strict';
   const root=document.getElementById('findings-feeds');
@@ -6,127 +8,234 @@
   const search=document.getElementById('findings-search');
   const status=document.getElementById('findings-status');
   const updated=document.getElementById('findings-updated');
-  const controls=[...document.querySelectorAll('.findings-filter')];
+  const heading=document.getElementById('findings-title');
+  const filters=[...document.querySelectorAll('.findings-filter')];
+  const PREVIEW_COUNT=3;
   const order=['papers','github','skills','workflows'];
-  const titles={
-    papers:['论文趋势','Trending papers','HUGGING FACE / PAPERS'],
-    github:['GitHub 趋势','GitHub Trending','GITHUB / WEEKLY'],
-    skills:['Agent Skills','Agent Skills','SKILLS / SIGNALS'],
-    workflows:['研究工作流','Research workflows','WORKFLOWS / DISCOVERY']
+  const definitions={
+    papers:{
+      kicker:'HUGGING FACE / PAPERS',name:['论文趋势','Trending papers'],
+      intro:['Hugging Face 近期热议的论文。关注研究问题与方法，不把社区投票等同于学术影响力。',
+             'Papers gaining attention on Hugging Face. Community votes are not citations or research quality.'],
+      metric:['社区投票','HF upvotes'],measure:['社区投票，不是引用数','Community votes, not citations'],
+      source:['论文趋势榜','Paper trending feed'],symbol:'↗'
+    },
+    github:{
+      kicker:'GITHUB / WEEKLY',name:['GitHub 趋势','GitHub Trending'],
+      intro:['GitHub 官方周榜：观察近期快速获得开发者关注的项目。榜单排名与本周新增 Star 都来自原站。',
+             'GitHub’s weekly trending repositories. Ranking and weekly star gains come from the source.'],
+      metric:['本周新增 Stars','Stars this week'],measure:['本周新增，不是累计总星数','Weekly gain, not lifetime stars'],
+      source:['GitHub 周榜','GitHub weekly list'],symbol:'★'
+    },
+    skills:{
+      kicker:'AGENT / SKILLS',name:['热门 Skills','Agent Skills'],
+      intro:['追踪近期出现的 Agent Skills。如果来源为 GitHub Search，数字是累计 Stars，不是安装量。',
+             'Newly discovered Agent Skills. With GitHub Search as the source, numbers are total stars, not installs.'],
+      metric:['累计 Stars','Total stars'],measure:['近 60 天创建的仓库 · 累计 Stars','Repositories created in the last 60 days · total stars'],
+      source:['Skills 来源','Skill source'],symbol:'✳'
+    },
+    workflows:{
+      kicker:'RESEARCH / WORKFLOWS',name:['工作流发现','Workflow discoveries'],
+      intro:['寻找近期发布的研究及 Agent 工作流。以 GitHub 搜索结果作为发现线索，未经可用性验证。',
+             'Recently created research and agent workflows. GitHub search signals, not verified workflow performance.'],
+      metric:['累计 Stars','Total stars'],measure:['近 60 天创建的仓库 · 累计 Stars','Repositories created in the last 60 days · total stars'],
+      source:['工作流来源','Workflow source'],symbol:'⇄'
+    }
   };
   const fallback={
     papers:'https://huggingface.co/papers/trending',
     github:'https://github.com/trending?since=weekly',
-    skills:'https://skills.sh/trending',
+    skills:'https://github.com/search?q=topic%3Aagent-skills&type=repositories',
     workflows:'https://github.com/search?q=research+workflow&type=repositories'
   };
   const t=(zh,en)=>document.documentElement.lang==='en'?en:zh;
-  const escapeText=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const cleanUrl=x=>{
-    try{
-      const u=new URL(String(x||''),location.origin);
-      return u.protocol==='https:' && u.hostname ? u.href : '';
-    }catch(e){return '';}
+  const h=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const external=x=>{
+    try{const u=new URL(String(x||''));return u.protocol==='https:'&&u.hostname?u.href:'';}
+    catch(_){return '';}
   };
-  const short=value=>{
-    if(!Number.isFinite(value)||value<0)return '';
-    return new Intl.NumberFormat(document.documentElement.lang==='en'?'en-US':'zh-CN',{notation:value>=10000?'compact':'standard',maximumFractionDigits:1}).format(value);
+  const number=n=>Number.isInteger(n)&&n>=0?
+    new Intl.NumberFormat(document.documentElement.lang==='en'?'en-US':'zh-CN').format(n):'';
+  const dateString=value=>{
+    const ms=Date.parse(value||'');
+    return Number.isFinite(ms)?new Intl.DateTimeFormat(
+      document.documentElement.lang==='en'?'en-US':'zh-CN',
+      {year:'numeric',month:'short',day:'numeric',timeZone:'UTC'}
+    ).format(ms):'';
   };
-  const formatDate=value=>{
-    const time=Date.parse(value||'');
-    if(!Number.isFinite(time))return '';
-    return new Intl.DateTimeFormat(document.documentElement.lang==='en'?'en-US':'zh-CN',
-      {year:'numeric',month:'short',day:'numeric',timeZone:'UTC'}).format(time);
-  };
-  const model={snapshot:null,filter:'all',query:''};
-  const metricText=(item,key)=>{
-    const value=short(item.value);
-    if(!value)return '';
-    const metric=item.metric;
-    if(metric==='upvotes')return '▲ '+value+' '+t('HF 投票','HF votes');
-    if(metric==='total installs')return value+' '+t('累计安装','total installs');
-    if(metric==='stars gained this week')return '+'+value+' '+t('本周 Stars','stars this week');
-    if(metric==='total stars')return '★ '+value+' '+t('累计 Stars','total stars');
-    return '';
-  };
-  const noData=feed=>{
-    const stale=feed.status==='stale';
-    return '<div class="findings-empty"><strong>'+escapeText(t('当前来源暂时不可用','This source is currently unavailable'))+'</strong>'+
-      escapeText(stale?t('正在展示最近一次成功抓取的内容。','Last successfully fetched content is shown instead.'):
-        t('没有可靠的公开条目可展示，可到原站查看。','No verified entries yet; please browse the original source.'))+'</div>';
-  };
-  const card=(item,index,key)=>{
-    const url=cleanUrl(item.url);
+  const model={snapshot:null,feed:'all',query:'',failure:false};
+  const countItems=feed=>Array.isArray(feed?.items)?feed.items.length:0;
+  const termMatches=(item,words)=>words.every(word=>
+    [item.title,item.subtitle,item.author,item.badge].join(' ').toLowerCase().includes(word));
+  const isSearch=()=>Boolean(model.query.trim());
+  function metric(item) {
+    if(!Number.isInteger(item.value)||item.value<0)return null;
+    const value=number(item.value);
+    switch(item.metric){
+      case 'upvotes':return {value,unit:t('社区投票','HF upvotes'),symbol:'▲',kind:'votes'};
+      case 'total installs':return {value,unit:t('累计安装','Total installs'),symbol:'↓',kind:'installs'};
+      case 'stars gained this week':return {value:'+'+value,unit:t('本周新增 Stars','Stars this week'),symbol:'★',kind:'stars'};
+      case 'total stars':return {value,unit:t('累计 Stars','Total stars'),symbol:'★',kind:'stars'};
+      default:return null;
+    }
+  }
+  function fresh(feed) {
+    const suffix=feed?.fetched_at ? ' · '+dateString(feed.fetched_at)+' UTC' : '';
+    if(feed?.status==='stale')return t('最近成功快照（本轮采集失败）','Last valid snapshot (refresh failed)')+suffix;
+    if(feed?.status==='ok')return t('来源已更新','Source refreshed')+suffix;
+    return t('暂无可用快照','No verified snapshot yet');
+  }
+  function itemMarkup(item,index,focused,key) {
+    const url=external(item.url);
     if(!url||!item.title)return '';
-    const note=metricText(item,key);
-    const badge=item.badge ? '<span class="findings-item-badge">'+escapeText(item.badge)+'</span>' : '';
-    return '<article class="findings-item">'+
-      '<div class="findings-item-head"><span class="findings-item-rank">'+String(index+1).padStart(2,'0')+'</span>'+badge+'</div>'+
-      '<h4><a href="'+escapeText(url)+'" target="_blank" rel="noopener noreferrer nofollow">'+escapeText(item.title)+' ↗</a></h4>'+
-      (item.subtitle?'<p class="findings-item-summary">'+escapeText(item.subtitle)+'</p>':'')+
-      '<div class="findings-item-foot">'+(note?'<span class="findings-item-value">'+escapeText(note)+'</span>':'')+
-      (item.author?'<span class="findings-item-creator">'+escapeText(item.author)+'</span>':'')+
-      '</div></article>';
+    const m=metric(item);
+    const date=key==='papers'&&/^\d{4}-\d\d-\d\d/.test(item.badge||'')?dateString(item.badge):'';
+    const subtitle=item.subtitle?h(item.subtitle):'';
+    const metricBlock=m
+      ?'<div class="findings-item-metric findings-metric-'+m.kind+'" aria-label="'+h(m.value+' '+m.unit)+'">'+
+        '<span class="findings-metric-symbol" aria-hidden="true">'+h(m.symbol)+'</span>'+
+        '<span class="findings-metric-value">'+h(m.value)+'</span>'+
+        '<span class="findings-metric-unit">'+h(m.unit)+'</span></div>'
+      :'<div class="findings-item-metric findings-metric-missing"><span>'+h(t('指标未公开','Metric unavailable'))+'</span></div>';
+    return '<article class="findings-item'+(focused?' findings-item-expanded':'')+'">'+
+      '<div class="findings-item-rank" aria-label="'+h(t('原始排名','Original rank'))+' '+(index+1)+'">'+
+      String(index+1).padStart(2,'0')+'</div>'+
+      '<div class="findings-item-content"><h4><a href="'+h(url)+'" target="_blank" rel="noopener noreferrer nofollow">'+
+      h(item.title)+' <span aria-hidden="true">↗</span></a></h4>'+
+      (subtitle?'<p class="findings-item-summary">'+subtitle+'</p>':'')+
+      '<div class="findings-item-byline">'+
+      (item.author?'<span>'+h(item.author)+'</span>':'')+
+      (date?'<span>'+h(t('发表：','Published: ')+date)+'</span>':'')+
+      '</div></div>'+metricBlock+'</article>';
+  }
+  function emptyMessage(feed,filtered) {
+    const pending=feed?.status==='pending';
+    return '<div class="findings-empty"><strong>'+h(filtered?
+      t('没有匹配的条目','No matching records'):
+      pending?t('等待首次采集','Awaiting first collection'):t('目前无法获取该来源','Source currently unavailable'))+'</strong>'+
+      '<p>'+h(filtered?t('换个关键词试试，或切换其他榜单。','Try another keyword or source.'):
+      t('可以直接打开原始来源查看，本站不会生成假榜单。','Open the original source instead; no rankings are invented here.'))+'</p></div>';
+  }
+  const desc=feed=>{
+    if(feed.source==='GitHub Search')return t(
+      '通过 GitHub Search 发现最近 60 天创建的相关仓库，按累计 Stars 排序；不是官方 Trending 或安装榜。',
+      'GitHub Search: repositories created in the last 60 days, ordered by total stars. Not an official trending or install ranking.');
+    if(feed.source==='Skills.sh')return t(
+      '来自 Skills.sh 趋势榜，展示真实安装量；与 GitHub Stars 不能直接比较。',
+      'Skills.sh trending results and their install counts. Not comparable to GitHub stars.');
+    if(feed.source==='GitHub Trending')return t(
+      '官方周榜排名；如有数字，表示本周新增 Stars，不是仓库总星数。',
+      'Official weekly ranking. Numeric values represent stars gained this week, not lifetime totals.');
+    if(feed.source==='Hugging Face Papers')return t(
+      'Hugging Face 社区趋势排序；票数衡量社区关注，不代表引用量。',
+      'Hugging Face community trending order. Upvotes reflect attention, not citations.');
+    return t('来源和热度口径详见原站。','Check original source for metric definitions.');
   };
+  function panel(key,feed,focused,words){
+    const def=definitions[key];
+    const url=external(feed.url)||fallback[key];
+    const allItems=Array.isArray(feed.items)?feed.items:[];
+    const matched=allItems.map((item,index)=>({item,index})).filter(({item})=>termMatches(item,words));
+    const overview=!focused&&!words.length;
+    const visible=overview?matched.slice(0,PREVIEW_COUNT):matched;
+    const total=allItems.length;
+    const header='<div class="findings-feed-head"><div class="findings-feed-ident">'+
+      '<span class="findings-feed-kicker">'+h(def.kicker)+'</span>'+
+      '<h3>'+h(t(...def.name))+'</h3>'+
+      '<p class="findings-feed-intro">'+h(t(...def.intro))+'</p></div>'+
+      '<div class="findings-feed-count" aria-label="'+h(t('已收录 '+total+' 条',''+total+' recorded'))+'">'+
+      '<strong>'+h(String(total))+'</strong><span>'+h(t('条记录','records'))+'</span></div></div>';
+    const note='<div class="findings-feed-context">'+
+      '<p class="findings-feed-explainer">'+h(desc(feed))+'</p>'+
+      '<div class="findings-feed-status">'+h(fresh(feed))+'</div></div>';
+    const items=visible.length?visible.map(({item,index})=>itemMarkup(item,index,focused,key)).join(''):
+      emptyMessage(feed,Boolean(words.length));
+    const more=(overview&&total>PREVIEW_COUNT)
+      ?'<button class="findings-feed-more" type="button" data-open-feed="'+key+'">'+
+        h(t('查看完整 '+total+' 条趋势','Explore all '+total+' findings'))+' <span aria-hidden="true">→</span></button>'
+      :'';
+    const bottom='<div class="findings-feed-bottom">'+more+
+      '<a class="findings-source-link" href="'+h(url)+'" target="_blank" rel="noopener noreferrer nofollow">'+
+      h(t('访问原始榜单','Original source'))+' ↗</a></div>';
+    const focusedHead=focused?
+      '<div class="findings-focus-top"><button type="button" class="findings-back" data-open-feed="all">'+
+      '← '+h(t('返回发现总览','All findings'))+'</button>'+
+      '<span>'+h(t('完整榜单 · 各来源独立排名','Complete feed · Source-specific ranking'))+'</span></div>':'';
+    const linkContext=focused?'<aside class="findings-focus-guide" aria-label="'+h(t('阅读提示','Reading guide'))+'">'+
+      '<div class="findings-guide-label">'+h(t('如何阅读这份榜单','HOW TO READ THIS FEED'))+'</div>'+
+      '<h4>'+h(t(...def.name))+'</h4><p>'+h(desc(feed))+'</p>'+
+      '<dl><div><dt>'+h(t('数据来源','Source'))+'</dt><dd>'+h(feed.source||t('未验证','Unavailable'))+'</dd></div>'+
+      '<div><dt>'+h(t('条目数量','Records'))+'</dt><dd>'+h(String(total))+'</dd></div>'+
+      '<div><dt>'+h(t('更新时间','Last refreshed'))+'</dt><dd>'+h(dateString(feed.fetched_at)||t('暂无','Unavailable'))+'</dd></div></dl>'+
+      '<a href="'+h(url)+'" target="_blank" rel="noopener noreferrer nofollow">'+h(t('打开来源网站','Visit original source'))+' ↗</a>'+
+      '<p class="findings-guide-warning">'+h(t('趋势信号不代表人工精选，也不建议直接执行未经审查的第三方代码。',
+        'Popularity is not an editorial endorsement. Review third-party code before running it.'))+'</p></aside>':'';
+    return '<section class="findings-feed'+(focused?' findings-feed-focused':'')+'" id="feed-'+key+'" aria-label="'+h(t(...def.name))+'">'+
+      focusedHead+header+note+
+      '<div class="findings-feed-body"><div class="findings-ranking">'+items+'</div>'+linkContext+'</div>'+
+      bottom+'</section>';
+  }
   function render(){
     const feedMap=model.snapshot?.feeds||{};
-    const query=model.query.trim().toLowerCase().split(/\s+/).filter(Boolean);
-    let visible=0;
-    root.classList.toggle('is-focused',model.filter!=='all');
-    root.innerHTML=order.map(key=>{
-      if(model.filter!=='all'&&model.filter!==key)return '';
-      const feed=feedMap[key]||{items:[],status:'pending'};
-      const sourceLink=cleanUrl(feed.url)||fallback[key];
-      const entries=Array.isArray(feed.items)?feed.items.map((item,i)=>({item,originalIndex:i})).filter(({item})=>
-        !query.length || query.every(word=>[item.title,item.subtitle,item.author,item.badge].join(' ').toLowerCase().includes(word))):[];
-      visible+=entries.length;
-      const label=t(titles[key][0],titles[key][1]);
-      const stale=feed.status==='stale';
-      const sourceName=feed.source||t('原始来源','Original source');
-      const stamp=feed.fetched_at?formatDate(feed.fetched_at):'';
-      const sourceState=stale?t('旧快照 / 来源未更新','Stale snapshot / source unavailable'):
-        feed.status==='ok'?t('已更新','Updated'):
-        t('待抓取','Pending collection');
-      const header='<div class="findings-feed-head"><div><span class="findings-feed-kicker">'+
-        escapeText(titles[key][2])+'</span><h3>'+escapeText(label)+'</h3><p>'+
-        escapeText(feed.metric_note||t('原站信号 · 不等于编辑精选','Original-source signals, not editorial selection'))+
-        '</p></div><a class="findings-feed-source" href="'+escapeText(sourceLink)+
-        '" target="_blank" rel="noopener noreferrer nofollow">'+escapeText(sourceName)+' ↗</a></div>';
-      const list=entries.length?entries.map(({item,originalIndex})=>card(item,originalIndex,key)).join(''):
-        (feed.status==='ok'&&query.length?'<p class="findings-empty">'+
-          escapeText(t('没有匹配的条目，请调整关键词。','No matching items; try another search.'))+'</p>':noData(feed));
-      const sourceStatus='<div class="findings-feed-status">'+escapeText(sourceState+(stamp?' · '+stamp+' UTC':''))+'</div>';
-      return '<section class="findings-feed" id="feed-'+key+'" aria-label="'+escapeText(label)+'">'+
-        header+sourceStatus+list+'<a class="findings-feed-more" href="'+escapeText(sourceLink)+
-        '" target="_blank" rel="noopener noreferrer nofollow">'+escapeText(t('在来源平台查看完整榜单','View the full original feed'))+' ↗</a></section>';
-    }).join('');
-    status.textContent=model.snapshot
-      ?t('当前显示 '+visible+' 条来源记录 · 各榜单独立排名，数字不可跨平台比较',
-          visible+' sourced entries shown · rankings and metrics are source-specific')
-      :t('尚无已验证快照，自动采集正在初始化。','No verified snapshot yet. Automated collection is initializing.');
-    const when=model.snapshot?.generated_at?formatDate(model.snapshot.generated_at):'';
-    updated.textContent=when?t('最新抓取任务：','Latest collection attempt: ')+when+' UTC':
-      t('等待第一份真实趋势快照','Awaiting first sourced trend snapshot');
+    const words=model.query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    const focused=model.feed!=='all';
+    const keys=focused?[model.feed]:order;
+    const total=keys.reduce((sum,key)=>sum+countItems(feedMap[key]),0);
+    const matched=keys.reduce((sum,key)=>sum+(Array.isArray(feedMap[key]?.items)?feedMap[key].items.filter(item=>termMatches(item,words)).length:0),0);
+    root.classList.toggle('is-focused',focused);
+    root.classList.toggle('is-searching',Boolean(words.length));
+    root.innerHTML=keys.map(key=>panel(key,feedMap[key]||{status:'pending',items:[]},focused,words)).join('');
+    heading.textContent=focused?t(...definitions[model.feed].name):t('趋势观察台','Trend desk');
+    const visible=(!focused&&!words.length)?Math.min(PREVIEW_COUNT,countItems(feedMap.papers))+
+      Math.min(PREVIEW_COUNT,countItems(feedMap.github))+
+      Math.min(PREVIEW_COUNT,countItems(feedMap.skills))+
+      Math.min(PREVIEW_COUNT,countItems(feedMap.workflows)):matched;
+    status.textContent=words.length
+      ?t('匹配 '+matched+' 条 · 搜索范围包括完整快照，不限于首页预览',
+        matched+' matches · Search covers all snapshot entries, not only the preview')
+      :focused
+        ?t('当前展示 '+visible+' 条 · 来源独立排序，无跨平台综合评分',
+          visible+' records · Original source ranking, no cross-platform score')
+        :t('四个独立来源 · 每栏精选预览最多 '+PREVIEW_COUNT+' 条 · 共 '+total+' 条已采集',
+          'Four independent feeds · Up to '+PREVIEW_COUNT+' previews each · '+total+' sourced records total');
+    updated.textContent=model.snapshot?.generated_at
+      ?t('最近采集：','Last checked: ')+dateString(model.snapshot.generated_at)+' UTC'
+      :t('等待真实数据快照','Awaiting a verified snapshot');
+    filters.forEach(button=>{const active=button.dataset.feed===model.feed;
+      button.classList.toggle('is-current',active);button.setAttribute('aria-pressed',String(active));});
   }
-  controls.forEach(button=>button.addEventListener('click',()=>{
-    model.filter=button.dataset.feed||'all';
-    controls.forEach(x=>{const selected=x===button;x.classList.toggle('is-current',selected);x.setAttribute('aria-pressed',String(selected));});
+  function setFeed(value,historyAction=true){
+    const next=order.includes(value)?value:'all';
+    model.feed=next;
+    if(historyAction){
+      const u=new URL(location.href);
+      if(next==='all')u.searchParams.delete('feed');else u.searchParams.set('feed',next);
+      window.history.replaceState(null,'',u.pathname+u.search+u.hash);
+    }
     render();
-  }));
+    const headingTarget=document.querySelector('.findings-shell');
+    if(headingTarget&&headingTarget.getBoundingClientRect().top<-100)
+      headingTarget.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  filters.forEach(button=>button.addEventListener('click',()=>setFeed(button.dataset.feed)));
+  root.addEventListener('click',event=>{
+    const button=event.target.closest('button[data-open-feed]');
+    if(button&&root.contains(button))setFeed(button.dataset.openFeed);
+  });
   search.addEventListener('input',()=>{model.query=search.value;render();});
   window.addEventListener('ora-language-change',render);
-  fetch('data/findings.json',{cache:'no-cache'}).then(r=>{
-    if(!r.ok)throw Error('Findings snapshot HTTP '+r.status);
-    return r.json();
-  }).then(data=>{
-    if(data.schema_version!=='1'||!data.feeds)throw Error('Invalid findings snapshot schema');
-    model.snapshot=data;render();
-  }).catch(err=>{
-    console.warn('Findings source unavailable:',err);
-    model.snapshot={generated_at:null,feeds:{}};
-    render();
-    status.textContent=t('暂时无法读取自动趋势快照，请直接通过各来源链接浏览。',
-      'The findings snapshot is unavailable. Browse the original sources directly.');
-  });
+  window.addEventListener('popstate',()=>setFeed(new URLSearchParams(location.search).get('feed'),false));
+  model.feed=order.includes(new URLSearchParams(location.search).get('feed'))?
+    new URLSearchParams(location.search).get('feed'):'all';
   render();
+  fetch('data/findings.json',{cache:'no-cache'})
+    .then(r=>{if(!r.ok)throw Error('Findings HTTP '+r.status);return r.json();})
+    .then(data=>{
+      if(data.schema_version!=='1'||!data.feeds||typeof data.feeds!=='object')throw Error('Invalid Findings snapshot');
+      model.snapshot=data;render();
+    }).catch(err=>{
+      console.warn('OpenResearchAssets Findings:',err);model.failure=true;model.snapshot={feeds:{},generated_at:null};render();
+      status.textContent=t('暂时无法读取快照，请打开各平台的原始榜单。',
+        'Snapshot unavailable. Browse the original feeds directly.');
+    });
 })();
