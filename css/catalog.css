@@ -264,8 +264,3 @@
 .ora-submit-secondary a{font-weight:720;color:#315f8b;white-space:nowrap}
 .ora-submit-secondary a:hover{text-decoration:underline}
 @media(max-width:720px){.ora-curated-community-note{align-items:flex-start;flex-direction:column;gap:6px;padding-bottom:36px}.ora-submit-intro{padding-top:43px;padding-bottom:22px}.ora-submit-guidelines-grid,.ora-submit-secondary{grid-template-columns:1fr;gap:18px}.ora-community-submit{margin-bottom:35px}.ora-submit-secondary{padding-bottom:55px}}
-
-/* Rights-holder correction stays available at the asset level, not just the site footer. */
-.ora-detail-rights{max-width:980px;margin:0 auto 54px;padding-top:16px;border-top:1px solid #e3e9ef;font-size:11px;color:#7890a4;text-align:right}
-.ora-detail-rights a{color:#55738e;text-decoration:none}
-.ora-detail-rights a:hover{text-decoration:underline}
