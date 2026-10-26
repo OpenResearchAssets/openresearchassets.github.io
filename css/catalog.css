@@ -292,7 +292,7 @@
 .ora-skill-stars{display:inline-flex;gap:4px;flex-direction:column;align-items:flex-end;border-radius:8px;padding:7px 11px;background:#f5f0e8;color:#675030}
 .ora-skill-stars b{font-size:17px;line-height:1.2;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:.015em}
 .ora-skill-stars small{font-size:10px;line-height:1.3;font-weight:600;letter-spacing:0;text-transform:none}
-.ora-skill-card .ora-skill-meta{align-items:center;font-size:12px}
+.ora-skill-card .ora-skill-meta{align-items:center;font-size:12px;text-transform:none}
 .ora-skill-card>p:not(.ora-skill-status){font-size:14px;line-height:1.75}
 .ora-skill-tags{display:flex;flex-wrap:wrap;gap:6px;margin:0}
 .ora-skill-tags span{font-size:12px;line-height:1.4;background:#eef3f8;color:#536a80;padding:5px 9px;border-radius:6px}
