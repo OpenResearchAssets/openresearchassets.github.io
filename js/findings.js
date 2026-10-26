@@ -135,6 +135,7 @@
  function render(){
    const feeds=state.data?.feeds||{},focused=state.filter!=='all',terms=words(),list=focused?[state.filter]:keys;
    root.classList.toggle('is-focused',focused);root.classList.toggle('is-searching',Boolean(terms.length));
+   document.body.classList.toggle('findings-reading',focused);
    root.innerHTML=list.map(k=>panel(k,feeds[k]||{items:[],status:'pending'},focused,terms)).join('');
    heading.textContent=focused?tr('深入发现','Explore in depth'):tr('趋势观察台','Trend desk');
    const total=list.reduce((sum,k)=>sum+(feeds[k]?.items?.length||0),0);
