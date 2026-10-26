@@ -1,0 +1,139 @@
+{
+  "id": "kdense-peer-review",
+  "title": "Peer Review · 科学论文审稿 Skill",
+  "kind": "workflow",
+  "stages": [
+    "evaluation",
+    "writing"
+  ],
+  "domains": [
+    "general",
+    "nlp"
+  ],
+  "topics": [
+    "scientific-review",
+    "paper-writing"
+  ],
+  "tasks": [
+    "agent-skills",
+    "scientific-review",
+    "paper-writing"
+  ],
+  "description": {
+    "zh": "对授权的科学稿件执行证据、方法与统计复核。",
+    "en": "Structured confidential scientific review for authorized materials."
+  },
+  "keywords": {
+    "zh": [
+      "peer-review",
+      "Peer Review · 科学论文审稿 Skill",
+      "scientific-review",
+      "paper-writing"
+    ],
+    "en": [
+      "peer-review",
+      "Peer Review · 科学论文审稿 Skill",
+      "scientific-review",
+      "paper-writing"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/peer-review/SKILL.md",
+    "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+  },
+  "rights": {
+    "reuse": "external reference only; inspect upstream license",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "有明确审稿授权的稿件及会议政策"
+      ],
+      "en": [
+        "Authorized manuscript and venue AI policy"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "核实保密及冲突；逐项审查主张与对照"
+      ],
+      "en": [
+        "Check confidentiality/conflicts; audit claims and controls"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "未经许可不要上传匿名稿或让 AI 冒充正式审稿"
+      ],
+      "en": [
+        "Do not upload confidential drafts or replace human reviewers"
+      ]
+    }
+  },
+  "execution": {
+    "inputs": {
+      "zh": [
+        "有明确审稿授权的稿件及会议政策"
+      ],
+      "en": [
+        "Authorized manuscript and venue AI policy"
+      ]
+    },
+    "outputs": {
+      "zh": [
+        "重大与次要问题、证据及修订建议"
+      ],
+      "en": [
+        "Evidence-backed major/minor issues and suggestions"
+      ]
+    },
+    "requirements": {
+      "zh": [
+        "Python 3.11+；本地脚本可离线，需审稿授权"
+      ],
+      "en": [
+        "Python 3.11+; local tools offline, authorization needed"
+      ]
+    },
+    "steps": {
+      "zh": [
+        "核实保密及冲突",
+        "逐项审查主张与对照"
+      ],
+      "en": [
+        "Check confidentiality/conflicts",
+        "audit claims and controls"
+      ]
+    },
+    "checks": {
+      "zh": [
+        "未经许可不要上传匿名稿或让 AI 冒充正式审稿"
+      ],
+      "en": [
+        "Do not upload confidential drafts or replace human reviewers"
+      ]
+    },
+    "source_file_sha": "d4f3c3e3b5c19fec2518d569ded7e37ac96a964b",
+    "source_checked_on": "2026-10-26",
+    "scope": "source-metadata-reviewed-not-executed"
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "K-Dense-AI/scientific-agent-skills",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 54702,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-SKILL-md-inspected-not-executed",
+    "selection_reason": {
+      "zh": "对授权的科学稿件执行证据、方法与统计复核。",
+      "en": "Structured confidential scientific review for authorized materials."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

@@ -1,0 +1,139 @@
+{
+  "id": "kdense-scientific-critical-thinking",
+  "title": "Scientific Critical Thinking · 科学主张质疑",
+  "kind": "workflow",
+  "stages": [
+    "evaluation",
+    "research"
+  ],
+  "domains": [
+    "general",
+    "ml-systems"
+  ],
+  "topics": [
+    "scientific-review",
+    "experiment-design"
+  ],
+  "tasks": [
+    "agent-skills",
+    "scientific-review",
+    "experiment-design"
+  ],
+  "description": {
+    "zh": "分析偏差、混杂和方法漏洞，而不是无依据否定结论。",
+    "en": "Analyze confounding and evidence quality with calibrated claims."
+  },
+  "keywords": {
+    "zh": [
+      "scientific-critical-thinking",
+      "Scientific Critical Thinking · 科学主张质疑",
+      "scientific-review",
+      "experiment-design"
+    ],
+    "en": [
+      "scientific-critical-thinking",
+      "Scientific Critical Thinking · 科学主张质疑",
+      "scientific-review",
+      "experiment-design"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-critical-thinking/SKILL.md",
+    "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+  },
+  "rights": {
+    "reuse": "external reference only; inspect upstream license",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "明确论点、方法及相关实验"
+      ],
+      "en": [
+        "Claim, method and supporting experiments"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "界定主张范围；检索混杂与反例"
+      ],
+      "en": [
+        "Bound claim; seek confounders and counterexamples"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "证据不足时保留不确定性而不是断言错误"
+      ],
+      "en": [
+        "Report uncertainty rather than unsupported criticism"
+      ]
+    }
+  },
+  "execution": {
+    "inputs": {
+      "zh": [
+        "明确论点、方法及相关实验"
+      ],
+      "en": [
+        "Claim, method and supporting experiments"
+      ]
+    },
+    "outputs": {
+      "zh": [
+        "替代解释、混杂清单与证据等级"
+      ],
+      "en": [
+        "Alternative explanations and evidence grading"
+      ]
+    },
+    "requirements": {
+      "zh": [
+        "可离线分析；可选图形插件需要 API"
+      ],
+      "en": [
+        "Offline analysis; optional visual plugin needs API"
+      ]
+    },
+    "steps": {
+      "zh": [
+        "界定主张范围",
+        "检索混杂与反例"
+      ],
+      "en": [
+        "Bound claim",
+        "seek confounders and counterexamples"
+      ]
+    },
+    "checks": {
+      "zh": [
+        "证据不足时保留不确定性而不是断言错误"
+      ],
+      "en": [
+        "Report uncertainty rather than unsupported criticism"
+      ]
+    },
+    "source_file_sha": "2a2fc151b5b13e4e11ece7410f21a14d5b25e30d",
+    "source_checked_on": "2026-10-26",
+    "scope": "source-metadata-reviewed-not-executed"
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "K-Dense-AI/scientific-agent-skills",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 54702,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-SKILL-md-inspected-not-executed",
+    "selection_reason": {
+      "zh": "分析偏差、混杂和方法漏洞，而不是无依据否定结论。",
+      "en": "Analyze confounding and evidence quality with calibrated claims."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

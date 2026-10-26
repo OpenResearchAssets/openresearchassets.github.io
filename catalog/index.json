@@ -145,6 +145,14 @@
       "web-automation": {
         "zh": "网页操作与采集",
         "en": "Browser automation"
+      },
+      "scientific-review": {
+        "zh": "科学审稿与证据核验",
+        "en": "Scientific review & integrity"
+      },
+      "reproducible-experiments": {
+        "zh": "可复现实验",
+        "en": "Reproducible experiments"
       }
     }
   },
@@ -6364,6 +6372,1801 @@
         "selection_reason": {
           "zh": "Agent 需要声称代码、论文材料或资产构建完成。",
           "en": "An agent is about to claim a task or artifact is complete."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "kdense-paper-lookup",
+      "title": "Paper Lookup · 多源学术论文检索",
+      "kind": "workflow",
+      "stages": [
+        "research"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "literature-discovery"
+      ],
+      "tasks": [
+        "agent-skills",
+        "literature-discovery"
+      ],
+      "description": {
+        "zh": "按 DOI、题名或研究问题检索可追溯论文记录。",
+        "en": "Reproducible scholarly lookup by DOI, title and search query."
+      },
+      "keywords": {
+        "zh": [
+          "paper-lookup",
+          "Paper Lookup · 多源学术论文检索",
+          "literature-discovery"
+        ],
+        "en": [
+          "paper-lookup",
+          "Paper Lookup · 多源学术论文检索",
+          "literature-discovery"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/paper-lookup/SKILL.md",
+        "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      },
+      "rights": {
+        "reuse": "external reference only; inspect upstream license",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "论文关键词、DOI 或作者"
+          ],
+          "en": [
+            "Keywords, DOI or authors"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "限定检索库与查询式；去重并记录来源"
+          ],
+          "en": [
+            "Bound searches by database; deduplicate with source logs"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "核对 DOI 和原文；摘要不等于全文"
+          ],
+          "en": [
+            "Verify DOI and original; abstract is not full text"
+          ]
+        }
+      },
+      "execution": {
+        "inputs": {
+          "zh": [
+            "论文关键词、DOI 或作者"
+          ],
+          "en": [
+            "Keywords, DOI or authors"
+          ]
+        },
+        "outputs": {
+          "zh": [
+            "带来源和标识符的候选论文"
+          ],
+          "en": [
+            "Source-linked paper records and IDs"
+          ]
+        },
+        "requirements": {
+          "zh": [
+            "Python 3.11+、curl、联网；部分 API 可选密钥"
+          ],
+          "en": [
+            "Python 3.11+, curl, network; optional API keys"
+          ]
+        },
+        "steps": {
+          "zh": [
+            "限定检索库与查询式",
+            "去重并记录来源"
+          ],
+          "en": [
+            "Bound searches by database",
+            "deduplicate with source logs"
+          ]
+        },
+        "checks": {
+          "zh": [
+            "核对 DOI 和原文；摘要不等于全文"
+          ],
+          "en": [
+            "Verify DOI and original; abstract is not full text"
+          ]
+        },
+        "source_file_sha": "d0b277b07be6f2688fcc2bacee1b58c971ece2f7",
+        "source_checked_on": "2026-10-26",
+        "scope": "source-metadata-reviewed-not-executed"
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "K-Dense-AI/scientific-agent-skills",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 54702,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-SKILL-md-inspected-not-executed",
+        "selection_reason": {
+          "zh": "按 DOI、题名或研究问题检索可追溯论文记录。",
+          "en": "Reproducible scholarly lookup by DOI, title and search query."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "kdense-literature-review",
+      "title": "Literature Review · 可追溯研究综述",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "ideation"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "literature-discovery",
+        "research-automation"
+      ],
+      "tasks": [
+        "agent-skills",
+        "literature-discovery",
+        "research-automation"
+      ],
+      "description": {
+        "zh": "定义检索、纳排与证据综合，避免凭印象判断研究空白。",
+        "en": "Reproducible searches, screening and research synthesis."
+      },
+      "keywords": {
+        "zh": [
+          "literature-review",
+          "Literature Review · 可追溯研究综述",
+          "literature-discovery",
+          "research-automation"
+        ],
+        "en": [
+          "literature-review",
+          "Literature Review · 可追溯研究综述",
+          "literature-discovery",
+          "research-automation"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/literature-review/SKILL.md",
+        "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      },
+      "rights": {
+        "reuse": "external reference only; inspect upstream license",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "研究问题、范围与纳排标准"
+          ],
+          "en": [
+            "Research question, scope and screening rules"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "制定可复核的检索式；筛选去重并归纳证据"
+          ],
+          "en": [
+            "Define reproducible query; screen and synthesize evidence"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "逐条核查引用；记录检索盲区"
+          ],
+          "en": [
+            "Audit citations and record coverage limits"
+          ]
+        }
+      },
+      "execution": {
+        "inputs": {
+          "zh": [
+            "研究问题、范围与纳排标准"
+          ],
+          "en": [
+            "Research question, scope and screening rules"
+          ]
+        },
+        "outputs": {
+          "zh": [
+            "检索记录、文献矩阵和带出处综述"
+          ],
+          "en": [
+            "Search log, literature matrix and sourced review"
+          ]
+        },
+        "requirements": {
+          "zh": [
+            "Python 3.10+、requests、网络；PDF 导出需 Pandoc/XeLaTeX"
+          ],
+          "en": [
+            "Python 3.10+, requests and network; Pandoc/XeLaTeX for PDF"
+          ]
+        },
+        "steps": {
+          "zh": [
+            "制定可复核的检索式",
+            "筛选去重并归纳证据"
+          ],
+          "en": [
+            "Define reproducible query",
+            "screen and synthesize evidence"
+          ]
+        },
+        "checks": {
+          "zh": [
+            "逐条核查引用；记录检索盲区"
+          ],
+          "en": [
+            "Audit citations and record coverage limits"
+          ]
+        },
+        "source_file_sha": "5178dce6419cee412155e7b9dd523d5b2ef703f5",
+        "source_checked_on": "2026-10-26",
+        "scope": "source-metadata-reviewed-not-executed"
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "K-Dense-AI/scientific-agent-skills",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 54702,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-SKILL-md-inspected-not-executed",
+        "selection_reason": {
+          "zh": "定义检索、纳排与证据综合，避免凭印象判断研究空白。",
+          "en": "Reproducible searches, screening and research synthesis."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "kdense-experimental-design",
+      "title": "Experimental Design · 实验设计与分组",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments"
+      ],
+      "domains": [
+        "ml-systems",
+        "rl"
+      ],
+      "topics": [
+        "experiment-design",
+        "reproducible-experiments"
+      ],
+      "tasks": [
+        "agent-skills",
+        "experiment-design",
+        "reproducible-experiments"
+      ],
+      "description": {
+        "zh": "实验前规划对照、随机化、阻断和有效重复。",
+        "en": "Plan controls, randomization, blocking and replication."
+      },
+      "keywords": {
+        "zh": [
+          "experimental-design",
+          "Experimental Design · 实验设计与分组",
+          "experiment-design",
+          "reproducible-experiments"
+        ],
+        "en": [
+          "experimental-design",
+          "Experimental Design · 实验设计与分组",
+          "experiment-design",
+          "reproducible-experiments"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/experimental-design/SKILL.md",
+        "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      },
+      "rights": {
+        "reuse": "external reference only; inspect upstream license",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "假设、实验单位、变量和预算"
+          ],
+          "en": [
+            "Hypothesis, units, factors and budget"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "界定效应与实验单位；排定分组与分析口径"
+          ],
+          "en": [
+            "Define effect and units; specify assignments and analysis"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "警惕伪重复、数据泄漏；功效分析应单独执行"
+          ],
+          "en": [
+            "Check pseudoreplication/leakage; power needs separate analysis"
+          ]
+        }
+      },
+      "execution": {
+        "inputs": {
+          "zh": [
+            "假设、实验单位、变量和预算"
+          ],
+          "en": [
+            "Hypothesis, units, factors and budget"
+          ]
+        },
+        "outputs": {
+          "zh": [
+            "实验分组表、随机化和混杂控制方案"
+          ],
+          "en": [
+            "Assignment table, randomization and confounder plan"
+          ]
+        },
+        "requirements": {
+          "zh": [
+            "Python 3.12+、numpy、pandas、pydoe"
+          ],
+          "en": [
+            "Python 3.12+, numpy, pandas, pydoe"
+          ]
+        },
+        "steps": {
+          "zh": [
+            "界定效应与实验单位",
+            "排定分组与分析口径"
+          ],
+          "en": [
+            "Define effect and units",
+            "specify assignments and analysis"
+          ]
+        },
+        "checks": {
+          "zh": [
+            "警惕伪重复、数据泄漏；功效分析应单独执行"
+          ],
+          "en": [
+            "Check pseudoreplication/leakage; power needs separate analysis"
+          ]
+        },
+        "source_file_sha": "ee14f9ed795c791ac80e3ea946858d97d09c3e50",
+        "source_checked_on": "2026-10-26",
+        "scope": "source-metadata-reviewed-not-executed"
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "K-Dense-AI/scientific-agent-skills",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 54702,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-SKILL-md-inspected-not-executed",
+        "selection_reason": {
+          "zh": "实验前规划对照、随机化、阻断和有效重复。",
+          "en": "Plan controls, randomization, blocking and replication."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "kdense-statistical-power",
+      "title": "Statistical Power · 样本量与功效分析",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "evaluation"
+      ],
+      "domains": [
+        "ml-systems",
+        "rl"
+      ],
+      "topics": [
+        "experiment-design",
+        "reproducible-experiments"
+      ],
+      "tasks": [
+        "agent-skills",
+        "experiment-design",
+        "reproducible-experiments"
+      ],
+      "description": {
+        "zh": "估算有实际效应量假设的实验样本量与功效。",
+        "en": "Power and sample-size planning for specified effects."
+      },
+      "keywords": {
+        "zh": [
+          "statistical-power",
+          "Statistical Power · 样本量与功效分析",
+          "experiment-design",
+          "reproducible-experiments"
+        ],
+        "en": [
+          "statistical-power",
+          "Statistical Power · 样本量与功效分析",
+          "experiment-design",
+          "reproducible-experiments"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/statistical-power/SKILL.md",
+        "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      },
+      "rights": {
+        "reuse": "external reference only; inspect upstream license",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "检验方法、效应量、显著性与方差"
+          ],
+          "en": [
+            "Test, effect, alpha and variance"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "确定检验和实际效应；计算并报告假设"
+          ],
+          "en": [
+            "Define target effects; calculate with assumptions"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "避免没有依据的效应量及事后功效夸大"
+          ],
+          "en": [
+            "Avoid unsupported effects and misleading post-hoc power"
+          ]
+        }
+      },
+      "execution": {
+        "inputs": {
+          "zh": [
+            "检验方法、效应量、显著性与方差"
+          ],
+          "en": [
+            "Test, effect, alpha and variance"
+          ]
+        },
+        "outputs": {
+          "zh": [
+            "样本量估计、功效曲线及敏感性分析"
+          ],
+          "en": [
+            "Sample estimates, power curve and sensitivity"
+          ]
+        },
+        "requirements": {
+          "zh": [
+            "Python 3.12+、scipy、numpy、statsmodels"
+          ],
+          "en": [
+            "Python 3.12+, scipy, numpy, statsmodels"
+          ]
+        },
+        "steps": {
+          "zh": [
+            "确定检验和实际效应",
+            "计算并报告假设"
+          ],
+          "en": [
+            "Define target effects",
+            "calculate with assumptions"
+          ]
+        },
+        "checks": {
+          "zh": [
+            "避免没有依据的效应量及事后功效夸大"
+          ],
+          "en": [
+            "Avoid unsupported effects and misleading post-hoc power"
+          ]
+        },
+        "source_file_sha": "012cc67f7794ac280ad39383add39afda7ac719a",
+        "source_checked_on": "2026-10-26",
+        "scope": "source-metadata-reviewed-not-executed"
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "K-Dense-AI/scientific-agent-skills",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 54702,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-SKILL-md-inspected-not-executed",
+        "selection_reason": {
+          "zh": "估算有实际效应量假设的实验样本量与功效。",
+          "en": "Power and sample-size planning for specified effects."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "kdense-scientific-visualization",
+      "title": "Scientific Visualization · 科研证据图",
+      "kind": "workflow",
+      "stages": [
+        "evaluation",
+        "writing"
+      ],
+      "domains": [
+        "vision",
+        "ml-systems"
+      ],
+      "topics": [
+        "scientific-visualization",
+        "reproducible-experiments"
+      ],
+      "tasks": [
+        "agent-skills",
+        "scientific-visualization",
+        "reproducible-experiments"
+      ],
+      "description": {
+        "zh": "保留数据真实性、误差与可读性的科研图形流程。",
+        "en": "Evidence-faithful plots with uncertainty and legibility checks."
+      },
+      "keywords": {
+        "zh": [
+          "scientific-visualization",
+          "Scientific Visualization · 科研证据图",
+          "scientific-visualization",
+          "reproducible-experiments"
+        ],
+        "en": [
+          "scientific-visualization",
+          "Scientific Visualization · 科研证据图",
+          "scientific-visualization",
+          "reproducible-experiments"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-visualization/SKILL.md",
+        "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      },
+      "rights": {
+        "reuse": "external reference only; inspect upstream license",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "原始表格、指标、目标图尺寸"
+          ],
+          "en": [
+            "Raw data, metrics and output dimensions"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "确认数据变换；渲染实际尺寸并检查标注"
+          ],
+          "en": [
+            "Record transformations; render and inspect at target size"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不得隐藏失败或改变数据，和原始表格逐项核对"
+          ],
+          "en": [
+            "Never hide failures; compare plotted values to source"
+          ]
+        }
+      },
+      "execution": {
+        "inputs": {
+          "zh": [
+            "原始表格、指标、目标图尺寸"
+          ],
+          "en": [
+            "Raw data, metrics and output dimensions"
+          ]
+        },
+        "outputs": {
+          "zh": [
+            "绘图代码与经过实尺寸复核的图片"
+          ],
+          "en": [
+            "Plot source and verified delivered figure"
+          ]
+        },
+        "requirements": {
+          "zh": [
+            "Python 3.11+ 与绘图库；导出工具依任务配置"
+          ],
+          "en": [
+            "Python 3.11+ and plotting libraries; export tooling varies"
+          ]
+        },
+        "steps": {
+          "zh": [
+            "确认数据变换",
+            "渲染实际尺寸并检查标注"
+          ],
+          "en": [
+            "Record transformations",
+            "render and inspect at target size"
+          ]
+        },
+        "checks": {
+          "zh": [
+            "不得隐藏失败或改变数据，和原始表格逐项核对"
+          ],
+          "en": [
+            "Never hide failures; compare plotted values to source"
+          ]
+        },
+        "source_file_sha": "44ea38c24fb5015535254bfd9b5ae9a856195408",
+        "source_checked_on": "2026-10-26",
+        "scope": "source-metadata-reviewed-not-executed"
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "K-Dense-AI/scientific-agent-skills",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 54702,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-SKILL-md-inspected-not-executed",
+        "selection_reason": {
+          "zh": "保留数据真实性、误差与可读性的科研图形流程。",
+          "en": "Evidence-faithful plots with uncertainty and legibility checks."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "kdense-scientific-writing",
+      "title": "Scientific Writing · 证据驱动科研写作",
+      "kind": "workflow",
+      "stages": [
+        "writing"
+      ],
+      "domains": [
+        "nlp",
+        "general"
+      ],
+      "topics": [
+        "paper-writing",
+        "scientific-review"
+      ],
+      "tasks": [
+        "agent-skills",
+        "paper-writing",
+        "scientific-review"
+      ],
+      "description": {
+        "zh": "把论点、实验、引文和作者最终责任分开核验。",
+        "en": "Scientific writing with claim-evidence traceability and approval."
+      },
+      "keywords": {
+        "zh": [
+          "scientific-writing",
+          "Scientific Writing · 证据驱动科研写作",
+          "paper-writing",
+          "scientific-review"
+        ],
+        "en": [
+          "scientific-writing",
+          "Scientific Writing · 证据驱动科研写作",
+          "paper-writing",
+          "scientific-review"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-writing/SKILL.md",
+        "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      },
+      "rights": {
+        "reuse": "external reference only; inspect upstream license",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "主张、真实实验与参考文献"
+          ],
+          "en": [
+            "Claims, actual results and references"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "逐段关联证据；分开写作、事实检查与审批"
+          ],
+          "en": [
+            "Ground each claim; separate drafting, checks and approval"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不得编造论文或数据，未授权材料不得上传"
+          ],
+          "en": [
+            "Never invent evidence or expose unauthorized materials"
+          ]
+        }
+      },
+      "execution": {
+        "inputs": {
+          "zh": [
+            "主张、真实实验与参考文献"
+          ],
+          "en": [
+            "Claims, actual results and references"
+          ]
+        },
+        "outputs": {
+          "zh": [
+            "稿件草稿、证据对应表与引用检查"
+          ],
+          "en": [
+            "Draft, claim-evidence map and citations check"
+          ]
+        },
+        "requirements": {
+          "zh": [
+            "核心流程无需网络；可选 Python 3.11+ 本地校验"
+          ],
+          "en": [
+            "Core guidance offline; optional Python 3.11+ checks"
+          ]
+        },
+        "steps": {
+          "zh": [
+            "逐段关联证据",
+            "分开写作、事实检查与审批"
+          ],
+          "en": [
+            "Ground each claim",
+            "separate drafting, checks and approval"
+          ]
+        },
+        "checks": {
+          "zh": [
+            "不得编造论文或数据，未授权材料不得上传"
+          ],
+          "en": [
+            "Never invent evidence or expose unauthorized materials"
+          ]
+        },
+        "source_file_sha": "446993fcd4716ae54ab74bc2a91e3bc5af5235c7",
+        "source_checked_on": "2026-10-26",
+        "scope": "source-metadata-reviewed-not-executed"
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "K-Dense-AI/scientific-agent-skills",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 54702,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-SKILL-md-inspected-not-executed",
+        "selection_reason": {
+          "zh": "把论点、实验、引文和作者最终责任分开核验。",
+          "en": "Scientific writing with claim-evidence traceability and approval."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "kdense-scientific-critical-thinking",
+      "title": "Scientific Critical Thinking · 科学主张质疑",
+      "kind": "workflow",
+      "stages": [
+        "evaluation",
+        "research"
+      ],
+      "domains": [
+        "general",
+        "ml-systems"
+      ],
+      "topics": [
+        "scientific-review",
+        "experiment-design"
+      ],
+      "tasks": [
+        "agent-skills",
+        "scientific-review",
+        "experiment-design"
+      ],
+      "description": {
+        "zh": "分析偏差、混杂和方法漏洞，而不是无依据否定结论。",
+        "en": "Analyze confounding and evidence quality with calibrated claims."
+      },
+      "keywords": {
+        "zh": [
+          "scientific-critical-thinking",
+          "Scientific Critical Thinking · 科学主张质疑",
+          "scientific-review",
+          "experiment-design"
+        ],
+        "en": [
+          "scientific-critical-thinking",
+          "Scientific Critical Thinking · 科学主张质疑",
+          "scientific-review",
+          "experiment-design"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-critical-thinking/SKILL.md",
+        "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      },
+      "rights": {
+        "reuse": "external reference only; inspect upstream license",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "明确论点、方法及相关实验"
+          ],
+          "en": [
+            "Claim, method and supporting experiments"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "界定主张范围；检索混杂与反例"
+          ],
+          "en": [
+            "Bound claim; seek confounders and counterexamples"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "证据不足时保留不确定性而不是断言错误"
+          ],
+          "en": [
+            "Report uncertainty rather than unsupported criticism"
+          ]
+        }
+      },
+      "execution": {
+        "inputs": {
+          "zh": [
+            "明确论点、方法及相关实验"
+          ],
+          "en": [
+            "Claim, method and supporting experiments"
+          ]
+        },
+        "outputs": {
+          "zh": [
+            "替代解释、混杂清单与证据等级"
+          ],
+          "en": [
+            "Alternative explanations and evidence grading"
+          ]
+        },
+        "requirements": {
+          "zh": [
+            "可离线分析；可选图形插件需要 API"
+          ],
+          "en": [
+            "Offline analysis; optional visual plugin needs API"
+          ]
+        },
+        "steps": {
+          "zh": [
+            "界定主张范围",
+            "检索混杂与反例"
+          ],
+          "en": [
+            "Bound claim",
+            "seek confounders and counterexamples"
+          ]
+        },
+        "checks": {
+          "zh": [
+            "证据不足时保留不确定性而不是断言错误"
+          ],
+          "en": [
+            "Report uncertainty rather than unsupported criticism"
+          ]
+        },
+        "source_file_sha": "2a2fc151b5b13e4e11ece7410f21a14d5b25e30d",
+        "source_checked_on": "2026-10-26",
+        "scope": "source-metadata-reviewed-not-executed"
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "K-Dense-AI/scientific-agent-skills",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 54702,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-SKILL-md-inspected-not-executed",
+        "selection_reason": {
+          "zh": "分析偏差、混杂和方法漏洞，而不是无依据否定结论。",
+          "en": "Analyze confounding and evidence quality with calibrated claims."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "kdense-peer-review",
+      "title": "Peer Review · 科学论文审稿 Skill",
+      "kind": "workflow",
+      "stages": [
+        "evaluation",
+        "writing"
+      ],
+      "domains": [
+        "general",
+        "nlp"
+      ],
+      "topics": [
+        "scientific-review",
+        "paper-writing"
+      ],
+      "tasks": [
+        "agent-skills",
+        "scientific-review",
+        "paper-writing"
+      ],
+      "description": {
+        "zh": "对授权的科学稿件执行证据、方法与统计复核。",
+        "en": "Structured confidential scientific review for authorized materials."
+      },
+      "keywords": {
+        "zh": [
+          "peer-review",
+          "Peer Review · 科学论文审稿 Skill",
+          "scientific-review",
+          "paper-writing"
+        ],
+        "en": [
+          "peer-review",
+          "Peer Review · 科学论文审稿 Skill",
+          "scientific-review",
+          "paper-writing"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/peer-review/SKILL.md",
+        "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      },
+      "rights": {
+        "reuse": "external reference only; inspect upstream license",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "有明确审稿授权的稿件及会议政策"
+          ],
+          "en": [
+            "Authorized manuscript and venue AI policy"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "核实保密及冲突；逐项审查主张与对照"
+          ],
+          "en": [
+            "Check confidentiality/conflicts; audit claims and controls"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "未经许可不要上传匿名稿或让 AI 冒充正式审稿"
+          ],
+          "en": [
+            "Do not upload confidential drafts or replace human reviewers"
+          ]
+        }
+      },
+      "execution": {
+        "inputs": {
+          "zh": [
+            "有明确审稿授权的稿件及会议政策"
+          ],
+          "en": [
+            "Authorized manuscript and venue AI policy"
+          ]
+        },
+        "outputs": {
+          "zh": [
+            "重大与次要问题、证据及修订建议"
+          ],
+          "en": [
+            "Evidence-backed major/minor issues and suggestions"
+          ]
+        },
+        "requirements": {
+          "zh": [
+            "Python 3.11+；本地脚本可离线，需审稿授权"
+          ],
+          "en": [
+            "Python 3.11+; local tools offline, authorization needed"
+          ]
+        },
+        "steps": {
+          "zh": [
+            "核实保密及冲突",
+            "逐项审查主张与对照"
+          ],
+          "en": [
+            "Check confidentiality/conflicts",
+            "audit claims and controls"
+          ]
+        },
+        "checks": {
+          "zh": [
+            "未经许可不要上传匿名稿或让 AI 冒充正式审稿"
+          ],
+          "en": [
+            "Do not upload confidential drafts or replace human reviewers"
+          ]
+        },
+        "source_file_sha": "d4f3c3e3b5c19fec2518d569ded7e37ac96a964b",
+        "source_checked_on": "2026-10-26",
+        "scope": "source-metadata-reviewed-not-executed"
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "K-Dense-AI/scientific-agent-skills",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 54702,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-SKILL-md-inspected-not-executed",
+        "selection_reason": {
+          "zh": "对授权的科学稿件执行证据、方法与统计复核。",
+          "en": "Structured confidential scientific review for authorized materials."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "anthropic-pdf",
+      "title": "PDF Processing · PDF 文档 Skill",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "writing"
+      ],
+      "domains": [
+        "general",
+        "nlp"
+      ],
+      "topics": [
+        "document-parsing"
+      ],
+      "tasks": [
+        "agent-skills",
+        "document-parsing"
+      ],
+      "description": {
+        "zh": "处理 PDF 提取、合并、分割、OCR；源技能为专有许可。",
+        "en": "PDF extraction, merge, split and OCR; proprietary source license."
+      },
+      "keywords": {
+        "zh": [
+          "pdf",
+          "PDF Processing · PDF 文档 Skill",
+          "document-parsing"
+        ],
+        "en": [
+          "pdf",
+          "PDF Processing · PDF 文档 Skill",
+          "document-parsing"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/anthropics/skills/blob/main/skills/pdf/SKILL.md",
+        "repository": "https://github.com/anthropics/skills"
+      },
+      "rights": {
+        "reuse": "external reference only; upstream skill has proprietary license",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "有权限处理的 PDF 及目标操作"
+          ],
+          "en": [
+            "Authorized PDF and requested operation"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "选择解析或编辑流程；完成并回看原文"
+          ],
+          "en": [
+            "Choose extraction/editing process; inspect result"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "OCR、表格和公式必须核实，不复制专有技能文本"
+          ],
+          "en": [
+            "Verify OCR/tables/formulas; do not redistribute skill text"
+          ]
+        }
+      },
+      "execution": {
+        "inputs": {
+          "zh": [
+            "有权限处理的 PDF 及目标操作"
+          ],
+          "en": [
+            "Authorized PDF and requested operation"
+          ]
+        },
+        "outputs": {
+          "zh": [
+            "提取结果或修改后的 PDF"
+          ],
+          "en": [
+            "Extracted materials or modified PDF"
+          ]
+        },
+        "requirements": {
+          "zh": [
+            "pypdf、OCR 等取决于任务；须核对授权"
+          ],
+          "en": [
+            "pypdf/OCR as needed; review proprietary license"
+          ]
+        },
+        "steps": {
+          "zh": [
+            "选择解析或编辑流程",
+            "完成并回看原文"
+          ],
+          "en": [
+            "Choose extraction/editing process",
+            "inspect result"
+          ]
+        },
+        "checks": {
+          "zh": [
+            "OCR、表格和公式必须核实，不复制专有技能文本"
+          ],
+          "en": [
+            "Verify OCR/tables/formulas; do not redistribute skill text"
+          ]
+        },
+        "source_file_sha": "d3e046a5ae107a6cb23cfb16c219837094ab35d3",
+        "source_checked_on": "2026-10-26",
+        "scope": "source-metadata-reviewed-not-executed"
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "anthropics/skills",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 183893,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-SKILL-md-inspected-not-executed",
+        "selection_reason": {
+          "zh": "处理 PDF 提取、合并、分割、OCR；源技能为专有许可。",
+          "en": "PDF extraction, merge, split and OCR; proprietary source license."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "anthropic-pptx",
+      "title": "PPTX · 可编辑幻灯片 Skill",
+      "kind": "workflow",
+      "stages": [
+        "communication"
+      ],
+      "domains": [
+        "general"
+      ],
+      "topics": [
+        "project-publishing",
+        "scientific-visualization"
+      ],
+      "tasks": [
+        "agent-skills",
+        "project-publishing",
+        "scientific-visualization"
+      ],
+      "description": {
+        "zh": "新建、阅读和编辑 PPTX 的具体方法；源技能有专有许可。",
+        "en": "Create, read and edit PPTX; skill text has proprietary terms."
+      },
+      "keywords": {
+        "zh": [
+          "pptx",
+          "PPTX · 可编辑幻灯片 Skill",
+          "project-publishing",
+          "scientific-visualization"
+        ],
+        "en": [
+          "pptx",
+          "PPTX · 可编辑幻灯片 Skill",
+          "project-publishing",
+          "scientific-visualization"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/anthropics/skills/blob/main/skills/pptx/SKILL.md",
+        "repository": "https://github.com/anthropics/skills"
+      },
+      "rights": {
+        "reuse": "external reference only; upstream skill has proprietary license",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "提纲、模板和已有可编辑素材"
+          ],
+          "en": [
+            "Outline, template and editable inputs"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "区分新建与编辑；渲染缩略图核对排版"
+          ],
+          "en": [
+            "Choose create/edit; render previews for layout audit"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "图片粘贴不等于矢量可编辑，避免素材侵权"
+          ],
+          "en": [
+            "Pasted image is not editable vector content; respect rights"
+          ]
+        }
+      },
+      "execution": {
+        "inputs": {
+          "zh": [
+            "提纲、模板和已有可编辑素材"
+          ],
+          "en": [
+            "Outline, template and editable inputs"
+          ]
+        },
+        "outputs": {
+          "zh": [
+            "可编辑 PPTX、页面预览与版式检查"
+          ],
+          "en": [
+            "Editable deck, preview and layout check"
+          ]
+        },
+        "requirements": {
+          "zh": [
+            "Node/Python 依操作选择；检查源文件授权"
+          ],
+          "en": [
+            "Node/Python by task; inspect license"
+          ]
+        },
+        "steps": {
+          "zh": [
+            "区分新建与编辑",
+            "渲染缩略图核对排版"
+          ],
+          "en": [
+            "Choose create/edit",
+            "render previews for layout audit"
+          ]
+        },
+        "checks": {
+          "zh": [
+            "图片粘贴不等于矢量可编辑，避免素材侵权"
+          ],
+          "en": [
+            "Pasted image is not editable vector content; respect rights"
+          ]
+        },
+        "source_file_sha": "41cd2306977f269bb1d8169a9643b35053aa66bd",
+        "source_checked_on": "2026-10-26",
+        "scope": "source-metadata-reviewed-not-executed"
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "anthropics/skills",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 183893,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-SKILL-md-inspected-not-executed",
+        "selection_reason": {
+          "zh": "新建、阅读和编辑 PPTX 的具体方法；源技能有专有许可。",
+          "en": "Create, read and edit PPTX; skill text has proprietary terms."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "openai-jupyter-notebook",
+      "title": "Jupyter Notebook · 可复现实验 Skill",
+      "kind": "workflow",
+      "stages": [
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "ml-systems",
+        "agents"
+      ],
+      "topics": [
+        "reproducible-experiments",
+        "experiment-design"
+      ],
+      "tasks": [
+        "agent-skills",
+        "reproducible-experiments",
+        "experiment-design"
+      ],
+      "description": {
+        "zh": "组织能从头执行的实验 Notebook 和解释单元格。",
+        "en": "Structure reproducible experimental notebooks and cells."
+      },
+      "keywords": {
+        "zh": [
+          "jupyter-notebook",
+          "Jupyter Notebook · 可复现实验 Skill",
+          "reproducible-experiments",
+          "experiment-design"
+        ],
+        "en": [
+          "jupyter-notebook",
+          "Jupyter Notebook · 可复现实验 Skill",
+          "reproducible-experiments",
+          "experiment-design"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/openai/skills/blob/main/skills/.curated/jupyter-notebook/SKILL.md",
+        "repository": "https://github.com/openai/skills"
+      },
+      "rights": {
+        "reuse": "external reference only; inspect upstream license",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "实验目标、代码、数据与运行环境"
+          ],
+          "en": [
+            "Experiment, code, data and environment"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "区分实验和教程；按依赖顺序运行所有单元格"
+          ],
+          "en": [
+            "Choose experiment/tutorial; run cells in dependency order"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "核实随机种子、环境与数据版本"
+          ],
+          "en": [
+            "Verify seeds, environment and data revisions"
+          ]
+        }
+      },
+      "execution": {
+        "inputs": {
+          "zh": [
+            "实验目标、代码、数据与运行环境"
+          ],
+          "en": [
+            "Experiment, code, data and environment"
+          ]
+        },
+        "outputs": {
+          "zh": [
+            "可从头运行的 ipynb 与结果"
+          ],
+          "en": [
+            "Runnable ipynb with documented results"
+          ]
+        },
+        "requirements": {
+          "zh": [
+            "Python/Jupyter 与辅助脚本安装位置"
+          ],
+          "en": [
+            "Python/Jupyter and skill helper path"
+          ]
+        },
+        "steps": {
+          "zh": [
+            "区分实验和教程",
+            "按依赖顺序运行所有单元格"
+          ],
+          "en": [
+            "Choose experiment/tutorial",
+            "run cells in dependency order"
+          ]
+        },
+        "checks": {
+          "zh": [
+            "核实随机种子、环境与数据版本"
+          ],
+          "en": [
+            "Verify seeds, environment and data revisions"
+          ]
+        },
+        "source_file_sha": "e1d1748cac9e9313c8229763751714628d1f6853",
+        "source_checked_on": "2026-10-26",
+        "scope": "source-metadata-reviewed-not-executed"
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "openai/skills",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 28311,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-SKILL-md-inspected-not-executed",
+        "selection_reason": {
+          "zh": "组织能从头执行的实验 Notebook 和解释单元格。",
+          "en": "Structure reproducible experimental notebooks and cells."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "superpowers-writing-plans",
+      "title": "Writing Plans · 细粒度工程计划 Skill",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "software-engineering",
+        "reproducible-experiments"
+      ],
+      "tasks": [
+        "agent-skills",
+        "software-engineering",
+        "reproducible-experiments"
+      ],
+      "description": {
+        "zh": "按文件、步骤和测试拆解已确认规格。",
+        "en": "File-specific steps and tests from an approved spec."
+      },
+      "keywords": {
+        "zh": [
+          "writing-plans",
+          "Writing Plans · 细粒度工程计划 Skill",
+          "software-engineering",
+          "reproducible-experiments"
+        ],
+        "en": [
+          "writing-plans",
+          "Writing Plans · 细粒度工程计划 Skill",
+          "software-engineering",
+          "reproducible-experiments"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/obra/superpowers/blob/main/skills/writing-plans/SKILL.md",
+        "repository": "https://github.com/obra/superpowers"
+      },
+      "rights": {
+        "reuse": "external reference only; inspect upstream license",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "规格、仓库结构和验收目标"
+          ],
+          "en": [
+            "Spec, repository and acceptance criteria"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "分解独立子任务；写清路径与测试命令"
+          ],
+          "en": [
+            "Split tasks; specify paths and tests"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "计划不等于实现，不写不存在的依赖或结果"
+          ],
+          "en": [
+            "Plan is not implementation; do not invent tests"
+          ]
+        }
+      },
+      "execution": {
+        "inputs": {
+          "zh": [
+            "规格、仓库结构和验收目标"
+          ],
+          "en": [
+            "Spec, repository and acceptance criteria"
+          ]
+        },
+        "outputs": {
+          "zh": [
+            "可交接、可验证的实施计划"
+          ],
+          "en": [
+            "Handoff-ready verifiable plan"
+          ]
+        },
+        "requirements": {
+          "zh": [
+            "无需特殊依赖；要求真实代码上下文"
+          ],
+          "en": [
+            "No special dependency; requires repo context"
+          ]
+        },
+        "steps": {
+          "zh": [
+            "分解独立子任务",
+            "写清路径与测试命令"
+          ],
+          "en": [
+            "Split tasks",
+            "specify paths and tests"
+          ]
+        },
+        "checks": {
+          "zh": [
+            "计划不等于实现，不写不存在的依赖或结果"
+          ],
+          "en": [
+            "Plan is not implementation; do not invent tests"
+          ]
+        },
+        "source_file_sha": "4cf0275d88d67aa4ef09f4bbca9970ed6ff74a00",
+        "source_checked_on": "2026-10-26",
+        "scope": "source-metadata-reviewed-not-executed"
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "obra/superpowers",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 305372,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-SKILL-md-inspected-not-executed",
+        "selection_reason": {
+          "zh": "按文件、步骤和测试拆解已确认规格。",
+          "en": "File-specific steps and tests from an approved spec."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "superpowers-test-driven-development",
+      "title": "Test-Driven Development · TDD Skill",
+      "kind": "workflow",
+      "stages": [
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "software-engineering",
+        "reproducible-experiments"
+      ],
+      "tasks": [
+        "agent-skills",
+        "software-engineering",
+        "reproducible-experiments"
+      ],
+      "description": {
+        "zh": "失败测试 → 最小实现 → 重构的工程闭环。",
+        "en": "Red-green-refactor development with test evidence."
+      },
+      "keywords": {
+        "zh": [
+          "test-driven-development",
+          "Test-Driven Development · TDD Skill",
+          "software-engineering",
+          "reproducible-experiments"
+        ],
+        "en": [
+          "test-driven-development",
+          "Test-Driven Development · TDD Skill",
+          "software-engineering",
+          "reproducible-experiments"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md",
+        "repository": "https://github.com/obra/superpowers"
+      },
+      "rights": {
+        "reuse": "external reference only; inspect upstream license",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "可复现问题、期望行为与测试工具"
+          ],
+          "en": [
+            "Reproducible bug, desired behavior and test runner"
+          ]
+        },
+        "learn": {
+          "zh": [
+            "写失败测试并确认失败；修复、重构和回归"
+          ],
+          "en": [
+            "Make test fail; fix, refactor and rerun"
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不能将少量测试当作完备正确性证明"
+          ],
+          "en": [
+            "Passing some tests is not universal correctness"
+          ]
+        }
+      },
+      "execution": {
+        "inputs": {
+          "zh": [
+            "可复现问题、期望行为与测试工具"
+          ],
+          "en": [
+            "Reproducible bug, desired behavior and test runner"
+          ]
+        },
+        "outputs": {
+          "zh": [
+            "先失败后通过的测试与实现"
+          ],
+          "en": [
+            "Failing then passing tests and implementation"
+          ]
+        },
+        "requirements": {
+          "zh": [
+            "真实可执行测试环境"
+          ],
+          "en": [
+            "Working test environment"
+          ]
+        },
+        "steps": {
+          "zh": [
+            "写失败测试并确认失败",
+            "修复、重构和回归"
+          ],
+          "en": [
+            "Make test fail",
+            "fix, refactor and rerun"
+          ]
+        },
+        "checks": {
+          "zh": [
+            "不能将少量测试当作完备正确性证明"
+          ],
+          "en": [
+            "Passing some tests is not universal correctness"
+          ]
+        },
+        "source_file_sha": "46838cc9e893c06259e3bdad0fc2425b36242f15",
+        "source_checked_on": "2026-10-26",
+        "scope": "source-metadata-reviewed-not-executed"
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "obra/superpowers",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 305372,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-SKILL-md-inspected-not-executed",
+        "selection_reason": {
+          "zh": "失败测试 → 最小实现 → 重构的工程闭环。",
+          "en": "Red-green-refactor development with test evidence."
         },
         "editorial_added_on": "2026-10-26"
       },

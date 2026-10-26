@@ -1,0 +1,139 @@
+{
+  "id": "kdense-scientific-visualization",
+  "title": "Scientific Visualization · 科研证据图",
+  "kind": "workflow",
+  "stages": [
+    "evaluation",
+    "writing"
+  ],
+  "domains": [
+    "vision",
+    "ml-systems"
+  ],
+  "topics": [
+    "scientific-visualization",
+    "reproducible-experiments"
+  ],
+  "tasks": [
+    "agent-skills",
+    "scientific-visualization",
+    "reproducible-experiments"
+  ],
+  "description": {
+    "zh": "保留数据真实性、误差与可读性的科研图形流程。",
+    "en": "Evidence-faithful plots with uncertainty and legibility checks."
+  },
+  "keywords": {
+    "zh": [
+      "scientific-visualization",
+      "Scientific Visualization · 科研证据图",
+      "scientific-visualization",
+      "reproducible-experiments"
+    ],
+    "en": [
+      "scientific-visualization",
+      "Scientific Visualization · 科研证据图",
+      "scientific-visualization",
+      "reproducible-experiments"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-visualization/SKILL.md",
+    "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+  },
+  "rights": {
+    "reuse": "external reference only; inspect upstream license",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "原始表格、指标、目标图尺寸"
+      ],
+      "en": [
+        "Raw data, metrics and output dimensions"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "确认数据变换；渲染实际尺寸并检查标注"
+      ],
+      "en": [
+        "Record transformations; render and inspect at target size"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不得隐藏失败或改变数据，和原始表格逐项核对"
+      ],
+      "en": [
+        "Never hide failures; compare plotted values to source"
+      ]
+    }
+  },
+  "execution": {
+    "inputs": {
+      "zh": [
+        "原始表格、指标、目标图尺寸"
+      ],
+      "en": [
+        "Raw data, metrics and output dimensions"
+      ]
+    },
+    "outputs": {
+      "zh": [
+        "绘图代码与经过实尺寸复核的图片"
+      ],
+      "en": [
+        "Plot source and verified delivered figure"
+      ]
+    },
+    "requirements": {
+      "zh": [
+        "Python 3.11+ 与绘图库；导出工具依任务配置"
+      ],
+      "en": [
+        "Python 3.11+ and plotting libraries; export tooling varies"
+      ]
+    },
+    "steps": {
+      "zh": [
+        "确认数据变换",
+        "渲染实际尺寸并检查标注"
+      ],
+      "en": [
+        "Record transformations",
+        "render and inspect at target size"
+      ]
+    },
+    "checks": {
+      "zh": [
+        "不得隐藏失败或改变数据，和原始表格逐项核对"
+      ],
+      "en": [
+        "Never hide failures; compare plotted values to source"
+      ]
+    },
+    "source_file_sha": "44ea38c24fb5015535254bfd9b5ae9a856195408",
+    "source_checked_on": "2026-10-26",
+    "scope": "source-metadata-reviewed-not-executed"
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "K-Dense-AI/scientific-agent-skills",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 54702,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-SKILL-md-inspected-not-executed",
+    "selection_reason": {
+      "zh": "保留数据真实性、误差与可读性的科研图形流程。",
+      "en": "Evidence-faithful plots with uncertainty and legibility checks."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

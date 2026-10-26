@@ -1,0 +1,135 @@
+{
+  "id": "anthropic-pdf",
+  "title": "PDF Processing · PDF 文档 Skill",
+  "kind": "workflow",
+  "stages": [
+    "research",
+    "writing"
+  ],
+  "domains": [
+    "general",
+    "nlp"
+  ],
+  "topics": [
+    "document-parsing"
+  ],
+  "tasks": [
+    "agent-skills",
+    "document-parsing"
+  ],
+  "description": {
+    "zh": "处理 PDF 提取、合并、分割、OCR；源技能为专有许可。",
+    "en": "PDF extraction, merge, split and OCR; proprietary source license."
+  },
+  "keywords": {
+    "zh": [
+      "pdf",
+      "PDF Processing · PDF 文档 Skill",
+      "document-parsing"
+    ],
+    "en": [
+      "pdf",
+      "PDF Processing · PDF 文档 Skill",
+      "document-parsing"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/anthropics/skills/blob/main/skills/pdf/SKILL.md",
+    "repository": "https://github.com/anthropics/skills"
+  },
+  "rights": {
+    "reuse": "external reference only; upstream skill has proprietary license",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "有权限处理的 PDF 及目标操作"
+      ],
+      "en": [
+        "Authorized PDF and requested operation"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "选择解析或编辑流程；完成并回看原文"
+      ],
+      "en": [
+        "Choose extraction/editing process; inspect result"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "OCR、表格和公式必须核实，不复制专有技能文本"
+      ],
+      "en": [
+        "Verify OCR/tables/formulas; do not redistribute skill text"
+      ]
+    }
+  },
+  "execution": {
+    "inputs": {
+      "zh": [
+        "有权限处理的 PDF 及目标操作"
+      ],
+      "en": [
+        "Authorized PDF and requested operation"
+      ]
+    },
+    "outputs": {
+      "zh": [
+        "提取结果或修改后的 PDF"
+      ],
+      "en": [
+        "Extracted materials or modified PDF"
+      ]
+    },
+    "requirements": {
+      "zh": [
+        "pypdf、OCR 等取决于任务；须核对授权"
+      ],
+      "en": [
+        "pypdf/OCR as needed; review proprietary license"
+      ]
+    },
+    "steps": {
+      "zh": [
+        "选择解析或编辑流程",
+        "完成并回看原文"
+      ],
+      "en": [
+        "Choose extraction/editing process",
+        "inspect result"
+      ]
+    },
+    "checks": {
+      "zh": [
+        "OCR、表格和公式必须核实，不复制专有技能文本"
+      ],
+      "en": [
+        "Verify OCR/tables/formulas; do not redistribute skill text"
+      ]
+    },
+    "source_file_sha": "d3e046a5ae107a6cb23cfb16c219837094ab35d3",
+    "source_checked_on": "2026-10-26",
+    "scope": "source-metadata-reviewed-not-executed"
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "anthropics/skills",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 183893,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-SKILL-md-inspected-not-executed",
+    "selection_reason": {
+      "zh": "处理 PDF 提取、合并、分割、OCR；源技能为专有许可。",
+      "en": "PDF extraction, merge, split and OCR; proprietary source license."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

@@ -1,0 +1,139 @@
+{
+  "id": "kdense-experimental-design",
+  "title": "Experimental Design · 实验设计与分组",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "experiments"
+  ],
+  "domains": [
+    "ml-systems",
+    "rl"
+  ],
+  "topics": [
+    "experiment-design",
+    "reproducible-experiments"
+  ],
+  "tasks": [
+    "agent-skills",
+    "experiment-design",
+    "reproducible-experiments"
+  ],
+  "description": {
+    "zh": "实验前规划对照、随机化、阻断和有效重复。",
+    "en": "Plan controls, randomization, blocking and replication."
+  },
+  "keywords": {
+    "zh": [
+      "experimental-design",
+      "Experimental Design · 实验设计与分组",
+      "experiment-design",
+      "reproducible-experiments"
+    ],
+    "en": [
+      "experimental-design",
+      "Experimental Design · 实验设计与分组",
+      "experiment-design",
+      "reproducible-experiments"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/experimental-design/SKILL.md",
+    "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+  },
+  "rights": {
+    "reuse": "external reference only; inspect upstream license",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "假设、实验单位、变量和预算"
+      ],
+      "en": [
+        "Hypothesis, units, factors and budget"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "界定效应与实验单位；排定分组与分析口径"
+      ],
+      "en": [
+        "Define effect and units; specify assignments and analysis"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "警惕伪重复、数据泄漏；功效分析应单独执行"
+      ],
+      "en": [
+        "Check pseudoreplication/leakage; power needs separate analysis"
+      ]
+    }
+  },
+  "execution": {
+    "inputs": {
+      "zh": [
+        "假设、实验单位、变量和预算"
+      ],
+      "en": [
+        "Hypothesis, units, factors and budget"
+      ]
+    },
+    "outputs": {
+      "zh": [
+        "实验分组表、随机化和混杂控制方案"
+      ],
+      "en": [
+        "Assignment table, randomization and confounder plan"
+      ]
+    },
+    "requirements": {
+      "zh": [
+        "Python 3.12+、numpy、pandas、pydoe"
+      ],
+      "en": [
+        "Python 3.12+, numpy, pandas, pydoe"
+      ]
+    },
+    "steps": {
+      "zh": [
+        "界定效应与实验单位",
+        "排定分组与分析口径"
+      ],
+      "en": [
+        "Define effect and units",
+        "specify assignments and analysis"
+      ]
+    },
+    "checks": {
+      "zh": [
+        "警惕伪重复、数据泄漏；功效分析应单独执行"
+      ],
+      "en": [
+        "Check pseudoreplication/leakage; power needs separate analysis"
+      ]
+    },
+    "source_file_sha": "ee14f9ed795c791ac80e3ea946858d97d09c3e50",
+    "source_checked_on": "2026-10-26",
+    "scope": "source-metadata-reviewed-not-executed"
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "K-Dense-AI/scientific-agent-skills",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 54702,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-SKILL-md-inspected-not-executed",
+    "selection_reason": {
+      "zh": "实验前规划对照、随机化、阻断和有效重复。",
+      "en": "Plan controls, randomization, blocking and replication."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

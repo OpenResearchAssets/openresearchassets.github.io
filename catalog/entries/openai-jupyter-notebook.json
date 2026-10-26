@@ -1,0 +1,139 @@
+{
+  "id": "openai-jupyter-notebook",
+  "title": "Jupyter Notebook · 可复现实验 Skill",
+  "kind": "workflow",
+  "stages": [
+    "experiments",
+    "evaluation"
+  ],
+  "domains": [
+    "ml-systems",
+    "agents"
+  ],
+  "topics": [
+    "reproducible-experiments",
+    "experiment-design"
+  ],
+  "tasks": [
+    "agent-skills",
+    "reproducible-experiments",
+    "experiment-design"
+  ],
+  "description": {
+    "zh": "组织能从头执行的实验 Notebook 和解释单元格。",
+    "en": "Structure reproducible experimental notebooks and cells."
+  },
+  "keywords": {
+    "zh": [
+      "jupyter-notebook",
+      "Jupyter Notebook · 可复现实验 Skill",
+      "reproducible-experiments",
+      "experiment-design"
+    ],
+    "en": [
+      "jupyter-notebook",
+      "Jupyter Notebook · 可复现实验 Skill",
+      "reproducible-experiments",
+      "experiment-design"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/openai/skills/blob/main/skills/.curated/jupyter-notebook/SKILL.md",
+    "repository": "https://github.com/openai/skills"
+  },
+  "rights": {
+    "reuse": "external reference only; inspect upstream license",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "实验目标、代码、数据与运行环境"
+      ],
+      "en": [
+        "Experiment, code, data and environment"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "区分实验和教程；按依赖顺序运行所有单元格"
+      ],
+      "en": [
+        "Choose experiment/tutorial; run cells in dependency order"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "核实随机种子、环境与数据版本"
+      ],
+      "en": [
+        "Verify seeds, environment and data revisions"
+      ]
+    }
+  },
+  "execution": {
+    "inputs": {
+      "zh": [
+        "实验目标、代码、数据与运行环境"
+      ],
+      "en": [
+        "Experiment, code, data and environment"
+      ]
+    },
+    "outputs": {
+      "zh": [
+        "可从头运行的 ipynb 与结果"
+      ],
+      "en": [
+        "Runnable ipynb with documented results"
+      ]
+    },
+    "requirements": {
+      "zh": [
+        "Python/Jupyter 与辅助脚本安装位置"
+      ],
+      "en": [
+        "Python/Jupyter and skill helper path"
+      ]
+    },
+    "steps": {
+      "zh": [
+        "区分实验和教程",
+        "按依赖顺序运行所有单元格"
+      ],
+      "en": [
+        "Choose experiment/tutorial",
+        "run cells in dependency order"
+      ]
+    },
+    "checks": {
+      "zh": [
+        "核实随机种子、环境与数据版本"
+      ],
+      "en": [
+        "Verify seeds, environment and data revisions"
+      ]
+    },
+    "source_file_sha": "e1d1748cac9e9313c8229763751714628d1f6853",
+    "source_checked_on": "2026-10-26",
+    "scope": "source-metadata-reviewed-not-executed"
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "openai/skills",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 28311,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-SKILL-md-inspected-not-executed",
+    "selection_reason": {
+      "zh": "组织能从头执行的实验 Notebook 和解释单元格。",
+      "en": "Structure reproducible experimental notebooks and cells."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

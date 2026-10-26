@@ -145,6 +145,14 @@
       "web-automation": {
         "zh": "网页操作与采集",
         "en": "Browser automation"
+      },
+      "scientific-review": {
+        "zh": "科学审稿与证据核验",
+        "en": "Scientific review & integrity"
+      },
+      "reproducible-experiments": {
+        "zh": "可复现实验",
+        "en": "Reproducible experiments"
       }
     }
   },
@@ -2176,6 +2184,436 @@
       ],
       "description_zh": "要求在宣布任务完成前先运行真实验收命令并检查输出的具体 Skill。",
       "entry": "catalog/entries/superpowers-verification.json"
+    },
+    {
+      "id": "kdense-paper-lookup",
+      "title": "Paper Lookup · 多源学术论文检索",
+      "kind": "workflow",
+      "stages": [
+        "research"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "literature-discovery"
+      ],
+      "tasks": [
+        "agent-skills",
+        "literature-discovery"
+      ],
+      "keywords": [
+        "paper-lookup",
+        "Paper Lookup · 多源学术论文检索",
+        "literature-discovery",
+        "paper-lookup",
+        "Paper Lookup · 多源学术论文检索",
+        "literature-discovery"
+      ],
+      "description_zh": "按 DOI、题名或研究问题检索可追溯论文记录。",
+      "entry": "catalog/entries/kdense-paper-lookup.json"
+    },
+    {
+      "id": "kdense-literature-review",
+      "title": "Literature Review · 可追溯研究综述",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "ideation"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "literature-discovery",
+        "research-automation"
+      ],
+      "tasks": [
+        "agent-skills",
+        "literature-discovery",
+        "research-automation"
+      ],
+      "keywords": [
+        "literature-review",
+        "Literature Review · 可追溯研究综述",
+        "literature-discovery",
+        "research-automation",
+        "literature-review",
+        "Literature Review · 可追溯研究综述",
+        "literature-discovery",
+        "research-automation"
+      ],
+      "description_zh": "定义检索、纳排与证据综合，避免凭印象判断研究空白。",
+      "entry": "catalog/entries/kdense-literature-review.json"
+    },
+    {
+      "id": "kdense-experimental-design",
+      "title": "Experimental Design · 实验设计与分组",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments"
+      ],
+      "domains": [
+        "ml-systems",
+        "rl"
+      ],
+      "topics": [
+        "experiment-design",
+        "reproducible-experiments"
+      ],
+      "tasks": [
+        "agent-skills",
+        "experiment-design",
+        "reproducible-experiments"
+      ],
+      "keywords": [
+        "experimental-design",
+        "Experimental Design · 实验设计与分组",
+        "experiment-design",
+        "reproducible-experiments",
+        "experimental-design",
+        "Experimental Design · 实验设计与分组",
+        "experiment-design",
+        "reproducible-experiments"
+      ],
+      "description_zh": "实验前规划对照、随机化、阻断和有效重复。",
+      "entry": "catalog/entries/kdense-experimental-design.json"
+    },
+    {
+      "id": "kdense-statistical-power",
+      "title": "Statistical Power · 样本量与功效分析",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "evaluation"
+      ],
+      "domains": [
+        "ml-systems",
+        "rl"
+      ],
+      "topics": [
+        "experiment-design",
+        "reproducible-experiments"
+      ],
+      "tasks": [
+        "agent-skills",
+        "experiment-design",
+        "reproducible-experiments"
+      ],
+      "keywords": [
+        "statistical-power",
+        "Statistical Power · 样本量与功效分析",
+        "experiment-design",
+        "reproducible-experiments",
+        "statistical-power",
+        "Statistical Power · 样本量与功效分析",
+        "experiment-design",
+        "reproducible-experiments"
+      ],
+      "description_zh": "估算有实际效应量假设的实验样本量与功效。",
+      "entry": "catalog/entries/kdense-statistical-power.json"
+    },
+    {
+      "id": "kdense-scientific-visualization",
+      "title": "Scientific Visualization · 科研证据图",
+      "kind": "workflow",
+      "stages": [
+        "evaluation",
+        "writing"
+      ],
+      "domains": [
+        "vision",
+        "ml-systems"
+      ],
+      "topics": [
+        "scientific-visualization",
+        "reproducible-experiments"
+      ],
+      "tasks": [
+        "agent-skills",
+        "scientific-visualization",
+        "reproducible-experiments"
+      ],
+      "keywords": [
+        "scientific-visualization",
+        "Scientific Visualization · 科研证据图",
+        "scientific-visualization",
+        "reproducible-experiments",
+        "scientific-visualization",
+        "Scientific Visualization · 科研证据图",
+        "scientific-visualization",
+        "reproducible-experiments"
+      ],
+      "description_zh": "保留数据真实性、误差与可读性的科研图形流程。",
+      "entry": "catalog/entries/kdense-scientific-visualization.json"
+    },
+    {
+      "id": "kdense-scientific-writing",
+      "title": "Scientific Writing · 证据驱动科研写作",
+      "kind": "workflow",
+      "stages": [
+        "writing"
+      ],
+      "domains": [
+        "nlp",
+        "general"
+      ],
+      "topics": [
+        "paper-writing",
+        "scientific-review"
+      ],
+      "tasks": [
+        "agent-skills",
+        "paper-writing",
+        "scientific-review"
+      ],
+      "keywords": [
+        "scientific-writing",
+        "Scientific Writing · 证据驱动科研写作",
+        "paper-writing",
+        "scientific-review",
+        "scientific-writing",
+        "Scientific Writing · 证据驱动科研写作",
+        "paper-writing",
+        "scientific-review"
+      ],
+      "description_zh": "把论点、实验、引文和作者最终责任分开核验。",
+      "entry": "catalog/entries/kdense-scientific-writing.json"
+    },
+    {
+      "id": "kdense-scientific-critical-thinking",
+      "title": "Scientific Critical Thinking · 科学主张质疑",
+      "kind": "workflow",
+      "stages": [
+        "evaluation",
+        "research"
+      ],
+      "domains": [
+        "general",
+        "ml-systems"
+      ],
+      "topics": [
+        "scientific-review",
+        "experiment-design"
+      ],
+      "tasks": [
+        "agent-skills",
+        "scientific-review",
+        "experiment-design"
+      ],
+      "keywords": [
+        "scientific-critical-thinking",
+        "Scientific Critical Thinking · 科学主张质疑",
+        "scientific-review",
+        "experiment-design",
+        "scientific-critical-thinking",
+        "Scientific Critical Thinking · 科学主张质疑",
+        "scientific-review",
+        "experiment-design"
+      ],
+      "description_zh": "分析偏差、混杂和方法漏洞，而不是无依据否定结论。",
+      "entry": "catalog/entries/kdense-scientific-critical-thinking.json"
+    },
+    {
+      "id": "kdense-peer-review",
+      "title": "Peer Review · 科学论文审稿 Skill",
+      "kind": "workflow",
+      "stages": [
+        "evaluation",
+        "writing"
+      ],
+      "domains": [
+        "general",
+        "nlp"
+      ],
+      "topics": [
+        "scientific-review",
+        "paper-writing"
+      ],
+      "tasks": [
+        "agent-skills",
+        "scientific-review",
+        "paper-writing"
+      ],
+      "keywords": [
+        "peer-review",
+        "Peer Review · 科学论文审稿 Skill",
+        "scientific-review",
+        "paper-writing",
+        "peer-review",
+        "Peer Review · 科学论文审稿 Skill",
+        "scientific-review",
+        "paper-writing"
+      ],
+      "description_zh": "对授权的科学稿件执行证据、方法与统计复核。",
+      "entry": "catalog/entries/kdense-peer-review.json"
+    },
+    {
+      "id": "anthropic-pdf",
+      "title": "PDF Processing · PDF 文档 Skill",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "writing"
+      ],
+      "domains": [
+        "general",
+        "nlp"
+      ],
+      "topics": [
+        "document-parsing"
+      ],
+      "tasks": [
+        "agent-skills",
+        "document-parsing"
+      ],
+      "keywords": [
+        "pdf",
+        "PDF Processing · PDF 文档 Skill",
+        "document-parsing",
+        "pdf",
+        "PDF Processing · PDF 文档 Skill",
+        "document-parsing"
+      ],
+      "description_zh": "处理 PDF 提取、合并、分割、OCR；源技能为专有许可。",
+      "entry": "catalog/entries/anthropic-pdf.json"
+    },
+    {
+      "id": "anthropic-pptx",
+      "title": "PPTX · 可编辑幻灯片 Skill",
+      "kind": "workflow",
+      "stages": [
+        "communication"
+      ],
+      "domains": [
+        "general"
+      ],
+      "topics": [
+        "project-publishing",
+        "scientific-visualization"
+      ],
+      "tasks": [
+        "agent-skills",
+        "project-publishing",
+        "scientific-visualization"
+      ],
+      "keywords": [
+        "pptx",
+        "PPTX · 可编辑幻灯片 Skill",
+        "project-publishing",
+        "scientific-visualization",
+        "pptx",
+        "PPTX · 可编辑幻灯片 Skill",
+        "project-publishing",
+        "scientific-visualization"
+      ],
+      "description_zh": "新建、阅读和编辑 PPTX 的具体方法；源技能有专有许可。",
+      "entry": "catalog/entries/anthropic-pptx.json"
+    },
+    {
+      "id": "openai-jupyter-notebook",
+      "title": "Jupyter Notebook · 可复现实验 Skill",
+      "kind": "workflow",
+      "stages": [
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "ml-systems",
+        "agents"
+      ],
+      "topics": [
+        "reproducible-experiments",
+        "experiment-design"
+      ],
+      "tasks": [
+        "agent-skills",
+        "reproducible-experiments",
+        "experiment-design"
+      ],
+      "keywords": [
+        "jupyter-notebook",
+        "Jupyter Notebook · 可复现实验 Skill",
+        "reproducible-experiments",
+        "experiment-design",
+        "jupyter-notebook",
+        "Jupyter Notebook · 可复现实验 Skill",
+        "reproducible-experiments",
+        "experiment-design"
+      ],
+      "description_zh": "组织能从头执行的实验 Notebook 和解释单元格。",
+      "entry": "catalog/entries/openai-jupyter-notebook.json"
+    },
+    {
+      "id": "superpowers-writing-plans",
+      "title": "Writing Plans · 细粒度工程计划 Skill",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "software-engineering",
+        "reproducible-experiments"
+      ],
+      "tasks": [
+        "agent-skills",
+        "software-engineering",
+        "reproducible-experiments"
+      ],
+      "keywords": [
+        "writing-plans",
+        "Writing Plans · 细粒度工程计划 Skill",
+        "software-engineering",
+        "reproducible-experiments",
+        "writing-plans",
+        "Writing Plans · 细粒度工程计划 Skill",
+        "software-engineering",
+        "reproducible-experiments"
+      ],
+      "description_zh": "按文件、步骤和测试拆解已确认规格。",
+      "entry": "catalog/entries/superpowers-writing-plans.json"
+    },
+    {
+      "id": "superpowers-test-driven-development",
+      "title": "Test-Driven Development · TDD Skill",
+      "kind": "workflow",
+      "stages": [
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "software-engineering",
+        "reproducible-experiments"
+      ],
+      "tasks": [
+        "agent-skills",
+        "software-engineering",
+        "reproducible-experiments"
+      ],
+      "keywords": [
+        "test-driven-development",
+        "Test-Driven Development · TDD Skill",
+        "software-engineering",
+        "reproducible-experiments",
+        "test-driven-development",
+        "Test-Driven Development · TDD Skill",
+        "software-engineering",
+        "reproducible-experiments"
+      ],
+      "description_zh": "失败测试 → 最小实现 → 重构的工程闭环。",
+      "entry": "catalog/entries/superpowers-test-driven-development.json"
     }
   ]
 }

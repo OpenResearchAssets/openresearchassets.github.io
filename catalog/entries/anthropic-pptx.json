@@ -1,0 +1,137 @@
+{
+  "id": "anthropic-pptx",
+  "title": "PPTX · 可编辑幻灯片 Skill",
+  "kind": "workflow",
+  "stages": [
+    "communication"
+  ],
+  "domains": [
+    "general"
+  ],
+  "topics": [
+    "project-publishing",
+    "scientific-visualization"
+  ],
+  "tasks": [
+    "agent-skills",
+    "project-publishing",
+    "scientific-visualization"
+  ],
+  "description": {
+    "zh": "新建、阅读和编辑 PPTX 的具体方法；源技能有专有许可。",
+    "en": "Create, read and edit PPTX; skill text has proprietary terms."
+  },
+  "keywords": {
+    "zh": [
+      "pptx",
+      "PPTX · 可编辑幻灯片 Skill",
+      "project-publishing",
+      "scientific-visualization"
+    ],
+    "en": [
+      "pptx",
+      "PPTX · 可编辑幻灯片 Skill",
+      "project-publishing",
+      "scientific-visualization"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/anthropics/skills/blob/main/skills/pptx/SKILL.md",
+    "repository": "https://github.com/anthropics/skills"
+  },
+  "rights": {
+    "reuse": "external reference only; upstream skill has proprietary license",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "提纲、模板和已有可编辑素材"
+      ],
+      "en": [
+        "Outline, template and editable inputs"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "区分新建与编辑；渲染缩略图核对排版"
+      ],
+      "en": [
+        "Choose create/edit; render previews for layout audit"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "图片粘贴不等于矢量可编辑，避免素材侵权"
+      ],
+      "en": [
+        "Pasted image is not editable vector content; respect rights"
+      ]
+    }
+  },
+  "execution": {
+    "inputs": {
+      "zh": [
+        "提纲、模板和已有可编辑素材"
+      ],
+      "en": [
+        "Outline, template and editable inputs"
+      ]
+    },
+    "outputs": {
+      "zh": [
+        "可编辑 PPTX、页面预览与版式检查"
+      ],
+      "en": [
+        "Editable deck, preview and layout check"
+      ]
+    },
+    "requirements": {
+      "zh": [
+        "Node/Python 依操作选择；检查源文件授权"
+      ],
+      "en": [
+        "Node/Python by task; inspect license"
+      ]
+    },
+    "steps": {
+      "zh": [
+        "区分新建与编辑",
+        "渲染缩略图核对排版"
+      ],
+      "en": [
+        "Choose create/edit",
+        "render previews for layout audit"
+      ]
+    },
+    "checks": {
+      "zh": [
+        "图片粘贴不等于矢量可编辑，避免素材侵权"
+      ],
+      "en": [
+        "Pasted image is not editable vector content; respect rights"
+      ]
+    },
+    "source_file_sha": "41cd2306977f269bb1d8169a9643b35053aa66bd",
+    "source_checked_on": "2026-10-26",
+    "scope": "source-metadata-reviewed-not-executed"
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "anthropics/skills",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 183893,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-SKILL-md-inspected-not-executed",
+    "selection_reason": {
+      "zh": "新建、阅读和编辑 PPTX 的具体方法；源技能有专有许可。",
+      "en": "Create, read and edit PPTX; skill text has proprietary terms."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

@@ -1,0 +1,138 @@
+{
+  "id": "kdense-scientific-writing",
+  "title": "Scientific Writing · 证据驱动科研写作",
+  "kind": "workflow",
+  "stages": [
+    "writing"
+  ],
+  "domains": [
+    "nlp",
+    "general"
+  ],
+  "topics": [
+    "paper-writing",
+    "scientific-review"
+  ],
+  "tasks": [
+    "agent-skills",
+    "paper-writing",
+    "scientific-review"
+  ],
+  "description": {
+    "zh": "把论点、实验、引文和作者最终责任分开核验。",
+    "en": "Scientific writing with claim-evidence traceability and approval."
+  },
+  "keywords": {
+    "zh": [
+      "scientific-writing",
+      "Scientific Writing · 证据驱动科研写作",
+      "paper-writing",
+      "scientific-review"
+    ],
+    "en": [
+      "scientific-writing",
+      "Scientific Writing · 证据驱动科研写作",
+      "paper-writing",
+      "scientific-review"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-writing/SKILL.md",
+    "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+  },
+  "rights": {
+    "reuse": "external reference only; inspect upstream license",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "主张、真实实验与参考文献"
+      ],
+      "en": [
+        "Claims, actual results and references"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "逐段关联证据；分开写作、事实检查与审批"
+      ],
+      "en": [
+        "Ground each claim; separate drafting, checks and approval"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不得编造论文或数据，未授权材料不得上传"
+      ],
+      "en": [
+        "Never invent evidence or expose unauthorized materials"
+      ]
+    }
+  },
+  "execution": {
+    "inputs": {
+      "zh": [
+        "主张、真实实验与参考文献"
+      ],
+      "en": [
+        "Claims, actual results and references"
+      ]
+    },
+    "outputs": {
+      "zh": [
+        "稿件草稿、证据对应表与引用检查"
+      ],
+      "en": [
+        "Draft, claim-evidence map and citations check"
+      ]
+    },
+    "requirements": {
+      "zh": [
+        "核心流程无需网络；可选 Python 3.11+ 本地校验"
+      ],
+      "en": [
+        "Core guidance offline; optional Python 3.11+ checks"
+      ]
+    },
+    "steps": {
+      "zh": [
+        "逐段关联证据",
+        "分开写作、事实检查与审批"
+      ],
+      "en": [
+        "Ground each claim",
+        "separate drafting, checks and approval"
+      ]
+    },
+    "checks": {
+      "zh": [
+        "不得编造论文或数据，未授权材料不得上传"
+      ],
+      "en": [
+        "Never invent evidence or expose unauthorized materials"
+      ]
+    },
+    "source_file_sha": "446993fcd4716ae54ab74bc2a91e3bc5af5235c7",
+    "source_checked_on": "2026-10-26",
+    "scope": "source-metadata-reviewed-not-executed"
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "K-Dense-AI/scientific-agent-skills",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 54702,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-SKILL-md-inspected-not-executed",
+    "selection_reason": {
+      "zh": "把论点、实验、引文和作者最终责任分开核验。",
+      "en": "Scientific writing with claim-evidence traceability and approval."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

@@ -1,0 +1,139 @@
+{
+  "id": "superpowers-test-driven-development",
+  "title": "Test-Driven Development · TDD Skill",
+  "kind": "workflow",
+  "stages": [
+    "experiments",
+    "evaluation"
+  ],
+  "domains": [
+    "agents",
+    "ml-systems"
+  ],
+  "topics": [
+    "software-engineering",
+    "reproducible-experiments"
+  ],
+  "tasks": [
+    "agent-skills",
+    "software-engineering",
+    "reproducible-experiments"
+  ],
+  "description": {
+    "zh": "失败测试 → 最小实现 → 重构的工程闭环。",
+    "en": "Red-green-refactor development with test evidence."
+  },
+  "keywords": {
+    "zh": [
+      "test-driven-development",
+      "Test-Driven Development · TDD Skill",
+      "software-engineering",
+      "reproducible-experiments"
+    ],
+    "en": [
+      "test-driven-development",
+      "Test-Driven Development · TDD Skill",
+      "software-engineering",
+      "reproducible-experiments"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md",
+    "repository": "https://github.com/obra/superpowers"
+  },
+  "rights": {
+    "reuse": "external reference only; inspect upstream license",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "可复现问题、期望行为与测试工具"
+      ],
+      "en": [
+        "Reproducible bug, desired behavior and test runner"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "写失败测试并确认失败；修复、重构和回归"
+      ],
+      "en": [
+        "Make test fail; fix, refactor and rerun"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不能将少量测试当作完备正确性证明"
+      ],
+      "en": [
+        "Passing some tests is not universal correctness"
+      ]
+    }
+  },
+  "execution": {
+    "inputs": {
+      "zh": [
+        "可复现问题、期望行为与测试工具"
+      ],
+      "en": [
+        "Reproducible bug, desired behavior and test runner"
+      ]
+    },
+    "outputs": {
+      "zh": [
+        "先失败后通过的测试与实现"
+      ],
+      "en": [
+        "Failing then passing tests and implementation"
+      ]
+    },
+    "requirements": {
+      "zh": [
+        "真实可执行测试环境"
+      ],
+      "en": [
+        "Working test environment"
+      ]
+    },
+    "steps": {
+      "zh": [
+        "写失败测试并确认失败",
+        "修复、重构和回归"
+      ],
+      "en": [
+        "Make test fail",
+        "fix, refactor and rerun"
+      ]
+    },
+    "checks": {
+      "zh": [
+        "不能将少量测试当作完备正确性证明"
+      ],
+      "en": [
+        "Passing some tests is not universal correctness"
+      ]
+    },
+    "source_file_sha": "46838cc9e893c06259e3bdad0fc2425b36242f15",
+    "source_checked_on": "2026-10-26",
+    "scope": "source-metadata-reviewed-not-executed"
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "obra/superpowers",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 305372,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-SKILL-md-inspected-not-executed",
+    "selection_reason": {
+      "zh": "失败测试 → 最小实现 → 重构的工程闭环。",
+      "en": "Red-green-refactor development with test evidence."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

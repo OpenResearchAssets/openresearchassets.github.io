@@ -1,0 +1,139 @@
+{
+  "id": "superpowers-writing-plans",
+  "title": "Writing Plans · 细粒度工程计划 Skill",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "experiments"
+  ],
+  "domains": [
+    "agents",
+    "ml-systems"
+  ],
+  "topics": [
+    "software-engineering",
+    "reproducible-experiments"
+  ],
+  "tasks": [
+    "agent-skills",
+    "software-engineering",
+    "reproducible-experiments"
+  ],
+  "description": {
+    "zh": "按文件、步骤和测试拆解已确认规格。",
+    "en": "File-specific steps and tests from an approved spec."
+  },
+  "keywords": {
+    "zh": [
+      "writing-plans",
+      "Writing Plans · 细粒度工程计划 Skill",
+      "software-engineering",
+      "reproducible-experiments"
+    ],
+    "en": [
+      "writing-plans",
+      "Writing Plans · 细粒度工程计划 Skill",
+      "software-engineering",
+      "reproducible-experiments"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/obra/superpowers/blob/main/skills/writing-plans/SKILL.md",
+    "repository": "https://github.com/obra/superpowers"
+  },
+  "rights": {
+    "reuse": "external reference only; inspect upstream license",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "规格、仓库结构和验收目标"
+      ],
+      "en": [
+        "Spec, repository and acceptance criteria"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "分解独立子任务；写清路径与测试命令"
+      ],
+      "en": [
+        "Split tasks; specify paths and tests"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "计划不等于实现，不写不存在的依赖或结果"
+      ],
+      "en": [
+        "Plan is not implementation; do not invent tests"
+      ]
+    }
+  },
+  "execution": {
+    "inputs": {
+      "zh": [
+        "规格、仓库结构和验收目标"
+      ],
+      "en": [
+        "Spec, repository and acceptance criteria"
+      ]
+    },
+    "outputs": {
+      "zh": [
+        "可交接、可验证的实施计划"
+      ],
+      "en": [
+        "Handoff-ready verifiable plan"
+      ]
+    },
+    "requirements": {
+      "zh": [
+        "无需特殊依赖；要求真实代码上下文"
+      ],
+      "en": [
+        "No special dependency; requires repo context"
+      ]
+    },
+    "steps": {
+      "zh": [
+        "分解独立子任务",
+        "写清路径与测试命令"
+      ],
+      "en": [
+        "Split tasks",
+        "specify paths and tests"
+      ]
+    },
+    "checks": {
+      "zh": [
+        "计划不等于实现，不写不存在的依赖或结果"
+      ],
+      "en": [
+        "Plan is not implementation; do not invent tests"
+      ]
+    },
+    "source_file_sha": "4cf0275d88d67aa4ef09f4bbca9970ed6ff74a00",
+    "source_checked_on": "2026-10-26",
+    "scope": "source-metadata-reviewed-not-executed"
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "obra/superpowers",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 305372,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-SKILL-md-inspected-not-executed",
+    "selection_reason": {
+      "zh": "按文件、步骤和测试拆解已确认规格。",
+      "en": "File-specific steps and tests from an approved spec."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

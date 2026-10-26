@@ -1,0 +1,139 @@
+{
+  "id": "kdense-statistical-power",
+  "title": "Statistical Power · 样本量与功效分析",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "evaluation"
+  ],
+  "domains": [
+    "ml-systems",
+    "rl"
+  ],
+  "topics": [
+    "experiment-design",
+    "reproducible-experiments"
+  ],
+  "tasks": [
+    "agent-skills",
+    "experiment-design",
+    "reproducible-experiments"
+  ],
+  "description": {
+    "zh": "估算有实际效应量假设的实验样本量与功效。",
+    "en": "Power and sample-size planning for specified effects."
+  },
+  "keywords": {
+    "zh": [
+      "statistical-power",
+      "Statistical Power · 样本量与功效分析",
+      "experiment-design",
+      "reproducible-experiments"
+    ],
+    "en": [
+      "statistical-power",
+      "Statistical Power · 样本量与功效分析",
+      "experiment-design",
+      "reproducible-experiments"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/statistical-power/SKILL.md",
+    "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+  },
+  "rights": {
+    "reuse": "external reference only; inspect upstream license",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "检验方法、效应量、显著性与方差"
+      ],
+      "en": [
+        "Test, effect, alpha and variance"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "确定检验和实际效应；计算并报告假设"
+      ],
+      "en": [
+        "Define target effects; calculate with assumptions"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "避免没有依据的效应量及事后功效夸大"
+      ],
+      "en": [
+        "Avoid unsupported effects and misleading post-hoc power"
+      ]
+    }
+  },
+  "execution": {
+    "inputs": {
+      "zh": [
+        "检验方法、效应量、显著性与方差"
+      ],
+      "en": [
+        "Test, effect, alpha and variance"
+      ]
+    },
+    "outputs": {
+      "zh": [
+        "样本量估计、功效曲线及敏感性分析"
+      ],
+      "en": [
+        "Sample estimates, power curve and sensitivity"
+      ]
+    },
+    "requirements": {
+      "zh": [
+        "Python 3.12+、scipy、numpy、statsmodels"
+      ],
+      "en": [
+        "Python 3.12+, scipy, numpy, statsmodels"
+      ]
+    },
+    "steps": {
+      "zh": [
+        "确定检验和实际效应",
+        "计算并报告假设"
+      ],
+      "en": [
+        "Define target effects",
+        "calculate with assumptions"
+      ]
+    },
+    "checks": {
+      "zh": [
+        "避免没有依据的效应量及事后功效夸大"
+      ],
+      "en": [
+        "Avoid unsupported effects and misleading post-hoc power"
+      ]
+    },
+    "source_file_sha": "012cc67f7794ac280ad39383add39afda7ac719a",
+    "source_checked_on": "2026-10-26",
+    "scope": "source-metadata-reviewed-not-executed"
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "K-Dense-AI/scientific-agent-skills",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 54702,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-SKILL-md-inspected-not-executed",
+    "selection_reason": {
+      "zh": "估算有实际效应量假设的实验样本量与功效。",
+      "en": "Power and sample-size planning for specified effects."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

@@ -1,0 +1,134 @@
+{
+  "id": "kdense-paper-lookup",
+  "title": "Paper Lookup · 多源学术论文检索",
+  "kind": "workflow",
+  "stages": [
+    "research"
+  ],
+  "domains": [
+    "nlp",
+    "agents"
+  ],
+  "topics": [
+    "literature-discovery"
+  ],
+  "tasks": [
+    "agent-skills",
+    "literature-discovery"
+  ],
+  "description": {
+    "zh": "按 DOI、题名或研究问题检索可追溯论文记录。",
+    "en": "Reproducible scholarly lookup by DOI, title and search query."
+  },
+  "keywords": {
+    "zh": [
+      "paper-lookup",
+      "Paper Lookup · 多源学术论文检索",
+      "literature-discovery"
+    ],
+    "en": [
+      "paper-lookup",
+      "Paper Lookup · 多源学术论文检索",
+      "literature-discovery"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/paper-lookup/SKILL.md",
+    "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+  },
+  "rights": {
+    "reuse": "external reference only; inspect upstream license",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "论文关键词、DOI 或作者"
+      ],
+      "en": [
+        "Keywords, DOI or authors"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "限定检索库与查询式；去重并记录来源"
+      ],
+      "en": [
+        "Bound searches by database; deduplicate with source logs"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "核对 DOI 和原文；摘要不等于全文"
+      ],
+      "en": [
+        "Verify DOI and original; abstract is not full text"
+      ]
+    }
+  },
+  "execution": {
+    "inputs": {
+      "zh": [
+        "论文关键词、DOI 或作者"
+      ],
+      "en": [
+        "Keywords, DOI or authors"
+      ]
+    },
+    "outputs": {
+      "zh": [
+        "带来源和标识符的候选论文"
+      ],
+      "en": [
+        "Source-linked paper records and IDs"
+      ]
+    },
+    "requirements": {
+      "zh": [
+        "Python 3.11+、curl、联网；部分 API 可选密钥"
+      ],
+      "en": [
+        "Python 3.11+, curl, network; optional API keys"
+      ]
+    },
+    "steps": {
+      "zh": [
+        "限定检索库与查询式",
+        "去重并记录来源"
+      ],
+      "en": [
+        "Bound searches by database",
+        "deduplicate with source logs"
+      ]
+    },
+    "checks": {
+      "zh": [
+        "核对 DOI 和原文；摘要不等于全文"
+      ],
+      "en": [
+        "Verify DOI and original; abstract is not full text"
+      ]
+    },
+    "source_file_sha": "d0b277b07be6f2688fcc2bacee1b58c971ece2f7",
+    "source_checked_on": "2026-10-26",
+    "scope": "source-metadata-reviewed-not-executed"
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "K-Dense-AI/scientific-agent-skills",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 54702,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-SKILL-md-inspected-not-executed",
+    "selection_reason": {
+      "zh": "按 DOI、题名或研究问题检索可追溯论文记录。",
+      "en": "Reproducible scholarly lookup by DOI, title and search query."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

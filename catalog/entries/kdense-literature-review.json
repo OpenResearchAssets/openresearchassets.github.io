@@ -1,0 +1,139 @@
+{
+  "id": "kdense-literature-review",
+  "title": "Literature Review · 可追溯研究综述",
+  "kind": "workflow",
+  "stages": [
+    "research",
+    "ideation"
+  ],
+  "domains": [
+    "nlp",
+    "agents"
+  ],
+  "topics": [
+    "literature-discovery",
+    "research-automation"
+  ],
+  "tasks": [
+    "agent-skills",
+    "literature-discovery",
+    "research-automation"
+  ],
+  "description": {
+    "zh": "定义检索、纳排与证据综合，避免凭印象判断研究空白。",
+    "en": "Reproducible searches, screening and research synthesis."
+  },
+  "keywords": {
+    "zh": [
+      "literature-review",
+      "Literature Review · 可追溯研究综述",
+      "literature-discovery",
+      "research-automation"
+    ],
+    "en": [
+      "literature-review",
+      "Literature Review · 可追溯研究综述",
+      "literature-discovery",
+      "research-automation"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/literature-review/SKILL.md",
+    "repository": "https://github.com/K-Dense-AI/scientific-agent-skills"
+  },
+  "rights": {
+    "reuse": "external reference only; inspect upstream license",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "研究问题、范围与纳排标准"
+      ],
+      "en": [
+        "Research question, scope and screening rules"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "制定可复核的检索式；筛选去重并归纳证据"
+      ],
+      "en": [
+        "Define reproducible query; screen and synthesize evidence"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "逐条核查引用；记录检索盲区"
+      ],
+      "en": [
+        "Audit citations and record coverage limits"
+      ]
+    }
+  },
+  "execution": {
+    "inputs": {
+      "zh": [
+        "研究问题、范围与纳排标准"
+      ],
+      "en": [
+        "Research question, scope and screening rules"
+      ]
+    },
+    "outputs": {
+      "zh": [
+        "检索记录、文献矩阵和带出处综述"
+      ],
+      "en": [
+        "Search log, literature matrix and sourced review"
+      ]
+    },
+    "requirements": {
+      "zh": [
+        "Python 3.10+、requests、网络；PDF 导出需 Pandoc/XeLaTeX"
+      ],
+      "en": [
+        "Python 3.10+, requests and network; Pandoc/XeLaTeX for PDF"
+      ]
+    },
+    "steps": {
+      "zh": [
+        "制定可复核的检索式",
+        "筛选去重并归纳证据"
+      ],
+      "en": [
+        "Define reproducible query",
+        "screen and synthesize evidence"
+      ]
+    },
+    "checks": {
+      "zh": [
+        "逐条核查引用；记录检索盲区"
+      ],
+      "en": [
+        "Audit citations and record coverage limits"
+      ]
+    },
+    "source_file_sha": "5178dce6419cee412155e7b9dd523d5b2ef703f5",
+    "source_checked_on": "2026-10-26",
+    "scope": "source-metadata-reviewed-not-executed"
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "K-Dense-AI/scientific-agent-skills",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 54702,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-SKILL-md-inspected-not-executed",
+    "selection_reason": {
+      "zh": "定义检索、纳排与证据综合，避免凭印象判断研究空白。",
+      "en": "Reproducible searches, screening and research synthesis."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}
