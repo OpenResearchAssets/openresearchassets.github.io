@@ -5,8 +5,8 @@
 
 ## 使用流程
 
-1. **先读取 [轻量索引](../catalog/manifest.json)**，按任务、阶段、领域与类型挑选少量条目，再沿各条目的 entry 路径读取完整 JSON；不要默认一次加载整个目录。
-2. 结合任务、阶段、领域、中文及英文关键词进行筛选，随后打开独立记录检查适用条件、可迁移经验、限制、版权和官方来源。
+1. **先读取 [轻量索引](../catalog/manifest.json)**，按任务、阶段、领域、主题（topics）与类型挑选少量条目，再沿各条目的 entry 路径读取完整 JSON；不要默认一次加载整个目录。
+2. 结合任务、阶段、领域、主题、中文及英文关键词进行筛选，随后打开独立记录检查适用条件、可迁移经验、限制、版权和官方来源。
 3. 优先阅读最相关的 2–5 项，每项关注 \`learn\`、\`avoid\`、\`rights\` 和 \`links\`。
 4. 对参考类资产，借鉴设计模式或方法经验，不冒充原作者图片；只有单条 `rights` 明确允许且保留署名/许可的媒体可以直接复用，其他图片需要独立使用依据。
 5. 对原创可编辑资产，优先使用 \`links.editable\` 提供的源文件，并更换所有概念性数据与内容。
@@ -59,3 +59,9 @@ English: Read the catalog first; select 2–5 matching resources by stage, domai
 ## 六个精准对应的视觉案例
 
 RoboRender、RoboDojo、SuperMimic 分别有 `*-teaser` 与 `*-site` 两个条目。当前其 `visual.kind` 不是普通配图，而是 `verified-paper-figure`（原论文 Figure 1）或 `verified-site-screenshot`（真实网页首屏）。Agent 须核对 `figureIdentity` 才能将其用于论文参考、HTML 视觉设计或素材引用，不得混用。截图不等于官网模板源码，所有第三方媒体遵循原作者权利及撤除机制。
+
+## 分类的使用规则
+
+`domains` 表示学科或系统方向（如视觉、机器人、Agent、NLP）；`topics` 表示科研问题/技术方向（如文档解析、RAG、实验设计、软件工程）；`kind` 表示视觉、模板、外部目录或工具/流程大类。对 `kind=workflow` 进一步读取 `curation.type`，分辨 `skill`、`tool` 和 `workflow`。
+
+**先过滤，再加载。** 组合主题与任务标签选择最相关的单项 `catalog/entries/<id>.json`。热门条目仅验证开源官方来源；`curation.track=practice` 才包含可追溯项目实践，仍不代表独立实验验证。若 `curation.star_scope=parent-repository`，星标仅表示母仓库热度，不能把仓库 Star 表达为特定 SKILL.md 的使用量。

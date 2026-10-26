@@ -64,7 +64,7 @@ These are **aspirational stages, not shipped features or promised milestones**. 
 
 This Chinese-first, English-supported library spans research design, evaluation, writing and communication. The current public implementation includes:
 
-- **22 structured entries** in [catalog/index.json](catalog/index.json), including separate teaser and project-site references for RoboRender, RoboDojo and SuperMimic.
+- **58 structured entries** in [catalog/index.json](catalog/index.json), including separate teaser and project-site references for RoboRender, RoboDojo and SuperMimic.
 - Browser-side search and facets for stages, domains and asset kinds, with per-asset usage and provenance pages.
 - [Agent instructions](for-agents/) and [llms.txt](llms.txt) pointing to an openly readable machine catalog. These files do **not** mean there is an autonomous remote agent service.
 - Four original Markdown research workflows covering literature, experiments, paper narratives and research release.
@@ -91,3 +91,7 @@ Depth Anything 3 and third-party galleries link to original source images. All s
 ### Verified paper figures versus genuine first-view website captures
 
 The six featured RoboRender/RoboDojo/SuperMimic references now use their actual paper Figure 1 images and actual screenshots of each project's first website viewport, respectively. We do not substitute training-data charts for teasers, GPU decorations for scientific paper figures, or broken author-portfolio links for website captures. Each image records the source, original credit, processing and removal request channel; authored editorial SVG analyses remain optional detail-page aids.
+
+## Thematic discovery
+
+The curated catalog provides orthogonal filters for research domains, task topics, research stages, and asset types. Skills / Workflows add dedicated filters for tools, individual Skills, and executable workflows, while preserving distinct **popular external projects** and **evidenced project practice** tracks. Individual `SKILL.md` files are linked directly; GitHub stars on those cards refer to the **parent repository**, not to an individual skill. As of October 26, 2026, the catalog includes **58 structured records**, including **23 popularity-track picks** and **2 evidence-backed project workflows**. Inclusion does not imply our own performance evaluation.
