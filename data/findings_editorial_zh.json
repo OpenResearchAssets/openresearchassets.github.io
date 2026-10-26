@@ -1,0 +1,80 @@
+{
+  "description": "Source-exact reviewed Chinese introductions for prominent Findings records. Do not override changed source text.",
+  "overrides": [
+    {
+      "url": "https://huggingface.co/papers/2610.14224",
+      "source_title": "Harness^2: Recursive Agent Harnessing for an Open World",
+      "source_subtitle": "LLM agents' capabilities depend not only on their underlying models but also on their execution harnesses. Recursive self-improvement (RSI) offers a promising approach to automatically evolve these harnesses. However, deploying RSI in open-world settings still faces two critical challenges. First, open-world tasks are typically unseen during the harness design phase and novel at test time, leaving no ground-truth verifiers to reliably guide online harness edits. Second, the RSI process remains highly task-specific and fails to generalize to novel scenarios. We introduce Harness^2, a plug-and-play, recursive agent harnessing framework that addresses these challenges through two connected leve",
+      "title_zh": "Harness^2：面向开放世界的递归式 Agent Harness 优化",
+      "subtitle_zh": "LLM Agent 的能力不仅取决于底层模型，也取决于执行它的 Harness。递归自我改进（RSI）有望自动优化这些执行框架，但开放世界任务带来两个关键难题：一是测试时遇到的新任务通常没有标准答案验证器，难以可靠指导在线修改；二是现有 RSI 方法高度依赖具体任务，难以迁移到新场景。Harness^2 提出一套即插即用的双层递归框架：任务层通过对比式“提出—探测—组合”过程改进当前 Harness，并支持并行或串行扩展；更高层则尝试积累可迁移的优化经验。"
+    },
+    {
+      "url": "https://huggingface.co/papers/2412.20138",
+      "source_title": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "source_subtitle": "Significant progress has been made in automated problem-solving using societies of agents powered by large language models (LLMs). In finance, efforts have largely focused on single-agent systems handling specific tasks or multi-agent frameworks independently gathering data. However, the multi-agent systems' potential to replicate real-world trading firms' collaborative dynamics remains underexplored. TradingAgents proposes a novel stock trading framework inspired by trading firms, featuring LLM-powered agents in specialized roles such as fundamental analysts, sentiment analysts, technical analysts, and traders with varied risk profiles. The framework includes Bull and Bear researcher agents",
+      "title_zh": "TradingAgents：基于多智能体大语言模型的金融交易框架",
+      "subtitle_zh": "虽然大语言模型驱动的多智能体系统已经能够协作解决复杂问题，金融领域的既有研究仍主要依赖单一 Agent，或者让多个 Agent 独立收集信息，尚未充分模拟真实交易公司的协作机制。TradingAgents 借鉴交易机构的组织方式，为基本面、市场情绪、技术分析和不同风险偏好的交易设置专门角色，并加入多空研究员辩论与风险管理团队，最终由交易 Agent 综合辩论与历史数据形成决策。"
+    },
+    {
+      "url": "https://huggingface.co/papers/2508.02739",
+      "source_title": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "source_subtitle": "The success of large-scale pre-training paradigm, exemplified by Large Language Models (LLMs), has inspired the development of Time Series Foundation Models (TSFMs). However, their application to financial candlestick (K-line) data remains limited, often underperforming non-pre-trained architectures. Moreover, existing TSFMs often overlook crucial downstream tasks such as volatility prediction and synthetic data generation. To address these limitations, we propose Kronos, a unified, scalable pre-training framework tailored to financial K-line modeling. Kronos introduces a specialized tokenizer that discretizes continuous market information into token sequences, preserving both price dynamics",
+      "title_zh": "Kronos：面向金融市场 K 线语言的基础模型",
+      "subtitle_zh": "大规模预训练推动了时间序列基础模型的发展，但这些模型用于金融 K 线数据时仍经常不如专门训练的架构，也容易忽略波动率预测、合成数据生成等下游任务。Kronos 提出面向金融 K 线的统一、可扩展预训练框架：使用专用 Tokenizer 将连续市场信息离散化，同时保留价格变化与交易活动模式，并在涵盖全球多个交易所的大规模跨市场 K 线数据上进行自回归预训练，以学习跨时间和资产的表示。"
+    },
+    {
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "source_title": "cloudflare/security-audit-skill",
+      "source_subtitle": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "subtitle_zh": "分阶段执行安全审计的 Coding Agent Skill：通过架构侦察、覆盖率驱动的缺陷搜索、独立验证和机器可读的发现记录，提高安全审计的可追溯性。"
+    },
+    {
+      "url": "https://github.com/ruvnet/ruflo",
+      "source_title": "ruvnet/ruflo",
+      "source_subtitle": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+      "subtitle_zh": "面向多智能体协作的 Agent Harness，可部署 Agent 群体、协调自主工作流和构建对话式 AI 系统；包含自适应记忆、自学习、向量检索增强，以及对 Claude Code、Codex 等环境的集成。"
+    },
+    {
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "source_title": "anthropics/knowledge-work-plugins",
+      "source_subtitle": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "subtitle_zh": "Anthropic 开源的知识工作插件仓库，主要面向 Claude Cowork 用户，帮助按不同岗位与工作场景扩展专用能力。"
+    },
+    {
+      "url": "https://github.com/lemomo-ai/lemo-opuscar",
+      "source_title": "lemomo-ai/lemo-opuscar",
+      "source_subtitle": "A toolbox of film styles made in code for Claude Code: 59 ready to use, and your own. Each style is a style prompt plus a demo film made entirely in code by Claude Opus 5.5, with no video model. By Lemomo. · 一套用代码做片的风格工具箱：59 种现成风格，也能做出你自己的",
+      "subtitle_zh": "面向 Claude Code 的代码生成式影片风格工具箱：提供 59 种现成风格，并允许创建自定义风格。每种风格包含提示词与由 Claude Opus 5.5 纯代码制作的示例影片，不依赖视频生成模型。"
+    },
+    {
+      "url": "https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills",
+      "source_title": "Ryze-AI-Adgent/open-seo-mcp-skills",
+      "source_subtitle": "Free SEO MCP server + open-source SEO and GEO skills for Claude: keyword research, rank tracking, audits, backlinks, AI visibility on your real GSC/GA4/ads data. claude mcp add ryze --transport http https://connector.get-ryze.ai/mcp",
+      "subtitle_zh": "为 Claude 提供开源 SEO / GEO 技能及免费的 SEO MCP 服务，支持关键词研究、排名跟踪、网站审计、外链分析和 AI 搜索可见性检查，并可关联 Search Console、GA4 和广告数据。"
+    },
+    {
+      "url": "https://github.com/Jakeschincariol/replica-skill",
+      "source_title": "Jakeschincariol/replica-skill",
+      "source_subtitle": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
+      "subtitle_zh": "包含 11 个免费 Claude Skills 的应用复刻工具集，覆盖逆向分析、重新实现、缺陷测试，以及根据用户反馈继续改进；项目采用 MIT 许可证。"
+    },
+    {
+      "url": "https://github.com/ceyyy427/finathink",
+      "source_title": "ceyyy427/finathink",
+      "source_subtitle": "Finathink — Financial Research Optimizer for auditable, point-in-time research, mathematical learning, and constrained portfolio analysis.",
+      "subtitle_zh": "Finathink 是面向可审计时间点研究、数学学习与受约束投资组合分析的金融研究工作流优化工具。"
+    },
+    {
+      "url": "https://github.com/WestFox-AwA/dsh-wish-specializer",
+      "source_title": "WestFox-AwA/dsh-wish-specializer",
+      "source_subtitle": "许愿特化器 · Wish Specializer — DSH 插件：让模型更出色地，不误解你的意思地，完成你的“愿望”。在短提示词+自带的Wish预设（PTC也可以）+重度的情况下，可以起到巨大的表现增益",
+      "subtitle_zh": "“许愿特化器”是一款 DSH 插件，用于在用户发送简短需求前补充设计、上下文和执行约束，帮助模型更准确地理解并完成任务。"
+    },
+    {
+      "url": "https://github.com/aaravshah1311/Agent-2",
+      "source_title": "aaravshah1311/Agent-2",
+      "source_subtitle": "An autonomous AI agentic harness built to code anything, automate terminals, perform cybersecurity tasks, and execute complex real-world workflows with minimal human intervention. From writing and debugging code to analyzing systems, managing files, running commands, and orchestrating tools, Agent-2 turns simple prompts into autonomous execution.",
+      "subtitle_zh": "面向自主编程与复杂任务执行的 Agent Harness，支持终端自动化、安全相关任务、系统分析、文件操作和工具编排，目标是用较少人工干预完成工作流。"
+    }
+  ]
+}
