@@ -19,7 +19,12 @@
     (document.documentElement.lang==='en'?en:zh);
   const escapeHtml=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const main=menu.closest('.nav-shell');
-  const headerCTA=main?.querySelector('.nav-cta');
+  let headerCTA=main?.querySelector('.nav-cta');
+  if(!headerCTA&&main){
+    headerCTA=document.createElement('a');
+    headerCTA.className='nav-cta';
+    main.insertBefore(headerCTA,main.querySelector('.lang-toggle')||button);
+  }
   // Desktop: two destination links plus the action; mobile: all three in the menu.
   if(headerCTA){headerCTA.href=links[2].href;if(current==='contribute')headerCTA.setAttribute('aria-current','page');else headerCTA.removeAttribute('aria-current');}
   function renderNavigation(){
