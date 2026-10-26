@@ -264,3 +264,7 @@
 .ora-submit-secondary a{font-weight:720;color:#315f8b;white-space:nowrap}
 .ora-submit-secondary a:hover{text-decoration:underline}
 @media(max-width:720px){.ora-curated-community-note{align-items:flex-start;flex-direction:column;gap:6px;padding-bottom:36px}.ora-submit-intro{padding-top:43px;padding-bottom:22px}.ora-submit-guidelines-grid,.ora-submit-secondary{grid-template-columns:1fr;gap:18px}.ora-community-submit{margin-bottom:35px}.ora-submit-secondary{padding-bottom:55px}}
+
+/* Small cross-links to the two non-curated discovery experiences. */
+.ora-cross-links{display:flex;align-items:center;gap:23px;flex-wrap:wrap}
+.ora-cross-links a{white-space:nowrap}
