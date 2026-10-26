@@ -168,4 +168,6 @@ RoboRender、RoboDojo、SuperMimic 的论文类条目现在展示真正的 Figur
 
 ### 真实任务的公开运行证据
 
-已经用公开目录实际执行 [Notebook + 科研图两项任务](experiments/skill-trials/README.md)：**73 条资源、三段 Notebook 代码完整执行、7/7 数据完整性检查通过**。GitHub Actions 保留可下载的原始/执行版 Notebook、可编辑 SVG、PNG、CSV 和机器可读结果；细分耗时及全部局限见 [实际实验记录](experiments/skill-trials/README.md)。这属于**Skill 来源指导的任务级试运行**，不是完整的 Harness 自动 Skill 调用或相同模型下的有/无 Skill 对照；未测 Token 数据绝不填报猜测数字。
+已经用公开目录实际执行 [Notebook + 科研图两项任务](experiments/skill-trials/README.md)：**73 条资源、三段 Notebook 代码完整执行，以及加入机器人论文结果后 10/10 客观检查通过**。GitHub Actions 保留可下载的原始/执行版 Notebook、可编辑 SVG、PNG、CSV 和机器可读结果；细分耗时及全部局限见 [实际实验记录](experiments/skill-trials/README.md)。这属于**Skill 来源指导的任务级试运行**，不是完整的 Harness 自动 Skill 调用或相同模型下的有/无 Skill 对照；未测 Token 数据绝不填报猜测数字。
+
+此外，已经把 [RoboRender 作者报告的八项机器人任务](experiments/skill-trials/README.md#第三项真实论文逐任务结果可视化) 作为真实科研证据绘图任务进行试运行，输出源数据可追溯的 SVG/PNG 和统计报告。数据属于原论文作者，**非本站独立复现**，不添加虚假方差或显著性结论。

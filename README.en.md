@@ -102,4 +102,4 @@ The curated catalog provides orthogonal filters for research domains, task topic
 
 ### Reproducible public Skill-guided trials
 
-Two [actual research asset analysis tasks](experiments/skill-trials/README.md) now run in GitHub Actions on the canonical 73-record catalog. The real pinned OpenAI notebook scaffold runs, notebook cells execute in a fresh kernel, and the visual analysis exports SVG/PNG/CSV. Seven checks passed in the latest documented run. These results measure scripted correctness and runtime, **not** native automatic Skill invocation, model tokens, or causally attributable performance gains.
+Two [actual research asset analysis tasks](experiments/skill-trials/README.md) now run in GitHub Actions on the canonical 73-record catalog. The real pinned OpenAI notebook scaffold runs, notebook cells execute in a fresh kernel, and the visual analysis exports SVG/PNG/CSV. Ten objective checks passed in the newest run, including a source-audited figure from author-reported RoboRender task results. These results measure scripted correctness and runtime, **not** native automatic Skill invocation, model tokens, or causally attributable performance gains.

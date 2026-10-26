@@ -22,6 +22,17 @@
 
 七项验证：① Notebook 与独立 Python 输出逐字段一致；② asset kind 计数覆盖全部记录；③ curation track 计数覆盖全部记录；④ 绘图 CSV 与原始数据一致；⑤ SVG 没有嵌入 raster `<image>`；⑥ 源代码图标明数据来源；⑦ **故意修改一行 CSV 计数后，实际验证函数拒绝篡改数据**。第七项在第二轮加强，首次只是数学自检，因此不能把首轮的负向对照描述为完整的篡改测试。
 
+## 第三项：真实论文逐任务结果可视化
+
+本轮还使用已经核对过公开来源的 [RoboRender 作者结果表](../../examples/roborender-results.csv) 执行科研绘图任务。输入为 8 个机器人任务、每个方法/任务 10 rollouts 的**论文作者报告成功率**，脚本把每个任务的 Sim、Sim+DR、RoboRender 三组结果保留为原始百分比。输出 `roborender-author-reported.svg`（可编辑矢量图）、`roborender-author-reported.png`（预览）、`roborender-provenance-check.json`（来源 SHA 和统计）。
+
+[本轮真实运行日志和第三项可下载产物](https://github.com/OpenResearchAssets/openresearchassets.github.io/actions/runs/40331255218)
+
+- 作者报告的八任务等权平均：Sim **10.00%**、Sim+DR **20.00%**、RoboRender **71.25%**。71.25% 是从作者逐项数字计算，论文展示的 71% 是四舍五入结果。
+- **无独立机器人复现**；没有原始 rollout 日志，不能声称统计显著、有效置信区间或模型泛化性。本实验仅检查原始数字、等权计算、来源 SHA、矢量结构与图内出处声明。
+- 新增的三项检查：① CSV SHA256 与报告一致，② 八项均标为 author-reported、结果平均与源表完全一致，③ SVG 无位图粘贴且公开标注“非独立复现、未虚构误差线”。
+- 在同一运行上，前述 7 项 + 本次 3 项共 **10/10 客观检查通过**。Notebook 新内核执行 **714.8 ms**；资产分布图 **132.4 ms**；机器人结果图 **177.2 ms**，仅为这一 CI 环境的程序耗时。
+
 ## 可执行文件和复现
 
 - [实际运行脚本](../../tools/run_skill_trials.py)（包含 Notebook 执行、绘图、来源验证与负向测试）
