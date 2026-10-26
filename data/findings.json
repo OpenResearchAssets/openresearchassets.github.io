@@ -18,7 +18,9 @@
           "author": "2610.14224",
           "value": 123,
           "badge": "2026-10-09T00:00:00+00:00",
-          "metric": "upvotes"
+          "metric": "upvotes",
+          "title_zh": "Harness^2：面向开放世界的递归式 Agent Harness 优化",
+          "subtitle_zh": "LLM Agent 的能力不仅取决于底层模型，也取决于执行它的 Harness。递归自我改进（RSI）有望自动优化这些执行框架，但开放世界任务带来两个关键难题：一是测试时遇到的新任务通常没有标准答案验证器，难以可靠指导在线修改；二是现有 RSI 方法高度依赖具体任务，难以迁移到新场景。Harness^2 提出一套即插即用的双层递归框架：任务层通过对比式的“提出—探测—组合”过程改进当前 Harness，并支持并行或串行扩展；更高层则尝试积累可迁移的优化经验。"
         },
         {
           "title": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
@@ -29,7 +31,9 @@
           "author": "2412.20138",
           "value": 154,
           "badge": "2024-12-28T12:54:06+00:00",
-          "metric": "upvotes"
+          "metric": "upvotes",
+          "title_zh": "TradingAgents：基于多智能体大语言模型的金融交易框架",
+          "subtitle_zh": "尽管大语言模型驱动的多智能体系统已经能够协作解决复杂问题，金融领域的既有研究仍主要依赖单一 Agent，或让多个 Agent 分别收集信息，尚未充分模拟真实交易公司的协作机制。TradingAgents 借鉴交易机构的组织方式，为基本面分析、市场情绪、技术分析、不同风险偏好的交易决策等环节设置专业角色，并加入多空研究员辩论与风险管理团队，最后由交易 Agent 综合辩论和历史数据形成决策。"
         },
         {
           "title": "Kronos: A Foundation Model for the Language of Financial Markets",
@@ -40,7 +44,9 @@
           "author": "2508.02739",
           "value": 62,
           "badge": "2025-08-02T13:15:59+00:00",
-          "metric": "upvotes"
+          "metric": "upvotes",
+          "title_zh": "Kronos：面向金融市场 K 线语言的基础模型",
+          "subtitle_zh": "大规模预训练推动了时间序列基础模型的发展，但这些模型用于金融 K 线数据时仍经常不如专门训练的架构，也容易忽略波动率预测与合成数据生成等下游任务。Kronos 提出一套面向金融 K 线的统一可扩展预训练框架：使用专用 Tokenizer 将连续市场信息离散化，同时保留价格变化与交易活动模式，并在涵盖全球多个交易所的大规模多市场 K 线数据上进行自回归预训练，以学习跨时间与跨资产的表示。"
         },
         {
           "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
@@ -1125,7 +1131,8 @@
           "value": 15072,
           "metric": "stars gained this week",
           "detail": "A coding-agent skill that turns your agent into a security auditor. It orchestrates isolated agents through reconnaissance, coverage-led hunting, candidate validation, structured output, independent record verification, and target-neutral reporting. This is the skill that seeded Cloudflare's vulnerability discovery harness, described in Build your own vulnerability harness. The harness grew into a multi-stage, fleet-wide system; this skill is the single-repo starting point it evolved from. 1. Reconnaissance -- map architecture, trust boundaries, input surfaces, prior evidence, and deterministic coverage in architecture.md and coverage-ledger.json. 2. Coverage-led hunting -- assign isolated hunters from ledger units, record their checks, and use coverage critics to find gaps. 3. Candidate validation -- give every unique candidate to a fresh verifier that tries to disprove it. 4. Structured output -- write confirmed, needsvalidation, and rejected records to findings.json and validate them against report-schema.json. 5. Independent record verification -- fresh agents verify final source claims. Material replacements receive another independent verifier. 6. Target-neutral reporting -- derive REPORT.md, FINDINGS-DETAIL.md, and NEEDS-VALIDATION.md from the verified records and coverage ledger.",
-          "summary_source": "repository README"
+          "summary_source": "repository README",
+          "subtitle_zh": "分阶段执行安全审计的 Coding Agent Skill：通过侦察、覆盖率驱动的缺陷搜索、独立验证与机器可读的发现记录，提高安全审计的可追溯性。"
         },
         {
           "title": "ruvnet/ruflo",
@@ -1135,7 +1142,8 @@
           "value": 2987,
           "metric": "stars gained this week",
           "detail": "Start in Claude Code with core tools, the visual console and runtime mods. Requires Claude Code 2.1.287 or later. Run inside Claude Code: Core provides foundation tools. Console opens the agent cockpit. Mods add routing and policy enforcement inside Claude Code. Mods run with your account's permissions; review their code before installing. Using Codex or another MCP enabled tool? Use NPX for Ruflo project setup and connect your client to the Ruflo MCP server. Run the setup wizard in your project terminal:",
-          "summary_source": "repository README"
+          "summary_source": "repository README",
+          "subtitle_zh": "面向多智能体协作的 Agent Harness，可部署 Agent 群体、协调自主工作流和构建对话式 AI 系统；包含自适应记忆、自学习、向量检索增强，以及对 Claude Code、Codex 等环境的集成。"
         },
         {
           "title": "anthropics/knowledge-work-plugins",
@@ -1145,7 +1153,8 @@
           "value": 2790,
           "metric": "stars gained this week",
           "detail": "Plugins that turn Claude into a specialist for your role, team, and company. Built for Claude Cowork, also compatible with Claude Code. Cowork lets you set the goal and Claude delivers finished, professional work. Plugins let you go further: tell Claude how you like work done, which tools and data to pull from, how to handle critical workflows, and what slash commands to expose — so your team gets better and more consistent outcomes. Each plugin bundles the skills, connectors, slash commands, and sub-agents for a specific job function. Out of the box, they give Claude a strong starting point for helping anyone in that role. The real power comes when you customize them for your company — your tools, your terminology, your processes — so Claude works like it was built for your team.",
-          "summary_source": "repository README"
+          "summary_source": "repository README",
+          "subtitle_zh": "Anthropic 开源的知识工作插件仓库，主要面向 Claude Cowork 用户，帮助按不同岗位和工作场景扩展专用能力。"
         },
         {
           "title": "anomalyco/opencode",
@@ -1267,7 +1276,8 @@
           "value": 7582,
           "metric": "total stars",
           "detail": "A toolbox of film styles made in code: 59 ready to use, and your own. Pick a style or make one from scratch, bring your story, and let your coding agent direct. 59 种影片风格，每种都配一支完全用代码做出来的短片 · 🇨🇳 中文用户请看 简体中文说明 ⚠️ Built for Claude. The styles are tuned for Claude Opus 5.5; other models may not reproduce them well, so use them with care. 🆕 2026-10-22 · Edit & Documentary: 8 styles cut from real footage, documents and data. See them ↓ 🆕 2026-10-22 · Make a style your own: change a style or start blank, and keep it. See how ↓ 🆕 2026-10-16 · Evidence Films: 8 styles that film real material, every number sourced. See them ↓",
-          "summary_source": "repository README"
+          "summary_source": "repository README",
+          "subtitle_zh": "面向 Claude Code 的代码生成式影片风格工具箱：提供 59 种现成风格，并允许创建自定义风格。各风格附带提示词与由 Claude Opus 5.5 纯代码制作的示例影片，不依赖视频生成模型。"
         },
         {
           "title": "Ryze-AI-Adgent/open-seo-mcp-skills",
@@ -1278,7 +1288,8 @@
           "value": 7277,
           "metric": "total stars",
           "detail": "Skip the setup: use the hosted Ryze MCP (Google sign-in, Search Console and GA4 connected in one step, approval-gated changes). Open-source SEO + GEO skills for Claude on a free SEO MCP server (the Ryze connector) — keyword research, rank tracking, site audits, backlinks, competitor gaps, AI visibility — running on your own Search Console, Analytics and ads data through the Ryze MCP, with DataForSEO built in for the data Google won't give you. No subscription for the tool. No markup on API calls. The skills are MIT — take them, change them, ship them.",
-          "summary_source": "repository README"
+          "summary_source": "repository README",
+          "subtitle_zh": "为 Claude 提供开源 SEO / GEO 技能及免费的 SEO MCP 服务，支持关键词研究、排名跟踪、网站审计、外链分析与 AI 搜索可见性检查，并可关联 Search Console、GA4 和广告数据。"
         },
         {
           "title": "Jakeschincariol/replica-skill",
@@ -1289,7 +1300,8 @@
           "value": 5523,
           "metric": "total stars",
           "detail": "Eleven Claude skills that clone any app. Free, MIT, no signup, no API key, nothing to connect. One reverse-engineers the app you want to clone. One rebuilds it. One tests it for bugs. And one is the Entrepreneur: it reads what the app's users hate and fixes it in yours, so you have an app you can sell. In between, the others plan the stack and the database, rebuild the design system, wire up auth and payments, score your clone against the original, give it a name and a brand of its own, write the landing page and the store listing, and put it live on your domain.",
-          "summary_source": "repository README"
+          "summary_source": "repository README",
+          "subtitle_zh": "包含 11 个免费 Claude Skills 的应用复刻工具集，覆盖逆向分析、重新实现、缺陷测试，以及根据用户反馈继续改进；项目采用 MIT 许可证。"
         },
         {
           "title": "kaankiziltug/logo-design-skill",
@@ -1422,7 +1434,8 @@
           "value": 249,
           "metric": "total stars",
           "detail": "Finathink 将用户提供的数据、证据、因子、量化检验、风险检查、纸面组合和学习记录组织成一条可追溯的研究流程。运行结果保存为结构化记录和可离线打开的 HTML 报告，适合个人研究、量化学习、策略复盘和多代理协作。 研究工作台页面为 /workbench，其结构化接口为 /api/research/workbench，离线报告使用 workbench/index.html。",
-          "summary_source": "repository README"
+          "summary_source": "repository README",
+          "subtitle_zh": "Finathink 是面向可审计时间点研究、数学学习与受约束投资组合分析的金融研究工作流优化工具。"
         },
         {
           "title": "WestFox-AwA/dsh-wish-specializer",
@@ -1433,7 +1446,8 @@
           "value": 137,
           "metric": "total stars",
           "detail": "中间那些决定成品好坏、但你没说出口的东西—— 审美基调、光影与材质、构图与层次、场景与氛围、交互与状态、以及\"做到什么算过\"—— 由它在你按下发送之前补上，随原话一起交给工作 AI。 环境：Windows + DSH + PTC 预设，一轮直出（OneShot），插件档位「重度」，模型 DeepSeek-V4.1-Flash-0910。 1. 装好插件（见下），面板上把档位拨到「标准」或「重度」（「关闭」不拦截、不注入）； 2. 照常输入，按 回车； 3. 拦截面板里看一眼补充内容：「确认」放行，「跳过并直接发送」按原文直接发； 4. 想更快：双击 Enter 直接跳过本轮优化（默认开，600ms 内两次回车）； 5. 发出去之后，消息下方有「本次注入」卡片，能看到这一轮到底往上下文里塞了什么。",
-          "summary_source": "repository README"
+          "summary_source": "repository README",
+          "subtitle_zh": "“许愿特化器”是一款 DSH 插件，用于在用户发送简短需求前自动补充设计、上下文与执行约束，帮助模型更准确地理解并完成任务。"
         },
         {
           "title": "aaravshah1311/Agent-2",
@@ -1444,7 +1458,8 @@
           "value": 136,
           "metric": "total stars",
           "detail": "An autonomous AI agentic harness built to code anything, automate terminals, perform cybersecurity tasks, and execute complex real-world workflows with minimal human intervention. From writing and debugging code to analyzing systems, managing files, running commands, and orchestrating tools, Agent-2 turns simple prompts into autonomous execution. Fluxion AI/Sidrune AI - Reliable, cost-efficient access to GPT, Claude, and other leading AI models Fluxion AI/Sidrune AI provides reliable, cost-efficient access to GPT, Claude, and other leading AI models through one unified API. Save up to 70% compared with official API pricing—and get $3 in API credits when you sign up through this link.",
-          "summary_source": "repository README"
+          "summary_source": "repository README",
+          "subtitle_zh": "面向自主编程与复杂任务执行的 Agent Harness，支持终端自动化、安全相关任务、系统分析、文件操作和工具编排，目标是用较少人工干预完成工作流。"
         },
         {
           "title": "jtaroreh/agystack",
@@ -1562,5 +1577,9 @@
       ]
     }
   },
-  "translation_status": "not_configured"
+  "translation_status": "partial_translation",
+  "translation_coverage": {
+    "translated": 12,
+    "total": 142
+  }
 }
