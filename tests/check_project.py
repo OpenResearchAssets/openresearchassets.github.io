@@ -383,6 +383,33 @@ if not all(f'data-task-query="{s}"' in home_html for s in ('teaser','qualitative
 if 'function renderSkills()' not in (ROOT/'js/catalog.js').read_text(encoding='utf-8'):
     errors.append('homepage: curated skills must use the canonical catalog')
 
+# Community: verify authenticated GitHub reactions use stable per-asset terms.
+community_cfg=ROOT/'config/community.json'
+community_js_path=ROOT/'js/community.js'
+asset_html=(ROOT/'asset.html').read_text(encoding='utf-8')
+if not community_cfg.is_file() or not community_js_path.is_file():
+    errors.append('Missing configured giscus community files')
+else:
+    community=json.loads(community_cfg.read_text(encoding='utf-8'))
+    community_js=community_js_path.read_text(encoding='utf-8')
+    if community.get('enabled') is True:
+        if community.get('repo')!='OpenResearchAssets/openresearchassets.github.io':
+            errors.append('Giscus repo is not the curated public repository')
+        if not re.fullmatch(r'R_[A-Za-z0-9_-]+',community.get('repo_id','')):
+            errors.append('Invalid GitHub repository node ID for giscus')
+        if community.get('category')!='Assets' or not re.fullmatch(r'DIC_[A-Za-z0-9_-]+',community.get('category_id','')):
+            errors.append('Invalid Assets discussion category ID for giscus')
+        if "mapping:'specific'" not in community_js or "term:'ora-asset:'+id" not in community_js:
+            errors.append('Giscus must use stable per-asset discussion mapping, not pathname')
+        if 'id="ora-community"' not in asset_html or 'src="js/community.js"' not in asset_html:
+            errors.append('Asset page missing community script or mounting section')
+        if 'window.ORA_COMMUNITY?.mount(e.id)' not in site_js:
+            errors.append('Asset detail does not mount per-entry giscus')
+    else:
+        errors.append('Giscus configured but unexpectedly disabled')
+if 'template=submit-asset.yml' not in home_html or not (ROOT/'.github/ISSUE_TEMPLATE/submit-asset.yml').is_file():
+    errors.append('Public submission entry is missing')
+
 if errors:
     for e in errors:print('FAIL:',e)
     raise SystemExit(1)
