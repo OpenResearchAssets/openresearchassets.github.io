@@ -21,6 +21,7 @@ jobs:
         run: |
           python tools/sync_catalog.py --check
           python tests/check_project.py
+          node tests/community_feed_smoke.js
       - name: Install Chromium
         run: |
           python -m pip install playwright
