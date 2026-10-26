@@ -59,6 +59,10 @@
  function row(r,originalRank,key,focused){
    const url=safeUrl(r.url);if(!url||!r.title)return '';
    const title=localized(r,'title'),abstract=localized(r,'subtitle')||localized(r,'detail');
+   const needsTranslation=zh()&&!r.subtitle_zh&&!r.detail_zh;
+   const rawOriginal=needsTranslation?' lang="en"':'';
+   const originalTag=needsTranslation?'<span class="findings-original-label">'+
+     esc('EN · 原始英文介绍（中文译文待生成）')+'</span>':'';
    const detail=localized(r,'detail'),showMore=detail&&detail.length>abstract.length+35;
    const original=zh()&&r.title_zh&&r.title_zh!==r.title?
      '<div class="findings-original-title">'+esc(r.title)+'</div>':'';
@@ -76,11 +80,11 @@
    const published=key==='papers'&&/^\d{4}-\d\d-\d\d/.test(r.badge||'')?date(r.badge):'';
    const originalLabel=key==='papers'?tr('论文原文','Original paper'):tr('项目原站','Original repository');
    const translated=zh()?'<span class="findings-translation-note">'+esc(r.subtitle_zh||r.detail_zh?
-     '自动译文 · 可切换英文校对':'原文 · 中文机器翻译未启用')+'</span>':'';
+     '机器译文 · 可展开英文原文核对':'英文原文 · 等待机器翻译')+'</span>':'';
    return '<article class="findings-item'+(focused?' findings-item-expanded':'')+'">'+
      '<span class="findings-item-rank">'+String(originalRank+1).padStart(2,'0')+'</span>'+
      '<div class="findings-entry-body"><h4>'+esc(title)+'</h4>'+original+
-     (abstract?'<p class="findings-item-summary">'+esc(abstract)+'</p>':'')+
+     (abstract?originalTag+'<p class="findings-item-summary'+(needsTranslation?' findings-summary-original':'')+'"'+rawOriginal+'>'+esc(abstract)+'</p>':'')+
      '<div class="findings-entry-meta">'+(published?'<span>'+esc(tr('发表于','Published'))+' '+esc(published)+'</span>':'')+
      (r.author?'<span>'+esc(r.author)+'</span>':'')+'<span>'+esc(sourceName)+'</span>'+translated+'</div>'+
      expanded+originalCompare+'<a class="findings-entry-source-link" href="'+esc(url)+
@@ -156,11 +160,17 @@
    tabs.forEach(btn=>{const selected=btn.dataset.feed===state.filter;
      btn.classList.toggle('is-current',selected);btn.setAttribute('aria-pressed',String(selected));});
    const translation=document.getElementById('findings-translation');
-   if(translation)translation.textContent=tr(
-     state.data?.translation_status==='translated'||state.data?.translation_status==='cached'?
-       '已包含自动中文译文 · 技术术语请核对原文':'自动中文翻译未配置 · 暂显示来源原文',
-     state.data?.translation_status==='translated'||state.data?.translation_status==='cached'?
-       'Automatic Chinese translations available':'Showing original descriptions');
+   const coverage=state.data?.translation_coverage;
+   if(translation){
+     const done=Number.isInteger(coverage?.translated)?coverage.translated:0;
+     const total=Number.isInteger(coverage?.total)?coverage.total:0;
+     const enabled=done>0||['offline_argos','translated','cached'].includes(state.data?.translation_status);
+     translation.textContent=tr(
+       enabled?'已翻译 '+done+'/'+total+' 条 · 机器译文可展开核对英文原文':
+         '正在准备中文译文 · 未翻译条目单独标注为英文原文',
+       enabled?'Chinese machine translations: '+done+'/'+total+' entries · Originals available':
+         'Original English text · Chinese translations not yet available');
+   }
  }
  function choose(value,modify=true){
    state.filter=keys.includes(value)?value:'all';state.limit=BATCH;
