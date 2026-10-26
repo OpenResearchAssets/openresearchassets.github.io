@@ -1,0 +1,94 @@
+{
+  "id": "browser-use",
+  "title": "Browser Use · 网页操作 Agent",
+  "kind": "workflow",
+  "stages": [
+    "research",
+    "experiments"
+  ],
+  "domains": [
+    "agents",
+    "ml-systems"
+  ],
+  "topics": [
+    "web-automation",
+    "research-automation"
+  ],
+  "tasks": [
+    "browser-agent",
+    "web-research",
+    "web-automation"
+  ],
+  "description": {
+    "zh": "让 Agent 操作浏览器的开源 Python 项目，可用于需要实际网页交互的研究信息收集与操作验证。",
+    "en": "Python framework for browser-operating agents, useful when research work requires real web interactions."
+  },
+  "keywords": {
+    "zh": [
+      "web-automation",
+      "research-automation",
+      "browser-agent",
+      "web-research",
+      "web-automation",
+      "browser-use"
+    ],
+    "en": [
+      "web-automation",
+      "research-automation",
+      "browser-agent",
+      "web-research",
+      "web-automation",
+      "browser-use"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/browser-use/browser-use"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要访问有交互控件的研究网页或完成多步骤浏览。"
+      ],
+      "en": [
+        "Research workflows require navigating interactive websites."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "围绕可回放的网页任务设置步骤与检查点。"
+      ],
+      "en": [
+        "Create observable browser steps and check their outcomes."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "网页内容不可信，自动登录、抓取与提交必须遵守权限和网站政策。"
+      ],
+      "en": [
+        "Web content is untrusted; access, scraping and submission require authorization."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "tool",
+    "github_repo": "browser-use/browser-use",
+    "stars_snapshot": 119142,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "需要访问有交互控件的研究网页或完成多步骤浏览。",
+      "en": "Research workflows require navigating interactive websites."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

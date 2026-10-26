@@ -1,0 +1,94 @@
+{
+  "id": "langgraph",
+  "title": "LangGraph · 有状态 Agent 编排",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "experiments"
+  ],
+  "domains": [
+    "agents",
+    "ml-systems"
+  ],
+  "topics": [
+    "agent-engineering",
+    "research-automation"
+  ],
+  "tasks": [
+    "agent-orchestration",
+    "stateful-workflow",
+    "tool-calling"
+  ],
+  "description": {
+    "zh": "构建有状态 Agent 流程的开源框架，适合对比研究任务中的节点编排、状态管理和中断恢复。",
+    "en": "Framework for building stateful and resilient agent workflows."
+  },
+  "keywords": {
+    "zh": [
+      "agent-engineering",
+      "research-automation",
+      "agent-orchestration",
+      "stateful-workflow",
+      "tool-calling",
+      "langgraph"
+    ],
+    "en": [
+      "agent-engineering",
+      "research-automation",
+      "agent-orchestration",
+      "stateful-workflow",
+      "tool-calling",
+      "langgraph"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/langchain-ai/langgraph"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "科研 Agent 需要多步决策、状态保存和可恢复执行。"
+      ],
+      "en": [
+        "Research agents need multistep state and resumable execution."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "将状态与工具执行边界显式建模并逐步测量。"
+      ],
+      "en": [
+        "Make state and tool boundaries explicit and observable."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "框架提供编排能力，并不自动带来更高任务准确率。"
+      ],
+      "en": [
+        "Orchestration alone does not improve scientific accuracy."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "tool",
+    "github_repo": "langchain-ai/langgraph",
+    "stars_snapshot": 43903,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "科研 Agent 需要多步决策、状态保存和可恢复执行。",
+      "en": "Research agents need multistep state and resumable execution."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

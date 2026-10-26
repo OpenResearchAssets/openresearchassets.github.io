@@ -154,5 +154,9 @@
     "capture_date": "2026-10-25",
     "modifications": "cropped from first PDF page around Figure 1; downsampled and JPEG-compressed",
     "credit": "Qiayuan Liao, Yiyang Shao, Junfeng Long, Kevin Zakka, Roberto Horowitz, Pieter Abbeel, Koushil Sreenath"
-  }
+  },
+  "topics": [
+    "scientific-visualization",
+    "robot-learning"
+  ]
 }

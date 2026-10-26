@@ -1,0 +1,89 @@
+{
+  "id": "anthropic-frontend-design",
+  "title": "Frontend Design · 差异化网页设计 Skill",
+  "kind": "workflow",
+  "stages": [
+    "communication",
+    "methods"
+  ],
+  "domains": [
+    "agents"
+  ],
+  "topics": [
+    "skills-ecosystem",
+    "project-publishing"
+  ],
+  "tasks": [
+    "agent-skills",
+    "skills-ecosystem",
+    "project-publishing"
+  ],
+  "description": {
+    "zh": "用于设计具有明确视觉辨识度的网页界面，可作为科研项目主页改版时的具体 Skill 参考。",
+    "en": "A concrete skill about intentional visual design and distinctive frontend decisions."
+  },
+  "keywords": {
+    "zh": [
+      "Frontend Design · 差异化网页设计 Skill",
+      "anthropics/skills",
+      "用于设计具有明确视觉辨识度的网页界面，可作为科研项目主页改版时的具体 Skill 参考。"
+    ],
+    "en": [
+      "Frontend Design · 差异化网页设计 Skill",
+      "anthropics/skills",
+      "A concrete skill about intentional visual design and distinctive frontend decisions."
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md",
+    "repository": "https://github.com/anthropics/skills"
+  },
+  "rights": {
+    "reuse": "third-party skill: inspect skill-specific license and dependencies",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "研究主页需要形成独特的视觉层次。"
+      ],
+      "en": [
+        "A project website needs deliberate visual hierarchy."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "先确定设计主张，再组织字体、布局和配色。"
+      ],
+      "en": [
+        "Set a design direction before choosing type, layout and palette."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "源文件有独立授权声明，应单独审阅。"
+      ],
+      "en": [
+        "The skill has its own license notice; inspect it before reuse."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "anthropics/skills",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 183559,
+    "stars_checked_on": "2026-10-26",
+    "verification": "individual-SKILL.md-source-verified-not-installed",
+    "selection_reason": {
+      "zh": "研究主页需要形成独特的视觉层次。",
+      "en": "A project website needs deliberate visual hierarchy."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

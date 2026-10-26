@@ -1,0 +1,94 @@
+{
+  "id": "lightrag",
+  "title": "LightRAG · 轻量图检索",
+  "kind": "workflow",
+  "stages": [
+    "research",
+    "methods"
+  ],
+  "domains": [
+    "nlp",
+    "agents"
+  ],
+  "topics": [
+    "knowledge-retrieval",
+    "research-automation"
+  ],
+  "tasks": [
+    "rag",
+    "knowledge-graph",
+    "research-qa"
+  ],
+  "description": {
+    "zh": "结合图结构组织的 RAG 项目，适合比较科研资料库中多跳关系查询的检索方式。",
+    "en": "Graph-oriented retrieval-augmented generation project for connected knowledge queries."
+  },
+  "keywords": {
+    "zh": [
+      "knowledge-retrieval",
+      "research-automation",
+      "rag",
+      "knowledge-graph",
+      "research-qa",
+      "LightRAG"
+    ],
+    "en": [
+      "knowledge-retrieval",
+      "research-automation",
+      "rag",
+      "knowledge-graph",
+      "research-qa",
+      "LightRAG"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/HKUDS/LightRAG"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "资料存在跨文档实体关系，需要关系型检索。"
+      ],
+      "en": [
+        "Research corpora require queries across connected entities."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "对比建索引成本、更新复杂度与引用准确性。"
+      ],
+      "en": [
+        "Compare index cost, incremental updates and evidence accuracy."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "不要将仓库已有基准表现直接推广到自己的数据。"
+      ],
+      "en": [
+        "Reported benchmarks may not transfer to a new corpus."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "tool",
+    "github_repo": "HKUDS/LightRAG",
+    "stars_snapshot": 40332,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "资料存在跨文档实体关系，需要关系型检索。",
+      "en": "Research corpora require queries across connected entities."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

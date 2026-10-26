@@ -1,0 +1,94 @@
+{
+  "id": "spec-kit",
+  "title": "GitHub Spec Kit · 规范驱动工作流",
+  "kind": "workflow",
+  "stages": [
+    "ideation",
+    "methods"
+  ],
+  "domains": [
+    "agents",
+    "ml-systems"
+  ],
+  "topics": [
+    "software-engineering",
+    "research-automation"
+  ],
+  "tasks": [
+    "spec-driven-development",
+    "implementation-plan",
+    "software-workflow"
+  ],
+  "description": {
+    "zh": "规范驱动的软件开发工作流与工具集，适合把研究工程需求、实施任务和验收条件显式整理。",
+    "en": "Specification-driven development toolkit for structured requirements, plans and implementation tasks."
+  },
+  "keywords": {
+    "zh": [
+      "software-engineering",
+      "research-automation",
+      "spec-driven-development",
+      "implementation-plan",
+      "software-workflow",
+      "spec-kit"
+    ],
+    "en": [
+      "software-engineering",
+      "research-automation",
+      "spec-driven-development",
+      "implementation-plan",
+      "software-workflow",
+      "spec-kit"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/github/spec-kit"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "研究项目功能较多且开发步骤需要对齐需求。"
+      ],
+      "en": [
+        "Research engineering requires agreed requirements and implementation plans."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "保留规范、任务清单和验收之间的对应关系。"
+      ],
+      "en": [
+        "Maintain traceability between specifications, tasks and acceptance."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "可避免沟通混乱，但不是自动科学研究方法。"
+      ],
+      "en": [
+        "Helps project execution, not a validated research methodology."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "workflow",
+    "github_repo": "github/spec-kit",
+    "stars_snapshot": 142905,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "研究项目功能较多且开发步骤需要对齐需求。",
+      "en": "Research engineering requires agreed requirements and implementation plans."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

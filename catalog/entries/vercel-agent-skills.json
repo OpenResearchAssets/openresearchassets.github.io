@@ -78,5 +78,9 @@
       "en": "Building and checking polished, accessible research project websites."
     }
   },
-  "previewStyle": "workflow"
+  "previewStyle": "workflow",
+  "topics": [
+    "skills-ecosystem",
+    "project-publishing"
+  ]
 }

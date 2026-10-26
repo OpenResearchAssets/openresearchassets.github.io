@@ -78,5 +78,8 @@
       "en": "Looking for established Agent Skills structures and task-specific candidates; each subskill still needs separate review."
     }
   },
-  "previewStyle": "workflow"
+  "previewStyle": "workflow",
+  "topics": [
+    "skills-ecosystem"
+  ]
 }

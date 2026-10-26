@@ -149,5 +149,9 @@
     "capture_date": "2026-10-25",
     "modifications": "resized from official PNG and JPEG-compressed",
     "credit": "Tianxing Chen et al.; RoboDojo authors and contributors"
-  }
+  },
+  "topics": [
+    "scientific-visualization",
+    "robot-learning"
+  ]
 }

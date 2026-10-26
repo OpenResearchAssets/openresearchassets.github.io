@@ -1,0 +1,90 @@
+{
+  "id": "superpowers-verification",
+  "title": "Verification Before Completion · 交付验证 Skill",
+  "kind": "workflow",
+  "stages": [
+    "evaluation",
+    "communication"
+  ],
+  "domains": [
+    "agents",
+    "ml-systems"
+  ],
+  "topics": [
+    "skills-ecosystem",
+    "experiment-design"
+  ],
+  "tasks": [
+    "agent-skills",
+    "skills-ecosystem",
+    "experiment-design"
+  ],
+  "description": {
+    "zh": "要求在宣布任务完成前先运行真实验收命令并检查输出的具体 Skill。",
+    "en": "A concrete skill requiring fresh verification evidence before declaring completion."
+  },
+  "keywords": {
+    "zh": [
+      "Verification Before Completion · 交付验证 Skill",
+      "obra/superpowers",
+      "要求在宣布任务完成前先运行真实验收命令并检查输出的具体 Skill。"
+    ],
+    "en": [
+      "Verification Before Completion · 交付验证 Skill",
+      "obra/superpowers",
+      "A concrete skill requiring fresh verification evidence before declaring completion."
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/obra/superpowers/blob/main/skills/verification-before-completion/SKILL.md",
+    "repository": "https://github.com/obra/superpowers"
+  },
+  "rights": {
+    "reuse": "third-party skill: inspect skill-specific license and dependencies",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "Agent 需要声称代码、论文材料或资产构建完成。"
+      ],
+      "en": [
+        "An agent is about to claim a task or artifact is complete."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "把具体验收命令和结果作为成功断言的依据。"
+      ],
+      "en": [
+        "Make actual verification results the basis for completion claims."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "验证只能覆盖运行过的检查，不等于证明所有场景正确。"
+      ],
+      "en": [
+        "Passing selected checks does not prove universal correctness."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "obra/superpowers",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 305180,
+    "stars_checked_on": "2026-10-26",
+    "verification": "individual-SKILL.md-source-verified-not-installed",
+    "selection_reason": {
+      "zh": "Agent 需要声称代码、论文材料或资产构建完成。",
+      "en": "An agent is about to claim a task or artifact is complete."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

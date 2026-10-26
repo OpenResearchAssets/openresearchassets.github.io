@@ -149,5 +149,9 @@
     "capture_date": "2026-10-25",
     "modifications": "viewport screenshot of published homepage, JPEG compression",
     "credit": "RoboDojo project contributors"
-  }
+  },
+  "topics": [
+    "project-publishing",
+    "scientific-visualization"
+  ]
 }

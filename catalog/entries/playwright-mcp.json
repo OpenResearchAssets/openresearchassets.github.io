@@ -1,0 +1,94 @@
+{
+  "id": "playwright-mcp",
+  "title": "Playwright MCP · 浏览器操作",
+  "kind": "workflow",
+  "stages": [
+    "experiments",
+    "evaluation"
+  ],
+  "domains": [
+    "agents",
+    "ml-systems"
+  ],
+  "topics": [
+    "web-automation",
+    "software-engineering"
+  ],
+  "tasks": [
+    "browser-mcp",
+    "browser-testing",
+    "agent-browser"
+  ],
+  "description": {
+    "zh": "面向 Agent 的 Playwright MCP 浏览器工具服务，适合执行可观察的页面操作与回归检查。",
+    "en": "Playwright MCP server for agent-driven browser operations and UI checks."
+  },
+  "keywords": {
+    "zh": [
+      "web-automation",
+      "software-engineering",
+      "browser-mcp",
+      "browser-testing",
+      "agent-browser",
+      "playwright-mcp"
+    ],
+    "en": [
+      "web-automation",
+      "software-engineering",
+      "browser-mcp",
+      "browser-testing",
+      "agent-browser",
+      "playwright-mcp"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/microsoft/playwright-mcp"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要让 Coding Agent 操作与检查真实网页界面。"
+      ],
+      "en": [
+        "An agent needs to test or inspect real web interfaces."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "按真实页面截图和操作日志验证前端变化。"
+      ],
+      "en": [
+        "Verify UI changes with actual browser observations and logs."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "自动化交互应受沙箱、权限与网站政策约束。"
+      ],
+      "en": [
+        "Browser actions require scoped permissions and policy compliance."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "tool",
+    "github_repo": "microsoft/playwright-mcp",
+    "stars_snapshot": 38636,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "需要让 Coding Agent 操作与检查真实网页界面。",
+      "en": "An agent needs to test or inspect real web interfaces."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

@@ -78,5 +78,9 @@
       "en": "Finding task-specific skills and installation patterns for a coding agent."
     }
   },
-  "previewStyle": "workflow"
+  "previewStyle": "workflow",
+  "topics": [
+    "skills-ecosystem",
+    "software-engineering"
+  ]
 }

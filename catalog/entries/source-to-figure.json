@@ -87,5 +87,9 @@
       "tests/browser_offline_smoke.py"
     ]
   },
-  "previewStyle": "workflow"
+  "previewStyle": "workflow",
+  "topics": [
+    "scientific-visualization",
+    "paper-writing"
+  ]
 }

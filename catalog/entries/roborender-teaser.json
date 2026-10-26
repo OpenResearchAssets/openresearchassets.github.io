@@ -155,5 +155,9 @@
     "capture_date": "2026-10-25",
     "modifications": "cropped from page 1 around Figure 1; downsampled and JPEG-compressed",
     "credit": "Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu"
-  }
+  },
+  "topics": [
+    "scientific-visualization",
+    "robot-learning"
+  ]
 }

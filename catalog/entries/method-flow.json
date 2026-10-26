@@ -65,5 +65,8 @@
       ]
     }
   },
-  "previewStyle": "workflow"
+  "previewStyle": "workflow",
+  "topics": [
+    "scientific-visualization"
+  ]
 }

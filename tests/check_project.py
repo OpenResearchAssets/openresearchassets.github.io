@@ -58,7 +58,7 @@ if sync.returncode:errors.append('derived catalog out of date: '+sync.stdout+syn
 catalog=json.loads((ROOT/'catalog/index.json').read_text(encoding='utf-8'))
 if catalog.get('schema_version')!='1.0.0':errors.append('catalog: unsupported schema version')
 entries=catalog.get('entries',[])
-if len(entries)!=39:errors.append('catalog: expected 39 curated records after the GridAR removal')
+if len(entries)<39:errors.append('catalog: unexpected loss of curated assets')
 core_ids={'roborender-teaser','roborender-site','robodojo-teaser','robodojo-site','supermimic-teaser','supermimic-site'}
 for e in entries:
     if e.get('id') in core_ids and e.get('visual',{}).get('kind') not in ('verified-paper-figure','verified-site-screenshot'):
@@ -141,6 +141,8 @@ for e in entries:
             if not all(study.get(field,{}).get(lang) for lang in ('zh','en')):
                 errors.append(f'{where}: missing bilingual study {field}')
     if e.get('kind') not in catalog['facets']['kinds']:errors.append(f'{where}: unknown kind')
+    if not e.get('topics') or not set(e['topics']).issubset(catalog['facets']['topics']):
+        errors.append(f'{where}: invalid controlled topics')
     for field,group in (('stages','stages'),('domains','domains')):
         values=e.get(field,[])
         if not values or not set(values).issubset(catalog['facets'][group]):errors.append(f'{where}: invalid {field}')
@@ -342,8 +344,8 @@ if 'examples/roborender.html' not in case_page:
 # Curated Skills: popularity snapshots are dated and practice items link to public work.
 popular=[e for e in entries if e.get('curation',{}).get('track')=='popular']
 practice=[e for e in entries if e.get('curation',{}).get('track')=='practice']
-if len(popular)!=4 or len(practice)!=2:
-    errors.append('curation: expected four sourced popular items and two practiced workflows')
+if len(popular)<4 or len(practice)<2:
+    errors.append('curation: popular and practice tracks unexpectedly regressed')
 for e in popular:
     c=e['curation']
     if not re.fullmatch(r'[a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+',c.get('github_repo','')):
@@ -352,8 +354,10 @@ for e in popular:
         errors.append(f"{e['id']}: missing Star snapshot")
     if not re.fullmatch(r'\d{4}-\d{2}-\d{2}',c.get('stars_checked_on','')):
         errors.append(f"{e['id']}: missing Star checked date")
-    if e['links']['source'] != 'https://github.com/'+c['github_repo']:
+    if not e['links']['source'].startswith('https://github.com/'+c['github_repo']):
         errors.append(f"{e['id']}: Star target does not match original source")
+    if e['links']['source'] != 'https://github.com/'+c['github_repo'] and c.get('star_scope')!='parent-repository':
+        errors.append(f"{e['id']}: specific skill must label stars as parent-repository scope")
 for e in practice:
     c=e['curation']
     if not c.get('evidence'):errors.append(f"{e['id']}: missing practice evidence")

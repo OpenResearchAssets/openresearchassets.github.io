@@ -68,5 +68,8 @@
         "Never fabricate results or conceal failures"
       ]
     }
-  }
+  },
+  "topics": [
+    "experiment-design"
+  ]
 }

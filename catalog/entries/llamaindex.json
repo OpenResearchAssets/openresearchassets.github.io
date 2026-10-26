@@ -1,0 +1,94 @@
+{
+  "id": "llamaindex",
+  "title": "LlamaIndex · 文档与知识索引",
+  "kind": "workflow",
+  "stages": [
+    "research",
+    "methods"
+  ],
+  "domains": [
+    "nlp",
+    "agents"
+  ],
+  "topics": [
+    "knowledge-retrieval",
+    "document-parsing"
+  ],
+  "tasks": [
+    "rag",
+    "document-indexing",
+    "agent-data"
+  ],
+  "description": {
+    "zh": "将文档处理、索引与检索串接到模型应用的数据框架，适合构建研究资料库的读取层。",
+    "en": "Data framework for document processing, indexing and retrieval in LLM applications."
+  },
+  "keywords": {
+    "zh": [
+      "knowledge-retrieval",
+      "document-parsing",
+      "rag",
+      "document-indexing",
+      "agent-data",
+      "llama_index"
+    ],
+    "en": [
+      "knowledge-retrieval",
+      "document-parsing",
+      "rag",
+      "document-indexing",
+      "agent-data",
+      "llama_index"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/run-llama/llama_index"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要把科研论文和项目文档组织成可查询知识库。"
+      ],
+      "en": [
+        "Organizing papers and project docs into a searchable corpus."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "对比检索召回、跨版本更新成本与引用质量。"
+      ],
+      "en": [
+        "Evaluate retrieval recall, refresh cost and citation quality."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "框架可组合很多组件，需选择最小适用集合。"
+      ],
+      "en": [
+        "A broad framework requires careful component and cost selection."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "tool",
+    "github_repo": "run-llama/llama_index",
+    "stars_snapshot": 52668,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "需要把科研论文和项目文档组织成可查询知识库。",
+      "en": "Organizing papers and project docs into a searchable corpus."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

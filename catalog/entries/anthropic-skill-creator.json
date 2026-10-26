@@ -1,0 +1,89 @@
+{
+  "id": "anthropic-skill-creator",
+  "title": "Skill Creator · 创建与评测 Agent Skills",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "evaluation"
+  ],
+  "domains": [
+    "agents"
+  ],
+  "topics": [
+    "skills-ecosystem",
+    "experiment-design"
+  ],
+  "tasks": [
+    "agent-skills",
+    "skills-ecosystem",
+    "experiment-design"
+  ],
+  "description": {
+    "zh": "指导从 Skill 草稿、测试样例到触发准确率评估的实际技能文件，可作为封装科研 Agent 经验的参考。",
+    "en": "A concrete skill for authoring, testing and iterating Agent Skills."
+  },
+  "keywords": {
+    "zh": [
+      "Skill Creator · 创建与评测 Agent Skills",
+      "anthropics/skills",
+      "指导从 Skill 草稿、测试样例到触发准确率评估的实际技能文件，可作为封装科研 Agent 经验的参考。"
+    ],
+    "en": [
+      "Skill Creator · 创建与评测 Agent Skills",
+      "anthropics/skills",
+      "A concrete skill for authoring, testing and iterating Agent Skills."
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md",
+    "repository": "https://github.com/anthropics/skills"
+  },
+  "rights": {
+    "reuse": "third-party skill: inspect skill-specific license and dependencies",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要设计或改进具体科研 Skill。"
+      ],
+      "en": [
+        "Creating or refining task-specific skills."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "编写使用案例并做触发与效果评估。"
+      ],
+      "en": [
+        "Test trigger coverage and effectiveness with examples."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "该 Skill 的效果并未由本站独立验证。"
+      ],
+      "en": [
+        "This individual skill has not been independently tested here."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "anthropics/skills",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 183559,
+    "stars_checked_on": "2026-10-26",
+    "verification": "individual-SKILL.md-source-verified-not-installed",
+    "selection_reason": {
+      "zh": "需要设计或改进具体科研 Skill。",
+      "en": "Creating or refining task-specific skills."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

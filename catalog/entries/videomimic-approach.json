@@ -139,5 +139,9 @@
     "editorial_scope": "composition-layout-visual-storytelling",
     "asset_residency": "external-original-no-hosted-copy"
   },
-  "previewStyle": "curated-visual"
+  "previewStyle": "curated-visual",
+  "topics": [
+    "scientific-visualization",
+    "robot-learning"
+  ]
 }

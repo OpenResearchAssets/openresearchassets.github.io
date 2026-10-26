@@ -81,5 +81,8 @@
       ]
     }
   },
-  "previewStyle": "editorial"
+  "previewStyle": "editorial",
+  "topics": [
+    "scientific-visualization"
+  ]
 }

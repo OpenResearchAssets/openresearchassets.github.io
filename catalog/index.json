@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_on": "2026-10-25",
+  "generated_on": "2026-10-26",
   "default_language": "zh",
   "notice": {
     "zh": "所有第三方论文图、网站图与截图保留原权利；本站未收录其原始图片文件。卡片结构示意为本站原创，不代表原作截图。",
@@ -75,6 +75,76 @@
       "rl": {
         "zh": "强化学习",
         "en": "Reinforcement learning"
+      },
+      "agents": {
+        "zh": "智能体与 Agent 系统",
+        "en": "Agents & agent systems"
+      },
+      "nlp": {
+        "zh": "语言模型与 NLP",
+        "en": "Language models & NLP"
+      },
+      "ml-systems": {
+        "zh": "机器学习系统",
+        "en": "ML systems"
+      }
+    },
+    "topics": {
+      "agent-engineering": {
+        "zh": "Agent 框架与运行",
+        "en": "Agent architectures"
+      },
+      "skills-ecosystem": {
+        "zh": "Skills 与能力封装",
+        "en": "Skills and plugins"
+      },
+      "research-automation": {
+        "zh": "科研自动化",
+        "en": "Research automation"
+      },
+      "document-parsing": {
+        "zh": "PDF 与文档解析",
+        "en": "Document parsing"
+      },
+      "literature-discovery": {
+        "zh": "文献检索与理解",
+        "en": "Literature discovery"
+      },
+      "knowledge-retrieval": {
+        "zh": "知识检索与 RAG",
+        "en": "Retrieval and RAG"
+      },
+      "software-engineering": {
+        "zh": "代码与工程实践",
+        "en": "Software engineering"
+      },
+      "experiment-design": {
+        "zh": "实验设计与验证",
+        "en": "Experiment design"
+      },
+      "scientific-visualization": {
+        "zh": "科研图形与表达",
+        "en": "Scientific visualization"
+      },
+      "three-d-vision": {
+        "zh": "三维视觉与重建",
+        "en": "3D vision and reconstruction"
+      },
+      "robot-learning": {
+        "zh": "机器人学习",
+        "en": "Robot learning"
+      },
+      "paper-writing": {
+        "zh": "论文写作",
+        "en": "Paper writing"
+      },
+      "project-publishing": {
+        "zh": "项目主页与发布",
+        "en": "Project publishing"
+      },
+      "web-automation": {
+        "zh": "网页操作与采集",
+        "en": "Browser automation"
       }
     }
   },
@@ -178,7 +248,11 @@
           "en": "OFFICIAL LINKED IMAGE · RIGHTS RESERVED"
         }
       },
-      "previewStyle": "depth-geometry"
+      "previewStyle": "depth-geometry",
+      "topics": [
+        "scientific-visualization",
+        "three-d-vision"
+      ]
     },
     {
       "id": "roborender-teaser",
@@ -337,7 +411,11 @@
         "capture_date": "2026-10-25",
         "modifications": "cropped from page 1 around Figure 1; downsampled and JPEG-compressed",
         "credit": "Huang Huang, Wensi Ai, Ziyu Chen, Youhui Wang, Zijian Du, Yang Liu, Jiaolong Yang, Li Fei-Fei, Jiajun Wu"
-      }
+      },
+      "topics": [
+        "scientific-visualization",
+        "robot-learning"
+      ]
     },
     {
       "id": "roborender-site",
@@ -487,7 +565,11 @@
         "capture_date": "2026-10-25",
         "modifications": "viewport screenshot of published homepage, JPEG compression",
         "credit": "Huang Huang et al.; RoboRender project website"
-      }
+      },
+      "topics": [
+        "project-publishing",
+        "scientific-visualization"
+      ]
     },
     {
       "id": "robodojo-teaser",
@@ -640,7 +722,11 @@
         "capture_date": "2026-10-25",
         "modifications": "resized from official PNG and JPEG-compressed",
         "credit": "Tianxing Chen et al.; RoboDojo authors and contributors"
-      }
+      },
+      "topics": [
+        "scientific-visualization",
+        "robot-learning"
+      ]
     },
     {
       "id": "robodojo-site",
@@ -793,7 +879,11 @@
         "capture_date": "2026-10-25",
         "modifications": "viewport screenshot of published homepage, JPEG compression",
         "credit": "RoboDojo project contributors"
-      }
+      },
+      "topics": [
+        "project-publishing",
+        "scientific-visualization"
+      ]
     },
     {
       "id": "supermimic-teaser",
@@ -951,7 +1041,11 @@
         "capture_date": "2026-10-25",
         "modifications": "cropped from first PDF page around Figure 1; downsampled and JPEG-compressed",
         "credit": "Qiayuan Liao, Yiyang Shao, Junfeng Long, Kevin Zakka, Roberto Horowitz, Pieter Abbeel, Koushil Sreenath"
-      }
+      },
+      "topics": [
+        "scientific-visualization",
+        "robot-learning"
+      ]
     },
     {
       "id": "supermimic-site",
@@ -1108,7 +1202,11 @@
         "capture_date": "2026-10-25",
         "modifications": "viewport screenshot of published homepage, JPEG compression",
         "credit": "Qiayuan Liao et al.; SuperMimic project website"
-      }
+      },
+      "topics": [
+        "project-publishing",
+        "scientific-visualization"
+      ]
     },
     {
       "id": "instruct-pix2pix-teaser",
@@ -1249,7 +1347,10 @@
         "editorial_scope": "design-composition-evidence-communication",
         "asset_residency": "external-original-no-hosted-copy"
       },
-      "previewStyle": "curated-visual"
+      "previewStyle": "curated-visual",
+      "topics": [
+        "scientific-visualization"
+      ]
     },
     {
       "id": "ultraedit-qualitative",
@@ -1391,7 +1492,10 @@
         "editorial_scope": "design-composition-evidence-communication",
         "asset_residency": "external-original-no-hosted-copy"
       },
-      "previewStyle": "curated-visual"
+      "previewStyle": "curated-visual",
+      "topics": [
+        "scientific-visualization"
+      ]
     },
     {
       "id": "fastnerf-zoom-results",
@@ -1533,7 +1637,11 @@
         "editorial_scope": "design-composition-evidence-communication",
         "asset_residency": "external-original-no-hosted-copy"
       },
-      "previewStyle": "curated-visual"
+      "previewStyle": "curated-visual",
+      "topics": [
+        "scientific-visualization",
+        "three-d-vision"
+      ]
     },
     {
       "id": "specialist-diffusion-ablation",
@@ -1675,7 +1783,11 @@
         "editorial_scope": "design-composition-evidence-communication",
         "asset_residency": "external-original-no-hosted-copy"
       },
-      "previewStyle": "curated-visual"
+      "previewStyle": "curated-visual",
+      "topics": [
+        "scientific-visualization",
+        "experiment-design"
+      ]
     },
     {
       "id": "egoengine-ablation",
@@ -1818,7 +1930,12 @@
         "editorial_scope": "design-composition-evidence-communication",
         "asset_residency": "external-original-no-hosted-copy"
       },
-      "previewStyle": "curated-visual"
+      "previewStyle": "curated-visual",
+      "topics": [
+        "scientific-visualization",
+        "robot-learning",
+        "experiment-design"
+      ]
     },
     {
       "id": "nerfies-project-site",
@@ -1959,7 +2076,11 @@
         "editorial_scope": "design-composition-evidence-communication",
         "asset_residency": "external-original-no-hosted-copy"
       },
-      "previewStyle": "curated-visual"
+      "previewStyle": "curated-visual",
+      "topics": [
+        "project-publishing",
+        "scientific-visualization"
+      ]
     },
     {
       "id": "hypernerf-project-site",
@@ -2100,7 +2221,11 @@
         "editorial_scope": "design-composition-evidence-communication",
         "asset_residency": "external-original-no-hosted-copy"
       },
-      "previewStyle": "curated-visual"
+      "previewStyle": "curated-visual",
+      "topics": [
+        "project-publishing",
+        "scientific-visualization"
+      ]
     },
     {
       "id": "topconf-figure-gallery",
@@ -2182,7 +2307,10 @@
           "zh": "真实来源图 · 原作者版权所有",
           "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
         }
-      }
+      },
+      "topics": [
+        "scientific-visualization"
+      ]
     },
     {
       "id": "awesome-academic-figures",
@@ -2263,7 +2391,10 @@
           "zh": "真实来源图 · 原作者版权所有",
           "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
         }
-      }
+      },
+      "topics": [
+        "scientific-visualization"
+      ]
     },
     {
       "id": "figure-atlas",
@@ -2344,7 +2475,10 @@
           "zh": "真实来源图 · 原作者版权所有",
           "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
         }
-      }
+      },
+      "topics": [
+        "scientific-visualization"
+      ]
     },
     {
       "id": "ml-visuals",
@@ -2423,7 +2557,10 @@
           "zh": "真实来源图 · 原作者版权所有",
           "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
         }
-      }
+      },
+      "topics": [
+        "scientific-visualization"
+      ]
     },
     {
       "id": "research-skills-directory",
@@ -2505,7 +2642,11 @@
           "zh": "真实来源图 · 原作者版权所有",
           "en": "AUTHENTIC SOURCE IMAGE · RIGHTS RESERVED"
         }
-      }
+      },
+      "topics": [
+        "skills-ecosystem",
+        "research-automation"
+      ]
     },
     {
       "id": "teaser-story",
@@ -2574,7 +2715,10 @@
           ]
         }
       },
-      "previewStyle": "comparison"
+      "previewStyle": "comparison",
+      "topics": [
+        "scientific-visualization"
+      ]
     },
     {
       "id": "method-flow",
@@ -2643,7 +2787,10 @@
           ]
         }
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "topics": [
+        "scientific-visualization"
+      ]
     },
     {
       "id": "results-panel",
@@ -2712,7 +2859,10 @@
           ]
         }
       },
-      "previewStyle": "comparison"
+      "previewStyle": "comparison",
+      "topics": [
+        "scientific-visualization"
+      ]
     },
     {
       "id": "project-homepage-layout",
@@ -2797,7 +2947,10 @@
           ]
         }
       },
-      "previewStyle": "editorial"
+      "previewStyle": "editorial",
+      "topics": [
+        "scientific-visualization"
+      ]
     },
     {
       "id": "claim-evidence-map",
@@ -2884,7 +3037,11 @@
           ]
         }
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "topics": [
+        "experiment-design",
+        "scientific-visualization"
+      ]
     },
     {
       "id": "quality-critic-skill",
@@ -2954,7 +3111,11 @@
           ]
         }
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "topics": [
+        "scientific-visualization",
+        "experiment-design"
+      ]
     },
     {
       "id": "literature-triage",
@@ -3024,7 +3185,10 @@
             "Not finding a paper is not proof of novelty"
           ]
         }
-      }
+      },
+      "topics": [
+        "literature-discovery"
+      ]
     },
     {
       "id": "experiment-planning",
@@ -3096,7 +3260,10 @@
             "Never fabricate results or conceal failures"
           ]
         }
-      }
+      },
+      "topics": [
+        "experiment-design"
+      ]
     },
     {
       "id": "paper-evidence-story",
@@ -3167,7 +3334,11 @@
             "Do not rearrange good figures merely for aesthetics"
           ]
         }
-      }
+      },
+      "topics": [
+        "paper-writing",
+        "scientific-visualization"
+      ]
     },
     {
       "id": "research-release",
@@ -3250,7 +3421,10 @@
           "examples/roborender.html",
           "examples/roborender-provenance.md"
         ]
-      }
+      },
+      "topics": [
+        "project-publishing"
+      ]
     },
     {
       "id": "anthropic-agent-skills",
@@ -3332,7 +3506,10 @@
           "en": "Looking for established Agent Skills structures and task-specific candidates; each subskill still needs separate review."
         }
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "topics": [
+        "skills-ecosystem"
+      ]
     },
     {
       "id": "codex-skills",
@@ -3414,7 +3591,11 @@
           "en": "Finding task-specific skills and installation patterns for a coding agent."
         }
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "topics": [
+        "skills-ecosystem",
+        "software-engineering"
+      ]
     },
     {
       "id": "microsoft-markitdown",
@@ -3498,7 +3679,10 @@
           "en": "Preparing structured text from research PDFs and office documents before agent processing."
         }
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "topics": [
+        "document-parsing"
+      ]
     },
     {
       "id": "vercel-agent-skills",
@@ -3580,7 +3764,11 @@
           "en": "Building and checking polished, accessible research project websites."
         }
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "topics": [
+        "skills-ecosystem",
+        "project-publishing"
+      ]
     },
     {
       "id": "source-to-figure",
@@ -3671,7 +3859,11 @@
           "tests/browser_offline_smoke.py"
         ]
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "topics": [
+        "scientific-visualization",
+        "paper-writing"
+      ]
     },
     {
       "id": "vggt-architecture",
@@ -3814,7 +4006,11 @@
         "editorial_scope": "composition-layout-visual-storytelling",
         "asset_residency": "external-original-no-hosted-copy"
       },
-      "previewStyle": "curated-visual"
+      "previewStyle": "curated-visual",
+      "topics": [
+        "scientific-visualization",
+        "three-d-vision"
+      ]
     },
     {
       "id": "dreamdojo-overview",
@@ -3958,7 +4154,11 @@
         "editorial_scope": "composition-layout-visual-storytelling",
         "asset_residency": "external-original-no-hosted-copy"
       },
-      "previewStyle": "curated-visual"
+      "previewStyle": "curated-visual",
+      "topics": [
+        "scientific-visualization",
+        "robot-learning"
+      ]
     },
     {
       "id": "videomimic-real2sim",
@@ -4101,7 +4301,11 @@
         "editorial_scope": "composition-layout-visual-storytelling",
         "asset_residency": "external-original-no-hosted-copy"
       },
-      "previewStyle": "curated-visual"
+      "previewStyle": "curated-visual",
+      "topics": [
+        "scientific-visualization",
+        "robot-learning"
+      ]
     },
     {
       "id": "videomimic-approach",
@@ -4244,7 +4448,11 @@
         "editorial_scope": "composition-layout-visual-storytelling",
         "asset_residency": "external-original-no-hosted-copy"
       },
-      "previewStyle": "curated-visual"
+      "previewStyle": "curated-visual",
+      "topics": [
+        "scientific-visualization",
+        "robot-learning"
+      ]
     },
     {
       "id": "wonderzoom-teaser",
@@ -4386,7 +4594,1780 @@
         "editorial_scope": "composition-layout-visual-storytelling",
         "asset_residency": "external-original-no-hosted-copy"
       },
-      "previewStyle": "curated-visual"
+      "previewStyle": "curated-visual",
+      "topics": [
+        "scientific-visualization",
+        "three-d-vision"
+      ]
+    },
+    {
+      "id": "superpowers",
+      "title": "Superpowers · Agent 开发技能框架",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "skills-ecosystem",
+        "software-engineering"
+      ],
+      "tasks": [
+        "agent-skills",
+        "development-process",
+        "agent-coding"
+      ],
+      "description": {
+        "zh": "面向 Coding Agent 的技能化开发方法集合，强调先明确需求、分步实现和验证；适合参考其原生 Skill 文件结构。",
+        "en": "Skill-based software development methods for coding agents, covering design, execution and verification."
+      },
+      "keywords": {
+        "zh": [
+          "skills-ecosystem",
+          "software-engineering",
+          "agent-skills",
+          "development-process",
+          "agent-coding",
+          "superpowers"
+        ],
+        "en": [
+          "skills-ecosystem",
+          "software-engineering",
+          "agent-skills",
+          "development-process",
+          "agent-coding",
+          "superpowers"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/obra/superpowers"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要为编码 Agent 组织可检查的开发步骤。"
+          ],
+          "en": [
+            "Structuring verifiable work for a coding agent."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "按具体任务选用仓库中的独立技能和检查流程。"
+          ],
+          "en": [
+            "Choose individual skill files and verification steps for the task."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "整套技能并非已被本站评估，也不应把仓库 Star 当作单个技能质量。"
+          ],
+          "en": [
+            "The library has not been tested here; repository stars are not individual skill quality."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "obra/superpowers",
+        "stars_snapshot": 305180,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "需要为编码 Agent 组织可检查的开发步骤。",
+          "en": "Structuring verifiable work for a coding agent."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "browser-use",
+      "title": "Browser Use · 网页操作 Agent",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "experiments"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "web-automation",
+        "research-automation"
+      ],
+      "tasks": [
+        "browser-agent",
+        "web-research",
+        "web-automation"
+      ],
+      "description": {
+        "zh": "让 Agent 操作浏览器的开源 Python 项目，可用于需要实际网页交互的研究信息收集与操作验证。",
+        "en": "Python framework for browser-operating agents, useful when research work requires real web interactions."
+      },
+      "keywords": {
+        "zh": [
+          "web-automation",
+          "research-automation",
+          "browser-agent",
+          "web-research",
+          "web-automation",
+          "browser-use"
+        ],
+        "en": [
+          "web-automation",
+          "research-automation",
+          "browser-agent",
+          "web-research",
+          "web-automation",
+          "browser-use"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/browser-use/browser-use"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要访问有交互控件的研究网页或完成多步骤浏览。"
+          ],
+          "en": [
+            "Research workflows require navigating interactive websites."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "围绕可回放的网页任务设置步骤与检查点。"
+          ],
+          "en": [
+            "Create observable browser steps and check their outcomes."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "网页内容不可信，自动登录、抓取与提交必须遵守权限和网站政策。"
+          ],
+          "en": [
+            "Web content is untrusted; access, scraping and submission require authorization."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "tool",
+        "github_repo": "browser-use/browser-use",
+        "stars_snapshot": 119142,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "需要访问有交互控件的研究网页或完成多步骤浏览。",
+          "en": "Research workflows require navigating interactive websites."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "docling",
+      "title": "Docling · 科研文档解析",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "methods"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "document-parsing",
+        "literature-discovery"
+      ],
+      "tasks": [
+        "pdf-parsing",
+        "document-layout",
+        "structured-extraction"
+      ],
+      "description": {
+        "zh": "文档转换与结构解析工具，面向论文 PDF、表格及复杂版面生成便于模型处理的结构化材料。",
+        "en": "Document conversion and layout extraction toolkit for PDFs, tables and structured inputs to language models."
+      },
+      "keywords": {
+        "zh": [
+          "document-parsing",
+          "literature-discovery",
+          "pdf-parsing",
+          "document-layout",
+          "structured-extraction",
+          "docling"
+        ],
+        "en": [
+          "document-parsing",
+          "literature-discovery",
+          "pdf-parsing",
+          "document-layout",
+          "structured-extraction",
+          "docling"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/docling-project/docling"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要尽量保留论文版面层次、表格与结构。"
+          ],
+          "en": [
+            "Preserving research document structure and tables."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "先检查公式、页码、图表的解析保真度再用于问答。"
+          ],
+          "en": [
+            "Verify formulas, page spans and table fidelity before using extracted text."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "转换后的 Markdown 不等于准确无误的原论文。"
+          ],
+          "en": [
+            "Converted output is not guaranteed to reproduce the original PDF faithfully."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "tool",
+        "github_repo": "docling-project/docling",
+        "stars_snapshot": 69592,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "需要尽量保留论文版面层次、表格与结构。",
+          "en": "Preserving research document structure and tables."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "mineru",
+      "title": "MinerU · PDF 结构化转换",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "methods"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "document-parsing",
+        "literature-discovery"
+      ],
+      "tasks": [
+        "pdf-parsing",
+        "ocr",
+        "markdown-conversion"
+      ],
+      "description": {
+        "zh": "用于复杂 PDF、Office 文档到 Markdown/JSON 的解析流程，适合处理科研文献图表和混合排版。",
+        "en": "Document parsing project that converts complex PDF and Office files to agent-ready Markdown/JSON."
+      },
+      "keywords": {
+        "zh": [
+          "document-parsing",
+          "literature-discovery",
+          "pdf-parsing",
+          "ocr",
+          "markdown-conversion",
+          "MinerU"
+        ],
+        "en": [
+          "document-parsing",
+          "literature-discovery",
+          "pdf-parsing",
+          "ocr",
+          "markdown-conversion",
+          "MinerU"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/opendatalab/MinerU"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "科研文献需要 OCR、表格或混合排版解析。"
+          ],
+          "en": [
+            "Papers need OCR, tables or mixed layout conversion."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "针对中英文、公式、跨栏文档抽样核对输出。"
+          ],
+          "en": [
+            "Sample-check bilingual, formula-heavy and multi-column outputs."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "OCR、公式及表格结果仍应回看原文。"
+          ],
+          "en": [
+            "Check OCR, equations and tables against source documents."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "tool",
+        "github_repo": "opendatalab/MinerU",
+        "stars_snapshot": 82489,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "科研文献需要 OCR、表格或混合排版解析。",
+          "en": "Papers need OCR, tables or mixed layout conversion."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "paper-qa",
+      "title": "PaperQA · 科学文献问答",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "evaluation"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "literature-discovery",
+        "knowledge-retrieval"
+      ],
+      "tasks": [
+        "scientific-qa",
+        "cited-answers",
+        "paper-reading"
+      ],
+      "description": {
+        "zh": "针对科学文档的带引用问答与检索工具，可用于搭建需要核对文献证据的工作流。",
+        "en": "Retrieval and cited question answering for scientific documents."
+      },
+      "keywords": {
+        "zh": [
+          "literature-discovery",
+          "knowledge-retrieval",
+          "scientific-qa",
+          "cited-answers",
+          "paper-reading",
+          "paper-qa"
+        ],
+        "en": [
+          "literature-discovery",
+          "knowledge-retrieval",
+          "scientific-qa",
+          "cited-answers",
+          "paper-reading",
+          "paper-qa"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/Future-House/paper-qa"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要根据多份论文回答问题并追踪证据来源。"
+          ],
+          "en": [
+            "Answering questions across scientific papers with traceable citations."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "关注引用落点与答案能否由原文支持。"
+          ],
+          "en": [
+            "Audit whether cited passages support the answer."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "系统给出引用不意味着自动保证结论正确。"
+          ],
+          "en": [
+            "Citations do not automatically establish scientific correctness."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "tool",
+        "github_repo": "Future-House/paper-qa",
+        "stars_snapshot": 9468,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "需要根据多份论文回答问题并追踪证据来源。",
+          "en": "Answering questions across scientific papers with traceable citations."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "lightrag",
+      "title": "LightRAG · 轻量图检索",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "methods"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "knowledge-retrieval",
+        "research-automation"
+      ],
+      "tasks": [
+        "rag",
+        "knowledge-graph",
+        "research-qa"
+      ],
+      "description": {
+        "zh": "结合图结构组织的 RAG 项目，适合比较科研资料库中多跳关系查询的检索方式。",
+        "en": "Graph-oriented retrieval-augmented generation project for connected knowledge queries."
+      },
+      "keywords": {
+        "zh": [
+          "knowledge-retrieval",
+          "research-automation",
+          "rag",
+          "knowledge-graph",
+          "research-qa",
+          "LightRAG"
+        ],
+        "en": [
+          "knowledge-retrieval",
+          "research-automation",
+          "rag",
+          "knowledge-graph",
+          "research-qa",
+          "LightRAG"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/HKUDS/LightRAG"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "资料存在跨文档实体关系，需要关系型检索。"
+          ],
+          "en": [
+            "Research corpora require queries across connected entities."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "对比建索引成本、更新复杂度与引用准确性。"
+          ],
+          "en": [
+            "Compare index cost, incremental updates and evidence accuracy."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "不要将仓库已有基准表现直接推广到自己的数据。"
+          ],
+          "en": [
+            "Reported benchmarks may not transfer to a new corpus."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "tool",
+        "github_repo": "HKUDS/LightRAG",
+        "stars_snapshot": 40332,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "资料存在跨文档实体关系，需要关系型检索。",
+          "en": "Research corpora require queries across connected entities."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "graphrag",
+      "title": "Microsoft GraphRAG · 图结构检索",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "methods"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "knowledge-retrieval",
+        "research-automation"
+      ],
+      "tasks": [
+        "graph-rag",
+        "summarization",
+        "knowledge-search"
+      ],
+      "description": {
+        "zh": "基于图结构的检索增强生成系统，适合探索全局主题总结与局部证据查询的不同检索需求。",
+        "en": "Graph-based RAG system for corpus-level synthesis and local evidence retrieval."
+      },
+      "keywords": {
+        "zh": [
+          "knowledge-retrieval",
+          "research-automation",
+          "graph-rag",
+          "summarization",
+          "knowledge-search",
+          "graphrag"
+        ],
+        "en": [
+          "knowledge-retrieval",
+          "research-automation",
+          "graph-rag",
+          "summarization",
+          "knowledge-search",
+          "graphrag"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/microsoft/graphrag"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要研究长文档集的主题组织与证据查询。"
+          ],
+          "en": [
+            "Exploring corpus-wide themes and local supporting evidence."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "把离线索引成本和不同查询粒度的收益分开评估。"
+          ],
+          "en": [
+            "Evaluate indexing costs separately from local/global query gains."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "图构建摘要可能引入额外偏差和成本。"
+          ],
+          "en": [
+            "Graph extraction and summarization add potential error and cost."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "tool",
+        "github_repo": "microsoft/graphrag",
+        "stars_snapshot": 36448,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "需要研究长文档集的主题组织与证据查询。",
+          "en": "Exploring corpus-wide themes and local supporting evidence."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "firecrawl",
+      "title": "Firecrawl · Agent 网页采集",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "methods"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "web-automation",
+        "research-automation"
+      ],
+      "tasks": [
+        "web-crawling",
+        "research-collection",
+        "web-extraction"
+      ],
+      "description": {
+        "zh": "面向 Agent 的网页内容抓取与提取基础设施，可组织来源可追溯的研究网页资料。",
+        "en": "Web crawling and extraction infrastructure designed for agent pipelines."
+      },
+      "keywords": {
+        "zh": [
+          "web-automation",
+          "research-automation",
+          "web-crawling",
+          "research-collection",
+          "web-extraction",
+          "firecrawl"
+        ],
+        "en": [
+          "web-automation",
+          "research-automation",
+          "web-crawling",
+          "research-collection",
+          "web-extraction",
+          "firecrawl"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/firecrawl/firecrawl"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要成批收集公开研究主页、仓库文档或页面内容。"
+          ],
+          "en": [
+            "Collecting public project pages and web documentation at scale."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "保留原始网址与抓取日期，维护可更新的来源索引。"
+          ],
+          "en": [
+            "Preserve URLs and retrieval timestamps for source tracing."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "检查 robots、服务条款、版权及登录访问边界。"
+          ],
+          "en": [
+            "Respect robots, terms, copyrights and access boundaries."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "tool",
+        "github_repo": "firecrawl/firecrawl",
+        "stars_snapshot": 195400,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "需要成批收集公开研究主页、仓库文档或页面内容。",
+          "en": "Collecting public project pages and web documentation at scale."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "openhands",
+      "title": "OpenHands · 软件开发 Agent",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "agent-engineering",
+        "software-engineering"
+      ],
+      "tasks": [
+        "coding-agent",
+        "automated-development",
+        "agent-evaluation"
+      ],
+      "description": {
+        "zh": "开源软件开发 Agent 平台，适合研究代码任务的执行闭环、环境操作和结果验收。",
+        "en": "Open-source software development agent platform for examining executable coding workflows."
+      },
+      "keywords": {
+        "zh": [
+          "agent-engineering",
+          "software-engineering",
+          "coding-agent",
+          "automated-development",
+          "agent-evaluation",
+          "OpenHands"
+        ],
+        "en": [
+          "agent-engineering",
+          "software-engineering",
+          "coding-agent",
+          "automated-development",
+          "agent-evaluation",
+          "OpenHands"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/OpenHands/OpenHands"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "希望让 Agent 实际操作代码、测试并观察任务结果。"
+          ],
+          "en": [
+            "Studying agents that run code and tests in development environments."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "重点核验环境隔离、执行轨迹和测试结果。"
+          ],
+          "en": [
+            "Inspect environment isolation, execution traces and tests."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "仓库热度不能代表自动完成任意科研代码任务。"
+          ],
+          "en": [
+            "Popularity does not imply dependable completion of arbitrary research code."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "tool",
+        "github_repo": "OpenHands/OpenHands",
+        "stars_snapshot": 91861,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "希望让 Agent 实际操作代码、测试并观察任务结果。",
+          "en": "Studying agents that run code and tests in development environments."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "langgraph",
+      "title": "LangGraph · 有状态 Agent 编排",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "agent-engineering",
+        "research-automation"
+      ],
+      "tasks": [
+        "agent-orchestration",
+        "stateful-workflow",
+        "tool-calling"
+      ],
+      "description": {
+        "zh": "构建有状态 Agent 流程的开源框架，适合对比研究任务中的节点编排、状态管理和中断恢复。",
+        "en": "Framework for building stateful and resilient agent workflows."
+      },
+      "keywords": {
+        "zh": [
+          "agent-engineering",
+          "research-automation",
+          "agent-orchestration",
+          "stateful-workflow",
+          "tool-calling",
+          "langgraph"
+        ],
+        "en": [
+          "agent-engineering",
+          "research-automation",
+          "agent-orchestration",
+          "stateful-workflow",
+          "tool-calling",
+          "langgraph"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/langchain-ai/langgraph"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "科研 Agent 需要多步决策、状态保存和可恢复执行。"
+          ],
+          "en": [
+            "Research agents need multistep state and resumable execution."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "将状态与工具执行边界显式建模并逐步测量。"
+          ],
+          "en": [
+            "Make state and tool boundaries explicit and observable."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "框架提供编排能力，并不自动带来更高任务准确率。"
+          ],
+          "en": [
+            "Orchestration alone does not improve scientific accuracy."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "tool",
+        "github_repo": "langchain-ai/langgraph",
+        "stars_snapshot": 43903,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "科研 Agent 需要多步决策、状态保存和可恢复执行。",
+          "en": "Research agents need multistep state and resumable execution."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "openai-agents-sdk",
+      "title": "OpenAI Agents SDK · Agent 工具编排",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "agent-engineering",
+        "research-automation"
+      ],
+      "tasks": [
+        "multi-agent",
+        "tool-calling",
+        "agent-handoff"
+      ],
+      "description": {
+        "zh": "用于工具调用、交接和多 Agent 编排的 Python SDK，可用于研究 Harness 的结构选择。",
+        "en": "Python SDK for tool use, handoffs and multi-agent orchestration."
+      },
+      "keywords": {
+        "zh": [
+          "agent-engineering",
+          "research-automation",
+          "multi-agent",
+          "tool-calling",
+          "agent-handoff",
+          "openai-agents-python"
+        ],
+        "en": [
+          "agent-engineering",
+          "research-automation",
+          "multi-agent",
+          "tool-calling",
+          "agent-handoff",
+          "openai-agents-python"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/openai/openai-agents-python"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要比较简单代理循环与多代理任务交接的实现。"
+          ],
+          "en": [
+            "Comparing simple agent loops and multi-agent handoff designs."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "独立记录每次工具执行与异常处理，避免把编排当成效果。"
+          ],
+          "en": [
+            "Log tool outcomes and failure handling separately from orchestration."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "SDK 本身不是已验证的科研自动化产品。"
+          ],
+          "en": [
+            "An SDK is not a validated autonomous research service."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "tool",
+        "github_repo": "openai/openai-agents-python",
+        "stars_snapshot": 30288,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "需要比较简单代理循环与多代理任务交接的实现。",
+          "en": "Comparing simple agent loops and multi-agent handoff designs."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "agent-lightning",
+      "title": "Agent Lightning · Agent 训练框架",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "agents",
+        "rl"
+      ],
+      "topics": [
+        "agent-engineering",
+        "experiment-design"
+      ],
+      "tasks": [
+        "agent-training",
+        "reinforcement-learning",
+        "agent-evaluation"
+      ],
+      "description": {
+        "zh": "面向 Agent 训练与优化的工具框架，适合研究任务回报如何反馈给代理执行策略。",
+        "en": "Framework for agent training and optimization, relevant to feedback-driven agent research."
+      },
+      "keywords": {
+        "zh": [
+          "agent-engineering",
+          "experiment-design",
+          "agent-training",
+          "reinforcement-learning",
+          "agent-evaluation",
+          "agent-lightning"
+        ],
+        "en": [
+          "agent-engineering",
+          "experiment-design",
+          "agent-training",
+          "reinforcement-learning",
+          "agent-evaluation",
+          "agent-lightning"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/microsoft/agent-lightning"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "想研究 Agent 调用工具后的轨迹优化和奖励信号。"
+          ],
+          "en": [
+            "Studying agent traces, rewards and optimization."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "明确训练目标与评估集隔离，检查成本和泛化。"
+          ],
+          "en": [
+            "Separate train/evaluation signals and inspect costs and generalization."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "框架支持训练不代表能直接迁移到机器人或任意新任务。"
+          ],
+          "en": [
+            "Training support does not establish transfer to robots or arbitrary tasks."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "tool",
+        "github_repo": "microsoft/agent-lightning",
+        "stars_snapshot": 18813,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "想研究 Agent 调用工具后的轨迹优化和奖励信号。",
+          "en": "Studying agent traces, rewards and optimization."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "spec-kit",
+      "title": "GitHub Spec Kit · 规范驱动工作流",
+      "kind": "workflow",
+      "stages": [
+        "ideation",
+        "methods"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "software-engineering",
+        "research-automation"
+      ],
+      "tasks": [
+        "spec-driven-development",
+        "implementation-plan",
+        "software-workflow"
+      ],
+      "description": {
+        "zh": "规范驱动的软件开发工作流与工具集，适合把研究工程需求、实施任务和验收条件显式整理。",
+        "en": "Specification-driven development toolkit for structured requirements, plans and implementation tasks."
+      },
+      "keywords": {
+        "zh": [
+          "software-engineering",
+          "research-automation",
+          "spec-driven-development",
+          "implementation-plan",
+          "software-workflow",
+          "spec-kit"
+        ],
+        "en": [
+          "software-engineering",
+          "research-automation",
+          "spec-driven-development",
+          "implementation-plan",
+          "software-workflow",
+          "spec-kit"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/github/spec-kit"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "研究项目功能较多且开发步骤需要对齐需求。"
+          ],
+          "en": [
+            "Research engineering requires agreed requirements and implementation plans."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "保留规范、任务清单和验收之间的对应关系。"
+          ],
+          "en": [
+            "Maintain traceability between specifications, tasks and acceptance."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "可避免沟通混乱，但不是自动科学研究方法。"
+          ],
+          "en": [
+            "Helps project execution, not a validated research methodology."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "workflow",
+        "github_repo": "github/spec-kit",
+        "stars_snapshot": 142905,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "研究项目功能较多且开发步骤需要对齐需求。",
+          "en": "Research engineering requires agreed requirements and implementation plans."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "playwright-mcp",
+      "title": "Playwright MCP · 浏览器操作",
+      "kind": "workflow",
+      "stages": [
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "web-automation",
+        "software-engineering"
+      ],
+      "tasks": [
+        "browser-mcp",
+        "browser-testing",
+        "agent-browser"
+      ],
+      "description": {
+        "zh": "面向 Agent 的 Playwright MCP 浏览器工具服务，适合执行可观察的页面操作与回归检查。",
+        "en": "Playwright MCP server for agent-driven browser operations and UI checks."
+      },
+      "keywords": {
+        "zh": [
+          "web-automation",
+          "software-engineering",
+          "browser-mcp",
+          "browser-testing",
+          "agent-browser",
+          "playwright-mcp"
+        ],
+        "en": [
+          "web-automation",
+          "software-engineering",
+          "browser-mcp",
+          "browser-testing",
+          "agent-browser",
+          "playwright-mcp"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/microsoft/playwright-mcp"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要让 Coding Agent 操作与检查真实网页界面。"
+          ],
+          "en": [
+            "An agent needs to test or inspect real web interfaces."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "按真实页面截图和操作日志验证前端变化。"
+          ],
+          "en": [
+            "Verify UI changes with actual browser observations and logs."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "自动化交互应受沙箱、权限与网站政策约束。"
+          ],
+          "en": [
+            "Browser actions require scoped permissions and policy compliance."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "tool",
+        "github_repo": "microsoft/playwright-mcp",
+        "stars_snapshot": 38636,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "需要让 Coding Agent 操作与检查真实网页界面。",
+          "en": "An agent needs to test or inspect real web interfaces."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "llamaindex",
+      "title": "LlamaIndex · 文档与知识索引",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "methods"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "knowledge-retrieval",
+        "document-parsing"
+      ],
+      "tasks": [
+        "rag",
+        "document-indexing",
+        "agent-data"
+      ],
+      "description": {
+        "zh": "将文档处理、索引与检索串接到模型应用的数据框架，适合构建研究资料库的读取层。",
+        "en": "Data framework for document processing, indexing and retrieval in LLM applications."
+      },
+      "keywords": {
+        "zh": [
+          "knowledge-retrieval",
+          "document-parsing",
+          "rag",
+          "document-indexing",
+          "agent-data",
+          "llama_index"
+        ],
+        "en": [
+          "knowledge-retrieval",
+          "document-parsing",
+          "rag",
+          "document-indexing",
+          "agent-data",
+          "llama_index"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/run-llama/llama_index"
+      },
+      "rights": {
+        "reuse": "external-repository; verify original license and dependencies before reuse",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要把科研论文和项目文档组织成可查询知识库。"
+          ],
+          "en": [
+            "Organizing papers and project docs into a searchable corpus."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "对比检索召回、跨版本更新成本与引用质量。"
+          ],
+          "en": [
+            "Evaluate retrieval recall, refresh cost and citation quality."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "框架可组合很多组件，需选择最小适用集合。"
+          ],
+          "en": [
+            "A broad framework requires careful component and cost selection."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "tool",
+        "github_repo": "run-llama/llama_index",
+        "stars_snapshot": 52668,
+        "stars_checked_on": "2026-10-26",
+        "verification": "official-repository-metadata-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "需要把科研论文和项目文档组织成可查询知识库。",
+          "en": "Organizing papers and project docs into a searchable corpus."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "anthropic-skill-creator",
+      "title": "Skill Creator · 创建与评测 Agent Skills",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "evaluation"
+      ],
+      "domains": [
+        "agents"
+      ],
+      "topics": [
+        "skills-ecosystem",
+        "experiment-design"
+      ],
+      "tasks": [
+        "agent-skills",
+        "skills-ecosystem",
+        "experiment-design"
+      ],
+      "description": {
+        "zh": "指导从 Skill 草稿、测试样例到触发准确率评估的实际技能文件，可作为封装科研 Agent 经验的参考。",
+        "en": "A concrete skill for authoring, testing and iterating Agent Skills."
+      },
+      "keywords": {
+        "zh": [
+          "Skill Creator · 创建与评测 Agent Skills",
+          "anthropics/skills",
+          "指导从 Skill 草稿、测试样例到触发准确率评估的实际技能文件，可作为封装科研 Agent 经验的参考。"
+        ],
+        "en": [
+          "Skill Creator · 创建与评测 Agent Skills",
+          "anthropics/skills",
+          "A concrete skill for authoring, testing and iterating Agent Skills."
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md",
+        "repository": "https://github.com/anthropics/skills"
+      },
+      "rights": {
+        "reuse": "third-party skill: inspect skill-specific license and dependencies",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要设计或改进具体科研 Skill。"
+          ],
+          "en": [
+            "Creating or refining task-specific skills."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "编写使用案例并做触发与效果评估。"
+          ],
+          "en": [
+            "Test trigger coverage and effectiveness with examples."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "该 Skill 的效果并未由本站独立验证。"
+          ],
+          "en": [
+            "This individual skill has not been independently tested here."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "anthropics/skills",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 183559,
+        "stars_checked_on": "2026-10-26",
+        "verification": "individual-SKILL.md-source-verified-not-installed",
+        "selection_reason": {
+          "zh": "需要设计或改进具体科研 Skill。",
+          "en": "Creating or refining task-specific skills."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "anthropic-frontend-design",
+      "title": "Frontend Design · 差异化网页设计 Skill",
+      "kind": "workflow",
+      "stages": [
+        "communication",
+        "methods"
+      ],
+      "domains": [
+        "agents"
+      ],
+      "topics": [
+        "skills-ecosystem",
+        "project-publishing"
+      ],
+      "tasks": [
+        "agent-skills",
+        "skills-ecosystem",
+        "project-publishing"
+      ],
+      "description": {
+        "zh": "用于设计具有明确视觉辨识度的网页界面，可作为科研项目主页改版时的具体 Skill 参考。",
+        "en": "A concrete skill about intentional visual design and distinctive frontend decisions."
+      },
+      "keywords": {
+        "zh": [
+          "Frontend Design · 差异化网页设计 Skill",
+          "anthropics/skills",
+          "用于设计具有明确视觉辨识度的网页界面，可作为科研项目主页改版时的具体 Skill 参考。"
+        ],
+        "en": [
+          "Frontend Design · 差异化网页设计 Skill",
+          "anthropics/skills",
+          "A concrete skill about intentional visual design and distinctive frontend decisions."
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md",
+        "repository": "https://github.com/anthropics/skills"
+      },
+      "rights": {
+        "reuse": "third-party skill: inspect skill-specific license and dependencies",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "研究主页需要形成独特的视觉层次。"
+          ],
+          "en": [
+            "A project website needs deliberate visual hierarchy."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "先确定设计主张，再组织字体、布局和配色。"
+          ],
+          "en": [
+            "Set a design direction before choosing type, layout and palette."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "源文件有独立授权声明，应单独审阅。"
+          ],
+          "en": [
+            "The skill has its own license notice; inspect it before reuse."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "anthropics/skills",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 183559,
+        "stars_checked_on": "2026-10-26",
+        "verification": "individual-SKILL.md-source-verified-not-installed",
+        "selection_reason": {
+          "zh": "研究主页需要形成独特的视觉层次。",
+          "en": "A project website needs deliberate visual hierarchy."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "superpowers-debugging",
+      "title": "Systematic Debugging · 根因排查 Skill",
+      "kind": "workflow",
+      "stages": [
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "skills-ecosystem",
+        "software-engineering"
+      ],
+      "tasks": [
+        "agent-skills",
+        "skills-ecosystem",
+        "software-engineering"
+      ],
+      "description": {
+        "zh": "聚焦定位根因再修复的具体 Skill，适合研究代码与实验流水线的异常排查。",
+        "en": "A concrete root-cause-first debugging skill for software and experiment failures."
+      },
+      "keywords": {
+        "zh": [
+          "Systematic Debugging · 根因排查 Skill",
+          "obra/superpowers",
+          "聚焦定位根因再修复的具体 Skill，适合研究代码与实验流水线的异常排查。"
+        ],
+        "en": [
+          "Systematic Debugging · 根因排查 Skill",
+          "obra/superpowers",
+          "A concrete root-cause-first debugging skill for software and experiment failures."
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md",
+        "repository": "https://github.com/obra/superpowers"
+      },
+      "rights": {
+        "reuse": "third-party skill: inspect skill-specific license and dependencies",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "训练、实验或工程环节出现难以定位的问题。"
+          ],
+          "en": [
+            "Investigating unexpected experiment or software failures."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "先复现、收集证据并确认根因，再修改代码。"
+          ],
+          "en": [
+            "Reproduce, gather evidence and establish root cause before changes."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "流程是方法建议，不保证直接修复所有 Bug。"
+          ],
+          "en": [
+            "A debugging protocol cannot guarantee a fix."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "obra/superpowers",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 305180,
+        "stars_checked_on": "2026-10-26",
+        "verification": "individual-SKILL.md-source-verified-not-installed",
+        "selection_reason": {
+          "zh": "训练、实验或工程环节出现难以定位的问题。",
+          "en": "Investigating unexpected experiment or software failures."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
+    },
+    {
+      "id": "superpowers-verification",
+      "title": "Verification Before Completion · 交付验证 Skill",
+      "kind": "workflow",
+      "stages": [
+        "evaluation",
+        "communication"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "skills-ecosystem",
+        "experiment-design"
+      ],
+      "tasks": [
+        "agent-skills",
+        "skills-ecosystem",
+        "experiment-design"
+      ],
+      "description": {
+        "zh": "要求在宣布任务完成前先运行真实验收命令并检查输出的具体 Skill。",
+        "en": "A concrete skill requiring fresh verification evidence before declaring completion."
+      },
+      "keywords": {
+        "zh": [
+          "Verification Before Completion · 交付验证 Skill",
+          "obra/superpowers",
+          "要求在宣布任务完成前先运行真实验收命令并检查输出的具体 Skill。"
+        ],
+        "en": [
+          "Verification Before Completion · 交付验证 Skill",
+          "obra/superpowers",
+          "A concrete skill requiring fresh verification evidence before declaring completion."
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/obra/superpowers/blob/main/skills/verification-before-completion/SKILL.md",
+        "repository": "https://github.com/obra/superpowers"
+      },
+      "rights": {
+        "reuse": "third-party skill: inspect skill-specific license and dependencies",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "Agent 需要声称代码、论文材料或资产构建完成。"
+          ],
+          "en": [
+            "An agent is about to claim a task or artifact is complete."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "把具体验收命令和结果作为成功断言的依据。"
+          ],
+          "en": [
+            "Make actual verification results the basis for completion claims."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "验证只能覆盖运行过的检查，不等于证明所有场景正确。"
+          ],
+          "en": [
+            "Passing selected checks does not prove universal correctness."
+          ]
+        }
+      },
+      "curation": {
+        "track": "popular",
+        "type": "skill",
+        "github_repo": "obra/superpowers",
+        "star_scope": "parent-repository",
+        "stars_snapshot": 305180,
+        "stars_checked_on": "2026-10-26",
+        "verification": "individual-SKILL.md-source-verified-not-installed",
+        "selection_reason": {
+          "zh": "Agent 需要声称代码、论文材料或资产构建完成。",
+          "en": "An agent is about to claim a task or artifact is complete."
+        },
+        "editorial_added_on": "2026-10-26"
+      },
+      "previewStyle": "workflow"
     }
   ]
 }

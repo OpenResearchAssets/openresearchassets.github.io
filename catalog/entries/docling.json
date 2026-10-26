@@ -1,0 +1,94 @@
+{
+  "id": "docling",
+  "title": "Docling · 科研文档解析",
+  "kind": "workflow",
+  "stages": [
+    "research",
+    "methods"
+  ],
+  "domains": [
+    "nlp",
+    "agents"
+  ],
+  "topics": [
+    "document-parsing",
+    "literature-discovery"
+  ],
+  "tasks": [
+    "pdf-parsing",
+    "document-layout",
+    "structured-extraction"
+  ],
+  "description": {
+    "zh": "文档转换与结构解析工具，面向论文 PDF、表格及复杂版面生成便于模型处理的结构化材料。",
+    "en": "Document conversion and layout extraction toolkit for PDFs, tables and structured inputs to language models."
+  },
+  "keywords": {
+    "zh": [
+      "document-parsing",
+      "literature-discovery",
+      "pdf-parsing",
+      "document-layout",
+      "structured-extraction",
+      "docling"
+    ],
+    "en": [
+      "document-parsing",
+      "literature-discovery",
+      "pdf-parsing",
+      "document-layout",
+      "structured-extraction",
+      "docling"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/docling-project/docling"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要尽量保留论文版面层次、表格与结构。"
+      ],
+      "en": [
+        "Preserving research document structure and tables."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "先检查公式、页码、图表的解析保真度再用于问答。"
+      ],
+      "en": [
+        "Verify formulas, page spans and table fidelity before using extracted text."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "转换后的 Markdown 不等于准确无误的原论文。"
+      ],
+      "en": [
+        "Converted output is not guaranteed to reproduce the original PDF faithfully."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "tool",
+    "github_repo": "docling-project/docling",
+    "stars_snapshot": 69592,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "需要尽量保留论文版面层次、表格与结构。",
+      "en": "Preserving research document structure and tables."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

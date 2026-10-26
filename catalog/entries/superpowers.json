@@ -1,0 +1,94 @@
+{
+  "id": "superpowers",
+  "title": "Superpowers · Agent 开发技能框架",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "experiments"
+  ],
+  "domains": [
+    "agents",
+    "ml-systems"
+  ],
+  "topics": [
+    "skills-ecosystem",
+    "software-engineering"
+  ],
+  "tasks": [
+    "agent-skills",
+    "development-process",
+    "agent-coding"
+  ],
+  "description": {
+    "zh": "面向 Coding Agent 的技能化开发方法集合，强调先明确需求、分步实现和验证；适合参考其原生 Skill 文件结构。",
+    "en": "Skill-based software development methods for coding agents, covering design, execution and verification."
+  },
+  "keywords": {
+    "zh": [
+      "skills-ecosystem",
+      "software-engineering",
+      "agent-skills",
+      "development-process",
+      "agent-coding",
+      "superpowers"
+    ],
+    "en": [
+      "skills-ecosystem",
+      "software-engineering",
+      "agent-skills",
+      "development-process",
+      "agent-coding",
+      "superpowers"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/obra/superpowers"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要为编码 Agent 组织可检查的开发步骤。"
+      ],
+      "en": [
+        "Structuring verifiable work for a coding agent."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "按具体任务选用仓库中的独立技能和检查流程。"
+      ],
+      "en": [
+        "Choose individual skill files and verification steps for the task."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "整套技能并非已被本站评估，也不应把仓库 Star 当作单个技能质量。"
+      ],
+      "en": [
+        "The library has not been tested here; repository stars are not individual skill quality."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "obra/superpowers",
+    "stars_snapshot": 305180,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "需要为编码 Agent 组织可检查的开发步骤。",
+      "en": "Structuring verifiable work for a coding agent."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

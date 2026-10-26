@@ -1,0 +1,95 @@
+{
+  "id": "agent-lightning",
+  "title": "Agent Lightning · Agent 训练框架",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "experiments",
+    "evaluation"
+  ],
+  "domains": [
+    "agents",
+    "rl"
+  ],
+  "topics": [
+    "agent-engineering",
+    "experiment-design"
+  ],
+  "tasks": [
+    "agent-training",
+    "reinforcement-learning",
+    "agent-evaluation"
+  ],
+  "description": {
+    "zh": "面向 Agent 训练与优化的工具框架，适合研究任务回报如何反馈给代理执行策略。",
+    "en": "Framework for agent training and optimization, relevant to feedback-driven agent research."
+  },
+  "keywords": {
+    "zh": [
+      "agent-engineering",
+      "experiment-design",
+      "agent-training",
+      "reinforcement-learning",
+      "agent-evaluation",
+      "agent-lightning"
+    ],
+    "en": [
+      "agent-engineering",
+      "experiment-design",
+      "agent-training",
+      "reinforcement-learning",
+      "agent-evaluation",
+      "agent-lightning"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/microsoft/agent-lightning"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "想研究 Agent 调用工具后的轨迹优化和奖励信号。"
+      ],
+      "en": [
+        "Studying agent traces, rewards and optimization."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "明确训练目标与评估集隔离，检查成本和泛化。"
+      ],
+      "en": [
+        "Separate train/evaluation signals and inspect costs and generalization."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "框架支持训练不代表能直接迁移到机器人或任意新任务。"
+      ],
+      "en": [
+        "Training support does not establish transfer to robots or arbitrary tasks."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "tool",
+    "github_repo": "microsoft/agent-lightning",
+    "stars_snapshot": 18813,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "想研究 Agent 调用工具后的轨迹优化和奖励信号。",
+      "en": "Studying agent traces, rewards and optimization."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

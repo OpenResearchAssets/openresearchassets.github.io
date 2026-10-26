@@ -1,0 +1,94 @@
+{
+  "id": "firecrawl",
+  "title": "Firecrawl · Agent 网页采集",
+  "kind": "workflow",
+  "stages": [
+    "research",
+    "methods"
+  ],
+  "domains": [
+    "agents",
+    "ml-systems"
+  ],
+  "topics": [
+    "web-automation",
+    "research-automation"
+  ],
+  "tasks": [
+    "web-crawling",
+    "research-collection",
+    "web-extraction"
+  ],
+  "description": {
+    "zh": "面向 Agent 的网页内容抓取与提取基础设施，可组织来源可追溯的研究网页资料。",
+    "en": "Web crawling and extraction infrastructure designed for agent pipelines."
+  },
+  "keywords": {
+    "zh": [
+      "web-automation",
+      "research-automation",
+      "web-crawling",
+      "research-collection",
+      "web-extraction",
+      "firecrawl"
+    ],
+    "en": [
+      "web-automation",
+      "research-automation",
+      "web-crawling",
+      "research-collection",
+      "web-extraction",
+      "firecrawl"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/firecrawl/firecrawl"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要成批收集公开研究主页、仓库文档或页面内容。"
+      ],
+      "en": [
+        "Collecting public project pages and web documentation at scale."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "保留原始网址与抓取日期，维护可更新的来源索引。"
+      ],
+      "en": [
+        "Preserve URLs and retrieval timestamps for source tracing."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "检查 robots、服务条款、版权及登录访问边界。"
+      ],
+      "en": [
+        "Respect robots, terms, copyrights and access boundaries."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "tool",
+    "github_repo": "firecrawl/firecrawl",
+    "stars_snapshot": 195400,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "需要成批收集公开研究主页、仓库文档或页面内容。",
+      "en": "Collecting public project pages and web documentation at scale."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

@@ -65,5 +65,8 @@
       ]
     }
   },
-  "previewStyle": "comparison"
+  "previewStyle": "comparison",
+  "topics": [
+    "scientific-visualization"
+  ]
 }

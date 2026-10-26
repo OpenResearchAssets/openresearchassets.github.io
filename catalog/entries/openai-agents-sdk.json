@@ -1,0 +1,94 @@
+{
+  "id": "openai-agents-sdk",
+  "title": "OpenAI Agents SDK · Agent 工具编排",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "experiments"
+  ],
+  "domains": [
+    "agents",
+    "ml-systems"
+  ],
+  "topics": [
+    "agent-engineering",
+    "research-automation"
+  ],
+  "tasks": [
+    "multi-agent",
+    "tool-calling",
+    "agent-handoff"
+  ],
+  "description": {
+    "zh": "用于工具调用、交接和多 Agent 编排的 Python SDK，可用于研究 Harness 的结构选择。",
+    "en": "Python SDK for tool use, handoffs and multi-agent orchestration."
+  },
+  "keywords": {
+    "zh": [
+      "agent-engineering",
+      "research-automation",
+      "multi-agent",
+      "tool-calling",
+      "agent-handoff",
+      "openai-agents-python"
+    ],
+    "en": [
+      "agent-engineering",
+      "research-automation",
+      "multi-agent",
+      "tool-calling",
+      "agent-handoff",
+      "openai-agents-python"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/openai/openai-agents-python"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要比较简单代理循环与多代理任务交接的实现。"
+      ],
+      "en": [
+        "Comparing simple agent loops and multi-agent handoff designs."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "独立记录每次工具执行与异常处理，避免把编排当成效果。"
+      ],
+      "en": [
+        "Log tool outcomes and failure handling separately from orchestration."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "SDK 本身不是已验证的科研自动化产品。"
+      ],
+      "en": [
+        "An SDK is not a validated autonomous research service."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "tool",
+    "github_repo": "openai/openai-agents-python",
+    "stars_snapshot": 30288,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "需要比较简单代理循环与多代理任务交接的实现。",
+      "en": "Comparing simple agent loops and multi-agent handoff designs."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

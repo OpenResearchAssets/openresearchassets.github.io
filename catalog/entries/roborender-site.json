@@ -146,5 +146,9 @@
     "capture_date": "2026-10-25",
     "modifications": "viewport screenshot of published homepage, JPEG compression",
     "credit": "Huang Huang et al.; RoboRender project website"
-  }
+  },
+  "topics": [
+    "project-publishing",
+    "scientific-visualization"
+  ]
 }

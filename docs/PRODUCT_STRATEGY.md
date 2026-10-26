@@ -65,7 +65,7 @@ Skills / Workflows **只精选两条正式路径**：
 ## 现在实际可用的功能
 
 - [科研资产目录](../catalog/index.json)：以单一目录持续维护的视觉与技能资产，包含 Teaser、项目主页、原创 SVG、精选热门技能及有证据的实践流程；提供中英双语用途、来源和边界。
-- [任务检索](../index.html#references)：当前支持本地文字匹配与阶段、领域、资产类型组合筛选，非向量语义搜索。
+- [任务检索](../index.html#references)：当前支持本地文字匹配与阶段、领域、主题、资产类型组合筛选；Skills 还提供类型与双轨筛选，非向量语义搜索。
 - [独立详情](../asset.html?id=supermimic-site)：使用条件、可学习点、风险、来源和相关资产。
 - [AI 导航入口](../for-agents/) 和 [llms.txt](../llms.txt)：可公开抓取的指南与 JSON，不是自动执行科研任务的服务。
 - 五份原创可编辑 SVG **概念**示意、浏览器人工自查清单以及供 AI 参考的质量检查 Skill。
@@ -89,3 +89,7 @@ Skills / Workflows **只精选两条正式路径**：
 目前**没有**自动模型审图、上传 PDF 的云端科研助手、远程工作流执行、自动向量语义检索、收费产品或经过独立专家验证的质量模型。未来项目按实际需求与能力再决定。
 
 **English:** A Chinese-first, research-lifecycle asset catalog with English metadata and human/agent-readable entry points. Current capabilities are static catalog search, original editable examples and a manual quality checklist. No hosted autonomous agent or automated image judge is deployed.
+
+## 主题导航与能力资产精度（2026-10-26）
+
+领域（学科与系统）、主题（研究问题与技术）、能力类型（Skill / Tool / Workflow）彼此正交，网站允许组合筛选，并向 AI 清单同步主题元数据。热门路线既允许收录广泛使用的科研相关开源工具，也允许**有明确 SKILL.md 深链接的独立技能**；后一种的 Star 数是母仓库 Star，不得表达为单项技能安装量。收录增加不改变原创实践的准入门槛，严禁把外部 GitHub Star 误写成我们的效果验证。首页默认精选预览，筛选后允许查看所有命中资源。

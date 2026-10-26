@@ -24,7 +24,7 @@ manifest = {
     "facets": catalog["facets"],
     "entries": [{
         "id": e["id"], "title": e["title"], "kind": e["kind"],
-        "stages": e["stages"], "domains": e["domains"], "tasks": e["tasks"],
+        "stages": e["stages"], "domains": e["domains"], "topics": e["topics"], "tasks": e["tasks"],
         "keywords": e["keywords"]["zh"] + e["keywords"]["en"],
         "description_zh": e["description"]["zh"],
         "entry": "catalog/entries/" + e["id"] + ".json"

@@ -97,5 +97,9 @@
       "en": "OFFICIAL LINKED IMAGE · RIGHTS RESERVED"
     }
   },
-  "previewStyle": "depth-geometry"
+  "previewStyle": "depth-geometry",
+  "topics": [
+    "scientific-visualization",
+    "three-d-vision"
+  ]
 }

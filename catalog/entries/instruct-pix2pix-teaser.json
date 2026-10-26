@@ -137,5 +137,8 @@
     "editorial_scope": "design-composition-evidence-communication",
     "asset_residency": "external-original-no-hosted-copy"
   },
-  "previewStyle": "curated-visual"
+  "previewStyle": "curated-visual",
+  "topics": [
+    "scientific-visualization"
+  ]
 }

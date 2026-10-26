@@ -1,0 +1,94 @@
+{
+  "id": "paper-qa",
+  "title": "PaperQA · 科学文献问答",
+  "kind": "workflow",
+  "stages": [
+    "research",
+    "evaluation"
+  ],
+  "domains": [
+    "nlp",
+    "agents"
+  ],
+  "topics": [
+    "literature-discovery",
+    "knowledge-retrieval"
+  ],
+  "tasks": [
+    "scientific-qa",
+    "cited-answers",
+    "paper-reading"
+  ],
+  "description": {
+    "zh": "针对科学文档的带引用问答与检索工具，可用于搭建需要核对文献证据的工作流。",
+    "en": "Retrieval and cited question answering for scientific documents."
+  },
+  "keywords": {
+    "zh": [
+      "literature-discovery",
+      "knowledge-retrieval",
+      "scientific-qa",
+      "cited-answers",
+      "paper-reading",
+      "paper-qa"
+    ],
+    "en": [
+      "literature-discovery",
+      "knowledge-retrieval",
+      "scientific-qa",
+      "cited-answers",
+      "paper-reading",
+      "paper-qa"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/Future-House/paper-qa"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要根据多份论文回答问题并追踪证据来源。"
+      ],
+      "en": [
+        "Answering questions across scientific papers with traceable citations."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "关注引用落点与答案能否由原文支持。"
+      ],
+      "en": [
+        "Audit whether cited passages support the answer."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "系统给出引用不意味着自动保证结论正确。"
+      ],
+      "en": [
+        "Citations do not automatically establish scientific correctness."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "tool",
+    "github_repo": "Future-House/paper-qa",
+    "stars_snapshot": 9468,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "需要根据多份论文回答问题并追踪证据来源。",
+      "en": "Answering questions across scientific papers with traceable citations."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

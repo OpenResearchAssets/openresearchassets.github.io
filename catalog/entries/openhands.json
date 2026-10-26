@@ -1,0 +1,94 @@
+{
+  "id": "openhands",
+  "title": "OpenHands · 软件开发 Agent",
+  "kind": "workflow",
+  "stages": [
+    "methods",
+    "experiments"
+  ],
+  "domains": [
+    "agents",
+    "ml-systems"
+  ],
+  "topics": [
+    "agent-engineering",
+    "software-engineering"
+  ],
+  "tasks": [
+    "coding-agent",
+    "automated-development",
+    "agent-evaluation"
+  ],
+  "description": {
+    "zh": "开源软件开发 Agent 平台，适合研究代码任务的执行闭环、环境操作和结果验收。",
+    "en": "Open-source software development agent platform for examining executable coding workflows."
+  },
+  "keywords": {
+    "zh": [
+      "agent-engineering",
+      "software-engineering",
+      "coding-agent",
+      "automated-development",
+      "agent-evaluation",
+      "OpenHands"
+    ],
+    "en": [
+      "agent-engineering",
+      "software-engineering",
+      "coding-agent",
+      "automated-development",
+      "agent-evaluation",
+      "OpenHands"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/OpenHands/OpenHands"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "希望让 Agent 实际操作代码、测试并观察任务结果。"
+      ],
+      "en": [
+        "Studying agents that run code and tests in development environments."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "重点核验环境隔离、执行轨迹和测试结果。"
+      ],
+      "en": [
+        "Inspect environment isolation, execution traces and tests."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "仓库热度不能代表自动完成任意科研代码任务。"
+      ],
+      "en": [
+        "Popularity does not imply dependable completion of arbitrary research code."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "tool",
+    "github_repo": "OpenHands/OpenHands",
+    "stars_snapshot": 91861,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "希望让 Agent 实际操作代码、测试并观察任务结果。",
+      "en": "Studying agents that run code and tests in development environments."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

@@ -79,5 +79,8 @@
       "examples/roborender.html",
       "examples/roborender-provenance.md"
     ]
-  }
+  },
+  "topics": [
+    "project-publishing"
+  ]
 }

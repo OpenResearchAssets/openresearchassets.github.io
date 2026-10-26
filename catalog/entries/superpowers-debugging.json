@@ -1,0 +1,90 @@
+{
+  "id": "superpowers-debugging",
+  "title": "Systematic Debugging · 根因排查 Skill",
+  "kind": "workflow",
+  "stages": [
+    "experiments",
+    "evaluation"
+  ],
+  "domains": [
+    "agents",
+    "ml-systems"
+  ],
+  "topics": [
+    "skills-ecosystem",
+    "software-engineering"
+  ],
+  "tasks": [
+    "agent-skills",
+    "skills-ecosystem",
+    "software-engineering"
+  ],
+  "description": {
+    "zh": "聚焦定位根因再修复的具体 Skill，适合研究代码与实验流水线的异常排查。",
+    "en": "A concrete root-cause-first debugging skill for software and experiment failures."
+  },
+  "keywords": {
+    "zh": [
+      "Systematic Debugging · 根因排查 Skill",
+      "obra/superpowers",
+      "聚焦定位根因再修复的具体 Skill，适合研究代码与实验流水线的异常排查。"
+    ],
+    "en": [
+      "Systematic Debugging · 根因排查 Skill",
+      "obra/superpowers",
+      "A concrete root-cause-first debugging skill for software and experiment failures."
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md",
+    "repository": "https://github.com/obra/superpowers"
+  },
+  "rights": {
+    "reuse": "third-party skill: inspect skill-specific license and dependencies",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "训练、实验或工程环节出现难以定位的问题。"
+      ],
+      "en": [
+        "Investigating unexpected experiment or software failures."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "先复现、收集证据并确认根因，再修改代码。"
+      ],
+      "en": [
+        "Reproduce, gather evidence and establish root cause before changes."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "流程是方法建议，不保证直接修复所有 Bug。"
+      ],
+      "en": [
+        "A debugging protocol cannot guarantee a fix."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "skill",
+    "github_repo": "obra/superpowers",
+    "star_scope": "parent-repository",
+    "stars_snapshot": 305180,
+    "stars_checked_on": "2026-10-26",
+    "verification": "individual-SKILL.md-source-verified-not-installed",
+    "selection_reason": {
+      "zh": "训练、实验或工程环节出现难以定位的问题。",
+      "en": "Investigating unexpected experiment or software failures."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

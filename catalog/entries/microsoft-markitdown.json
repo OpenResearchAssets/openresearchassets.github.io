@@ -80,5 +80,8 @@
       "en": "Preparing structured text from research PDFs and office documents before agent processing."
     }
   },
-  "previewStyle": "workflow"
+  "previewStyle": "workflow",
+  "topics": [
+    "document-parsing"
+  ]
 }

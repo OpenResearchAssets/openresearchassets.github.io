@@ -1,0 +1,94 @@
+{
+  "id": "graphrag",
+  "title": "Microsoft GraphRAG · 图结构检索",
+  "kind": "workflow",
+  "stages": [
+    "research",
+    "methods"
+  ],
+  "domains": [
+    "nlp",
+    "agents"
+  ],
+  "topics": [
+    "knowledge-retrieval",
+    "research-automation"
+  ],
+  "tasks": [
+    "graph-rag",
+    "summarization",
+    "knowledge-search"
+  ],
+  "description": {
+    "zh": "基于图结构的检索增强生成系统，适合探索全局主题总结与局部证据查询的不同检索需求。",
+    "en": "Graph-based RAG system for corpus-level synthesis and local evidence retrieval."
+  },
+  "keywords": {
+    "zh": [
+      "knowledge-retrieval",
+      "research-automation",
+      "graph-rag",
+      "summarization",
+      "knowledge-search",
+      "graphrag"
+    ],
+    "en": [
+      "knowledge-retrieval",
+      "research-automation",
+      "graph-rag",
+      "summarization",
+      "knowledge-search",
+      "graphrag"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/microsoft/graphrag"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要研究长文档集的主题组织与证据查询。"
+      ],
+      "en": [
+        "Exploring corpus-wide themes and local supporting evidence."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "把离线索引成本和不同查询粒度的收益分开评估。"
+      ],
+      "en": [
+        "Evaluate indexing costs separately from local/global query gains."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "图构建摘要可能引入额外偏差和成本。"
+      ],
+      "en": [
+        "Graph extraction and summarization add potential error and cost."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "tool",
+    "github_repo": "microsoft/graphrag",
+    "stars_snapshot": 36448,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "需要研究长文档集的主题组织与证据查询。",
+      "en": "Exploring corpus-wide themes and local supporting evidence."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}

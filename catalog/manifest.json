@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "catalog_source": "catalog/index.json",
-  "generated_on": "2026-10-25",
+  "generated_on": "2026-10-26",
   "instructions": {
     "zh": "先匹配此轻量目录，再沿 entry 路径只读取最相关条目。第三方图片默认不可复制，只有单条 rights 明确授权才可复用。",
     "en": "Select from this lightweight manifest, then fetch only relevant entry JSON files. External visuals are not licensed for copying by default; inspect each entry's rights."
@@ -75,6 +75,76 @@
       "rl": {
         "zh": "强化学习",
         "en": "Reinforcement learning"
+      },
+      "agents": {
+        "zh": "智能体与 Agent 系统",
+        "en": "Agents & agent systems"
+      },
+      "nlp": {
+        "zh": "语言模型与 NLP",
+        "en": "Language models & NLP"
+      },
+      "ml-systems": {
+        "zh": "机器学习系统",
+        "en": "ML systems"
+      }
+    },
+    "topics": {
+      "agent-engineering": {
+        "zh": "Agent 框架与运行",
+        "en": "Agent architectures"
+      },
+      "skills-ecosystem": {
+        "zh": "Skills 与能力封装",
+        "en": "Skills and plugins"
+      },
+      "research-automation": {
+        "zh": "科研自动化",
+        "en": "Research automation"
+      },
+      "document-parsing": {
+        "zh": "PDF 与文档解析",
+        "en": "Document parsing"
+      },
+      "literature-discovery": {
+        "zh": "文献检索与理解",
+        "en": "Literature discovery"
+      },
+      "knowledge-retrieval": {
+        "zh": "知识检索与 RAG",
+        "en": "Retrieval and RAG"
+      },
+      "software-engineering": {
+        "zh": "代码与工程实践",
+        "en": "Software engineering"
+      },
+      "experiment-design": {
+        "zh": "实验设计与验证",
+        "en": "Experiment design"
+      },
+      "scientific-visualization": {
+        "zh": "科研图形与表达",
+        "en": "Scientific visualization"
+      },
+      "three-d-vision": {
+        "zh": "三维视觉与重建",
+        "en": "3D vision and reconstruction"
+      },
+      "robot-learning": {
+        "zh": "机器人学习",
+        "en": "Robot learning"
+      },
+      "paper-writing": {
+        "zh": "论文写作",
+        "en": "Paper writing"
+      },
+      "project-publishing": {
+        "zh": "项目主页与发布",
+        "en": "Project publishing"
+      },
+      "web-automation": {
+        "zh": "网页操作与采集",
+        "en": "Browser automation"
       }
     }
   },
@@ -90,6 +160,10 @@
       ],
       "domains": [
         "vision"
+      ],
+      "topics": [
+        "scientific-visualization",
+        "three-d-vision"
       ],
       "tasks": [
         "method-figure",
@@ -126,6 +200,10 @@
         "robotics",
         "vision"
       ],
+      "topics": [
+        "scientific-visualization",
+        "robot-learning"
+      ],
       "tasks": [
         "teaser-design",
         "visual-comparison"
@@ -154,6 +232,10 @@
         "robotics",
         "vision"
       ],
+      "topics": [
+        "project-publishing",
+        "scientific-visualization"
+      ],
       "tasks": [
         "project-website",
         "visual-comparison"
@@ -180,6 +262,10 @@
       ],
       "domains": [
         "robotics"
+      ],
+      "topics": [
+        "scientific-visualization",
+        "robot-learning"
       ],
       "tasks": [
         "teaser-design",
@@ -209,6 +295,10 @@
       "domains": [
         "robotics"
       ],
+      "topics": [
+        "project-publishing",
+        "scientific-visualization"
+      ],
       "tasks": [
         "project-website",
         "benchmark-presentation"
@@ -237,6 +327,10 @@
       "domains": [
         "robotics",
         "rl"
+      ],
+      "topics": [
+        "scientific-visualization",
+        "robot-learning"
       ],
       "tasks": [
         "teaser-design",
@@ -270,6 +364,10 @@
         "robotics",
         "rl"
       ],
+      "topics": [
+        "project-publishing",
+        "scientific-visualization"
+      ],
       "tasks": [
         "project-website",
         "evidence-storytelling"
@@ -297,6 +395,9 @@
       ],
       "domains": [
         "vision"
+      ],
+      "topics": [
+        "scientific-visualization"
       ],
       "tasks": [
         "teaser",
@@ -332,6 +433,9 @@
       ],
       "domains": [
         "vision"
+      ],
+      "topics": [
+        "scientific-visualization"
       ],
       "tasks": [
         "qualitative-results",
@@ -369,6 +473,10 @@
       "domains": [
         "vision"
       ],
+      "topics": [
+        "scientific-visualization",
+        "three-d-vision"
+      ],
       "tasks": [
         "qualitative-results",
         "results-comparison",
@@ -404,6 +512,10 @@
       ],
       "domains": [
         "vision"
+      ],
+      "topics": [
+        "scientific-visualization",
+        "experiment-design"
       ],
       "tasks": [
         "ablation",
@@ -442,6 +554,11 @@
         "robotics",
         "vision"
       ],
+      "topics": [
+        "scientific-visualization",
+        "robot-learning",
+        "experiment-design"
+      ],
       "tasks": [
         "ablation",
         "component-ablation",
@@ -477,6 +594,10 @@
       "domains": [
         "vision"
       ],
+      "topics": [
+        "project-publishing",
+        "scientific-visualization"
+      ],
       "tasks": [
         "project-website",
         "interactive-demo",
@@ -511,6 +632,10 @@
       ],
       "domains": [
         "vision"
+      ],
+      "topics": [
+        "project-publishing",
+        "scientific-visualization"
       ],
       "tasks": [
         "project-website",
@@ -548,6 +673,9 @@
         "general",
         "vision"
       ],
+      "topics": [
+        "scientific-visualization"
+      ],
       "tasks": [
         "figure-discovery",
         "teaser-design"
@@ -573,6 +701,9 @@
       "domains": [
         "general"
       ],
+      "topics": [
+        "scientific-visualization"
+      ],
       "tasks": [
         "figure-discovery",
         "agent-handoff"
@@ -597,6 +728,9 @@
       ],
       "domains": [
         "general"
+      ],
+      "topics": [
+        "scientific-visualization"
       ],
       "tasks": [
         "editable-figure",
@@ -624,6 +758,9 @@
       "domains": [
         "general"
       ],
+      "topics": [
+        "scientific-visualization"
+      ],
       "tasks": [
         "editable-figure"
       ],
@@ -648,6 +785,10 @@
       "domains": [
         "general"
       ],
+      "topics": [
+        "skills-ecosystem",
+        "research-automation"
+      ],
       "tasks": [
         "agent-handoff",
         "workflow-discovery"
@@ -671,6 +812,9 @@
       ],
       "domains": [
         "general"
+      ],
+      "topics": [
+        "scientific-visualization"
       ],
       "tasks": [
         "teaser-design",
@@ -697,6 +841,9 @@
       "domains": [
         "general"
       ],
+      "topics": [
+        "scientific-visualization"
+      ],
       "tasks": [
         "method-diagram",
         "editable-figure"
@@ -721,6 +868,9 @@
       ],
       "domains": [
         "general"
+      ],
+      "topics": [
+        "scientific-visualization"
       ],
       "tasks": [
         "results-figure",
@@ -749,6 +899,9 @@
         "general",
         "robotics",
         "vision"
+      ],
+      "topics": [
+        "scientific-visualization"
       ],
       "tasks": [
         "project-website",
@@ -784,6 +937,10 @@
         "robotics",
         "vision"
       ],
+      "topics": [
+        "experiment-design",
+        "scientific-visualization"
+      ],
       "tasks": [
         "experiment-planning",
         "claim-evidence-mapping",
@@ -816,6 +973,10 @@
       "domains": [
         "general"
       ],
+      "topics": [
+        "scientific-visualization",
+        "experiment-design"
+      ],
       "tasks": [
         "quality-review",
         "agent-handoff"
@@ -841,6 +1002,9 @@
       ],
       "domains": [
         "general"
+      ],
+      "topics": [
+        "literature-discovery"
       ],
       "tasks": [
         "literature-review",
@@ -869,6 +1033,9 @@
       "domains": [
         "general"
       ],
+      "topics": [
+        "experiment-design"
+      ],
       "tasks": [
         "experiment-planning",
         "ablation",
@@ -896,6 +1063,10 @@
       "domains": [
         "general"
       ],
+      "topics": [
+        "paper-writing",
+        "scientific-visualization"
+      ],
       "tasks": [
         "paper-writing",
         "figure-plan",
@@ -921,6 +1092,9 @@
       ],
       "domains": [
         "general"
+      ],
+      "topics": [
+        "project-publishing"
       ],
       "tasks": [
         "project-website",
@@ -949,6 +1123,9 @@
       "domains": [
         "general"
       ],
+      "topics": [
+        "skills-ecosystem"
+      ],
       "tasks": [
         "agent-skills",
         "research-tools",
@@ -976,6 +1153,10 @@
       "domains": [
         "general"
       ],
+      "topics": [
+        "skills-ecosystem",
+        "software-engineering"
+      ],
       "tasks": [
         "agent-skills",
         "coding",
@@ -1002,6 +1183,9 @@
       ],
       "domains": [
         "general"
+      ],
+      "topics": [
+        "document-parsing"
       ],
       "tasks": [
         "pdf-conversion",
@@ -1032,6 +1216,10 @@
       "domains": [
         "general"
       ],
+      "topics": [
+        "skills-ecosystem",
+        "project-publishing"
+      ],
       "tasks": [
         "agent-skills",
         "project-website",
@@ -1059,6 +1247,10 @@
       ],
       "domains": [
         "general"
+      ],
+      "topics": [
+        "scientific-visualization",
+        "paper-writing"
       ],
       "tasks": [
         "source-verification",
@@ -1091,6 +1283,10 @@
       ],
       "domains": [
         "vision"
+      ],
+      "topics": [
+        "scientific-visualization",
+        "three-d-vision"
       ],
       "tasks": [
         "method-figure",
@@ -1130,6 +1326,10 @@
         "robotics",
         "vision"
       ],
+      "topics": [
+        "scientific-visualization",
+        "robot-learning"
+      ],
       "tasks": [
         "method-figure",
         "world-model",
@@ -1167,6 +1367,10 @@
       "domains": [
         "robotics",
         "vision"
+      ],
+      "topics": [
+        "scientific-visualization",
+        "robot-learning"
       ],
       "tasks": [
         "method-figure",
@@ -1206,6 +1410,10 @@
         "robotics",
         "vision"
       ],
+      "topics": [
+        "scientific-visualization",
+        "robot-learning"
+      ],
       "tasks": [
         "method-figure",
         "robot-control",
@@ -1243,6 +1451,10 @@
       "domains": [
         "vision"
       ],
+      "topics": [
+        "scientific-visualization",
+        "three-d-vision"
+      ],
       "tasks": [
         "teaser-design",
         "3d-generation",
@@ -1267,6 +1479,703 @@
       ],
       "description_zh": "用连续放大和空间尺度变化取代抽象流程，形成一眼能理解的视觉故事；适合作为 3D/生成方向的 Teaser 排版参考。",
       "entry": "catalog/entries/wonderzoom-teaser.json"
+    },
+    {
+      "id": "superpowers",
+      "title": "Superpowers · Agent 开发技能框架",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "skills-ecosystem",
+        "software-engineering"
+      ],
+      "tasks": [
+        "agent-skills",
+        "development-process",
+        "agent-coding"
+      ],
+      "keywords": [
+        "skills-ecosystem",
+        "software-engineering",
+        "agent-skills",
+        "development-process",
+        "agent-coding",
+        "superpowers",
+        "skills-ecosystem",
+        "software-engineering",
+        "agent-skills",
+        "development-process",
+        "agent-coding",
+        "superpowers"
+      ],
+      "description_zh": "面向 Coding Agent 的技能化开发方法集合，强调先明确需求、分步实现和验证；适合参考其原生 Skill 文件结构。",
+      "entry": "catalog/entries/superpowers.json"
+    },
+    {
+      "id": "browser-use",
+      "title": "Browser Use · 网页操作 Agent",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "experiments"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "web-automation",
+        "research-automation"
+      ],
+      "tasks": [
+        "browser-agent",
+        "web-research",
+        "web-automation"
+      ],
+      "keywords": [
+        "web-automation",
+        "research-automation",
+        "browser-agent",
+        "web-research",
+        "web-automation",
+        "browser-use",
+        "web-automation",
+        "research-automation",
+        "browser-agent",
+        "web-research",
+        "web-automation",
+        "browser-use"
+      ],
+      "description_zh": "让 Agent 操作浏览器的开源 Python 项目，可用于需要实际网页交互的研究信息收集与操作验证。",
+      "entry": "catalog/entries/browser-use.json"
+    },
+    {
+      "id": "docling",
+      "title": "Docling · 科研文档解析",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "methods"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "document-parsing",
+        "literature-discovery"
+      ],
+      "tasks": [
+        "pdf-parsing",
+        "document-layout",
+        "structured-extraction"
+      ],
+      "keywords": [
+        "document-parsing",
+        "literature-discovery",
+        "pdf-parsing",
+        "document-layout",
+        "structured-extraction",
+        "docling",
+        "document-parsing",
+        "literature-discovery",
+        "pdf-parsing",
+        "document-layout",
+        "structured-extraction",
+        "docling"
+      ],
+      "description_zh": "文档转换与结构解析工具，面向论文 PDF、表格及复杂版面生成便于模型处理的结构化材料。",
+      "entry": "catalog/entries/docling.json"
+    },
+    {
+      "id": "mineru",
+      "title": "MinerU · PDF 结构化转换",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "methods"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "document-parsing",
+        "literature-discovery"
+      ],
+      "tasks": [
+        "pdf-parsing",
+        "ocr",
+        "markdown-conversion"
+      ],
+      "keywords": [
+        "document-parsing",
+        "literature-discovery",
+        "pdf-parsing",
+        "ocr",
+        "markdown-conversion",
+        "MinerU",
+        "document-parsing",
+        "literature-discovery",
+        "pdf-parsing",
+        "ocr",
+        "markdown-conversion",
+        "MinerU"
+      ],
+      "description_zh": "用于复杂 PDF、Office 文档到 Markdown/JSON 的解析流程，适合处理科研文献图表和混合排版。",
+      "entry": "catalog/entries/mineru.json"
+    },
+    {
+      "id": "paper-qa",
+      "title": "PaperQA · 科学文献问答",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "evaluation"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "literature-discovery",
+        "knowledge-retrieval"
+      ],
+      "tasks": [
+        "scientific-qa",
+        "cited-answers",
+        "paper-reading"
+      ],
+      "keywords": [
+        "literature-discovery",
+        "knowledge-retrieval",
+        "scientific-qa",
+        "cited-answers",
+        "paper-reading",
+        "paper-qa",
+        "literature-discovery",
+        "knowledge-retrieval",
+        "scientific-qa",
+        "cited-answers",
+        "paper-reading",
+        "paper-qa"
+      ],
+      "description_zh": "针对科学文档的带引用问答与检索工具，可用于搭建需要核对文献证据的工作流。",
+      "entry": "catalog/entries/paper-qa.json"
+    },
+    {
+      "id": "lightrag",
+      "title": "LightRAG · 轻量图检索",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "methods"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "knowledge-retrieval",
+        "research-automation"
+      ],
+      "tasks": [
+        "rag",
+        "knowledge-graph",
+        "research-qa"
+      ],
+      "keywords": [
+        "knowledge-retrieval",
+        "research-automation",
+        "rag",
+        "knowledge-graph",
+        "research-qa",
+        "LightRAG",
+        "knowledge-retrieval",
+        "research-automation",
+        "rag",
+        "knowledge-graph",
+        "research-qa",
+        "LightRAG"
+      ],
+      "description_zh": "结合图结构组织的 RAG 项目，适合比较科研资料库中多跳关系查询的检索方式。",
+      "entry": "catalog/entries/lightrag.json"
+    },
+    {
+      "id": "graphrag",
+      "title": "Microsoft GraphRAG · 图结构检索",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "methods"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "knowledge-retrieval",
+        "research-automation"
+      ],
+      "tasks": [
+        "graph-rag",
+        "summarization",
+        "knowledge-search"
+      ],
+      "keywords": [
+        "knowledge-retrieval",
+        "research-automation",
+        "graph-rag",
+        "summarization",
+        "knowledge-search",
+        "graphrag",
+        "knowledge-retrieval",
+        "research-automation",
+        "graph-rag",
+        "summarization",
+        "knowledge-search",
+        "graphrag"
+      ],
+      "description_zh": "基于图结构的检索增强生成系统，适合探索全局主题总结与局部证据查询的不同检索需求。",
+      "entry": "catalog/entries/graphrag.json"
+    },
+    {
+      "id": "firecrawl",
+      "title": "Firecrawl · Agent 网页采集",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "methods"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "web-automation",
+        "research-automation"
+      ],
+      "tasks": [
+        "web-crawling",
+        "research-collection",
+        "web-extraction"
+      ],
+      "keywords": [
+        "web-automation",
+        "research-automation",
+        "web-crawling",
+        "research-collection",
+        "web-extraction",
+        "firecrawl",
+        "web-automation",
+        "research-automation",
+        "web-crawling",
+        "research-collection",
+        "web-extraction",
+        "firecrawl"
+      ],
+      "description_zh": "面向 Agent 的网页内容抓取与提取基础设施，可组织来源可追溯的研究网页资料。",
+      "entry": "catalog/entries/firecrawl.json"
+    },
+    {
+      "id": "openhands",
+      "title": "OpenHands · 软件开发 Agent",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "agent-engineering",
+        "software-engineering"
+      ],
+      "tasks": [
+        "coding-agent",
+        "automated-development",
+        "agent-evaluation"
+      ],
+      "keywords": [
+        "agent-engineering",
+        "software-engineering",
+        "coding-agent",
+        "automated-development",
+        "agent-evaluation",
+        "OpenHands",
+        "agent-engineering",
+        "software-engineering",
+        "coding-agent",
+        "automated-development",
+        "agent-evaluation",
+        "OpenHands"
+      ],
+      "description_zh": "开源软件开发 Agent 平台，适合研究代码任务的执行闭环、环境操作和结果验收。",
+      "entry": "catalog/entries/openhands.json"
+    },
+    {
+      "id": "langgraph",
+      "title": "LangGraph · 有状态 Agent 编排",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "agent-engineering",
+        "research-automation"
+      ],
+      "tasks": [
+        "agent-orchestration",
+        "stateful-workflow",
+        "tool-calling"
+      ],
+      "keywords": [
+        "agent-engineering",
+        "research-automation",
+        "agent-orchestration",
+        "stateful-workflow",
+        "tool-calling",
+        "langgraph",
+        "agent-engineering",
+        "research-automation",
+        "agent-orchestration",
+        "stateful-workflow",
+        "tool-calling",
+        "langgraph"
+      ],
+      "description_zh": "构建有状态 Agent 流程的开源框架，适合对比研究任务中的节点编排、状态管理和中断恢复。",
+      "entry": "catalog/entries/langgraph.json"
+    },
+    {
+      "id": "openai-agents-sdk",
+      "title": "OpenAI Agents SDK · Agent 工具编排",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "agent-engineering",
+        "research-automation"
+      ],
+      "tasks": [
+        "multi-agent",
+        "tool-calling",
+        "agent-handoff"
+      ],
+      "keywords": [
+        "agent-engineering",
+        "research-automation",
+        "multi-agent",
+        "tool-calling",
+        "agent-handoff",
+        "openai-agents-python",
+        "agent-engineering",
+        "research-automation",
+        "multi-agent",
+        "tool-calling",
+        "agent-handoff",
+        "openai-agents-python"
+      ],
+      "description_zh": "用于工具调用、交接和多 Agent 编排的 Python SDK，可用于研究 Harness 的结构选择。",
+      "entry": "catalog/entries/openai-agents-sdk.json"
+    },
+    {
+      "id": "agent-lightning",
+      "title": "Agent Lightning · Agent 训练框架",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "agents",
+        "rl"
+      ],
+      "topics": [
+        "agent-engineering",
+        "experiment-design"
+      ],
+      "tasks": [
+        "agent-training",
+        "reinforcement-learning",
+        "agent-evaluation"
+      ],
+      "keywords": [
+        "agent-engineering",
+        "experiment-design",
+        "agent-training",
+        "reinforcement-learning",
+        "agent-evaluation",
+        "agent-lightning",
+        "agent-engineering",
+        "experiment-design",
+        "agent-training",
+        "reinforcement-learning",
+        "agent-evaluation",
+        "agent-lightning"
+      ],
+      "description_zh": "面向 Agent 训练与优化的工具框架，适合研究任务回报如何反馈给代理执行策略。",
+      "entry": "catalog/entries/agent-lightning.json"
+    },
+    {
+      "id": "spec-kit",
+      "title": "GitHub Spec Kit · 规范驱动工作流",
+      "kind": "workflow",
+      "stages": [
+        "ideation",
+        "methods"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "software-engineering",
+        "research-automation"
+      ],
+      "tasks": [
+        "spec-driven-development",
+        "implementation-plan",
+        "software-workflow"
+      ],
+      "keywords": [
+        "software-engineering",
+        "research-automation",
+        "spec-driven-development",
+        "implementation-plan",
+        "software-workflow",
+        "spec-kit",
+        "software-engineering",
+        "research-automation",
+        "spec-driven-development",
+        "implementation-plan",
+        "software-workflow",
+        "spec-kit"
+      ],
+      "description_zh": "规范驱动的软件开发工作流与工具集，适合把研究工程需求、实施任务和验收条件显式整理。",
+      "entry": "catalog/entries/spec-kit.json"
+    },
+    {
+      "id": "playwright-mcp",
+      "title": "Playwright MCP · 浏览器操作",
+      "kind": "workflow",
+      "stages": [
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "web-automation",
+        "software-engineering"
+      ],
+      "tasks": [
+        "browser-mcp",
+        "browser-testing",
+        "agent-browser"
+      ],
+      "keywords": [
+        "web-automation",
+        "software-engineering",
+        "browser-mcp",
+        "browser-testing",
+        "agent-browser",
+        "playwright-mcp",
+        "web-automation",
+        "software-engineering",
+        "browser-mcp",
+        "browser-testing",
+        "agent-browser",
+        "playwright-mcp"
+      ],
+      "description_zh": "面向 Agent 的 Playwright MCP 浏览器工具服务，适合执行可观察的页面操作与回归检查。",
+      "entry": "catalog/entries/playwright-mcp.json"
+    },
+    {
+      "id": "llamaindex",
+      "title": "LlamaIndex · 文档与知识索引",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "methods"
+      ],
+      "domains": [
+        "nlp",
+        "agents"
+      ],
+      "topics": [
+        "knowledge-retrieval",
+        "document-parsing"
+      ],
+      "tasks": [
+        "rag",
+        "document-indexing",
+        "agent-data"
+      ],
+      "keywords": [
+        "knowledge-retrieval",
+        "document-parsing",
+        "rag",
+        "document-indexing",
+        "agent-data",
+        "llama_index",
+        "knowledge-retrieval",
+        "document-parsing",
+        "rag",
+        "document-indexing",
+        "agent-data",
+        "llama_index"
+      ],
+      "description_zh": "将文档处理、索引与检索串接到模型应用的数据框架，适合构建研究资料库的读取层。",
+      "entry": "catalog/entries/llamaindex.json"
+    },
+    {
+      "id": "anthropic-skill-creator",
+      "title": "Skill Creator · 创建与评测 Agent Skills",
+      "kind": "workflow",
+      "stages": [
+        "methods",
+        "evaluation"
+      ],
+      "domains": [
+        "agents"
+      ],
+      "topics": [
+        "skills-ecosystem",
+        "experiment-design"
+      ],
+      "tasks": [
+        "agent-skills",
+        "skills-ecosystem",
+        "experiment-design"
+      ],
+      "keywords": [
+        "Skill Creator · 创建与评测 Agent Skills",
+        "anthropics/skills",
+        "指导从 Skill 草稿、测试样例到触发准确率评估的实际技能文件，可作为封装科研 Agent 经验的参考。",
+        "Skill Creator · 创建与评测 Agent Skills",
+        "anthropics/skills",
+        "A concrete skill for authoring, testing and iterating Agent Skills."
+      ],
+      "description_zh": "指导从 Skill 草稿、测试样例到触发准确率评估的实际技能文件，可作为封装科研 Agent 经验的参考。",
+      "entry": "catalog/entries/anthropic-skill-creator.json"
+    },
+    {
+      "id": "anthropic-frontend-design",
+      "title": "Frontend Design · 差异化网页设计 Skill",
+      "kind": "workflow",
+      "stages": [
+        "communication",
+        "methods"
+      ],
+      "domains": [
+        "agents"
+      ],
+      "topics": [
+        "skills-ecosystem",
+        "project-publishing"
+      ],
+      "tasks": [
+        "agent-skills",
+        "skills-ecosystem",
+        "project-publishing"
+      ],
+      "keywords": [
+        "Frontend Design · 差异化网页设计 Skill",
+        "anthropics/skills",
+        "用于设计具有明确视觉辨识度的网页界面，可作为科研项目主页改版时的具体 Skill 参考。",
+        "Frontend Design · 差异化网页设计 Skill",
+        "anthropics/skills",
+        "A concrete skill about intentional visual design and distinctive frontend decisions."
+      ],
+      "description_zh": "用于设计具有明确视觉辨识度的网页界面，可作为科研项目主页改版时的具体 Skill 参考。",
+      "entry": "catalog/entries/anthropic-frontend-design.json"
+    },
+    {
+      "id": "superpowers-debugging",
+      "title": "Systematic Debugging · 根因排查 Skill",
+      "kind": "workflow",
+      "stages": [
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "skills-ecosystem",
+        "software-engineering"
+      ],
+      "tasks": [
+        "agent-skills",
+        "skills-ecosystem",
+        "software-engineering"
+      ],
+      "keywords": [
+        "Systematic Debugging · 根因排查 Skill",
+        "obra/superpowers",
+        "聚焦定位根因再修复的具体 Skill，适合研究代码与实验流水线的异常排查。",
+        "Systematic Debugging · 根因排查 Skill",
+        "obra/superpowers",
+        "A concrete root-cause-first debugging skill for software and experiment failures."
+      ],
+      "description_zh": "聚焦定位根因再修复的具体 Skill，适合研究代码与实验流水线的异常排查。",
+      "entry": "catalog/entries/superpowers-debugging.json"
+    },
+    {
+      "id": "superpowers-verification",
+      "title": "Verification Before Completion · 交付验证 Skill",
+      "kind": "workflow",
+      "stages": [
+        "evaluation",
+        "communication"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "skills-ecosystem",
+        "experiment-design"
+      ],
+      "tasks": [
+        "agent-skills",
+        "skills-ecosystem",
+        "experiment-design"
+      ],
+      "keywords": [
+        "Verification Before Completion · 交付验证 Skill",
+        "obra/superpowers",
+        "要求在宣布任务完成前先运行真实验收命令并检查输出的具体 Skill。",
+        "Verification Before Completion · 交付验证 Skill",
+        "obra/superpowers",
+        "A concrete skill requiring fresh verification evidence before declaring completion."
+      ],
+      "description_zh": "要求在宣布任务完成前先运行真实验收命令并检查输出的具体 Skill。",
+      "entry": "catalog/entries/superpowers-verification.json"
     }
   ]
 }

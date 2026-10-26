@@ -1,0 +1,94 @@
+{
+  "id": "mineru",
+  "title": "MinerU · PDF 结构化转换",
+  "kind": "workflow",
+  "stages": [
+    "research",
+    "methods"
+  ],
+  "domains": [
+    "nlp",
+    "agents"
+  ],
+  "topics": [
+    "document-parsing",
+    "literature-discovery"
+  ],
+  "tasks": [
+    "pdf-parsing",
+    "ocr",
+    "markdown-conversion"
+  ],
+  "description": {
+    "zh": "用于复杂 PDF、Office 文档到 Markdown/JSON 的解析流程，适合处理科研文献图表和混合排版。",
+    "en": "Document parsing project that converts complex PDF and Office files to agent-ready Markdown/JSON."
+  },
+  "keywords": {
+    "zh": [
+      "document-parsing",
+      "literature-discovery",
+      "pdf-parsing",
+      "ocr",
+      "markdown-conversion",
+      "MinerU"
+    ],
+    "en": [
+      "document-parsing",
+      "literature-discovery",
+      "pdf-parsing",
+      "ocr",
+      "markdown-conversion",
+      "MinerU"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/opendatalab/MinerU"
+  },
+  "rights": {
+    "reuse": "external-repository; verify original license and dependencies before reuse",
+    "preview": "external-repository-text-card",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "科研文献需要 OCR、表格或混合排版解析。"
+      ],
+      "en": [
+        "Papers need OCR, tables or mixed layout conversion."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "针对中英文、公式、跨栏文档抽样核对输出。"
+      ],
+      "en": [
+        "Sample-check bilingual, formula-heavy and multi-column outputs."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "OCR、公式及表格结果仍应回看原文。"
+      ],
+      "en": [
+        "Check OCR, equations and tables against source documents."
+      ]
+    }
+  },
+  "curation": {
+    "track": "popular",
+    "type": "tool",
+    "github_repo": "opendatalab/MinerU",
+    "stars_snapshot": 82489,
+    "stars_checked_on": "2026-10-26",
+    "verification": "official-repository-metadata-reviewed-not-locally-tested",
+    "selection_reason": {
+      "zh": "科研文献需要 OCR、表格或混合排版解析。",
+      "en": "Papers need OCR, tables or mixed layout conversion."
+    },
+    "editorial_added_on": "2026-10-26"
+  },
+  "previewStyle": "workflow"
+}
