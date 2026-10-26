@@ -16,7 +16,7 @@ class Links(HTMLParser):
         for k,v in attrs:
             if k in ('href','src') and v:self.refs.append(v)
 errors=[]
-pages=['index.html','asset.html','for-agents/index.html','quality.html','principles.html','contribute.html','community.html','examples.html','examples/sample-project.html','examples/roborender.html']
+pages=['index.html','asset.html','for-agents/index.html','quality.html','principles.html','contribute.html','community.html','findings.html','examples.html','examples/sample-project.html','examples/roborender.html']
 for h in pages:
     p=Links();p.feed((ROOT/h).read_text(encoding='utf-8'))
     for uri in p.refs:
@@ -239,7 +239,7 @@ if not all(word in template for word in ('工作流','工具','来源','授权')
     errors.append('asset proposal template: still too narrow for research assets')
 
 # Shared information architecture: 3 destinations across all entry pages.
-nav_pages=['index.html','community.html','contribute.html','asset.html',
+nav_pages=['index.html','community.html','findings.html','contribute.html','asset.html',
            'quality.html','principles.html','for-agents/index.html','examples.html']
 nav_js=(ROOT/'js/navigation.js').read_text(encoding='utf-8')
 if 'const links=[' not in nav_js or 'renderNavigation()' not in nav_js or 'renderFooter()' not in nav_js:
@@ -459,6 +459,16 @@ if not all(x in home_html for x in ('href="community.html"','href="#gallery"')):
     errors.append('Curated homepage must link prominently to Community and Gallery')
 if 'template=submit-asset.yml' not in contribute_html:
     errors.append('Contribute page must link the public Issue Form')
+# Findings is the third content destination, fed by provenance-bearing snapshots.
+findings_html=(ROOT/'findings.html').read_text(encoding='utf-8')
+findings_js=(ROOT/'js/findings.js').read_text(encoding='utf-8')
+if not all(value in findings_html for value in ('data-page="findings"','id="findings-feeds"','js/findings.js','findings.css')):
+    errors.append('Findings: public discovery page missing source-based feed mount or styles')
+if not all(value in nav_js for value in ("key:'curated'", "key:'community'", "key:'findings'", "key:'contribute'")):
+    errors.append('Shared navigation: expected Curated, Community, Findings, and Contribute action')
+if 'data/findings.json' not in findings_js:
+    errors.append('Findings must load the documented static provenance snapshot')
+
 if errors:
     for e in errors:print('FAIL:',e)
     raise SystemExit(1)
