@@ -190,7 +190,7 @@
       const proof=c.track==='practice' ? '<div class="ora-skill-evidence"><span>'+safe(tr('公开实践证据','Public usage evidence'))+'</span>'+
         (c.evidence||[]).slice(0,2).map(p=>'<a href="'+safe(p)+'" target="_blank" rel="noopener noreferrer">'+safe(p.split('/').pop())+' ↗</a>').join('')+'</div>' : '';
       const state=c.track==='popular'?tr('外部高热度 · 未经本站亲测','Popular external · not tested here'):tr('已有公开项目产物 · 未做独立效益评测','Public project artifacts · no independent evaluation');
-      const typeLabel={skill:'Skill',tool:tr('工具 / 框架','Tool / framework'),workflow:'Workflow'}[c.type]||tr('待分类','Unclassified');
+      const typeLabel=c.type==='skill'?(c.star_scope==='parent-repository'?tr('独立 Skill','Individual Skill'):tr('Skill 集合','Skill collection')):({tool:tr('工具 / 框架','Tool / framework'),workflow:'Workflow'}[c.type]||tr('待分类','Unclassified'));
       const topical=(e.topics||[]).slice(0,2).map(k=>'<span>'+safe(facetText('topics',k))+'</span>').join('');
       const context=e.domains.slice(0,2).map(k=>'<span>'+safe(facetText('domains',k))+'</span>').join('');
       return '<article class="ora-skill-card"><div class="ora-skill-meta"><span>'+safe(typeLabel)+'</span>'+star+'</div>'+

@@ -64,6 +64,9 @@ with sync_playwright() as pw:
         assert page.locator('#practice-skills .ora-skill-card').count()==len(practice_data)
         assert page.locator('#popular-skills [data-star-repo]').count()==min(8,len(popular_data))
         assert page.locator('#skill-more').is_visible()==(len(popular_data)>8)
+        assert page.locator('#skill-search').get_attribute('placeholder').startswith('试试 PDF')
+        assert '独立 Skill' in page.locator('#popular-skills').inner_text()
+        assert 'Skill 集合' in page.locator('#popular-skills').inner_text()
         assert f"{len(popular_data)+len(practice_data)} / " in page.locator('#skill-status').inner_text()
         # Domain, topic and capability type are independent, composable filters.
         page.locator('#skill-topic').select_option('document-parsing')

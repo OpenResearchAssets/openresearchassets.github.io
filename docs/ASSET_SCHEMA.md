@@ -22,7 +22,8 @@
 | \`title\` | 明确资源名与具体组成部分 | 一篇论文的 Teaser 和主页可以分为关联的两项 |
 | \`kind\` | 资产类型 | 使用 \`facets.kinds\` 中已定义的类型 |
 | \`stages[]\` | 科研阶段 | 使用 \`facets.stages\` 的标签 |
-| \`domains[]\` | 适用领域 | 使用 \`facets.domains\` 的标签 |
+| \`domains[]\` | 所属学科或系统领域（可多选） | 使用 \`facets.domains\` 的受控词表 |
+| \`topics[]\` | 技术方向 / 研究主题（可多选） | 使用 \`facets.topics\` 的受控词表；不要与能力类型混淆 |
 | \`tasks[]\` | 细粒度使用任务 | 可逐步扩展；使用稳定英文 slug |
 | \`description\` | 具体价值概述 | \`{zh,en}\` 双语 |
 | \`keywords\` | 中英关键词及别名 | \`{zh:[...], en:[...]}\` |
