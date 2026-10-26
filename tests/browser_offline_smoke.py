@@ -420,7 +420,11 @@ with sync_playwright() as pw:
             page.screenshot(path=str(ROOT/'tests'/f'_local_findings_real_{label}.png'),full_page=True)
         page.locator('[data-feed="github"]').click()
         assert page.locator('.findings-feed-focused').count()==1
-        assert page.locator('.findings-item').count()==len(json.loads(real_snapshot)['feeds']['github']['items'])
+        assert page.locator('.findings-item').count()==min(8,len(json.loads(real_snapshot)['feeds']['github']['items']))
+        if len(json.loads(real_snapshot)['feeds']['github']['items'])>8:
+            assert page.locator('.findings-load-more').count()==1
+            page.locator('.findings-load-more').click()
+            assert page.locator('.findings-item').count()==len(json.loads(real_snapshot)['feeds']['github']['items'])
         assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('findings-real-focused',label)
         if label in ('desktop','mobile'):
             page.evaluate('window.scrollTo(0,0)')
