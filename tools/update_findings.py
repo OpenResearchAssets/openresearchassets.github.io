@@ -301,8 +301,10 @@ def build(existing: dict | None = None) -> dict:
     from findings_enrichment import enrich_readmes, add_translations
     readme_count = enrich_readmes(feeds, old_feeds)
     translation_status, translations = add_translations(feeds, old_feeds, offline_enabled=True)
+    from findings_editorial_zh import apply_editorial_chinese
+    reviewed = apply_editorial_chinese(feeds)
     print(f"Descriptions: {readme_count} README extracts; translations: "
-          f"{translations} fields ({translation_status})")
+          f"{translations} fields ({translation_status}); {reviewed} terminology-corrected introductions")
     total = sum(len(feed.get("items", [])) for feed in feeds.values())
     translated_items = sum(
         1 for feed in feeds.values() for row in feed.get("items", [])
