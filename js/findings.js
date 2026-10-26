@@ -68,6 +68,11 @@
      esc(tr(key==='papers'?'阅读全文摘要':'阅读更完整的介绍',key==='papers'?'Read full abstract':'Read fuller description'))+
      ' <span aria-hidden="true">⌄</span></summary><div class="findings-entry-full"><span>'+
      esc(sourceName)+'</span><p>'+esc(detail)+'</p></div></details>':'';
+   const originalCompare=zh()&&(r.subtitle_zh||r.detail_zh)?
+     '<details class="findings-original-compare"><summary>'+esc('核对英文原文')+
+     ' <span aria-hidden="true">⌄</span></summary>'+
+     '<div class="findings-entry-full"><strong>'+esc(r.title)+'</strong><p>'+esc(r.detail||r.subtitle||'')+
+     '</p></div></details>':'';
    const published=key==='papers'&&/^\d{4}-\d\d-\d\d/.test(r.badge||'')?date(r.badge):'';
    const originalLabel=key==='papers'?tr('论文原文','Original paper'):tr('项目原站','Original repository');
    const translated=zh()?'<span class="findings-translation-note">'+esc(r.subtitle_zh||r.detail_zh?
@@ -78,7 +83,7 @@
      (abstract?'<p class="findings-item-summary">'+esc(abstract)+'</p>':'')+
      '<div class="findings-entry-meta">'+(published?'<span>'+esc(tr('发表于','Published'))+' '+esc(published)+'</span>':'')+
      (r.author?'<span>'+esc(r.author)+'</span>':'')+'<span>'+esc(sourceName)+'</span>'+translated+'</div>'+
-     expanded+'<a class="findings-entry-source-link" href="'+esc(url)+
+     expanded+originalCompare+'<a class="findings-entry-source-link" href="'+esc(url)+
      '" target="_blank" rel="noopener noreferrer nofollow">'+esc(originalLabel)+' ↗</a>'+
      '</div>'+metric(r)+'</article>';
  }
