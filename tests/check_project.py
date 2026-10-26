@@ -344,6 +344,20 @@ if 'independently reproduced' not in real_page or '非我们的独立复现' not
 if 'examples/roborender.html' not in case_page:
     errors.append('real-paper case not linked from examples index')
 
+# Actionable dossiers are source-inspected, not evidence of executing the original Skill.
+reviewed=[e for e in entries if e.get('execution',{}).get('scope')=='source-metadata-reviewed-not-executed']
+if len(reviewed)<13:errors.append('expected at least 13 source-reviewed individual Skill dossiers')
+for e in reviewed:
+    ex=e['execution']
+    if e.get('curation',{}).get('star_scope')!='parent-repository':
+        errors.append(f"{e['id']}: inaccurate single Skill star attribution")
+    if not e.get('links',{}).get('source','').endswith('/SKILL.md'):
+        errors.append(f"{e['id']}: source must link actual SKILL.md")
+    if not re.fullmatch(r'[a-f0-9]{40}',ex.get('source_file_sha','')):
+        errors.append(f"{e['id']}: missing verified file blob SHA")
+    for field in ('inputs','outputs','requirements','steps','checks'):
+        if not all(ex.get(field,{}).get(lang) for lang in ('zh','en')):
+            errors.append(f"{e['id']}: missing bilingual {field}")
 # Curated Skills: popularity snapshots are dated and practice items link to public work.
 popular=[e for e in entries if e.get('curation',{}).get('track')=='popular']
 practice=[e for e in entries if e.get('curation',{}).get('track')=='practice']

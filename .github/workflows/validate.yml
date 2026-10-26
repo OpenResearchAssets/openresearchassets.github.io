@@ -20,6 +20,7 @@ jobs:
       - name: Canonical data and JS checks
         run: |
           python tools/sync_catalog.py --check
+          python tools/audit_skill_intake.py --check
           python tests/check_project.py
           node tests/community_feed_smoke.js
           python tests/check_findings.py --snapshot

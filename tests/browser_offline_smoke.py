@@ -80,6 +80,12 @@ with sync_playwright() as pw:
         if len(popular_data)>8:
             page.locator('#skill-more').click()
             assert page.locator('#popular-skills .ora-skill-card').count()==len(popular_data)
+        page.locator('#skill-reset').click()
+        page.locator('#skill-search').fill('Statistical Power')
+        assert 'kdense-statistical-power' in page.locator('#popular-skills .ora-skill-card h4 a').first.get_attribute('href')
+        assert '产出' in page.locator('#popular-skills .ora-skill-output').first.inner_text()
+        assert 'SKILL.md' in page.locator('#popular-skills .ora-skill-actions').first.inner_text()
+        page.locator('#skill-reset').click()
         # A concrete skill's stars must explicitly be attributed to its parent repository.
         individual=page.locator('#popular-skills [data-star-scope="parent-repository"]').first
         assert individual.count()==1 and ('母仓库' in individual.inner_text())
@@ -168,6 +174,12 @@ with sync_playwright() as pw:
             assert page.locator('.ora-detail-preview .ora-preview').count()==1,(label,asset_id,'missing preview')
             assert page.locator('.ora-detail-links a').count()>=2,(label,asset_id,'source / JSON missing')
             assert 'catalog/entries/'+asset_id+'.json' in page.locator('.ora-detail-links a').last.get_attribute('href')
+            if entry.get('execution'):
+                assert page.locator('.ora-execution').count()==1
+                assert page.locator('.ora-execution-grid>div').count()==4
+                assert page.locator('.ora-execution-steps li').count()>=2
+                assert '未实际运行' in page.locator('.ora-execution-head').inner_text()
+                assert page.locator('#ora-copy-execution').count()==1
             assert page.locator('.ora-detail-sidebar').is_visible()
             assert page.locator('.ora-detail-rights').count()==1
             assert 'asset-removal.yml' in page.locator('.ora-detail-rights a').get_attribute('href')

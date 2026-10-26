@@ -65,3 +65,7 @@ RoboRender、RoboDojo、SuperMimic 分别有 `*-teaser` 与 `*-site` 两个条�
 `domains` 表示学科或系统方向（如视觉、机器人、Agent、NLP）；`topics` 表示科研问题/技术方向（如文档解析、RAG、实验设计、软件工程）；`kind` 表示视觉、模板、外部目录或工具/流程大类。对 `kind=workflow` 进一步读取 `curation.type`，分辨 `skill`、`tool` 和 `workflow`。
 
 **先过滤，再加载。** 组合主题与任务标签选择最相关的单项 `catalog/entries/<id>.json`。热门条目仅验证开源官方来源；`curation.track=practice` 才包含可追溯项目实践，仍不代表独立实验验证。若 `curation.star_scope=parent-repository`，星标仅表示母仓库热度，不能把仓库 Star 表达为特定 SKILL.md 的使用量。
+
+## 按任务调用具体 Skill
+
+有 `execution` 字段时，先确认所需 `inputs` 和 `requirements`，再读取 `steps`，用 `outputs` 与 `checks` 验收。上游原始文件以 `links.source` 为准，`source_file_sha` 是本站审阅时的记录；`scope=source-metadata-reviewed-not-executed` 不表示此 Skill 已安装或已被本站执行。下载或运行之前必须自己审查代码、许可、权限与网络行为。

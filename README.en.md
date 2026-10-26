@@ -64,7 +64,7 @@ These are **aspirational stages, not shipped features or promised milestones**. 
 
 This Chinese-first, English-supported library spans research design, evaluation, writing and communication. The current public implementation includes:
 
-- **58 structured entries** in [catalog/index.json](catalog/index.json), including separate teaser and project-site references for RoboRender, RoboDojo and SuperMimic.
+- **71 structured entries** in [catalog/index.json](catalog/index.json), including separate teaser and project-site references for RoboRender, RoboDojo and SuperMimic.
 - Browser-side search and facets for stages, domains and asset kinds, with per-asset usage and provenance pages.
 - [Agent instructions](for-agents/) and [llms.txt](llms.txt) pointing to an openly readable machine catalog. These files do **not** mean there is an autonomous remote agent service.
 - Four original Markdown research workflows covering literature, experiments, paper narratives and research release.
@@ -94,4 +94,8 @@ The six featured RoboRender/RoboDojo/SuperMimic references now use their actual 
 
 ## Thematic discovery
 
-The curated catalog provides orthogonal filters for research domains, task topics, research stages, and asset types. Skills / Workflows add dedicated filters for tools, individual Skills, and executable workflows, while preserving distinct **popular external projects** and **evidenced project practice** tracks. Individual `SKILL.md` files are linked directly; GitHub stars on those cards refer to the **parent repository**, not to an individual skill. As of October 26, 2026, the catalog includes **58 structured records**, including **23 popularity-track picks** and **2 evidence-backed project workflows**. Inclusion does not imply our own performance evaluation.
+The curated catalog provides orthogonal filters for research domains, task topics, research stages, and asset types. Skills / Workflows add dedicated filters for tools, individual Skills, and executable workflows, while preserving distinct **popular external projects** and **evidenced project practice** tracks. Individual `SKILL.md` files are linked directly; GitHub stars on those cards refer to the **parent repository**, not to an individual skill. As of October 26, 2026, the catalog includes **71 structured records**, including **36 popularity-track picks** and **2 evidence-backed project workflows**. Inclusion does not imply our own performance evaluation.
+
+### Source-reviewed individual Skills
+
+13 additional individual upstream `SKILL.md` files now have concise, bilingual instructions for inputs, outputs, requirements, steps and checks, with a dated upstream file SHA. Browse each asset for a direct link to the original Skill. They have **not been executed or independently validated here**. The full 71-record catalog contains 36 popularity-track resources and two evidence-backed project workflows. See the [source audit](docs/SKILL_INTAKE_AUDIT.md) and [intake workflow](workflows/skill-source-intake.md).

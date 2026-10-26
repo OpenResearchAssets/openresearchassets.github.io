@@ -130,3 +130,9 @@ python3 tests/browser_offline_smoke.py   # Playwright 与 Chromium 可用时
 对直接收录某仓库中的独立 `SKILL.md`，使用深链接指向具体文件；`curation.github_repo` 和 `stars_snapshot` 标记的是**母仓库**的 Stars，必须同时设置 `curation.star_scope=parent-repository`，UI 不得把这个数字宣称成单个 Skill 的热度。热门与实践两条路线不可混合或伪造已安装结论。
 
 维护清晰的具体使用场景、可迁移步骤与限制；新增领域/主题前先确认受控词表确实不能表达，不要放任自由标签无序增长。生成索引 (`tools/sync_catalog.py`) 必须保留 `topics` 给 AI 侧使用，所有旧资产必须完成主题回填。
+
+## 可执行能力的来源阅读提要（2026-10-26）
+
+新增独立 `SKILL.md` 经过官方源文件审阅，记录 `execution.inputs/outputs/requirements/steps/checks`（均为 `{zh:[...],en:[...]}`）、`source_file_sha`（上游 Git blob 的 40 位 SHA）、`source_checked_on` 和 `scope=source-metadata-reviewed-not-executed`。这里的可执行性是指**用户能够按提示准备任务与逐项验收**，不是本站拥有调用原技能的托管运行器，也不是代表我们测过效果。
+
+母仓库 GitHub Stars 必须标注 `curation.star_scope=parent-repository`，具体文件请从 `links.source` 直达。静态核对执行 `python3 tools/audit_skill_intake.py --check`，验收清单见 [审阅报告](SKILL_INTAKE_AUDIT.md)。官方源、许可证、依赖和权限需在实际使用前再次核实，外部专有 Skill 不在本站重新分发。
