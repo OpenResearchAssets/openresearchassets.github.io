@@ -226,3 +226,12 @@
 .findings-original-compare>summary:hover{text-decoration:underline}
 .findings-original-compare .findings-entry-full strong{font-size:13px;color:#3b536a;line-height:1.7}
 .findings-original-compare .findings-entry-full p{font-size:13px}
+
+/* Mixed-language source text must never masquerade as a translated summary. */
+.findings-original-label{display:inline-flex;margin:5px 0 7px;padding:4px 9px;
+  background:#f0f3f7;border:1px solid #e2e8ee;border-radius:6px;font-size:11.5px;
+  font-weight:680;color:#596f83;line-height:1.55}
+.findings-summary-original{font-family:Georgia,"Times New Roman",serif;font-size:13.2px!important;
+  color:#617789!important;line-height:1.75!important;border-left:2px solid #d4e0ea;
+  padding-left:12px;margin-top:6px!important}
+@media(max-width:700px){.findings-summary-original{font-size:12.8px!important}}
