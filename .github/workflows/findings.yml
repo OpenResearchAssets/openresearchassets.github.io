@@ -11,6 +11,7 @@ on:
       - tools/findings_enrichment.py
       - tools/findings_offline_translate.py
       - tools/findings_editorial_zh.py
+      - tools/findings_zh_typography.py
       - data/findings_editorial_zh.json
       - tests/check_findings.py
 permissions:
