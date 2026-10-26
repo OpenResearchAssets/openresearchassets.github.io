@@ -29,6 +29,7 @@ jobs:
       - name: Fetch public trends and preserve last valid per-source data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GOOGLE_TRANSLATE_API_KEY: ${{ secrets.GOOGLE_TRANSLATE_API_KEY }}
         run: python tools/update_findings.py
       - name: Validate snapshot schema and source attribution
         run: python tests/check_findings.py --snapshot
