@@ -310,6 +310,7 @@
       '<p class="ora-community-prompt"><a href="https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=submit-asset.yml" target="_blank" rel="noopener noreferrer">'+safe(tr('推荐另一份优秀资产','Recommend another great asset'))+' ↗</a></p>'+
       (related.length?'<div class="ora-related"><h3>'+safe(tr('关联资产','Related asset'))+'</h3><a href="asset.html?id='+encodeURIComponent(related[0].id)+'">'+safe(related[0].title)+' →</a></div>':'')+
       '</aside></div>';
+    window.ORA_COMMUNITY?.mount(e.id);
     document.getElementById('ora-copy-brief')?.addEventListener('click',async ()=>{
       const lines=['Asset: '+e.title,'URL: '+location.href,'Tasks: '+e.tasks.join(', '),
         'Use when: '+(local(app.use_when)||[]).join('；'),'Learn: '+(local(app.learn)||[]).join('；'),
