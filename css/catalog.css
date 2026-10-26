@@ -235,3 +235,6 @@
 .ora-asset-community[hidden]{display:none}
 .ora-asset-community h2{font-size:23px;margin:0 0 8px;letter-spacing:-.03em;color:#24394e}
 .ora-asset-community>p{font-size:12px;color:#7b8795;margin-bottom:24px}
+
+.ora-provenance .ora-contributor{display:inline-flex;align-items:center;gap:6px;vertical-align:middle}
+.ora-provenance .ora-contributor img{width:20px;height:20px;border-radius:50%;object-fit:cover;border:1px solid #e1e8ef}
