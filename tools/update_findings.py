@@ -300,7 +300,7 @@ def build(existing: dict | None = None) -> dict:
             print(f"{key}: source unavailable ({type(error).__name__}: {str(error)[:160]})", file=sys.stderr)
     from findings_enrichment import enrich_readmes, add_translations
     readme_count = enrich_readmes(feeds, old_feeds)
-    translation_status, translations = add_translations(feeds, old_feeds)
+    translation_status, translations = add_translations(feeds, old_feeds, offline_enabled=True)
     print(f"Descriptions: {readme_count} README extracts; translations: "
           f"{translations} fields ({translation_status})")
     return {"schema_version": "1", "generated_at": now(), "feeds": feeds,
