@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "created_on": "2026-10-26",
+  "method": "single-turn-context-injection",
+  "primary_metric": "macro_f1",
+  "model_contract": "same model, fixed task, system/user prompts and output cap; treatment only adds one skill guidance block",
+  "no_native_agent_execution": true,
+  "baseline": "No Skill; no protocol injection",
+  "treatment": "Source-guided condensed Skill instruction; not full third-party skill installed",
+  "skill_protocols": {
+    "literature": {
+      "id": "kdense-literature-review",
+      "upstream": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/literature-review/SKILL.md",
+      "sha": "5178dce6419cee412155e7b9dd523d5b2ef703f5",
+      "text": "Literature Review Skill — condensed source-guided protocol. First define a precise research question, inclusion/exclusion criteria and cutoff period. Distinguish records from unique studies and track duplicates. Search coverage is not evidence that unavailable papers do not exist. For each claim, trace to the original study or database record. Audit citation validity and provenance; do not invent DOIs, publication venues, independent replication, data availability or results. When evidence is insufficient, mark unsupported and explain uncertainty. Keep screening decisions tied to preregistered criteria."
+    },
+    "experimental-design": {
+      "id": "kdense-experimental-design",
+      "upstream": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/experimental-design/SKILL.md",
+      "sha": "ee14f9ed795c791ac80e3ea946858d97d09c3e50",
+      "text": "Experimental Design Skill — condensed source-guided protocol. Identify the experimental unit and independent replication level before planning comparisons. Establish control conditions, primary response metrics and confounders before observing results. Use randomization, blocking and stratification where applicable; distinguish observational correlations from causal manipulations. Prevent pseudoreplication and leakage when samples share trajectories, subjects or environments. Design matched/within-unit comparisons to isolate variables when possible. Use independent test units, report held-out generalization separately and document limitations. Specify statistical power and sample size assumptions prior to data collection; distinguish effect size from sample count."
+    },
+    "scientific-visualization": {
+      "id": "kdense-scientific-visualization",
+      "upstream": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-visualization/SKILL.md",
+      "sha": "44ea38c24fb5015535254bfd9b5ae9a856195408",
+      "text": "Scientific Visualization Skill — condensed source-guided protocol. Preserve original raw data and all transforms, missingness and aggregation. Encode values honestly: lengths/areas such as bars normally include a zero baseline. Mark uncertainty accurately and specify the unit of replication and sample size; never fabricate error bars or confidence intervals. Do not hide negative results, change values, crop contradictory observations or mislabel provenance. Disclose author-reported versus independent results. Use labels, direct comparisons and color-redundant encodings. Inspect the final export; vector artwork does not compensate for distorted evidence. State data source and whether averages are arithmetic, weighted or rounded."
+    }
+  },
+  "tasks": [
+    {
+      "id": "lit-evidence-01",
+      "domain": "literature",
+      "title": "证据与出版状态的正确归因",
+      "context": "以下是冻结的研究记录卡，不代表实时网络核查。S1：论文预印本包含定量结果，但未提供期刊录用证明。S2：开源仓库 README 含 inference 命令，但未列出训练数据下载方式。S3：研究文章附有公开基准数据链接，不过该链接没有独立复现实验报告。S4：研究手稿的作者列表出现在原始 PDF 中。请只依赖这四张卡片，不搜索网络。",
+      "question": "哪些陈述超出了已提供卡片能支持的事实？返回相应选项 ID。",
+      "options": {
+        "A": "S1 可以称为已经正式发表的期刊论文。",
+        "B": "S2 至少公开了推理命令。",
+        "C": "S2 已经完整开放训练数据与训练代码。",
+        "D": "S3 有数据来源链接，但还不能据此称为独立复现。",
+        "E": "S3 的实验结果已被第三方重复验证。",
+        "F": "S4 提供了手稿的作者信息。"
+      },
+      "kind": "unsupported_claims"
+    },
+    {
+      "id": "lit-screening-02",
+      "domain": "literature",
+      "title": "定义纳排标准与重复研究去重",
+      "context": "拟写 2024–2026 年机器人真实操作视频研究综述，纳入条件同时要求：(1)2024–2026 年 (2)研究报告真实机器人操作结果 (3)使用视频数据或视频模型 (4)原始研究，不是综述。同一研究预印本与会议版只计一次。以下均为编造的用于测试的研究条目。R1 2025 真实机器人视频数据实验，原始文章；R2 2025 R1 的会议扩展版（同一研究，重复）；R3 2026 视频模型在纯模拟器中评估；R4 2024 机器人真实操作结果，使用视频数据，原始研究；R5 2025 机器人视频方法系统综述；R6 2023 真实机器人视频操作；R7 2026 真实机器人视频模型并报告任务成功率，原始研究。",
+      "question": "如果优先保留最早列出的 R1 版本并严格去重，应纳入哪些记录 ID？",
+      "options": {
+        "R1": "2025 的真实机器人视频原始实验",
+        "R2": "与 R1 同一研究的会议版本",
+        "R3": "2026 纯模拟视频研究",
+        "R4": "2024 真实操作视频原始研究",
+        "R5": "2025 系统综述",
+        "R6": "2023 研究",
+        "R7": "2026 真实机器人视频原始研究"
+      },
+      "kind": "eligible_records"
+    },
+    {
+      "id": "exp-confound-01",
+      "domain": "experimental-design",
+      "title": "机器人数据频率与机器人身份混杂",
+      "context": "三套数据：Robot-A 仅有5Hz轨迹，Robot-B仅有10Hz，Robot-C仅有20Hz。研究目标是判断动作采样频率本身是否影响 VLA 行为，而不把机器人型号学成频率标签。团队计划以帧为训练单位，把所有帧随机切分，并在各数据集上分别计算成功率。给出以下候选改进措施。",
+      "question": "选择所有科学上必要且能够提高频率因果归因可信度的措施。",
+      "options": {
+        "A": "在同一机器人/任务中从原始高频轨迹构造多个频率条件，再做配对比较。",
+        "B": "把相邻帧完全随机分到训练集和测试集，提高样本量。",
+        "C": "按机器人、轨迹与任务分层报告结果，记录频率与型号的混杂。",
+        "D": "把动作帧数量直接当作相互独立的实验样本数量。",
+        "E": "固定真实时间范围、控制策略和任务预算，比较相同指标。",
+        "F": "仅对三套原始数据计算均值，即可独立归因于频率。",
+        "G": "增加机器人未见机型或未见任务测试，单独考察泛化。"
+      },
+      "kind": "design_recommendations"
+    },
+    {
+      "id": "exp-replication-02",
+      "domain": "experimental-design",
+      "title": "配对人类偏好评价的实验单位",
+      "context": "比较方法 X/Y 在机器人任务上生成的视频，计划采用二选一偏好测试。每段视频让5名评审打分；来自同一轨迹的所有视频高度相关。研究者打算把每个人的每次点击当独立试验、研究后再挑有利指标发表。请选择科学上推荐的操作。",
+      "question": "哪些操作应该纳入实验设计？",
+      "options": {
+        "A": "预先固定首要偏好指标与排除规则。",
+        "B": "将同一轨迹视频上的重复评价视为独立采样单位。",
+        "C": "对 X/Y 展示顺序进行随机化并尽可能盲化方法身份。",
+        "D": "保留轨迹、评审人 ID，以便做分组或相关性分析。",
+        "E": "测试完后只报告最显著的有利子集。",
+        "F": "估计样本量时考虑轨迹和评审人内相关性及目标效应。",
+        "G": "只要采集点击总数够多即可忽略每人评价次数不等。"
+      },
+      "kind": "design_recommendations"
+    },
+    {
+      "id": "viz-bar-01",
+      "domain": "scientific-visualization",
+      "title": "识别不诚实的数值图表编码",
+      "context": "论文图用柱状图展示两种方法成功率：80% 与 85%。作者将纵轴设为 79–86%，两根柱看起来相差极大；没有显示实际观测值 n、没有定义误差区间，也没有引用来源。请判断哪些修改是必要或适当的。",
+      "question": "选择所有正确的审稿/修图建议。",
+      "options": {
+        "A": "柱高编码时纵轴通常应该从 0 开始，并清晰标注 80% 和 85%。",
+        "B": "给两组都随便绘制相同长度的 95% CI，即可解释波动。",
+        "C": "标注成功率统计的任务/rollout 数与误差含义；没有原始结果时不凭空估计误差条。",
+        "D": "隐藏 80% 这一组以突出新方法。",
+        "E": "注明原始表格、研究来源和平均口径。",
+        "F": "单纯把图导出为 SVG 就可以解决误导性坐标轴。"
+      },
+      "kind": "visualization_audit"
+    },
+    {
+      "id": "viz-source-02",
+      "domain": "scientific-visualization",
+      "title": "机器人八任务成功率如何诚实展示",
+      "context": "公开 RoboRender 作者结果表包含 8 项不同任务，每方法每任务10次 rollout。三方法八任务等权平均分别为 10%、20%、71.25%；论文页面第三个方法圆整展示为 71%。没有提供原始 rollout 日志、方差估计和第三方独立复现。需绘制逐任务对比图与配套说明。",
+      "question": "哪些图形和文字处理是应该做的？",
+      "options": {
+        "A": "保留八项任务的逐任务值与三种方法标签，并写明每任务10次 rollout。",
+        "B": "将第三个方法 71.25% 的算术平均注明，说明网页显示的 71% 为圆整。",
+        "C": "根据 71.25% 这一均值直接添加一个假定的 95% CI。",
+        "D": "注明这是作者报告结果，不要写成本站独立复现实验。",
+        "E": "只展示 71% 一根柱，隐藏所有对照与任务差异。",
+        "F": "如展示柱状成功率，避免截断零点造成视觉夸大。",
+        "G": "将8×10视为 80 次互相独立的跨实验室采样，由此宣称结果有统计显著性。"
+      },
+      "kind": "visualization_audit"
+    }
+  ]
+}

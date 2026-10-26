@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "gold": [
+    {
+      "id": "lit-evidence-01",
+      "selected": [
+        "A",
+        "C",
+        "E"
+      ]
+    },
+    {
+      "id": "lit-screening-02",
+      "selected": [
+        "R1",
+        "R4",
+        "R7"
+      ]
+    },
+    {
+      "id": "exp-confound-01",
+      "selected": [
+        "A",
+        "C",
+        "E",
+        "G"
+      ]
+    },
+    {
+      "id": "exp-replication-02",
+      "selected": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ]
+    },
+    {
+      "id": "viz-bar-01",
+      "selected": [
+        "A",
+        "C",
+        "E"
+      ]
+    },
+    {
+      "id": "viz-source-02",
+      "selected": [
+        "A",
+        "B",
+        "D",
+        "F"
+      ]
+    }
+  ]
+}
