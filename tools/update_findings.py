@@ -284,7 +284,9 @@ def build(existing: dict | None = None) -> dict:
             entries, name, note = fetcher()
             if not entries:
                 raise ValueError("No valid source entries")
-            feeds[key] = {"source": name, "url": link, "fetched_at": now(),
+            source_link = ("https://github.com/search?q=topic%3Aagent-skills&type=repositories"
+                           if key == "skills" and name == "GitHub Search" else link)
+            feeds[key] = {"source": name, "url": source_link, "fetched_at": now(),
                           "status": "ok", "metric_note": note,
                           "items": entries[:MAX_RESULTS]}
             print(f"{key}: {len(entries)} verified-source items ({name})")
