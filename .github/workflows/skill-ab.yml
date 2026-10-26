@@ -42,6 +42,8 @@ jobs:
     timeout-minutes: 18
     env:
       AB_API_KEY: ${{ secrets.AB_API_KEY }}
+      AB_MODEL: ${{ inputs.model }}
+      AB_API_BASE: ${{ inputs.api_base }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -56,8 +58,8 @@ jobs:
       - name: Exactly 12 bounded inferences; no retries on quota/cost errors
         run: |
           python tools/run_skill_ab.py \
-            --model "${{ inputs.model }}" \
-            --api-base "${{ inputs.api_base }}" \
+            --model "$AB_MODEL" \
+            --api-base "$AB_API_BASE" \
             --max-calls 12 --max-tokens 550
       - name: Archive real model answers, usage, gold scores and failure evidence
         if: always()

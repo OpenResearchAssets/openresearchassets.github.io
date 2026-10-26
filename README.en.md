@@ -103,3 +103,7 @@ The curated catalog provides orthogonal filters for research domains, task topic
 ### Reproducible public Skill-guided trials
 
 Two [actual research asset analysis tasks](experiments/skill-trials/README.md) now run in GitHub Actions on the canonical 73-record catalog. The real pinned OpenAI notebook scaffold runs, notebook cells execute in a fresh kernel, and the visual analysis exports SVG/PNG/CSV. Ten objective checks passed in the newest run, including a source-audited figure from author-reported RoboRender task results. These results measure scripted correctness and runtime, **not** native automatic Skill invocation, model tokens, or causally attributable performance gains.
+
+### Controlled Skill-context A/B research (not yet measured)
+
+A [frozen six-task, same-model paired protocol](experiments/skill-ab/README.md) now has machine-checkable gold labels and a bounded 12-call runner. Only the **free preflight** has completed; **no model A/B inference results exist yet**. Actual inference requires a private API key and an explicit manual GitHub Actions dispatch. Do not claim native agent invocation or any Skill uplift.

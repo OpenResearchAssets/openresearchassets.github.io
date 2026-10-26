@@ -77,3 +77,7 @@ OpenResearchAssets 是**面向人类与 AI 的科研全过程可复用资产库*
 ## Skill 真实运行证据边界
 
 只有留下程序、实测日志、输入源 SHA 与客观验收结果的任务，才可使用「公开试运行」措辞。必须区分 ① 上游文档阅读，② 根据 Skill 指南实施的本站脚本，③ 官方 Skill 辅助脚本实际运行，④ Agent Harness 自动装载/选择 Skill，⑤ 同任务与无 Skill 的受控 A/B。没有 ④、⑤ 的证据时禁止夸大为 AI 性能收益或已验证技能泛化。CI 时间不能充当模型推理延迟；Token 不可用时填写 `null`。参见 [实际试运行](experiments/skill-trials/README.md)。
+
+## A/B 实验与科研效果主张
+
+[配对 Skill A/B 实验](experiments/skill-ab/README.md) 的免费预检成功不等于模型推理成功。仅当 `ab-results.json` 中状态为 `completed` 且包含十二条合法调用记录及模型标识后，才可以报告真实 A/B 的 F1/Token/延迟；六题描述性预实验不能宣称统计显著。注入精简 Skill 指令与真实 Agent/Harness 安装、自动发现、执行第三方 Skills 是不同处理变量，不得混淆。外部 API Keys 仅放 GitHub Actions Secrets，禁止写入仓库与日志。
