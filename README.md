@@ -9,16 +9,18 @@
 
 OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉案例、优秀项目主页、可编辑原创素材、研究工具与可用的工作流。**中文为主、英文为辅**；允许人类按任务搜索，也提供无需付费 API 的结构化 AI 读取入口。
 
-## 两种收录层级：Community 与 Curated
+## 网站导航：精选 / 社区 / 投稿
 
 | 入口 | 内容与权限 | 点赞与反馈 | 数据来源 |
 |---|---|---|---|
 | [Community · 社区发现](community.html) | 任何 GitHub 用户均可投稿，不需要编辑通过即可公开展示 | GitHub Issue 的真实 👍 / 评论，支持最新、热门排序 | GitHub Issues API |
 | [Curated · 编辑精选](index.html#gallery) | 编辑核实审美、科学表达、复用价值与版权后正式入库 | 独立资产详情页使用 giscus / Discussions | 唯一 `catalog/index.json` |
 
+**一级入口仅三个：** [精选 Curated](index.html) · [社区 Community](community.html) · [投稿 Contribute](contribute.html)。精选下面仅有 Gallery（含可编辑 SVG）与 Skills / Workflows 两类资产；质量自查、设计原则、AI 使用说明放在公共页脚，不单独占主导航。
+
 **Gallery / Skills 是资产类型，Community / Curated 是发布层级**，两者正交。热门点赞是发现信号而非精选资格；未审核投稿只展示元数据和原始链接，不自动转载第三方图片，也不伪装审核结果。详情：[社区与审核规则](docs/COMMUNITY.md)。
 
-## 两个核心入口
+## 精选库的两个核心资产类型
 
 | 产品支柱 | 你能直接得到什么 | 选品标准 |
 |---|---|---|
@@ -137,6 +139,8 @@ python3 tests/browser_offline_smoke.py
 |---|---|
 | \`catalog/index.json\` | 所有资产唯一数据源：中英说明、标签、复用建议及原始链接 |
 | \`index.html\` / \`asset.html\` | 任务检索与独立资产详情 |
+| `community.html` / `contribute.html` | 社区发现、真实 GitHub 投稿与审核边界 |
+| `js/navigation.js` / `css/site.css` | 所有主页面共用的三入口导航与次级页脚；不得逐页复制旧菜单 |
 | \`js/catalog.js\` / \`css/catalog.css\` | 资产 UI、原创建模缩略图与筛选逻辑 |
 | \`for-agents/\` / \`llms.txt\` | 面向 AI 的公开自助使用入口 |
 | \`assets/templates/\`、\`assets/previews/\` | 本站原创可编辑 SVG 与预览 |
