@@ -51,7 +51,7 @@ with sync_playwright() as pw:
         page.locator('.ora-resource-card').first.wait_for()
         assert page.locator('html').get_attribute('lang')=='zh-CN'
         assert page.locator('h1').inner_text().startswith('收藏真正出色的图')
-        assert [a.get_attribute('href') for a in page.locator('#site-nav a').all()]==['index.html','community.html','contribute.html']
+        assert [a.get_attribute('href') for a in page.locator('#site-nav a').all()]==['index.html','community.html','findings.html','contribute.html']
         assert page.locator('.nav-cta').first.get_attribute('href')=='contribute.html'
         assert page.locator('.ora-footer-links a').count()==5
         assert page.locator('.ora-main-path').count()==2
@@ -289,7 +289,7 @@ with sync_playwright() as pw:
         for name in ('principles.html','contribute.html','for-agents/index.html'):
             page.set_content(page_html(name),wait_until='load')
             assert page.locator('html').get_attribute('lang')=='zh-CN'
-            assert page.locator('#site-nav a').count()==3
+            assert page.locator('#site-nav a').count()==4
             assert page.locator('.ora-footer-links a').count()==5
             assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),name
             if name=='contribute.html':
@@ -340,6 +340,41 @@ with sync_playwright() as pw:
         assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('community-en',label)
         if label in ('desktop','mobile'):
             page.screenshot(path=str(ROOT/'tests'/f'_local_community_{label}.png'),full_page=True)
+        page.locator('.lang-toggle').click()
+        assert page.locator('html').get_attribute('lang')=='zh-CN'
+        # Findings: four distinct real-source concepts, mocked ONLY in offline tests.
+        example_feeds={}
+        for key,name,metric in [('papers','Hugging Face Papers','upvotes'),('github','GitHub Trending','stars gained this week'),
+                                ('skills','GitHub Search','total stars'),('workflows','GitHub Search','total stars')]:
+            example_feeds[key]={
+                'source':name,'url':'https://example.org/source','status':'ok',
+                'fetched_at':'2026-10-26T01:00:00Z','metric_note':'Synthetic CI data only',
+                'items':[{'title':'CI fixture '+key,'url':'https://example.org/'+key,
+                          'subtitle':'Safe externally attributed source','metric':metric,'value':10,'author':'Example'}]}
+        example_snapshot={'schema_version':'1','generated_at':'2026-10-26T02:00:00Z','feeds':example_feeds}
+        page.route('https://ora.local/data/findings.json',lambda route:
+                   route.fulfill(status=200,body=json.dumps(example_snapshot),content_type='application/json'))
+        page.set_content(page_html('findings.html'),wait_until='load')
+        page.locator('.findings-feed').first.wait_for()
+        assert page.locator('#site-nav a').count()==4
+        assert page.locator('#site-nav a[href="findings.html"]').get_attribute('aria-current')=='page'
+        assert page.locator('.findings-feed').count()==4
+        assert page.locator('.findings-item').count()==4
+        assert 'CI fixture papers' in page.locator('.findings-feed').first.inner_text()
+        page.locator('[data-feed="skills"]').click()
+        assert page.locator('.findings-feed').count()==1
+        assert 'CI fixture skills' in page.locator('.findings-feed').first.inner_text()
+        page.locator('[data-feed="all"]').click()
+        page.locator('#findings-search').fill('workflows')
+        assert page.locator('.findings-item').count()==1
+        page.locator('#findings-search').fill('')
+        page.locator('.lang-toggle').click()
+        assert page.locator('html').get_attribute('lang')=='en'
+        assert 'Trend desk' in page.locator('h2').inner_text()
+        assert page.locator('html').get_attribute('lang')=='en'
+        assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('findings-en',label)
+        if label in ('desktop','mobile'):
+            page.screenshot(path=str(ROOT/'tests'/f'_local_findings_{label}.png'),full_page=True)
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='zh-CN'
         assert not errors,(label,errors)
