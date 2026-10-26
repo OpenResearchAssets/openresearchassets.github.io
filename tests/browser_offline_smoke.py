@@ -51,6 +51,9 @@ with sync_playwright() as pw:
         page.locator('.ora-resource-card').first.wait_for()
         assert page.locator('html').get_attribute('lang')=='zh-CN'
         assert page.locator('h1').inner_text().startswith('收藏真正出色的图')
+        assert [a.get_attribute('href') for a in page.locator('#site-nav a').all()]==['index.html','community.html','contribute.html']
+        assert page.locator('.nav-cta').first.get_attribute('href')=='contribute.html'
+        assert page.locator('.ora-footer-links a').count()==5
         assert page.locator('.ora-main-path').count()==2
         assert page.locator('.ora-main-path').nth(0).get_attribute('href')=='#gallery'
         assert page.locator('.ora-main-path').nth(1).get_attribute('href')=='#skills'
@@ -114,6 +117,7 @@ with sync_playwright() as pw:
             assert not page.locator('#site-nav').is_visible()
         assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('home',label,page.evaluate('document.documentElement.scrollWidth'))
         assert page.locator('.assets-grid .asset-card').count()==5
+        assert page.locator('#assets').bounding_box()['y']<page.locator('#skills').bounding_box()['y']
         assert page.locator('.assets-grid .asset-card img').evaluate_all('(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
         assert page.locator('.showcase img').evaluate_all('(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
         page.evaluate('window.scrollTo(0,0)')
@@ -285,16 +289,18 @@ with sync_playwright() as pw:
         for name in ('principles.html','contribute.html','for-agents/index.html'):
             page.set_content(page_html(name),wait_until='load')
             assert page.locator('html').get_attribute('lang')=='zh-CN'
+            assert page.locator('#site-nav a').count()==3
+            assert page.locator('.ora-footer-links a').count()==5
             assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),name
             if name=='contribute.html':
-                assert page.locator('.ora-start-path').count()==3
-                assert 'catalog-correction.md' in page.locator('.ora-start-path').nth(1).get_attribute('href')
-                assert page.locator('#methods').count()==1
-                assert '分享科研方法' in page.locator('#methods h2').inner_text()
+                assert page.locator('.ora-submit-cta').count()==1
+                assert 'submit-asset.yml' in page.locator('.ora-submit-cta').get_attribute('href')
+                assert page.locator('.ora-submit-guidelines-grid>div').count()==3
+                assert 'catalog-correction.md' in page.locator('.ora-submit-secondary').inner_html()
                 page.locator('.lang-toggle').click()
                 assert page.locator('html').get_attribute('lang')=='en'
-                assert 'Share a method' in page.locator('#methods h2').inner_text()
-                assert 'Suggest an asset' in page.locator('.ora-start').inner_text()
+                assert 'Share something worth discovering' in page.locator('h1').inner_text()
+                assert 'Original source' in page.locator('.ora-submit-guidelines-grid').inner_text()
                 page.locator('.lang-toggle').click()
                 assert page.locator('html').get_attribute('lang')=='zh-CN'
         # Public Community is separate from curated Gallery. Mock GitHub API without
@@ -319,7 +325,7 @@ with sync_playwright() as pw:
         page.set_content(page_html('community.html'),wait_until='load')
         page.locator('.ora-community-entry').first.wait_for()
         assert page.locator('.ora-community-entry').count()==2
-        assert page.locator('#site-nav a[href="index.html#gallery"]').count()==1
+        assert page.locator('#site-nav a[href="index.html"]').count()==1
         assert '👍 3' in page.locator('.ora-community-grid').inner_text()
         assert '👍 21' in page.locator('.ora-community-grid').inner_text()
         page.locator('#community-sort').select_option('popular')
