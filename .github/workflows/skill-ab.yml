@@ -1,0 +1,69 @@
+name: Controlled Skill Context A/B — 6 paired research tasks
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/skill-ab/tasks.json'
+      - 'experiments/skill-ab/gold.json'
+      - 'tests/check_skill_ab.py'
+      - 'tools/run_skill_ab.py'
+      - '.github/workflows/skill-ab.yml'
+  workflow_dispatch:
+    inputs:
+      model:
+        description: 'Exact model ID supported by your provider'
+        type: string
+        required: true
+        default: 'gpt-4.1-mini'
+      api_base:
+        description: 'Trusted HTTPS OpenAI-compatible API base URL'
+        type: string
+        required: true
+        default: 'https://api.openai.com/v1'
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Freeze task labels and verify paired protocol with zero model calls
+        run: |
+          python tools/run_skill_ab.py --dry-run
+          python tests/check_skill_ab.py
+  inference:
+    if: github.event_name == 'workflow_dispatch'
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    env:
+      AB_API_KEY: ${{ secrets.AB_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Require externally authorized model credential
+        run: |
+          if [ -z "$AB_API_KEY" ]; then
+            echo 'AB_NOT_RUN: configure Actions secret AB_API_KEY to run real A/B inference.'
+            exit 2
+          fi
+      - name: Exactly 12 bounded inferences; no retries on quota/cost errors
+        run: |
+          python tools/run_skill_ab.py \
+            --model "${{ inputs.model }}" \
+            --api-base "${{ inputs.api_base }}" \
+            --max-calls 12 --max-tokens 550
+      - name: Archive real model answers, usage, gold scores and failure evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: skill-ab-evidence
+          path: experiments/skill-ab/_output/
+          retention-days: 60
+          if-no-files-found: warn
