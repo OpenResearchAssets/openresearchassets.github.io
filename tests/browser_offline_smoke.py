@@ -360,6 +360,10 @@ with sync_playwright() as pw:
         page.locator('.findings-feed').first.wait_for()
         assert page.locator('#site-nav a').count()==4
         assert page.locator('#site-nav a[href="findings.html"]').get_attribute('aria-current')=='page'
+        if label=='mobile':
+            filter_boxes=[node.bounding_box() for node in page.locator('.findings-filter').all()]
+            assert all(box and box['x']>=0 and box['x']+box['width']<=w+2 for box in filter_boxes),(
+                'mobile discovery filters should all be visible without horizontal swiping',filter_boxes)
         assert page.locator('.findings-feed').count()==4
         assert page.locator('.findings-item').count()==12,('overview must display at most three per category',label)
         assert page.locator('.findings-feed-more').count()==4
