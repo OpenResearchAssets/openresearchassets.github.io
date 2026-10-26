@@ -1,11 +1,11 @@
 {
   "schema_version": "1",
-  "generated_at": "2026-10-26T04:07:32Z",
+  "generated_at": "2026-10-26T04:11:00Z",
   "feeds": {
     "papers": {
       "source": "Hugging Face Papers",
       "url": "https://huggingface.co/papers/trending",
-      "fetched_at": "2026-10-26T04:07:27Z",
+      "fetched_at": "2026-10-26T04:10:52Z",
       "status": "ok",
       "metric_note": "HF 社区投票 · 官方 trending 排序",
       "items": [
@@ -140,7 +140,7 @@
     "github": {
       "source": "GitHub Trending",
       "url": "https://github.com/trending?since=weekly",
-      "fetched_at": "2026-10-26T04:07:28Z",
+      "fetched_at": "2026-10-26T04:10:54Z",
       "status": "ok",
       "metric_note": "官方 weekly Trending 排名；可见时显示本周新增 Stars",
       "items": [
@@ -261,7 +261,7 @@
     "skills": {
       "source": "GitHub Search",
       "url": "https://github.com/search?q=topic%3Aagent-skills&type=repositories",
-      "fetched_at": "2026-10-26T04:07:30Z",
+      "fetched_at": "2026-10-26T04:10:56Z",
       "status": "ok",
       "metric_note": "近 60 天创建的 Skills 仓库，按累计 Stars 排序（非增长榜）",
       "items": [
@@ -271,7 +271,7 @@
           "subtitle": "A toolbox of film styles made in code for Claude Code: 59 ready to use, and your own. Each style is a style prompt plus a demo film made entirely in code by Claude Opus 5.5, with no video model. By Lemomo. · 一套用代码做片的风格工具箱：59 种现成风格，也能做出你自己的",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "JavaScript",
-          "value": 7544,
+          "value": 7546,
           "metric": "total stars"
         },
         {
@@ -280,7 +280,7 @@
           "subtitle": "Free SEO MCP server + open-source SEO and GEO skills for Claude: keyword research, rank tracking, audits, backlinks, AI visibility on your real GSC/GA4/ads data. claude mcp add ryze --transport http https://connector.get-ryze.ai/mcp",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Shell",
-          "value": 7255,
+          "value": 7256,
           "metric": "total stars"
         },
         {
@@ -379,7 +379,7 @@
           "subtitle": "UI design skill for Claude Code, Codex and other AI agents: explore distinct directions, compare them side by side, refine against real screenshots. 给 AI Agent 用的 UI 设计 Skill。",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 2250,
+          "value": 2251,
           "metric": "total stars"
         },
         {
@@ -396,28 +396,10 @@
     "workflows": {
       "source": "GitHub Search",
       "url": "https://github.com/search?q=research+workflow&type=repositories",
-      "fetched_at": "2026-10-26T04:07:32Z",
+      "fetched_at": "2026-10-26T04:11:00Z",
       "status": "ok",
       "metric_note": "近 60 天创建的工作流项目，按累计 Stars 排序（非 Trending 官方榜）",
       "items": [
-        {
-          "title": "Git-Agni/prod-FARM-IOS-Core",
-          "url": "https://github.com/Git-Agni/prod-FARM-IOS-Core",
-          "subtitle": "A farm of real iPhones, run from your Mac. Open-source iOS device automation with live control, a Postgres-backed scheduler, and TikTok workflows. Self-hosted, Apache-2.0.",
-          "badge": "GitHub · 新创建工作流",
-          "author": "TypeScript",
-          "value": 1776,
-          "metric": "total stars"
-        },
-        {
-          "title": "Agenta-AI/awesome-ai-agent-platforms",
-          "url": "https://github.com/Agenta-AI/awesome-ai-agent-platforms",
-          "subtitle": "A curated list of open-source AI agent platforms: AI coworkers and teammates, agent builders and frameworks, workflow automation platforms, browser agents, and coding agents, with licenses.",
-          "badge": "GitHub · 新创建工作流",
-          "author": "Astro",
-          "value": 669,
-          "metric": "total stars"
-        },
         {
           "title": "ceyyy427/finathink",
           "url": "https://github.com/ceyyy427/finathink",
@@ -437,12 +419,21 @@
           "metric": "total stars"
         },
         {
-          "title": "kevinbadi/Kevs-IOS-Agents",
-          "url": "https://github.com/kevinbadi/Kevs-IOS-Agents",
-          "subtitle": "A farm of real iPhones, run from your Mac. Open-source iOS device automation with live control, a Postgres-backed scheduler, and TikTok workflows. Self-hosted, Apache-2.0.",
+          "title": "aaravshah1311/Agent-2",
+          "url": "https://github.com/aaravshah1311/Agent-2",
+          "subtitle": "An autonomous AI agentic harness built to code anything, automate terminals, perform cybersecurity tasks, and execute complex real-world workflows with minimal human intervention. From writing and debugging code to analyzing systems, managing files, running commands, and orchestrating tools, Agent-2 turns simple prompts into autonomous execution.",
           "badge": "GitHub · 新创建工作流",
-          "author": "TypeScript",
-          "value": 112,
+          "author": "Python",
+          "value": 136,
+          "metric": "total stars"
+        },
+        {
+          "title": "jtaroreh/agystack",
+          "url": "https://github.com/jtaroreh/agystack",
+          "subtitle": "Closed-loop engineering workflow and agentic swarm orchestration plugin for Google Antigravity",
+          "badge": "GitHub · 新创建工作流",
+          "author": "Python",
+          "value": 124,
           "metric": "total stars"
         },
         {
@@ -455,11 +446,11 @@
           "metric": "total stars"
         },
         {
-          "title": "ScriptedAlchemy/pstack-codex",
-          "url": "https://github.com/ScriptedAlchemy/pstack-codex",
-          "subtitle": "Codex-native port of Lauren Tan's pstack: 47 skills, 23 playbooks, agent personas, multi-agent workflows, and Benny automation adapters. Includes a Codex marketplace and installer.",
+          "title": "Superone77/TraceVista",
+          "url": "https://github.com/Superone77/TraceVista",
+          "subtitle": "Understand Your Agents. Turn agent logs into interactive maps and stories. Explore decisions, replay the work, and get answers linked to the original evidence. For coding, research, and creative workflows.",
           "badge": "GitHub · 新创建工作流",
-          "author": "JavaScript",
+          "author": "TypeScript",
           "value": 72,
           "metric": "total stars"
         },
@@ -473,30 +464,39 @@
           "metric": "total stars"
         },
         {
-          "title": "maurinruneacco/luau-diagrams-and-defects",
-          "url": "https://github.com/maurinruneacco/luau-diagrams-and-defects",
-          "subtitle": "Production Data Engineering Cloud Architecture Workflow Automation Portfolio 2026",
-          "badge": "GitHub · 新创建工作流",
-          "author": "HTML",
-          "value": 68,
-          "metric": "total stars"
-        },
-        {
-          "title": "gggamil/mazebreak-flowforge",
-          "url": "https://github.com/gggamil/mazebreak-flowforge",
-          "subtitle": "MazeBreak Trello Automation Power-Up: Ultimate Roblox Game Dev Workflow 2026",
-          "badge": "GitHub · 新创建工作流",
-          "author": "HTML",
-          "value": 68,
-          "metric": "total stars"
-        },
-        {
           "title": "gxCaesar/open-research-skills",
           "url": "https://github.com/gxCaesar/open-research-skills",
           "subtitle": "从选题到可复现发布：十个可独立安装的科研 agent skill —— 顶会/期刊论文、科研绘图、基金 proposal 撰写、方法迭代到 SOTA、冷审与代码数据发布。Ten installable agent skills for research: scientific figures, conference and journal manuscripts, research funding proposals, method development, cold review and artifact release.",
           "badge": "GitHub · 新创建工作流",
           "author": "Python",
           "value": 58,
+          "metric": "total stars"
+        },
+        {
+          "title": "vankhangfet/orca-sdlc-kit",
+          "url": "https://github.com/vankhangfet/orca-sdlc-kit",
+          "subtitle": "One Agent does the work. A team of agents gets it done. Not just SDLC — orchestrate any workflow inside Orca ADE, with configurable steps, agents, and harnesses.",
+          "badge": "GitHub · 新创建工作流",
+          "author": "JavaScript",
+          "value": 52,
+          "metric": "total stars"
+        },
+        {
+          "title": "AliSharjeell/OpenBUA",
+          "url": "https://github.com/AliSharjeell/OpenBUA",
+          "subtitle": "Open-source autonomous AI browser agent Chrome extension running locally in your authenticated browser. Researches web data, fills forms, automates workflows, and streams live results using active logins.",
+          "badge": "GitHub · 新创建工作流",
+          "author": "TypeScript",
+          "value": 50,
+          "metric": "total stars"
+        },
+        {
+          "title": "paulklayvc/skills",
+          "url": "https://github.com/paulklayvc/skills",
+          "subtitle": "Agent skills from a VC. The workflows I actually use to research companies, find opportunities, and turn conversations into work.",
+          "badge": "GitHub · 新创建工作流",
+          "author": "Python",
+          "value": 49,
           "metric": "total stars"
         },
         {
@@ -509,21 +509,21 @@
           "metric": "total stars"
         },
         {
+          "title": "trickytricklol/agentflow-platform",
+          "url": "https://github.com/trickytricklol/agentflow-platform",
+          "subtitle": "Enterprise multi-agent self-evolving workflow orchestration platform MVP",
+          "badge": "GitHub · 新创建工作流",
+          "author": "Python",
+          "value": 42,
+          "metric": "total stars"
+        },
+        {
           "title": "Ariakage/live2d-agent-kit",
           "url": "https://github.com/Ariakage/live2d-agent-kit",
           "subtitle": "Live2D creation workflow for Codex and AI agents, with PSD/PNG rigging, anime upscaling, Core/WebGL validation, and an example model for VTube Studio.",
           "badge": "GitHub · 新创建工作流",
           "author": "JavaScript",
           "value": 39,
-          "metric": "total stars"
-        },
-        {
-          "title": "elenahao66/Awesome-billing-automation",
-          "url": "https://github.com/elenahao66/Awesome-billing-automation",
-          "subtitle": "A curated list of awesome automated billing systems, invoicing tools, and payment workflow hacks for freelancers, developers, and SaaS creators.",
-          "badge": "GitHub · 新创建工作流",
-          "author": "",
-          "value": 34,
           "metric": "total stars"
         }
       ]
