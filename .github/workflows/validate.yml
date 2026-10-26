@@ -47,7 +47,7 @@ jobs:
           from PIL import Image
           from io import BytesIO
           import base64
-          for name in ["home", "findings", "detail", "examples", "sample_site", "real_case"]:
+          for name in ["home", "findings", "findings_overview", "findings_focused", "detail", "examples", "sample_site", "real_case"]:
               image = Image.open("tests/_local_" + name + "_desktop.png").convert("RGB")
               image = image.crop((0, 0, image.width, min(image.height, 2700)))
               if image.width > 850:
