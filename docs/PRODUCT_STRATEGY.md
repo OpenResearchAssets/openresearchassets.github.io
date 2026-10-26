@@ -4,15 +4,18 @@ OpenResearchAssets 是**科研全过程可发现、可理解、可复用的资�
 
 ## 网站信息架构（当前权威规则）
 
-用户面向的一级入口只有 **精选 Curated / 社区 Community / 投稿 Contribute**，不要再把 Gallery、可编辑 SVG、Skills、质量自查、设计原则、For AI 当作平级产品页面。
+用户面向的三个**内容入口**是 **精选 Curated / 社区 Community / 发现 Findings**；**投稿 Contribute** 是独立行动按钮，不是平级的第四类内容库。不要把 Gallery、可编辑 SVG、Skills、质量自查、设计原则、For AI 当作同层级产品页面。
 
 | 一级入口 | 内容 | 资产存储 / 操作 |
 |---|---|---|
 | 精选（首页 `index.html`） | Gallery（优秀论文图、项目主页、可编辑 SVG）与 Skills / Workflows 两类正式资产；页面展示仅服务这两条主线 | `catalog/index.json`，人工审核；资产详情 `asset.html?id=...` |
 | 社区（`community.html`） | 所有人发现与讨论未精选投稿，按最新、点赞与类型筛选；不将点赞数当作精选质量 | GitHub Issue Form + Issues API；不维护第二套资产目录 |
+| 发现（`findings.html`） | 自动发现 Hugging Face 论文趋势、GitHub Trending、热门 Skills 与近期 Workflows；独立来源、实时性、趋势口径透明 | `tools/update_findings.py` 定时生成 `data/findings.json`，不改变人工精选或社区投稿数据 |
 | 投稿（`contribute.html`） | 唯一醒目的投稿入口；三项必要说明（原作者/来源、用途、版权） | GitHub Issue Form，无须仓库权限 |
 
 辅助能力 `quality.html`、`principles.html`、`for-agents/` 与版权政策继续保留，但是从**公共页脚**进入，不与三入口竞争。历史 `examples/` 等教学材料保留旧链接，默认不重新推广成主产品。
+
+Findings **不等于编辑背书**，不会自动写入精选库，不自动伪造用户投稿。抓取失败保留旧快照时间或明确不可用。数据与来源定义参见 [FINDINGS.md](FINDINGS.md)。三类入口持续保持中文优先、英文切换。
 
 站点公共导航/公共页脚的**唯一代码实现**是 `js/navigation.js`（响应式配套 `css/site.css`），所有页面只声明带 `data-page` 的空 `#site-nav` 挂载点；语言切换按统一状态更新。禁止复制页面独立导航，也不增加多个互相矛盾的 IA 文档。 `index.html` 的可编辑 SVG 保留为 Gallery 子分类，放在 Skills 之前；Community 的入口说明尽量简短，让用户先看到实际投稿。维护已设计好的真图及 39 条精选档案，不为收敛导航而重新绘图。
 
