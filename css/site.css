@@ -58,3 +58,12 @@
 .ora-start-path:focus-visible{outline:2px solid #2c5db2;outline-offset:3px;border-radius:5px}
 .ora-start--contribute{margin-top:3px;margin-bottom:38px}
 @media(max-width:700px){.ora-start{padding-top:17px;padding-bottom:14px;margin-bottom:27px}.ora-start-heading{display:block;margin-bottom:12px}.ora-start-heading h2{margin-top:5px;font-size:17px}.ora-start-grid{grid-template-columns:1fr}.ora-start-path,.ora-start-path:first-child{padding:12px 2px 14px;border-left:0;border-top:1px solid #e5e9f0;gap:5px}.ora-start-desc{font-size:13px}.ora-start-link{margin-top:0}}
+
+/* Shared three-destination site shell. nav/footer rendered from js/navigation.js. */
+.nav-links a[aria-current="page"],.nav-cta[aria-current="page"]{color:#1d354c;font-weight:760}
+.footer-inner{display:grid;grid-template-columns:1fr auto;align-items:center;gap:15px 28px}
+.ora-footer-motto{font-size:12px;color:#7d8b97;text-align:right}
+.ora-footer-links{grid-column:1/-1;display:flex;align-items:center;flex-wrap:wrap;gap:9px 22px;border-top:1px solid #e0e7e9;padding-top:18px;margin-top:4px}
+.ora-footer-links a{font-size:11px;color:#697c89;text-decoration:none}
+.ora-footer-links a:hover{text-decoration:underline;color:#274967}
+@media(max-width:720px){.footer-inner{grid-template-columns:1fr;gap:13px}.ora-footer-motto{text-align:left}.ora-footer-links{gap:12px 19px}}
