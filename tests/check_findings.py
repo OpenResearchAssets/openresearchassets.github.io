@@ -68,9 +68,9 @@ class FindingsCollectorTests(unittest.TestCase):
         self.assertEqual(saved['items'],old['items'])
 
     def test_readme_extraction_is_sourced_and_clean(self):
-        readme = "# Repository Overview\\n\\nThis research tool collects genuine papers and describes them with source citations.\\n\\n" \
-                 "It supports reusable research workflows and has public experiment notes.\\n\\n" \
-                 "```bash\\nnever run arbitrary commands\\n```"
+        readme = "# Repository Overview\n\nThis research tool collects genuine papers and describes them with source citations.\n\n" \
+                 "It supports reusable research workflows and has public experiment notes.\n\n" \
+                 "```bash\nnever run arbitrary commands\n```"
         text = enrichment.clean_text(readme)
         self.assertIn("genuine papers", text)
         self.assertNotIn("never run arbitrary commands", text)
