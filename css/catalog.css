@@ -239,12 +239,28 @@
 .ora-provenance .ora-contributor{display:inline-flex;align-items:center;gap:6px;vertical-align:middle}
 .ora-provenance .ora-contributor img{width:20px;height:20px;border-radius:50%;object-fit:cover;border:1px solid #e1e8ef}
 
-/* Curated is an editorial collection; community contributions have a separate entry. */
-.ora-cross-community{display:flex;align-items:center;gap:18px;border-top:1px solid #e0e7ef;border-bottom:1px solid #e0e7ef;padding-top:17px;padding-bottom:17px;margin-top:26px;margin-bottom:1px}
-.ora-cross-community>span{font-size:10px;letter-spacing:.11em;color:#6983a1;font-weight:750;white-space:nowrap}
-.ora-cross-community p{font-size:12px;line-height:1.6;color:#768597;flex:1;margin:0}
-.ora-cross-community a{font-size:12px;font-weight:720;color:#315e88;white-space:nowrap}
-.ora-cross-community a:hover{text-decoration:underline}
-.ora-contribution-community-note{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px;color:#6c8399;font-size:13px}
-.ora-contribution-community-note a{font-size:12px;font-weight:700;color:#2d608c}
-@media(max-width:720px){.ora-cross-community{align-items:flex-start;flex-direction:column;gap:8px}.ora-contribution-community-note{align-items:flex-start;flex-direction:column;gap:8px}}
+
+
+/* Curated page: quiet entry to community after the two catalog families. */
+.ora-curated-community-note{display:flex;justify-content:space-between;gap:24px;align-items:center;border-top:1px solid #e1e8f0;padding-top:26px;padding-bottom:58px;font-size:12px;color:#728395;line-height:1.7}
+.ora-curated-community-note a{font-weight:720;color:#315e88;white-space:nowrap}
+.ora-curated-community-note a:hover{text-decoration:underline}
+/* Contribute: one public submission action and concise editorial rules. */
+.ora-submit-intro{padding-top:78px;padding-bottom:28px}
+.ora-submit-intro h1{max-width:920px;font-size:clamp(35px,5.3vw,66px);letter-spacing:-.055em;line-height:1.14;color:#24374a;margin:13px 0 20px}
+.ora-submit-intro>p:last-child{max-width:790px;font-size:15px;color:#677c8d;line-height:1.9;margin:0}
+.ora-community-submit{margin-top:16px;margin-bottom:44px;display:block}
+.ora-community-submit>div{max-width:770px}
+.ora-submit-guidelines{padding-top:10px;padding-bottom:62px}
+.ora-submit-guidelines>h2{font-size:clamp(23px,3vw,33px);color:#2a4055;letter-spacing:-.04em;margin:9px 0 25px}
+.ora-submit-guidelines-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+.ora-submit-guidelines-grid>div{border-top:1px solid #dce6ed;padding-top:17px}
+.ora-submit-guidelines-grid>div>span{font-size:11px;letter-spacing:.1em;font-weight:750;color:#7390aa}
+.ora-submit-guidelines-grid h3{font-size:17px;color:#263d52;letter-spacing:-.03em;margin:12px 0 7px}
+.ora-submit-guidelines-grid p{font-size:12px;line-height:1.8;color:#748598;margin:0}
+.ora-submit-secondary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:27px;border-top:1px solid #dfe7ef;padding-top:27px;padding-bottom:85px}
+.ora-submit-secondary>div{display:flex;gap:8px 13px;align-items:center;flex-wrap:wrap;font-size:12px;color:#7b8a97}
+.ora-submit-secondary strong{color:#344b63}
+.ora-submit-secondary a{font-weight:720;color:#315f8b;white-space:nowrap}
+.ora-submit-secondary a:hover{text-decoration:underline}
+@media(max-width:720px){.ora-curated-community-note{align-items:flex-start;flex-direction:column;gap:6px;padding-bottom:36px}.ora-submit-intro{padding-top:43px;padding-bottom:22px}.ora-submit-guidelines-grid,.ora-submit-secondary{grid-template-columns:1fr;gap:18px}.ora-community-submit{margin-bottom:35px}.ora-submit-secondary{padding-bottom:55px}}
