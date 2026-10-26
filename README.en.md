@@ -11,6 +11,12 @@ Research assets should be more than bookmarks. They should tell us **when to use
 
 **Community vs. curated:** Pending submissions receive GitHub Issue reactions and comments without editorial approval; accepted asset detail pages use giscus / GitHub Discussions for independent reactions and comments. These counts are not automatically combined.
 
+## Website information architecture
+
+The only primary destinations are **[Curated](index.html)**, **[Community](community.html)** and **[Contribute](contribute.html)**. Within Curated, the two content types are **Research Gallery** (including editable SVG studies) and **Skills / Workflows**. Quality tools, principles, AI-readable resources and licensing are secondary links in a shared footer.
+
+The primary navigation/footer are authored once in `js/navigation.js` rather than duplicated across pages. Existing external artwork, citations and editorial data remain unchanged.
+
 ## Community and Curated are two different collection tiers
 
 - **[Community](community.html)** automatically displays open GitHub Issue Form submissions, attribution, dates, real 👍 reactions and discussion counts. Contributors do not wait for editorial approval before appearing. Search, type filtering, newest/likes/comments sorting are available. Unreviewed external media is never mirrored.
