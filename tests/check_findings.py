@@ -10,6 +10,8 @@ import unittest
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'tools'))
 import update_findings as collector
+import findings_enrichment as enrichment
+from unittest.mock import patch
 
 SOURCES=('papers','github','skills','workflows')
 
@@ -64,6 +66,37 @@ class FindingsCollectorTests(unittest.TestCase):
         self.assertEqual(saved['status'],'stale')
         self.assertEqual(saved['fetched_at'],old['fetched_at'])
         self.assertEqual(saved['items'],old['items'])
+
+    def test_readme_extraction_is_sourced_and_clean(self):
+        readme = "# Repository Overview\\n\\nThis research tool collects genuine papers and describes them with source citations.\\n\\n" \
+                 "It supports reusable research workflows and has public experiment notes.\\n\\n" \
+                 "```bash\\nnever run arbitrary commands\\n```"
+        text = enrichment.clean_text(readme)
+        self.assertIn("genuine papers", text)
+        self.assertNotIn("never run arbitrary commands", text)
+
+    def test_translation_caches_without_secret(self):
+        feeds={'papers':{'status':'ok','items':[{'url':'https://huggingface.co/papers/2610.12345',
+          'title':'Source paper title', 'detail':'A scientifically grounded source abstract sentence. ' * 5,
+          'subtitle':'A scientifically grounded source abstract sentence.'}]}}
+        old={'papers':{'items':[{'url':'https://huggingface.co/papers/2610.12345',
+          'title':'Source paper title', 'title_zh':'原始论文题名',
+          'detail':'A scientifically grounded source abstract sentence. ' * 5,
+          'detail_zh':'一段有真实来源的中文论文摘要。'}]}}
+        with patch.dict('os.environ',{'GOOGLE_TRANSLATE_API_KEY':''}):
+            state,count=enrichment.add_translations(feeds,old,key='')
+        self.assertEqual(state,'cached')
+        self.assertGreaterEqual(count,2)
+        self.assertEqual(feeds['papers']['items'][0]['title_zh'],'原始论文题名')
+        self.assertTrue(feeds['papers']['items'][0]['subtitle_zh'])
+
+    def test_missing_translate_key_never_creates_fake_zh(self):
+        feeds={'skills':{'status':'ok','items':[{'url':'https://github.com/a/b',
+          'subtitle':'A public skill without translated source information.'}]}}
+        with patch.dict('os.environ',{'GOOGLE_TRANSLATE_API_KEY':''}):
+            state,n=enrichment.add_translations(feeds,{},key='')
+        self.assertEqual((state,n),('not_configured',0))
+        self.assertNotIn('subtitle_zh',feeds['skills']['items'][0])
 
     def test_only_safe_sources(self):
         self.assertFalse(collector.valid_url('javascript:alert(1)'))
