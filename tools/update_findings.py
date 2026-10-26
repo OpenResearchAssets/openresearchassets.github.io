@@ -27,7 +27,7 @@ HF_SOURCE = "https://huggingface.co/papers/trending"
 SKILL_SOURCE = "https://skills.sh/trending"
 WORKFLOW_SOURCE = "https://github.com/search?q=research+workflow&type=repositories"
 MAX_RESULTS = 14
-MAX_PAPERS = 40
+MAX_PAPERS = 100
 MAX_LENGTH = 780
 
 
