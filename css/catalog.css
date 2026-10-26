@@ -230,3 +230,8 @@
 .ora-submit-cta:hover{background:#315a84}
 .ora-community-submit .ora-submit-footnote{font-size:11px!important;color:#84909e!important;margin:12px 0 0}
 @media(max-width:720px){.ora-gallery-contribute{align-items:flex-start;flex-direction:column;gap:7px}.ora-community-submit{padding:24px 22px}}
+
+.ora-asset-community{margin:40px auto 74px;padding:26px 0;border-top:1px solid #e3e9ef;max-width:980px}
+.ora-asset-community[hidden]{display:none}
+.ora-asset-community h2{font-size:23px;margin:0 0 8px;letter-spacing:-.03em;color:#24394e}
+.ora-asset-community>p{font-size:12px;color:#7b8795;margin-bottom:24px}
