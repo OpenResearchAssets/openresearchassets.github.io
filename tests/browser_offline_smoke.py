@@ -349,8 +349,10 @@ with sync_playwright() as pw:
             example_feeds[key]={
                 'source':name,'url':'https://example.org/source','status':'ok',
                 'fetched_at':'2026-10-26T01:00:00Z','metric_note':'Synthetic CI data only',
-                'items':[{'title':'CI fixture '+key,'url':'https://example.org/'+key,
-                          'subtitle':'Safe externally attributed source','metric':metric,'value':10,'author':'Example'}]}
+                'items':[{'title':'CI fixture '+key+' '+str(i),'url':'https://example.org/'+key+'/'+str(i),
+                          'subtitle':'Sourced project description for visual regression',
+                          'metric':metric,'value':15000+i,'author':'Example'}
+                         for i in range(1,7)]}
         example_snapshot={'schema_version':'1','generated_at':'2026-10-26T02:00:00Z','feeds':example_feeds}
         page.route('https://ora.local/data/findings.json',lambda route:
                    route.fulfill(status=200,body=json.dumps(example_snapshot),content_type='application/json'))
@@ -359,14 +361,36 @@ with sync_playwright() as pw:
         assert page.locator('#site-nav a').count()==4
         assert page.locator('#site-nav a[href="findings.html"]').get_attribute('aria-current')=='page'
         assert page.locator('.findings-feed').count()==4
-        assert page.locator('.findings-item').count()==4
+        assert page.locator('.findings-item').count()==12,('overview must display at most three per category',label)
+        assert page.locator('.findings-feed-more').count()==4
         assert 'CI fixture papers' in page.locator('.findings-feed').first.inner_text()
+        assert '15,001' in page.locator('.findings-item-metric').first.inner_text()
+        assert 'HF' in page.locator('.findings-item-metric').first.inner_text()
+        if label in ('desktop','mobile'):
+            page.screenshot(path=str(ROOT/'tests'/f'_local_findings_overview_{label}.png'),full_page=True)
+        # Click an overview affordance, not only a category tab: focused full-width reading.
+        page.locator('[data-open-feed="papers"]').first.click()
+        assert page.locator('.findings-feed').count()==1
+        assert page.locator('.findings-item').count()==6
+        assert page.locator('.findings-feed-focused').count()==1
+        assert 'feed=papers' in page.url
+        assert page.locator('.findings-focus-guide').count()==1
+        assert page.locator('.findings-item-rank').last.inner_text()=='06'
+        assert 'HF upvotes' not in page.locator('.findings-feed').first.inner_text() or page.locator('.findings-item-metric').count()==6
+        if label in ('desktop','mobile'):
+            page.screenshot(path=str(ROOT/'tests'/f'_local_findings_focused_{label}.png'),full_page=True)
+        page.locator('.findings-back').click()
+        assert page.locator('.findings-feed').count()==4
+        assert page.locator('.findings-item').count()==12
+        assert 'feed=' not in page.url
         page.locator('[data-feed="skills"]').click()
         assert page.locator('.findings-feed').count()==1
+        assert page.locator('.findings-item').count()==6
         assert 'CI fixture skills' in page.locator('.findings-feed').first.inner_text()
+        assert '累计 Stars' in page.locator('.findings-item-metric').first.inner_text()
         page.locator('[data-feed="all"]').click()
         page.locator('#findings-search').fill('workflows')
-        assert page.locator('.findings-item').count()==1
+        assert page.locator('.findings-item').count()==6,('search must include non-preview entries',label)
         page.locator('#findings-search').fill('')
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='en'
