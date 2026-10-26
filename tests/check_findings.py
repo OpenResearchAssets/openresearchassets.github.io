@@ -47,6 +47,8 @@ def check_snapshot(path:Path)->None:
             for translated_field in ('title_zh','subtitle_zh','detail_zh'):
                 if translated_field in value:
                     assert isinstance(value[translated_field],str) and len(value[translated_field])<=8500
+                    assert typography.normalize_zh_typography(value[translated_field])==value[translated_field], (
+                        key, 'nonstandard Chinese punctuation in '+translated_field)
             assert value.get('metric') in ('upvotes','total installs','stars gained this week','total stars','position'),(key,'unsupported metric')
     print('PASS: Findings source provenance, freshness and safe metrics')
 
