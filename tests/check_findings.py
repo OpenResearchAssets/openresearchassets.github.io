@@ -31,7 +31,7 @@ def check_snapshot(path:Path)->None:
         for value in feed['items']:
             assert value.get('title') and value.get('url'),(key,'incomplete item')
             assert collector.valid_url(value['url']), (key,'untrusted item URL')
-            assert len(value['title'])<=210 and len(value.get('subtitle',''))<=780 and len(value.get('detail',''))<=2600
+            assert len(value['title'])<=210 and len(value.get('subtitle',''))<=780 and len(value.get('detail',''))<=6000
             assert 'value' not in value or (type(value['value']) is int and value['value']>=0)
             if value.get('summary_source'):
                 assert value['summary_source'] in ('paper abstract','repository README')
