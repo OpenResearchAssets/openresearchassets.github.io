@@ -24,6 +24,24 @@
   const facets = () => catalog.facets || {};
   const facetText = (group,key) => local((facets()[group] || {})[key]) || key;
   const kind = entry => facetText('kinds',entry.kind);
+  // 投稿身份与收录时间分离；历史不可核实的信息不推测。
+  const contributorName = entry => {
+    const name=entry.submission?.github;
+    return typeof name==='string' && /^[a-z\d](?:[a-z\d-]{0,38})$/i.test(name) ? name : '';
+  };
+  function provenance(entry, detailed=false) {
+    const user=contributorName(entry);
+    const date=entry.submission?.added_on;
+    const verifiedDate=typeof date==='string' && /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : '';
+    if(!user && !verifiedDate && !detailed) return '';
+    const userPart=user
+      ? '<a href="https://github.com/'+safe(user)+'" target="_blank" rel="noopener noreferrer">@'+safe(user)+'</a>'
+      : safe(tr('历史档案 · 投稿者未记录','Legacy record · contributor not recorded'));
+    const datePart=verifiedDate
+      ? '<time datetime="'+safe(verifiedDate)+'">'+safe(verifiedDate)+'</time>'
+      : safe(tr('历史收录日期待追溯','Historical publication date not verified'));
+    return '<div class="ora-provenance"><span>'+safe(tr('投稿','Submitted by'))+' '+userPart+'</span><span>'+safe(tr('收录','Added on'))+' '+datePart+'</span></div>';
+  }
 
   function media(entry) {
     const rights=entry.rights || {};
@@ -131,7 +149,7 @@
       const state=c.track==='popular'?tr('外部高热度 · 未经本站亲测','Popular external · not tested here'):tr('已有公开项目产物 · 未做独立效益评测','Public project artifacts · no independent evaluation');
       return '<article class="ora-skill-card"><div class="ora-skill-meta"><span>'+safe(c.type||'workflow')+'</span>'+star+'</div>'+
        '<h4><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(e.title)+'</a></h4>'+
-       '<p>'+safe(local(e.description))+'</p><p class="ora-skill-status">'+safe(state)+'</p>'+proof+
+       '<p>'+safe(local(e.description))+'</p>'+provenance(e)+'<p class="ora-skill-status">'+safe(state)+'</p>'+proof+
        '<div class="ora-skill-actions"><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(tr('用途与边界','Use & limits'))+' ↗</a>'+
        link(e.links?.source,tr('查看源项目','Source'))+'</div></article>';
     };
@@ -182,7 +200,7 @@
         '<a class="ora-featured-preview" href="'+safe(source)+'" target="_blank" rel="noopener noreferrer" aria-label="'+safe(tr('打开官方研究主页：','Visit original research site: ')+e.title)+'">'+media(e)+'</a>'+
         '<div class="ora-featured-info"><p class="ora-featured-eyebrow">'+safe(tr('可交互研究主页','Interactive research site'))+'</p>'+
         '<h4><a href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">'+safe(e.title.split(' · ')[0])+' ↗</a></h4>'+
-        '<p>'+safe(local(e.description))+'</p>'+
+        '<p>'+safe(local(e.description))+'</p>'+provenance(e)+
         '<div class="ora-featured-actions"><a class="ora-open-source" href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('立即打开原作者网站','Visit official site'))+' ↗</a>'+
         '<a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(tr('查看设计分析','Design analysis'))+' →</a></div></div></article>';
     }).join('') || '<p class="empty-state">'+safe(empty())+'</p>';
@@ -210,7 +228,7 @@
         '<a class="ora-resource-visual" href="'+safe(href)+'"'+ext+' aria-label="'+safe(tr('直接打开原作者：','Open original project: ')+e.title)+'">'+media(e)+'</a>'+
         '<div class="ora-resource-content"><div class="ora-resource-kicker">'+safe(visualCategory(e)||kind(e))+' · '+safe(e.year || '')+'</div>'+
         '<h3><a href="'+safe(href)+'"'+ext+'>'+safe(e.title)+'</a></h3>'+
-        '<p>'+safe(local(e.description))+'</p>'+
+        '<p>'+safe(local(e.description))+'</p>'+provenance(e)+
         '<div class="ora-tag-row">'+e.stages.slice(0,2).map(x=>'<span>'+safe(facetText('stages',x))+'</span>').join('')+
         e.domains.slice(0,1).map(x=>'<span>'+safe(facetText('domains',x))+'</span>').join('')+'</div>'+
         '<div class="ora-resource-actions">'+
@@ -269,7 +287,7 @@
       ? tr('本站原创资产，不含第三方图像','Original site asset, no third-party image')
       : tr('外部参考或原创分析，按单项版权元数据核对','External reference or authored analysis; review item-specific rights');
     detail.innerHTML='<div class="ora-detail-heading"><p class="ora-eyebrow">'+safe(kind(e))+' / '+safe(e.id)+'</p>'+
-      '<h1>'+safe(e.title)+'</h1><p>'+safe(local(e.description))+'</p></div>'+
+      '<h1>'+safe(e.title)+'</h1><p>'+safe(local(e.description))+'</p>'+provenance(e,true)+'</div>'+
       '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+(e.analysisVisual ? '<p class="ora-analysis-link"><a target="_blank" rel="noopener noreferrer" href="'+safe(e.analysisVisual.src)+'">'+safe(tr('查看本站原创结构分析 SVG','View authored structure-analysis SVG'))+' ↗</a></p>' : '')+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.label))+' · '+
         (e.figureIdentity ? '<strong>'+safe(e.figureIdentity.original_name)+'</strong> · '+
           safe(tr('原始作者与来源见资产档案；图片是带出处的缩略预览，不是自制科研结果。','See author/source details; this is an attributed preview, not our experiment.')) :
@@ -277,7 +295,7 @@
         ' · <a href="'+safe(e.figureIdentity?.original_source||e.visual.src)+'" target="_blank" rel="noopener noreferrer">'+
         safe(tr('打开官方原始来源','Open verified original source'))+' ↗</a></p>' : '')+baseLessons+editorial+'</section>'+
       '<aside class="ora-detail-sidebar"><h2>'+safe(tr('资产档案','Asset metadata'))+'</h2>'+
-      '<dl><dt>'+safe(tr('科研阶段','Stages'))+'</dt><dd>'+e.stages.map(x=>safe(facetText('stages',x))).join(' · ')+'</dd>'+
+      '<dl>'+(e.submission?.original_author ? '<dt>'+safe(tr('原作者','Original creator'))+'</dt><dd>'+safe(e.submission.original_author)+'</dd>':'')+'<dt>'+safe(tr('科研阶段','Stages'))+'</dt><dd>'+e.stages.map(x=>safe(facetText('stages',x))).join(' · ')+'</dd>'+
       '<dt>'+safe(tr('领域','Domains'))+'</dt><dd>'+e.domains.map(x=>safe(facetText('domains',x))).join(' · ')+'</dd>'+
       '<dt>'+safe(tr('使用性质','Reuse'))+'</dt><dd>'+safe(e.rights?.reuse || 'unknown')+'</dd>'+
       '<dt>'+safe(tr('素材来源与边界','Asset media status'))+'</dt><dd>'+safe(rightsNote)+'</dd>'+
@@ -289,6 +307,7 @@
       '<a href="catalog/entries/'+encodeURIComponent(e.id)+'.json" target="_blank" rel="noopener noreferrer">'+safe(tr('供 AI 使用的单项 JSON','Single-entry JSON for AI'))+' ↗</a></div>'+
       '<div class="ora-detail-rights"><p>'+safe(tr('第三方素材归原权利人；署名或免费展示不等于再分发授权。如对展示有异议，可联系撤除或更正。','Third-party materials belong to their rights holders. Attribution and free access do not imply redistribution rights. Request removal or correction if you object.'))+'</p><a href="https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=asset-removal.yml" target="_blank" rel="noopener noreferrer">'+safe(tr('联系撤除 / 更正','Request removal / correction'))+' ↗</a></div>'+
       '<button type="button" id="ora-copy-brief">'+safe(tr('复制给 AI 的使用说明','Copy AI usage brief'))+'</button>'+
+      '<p class="ora-community-prompt"><a href="https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=submit-asset.yml" target="_blank" rel="noopener noreferrer">'+safe(tr('推荐另一份优秀资产','Recommend another great asset'))+' ↗</a></p>'+
       (related.length?'<div class="ora-related"><h3>'+safe(tr('关联资产','Related asset'))+'</h3><a href="asset.html?id='+encodeURIComponent(related[0].id)+'">'+safe(related[0].title)+' →</a></div>':'')+
       '</aside></div>';
     document.getElementById('ora-copy-brief')?.addEventListener('click',async ()=>{
