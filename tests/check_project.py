@@ -225,6 +225,9 @@ for page_name,html in [('index.html',home_html),('contribute.html',contribute_ht
         errors.append(f'{page_name}: missing bilingual first-use text')
 if 'id="gallery"' not in home_html or 'id="skills"' not in home_html:
     errors.append('homepage: gallery or skills route missing')
+for required_id in ('facet-topic','skill-search','skill-domain','skill-topic','skill-type','skill-topic-chips','skill-more'):
+    if f'id="{required_id}"' not in home_html:
+        errors.append(f'missing catalog topic / capability discovery control: {required_id}')
 if 'id="popular-skills"' not in home_html or 'id="practice-skills"' not in home_html:
     errors.append('homepage: popular and practice tracks not separate')
 if 'href="for-agents/"' not in home_html or 'href="contribute.html"' not in home_html:

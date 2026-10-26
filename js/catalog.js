@@ -8,6 +8,7 @@
   let catalog = null;
   let filtersReady = false;
   let showAll = false;
+  let skillsExpanded = false;
   const params = new URLSearchParams(location.search);
   const tr = (zh,en) => document.documentElement.lang === 'en' ? en : zh;
   const local = value => typeof value === 'object' && !Array.isArray(value) && value !== null && 'zh' in value ? value[document.documentElement.lang === 'en' ? 'en' : 'zh'] : value;
@@ -100,32 +101,51 @@
   function options(selectId,group) {
     const node=document.getElementById(selectId);
     if (!node) return;
-    const original=node.value || params.get(selectId.replace('facet-','')) || '';
-    node.innerHTML='<option value="">'+safe(tr(group==='stages'?'全部阶段':group==='kinds'?'全部类型':'全部领域',group==='stages'?'All stages':group==='kinds'?'All types':'All domains'))+'</option>'+
+    const original=node.value || (selectId.startsWith('facet-') ? params.get(selectId.replace('facet-','')) : '') || '';
+    node.innerHTML='<option value="">'+safe(tr(group==='stages'?'全部阶段':group==='kinds'?'全部类型':group==='topics'?'全部主题':'全部领域',group==='stages'?'All stages':group==='kinds'?'All types':group==='topics'?'All topics':'All domains'))+'</option>'+
       Object.entries(facets()[group] || {}).filter(([key])=>group!=='kinds'||key!=='workflow').map(([key,v])=>'<option value="'+safe(key)+'">'+safe(local(v))+'</option>').join('');
     node.value=original;
   }
   function prepareFilters() {
-    ['stages','kinds','domains'].forEach((key,i)=>options(['facet-stage','facet-kind','facet-domain'][i],key));
+    ['stages','kinds','domains','topics'].forEach((key,i)=>options(['facet-stage','facet-kind','facet-domain','facet-topic'][i],key));
+    options('skill-domain','domains');options('skill-topic','topics');
+    const kindSelect=document.getElementById('skill-type');
+    if(kindSelect){const active=kindSelect.value;kindSelect.innerHTML='<option value="">'+safe(tr('全部类型','All types'))+'</option>'+
+      [['skill','Skill'],['tool',tr('工具 / 框架','Tool / framework')],['workflow','Workflow']].map(([v,label])=>'<option value="'+v+'">'+safe(label)+'</option>').join('');kindSelect.value=active;}
+    renderSkillChips();
     if (filtersReady) return;
     filtersReady=true;
     const search=document.getElementById('reference-search');
     if(search) {search.value=params.get('q') || '';search.addEventListener('input',()=>{showAll=false;renderGrid();});}
-    ['facet-stage','facet-kind','facet-domain'].forEach(id=>document.getElementById(id)?.addEventListener('change',()=>{showAll=false;renderGrid();}));
+    ['facet-stage','facet-kind','facet-domain','facet-topic'].forEach(id=>document.getElementById(id)?.addEventListener('change',()=>{showAll=false;renderGrid();}));
+    document.getElementById('skill-search')?.addEventListener('input',()=>{skillsExpanded=false;renderSkills();});
+    ['skill-domain','skill-topic','skill-type'].forEach(id=>document.getElementById(id)?.addEventListener('change',()=>{skillsExpanded=false;renderSkills();}));
+    document.getElementById('skill-topic-chips')?.addEventListener('click',event=>{
+      const btn=event.target.closest('button[data-topic]');
+      if(!btn)return;
+      const select=document.getElementById('skill-topic');if(select)select.value=btn.dataset.topic;
+      skillsExpanded=false;renderSkillChips();renderSkills();
+    });
+    document.getElementById('skill-reset')?.addEventListener('click',()=>{
+      document.getElementById('skill-search').value='';
+      ['skill-domain','skill-topic','skill-type'].forEach(id=>{document.getElementById(id).value='';});
+      skillsExpanded=false;renderSkillChips();renderSkills();
+    });
+    document.getElementById('skill-more')?.addEventListener('click',()=>{skillsExpanded=true;renderSkills();});
     document.querySelectorAll('[data-task-query]').forEach(b=>b.addEventListener('click',()=>{
       if(!search)return;
       search.value=b.dataset.taskQuery;showAll=false;renderGrid();search.focus();
     }));
     document.getElementById('facet-reset')?.addEventListener('click',()=>{
       search.value='';
-      ['facet-stage','facet-kind','facet-domain'].forEach(id=>{document.getElementById(id).value='';});
+      ['facet-stage','facet-kind','facet-domain','facet-topic'].forEach(id=>{document.getElementById(id).value='';});
       showAll=false;renderGrid();
     });
     document.getElementById('catalog-more')?.addEventListener('click',()=>{showAll=true;renderGrid();});
   }
   function allSearch(entry) {
     const a=entry.applicability || {};
-    return [entry.id,entry.title,entry.kind,...entry.stages,...entry.domains,...entry.tasks,
+    return [entry.id,entry.title,entry.kind,...entry.stages,...entry.domains,...(entry.topics||[]),...entry.tasks,
       ...(entry.keywords?.zh || []),...(entry.keywords?.en || []),entry.description?.zh,entry.description?.en,
       ...(a.use_when?.zh || []),...(a.use_when?.en || []),
       ...(a.learn?.zh || []),...(a.learn?.en || []),
@@ -136,6 +156,23 @@
   const isGallery=e=>e.kind==='visual-reference'||e.kind==='website-reference'||
     e.kind==='editable-template'||(e.kind==='resource-index'&&e.id!=='research-skills-directory');
   const galleryList=()=>catalog.entries.filter(isGallery);
+  function renderSkillChips() {
+    const mount=document.getElementById('skill-topic-chips');
+    if(!mount||!catalog)return;
+    const list=catalog.entries.filter(e=>e.kind==='workflow'&&['popular','practice'].includes(e.curation?.track));
+    const counts=new Map();
+    list.forEach(e=>(e.topics||[]).forEach(k=>counts.set(k,(counts.get(k)||0)+1)));
+    const top=[...counts].sort((a,b)=>b[1]-a[1]).slice(0,8);
+    const active=document.getElementById('skill-topic')?.value||'';
+    mount.innerHTML='<button type="button" data-topic="" class="'+(active?'':'is-active')+'" aria-pressed="'+(!active)+'">'+safe(tr('全部主题','All topics'))+'</button>'+
+      top.map(([topic,n])=>'<button type="button" data-topic="'+safe(topic)+'" class="'+(active===topic?'is-active':'')+'" aria-pressed="'+(active===topic)+'">'+safe(facetText('topics',topic))+' <span>'+n+'</span></button>').join('');
+  }
+  function getSkillFilters() {
+    return {q:document.getElementById('skill-search')?.value.trim().toLowerCase()||'',
+      domain:document.getElementById('skill-domain')?.value||'',
+      topic:document.getElementById('skill-topic')?.value||'',
+      type:document.getElementById('skill-type')?.value||''};
+  }
   const starCounts=new Map();
   let refreshingStars=false;
   const starText=n=>Number(n).toLocaleString('en-US');
@@ -148,22 +185,39 @@
       const c=e.curation||{};
       const repo=c.github_repo||'';
       const star=Number.isInteger(c.stars_snapshot)
-        ? '<span class="ora-skill-stars" data-star-repo="'+safe(repo)+'" aria-label="GitHub Stars">★ '+safe(starText(starCounts.get(repo)??c.stars_snapshot))+' '+safe(starCounts.has(repo)?tr('Stars · 实时','Stars · live'):tr('Stars · 快照 '+c.stars_checked_on,'Stars · snapshot '+c.stars_checked_on))+'</span>'
+        ? '<span class="ora-skill-stars" data-star-repo="'+safe(repo)+'" data-star-scope="'+safe(c.star_scope||'repository')+'" aria-label="'+safe(tr('GitHub 仓库 Stars','GitHub repository stars'))+'"><b>★ '+safe(starText(starCounts.get(repo)??c.stars_snapshot))+'</b><small>'+safe(c.star_scope==='parent-repository'?tr('母仓库 Star','Parent repo stars'):tr('仓库 Star','Repo stars'))+' · '+safe(starCounts.has(repo)?tr('实时','live'):c.stars_checked_on)+'</small></span>'
         : '';
       const proof=c.track==='practice' ? '<div class="ora-skill-evidence"><span>'+safe(tr('公开实践证据','Public usage evidence'))+'</span>'+
         (c.evidence||[]).slice(0,2).map(p=>'<a href="'+safe(p)+'" target="_blank" rel="noopener noreferrer">'+safe(p.split('/').pop())+' ↗</a>').join('')+'</div>' : '';
       const state=c.track==='popular'?tr('外部高热度 · 未经本站亲测','Popular external · not tested here'):tr('已有公开项目产物 · 未做独立效益评测','Public project artifacts · no independent evaluation');
-      return '<article class="ora-skill-card"><div class="ora-skill-meta"><span>'+safe(c.type||'workflow')+'</span>'+star+'</div>'+
+      const typeLabel={skill:'Skill',tool:tr('工具 / 框架','Tool / framework'),workflow:'Workflow'}[c.type]||tr('待分类','Unclassified');
+      const topical=(e.topics||[]).slice(0,2).map(k=>'<span>'+safe(facetText('topics',k))+'</span>').join('');
+      const context=e.domains.slice(0,2).map(k=>'<span>'+safe(facetText('domains',k))+'</span>').join('');
+      return '<article class="ora-skill-card"><div class="ora-skill-meta"><span>'+safe(typeLabel)+'</span>'+star+'</div>'+
        '<h4><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(e.title)+'</a></h4>'+
-       '<p>'+safe(local(e.description))+'</p>'+provenance(e)+'<p class="ora-skill-status">'+safe(state)+'</p>'+proof+
+       '<p>'+safe(local(e.description))+'</p><div class="ora-skill-tags">'+context+topical+'</div>'+provenance(e)+'<p class="ora-skill-status">'+safe(state)+'</p>'+proof+
        '<div class="ora-skill-actions"><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(tr('详情与讨论','Details & discussion'))+' ↗</a>'+
        link(e.links?.source,tr('查看源项目','Source'))+'</div></article>';
     };
-    if(popular)popular.innerHTML=catalog.entries.filter(e=>e.curation?.track==='popular')
-      .sort((a,b)=>b.curation.stars_snapshot-a.curation.stars_snapshot)
-      .map(card).join('')||'<p>'+safe(empty())+'</p>';
-    if(practice)practice.innerHTML=catalog.entries.filter(e=>e.curation?.track==='practice')
-      .map(card).join('')||'<p>'+safe(empty())+'</p>';
+    const filters=getSkillFilters();
+    const active=Boolean(filters.q||filters.domain||filters.topic||filters.type);
+    const match=e=>(!filters.domain||e.domains.includes(filters.domain))&&
+      (!filters.topic||(e.topics||[]).includes(filters.topic))&&
+      (!filters.type||e.curation?.type===filters.type)&&
+      filters.q.split(/\\s+/).filter(Boolean).every(w=>allSearch(e).includes(w));
+    const allPopular=catalog.entries.filter(e=>e.curation?.track==='popular'&&match(e))
+      .sort((a,b)=>b.curation.stars_snapshot-a.curation.stars_snapshot);
+    const allPractice=catalog.entries.filter(e=>e.curation?.track==='practice'&&match(e));
+    const visiblePopular=(active||skillsExpanded)?allPopular:allPopular.slice(0,8);
+    if(popular)popular.innerHTML=visiblePopular.map(card).join('')||'<p class="empty-state">'+safe(empty())+'</p>';
+    if(practice)practice.innerHTML=allPractice.map(card).join('')||'<p class="empty-state">'+safe(empty())+'</p>';
+    const more=document.getElementById('skill-more');
+    if(more){more.hidden=active||skillsExpanded||allPopular.length<=8;
+      more.textContent=tr('查看全部 ','See all ')+allPopular.length+tr(' 项高热度资源',' popular resources');}
+    const status=document.getElementById('skill-status');
+    if(status)status.textContent=tr('匹配 ','Matching ')+(allPopular.length+allPractice.length)+' / '+
+      catalog.entries.filter(e=>['popular','practice'].includes(e.curation?.track)).length+tr(' 项正式精选',' curated selections');
+    renderSkillChips();
     if(!popular||refreshingStars||location.protocol==='file:')return;
     const repos=[...new Set(catalog.entries.filter(e=>e.curation?.track==='popular')
       .map(e=>e.curation.github_repo).filter(x=>typeof x==='string'&&x.includes('/')))];
@@ -180,7 +234,7 @@
       refreshingStars=false;
       popular.querySelectorAll('[data-star-repo]').forEach(node=>{
         const repo=node.dataset.starRepo;
-        if(starCounts.has(repo))node.textContent='★ '+starText(starCounts.get(repo))+' '+tr('Stars · 实时','Stars · live');
+        if(starCounts.has(repo))node.innerHTML='<b>★ '+safe(starText(starCounts.get(repo)))+'</b><small>'+safe(node.dataset.starScope==='parent-repository'?tr('母仓库 Star','Parent repo stars'):tr('仓库 Star','Repo stars'))+' · '+safe(tr('实时','live'))+'</small>';
       });
     });
   }
@@ -218,12 +272,13 @@
     const stage=document.getElementById('facet-stage')?.value || '';
     const kindSelect=document.getElementById('facet-kind')?.value || '';
     const domain=document.getElementById('facet-domain')?.value || '';
+    const topic=document.getElementById('facet-topic')?.value || '';
     const words=q.split(/\s+/).filter(Boolean);
     const weight={ 'visual-reference':0,'website-reference':0,'editable-template':1,'resource-index':2 };
     const items=galleryList().sort((a,b)=>weight[a.kind]-weight[b.kind]).filter(e=>(!stage || e.stages.includes(stage)) &&
-      (!kindSelect || e.kind===kindSelect) && (!domain || e.domains.includes(domain)) &&
+      (!kindSelect || e.kind===kindSelect) && (!domain || e.domains.includes(domain)) && (!topic || (e.topics||[]).includes(topic)) &&
       words.every(w=>allSearch(e).includes(w)));
-    const shown = (!q && !stage && !kindSelect && !domain && !showAll) ? items.slice(0,9) : items;
+    const shown = (!q && !stage && !kindSelect && !domain && !topic && !showAll) ? items.slice(0,9) : items;
     grid.innerHTML=shown.length ? shown.map(e=>{
       const source=safeUrl(e.links?.source);
       const details='asset.html?id='+encodeURIComponent(e.id);
@@ -236,7 +291,7 @@
         '<h3><a href="'+safe(href)+'"'+ext+'>'+safe(e.title)+'</a></h3>'+
         '<p>'+safe(local(e.description))+'</p>'+provenance(e)+
         '<div class="ora-tag-row">'+e.stages.slice(0,2).map(x=>'<span>'+safe(facetText('stages',x))+'</span>').join('')+
-        e.domains.slice(0,1).map(x=>'<span>'+safe(facetText('domains',x))+'</span>').join('')+'</div>'+
+        e.domains.slice(0,1).map(x=>'<span>'+safe(facetText('domains',x))+'</span>').join('')+(e.topics||[]).slice(0,1).map(x=>'<span>'+safe(facetText('topics',x))+'</span>').join('')+'</div>'+
         '<div class="ora-resource-actions">'+
         (source ? '<a class="ora-open-source" href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('直达原作者主页','Open original site'))+' ↗</a>' : '')+
         (figure && figure!==source ? '<a href="'+safe(figure)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('查看原图','View original figure'))+' ↗</a>' : '')+
@@ -252,7 +307,7 @@
     const count=document.getElementById('catalog-count');
     if(count) count.textContent=String(galleryList().length);
     const u=new URL(location.href); q?u.searchParams.set('q',q):u.searchParams.delete('q');
-    for(const [key,value] of [['stage',stage],['kind',kindSelect],['domain',domain]]) {
+    for(const [key,value] of [['stage',stage],['kind',kindSelect],['domain',domain],['topic',topic]]) {
       value?u.searchParams.set(key,value):u.searchParams.delete(key);
     }
     // file:// and inline-browser-test documents may not permit history updates.
@@ -302,7 +357,7 @@
         safe(tr('打开官方原始来源','Open verified original source'))+' ↗</a></p>' : '')+baseLessons+editorial+'</section>'+
       '<aside class="ora-detail-sidebar"><h2>'+safe(tr('资产档案','Asset metadata'))+'</h2>'+
       '<dl>'+(e.submission?.original_author ? '<dt>'+safe(tr('原作者','Original creator'))+'</dt><dd>'+safe(e.submission.original_author)+'</dd>':'')+'<dt>'+safe(tr('科研阶段','Stages'))+'</dt><dd>'+e.stages.map(x=>safe(facetText('stages',x))).join(' · ')+'</dd>'+
-      '<dt>'+safe(tr('领域','Domains'))+'</dt><dd>'+e.domains.map(x=>safe(facetText('domains',x))).join(' · ')+'</dd>'+
+      '<dt>'+safe(tr('领域','Domains'))+'</dt><dd>'+e.domains.map(x=>safe(facetText('domains',x))).join(' · ')+'</dd>'+      '<dt>'+safe(tr('主题','Topics'))+'</dt><dd>'+(e.topics||[]).map(x=>safe(facetText('topics',x))).join(' · ')+'</dd>'+      (e.curation?.type?'<dt>'+safe(tr('能力类型','Capability type'))+'</dt><dd>'+safe(e.curation.type)+'</dd>':'')+
       '<dt>'+safe(tr('使用性质','Reuse'))+'</dt><dd>'+safe(e.rights?.reuse || 'unknown')+'</dd>'+
       '<dt>'+safe(tr('素材来源与边界','Asset media status'))+'</dt><dd>'+safe(rightsNote)+'</dd>'+
       (e.figureIdentity?'<dt>'+safe(tr('图像准确身份','Exact image identity'))+'</dt><dd>'+safe(e.figureIdentity.original_name)+'</dd>'+

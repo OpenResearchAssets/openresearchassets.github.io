@@ -45,7 +45,8 @@
 <div class="ora-facets">
 <label><span data-i18n-zh='["科研阶段"]' data-i18n-en='["Research stage"]'>科研阶段</span><select id="facet-stage" aria-label="Research stage"><option value="">全部阶段</option></select></label>
 <label><span data-i18n-zh='["资产类型"]' data-i18n-en='["Asset type"]'>资产类型</span><select id="facet-kind" aria-label="Asset type"><option value="">全部类型</option></select></label>
-<label><span data-i18n-zh='["研究领域"]' data-i18n-en='["Research domain"]'>研究领域</span><select id="facet-domain" aria-label="Research domain"><option value="">全部领域</option></select></label></div>
+<label><span data-i18n-zh='["研究领域"]' data-i18n-en='["Research domain"]'>研究领域</span><select id="facet-domain" aria-label="Research domain"><option value="">全部领域</option></select></label>
+<label><span data-i18n-zh='["研究主题"]' data-i18n-en='["Topic"]'>研究主题</span><select id="facet-topic" aria-label="Research topic"><option value="">全部主题</option></select></label></div>
 <div class="ora-search-row"><button id="facet-reset" type="button" data-i18n-zh='["清除筛选"]' data-i18n-en='["Clear filters"]'>清除筛选</button><a href="for-agents/" data-i18n-zh='["让 AI 自动读取资产目录 ↗"]' data-i18n-en='["Give the catalog to an AI agent ↗"]'>让 AI 自动读取资产目录 ↗</a></div>
 <div class="ora-featured-sites" aria-labelledby="ora-featured-heading">
   <div class="ora-featured-heading"><p class="section-index">PROJECT SITES / ORIGINAL WEBSITES</p>
@@ -86,10 +87,20 @@
 <div class="section-head"><div><p class="section-index">02 — SKILLS / WORKFLOWS</p>
 <h2 id="ora-skills-heading" data-i18n-zh='["不是收集越多越好，","而是有依据地精选。"]' data-i18n-en='["Not more skills.","Better selections."]'>不是收集越多越好，<br/>而是有依据地精选。</h2></div>
 <p data-i18n-zh='["两条严格分开的收录路线：社区高热度的外部项目，以及有公开产物的项目实践。Star 反映关注，不代表我们亲测有效。"]' data-i18n-en='["Two tracks: popular public projects and workflows with visible use in our work. Stars indicate attention, not proven quality."]'>两条严格分开的收录路线：社区高热度的外部项目，以及有公开产物的项目实践。Star 反映关注，不代表我们亲测有效。</p></div>
+<div class="ora-skill-finder" aria-label="Skills and workflows filters">
+<div class="ora-skill-finder-head"><div><strong data-i18n-zh='["按领域与主题找到适合的能力"]' data-i18n-en='["Browse by domain and research topic"]'>按领域与主题找到适合的能力</strong><p data-i18n-zh='["区分完整开源项目、具体 Skill 文件与实际使用过的工作流；多条件可组合筛选。"]' data-i18n-en='["Find projects, individual SKILL.md files and evidenced workflows using combinable filters."]'>区分完整开源项目、具体 Skill 文件与实际使用过的工作流；多条件可组合筛选。</p></div><span id="skill-status" aria-live="polite"></span></div>
+<label class="ora-skill-search-label"><span data-i18n-zh='["搜索项目、技能或具体任务"]' data-i18n-en='["Search projects, skills or tasks"]'>搜索项目、技能或具体任务</span><input id="skill-search" type="search" autocomplete="off" data-i18n-attrs='{"placeholder":["试试 PDF、Agent、RAG、实验验证…","Try PDF, Agent, RAG, verification…"]}' placeholder="试试 PDF、Agent、RAG、实验验证…"/></label>
+<div class="ora-skill-filters">
+<label><span data-i18n-zh='["研究领域"]' data-i18n-en='["Research domain"]'>研究领域</span><select id="skill-domain" aria-label="Skill domain"><option value="">全部领域</option></select></label>
+<label><span data-i18n-zh='["研究主题"]' data-i18n-en='["Research topic"]'>研究主题</span><select id="skill-topic" aria-label="Skill topic"><option value="">全部主题</option></select></label>
+<label><span data-i18n-zh='["能力类型"]' data-i18n-en='["Capability type"]'>能力类型</span><select id="skill-type" aria-label="Skill type"><option value="">全部类型</option></select></label></div>
+<div class="ora-skill-quicktopics" id="skill-topic-chips" aria-label="Quick topic filters"></div>
+<div class="ora-skill-filter-footer"><span data-i18n-zh='["GitHub Star 属于对应仓库；具体 SKILL.md 的热度不等于母仓库热度。"]' data-i18n-en='["Stars belong to GitHub repositories, not individual SKILL.md files."]'>GitHub Star 属于对应仓库；具体 SKILL.md 的热度不等于母仓库热度。</span><button id="skill-reset" type="button" data-i18n-zh='["清除筛选"]' data-i18n-en='["Clear filters"]'>清除筛选</button></div>
+</div>
 <div class="ora-skill-group"><div class="ora-skill-group-head"><span class="ora-group-index">01 / COMMUNITY POPULARITY</span>
 <h3 data-i18n-zh='["高热度开源精选"]' data-i18n-en='["Popular open-source picks"]'>高热度开源精选</h3>
 <p data-i18n-zh='["显示 GitHub 仓库 Star：可访问时更新实时数字，否则使用注明日期的快照。入选不等于我们已经安装或验证。"]' data-i18n-en='["Current GitHub stars when available; otherwise a dated snapshot. Inclusion does not imply installation or testing."]'>显示 GitHub 仓库 Star：可访问时更新实时数字，否则使用注明日期的快照。入选不等于我们已经安装或验证。</p></div>
-<div class="ora-skill-list" id="popular-skills"><p class="empty-state">加载高热度资源…</p></div></div>
+<div class="ora-skill-list" id="popular-skills"><p class="empty-state">加载高热度资源…</p></div><button class="ora-skill-more" id="skill-more" type="button" hidden>查看全部高热度资源</button></div>
 <div class="ora-skill-group"><div class="ora-skill-group-head"><span class="ora-group-index">02 / FIELD NOTES</span>
 <h3 data-i18n-zh='["有真实使用记录的工作流"]' data-i18n-en='["Workflows used in project practice"]'>有真实使用记录的工作流</h3>
 <p data-i18n-zh='["只收录能指向公开成果与来源记录的工作流；曾经实际使用不等于经过独立效益评测。"]' data-i18n-en='["Only workflows linked to public artifacts and provenance. Project use is not independent utility evaluation."]'>只收录能指向公开成果与来源记录的工作流；曾经实际使用不等于经过独立效益评测。</p></div>
