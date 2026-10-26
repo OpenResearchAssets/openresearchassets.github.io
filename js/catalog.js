@@ -29,18 +29,24 @@
     const name=entry.submission?.github;
     return typeof name==='string' && /^[a-z\d](?:[a-z\d-]{0,38})$/i.test(name) ? name : '';
   };
+  const evidenceUrl = value => {
+    const u=safeUrl(value);
+    return /^https:\/\/github\.com\/OpenResearchAssets\/openresearchassets\.github\.io\/(?:issues|pull)\/\d+$/.test(u) ? u : '';
+  };
   function provenance(entry, detailed=false) {
     const user=contributorName(entry);
     const date=entry.submission?.added_on;
     const verifiedDate=typeof date==='string' && /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : '';
     if(!user && !verifiedDate && !detailed) return '';
     const userPart=user
-      ? '<a href="https://github.com/'+safe(user)+'" target="_blank" rel="noopener noreferrer">@'+safe(user)+'</a>'
+      ? '<a class="ora-contributor" href="https://github.com/'+safe(user)+'" target="_blank" rel="noopener noreferrer"><img src="https://github.com/'+safe(user)+'.png?size=40" alt="" width="20" height="20" loading="lazy">@'+safe(user)+'</a>'
       : safe(tr('历史档案 · 投稿者未记录','Legacy record · contributor not recorded'));
     const datePart=verifiedDate
       ? '<time datetime="'+safe(verifiedDate)+'">'+safe(verifiedDate)+'</time>'
       : safe(tr('历史收录日期待追溯','Historical publication date not verified'));
-    return '<div class="ora-provenance"><span>'+safe(tr('投稿','Submitted by'))+' '+userPart+'</span><span>'+safe(tr('收录','Added on'))+' '+datePart+'</span></div>';
+    const review=evidenceUrl(entry.submission?.issue_url);
+    return '<div class="ora-provenance"><span>'+safe(tr('投稿','Submitted by'))+' '+userPart+'</span><span>'+safe(tr('收录','Added on'))+' '+datePart+'</span>'+
+      (review?'<a href="'+safe(review)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('审核记录','Review history'))+' ↗</a>':'')+'</div>';
   }
 
   function media(entry) {
@@ -307,7 +313,7 @@
       '<a href="catalog/entries/'+encodeURIComponent(e.id)+'.json" target="_blank" rel="noopener noreferrer">'+safe(tr('供 AI 使用的单项 JSON','Single-entry JSON for AI'))+' ↗</a></div>'+
       '<div class="ora-detail-rights"><p>'+safe(tr('第三方素材归原权利人；署名或免费展示不等于再分发授权。如对展示有异议，可联系撤除或更正。','Third-party materials belong to their rights holders. Attribution and free access do not imply redistribution rights. Request removal or correction if you object.'))+'</p><a href="https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=asset-removal.yml" target="_blank" rel="noopener noreferrer">'+safe(tr('联系撤除 / 更正','Request removal / correction'))+' ↗</a></div>'+
       '<button type="button" id="ora-copy-brief">'+safe(tr('复制给 AI 的使用说明','Copy AI usage brief'))+'</button>'+
-      '<p class="ora-community-prompt"><a href="https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=submit-asset.yml" target="_blank" rel="noopener noreferrer">'+safe(tr('推荐另一份优秀资产','Recommend another great asset'))+' ↗</a></p>'+
+      '<p class="ora-community-prompt"><a href="https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=catalog-correction.md" target="_blank" rel="noopener noreferrer">'+safe(tr('反馈此资产 / 纠错','Suggest an improvement / correction'))+' ↗</a> · <a href="https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=submit-asset.yml" target="_blank" rel="noopener noreferrer">'+safe(tr('推荐另一份优秀资产','Recommend another asset'))+' ↗</a></p>'+
       (related.length?'<div class="ora-related"><h3>'+safe(tr('关联资产','Related asset'))+'</h3><a href="asset.html?id='+encodeURIComponent(related[0].id)+'">'+safe(related[0].title)+' →</a></div>':'')+
       '</aside></div>';
     window.ORA_COMMUNITY?.mount(e.id);
