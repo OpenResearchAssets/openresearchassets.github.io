@@ -12,6 +12,7 @@ sys.path.insert(0,str(ROOT/'tools'))
 import update_findings as collector
 import findings_enrichment as enrichment
 import findings_offline_translate as offline
+import findings_editorial_zh as editorial
 from unittest.mock import patch
 
 SOURCES=('papers','github','skills','workflows')
@@ -146,6 +147,26 @@ class FindingsCollectorTests(unittest.TestCase):
         mixed='An agent research tool for advanced workflows with a 中文 installation note.'
         self.assertFalse(offline.is_chinese(mixed))
         self.assertTrue(offline.is_chinese('这是一个有完整中文版描述的研究工作流'))
+
+    def test_source_exact_chinese_review_override(self):
+        original={'url':'https://github.com/example/workflow','title':'example/workflow',
+                  'subtitle':'Public source workflow description', 'subtitle_zh':'机械翻译错误'}
+        rule={'overrides':[{'url':original['url'],
+                'source_title':original['title'],
+                'source_subtitle':original['subtitle'],
+                'subtitle_zh':'源文一致时才采用准确的中文表述。'}]}
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'reviewed.json'
+            path.write_text(json.dumps(rule,ensure_ascii=False),encoding='utf-8')
+            feeds={'workflows':{'items':[original]}}
+            self.assertEqual(editorial.apply_editorial_chinese(feeds,path),1)
+            self.assertEqual(original['subtitle_zh'],'源文一致时才采用准确的中文表述。')
+            original['subtitle']='Upstream author changed the project description'
+            self.assertEqual(editorial.apply_editorial_chinese(feeds,path),0)
+            self.assertEqual(original['subtitle_zh'],'源文一致时才采用准确的中文表述。')
+            # Runtime collector supplies new English text before this check;
+            # stale wording must never replace a machine translation again.
 
     def test_missing_translate_key_never_creates_fake_zh(self):
         feeds={'skills':{'status':'ok','items':[{'url':'https://github.com/a/b',
