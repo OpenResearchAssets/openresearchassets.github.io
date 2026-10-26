@@ -7071,7 +7071,22 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "trial": {
+        "status": "passed-source-guided-trial",
+        "run_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/actions/runs/40329862757",
+        "record_count": 72,
+        "source_catalog_sha256": "1cfb50ca17f919a9a77088d3bc35efc87198522f2890d1421a8e6db12cfeee61",
+        "execution_mode": "operator-applied-visualization-guidance-with-matplotlib",
+        "native_agent_skill_invocation": false,
+        "controlled_comparative_benchmark": false,
+        "model_token_usage": null,
+        "evidence_path": "experiments/skill-trials/README.md",
+        "summary": {
+          "zh": "公开任务试运行通过。执行的是固定脚手架及本站编写的任务代码，不是完整 Agent Harness 的自动 Skill 调用。",
+          "en": "Public task-based run passed. A pinned scaffold and authored scripts ran; this was not autonomous Agent Skill invocation."
+        }
+      }
     },
     {
       "id": "kdense-scientific-writing",
@@ -7899,7 +7914,22 @@
         "editorial_added_on": "2026-10-26",
         "homepage_order": 5
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "trial": {
+        "status": "passed-source-guided-trial",
+        "run_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/actions/runs/40329862757",
+        "record_count": 72,
+        "source_catalog_sha256": "1cfb50ca17f919a9a77088d3bc35efc87198522f2890d1421a8e6db12cfeee61",
+        "execution_mode": "official-upstream-scaffold-executed-and-operator-authored-notebook-ran",
+        "native_agent_skill_invocation": false,
+        "controlled_comparative_benchmark": false,
+        "model_token_usage": null,
+        "evidence_path": "experiments/skill-trials/README.md",
+        "summary": {
+          "zh": "公开任务试运行通过。执行的是固定脚手架及本站编写的任务代码，不是完整 Agent Harness 的自动 Skill 调用。",
+          "en": "Public task-based run passed. A pinned scaffold and authored scripts ran; this was not autonomous Agent Skill invocation."
+        }
+      }
     },
     {
       "id": "superpowers-writing-plans",
@@ -8282,6 +8312,120 @@
         ]
       },
       "previewStyle": "workflow"
+    },
+    {
+      "id": "catalog-skill-trials",
+      "title": "科研资产目录实验 · Notebook 与科研结果图",
+      "kind": "workflow",
+      "stages": [
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "reproducible-experiments",
+        "scientific-visualization",
+        "experiment-design"
+      ],
+      "tasks": [
+        "notebook-generation",
+        "scientific-visualization",
+        "source-audit",
+        "workflow-evaluation"
+      ],
+      "description": {
+        "zh": "在本项目真实资产目录上执行 Notebook 生成与科研绘图试验，发布可复现实验代码、GitHub Actions 运行日志和量化检查，公开区分试运行与 Skill 效果验证。",
+        "en": "Notebook scaffolding and scientific figure generation actually run on the public catalog, with reproducible scripts, CI logs and objective checks; no claim of full Skill evaluation."
+      },
+      "keywords": {
+        "zh": [
+          "科研技能试运行",
+          "Notebook",
+          "Matplotlib",
+          "科研绘图",
+          "可复现",
+          "真实执行"
+        ],
+        "en": [
+          "notebook",
+          "scientific-visualization",
+          "reproducibility",
+          "trial",
+          "provenance"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/OpenResearchAssets/openresearchassets.github.io/blob/main/experiments/skill-trials/README.md",
+        "editable": "tools/run_skill_trials.py",
+        "trial": "https://github.com/OpenResearchAssets/openresearchassets.github.io/actions/runs/40329862757"
+      },
+      "rights": {
+        "reuse": "original research-asset workflow; upstream skill content is referenced only",
+        "preview": "authored-workflow",
+        "third_party_media": "none"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "需要检验科研资产分类数据、生成可复现 Notebook 和带来源的可编辑图。"
+          ],
+          "en": [
+            "Auditing asset categories or producing repeatable notebook reports and source-grounded figures."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "从唯一 JSON 目录读取并记录来源 SHA256，独立核对类型与主题数量。",
+            "运行上游固定 Notebook 脚手架，再从头执行代码；绘制含零基线与来源标记的 SVG。",
+            "保留 CI 日志、结果 JSON、失败信息与实际耗时，不编造模型 Token。"
+          ],
+          "en": [
+            "Hash canonical JSON and cross-check type/topic counts independently.",
+            "Run pinned notebook scaffold, execute cells from scratch and render sourced SVG.",
+            "Preserve real logs, JSON results, wall time and limitations; never invent token data."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "脚本化试运行不能证明 Skill 本身提升了质量，也没有对照组、真实模型 token 或自动调用证据。"
+          ],
+          "en": [
+            "Scripted execution is not a controlled model/Skill comparison or native harness invocation; no measured model tokens."
+          ]
+        }
+      },
+      "curation": {
+        "track": "practice",
+        "type": "workflow",
+        "verification": "ci-executed-public-scripts-not-native-agent-skill-evaluation",
+        "used_in": {
+          "zh": "已对 72 条公开资产目录完成首轮两项试运行并通过 7 项客观检查；原始日志可复核，后续目录更新会重新运行。",
+          "en": "First two source-guided trials on 72 public entries passed seven objective checks; CI reruns on future catalog edits."
+        },
+        "evidence": [
+          "experiments/skill-trials/README.md",
+          "tools/run_skill_trials.py",
+          ".github/workflows/skill-trials.yml"
+        ]
+      },
+      "previewStyle": "workflow",
+      "trial": {
+        "status": "passed-source-guided-trial",
+        "run_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/actions/runs/40329862757",
+        "native_agent_skill_invocation": false,
+        "controlled_comparative_benchmark": false,
+        "model_token_usage": null,
+        "record_count": 72,
+        "summary": {
+          "zh": "首轮两项任务执行成功，7/7 客观检查通过；属于脚本化试运行，不是模型能力改进实验。",
+          "en": "Two scripted tasks passed 7/7 checks; this does not establish model capability improvement."
+        }
+      }
     }
   ]
 }

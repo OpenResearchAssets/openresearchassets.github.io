@@ -322,3 +322,5 @@
 .ora-execution-provenance{font-size:11px;line-height:1.7;overflow-wrap:anywhere;color:#728294;margin:17px 0 0}
 .ora-execution-provenance code{font-size:11px;overflow-wrap:anywhere}
 @media(max-width:720px){.ora-execution{padding:18px 15px}.ora-execution-grid{grid-template-columns:1fr}.ora-execution-head h2{font-size:21px}}
+
+.ora-skill-trial{font-size:12px;line-height:1.6;margin:5px 0!important}.ora-skill-trial a{color:#245f85;font-weight:700;text-decoration:none}.ora-trial-evidence{margin:20px 0 16px;border-left:3px solid #688ca3;padding:14px 18px;background:#f7f9fc;border-radius:0 11px 11px 0}.ora-trial-evidence h3{font-size:16px;color:#25465d;margin:0 0 7px}.ora-trial-evidence p{font-size:13px;color:#5b7184;line-height:1.7;margin:6px 0}.ora-trial-evidence a{display:inline-block;font-weight:700;color:#245d84;font-size:13px;margin-top:7px}

@@ -189,14 +189,15 @@
         : '';
       const proof=c.track==='practice' ? '<div class="ora-skill-evidence"><span>'+safe(tr('公开实践证据','Public usage evidence'))+'</span>'+
         (c.evidence||[]).slice(0,2).map(p=>'<a href="'+safe(p)+'" target="_blank" rel="noopener noreferrer">'+safe(p.split('/').pop())+' ↗</a>').join('')+'</div>' : '';
-      const state=c.track==='popular'?tr('外部高热度 · 未经本站亲测','Popular external · not tested here'):tr('已有公开项目产物 · 未做独立效益评测','Public project artifacts · no independent evaluation');
+      const state=c.track==='popular'?(e.trial?tr('已有任务试运行 · 非自动调用 Skill','Source-guided trial · no native Skill invocation'):tr('外部高热度 · 未经本站亲测','Popular external · not tested here')):tr('已有公开项目产物 · 未做独立效益评测','Public project artifacts · no independent evaluation');
       const typeLabel=c.type==='skill'?(c.star_scope==='parent-repository'?tr('独立 Skill','Individual Skill'):tr('Skill 集合','Skill collection')):({tool:tr('工具 / 框架','Tool / framework'),workflow:'Workflow'}[c.type]||tr('待分类','Unclassified'));
       const topical=(e.topics||[]).slice(0,2).map(k=>'<span>'+safe(facetText('topics',k))+'</span>').join('');
       const context=e.domains.slice(0,2).map(k=>'<span>'+safe(facetText('domains',k))+'</span>').join('');
       return '<article class="ora-skill-card"><div class="ora-skill-meta"><span>'+safe(typeLabel)+'</span>'+star+'</div>'+
        '<h4><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(e.title)+'</a></h4>'+
        '<p>'+safe(local(e.description))+'</p>'+(e.execution?.outputs?'<p class="ora-skill-output"><strong>'+safe(tr('产出','Output'))+'</strong>'+safe((local(e.execution.outputs)||[])[0]||'')+'</p>':'')+
-       '<div class="ora-skill-tags">'+context+topical+'</div>'+provenance(e)+'<p class="ora-skill-status">'+safe(state)+'</p>'+proof+
+       '<div class="ora-skill-tags">'+context+topical+'</div>'+provenance(e)+'<p class="ora-skill-status">'+safe(state)+'</p>'+
+       (e.trial?.run_url?'<p class="ora-skill-trial"><a target="_blank" rel="noopener noreferrer" href="'+safe(e.trial.run_url)+'">'+safe(tr('查看真实任务试运行证据','View task-run evidence'))+' ↗</a></p>':'')+proof+
        '<div class="ora-skill-actions"><a href="asset.html?id='+encodeURIComponent(e.id)+'">'+safe(tr('详情与讨论','Details & discussion'))+' ↗</a>'+
        link(e.links?.source,e.execution?.source_file_sha?tr('打开原始 SKILL.md','Open original SKILL.md'):tr('查看源项目','Source'))+'</div></article>';
     };
@@ -340,7 +341,7 @@
       '<section><h3>'+safe(tr('迁移到自己论文的步骤','How to transfer the design'))+'</h3>'+points(local(study.reuseSteps))+'</section></div>'+
       '<div class="ora-case-check"><h3>'+safe(tr('事实、风险与授权检查','Scientific and rights checks'))+'</h3>'+points(local(study.verification))+'</div></section>' : '';
     const exec=e.execution;
-    const executionGuide=exec ? '<section class="ora-execution"><div class="ora-execution-head"><span>'+safe(tr('来源已核实 · 未实际运行','SOURCE REVIEWED · NOT EXECUTED'))+'</span>'+
+    const executionGuide=exec ? '<section class="ora-execution"><div class="ora-execution-head"><span>'+safe(e.trial?tr('有公开试运行 · 未自动调用 Skill','SOURCE-GUIDED TRIAL · NO NATIVE SKILL INVOCATION'):tr('来源已核实 · 未实际运行','SOURCE REVIEWED · NOT EXECUTED'))+'</span>'+
       '<h2>'+safe(tr('如何使用这项能力','How to use this capability'))+'</h2>'+
       '<p>'+safe(tr('这是一份根据上游 SKILL.md 整理的用法提要，不是已安装的 Skill；请在执行前复核原文、当前依赖、权限与许可。','This is a curated note from the original SKILL.md, not an installed skill. Recheck current dependencies, permissions and license.'))+'</p></div>'+
       '<div class="ora-execution-grid"><div><h3>'+safe(tr('需要准备','Inputs'))+'</h3>'+points(local(exec.inputs))+'</div>'+
@@ -351,6 +352,9 @@
       '<div class="ora-execution-actions">'+link(e.links?.source,tr('打开完整 SKILL.md','Read full SKILL.md'))+
       '<button type="button" id="ora-copy-execution">'+safe(tr('复制使用说明','Copy usage brief'))+'</button></div>'+
       '<p class="ora-execution-provenance">'+safe(tr('上游文件 Blob SHA','Upstream file blob SHA'))+': <code>'+safe(exec.source_file_sha||'')+'</code> · '+safe(exec.source_checked_on||'')+'</p></section>' : '';
+    const trialEvidence=e.trial?.run_url ? '<aside class="ora-trial-evidence"><h3>'+safe(tr('公开试运行证据','Public trial evidence'))+'</h3>'+
+      '<p>'+safe(local(e.trial.summary))+'</p><p>'+safe(tr('这不是 Skill 安装证据，也不是和无 Skill 基线的受控比较。','Not proof of installing a Skill, nor a controlled comparison with a no-Skill baseline.'))+'</p>'+
+      '<a href="'+safe(e.trial.run_url)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('查看实际 CI 记录与下载产物','View real CI run and outputs'))+' ↗</a></aside>' : '';
     const baseLessons='<div class="ora-lesson"><h2>'+safe(tr('什么时候使用','When to use'))+'</h2>'+points(local(app.use_when))+'</div>'+
       (study ? '' : '<div class="ora-lesson"><h2>'+safe(tr('值得学习的做法','Transferable lessons'))+'</h2>'+points(local(app.learn))+'</div>'+
         '<div class="ora-lesson"><h2>'+safe(tr('需要避免','What to avoid'))+'</h2>'+points(local(app.avoid))+'</div>');
@@ -366,7 +370,7 @@
       : tr('外部参考或原创分析，按单项版权元数据核对','External reference or authored analysis; review item-specific rights');
     detail.innerHTML='<div class="ora-detail-heading"><p class="ora-eyebrow">'+safe(kind(e))+' / '+safe(e.id)+'</p>'+
       '<h1>'+safe(e.title)+'</h1><p>'+safe(local(e.description))+'</p>'+provenance(e,true)+'</div>'+
-      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+executionGuide+(e.analysisVisual ? '<p class="ora-analysis-link"><a target="_blank" rel="noopener noreferrer" href="'+safe(e.analysisVisual.src)+'">'+safe(tr('查看本站原创结构分析 SVG','View authored structure-analysis SVG'))+' ↗</a></p>' : '')+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.label))+' · '+
+      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+trialEvidence+executionGuide+(e.analysisVisual ? '<p class="ora-analysis-link"><a target="_blank" rel="noopener noreferrer" href="'+safe(e.analysisVisual.src)+'">'+safe(tr('查看本站原创结构分析 SVG','View authored structure-analysis SVG'))+' ↗</a></p>' : '')+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.label))+' · '+
         (e.figureIdentity ? '<strong>'+safe(e.figureIdentity.original_name)+'</strong> · '+
           safe(tr('原始作者与来源见资产档案；图片是带出处的缩略预览，不是自制科研结果。','See author/source details; this is an attributed preview, not our experiment.')) :
           safe(tr('请打开官方来源核对原始内容','Open the official source to verify original media')))+

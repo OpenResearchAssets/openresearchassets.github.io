@@ -176,6 +176,9 @@ with sync_playwright() as pw:
             assert page.locator('.ora-detail-preview .ora-preview').count()==1,(label,asset_id,'missing preview')
             assert page.locator('.ora-detail-links a').count()>=2,(label,asset_id,'source / JSON missing')
             assert 'catalog/entries/'+asset_id+'.json' in page.locator('.ora-detail-links a').last.get_attribute('href')
+            if entry.get('trial'):
+                assert page.locator('.ora-trial-evidence').count()==1
+                assert page.locator('.ora-trial-evidence a').get_attribute('href')==entry['trial']['run_url']
             if entry.get('execution'):
                 assert page.locator('.ora-execution').count()==1
                 assert page.locator('.ora-execution-grid>div').count()==4

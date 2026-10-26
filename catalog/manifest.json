@@ -2653,6 +2653,45 @@
       ],
       "description_zh": "已实际用于本公开库新增技能的来源审阅流程：逐项核对官方 SKILL.md、依赖、许可、输入输出和 Blob SHA，以自动化检查维护档案一致性；并不执行第三方技能。",
       "entry": "catalog/entries/skill-source-intake.json"
+    },
+    {
+      "id": "catalog-skill-trials",
+      "title": "科研资产目录实验 · Notebook 与科研结果图",
+      "kind": "workflow",
+      "stages": [
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "agents",
+        "ml-systems"
+      ],
+      "topics": [
+        "reproducible-experiments",
+        "scientific-visualization",
+        "experiment-design"
+      ],
+      "tasks": [
+        "notebook-generation",
+        "scientific-visualization",
+        "source-audit",
+        "workflow-evaluation"
+      ],
+      "keywords": [
+        "科研技能试运行",
+        "Notebook",
+        "Matplotlib",
+        "科研绘图",
+        "可复现",
+        "真实执行",
+        "notebook",
+        "scientific-visualization",
+        "reproducibility",
+        "trial",
+        "provenance"
+      ],
+      "description_zh": "在本项目真实资产目录上执行 Notebook 生成与科研绘图试验，发布可复现实验代码、GitHub Actions 运行日志和量化检查，公开区分试运行与 Skill 效果验证。",
+      "entry": "catalog/entries/catalog-skill-trials.json"
     }
   ]
 }

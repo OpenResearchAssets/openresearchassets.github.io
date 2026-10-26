@@ -136,5 +136,20 @@
     "editorial_added_on": "2026-10-26",
     "homepage_order": 5
   },
-  "previewStyle": "workflow"
+  "previewStyle": "workflow",
+  "trial": {
+    "status": "passed-source-guided-trial",
+    "run_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/actions/runs/40329862757",
+    "record_count": 72,
+    "source_catalog_sha256": "1cfb50ca17f919a9a77088d3bc35efc87198522f2890d1421a8e6db12cfeee61",
+    "execution_mode": "official-upstream-scaffold-executed-and-operator-authored-notebook-ran",
+    "native_agent_skill_invocation": false,
+    "controlled_comparative_benchmark": false,
+    "model_token_usage": null,
+    "evidence_path": "experiments/skill-trials/README.md",
+    "summary": {
+      "zh": "公开任务试运行通过。执行的是固定脚手架及本站编写的任务代码，不是完整 Agent Harness 的自动 Skill 调用。",
+      "en": "Public task-based run passed. A pinned scaffold and authored scripts ran; this was not autonomous Agent Skill invocation."
+    }
+  }
 }

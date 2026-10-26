@@ -132,19 +132,23 @@ def verify(metrics, out):
         rows = list(csv.DictReader(f))
     svg = (out / "asset-kind-coverage.svg").read_text(encoding="utf-8")
     xml = ElementTree.fromstring(svg)
-    corrupt = metrics["kind_counts"].copy()
-    corrupt[sorted(corrupt)[0]] += 1
+    def verified_rows(candidate):
+        return (
+            {r["kind"]: int(r["record_count"]) for r in candidate} == metrics["kind_counts"]
+            and all(r["source_sha256"] == metrics["source_sha256"] for r in candidate)
+        )
+    # Mutate a real copy of the same CSV rows, then assert the actual validator rejects it.
+    corrupted = [dict(r) for r in rows]
+    corrupted[0]["record_count"] = str(int(corrupted[0]["record_count"]) + 1)
     return {
         "notebook_matches_independent_python": copied == metrics,
         "kind_counts_exhaust_all_records": sum(metrics["kind_counts"].values()) == metrics["entry_count"],
         "track_counts_exhaust_all_records": sum(metrics["track_counts"].values()) == metrics["entry_count"],
-        "figure_data_matches_source": (
-            {r["kind"]: int(r["record_count"]) for r in rows} == metrics["kind_counts"]
-            and all(r["source_sha256"] == metrics["source_sha256"] for r in rows)),
+        "figure_data_matches_source": verified_rows(rows),
         "svg_has_no_embedded_raster_images": not any(el.tag.rsplit("}", 1)[-1] == "image" for el in xml.iter()),
         "svg_describes_source": all(s in svg for s in ("Research asset coverage", "catalog/index.json", "count")),
         "negative_control_detects_tampered_count": (
-            corrupt != metrics["kind_counts"] and sum(corrupt.values()) != metrics["entry_count"]),
+            verified_rows(rows) and not verified_rows(corrupted)),
     }
 
 def main():

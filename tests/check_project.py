@@ -383,6 +383,14 @@ for e in popular:
         errors.append(f"{e['id']}: specific skill must label stars as parent-repository scope")
 if not any(e.get('id')=='skill-source-intake' for e in practice):
     errors.append('Missing published and audited skill source intake workflow')
+if not any(e.get('id')=='catalog-skill-trials' for e in practice):
+    errors.append('Missing real executed catalog Skill trials in practice notes')
+for trial_id in ('kdense-scientific-visualization','openai-jupyter-notebook'):
+    target=next((e for e in entries if e['id']==trial_id),None)
+    if not target or not target.get('trial',{}).get('run_url','').startswith('https://github.com/OpenResearchAssets/openresearchassets.github.io/actions/runs/'):
+        errors.append(f'{trial_id}: missing original public CI trial evidence')
+    elif target['trial'].get('native_agent_skill_invocation') is not False:
+        errors.append(f'{trial_id}: false native Agent Skill claim')
 for e in practice:
     c=e['curation']
     if not c.get('evidence'):errors.append(f"{e['id']}: missing practice evidence")
