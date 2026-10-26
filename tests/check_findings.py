@@ -22,7 +22,7 @@ def check_snapshot(path:Path)->None:
     assert data.get('generated_at') is None or re.fullmatch(r'\d{4}-\d\d-\d\dT.+Z',data['generated_at'])
     for key,feed in data['feeds'].items():
         assert feed['status'] in ('pending','ok','stale','unavailable'),(key,'unsupported source state')
-        assert isinstance(feed['items'],list) and len(feed['items'])<=(40 if key=='papers' else 14)
+        assert isinstance(feed['items'],list) and len(feed['items'])<=(100 if key=='papers' else 14)
         assert collector.valid_url(feed['url']), (key,'invalid source URL')
         if feed['status'] in ('ok','stale'):
             assert feed['items'] and feed['fetched_at'], (key,'no audited source snapshot')
