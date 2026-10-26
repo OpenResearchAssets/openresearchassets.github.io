@@ -16,7 +16,7 @@ import urllib.request
 
 API_ROOT = "https://api.github.com/repos/"
 TRANSLATE_URL = "https://translation.googleapis.com/language/translate/v2"
-README_LIMIT_PER_FEED = 10
+README_LIMIT_PER_FEED = 14
 TRANSLATE_LIMIT = 53000
 
 
