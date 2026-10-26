@@ -319,7 +319,7 @@ with sync_playwright() as pw:
         page.set_content(page_html('community.html'),wait_until='load')
         page.locator('.ora-community-entry').first.wait_for()
         assert page.locator('.ora-community-entry').count()==2
-        assert page.locator('a[href="index.html#gallery"]').count()==1
+        assert page.locator('#site-nav a[href="index.html#gallery"]').count()==1
         assert '👍 3' in page.locator('.ora-community-grid').inner_text()
         assert '👍 21' in page.locator('.ora-community-grid').inner_text()
         page.locator('#community-sort').select_option('popular')
