@@ -371,7 +371,11 @@ with sync_playwright() as pw:
         assert page.locator('.findings-item').count()==12,('overview must display at most three per category',label)
         assert page.locator('.findings-feed-more').count()==4
         assert 'CI fixture papers' in page.locator('.findings-feed').first.inner_text()
+        assert page.locator('.lang-toggle').get_attribute('data-current-lang')=='zh'
+        assert page.locator('.lang-toggle .ora-lang-option.is-active').inner_text()=='中文'
         assert '测试论文中文标题' in page.locator('.findings-item').first.inner_text()
+        assert '这是一段根据原始摘要自动翻译的内容。' in page.locator('.findings-item').first.inner_text()
+        assert 'Trending papers' not in page.locator('.findings-feed').first.locator('h3').inner_text()
         assert page.locator('.findings-original-compare').count()>=1
         page.locator('.findings-original-compare summary').first.click()
         assert 'CI fixture papers 1' in page.locator('.findings-original-compare').first.inner_text()
@@ -410,12 +414,23 @@ with sync_playwright() as pw:
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='en'
         assert 'Trend desk' in page.locator('h2').inner_text()
+        assert page.locator('.lang-toggle').get_attribute('data-current-lang')=='en'
+        assert page.locator('.lang-toggle .ora-lang-option.is-active').inner_text()=='EN'
+        assert page.locator('.findings-feed').first.locator('h3').inner_text()=='Trending papers'
+        assert 'CI fixture papers 1' in page.locator('.findings-item').first.inner_text()
+        assert 'Sourced project description for visual regression' in page.locator('.findings-item').first.inner_text()
+        assert '测试论文中文标题' not in page.locator('.findings-item').first.inner_text()
+        assert '这是一段根据原始摘要自动翻译的内容。' not in page.locator('.findings-item').first.inner_text()
+        assert 'HF upvotes' in page.locator('.findings-item-metric').first.inner_text()
         assert page.locator('html').get_attribute('lang')=='en'
         assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('findings-en',label)
         if label in ('desktop','mobile'):
             page.screenshot(path=str(ROOT/'tests'/f'_local_findings_{label}.png'),full_page=True)
         page.locator('.lang-toggle').click()
         assert page.locator('html').get_attribute('lang')=='zh-CN'
+        assert page.locator('.lang-toggle').get_attribute('data-current-lang')=='zh'
+        assert page.locator('.lang-toggle .ora-lang-option.is-active').inner_text()=='中文'
+        assert '测试论文中文标题' in page.locator('.findings-item').first.inner_text()
         # Real public snapshot: long GitHub repo names and paper abstracts must
         # not overflow on desktop, tablet or mobile. Not synthetic rankings.
         real_snapshot=(ROOT/'data/findings.json').read_text(encoding='utf-8')
