@@ -13,9 +13,11 @@ Research assets should be more than bookmarks. They should tell us **when to use
 
 ## Website information architecture
 
-The only primary destinations are **[Curated](index.html)**, **[Community](community.html)** and **[Contribute](contribute.html)**. Within Curated, the two content types are **Research Gallery** (including editable SVG studies) and **Skills / Workflows**. Quality tools, principles, AI-readable resources and licensing are secondary links in a shared footer.
+The three primary content destinations are **[Curated](index.html)**, **[Community](community.html)** and **[Findings](findings.html)**. **[Contribute](contribute.html)** remains a separate submission action, not a fourth content collection. Within Curated, the two content types are **Research Gallery** (including editable SVG studies) and **Skills / Workflows**. Quality tools, principles, AI-readable resources and licensing are secondary links in a shared footer.
 
 The primary navigation/footer are authored once in `js/navigation.js` rather than duplicated across pages. Existing external artwork, citations and editorial data remain unchanged.
+
+**Findings** automatically captures Hugging Face trending papers, GitHub Trending repositories, Skills and recent workflow projects into a source-attributed [snapshot](data/findings.json), refreshed by [GitHub Actions](.github/workflows/findings.yml). Signals are source-specific and never represented as editorial endorsement; [methodology](docs/FINDINGS.md).
 
 ## Community and Curated are two different collection tiers
 
