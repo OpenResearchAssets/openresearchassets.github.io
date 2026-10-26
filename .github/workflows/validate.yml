@@ -47,7 +47,7 @@ jobs:
           from PIL import Image
           from io import BytesIO
           import base64
-          for name in ["home", "findings", "findings_overview", "findings_focused", "findings_real", "findings_real_focused", "detail", "examples", "sample_site", "real_case"]:
+          for name in ["home", "skills", "findings", "findings_overview", "findings_focused", "findings_real", "findings_real_focused", "detail", "examples", "sample_site", "real_case"]:
               image = Image.open("tests/_local_" + name + "_desktop.png").convert("RGB")
               image = image.crop((0, 0, image.width, min(image.height, 2700)))
               if image.width > 850:
@@ -59,7 +59,7 @@ jobs:
               for i in range(0, len(encoded), 4000):
                   print("ORA_UI_DATA:" + encoded[i:i+4000])
               print("ORA_UI_END:" + name)
-          for name in ["findings_real", "findings_real_focused"]:
+          for name in ["skills", "findings_real", "findings_real_focused"]:
               picture = Image.open("tests/_local_" + name + "_mobile.png").convert("RGB")
               image = picture.crop((0, 0, picture.width, min(picture.height, 2400)))
               buffer = BytesIO()

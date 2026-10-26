@@ -147,6 +147,8 @@ with sync_playwright() as pw:
         assert page.locator('.showcase img').evaluate_all('(nodes)=>nodes.every(n=>n.complete&&n.naturalWidth>0)')
         page.evaluate('window.scrollTo(0,0)')
         page.screenshot(path=str(ROOT/'tests'/f'_local_home_{label}.png'),full_page=True)
+        if label in ('desktop','mobile'):
+            page.locator('#skills').screenshot(path=str(ROOT/'tests'/f'_local_skills_{label}.png'))
 
         # Full catalog coverage, not a single showcase page. Main-case screenshots
         # are kept for desktop and mobile human visual review.
