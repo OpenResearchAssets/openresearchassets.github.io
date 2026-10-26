@@ -10,10 +10,10 @@
  const tabs=[...document.querySelectorAll('.findings-filter')];
  const keys=['papers','github','skills','workflows'],PREVIEW=3,BATCH=8;
  const labels={
-  papers:['论文趋势','Trending papers','HUGGING FACE / PAPERS'],
-  github:['GitHub 趋势','GitHub Trending','GITHUB / WEEKLY'],
-  skills:['热门 Skills','Agent Skills','AGENT / SKILLS'],
-  workflows:['研究工作流','Research workflows','RESEARCH / WORKFLOWS']
+  papers:['论文趋势','Trending papers','HUGGING FACE / PAPERS','论文 · Hugging Face'],
+  github:['GitHub 趋势','GitHub Trending','GITHUB / WEEKLY','项目 · GitHub 周榜'],
+  skills:['热门 Skills','Agent Skills','AGENT / SKILLS','技能 · Agent Skills'],
+  workflows:['研究工作流','Research workflows','RESEARCH / WORKFLOWS','工作流 · GitHub']
  };
  const sources={
   papers:'https://huggingface.co/papers/trending',
@@ -103,7 +103,7 @@
      esc(tr('返回发现总览','Back to overview'))+'</button><span>'+
      esc(tr('直接站内阅读 · 不必打开来源榜单','Read here · Source navigation optional'))+'</span></div>':'')+
      '<div class="findings-feed-head"><div class="findings-feed-ident">'+
-     '<span class="findings-feed-kicker">'+esc(def[2])+'</span><h3>'+esc(name)+'</h3>'+
+     '<span class="findings-feed-kicker">'+esc(zh()?def[3]:def[2])+'</span><h3>'+esc(name)+'</h3>'+
      '<p class="findings-feed-intro">'+esc(key==='papers'?
        tr('先看研究问题与摘要，再决定是否精读原文。','Read the research question and abstract before the paper.'):
        key==='github'?tr('了解项目用途及 README 摘录，再决定是否进入仓库。','Read project descriptions and README excerpts before visiting the repo.'):
