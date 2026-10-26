@@ -24,6 +24,24 @@ for h in pages:
         if u.scheme in ('http','https','mailto') or uri.startswith('#') or uri.startswith('data:'):continue
         target=(ROOT/h).parent/u.path
         if not target.exists():errors.append(f'{h}: missing {uri}')
+# Browser i18n strings are stored in HTML attributes; malformed quoting can silently
+# truncate JSON and break language switching only on a particular route.
+class I18NAttributes(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.invalid=[]
+    def handle_starttag(self,tag,attrs):
+        for key,value in attrs:
+            if key in ('data-i18n-zh','data-i18n-en','data-i18n-attrs'):
+                try:
+                    json.loads(value)
+                except (ValueError,TypeError) as exc:
+                    self.invalid.append(f'{tag} {key}: {exc}')
+for page in pages:
+    parser=I18NAttributes()
+    parser.feed((ROOT/page).read_text(encoding='utf-8'))
+    for error in parser.invalid:
+        errors.append(f'{page}: malformed i18n attribute: {error}')
 for file in [*ROOT.glob('assets/templates/*.svg'), ROOT/'assets/mark.svg']:
     try:
         tree=ET.parse(file);nodes=list(tree.iter())
