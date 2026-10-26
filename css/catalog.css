@@ -210,3 +210,23 @@
 .ora-featured-actions a:hover{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:1020px){.ora-featured-site-grid{grid-template-columns:1fr}}
 @media(max-width:510px){.ora-featured-site{grid-template-columns:1fr}.ora-featured-preview .ora-preview{height:170px;min-height:170px}.ora-featured-info{padding:16px}}
+
+/* Community contribution and verified provenance. */
+.ora-provenance{display:flex;align-items:center;flex-wrap:wrap;gap:5px 18px;font-size:11px;line-height:1.6;color:#748394;letter-spacing:.005em}
+.ora-provenance a{font-weight:690;color:#315c87;text-decoration:none}
+.ora-provenance a:hover{text-decoration:underline}
+.ora-provenance time{font-variant-numeric:tabular-nums;color:#506984}
+.ora-detail-heading .ora-provenance{margin-top:15px}
+.ora-detail-heading .ora-provenance span{display:inline-flex;gap:5px}
+.ora-community-prompt{font-size:12px;margin-top:16px}
+.ora-community-prompt a{color:#295b8b;text-decoration:none}
+.ora-gallery-contribute{display:flex;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid #e6ebf1;margin-top:22px;padding:14px 0 0;color:#65798d;font-size:12px}
+.ora-gallery-contribute a{font-size:12px;font-weight:730;color:#255d91;white-space:nowrap;text-decoration:none}
+.ora-gallery-contribute a:hover{text-decoration:underline}
+.ora-community-submit{margin-top:12px;margin-bottom:36px;padding:30px 34px;border:1px solid #e2e9f0;border-radius:16px;background:#f7f9fc}
+.ora-community-submit h2{font-size:clamp(26px,3vw,38px);letter-spacing:-.04em;margin:8px 0}
+.ora-community-submit>p:not(.section-index){max-width:760px;font-size:14px;line-height:1.8;color:#607386}
+.ora-submit-cta{display:inline-flex;align-items:center;justify-content:center;margin-top:14px;min-height:45px;padding:0 20px;background:#263d55;border-radius:10px;color:#fff;text-decoration:none;font-size:13px;font-weight:720}
+.ora-submit-cta:hover{background:#315a84}
+.ora-community-submit .ora-submit-footnote{font-size:11px!important;color:#84909e!important;margin:12px 0 0}
+@media(max-width:720px){.ora-gallery-contribute{align-items:flex-start;flex-direction:column;gap:7px}.ora-community-submit{padding:24px 22px}}
