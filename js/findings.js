@@ -31,6 +31,12 @@
  const state={data:null,filter:'all',query:'',limit:BATCH};
  const localized=(entry,key)=>zh()?(entry[key+'_zh']||entry[key]||''):
    (entry[key+'_en']||entry[key]||'');
+ const chineseDominant=text=>{
+   const value=String(text||'');
+   const han=(value.match(/[\u3400-\u9fff]/g)||[]).length;
+   const latin=(value.match(/[A-Za-z]/g)||[]).length;
+   return han>=2&&han/Math.max(1,han+latin)>=0.32;
+ };
  const words=()=>state.query.trim().toLowerCase().split(/\s+/).filter(Boolean);
  const match=(r,terms)=>terms.every(w=>[r.title,r.title_zh,r.subtitle,r.subtitle_zh,r.detail,r.detail_zh,r.author].join(' ').toLowerCase().includes(w));
  function description(key,feed){
@@ -59,8 +65,11 @@
  }
  function row(r,originalRank,key,focused){
    const url=safeUrl(r.url);if(!url||!r.title)return '';
-   const title=localized(r,'title'),abstract=localized(r,'subtitle')||localized(r,'detail');
-   const needsTranslation=zh()&&!r.subtitle_zh&&!r.detail_zh;
+   const title=localized(r,'title');
+   const hasChineseOriginal=chineseDominant(r.detail)||chineseDominant(r.subtitle);
+   const abstract=zh()&&!r.subtitle_zh&&chineseDominant(r.detail)
+     ?r.detail.slice(0,700):localized(r,'subtitle')||localized(r,'detail');
+   const needsTranslation=zh()&&!r.subtitle_zh&&!r.detail_zh&&!hasChineseOriginal;
    const rawOriginal=needsTranslation?' lang="en"':'';
    const originalTag=needsTranslation?'<span class="findings-original-label">'+
      esc('EN · 原始英文介绍（中文译文待生成）')+'</span>':'';
@@ -73,7 +82,7 @@
      esc(tr(key==='papers'?'阅读全文摘要':'阅读更完整的介绍',key==='papers'?'Read full abstract':'Read fuller description'))+
      ' <span aria-hidden="true">⌄</span></summary><div class="findings-entry-full"><span>'+
      esc(sourceName)+'</span><p>'+esc(detail)+'</p></div></details>':'';
-   const sourceLanguageIsChinese=/[\u3400-\u9fff]/.test(r.detail||r.subtitle||'');
+   const sourceLanguageIsChinese=hasChineseOriginal;
    const originalCompare=zh()&&(r.subtitle_zh||r.detail_zh)&&!sourceLanguageIsChinese?
      '<details class="findings-original-compare"><summary>'+esc('核对英文原文')+
      ' <span aria-hidden="true">⌄</span></summary>'+
