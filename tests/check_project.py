@@ -375,6 +375,8 @@ for e in popular:
         errors.append(f"{e['id']}: Star target does not match original source")
     if e['links']['source'] != 'https://github.com/'+c['github_repo'] and c.get('star_scope')!='parent-repository':
         errors.append(f"{e['id']}: specific skill must label stars as parent-repository scope")
+if not any(e.get('id')=='skill-source-intake' for e in practice):
+    errors.append('Missing published and audited skill source intake workflow')
 for e in practice:
     c=e['curation']
     if not c.get('evidence'):errors.append(f"{e['id']}: missing practice evidence")

@@ -2614,6 +2614,45 @@
       ],
       "description_zh": "失败测试 → 最小实现 → 重构的工程闭环。",
       "entry": "catalog/entries/superpowers-test-driven-development.json"
+    },
+    {
+      "id": "skill-source-intake",
+      "title": "Skill Source Intake · 科研技能来源审阅与入库",
+      "kind": "workflow",
+      "stages": [
+        "research",
+        "evaluation"
+      ],
+      "domains": [
+        "agents",
+        "general"
+      ],
+      "topics": [
+        "skills-ecosystem",
+        "research-automation"
+      ],
+      "tasks": [
+        "agent-skills",
+        "source-verification",
+        "skill-intake",
+        "catalog-audit",
+        "quality-review"
+      ],
+      "keywords": [
+        "技能审阅",
+        "来源核验",
+        "工作流",
+        "SHA",
+        "可追溯",
+        "实践记录",
+        "skill intake",
+        "provenance",
+        "workflow",
+        "source audit",
+        "GitHub blob SHA"
+      ],
+      "description_zh": "已实际用于本公开库新增技能的来源审阅流程：逐项核对官方 SKILL.md、依赖、许可、输入输出和 Blob SHA，以自动化检查维护档案一致性；并不执行第三方技能。",
+      "entry": "catalog/entries/skill-source-intake.json"
     }
   ]
 }

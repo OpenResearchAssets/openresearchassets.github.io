@@ -97,3 +97,7 @@ Skills / Workflows **只精选两条正式路径**：
 ## Skill 信息密度与实际可用性（2026-10-26）
 
 Card 要让用户看见**具体产出**和源文档入口，而不是只列项目名称；完整输入/依赖/步骤/验收仅放到详情页，避免主页卡片拥挤。官方源文件审阅和技术落地、效果验证是三个不同的核验层级，必须分开展示。审核台账由目录单事实源派生（`tools/audit_skill_intake.py`），不建立第二套可变目录。
+
+## 可公开审计的实践积累
+
+[Skill 来源审阅与入库流程](../workflows/skill-source-intake.md) 已在本公开项目实际用于 13 条独立技能的元数据核验，`tools/audit_skill_intake.py --check` 被 GitHub Actions 的 Canonical Data Checks 执行，台账见 [Skill 审阅报告](SKILL_INTAKE_AUDIT.md)。此证据只表明**筛选与记录审计工作流被应用**，不代表原始外部 SKILL.md 经过独立运行或具备任何模型效果保证。

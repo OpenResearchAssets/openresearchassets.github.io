@@ -1,0 +1,103 @@
+{
+  "id": "skill-source-intake",
+  "title": "Skill Source Intake · 科研技能来源审阅与入库",
+  "kind": "workflow",
+  "stages": [
+    "research",
+    "evaluation"
+  ],
+  "domains": [
+    "agents",
+    "general"
+  ],
+  "topics": [
+    "skills-ecosystem",
+    "research-automation"
+  ],
+  "tasks": [
+    "agent-skills",
+    "source-verification",
+    "skill-intake",
+    "catalog-audit",
+    "quality-review"
+  ],
+  "description": {
+    "zh": "已实际用于本公开库新增技能的来源审阅流程：逐项核对官方 SKILL.md、依赖、许可、输入输出和 Blob SHA，以自动化检查维护档案一致性；并不执行第三方技能。",
+    "en": "A provenance workflow used to review official SKILL.md sources, dependencies, rights, inputs/outputs and Git blob SHAs for this public catalog; it does not execute third-party skills."
+  },
+  "keywords": {
+    "zh": [
+      "技能审阅",
+      "来源核验",
+      "工作流",
+      "SHA",
+      "可追溯",
+      "实践记录"
+    ],
+    "en": [
+      "skill intake",
+      "provenance",
+      "workflow",
+      "source audit",
+      "GitHub blob SHA"
+    ]
+  },
+  "year": "2026",
+  "language": "zh+en",
+  "links": {
+    "source": "https://github.com/OpenResearchAssets/openresearchassets.github.io/blob/main/workflows/skill-source-intake.md",
+    "editable": "workflows/skill-source-intake.md",
+    "audit": "https://github.com/OpenResearchAssets/openresearchassets.github.io/blob/main/docs/SKILL_INTAKE_AUDIT.md"
+  },
+  "rights": {
+    "reuse": "original-workflow; review repository policy",
+    "preview": "authored-workflow",
+    "third_party_media": "none"
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "准备从外部仓库正式收录研究 Skills，需要防止路径错配、热度归因错误与未经核验的使用承诺。"
+      ],
+      "en": [
+        "Adding individual research skills from upstream repositories, avoiding source mismatches or false claims."
+      ]
+    },
+    "learn": {
+      "zh": [
+        "在官方仓库确认真实 SKILL.md、运行依赖和授权边界，并登记 Git blob SHA。",
+        "给出中英输入、输出、环境、步骤与检查项；从唯一目录重新生成派生文件。",
+        "运行来源台账校验及页面回归测试，再进行人工精选判断。"
+      ],
+      "en": [
+        "Read the original SKILL.md, requirements and rights; record Git blob SHA.",
+        "Write bilingual inputs, outputs, requirements and checks, then regenerate catalog derivatives.",
+        "Run offline audit and browser checks, keeping human curation separate."
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "仅审核档案字段与上游来源；这不等于执行 Skill、验证效果、实时检查上游版本或安全审计。"
+      ],
+      "en": [
+        "Offline metadata and source review is not execution, performance validation, live upstream monitoring or security assessment."
+      ]
+    }
+  },
+  "curation": {
+    "track": "practice",
+    "type": "workflow",
+    "verification": "project-source-metadata-audit-executed-not-external-skill-run",
+    "used_in": {
+      "zh": "在本公开仓库对 13 个单项 SKILL.md 进行来源和使用条件核对，并通过 GitHub Actions 的 canonical data checks 执行离线审计。",
+      "en": "Applied to thirteen upstream SKILL.md dossiers in this public repository; offline audit executed in GitHub Actions canonical checks."
+    },
+    "evidence": [
+      "workflows/skill-source-intake.md",
+      "tools/audit_skill_intake.py",
+      "docs/SKILL_INTAKE_AUDIT.md",
+      ".github/workflows/validate.yml"
+    ]
+  },
+  "previewStyle": "workflow"
+}
