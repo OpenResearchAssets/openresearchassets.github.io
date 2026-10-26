@@ -28,10 +28,10 @@
 .menu-toggle[aria-expanded="true"] .menu-icon span:last-child{transform:translateY(-3.25px) rotate(-45deg)}
 .nav-links a[aria-current="page"]{color:var(--ink);font-weight:700}
 .menu-toggle:focus-visible,.nav-links a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-@media(max-width:720px){
+@media(max-width:920px){
   .menu-toggle{display:flex;margin-left:auto;flex:none}
   .nav-cta{display:none}
-  .nav-links{display:none;position:absolute;top:69px;left:0;right:0;margin-left:0;
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;margin-left:0;
     background:var(--paper);box-shadow:0 20px 30px rgba(35,50,55,.1);
     border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px;
     padding:14px 19px 20px;flex-direction:column;align-items:stretch;gap:0}
