@@ -350,6 +350,9 @@ with sync_playwright() as pw:
                 'source':name,'url':'https://example.org/source','status':'ok',
                 'fetched_at':'2026-10-26T01:00:00Z','metric_note':'Synthetic CI data only',
                 'items':[{'title':'CI fixture '+key+' '+str(i),'url':'https://example.org/'+key+'/'+str(i),
+                          'detail':'Verified source text ' * 55,'summary_source':'paper abstract' if key=='papers' else 'repository README',
+                          'title_zh':'测试论文中文标题' if key=='papers' and i==1 else '', 
+                          'subtitle_zh':'这是一段根据原始摘要自动翻译的内容。' if key=='papers' and i==1 else '',
                           'subtitle':'Sourced project description for visual regression',
                           'metric':metric,'value':15000+i,'author':'Example'}
                          for i in range(1,7)]}
@@ -368,6 +371,10 @@ with sync_playwright() as pw:
         assert page.locator('.findings-item').count()==12,('overview must display at most three per category',label)
         assert page.locator('.findings-feed-more').count()==4
         assert 'CI fixture papers' in page.locator('.findings-feed').first.inner_text()
+        assert '测试论文中文标题' in page.locator('.findings-item').first.inner_text()
+        assert page.locator('.findings-original-compare').count()>=1
+        page.locator('.findings-original-compare summary').first.click()
+        assert 'CI fixture papers 1' in page.locator('.findings-original-compare').first.inner_text()
         assert '15,001' in page.locator('.findings-item-metric').first.inner_text()
         assert '社区票数' in page.locator('.findings-item-metric').first.inner_text()
         if label in ('desktop','mobile'):
@@ -380,6 +387,9 @@ with sync_playwright() as pw:
         assert 'feed=papers' in page.url
         assert page.locator('.findings-focus-guide').count()==1
         assert page.locator('.findings-item-rank').last.inner_text()=='06'
+        assert page.locator('.findings-entry-detail').count()>=1
+        page.locator('.findings-entry-detail summary').first.click()
+        assert 'Verified source text' in page.locator('.findings-entry-full').first.inner_text()
         assert 'HF upvotes' not in page.locator('.findings-feed').first.inner_text() or page.locator('.findings-item-metric').count()==6
         if label in ('desktop','mobile'):
             page.evaluate('window.scrollTo(0,0)')
