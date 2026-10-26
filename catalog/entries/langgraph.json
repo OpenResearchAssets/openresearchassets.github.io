@@ -88,7 +88,8 @@
       "zh": "科研 Agent 需要多步决策、状态保存和可恢复执行。",
       "en": "Research agents need multistep state and resumable execution."
     },
-    "editorial_added_on": "2026-10-26"
+    "editorial_added_on": "2026-10-26",
+    "homepage_order": 8
   },
   "previewStyle": "workflow"
 }

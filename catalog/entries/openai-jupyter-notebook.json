@@ -133,7 +133,8 @@
       "zh": "组织能从头执行的实验 Notebook 和解释单元格。",
       "en": "Structure reproducible experimental notebooks and cells."
     },
-    "editorial_added_on": "2026-10-26"
+    "editorial_added_on": "2026-10-26",
+    "homepage_order": 5
   },
   "previewStyle": "workflow"
 }

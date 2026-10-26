@@ -3512,7 +3512,8 @@
         "selection_reason": {
           "zh": "需要参考 Agent Skills 的公开组织方式和已有技能，但必须进一步筛选具体子 Skill。",
           "en": "Looking for established Agent Skills structures and task-specific candidates; each subskill still needs separate review."
-        }
+        },
+        "homepage_order": 4
       },
       "previewStyle": "workflow",
       "topics": [
@@ -4886,7 +4887,8 @@
           "zh": "需要尽量保留论文版面层次、表格与结构。",
           "en": "Preserving research document structure and tables."
         },
-        "editorial_added_on": "2026-10-26"
+        "editorial_added_on": "2026-10-26",
+        "homepage_order": 7
       },
       "previewStyle": "workflow"
     },
@@ -5074,7 +5076,8 @@
           "zh": "需要根据多份论文回答问题并追踪证据来源。",
           "en": "Answering questions across scientific papers with traceable citations."
         },
-        "editorial_added_on": "2026-10-26"
+        "editorial_added_on": "2026-10-26",
+        "homepage_order": 6
       },
       "previewStyle": "workflow"
     },
@@ -5544,7 +5547,8 @@
           "zh": "科研 Agent 需要多步决策、状态保存和可恢复执行。",
           "en": "Research agents need multistep state and resumable execution."
         },
-        "editorial_added_on": "2026-10-26"
+        "editorial_added_on": "2026-10-26",
+        "homepage_order": 8
       },
       "previewStyle": "workflow"
     },
@@ -6646,7 +6650,8 @@
           "zh": "定义检索、纳排与证据综合，避免凭印象判断研究空白。",
           "en": "Reproducible searches, screening and research synthesis."
         },
-        "editorial_added_on": "2026-10-26"
+        "editorial_added_on": "2026-10-26",
+        "homepage_order": 1
       },
       "previewStyle": "workflow"
     },
@@ -6785,7 +6790,8 @@
           "zh": "实验前规划对照、随机化、阻断和有效重复。",
           "en": "Plan controls, randomization, blocking and replication."
         },
-        "editorial_added_on": "2026-10-26"
+        "editorial_added_on": "2026-10-26",
+        "homepage_order": 2
       },
       "previewStyle": "workflow"
     },
@@ -7890,7 +7896,8 @@
           "zh": "组织能从头执行的实验 Notebook 和解释单元格。",
           "en": "Structure reproducible experimental notebooks and cells."
         },
-        "editorial_added_on": "2026-10-26"
+        "editorial_added_on": "2026-10-26",
+        "homepage_order": 5
       },
       "previewStyle": "workflow"
     },
@@ -8168,7 +8175,8 @@
           "zh": "失败测试 → 最小实现 → 重构的工程闭环。",
           "en": "Red-green-refactor development with test evidence."
         },
-        "editorial_added_on": "2026-10-26"
+        "editorial_added_on": "2026-10-26",
+        "homepage_order": 3
       },
       "previewStyle": "workflow"
     },

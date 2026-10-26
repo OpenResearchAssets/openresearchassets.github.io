@@ -133,7 +133,8 @@
       "zh": "失败测试 → 最小实现 → 重构的工程闭环。",
       "en": "Red-green-refactor development with test evidence."
     },
-    "editorial_added_on": "2026-10-26"
+    "editorial_added_on": "2026-10-26",
+    "homepage_order": 3
   },
   "previewStyle": "workflow"
 }

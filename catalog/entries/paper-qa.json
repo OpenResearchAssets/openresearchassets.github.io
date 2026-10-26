@@ -88,7 +88,8 @@
       "zh": "需要根据多份论文回答问题并追踪证据来源。",
       "en": "Answering questions across scientific papers with traceable citations."
     },
-    "editorial_added_on": "2026-10-26"
+    "editorial_added_on": "2026-10-26",
+    "homepage_order": 6
   },
   "previewStyle": "workflow"
 }

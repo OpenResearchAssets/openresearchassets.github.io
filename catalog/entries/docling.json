@@ -88,7 +88,8 @@
       "zh": "需要尽量保留论文版面层次、表格与结构。",
       "en": "Preserving research document structure and tables."
     },
-    "editorial_added_on": "2026-10-26"
+    "editorial_added_on": "2026-10-26",
+    "homepage_order": 7
   },
   "previewStyle": "workflow"
 }

@@ -76,7 +76,8 @@
     "selection_reason": {
       "zh": "需要参考 Agent Skills 的公开组织方式和已有技能，但必须进一步筛选具体子 Skill。",
       "en": "Looking for established Agent Skills structures and task-specific candidates; each subskill still needs separate review."
-    }
+    },
+    "homepage_order": 4
   },
   "previewStyle": "workflow",
   "topics": [

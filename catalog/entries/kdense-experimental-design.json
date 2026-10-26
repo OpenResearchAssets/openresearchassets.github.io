@@ -133,7 +133,8 @@
       "zh": "实验前规划对照、随机化、阻断和有效重复。",
       "en": "Plan controls, randomization, blocking and replication."
     },
-    "editorial_added_on": "2026-10-26"
+    "editorial_added_on": "2026-10-26",
+    "homepage_order": 2
   },
   "previewStyle": "workflow"
 }

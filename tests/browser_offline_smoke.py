@@ -61,6 +61,8 @@ with sync_playwright() as pw:
         popular_data=[e for e in catalog_data['entries'] if e.get('curation',{}).get('track')=='popular']
         practice_data=[e for e in catalog_data['entries'] if e.get('curation',{}).get('track')=='practice']
         assert page.locator('#popular-skills .ora-skill-card').count()==min(8,len(popular_data))
+        assert 'Literature Review' in page.locator('#popular-skills').inner_text()
+        assert 'Experimental Design' in page.locator('#popular-skills').inner_text()
         assert page.locator('#practice-skills .ora-skill-card').count()==len(practice_data)
         assert page.locator('#popular-skills [data-star-repo]').count()==min(8,len(popular_data))
         assert page.locator('#skill-more').is_visible()==(len(popular_data)>8)

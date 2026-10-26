@@ -101,3 +101,7 @@ Card 要让用户看见**具体产出**和源文档入口，而不是只列项�
 ## 可公开审计的实践积累
 
 [Skill 来源审阅与入库流程](../workflows/skill-source-intake.md) 已在本公开项目实际用于 13 条独立技能的元数据核验，`tools/audit_skill_intake.py --check` 被 GitHub Actions 的 Canonical Data Checks 执行，台账见 [Skill 审阅报告](SKILL_INTAKE_AUDIT.md)。此证据只表明**筛选与记录审计工作流被应用**，不代表原始外部 SKILL.md 经过独立运行或具备任何模型效果保证。
+
+## 首页 Skills 的精选预览（2026-10-26）
+
+首页首屏只放 8 条人工确认的**跨任务代表**（目录 `curation.homepage_order`，是展示顺序，不是质量分数与 Star 排名），避免同一上游仓库的多条 Skill 因重复的母仓库 Star 占满整屏。用户筛选任意主题或点击「查看全部」时仍可看到全部入选资源，展开全榜以仓库 Star 排序。首页预览规则由资产唯一权威目录定义，不在 JS 维护第二份条目 ID 清单。

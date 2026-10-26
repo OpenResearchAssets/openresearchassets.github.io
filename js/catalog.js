@@ -209,7 +209,11 @@
     const allPopular=catalog.entries.filter(e=>e.curation?.track==='popular'&&match(e))
       .sort((a,b)=>b.curation.stars_snapshot-a.curation.stars_snapshot);
     const allPractice=catalog.entries.filter(e=>e.curation?.track==='practice'&&match(e));
-    const visiblePopular=(active||skillsExpanded)?allPopular:allPopular.slice(0,8);
+    // Homepage preview is intentionally representative of distinct research tasks,
+    // not just repeated parent-repository star counts. Filtering and Show all remain complete.
+    const featured=allPopular.filter(e=>Number.isInteger(e.curation?.homepage_order))
+      .sort((a,b)=>a.curation.homepage_order-b.curation.homepage_order);
+    const visiblePopular=(active||skillsExpanded)?allPopular:(featured.length===8?featured:allPopular.slice(0,8));
     if(popular)popular.innerHTML=visiblePopular.map(card).join('')||'<p class="empty-state">'+safe(empty())+'</p>';
     if(practice)practice.innerHTML=allPractice.map(card).join('')||'<p class="empty-state">'+safe(empty())+'</p>';
     const more=document.getElementById('skill-more');

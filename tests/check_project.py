@@ -358,6 +358,12 @@ for e in reviewed:
     for field in ('inputs','outputs','requirements','steps','checks'):
         if not all(ex.get(field,{}).get(lang) for lang in ('zh','en')):
             errors.append(f"{e['id']}: missing bilingual {field}")
+# Homepage is an editorial task-diverse preview, not a duplicate-star leaderboard.
+showcase=[e for e in entries if e.get('curation',{}).get('homepage_order') is not None]
+if len(showcase)!=8 or sorted(x['curation']['homepage_order'] for x in showcase)!=list(range(1,9)):
+    errors.append('skill homepage: expected exactly eight distinct curated preview positions')
+if len({e['id'] for e in showcase})!=8 or not all(e.get('curation',{}).get('track')=='popular' for e in showcase):
+    errors.append('skill homepage: invalid editorial selections')
 # Curated Skills: popularity snapshots are dated and practice items link to public work.
 popular=[e for e in entries if e.get('curation',{}).get('track')=='popular']
 practice=[e for e in entries if e.get('curation',{}).get('track')=='practice']

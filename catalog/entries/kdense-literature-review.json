@@ -133,7 +133,8 @@
       "zh": "定义检索、纳排与证据综合，避免凭印象判断研究空白。",
       "en": "Reproducible searches, screening and research synthesis."
     },
-    "editorial_added_on": "2026-10-26"
+    "editorial_added_on": "2026-10-26",
+    "homepage_order": 1
   },
   "previewStyle": "workflow"
 }
