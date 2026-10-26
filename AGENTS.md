@@ -49,7 +49,7 @@ OpenResearchAssets 是**面向人类与 AI 的科研全过程可复用资产库*
 
 19. **开放投稿与可追溯署名**：所有 GitHub 用户可使用 `.github/ISSUE_TEMPLATE/submit-asset.yml` 投稿；投稿进入人工审核，不能自动公开无授权图像。新入库条目在 `catalog/index.json` 写 `submission.github`（由 Issue / PR 实际作者核验）和 `submission.added_on`（正式收录日）；作品原作者单独记录，不得与投稿人混同。历史无法核实的值保持缺失，不能用 `catalog.generated_on` 冒充逐项投稿日期。不要伪造点赞或虚构互动计数。
 
-20. **轻量互动必须是真实身份与真计数**：详情页预留基于 GitHub Discussions 的 giscus 点赞（reactions）与评论；仅当 `config/community.json` 中配置完整且 `enabled=true` 时显示。必须事先启用仓库 Discussions、安装 giscus GitHub App 并使用真实 Repo ID / Category ID。配置完成前不展示假按钮与假数值；不做未鉴权的 localStorage 点赞。评论只放在独立资产详情，不侵占精选首页，优先纠错和具体复用经验。
+20. **开放互动与精选审核分离**：公开投稿 Issue 无需精选即可获得 GitHub Reaction（👍）与回复；精选资产详情已通过 GitHub Discussions 的 giscus 启用真实点赞和评论，使用 `specific` + `ora-asset:<id>` 保证同一路径 `asset.html?id=...` 下不同资产有不同讨论。`config/community.json` 保存经核实的仓库和分类 ID。Issue 与 Discussions 点赞是两个独立来源，不要伪装成统一排名/合并计数；没有授权不得伪造互动或使用 localStorage 假计数，先保持中文默认和英文可切换。
 
 **English summary:** Keep the public site Chinese-first with complete English UI support. Show only implemented capabilities. Preserve scientific fidelity, licensing and privacy. Prefer useful methods over benchmark-building. Validate real rendering and interaction before release.
 
