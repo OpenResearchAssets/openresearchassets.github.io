@@ -440,6 +440,14 @@ with sync_playwright() as pw:
         page.locator('.findings-feed').first.wait_for()
         assert page.locator('.findings-feed').count()==4
         assert page.locator('.findings-item').count()<=12
+        assert page.locator('html').get_attribute('lang')=='zh-CN'
+        real_data=json.loads(real_snapshot)
+        for i,key in enumerate(('papers','github','skills','workflows')):
+            row=real_data['feeds'][key]['items'][0]
+            if row.get('subtitle_zh') or row.get('detail_zh'):
+                expected=(row.get('subtitle_zh') or row.get('detail_zh'))[:35]
+                assert expected[:15] in page.locator('.findings-feed').nth(i).locator('.findings-item').first.inner_text(),(
+                    'top Findings should display Chinese translated body, not original English',key,label)
         assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),('findings-real-overview',label)
         if label in ('desktop','mobile'):
             page.screenshot(path=str(ROOT/'tests'/f'_local_findings_real_{label}.png'),full_page=True)
