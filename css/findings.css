@@ -219,3 +219,10 @@
   .findings-reading .findings-hero{padding-top:17px;padding-bottom:15px}
   .findings-reading .findings-hero h1{font-size:29px}
 }
+
+.findings-original-compare{margin:8px 0 7px}
+.findings-original-compare>summary{font-size:12px;font-weight:680;color:#6b8295;cursor:pointer;list-style:none;padding:7px 0}
+.findings-original-compare>summary::-webkit-details-marker{display:none}
+.findings-original-compare>summary:hover{text-decoration:underline}
+.findings-original-compare .findings-entry-full strong{font-size:13px;color:#3b536a;line-height:1.7}
+.findings-original-compare .findings-entry-full p{font-size:13px}
