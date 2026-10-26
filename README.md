@@ -9,6 +9,15 @@
 
 OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉案例、优秀项目主页、可编辑原创素材、研究工具与可用的工作流。**中文为主、英文为辅**；允许人类按任务搜索，也提供无需付费 API 的结构化 AI 读取入口。
 
+## 两种收录层级：Community 与 Curated
+
+| 入口 | 内容与权限 | 点赞与反馈 | 数据来源 |
+|---|---|---|---|
+| [Community · 社区发现](community.html) | 任何 GitHub 用户均可投稿，不需要编辑通过即可公开展示 | GitHub Issue 的真实 👍 / 评论，支持最新、热门排序 | GitHub Issues API |
+| [Curated · 编辑精选](index.html#gallery) | 编辑核实审美、科学表达、复用价值与版权后正式入库 | 独立资产详情页使用 giscus / Discussions | 唯一 `catalog/index.json` |
+
+**Gallery / Skills 是资产类型，Community / Curated 是发布层级**，两者正交。热门点赞是发现信号而非精选资格；未审核投稿只展示元数据和原始链接，不自动转载第三方图片，也不伪装审核结果。详情：[社区与审核规则](docs/COMMUNITY.md)。
+
 ## 两个核心入口
 
 | 产品支柱 | 你能直接得到什么 | 选品标准 |
