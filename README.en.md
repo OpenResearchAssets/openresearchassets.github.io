@@ -9,6 +9,8 @@ Research assets should be more than bookmarks. They should tell us **when to use
 
 **Open contributions:** Any GitHub user can [submit a research asset](https://openresearchassets.github.io/contribute.html) without repository write access. Assets are curated before publication; verified contributors and acceptance dates are recorded separately from original creators. [Community and feedback setup](docs/COMMUNITY.md).
 
+**Community vs. curated:** Pending submissions receive GitHub Issue reactions and comments without editorial approval; accepted asset detail pages use giscus / GitHub Discussions for independent reactions and comments. These counts are not automatically combined.
+
 ## Two core collections
 
 | Collection | What you get | Selection standard |
