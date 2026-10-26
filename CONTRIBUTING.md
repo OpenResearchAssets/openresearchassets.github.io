@@ -34,7 +34,7 @@ OpenResearchAssets 收录的不只是论文视觉素材，还包括科研流程�
 
 GitHub Issue 仅表示收到投稿，**不自动发布到精选资产库**。维护者审核原创者署名、科学真实性、设计价值、许可边界与具体复用收益后，才把条目写入 `catalog/index.json`。新增正式收录条目必须记录 `submission.github` 与 `submission.added_on`，建议记录 `submission.issue_url`，按需记 `submission.original_author`。已有条目无明确的历史记录时不要补造日期或归属于某位作者。
 
-目前公开反馈使用 GitHub Issue / PR；**站点尚未接入真正的单项点赞计数与站内评论系统**。不能把 GitHub 项目 Star 或浏览器本地计数冒充单项资产点赞。未来优先考虑 GitHub Discussions + giscus 做登录反应，详见产品迭代规则。
+**社区投稿不需要精选即可参与互动**：任何 GitHub 用户均可对公开投稿 Issue 点赞（👍 Reaction）和回复；正式精选资产的详情页已接入 giscus，使用 GitHub Discussions 的真实 Reactions 与评论。两套互动来源目前相互独立，不应将 Issue 点赞数误当作精选页面计数，也不应把项目 Star 或浏览器本地计数冒充资产点赞。具体说明见 [社区使用与互动](docs/COMMUNITY.md)。
 
 ## 提交资产
 
