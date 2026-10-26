@@ -1,11 +1,11 @@
 {
   "schema_version": "1",
-  "generated_at": "2026-10-26T06:10:16Z",
+  "generated_at": "2026-10-26T06:11:47Z",
   "feeds": {
     "papers": {
       "source": "Hugging Face Papers",
       "url": "https://huggingface.co/papers/trending",
-      "fetched_at": "2026-10-26T06:10:05Z",
+      "fetched_at": "2026-10-26T06:11:36Z",
       "status": "ok",
       "metric_note": "HF 社区投票 · 官方 trending 排序",
       "items": [
@@ -1415,7 +1415,7 @@
     "github": {
       "source": "GitHub Trending",
       "url": "https://github.com/trending?since=weekly",
-      "fetched_at": "2026-10-26T06:10:06Z",
+      "fetched_at": "2026-10-26T06:11:38Z",
       "status": "ok",
       "metric_note": "官方 weekly Trending 排名；可见时显示本周新增 Stars",
       "items": [
@@ -1593,7 +1593,7 @@
     "skills": {
       "source": "GitHub Search",
       "url": "https://github.com/search?q=topic%3Aagent-skills&type=repositories",
-      "fetched_at": "2026-10-26T06:10:09Z",
+      "fetched_at": "2026-10-26T06:11:40Z",
       "status": "ok",
       "metric_note": "近 60 天创建的 Skills 仓库，按累计 Stars 排序（非增长榜）",
       "items": [
@@ -1603,7 +1603,7 @@
           "subtitle": "A toolbox of film styles made in code for Claude Code: 59 ready to use, and your own. Each style is a style prompt plus a demo film made entirely in code by Claude Opus 5.5, with no video model. By Lemomo. · 一套用代码做片的风格工具箱：59 种现成风格，也能做出你自己的",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "JavaScript",
-          "value": 7607,
+          "value": 7608,
           "metric": "total stars",
           "detail": "A toolbox of film styles made in code: 59 ready to use, and your own. Pick a style or make one from scratch, bring your story, and let your coding agent direct. 59 种影片风格，每种都配一支完全用代码做出来的短片 · 🇨🇳 中文用户请看 简体中文说明 ⚠️ Built for Claude. The styles are tuned for Claude Opus 5.5; other models may not reproduce them well, so use them with care. 🆕 2026-10-22 · Edit & Documentary: 8 styles cut from real footage, documents and data. See them ↓ 🆕 2026-10-22 · Make a style your own: change a style or start blank, and keep it. See how ↓ 🆕 2026-10-16 · Evidence Films: 8 styles that film real material, every number sourced. See them ↓",
           "summary_source": "repository README",
@@ -1617,7 +1617,7 @@
           "subtitle": "Free SEO MCP server + open-source SEO and GEO skills for Claude: keyword research, rank tracking, audits, backlinks, AI visibility on your real GSC/GA4/ads data. claude mcp add ryze --transport http https://connector.get-ryze.ai/mcp",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Shell",
-          "value": 7282,
+          "value": 7283,
           "metric": "total stars",
           "detail": "Skip the setup: use the hosted Ryze MCP (Google sign-in, Search Console and GA4 connected in one step, approval-gated changes). Open-source SEO + GEO skills for Claude on a free SEO MCP server (the Ryze connector) — keyword research, rank tracking, site audits, backlinks, competitor gaps, AI visibility — running on your own Search Console, Analytics and ads data through the Ryze MCP, with DataForSEO built in for the data Google won't give you. No subscription for the tool. No markup on API calls. The skills are MIT — take them, change them, ship them.",
           "summary_source": "repository README",
@@ -1684,7 +1684,7 @@
           "subtitle": "De-AI writing skill for any Agent Skills-compatible agent (77+ via the Skills CLI), with native plugins for Claude Code, Codex, Grok Build, and Antigravity. Narrative-architecture repair for fiction, venue-matched rules for professional prose. Based on StoryScope (arXiv:2604.03136).",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 3478,
+          "value": 3479,
           "metric": "total stars",
           "detail": "A portable Agent Skill: any agent that speaks the standard can load it, and the Skills CLI, which supports 77+ agents, installs it with one command. Claude Code, Codex, Grok Build, Antigravity, and QwenPaw additionally get native plugin packaging. One canonical SKILL.md, no per-platform forks. Four operations: write, review (diagnose only), refactor (minimal edits), recreate (full rewrite). Every popular humanizer edits word choice and syntax. StoryScope (Russell et al., 2026: 61,608 stories, human + 5 frontier LLMs) showed that a classifier using narrative-structure features alone detects AI fiction at 93.2% macro-F1. In the same study's LAMP-edited condition, where human editors had rewritten the surface style, detection dropped only from 95.5% to 93.9%. The tells that survive are architectural: themes explained by the narrator, single-track causally-tidy plots, emotions rendered only as bodily sensation, no real-world references, no reader, linear time, endings resolved by protagonist growth and acceptance. sepia turns those measured gaps, together with the related studies digested in research/, into a three-pass writing and revision protocol for fiction:",
           "summary_source": "repository README",
@@ -1788,7 +1788,7 @@
     "workflows": {
       "source": "GitHub Search",
       "url": "https://github.com/search?q=research+workflow&type=repositories",
-      "fetched_at": "2026-10-26T06:10:13Z",
+      "fetched_at": "2026-10-26T06:11:44Z",
       "status": "ok",
       "metric_note": "近 60 天创建的工作流项目，按累计 Stars 排序（非 Trending 官方榜）",
       "items": [
