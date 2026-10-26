@@ -20,7 +20,12 @@ PER_SOURCE_LIMIT = {
 
 
 def is_chinese(text: str) -> bool:
-    return bool(re.search(r"[\u3400-\u9fff]", text or ""))
+    # A bilingual README with one Chinese label is still predominantly English.
+    # Count visible language content rather than treating one Han character as
+    # proof that the full paragraph is translated.
+    han = len(re.findall(r"[\u3400-\u9fff]", text or ""))
+    latin = len(re.findall(r"[A-Za-z]", text or ""))
+    return han >= 2 and han / max(1, han + latin) >= 0.32
 
 
 def load_translator():
