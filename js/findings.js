@@ -215,7 +215,7 @@
     render();
     const headingTarget=document.querySelector('.findings-shell');
     if(headingTarget&&headingTarget.getBoundingClientRect().top<-100)
-      headingTarget.scrollIntoView({behavior:'smooth',block:'start'});
+      headingTarget.scrollIntoView({behavior:'auto',block:'start'});
   }
   filters.forEach(button=>button.addEventListener('click',()=>setFeed(button.dataset.feed)));
   root.addEventListener('click',event=>{
