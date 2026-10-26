@@ -1,11 +1,11 @@
 {
   "schema_version": "1",
-  "generated_at": "2026-10-26T05:00:21Z",
+  "generated_at": "2026-10-26T05:01:12Z",
   "feeds": {
     "papers": {
       "source": "Hugging Face Papers",
       "url": "https://huggingface.co/papers/trending",
-      "fetched_at": "2026-10-26T05:00:14Z",
+      "fetched_at": "2026-10-26T05:01:05Z",
       "status": "ok",
       "metric_note": "HF 社区投票 · 官方 trending 排序",
       "items": [
@@ -1113,7 +1113,7 @@
     "github": {
       "source": "GitHub Trending",
       "url": "https://github.com/trending?since=weekly",
-      "fetched_at": "2026-10-26T05:00:16Z",
+      "fetched_at": "2026-10-26T05:01:07Z",
       "status": "ok",
       "metric_note": "官方 weekly Trending 排名；可见时显示本周新增 Stars",
       "items": [
@@ -1254,7 +1254,7 @@
     "skills": {
       "source": "GitHub Search",
       "url": "https://github.com/search?q=topic%3Aagent-skills&type=repositories",
-      "fetched_at": "2026-10-26T05:00:17Z",
+      "fetched_at": "2026-10-26T05:01:09Z",
       "status": "ok",
       "metric_note": "近 60 天创建的 Skills 仓库，按累计 Stars 排序（非增长榜）",
       "items": [
@@ -1275,7 +1275,7 @@
           "subtitle": "Free SEO MCP server + open-source SEO and GEO skills for Claude: keyword research, rank tracking, audits, backlinks, AI visibility on your real GSC/GA4/ads data. claude mcp add ryze --transport http https://connector.get-ryze.ai/mcp",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Shell",
-          "value": 7263,
+          "value": 7265,
           "metric": "total stars",
           "detail": "Skip the setup: use the hosted Ryze MCP (Google sign-in, Search Console and GA4 connected in one step, approval-gated changes). Open-source SEO + GEO skills for Claude on a free SEO MCP server (the Ryze connector) — keyword research, rank tracking, site audits, backlinks, competitor gaps, AI visibility — running on your own Search Console, Analytics and ads data through the Ryze MCP, with DataForSEO built in for the data Google won't give you. No subscription for the tool. No markup on API calls. The skills are MIT — take them, change them, ship them.",
           "summary_source": "repository README"
@@ -1286,7 +1286,7 @@
           "subtitle": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 5518,
+          "value": 5519,
           "metric": "total stars",
           "detail": "Eleven Claude skills that clone any app. Free, MIT, no signup, no API key, nothing to connect. One reverse-engineers the app you want to clone. One rebuilds it. One tests it for bugs. And one is the Entrepreneur: it reads what the app's users hate and fixes it in yours, so you have an app you can sell. In between, the others plan the stack and the database, rebuild the design system, wire up auth and payments, score your clone against the original, give it a name and a brand of its own, write the landing page and the store listing, and put it live on your domain.",
           "summary_source": "repository README"
@@ -1341,7 +1341,7 @@
           "subtitle": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 2887,
+          "value": 2888,
           "metric": "total stars",
           "detail": "Give your coding agent a video editor. Claude Code, Cursor, Codex or any MCP client edits your footage with local FFmpeg, then checks its own output. No cloud · No API keys · Python standard library Left half is the input, right half is what the command produced. All 66 before/after demos, with the exact command under each one → — all of it generated from synthetic footage by python3 demos/build.py, so you can rebuild every frame of it yourself. ffmpeg-skill is an Agent Skill for Claude Code, Cursor, Codex and any agent that reads SKILL.md. It teaches the agent a fixed workflow (probe → edit losslessly where possible → check → verify) and ships 42 tools that do the actual work with ffmpeg / ffprobe: cut, join, silence removal, fit to duration and aspect, captions and karaoke, overlays and motion graphics, HDR → SDR and LUTs, audio clean-up and typed dynamics, sync with drift correction, multicam, loudness, delivery checks, whole-edit project rendering, batch folders. Every tool is also callable as an MCP tool (tools/list advertises a core 12 by default to keep client context small, with FFMPEGSKILLMCPFULL=1 listing all 42; every tool is reachable by name through tools/call either way), and the whole set is described by a machine-readable contract.",
           "summary_source": "repository README"
@@ -1392,7 +1392,7 @@
           "subtitle": "UI design skill for Claude Code, Codex and other AI agents: explore distinct directions, compare them side by side, refine against real screenshots. 给 AI Agent 用的 UI 设计 Skill。",
           "badge": "GitHub · 新创建 Skills 仓库",
           "author": "Python",
-          "value": 2259,
+          "value": 2260,
           "metric": "total stars"
         },
         {
@@ -1409,7 +1409,7 @@
     "workflows": {
       "source": "GitHub Search",
       "url": "https://github.com/search?q=research+workflow&type=repositories",
-      "fetched_at": "2026-10-26T05:00:21Z",
+      "fetched_at": "2026-10-26T05:01:12Z",
       "status": "ok",
       "metric_note": "近 60 天创建的工作流项目，按累计 Stars 排序（非 Trending 官方榜）",
       "items": [
