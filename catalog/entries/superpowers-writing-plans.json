@@ -135,5 +135,17 @@
     },
     "editorial_added_on": "2026-10-26"
   },
-  "previewStyle": "workflow"
+  "previewStyle": "workflow",
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-26",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+  },
+  "sourceIdentity": {
+    "origin": "github-source",
+    "publisher": "obra",
+    "publisher_url": "https://github.com/obra",
+    "repository": "obra/superpowers",
+    "repository_url": "https://github.com/obra/superpowers"
+  }
 }

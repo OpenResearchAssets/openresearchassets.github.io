@@ -49,7 +49,10 @@
     "reuse": "reference-only",
     "preview": "external-linked-reference",
     "third_party_media": "external-linked-not-relicensed",
-    "source_image_url": "https://depth-anything-3.github.io/assets/teaser.png"
+    "source_image_url": "https://depth-anything-3.github.io/assets/teaser.png",
+    "attribution": "Haotong Lin, Sili Chen, Jun Hao Liew, Donny Y. Chen, Zhenyu Li, Guang Shi, Jiashi Feng, Bingyi Kang · Depth Anything 3 / ByteDance Seed",
+    "original_file": "https://depth-anything-3.github.io/assets/teaser.png",
+    "verification": "Image and research-team credits checked against the official project website. Author-hosted image linked, not relicensed."
   },
   "applicability": {
     "use_when": {
@@ -101,5 +104,62 @@
   "topics": [
     "scientific-visualization",
     "three-d-vision"
-  ]
+  ],
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-24",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/97f024a4a176a75f181b7b8782b199ce90a39f92"
+  },
+  "sourceIdentity": {
+    "origin": "external-site",
+    "source_host": "depth-anything-3.github.io"
+  },
+  "figureIdentity": {
+    "type": "project-website-figure",
+    "original_name": "Depth Anything 3 official overview teaser · assets/teaser.png",
+    "original_source": "https://depth-anything-3.github.io/assets/teaser.png",
+    "capture_date": "2026-10-27",
+    "credit": "Haotong Lin, Sili Chen, Jun Hao Liew, Donny Y. Chen et al. · Depth Anything 3 / ByteDance Seed",
+    "modifications": "none; original image is externally linked"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "用多视角图像、深度与 ray map、三维重建和指标建立连续的视觉证据链，让读者先理解空间输出，再理解方法。",
+      "en": "Inputs, depth/ray maps, 3D reconstruction and metrics form a coherent evidence chain before architectural details."
+    },
+    "composition": {
+      "zh": [
+        "顶部以多个视角的序列定义输入，聚焦统一模型而非罗列模块。",
+        "深度、光线与点云等不同空间表示通过同一场景串联，信息对应关系明确。",
+        "量化比较与视觉重建各司其职，避免用好看的渲染图代替精度结论。"
+      ],
+      "en": [
+        "The top input sequence frames the any-view setting without module clutter.",
+        "The same scene relates depth, ray maps and reconstructed geometry.",
+        "Metric plots and rendered results serve separate evidential purposes."
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "选出一个具体任务，固定一组同源且视角明确的输入、表示与输出。",
+        "使用真实模型预测或实测中间结果；图中明确标记预测与测量的区别。",
+        "按论文栏宽测试标签和图像细节是否可读，并给量化结论独立证据。"
+      ],
+      "en": [
+        "Pick matched, source-grounded inputs, representations and outputs for one task.",
+        "Distinguish measured outputs from predictions and do not invent geometry.",
+        "Check readability at publication size; support quantitative claims independently."
+      ]
+    },
+    "verification": {
+      "zh": [
+        "官网图片版权仍属于原作者，本站仅链接来源，不表示获取再分发授权。",
+        "效果图不能独立证明深度精度、相机姿态性能或跨域泛化。"
+      ],
+      "en": [
+        "The author's media remains externally linked, not relicensed here.",
+        "A teaser alone does not establish depth accuracy, camera-pose precision or generalization."
+      ]
+    }
+  }
 }

@@ -131,5 +131,17 @@
     },
     "editorial_added_on": "2026-10-26"
   },
-  "previewStyle": "workflow"
+  "previewStyle": "workflow",
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-26",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+  },
+  "sourceIdentity": {
+    "origin": "github-source",
+    "publisher": "anthropics",
+    "publisher_url": "https://github.com/anthropics",
+    "repository": "anthropics/skills",
+    "repository_url": "https://github.com/anthropics/skills"
+  }
 }

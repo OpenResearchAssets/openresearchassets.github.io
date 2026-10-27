@@ -143,5 +143,14 @@
   "topics": [
     "scientific-visualization",
     "three-d-vision"
-  ]
+  ],
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-25",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/d1d8fa009fe5459a2e4a38fcceca858fd688b891"
+  },
+  "sourceIdentity": {
+    "origin": "external-site",
+    "source_host": "vgg-t.github.io"
+  }
 }

@@ -99,5 +99,15 @@
       ".github/workflows/validate.yml"
     ]
   },
-  "previewStyle": "workflow"
+  "previewStyle": "workflow",
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-26",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/ffb79ffa4db1a7afcde559d5b5d84be2392391da"
+  },
+  "sourceIdentity": {
+    "origin": "project-original",
+    "publisher": "OpenResearchAssets",
+    "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+  }
 }

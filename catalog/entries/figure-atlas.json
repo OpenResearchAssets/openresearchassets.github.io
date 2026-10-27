@@ -80,5 +80,14 @@
   },
   "topics": [
     "scientific-visualization"
-  ]
+  ],
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-24",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+  },
+  "sourceIdentity": {
+    "origin": "external-site",
+    "source_host": "runtimewarning.github.io"
+  }
 }

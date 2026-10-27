@@ -91,5 +91,15 @@
   "topics": [
     "scientific-visualization",
     "paper-writing"
-  ]
+  ],
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-25",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/ef47cc21067ea5e956f3938ce62c703b8fc231d1"
+  },
+  "sourceIdentity": {
+    "origin": "project-original",
+    "publisher": "OpenResearchAssets",
+    "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+  }
 }

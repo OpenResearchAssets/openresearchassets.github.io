@@ -506,6 +506,23 @@ if not all(value in nav_js for value in ("key:'curated'", "key:'community'", "ke
 if 'data/findings.json' not in findings_js:
     errors.append('Findings must load the documented static provenance snapshot')
 
+# Catalog Git history is evidence of indexing, not of a public Issue submission.
+for entry in entries:
+    history=entry.get('catalogHistory',{})
+    ident=entry.get('sourceIdentity',{})
+    if not re.fullmatch(r'2026-10-(24|25|26|27)',history.get('first_recorded_on','')):
+        errors.append(f"{entry['id']}: unverified first-indexed date")
+    if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9-]{0,38}',history.get('committed_by','')):
+        errors.append(f"{entry['id']}: missing Git commit account")
+    if not re.fullmatch(r'https://github[.]com/OpenResearchAssets/openresearchassets[.]github[.]io/commit/[a-f0-9]{40}',history.get('commit_url','')):
+        errors.append(f"{entry['id']}: missing first-index commit evidence")
+    if ident.get('origin') not in ('project-original','github-source','external-site'):
+        errors.append(f"{entry['id']}: missing source identity")
+    if ident.get('origin')=='github-source' and not ident.get('repository_url','').startswith('https://github.com/'):
+        errors.append(f"{entry['id']}: untraceable original repository")
+    if entry.get('kind') in ('visual-reference','website-reference') and (not entry.get('caseStudy') or not entry.get('figureIdentity')):
+        errors.append(f"{entry['id']}: gallery case study or image identity missing")
+
 if errors:
     for e in errors:print('FAIL:',e)
     raise SystemExit(1)
