@@ -108,7 +108,8 @@ for e in entries:
             if not src.startswith('https://'):errors.append(f'{where}: remote visual must use HTTPS')
             if urlparse(src).hostname not in {
                 'depth-anything-3.github.io','media.luminis-sim.com','tianxingchen.github.io',
-                'supermimic.github.io','raw.githubusercontent.com','instruct-pix2pix.timothybrooks.com','opengraph.githubassets.com'
+                'supermimic.github.io','raw.githubusercontent.com','instruct-pix2pix.timothybrooks.com','opengraph.githubassets.com',
+                'figures.semanticscholar.org','moveit.ai'
             }:errors.append(f'{where}: untrusted remote image host {src}')
             if e.get('rights',{}).get('preview')!='external-linked-reference':
                 errors.append(f'{where}: missing external rights status')
