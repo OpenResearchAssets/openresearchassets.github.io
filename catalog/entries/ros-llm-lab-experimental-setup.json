@@ -1,0 +1,176 @@
+{
+  "id": "ros-llm-lab-experimental-setup",
+  "title": "ROS-LLM · Figure 3 实机实验环境标注",
+  "kind": "visual-reference",
+  "stages": [
+    "experiments",
+    "writing",
+    "communication"
+  ],
+  "domains": [
+    "robotics",
+    "agents"
+  ],
+  "topics": [
+    "scientific-visualization",
+    "reproducible-experiments",
+    "robot-learning"
+  ],
+  "tasks": [
+    "experimental-setup-figure",
+    "robot-hardware-annotation",
+    "real-world-robot-demonstration",
+    "environment-explanation"
+  ],
+  "description": {
+    "zh": "ROS-LLM 论文 Figure 3：一张真实实验照片中逐一定位 UR5、Robotiq 2F-85 夹爪、咖啡机、杯子、柜子和 AprilTag。通过实体标注把本体、末端、任务对象与环境关系放到同一空间语境。",
+    "en": "ROS-LLM paper Figure 3: a labeled real-world setup showing the UR5, Robotiq 2F-85 gripper, coffee machine, mug, cabinet, and AprilTags. Hardware, task objects, and their spatial context are legible at a glance."
+  },
+  "keywords": {
+    "zh": [
+      "ROS-LLM",
+      "UR5",
+      "实验设置图",
+      "实机照片",
+      "机器人硬件",
+      "AprilTag",
+      "场景标注",
+      "夹爪",
+      "科研视觉",
+      "复现性"
+    ],
+    "en": [
+      "ROS-LLM",
+      "UR5",
+      "experimental setup",
+      "real-robot laboratory",
+      "hardware annotation",
+      "AprilTags",
+      "Robotiq gripper",
+      "robotics figure"
+    ]
+  },
+  "year": "2024",
+  "language": "zh+en",
+  "links": {
+    "source": "https://arxiv.org/abs/2406.19741",
+    "paper": "https://arxiv.org/abs/2406.19741",
+    "officialFigure": "https://www.dfki.de/fileadmin/user_upload/import/16396_2406.19741v3.pdf#page=9",
+    "linkedPreview": "https://figures.semanticscholar.org/da7cf58776fbb1a4aacd0e9c6a7fe77f2ea904ab/9-Figure3-1.png"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "external-linked-not-relicensed",
+    "source_image_url": "https://figures.semanticscholar.org/da7cf58776fbb1a4aacd0e9c6a7fe77f2ea904ab/9-Figure3-1.png",
+    "original_file": "https://www.dfki.de/fileadmin/user_upload/import/16396_2406.19741v3.pdf#page=9",
+    "attribution": "Christopher E. Mower et al. · ROS-LLM (2024); figure from the original paper",
+    "verification": "Paper Figure 3 caption and visible item labels were checked against the primary PDF. Externally linked via a figure index; not relicensed."
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "需要介绍真实机器人实验的硬件、本体、末端、目标物体及场景相对位置",
+        "论文的 Experimental Setup / Implementation Details 需要读者快速理解环境",
+        "对外展示实体工作台、设备配置与视觉定位标志"
+      ],
+      "en": [
+        "Explaining the hardware, gripper, task objects and workspace geometry of a real robot setup",
+        "Writing an Experimental Setup / Implementation Details illustration",
+        "Presenting a physical workcell, equipment and fiducial markers"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "以完整实拍建立事实基底，仅用少量贴近实体的白底标注叠加说明，不用图标替代真实设备",
+        "同时标出机器人本体、执行器、任务对象及定位标志，让读者理解可操作空间",
+        "摄影图承担场景真实性，简洁文字承担语义索引；标注应避开关键交互位置并保持可读"
+      ],
+      "en": [
+        "Use an actual photo as the factual base, with small, clearly placed labels rather than symbolic hardware icons",
+        "Identify embodiment, end-effector, task objects and fiducials together to communicate reachable workspace",
+        "Separate visual evidence from semantic callouts; keep labels away from important contacts"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "真实照片与标签只证明实验环境存在，不证明任务成功、定位精度或安全避障能力",
+        "如果场景极其拥挤，可分成总览与一张局部放大图，不要堆积数十个标签",
+        "借鉴标注方法而不是把第三方实验室照片当作自己的实验图；外链不等于转载许可"
+      ],
+      "en": [
+        "A labeled photo does not establish success rates, calibration quality or collision avoidance",
+        "For crowded workcells, separate a wide shot and close-up rather than adding dozens of callouts",
+        "Reuse the annotation approach, not another lab's photo as evidence of your own experiment"
+      ]
+    }
+  },
+  "visual": {
+    "src": "https://figures.semanticscholar.org/da7cf58776fbb1a4aacd0e9c6a7fe77f2ea904ab/9-Figure3-1.png",
+    "kind": "external-reference-image",
+    "alt": {
+      "zh": "ROS-LLM 论文 Figure 3：UR5 实机环境，附 Robotiq、AprilTag、咖啡机、杯子及柜子标注",
+      "en": "ROS-LLM Figure 3: labeled UR5 lab with Robotiq gripper, AprilTags, coffee machine, mug and cabinet"
+    },
+    "label": {
+      "zh": "论文 Figure 3 · 原作者外链",
+      "en": "PAPER FIGURE 3 · LINKED SOURCE"
+    }
+  },
+  "curation": {
+    "visual_category": "experimental-setup"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "优秀之处不在视觉特效，而是单张真实照片实现高信息密度、低解释成本、明确硬件身份与场景语义。",
+      "en": "Its strength is not special effects but dense, low-friction grounding of hardware identity and task context in a single authentic image."
+    },
+    "composition": {
+      "zh": [
+        "实物照片充满画面，机械臂占左侧视觉主线，桌面任务环境占右侧与前景",
+        "白底黑字的小型标签直接贴近对象，统一样式降低识读成本",
+        "动作对象、操作器和定位标志同时在画面内，可作为实验可复现信息的索引"
+      ],
+      "en": [
+        "The arm anchors the left side while the workcell and task objects occupy the right and foreground",
+        "Consistent white labels immediately identify each part without redesigning the actual scene",
+        "Actuators, objects and fiducials appear together as a reproducibility-oriented index"
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "选择真实实验的一张无遮挡全景，确认所有关键硬件可辨认",
+        "统一镜头/视角后用矢量文字框标注：机器人型号、末端、主要场景物体与定位装置",
+        "在 caption 独立说明拍摄来源、实验任务和没有由图片证明的技术指标"
+      ],
+      "en": [
+        "Capture one unobstructed real workcell overview",
+        "Overlay editable callouts naming the robot, end-effector, main objects and fiducials",
+        "Caption the provenance, task context and metrics the photograph cannot demonstrate"
+      ]
+    },
+    "verification": {
+      "zh": [
+        "已经核实为 ROS-LLM 论文 Figure 3，而非作者的 Method Diagram 或 Figure 1",
+        "本条原图通过论文来源及外部图像索引链接显示；不保存、改编或再授权第三方原始图像"
+      ],
+      "en": [
+        "Verified as paper Figure 3, not Figure 1 or a method diagram",
+        "Linked from the paper and an external figure index; original third-party image is not redistributed or relicensed"
+      ]
+    }
+  },
+  "figureIdentity": {
+    "type": "paper-figure",
+    "original_name": "Figure 3: Real-world laboratory setup used in our experiments",
+    "original_source": "https://www.dfki.de/fileadmin/user_upload/import/16396_2406.19741v3.pdf#page=9",
+    "capture_date": "2026-10-27",
+    "credit": "Christopher E. Mower et al. · ROS-LLM",
+    "modifications": "none; externally linked source image"
+  },
+  "submission": {
+    "github": "Suchenl",
+    "added_on": "2026-10-27",
+    "original_author": "Christopher E. Mower and ROS-LLM coauthors"
+  }
+}
