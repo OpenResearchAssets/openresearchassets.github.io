@@ -110,5 +110,15 @@
       "zh": "首轮两项任务执行成功，7/7 客观检查通过；属于脚本化试运行，不是模型能力改进实验。",
       "en": "Two scripted tasks passed 7/7 checks; this does not establish model capability improvement."
     }
+  },
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-26",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/4e3d0b5d9cb330fab6da1319a40444aba6ca5d1f"
+  },
+  "sourceIdentity": {
+    "origin": "project-original",
+    "publisher": "OpenResearchAssets",
+    "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
   }
 }

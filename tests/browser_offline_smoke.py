@@ -125,7 +125,7 @@ with sync_playwright() as pw:
         assert 'HyperNeRF' in page.locator('#reference-grid').inner_text()
         page.locator('#facet-reset').click()
         page.locator('#catalog-more').click()
-        assert page.locator('.ora-resource-card').count()==28
+        assert page.locator('.ora-resource-card').count()==sum(e['kind'] in ('visual-reference','website-reference','editable-template') or (e['kind']=='resource-index' and e['id']!='research-skills-directory') for e in catalog_data['entries'])
         page.locator('#facet-kind').select_option('website-reference')
         assert page.locator('.ora-resource-card').count()==5
         assert page.locator('.ora-resource-card').filter(has_text='Nerfies').locator('.ora-resource-visual').get_attribute('href')=='https://nerfies.github.io/'

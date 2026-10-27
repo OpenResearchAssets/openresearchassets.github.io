@@ -25,29 +25,57 @@
   const facets = () => catalog.facets || {};
   const facetText = (group,key) => local((facets()[group] || {})[key]) || key;
   const kind = entry => facetText('kinds',entry.kind);
-  // 投稿身份与收录时间分离；历史不可核实的信息不推测。
+  // Provenance: catalog commit, reviewed submission and original creators are distinct.
   const contributorName = entry => {
-    const name=entry.submission?.github;
-    return typeof name==='string' && /^[a-z\d](?:[a-z\d-]{0,38})$/i.test(name) ? name : '';
+    const name=entry.submission?.github || entry.catalogHistory?.committed_by;
+    return typeof name==='string' && /^[A-Za-z0-9][A-Za-z0-9-]{0,38}$/.test(name) ? name : '';
   };
   const evidenceUrl = value => {
     const u=safeUrl(value);
-    return /^https:\/\/github\.com\/OpenResearchAssets\/openresearchassets\.github\.io\/(?:issues|pull)\/\d+$/.test(u) ? u : '';
+    return /^https:\/\/github[.]com\/OpenResearchAssets\/openresearchassets[.]github[.]io\/(?:issues|pull)\/[0-9]+$/.test(u) ? u : '';
   };
+  const commitUrl = value => {
+    const u=safeUrl(value);
+    return /^https:\/\/github[.]com\/OpenResearchAssets\/openresearchassets[.]github[.]io\/commit\/[a-f0-9]{40}$/.test(u) ? u : '';
+  };
+  const isoDate = value => typeof value==='string' && /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(value) ? value : '';
   function provenance(entry, detailed=false) {
-    const user=contributorName(entry);
-    const date=entry.submission?.added_on;
-    const verifiedDate=typeof date==='string' && /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : '';
-    if(!user && !verifiedDate && !detailed) return '';
-    const userPart=user
-      ? '<a class="ora-contributor" href="https://github.com/'+safe(user)+'" target="_blank" rel="noopener noreferrer"><img src="https://github.com/'+safe(user)+'.png?size=40" alt="" width="20" height="20" loading="lazy">@'+safe(user)+'</a>'
-      : safe(tr('历史档案 · 投稿者未记录','Legacy record · contributor not recorded'));
-    const datePart=verifiedDate
-      ? '<time datetime="'+safe(verifiedDate)+'">'+safe(verifiedDate)+'</time>'
-      : safe(tr('历史收录日期待追溯','Historical publication date not verified'));
+    const history=entry.catalogHistory || {};
+    const who=contributorName(entry);
+    const hasSubmission=Boolean(entry.submission?.github);
+    const date=isoDate(entry.submission?.added_on || history.first_recorded_on);
     const review=evidenceUrl(entry.submission?.issue_url);
-    return '<div class="ora-provenance"><span>'+safe(tr('投稿','Submitted by'))+' '+userPart+'</span><span>'+safe(tr('收录','Added on'))+' '+datePart+'</span>'+
-      (review?'<a href="'+safe(review)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('审核记录','Review history'))+' ↗</a>':'')+'</div>';
+    const commit=commitUrl(history.commit_url);
+    if(!who && !date && !detailed)return '';
+    const credit=who ? '<a class="ora-contributor" href="https://github.com/'+safe(who)+'" target="_blank" rel="noopener noreferrer">@'+safe(who)+'</a>'
+      : safe(tr('贡献者待追溯','Contributor not verified'));
+    const stamp=date ? '<time datetime="'+safe(date)+'">'+safe(date)+'</time>' : safe(tr('日期待追溯','Date unverified'));
+    const selected=isoDate(entry.curation?.selected_on);
+    return '<div class="ora-provenance"><span>'+safe(hasSubmission?tr('投稿者','Submitted by'):tr('目录提交者','Catalog contributor'))+' '+credit+'</span>'+
+      '<span>'+safe(hasSubmission?tr('正式收录','Accepted on'):tr('首次公开入库','First indexed'))+' '+stamp+'</span>'+
+      (selected && selected!==date ? '<span>'+safe(tr('精选','Selected'))+' <time datetime="'+safe(selected)+'">'+safe(selected)+'</time></span>':'')+
+      (detailed && commit ? '<a href="'+safe(commit)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('查看原始入库提交','Verify first catalog commit'))+' ↗</a>':'')+
+      (review ? '<a href="'+safe(review)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('审核记录','Submission review'))+' ↗</a>':'')+'</div>';
+  }
+  function sourceSidebar(entry) {
+    const src=entry.sourceIdentity || {};
+    const authored=src.origin==='project-original';
+    const creator=entry.submission?.original_author || entry.figureIdentity?.credit || (authored ? 'OpenResearchAssets' : '');
+    const owner=src.publisher;
+    const ownerUrl=safeUrl(src.publisher_url);
+    const originalMedia=safeUrl(entry.rights?.source_image_url);
+    const evidenceScope=authored ? tr('本站原创文件或工作流，遵守单条许可。','Original project file or workflow; follow item-level license.')
+      : src.origin==='github-source' ? tr('上游 GitHub 账号不是个人作者署名的证明。','GitHub repository ownership does not establish individual authorship.')
+      : tr('来源站点不等于作品版权归属证明。','The source host does not establish authorship or license.');
+    return (creator ? '<dt>'+safe(tr('原作者 / 团队','Original creator / team'))+'</dt><dd>'+safe(creator)+'</dd>' : '')+
+      (owner && ownerUrl ? '<dt>'+safe(authored?tr('本站维护组织','Catalog organization'):tr('上游仓库账号','Upstream repository owner'))+'</dt><dd><a href="'+safe(ownerUrl)+'" target="_blank" rel="noopener noreferrer">'+safe(owner)+'</a></dd>' : '')+
+      (!owner && src.source_host ? '<dt>'+safe(tr('来源网站','Source website'))+'</dt><dd>'+safe(src.source_host)+'</dd>' : '')+
+      (entry.year ? '<dt>'+safe(tr('作品关联年份','Reference year'))+'</dt><dd>'+safe(entry.year)+'</dd>' : '')+
+      (entry.curation?.stars_checked_on ? '<dt>'+safe(tr('Stars 核对日','Stars checked on'))+'</dt><dd>'+safe(entry.curation.stars_checked_on)+'</dd>' : '')+
+      (entry.execution?.source_checked_on ? '<dt>'+safe(tr('Skill 源文件核对日','Skill source checked on'))+'</dt><dd>'+safe(entry.execution.source_checked_on)+'</dd>' : '')+
+      (originalMedia && originalMedia!==safeUrl(entry.links?.officialFigure) ? '<dt>'+safe(tr('预览素材出处','Preview media source'))+'</dt><dd><a href="'+safe(originalMedia)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('打开上游原图','Open original image'))+' ↗</a></dd>' : '')+
+      '<dt>'+safe(tr('来源身份说明','Attribution scope'))+'</dt><dd>'+safe(evidenceScope)+'</dd>'+
+      (entry.catalogHistory?.first_recorded_on ? '<dt>'+safe(tr('首次入库日期口径','Indexing date definition'))+'</dt><dd>'+safe(tr('根据公开目录的首次 Git 提交核对；不是论文发表或第三方投稿日期。','Based on the first public catalog Git commit, not the paper publication date or third-party submission.'))+'</dd>' : '');
   }
 
   function media(entry) {
@@ -379,12 +407,12 @@
         ' · <a href="'+safe(e.figureIdentity?.original_source||e.visual.src)+'" target="_blank" rel="noopener noreferrer">'+
         safe(tr('打开官方原始来源','Open verified original source'))+' ↗</a></p>' : '')+baseLessons+editorial+'</section>'+
       '<aside class="ora-detail-sidebar"><h2>'+safe(tr('资产档案','Asset metadata'))+'</h2>'+
-      '<dl>'+(e.submission?.original_author ? '<dt>'+safe(tr('原作者','Original creator'))+'</dt><dd>'+safe(e.submission.original_author)+'</dd>':'')+'<dt>'+safe(tr('科研阶段','Stages'))+'</dt><dd>'+e.stages.map(x=>safe(facetText('stages',x))).join(' · ')+'</dd>'+
+      '<dl>'+sourceSidebar(e)+'<dt>'+safe(tr('科研阶段','Stages'))+'</dt><dd>'+e.stages.map(x=>safe(facetText('stages',x))).join(' · ')+'</dd>'+
       '<dt>'+safe(tr('领域','Domains'))+'</dt><dd>'+e.domains.map(x=>safe(facetText('domains',x))).join(' · ')+'</dd>'+      '<dt>'+safe(tr('主题','Topics'))+'</dt><dd>'+(e.topics||[]).map(x=>safe(facetText('topics',x))).join(' · ')+'</dd>'+      (e.curation?.type?'<dt>'+safe(tr('能力类型','Capability type'))+'</dt><dd>'+safe(e.curation.type)+'</dd>':'')+
       '<dt>'+safe(tr('使用性质','Reuse'))+'</dt><dd>'+safe(e.rights?.reuse || 'unknown')+'</dd>'+
       '<dt>'+safe(tr('素材来源与边界','Asset media status'))+'</dt><dd>'+safe(rightsNote)+'</dd>'+
       (e.figureIdentity?'<dt>'+safe(tr('图像准确身份','Exact image identity'))+'</dt><dd>'+safe(e.figureIdentity.original_name)+'</dd>'+
-        '<dt>'+safe(tr('原作者 / 来源','Author / source'))+'</dt><dd>'+safe(e.figureIdentity.credit)+'</dd>'+
+        
         '<dt>'+safe(tr('截图或裁切处理','Preview transformations'))+'</dt><dd>'+safe(e.figureIdentity.modifications)+'</dd>'+
         '<dt>'+safe(tr('获取时间','Reference date'))+'</dt><dd>'+safe(e.figureIdentity.capture_date)+'</dd>':'')+'</dl>'+
       '<div class="ora-detail-links">'+Object.entries(e.links || {}).map(([key,url])=>link(url,{source:tr('原始来源','Original source'),paper:tr('论文','Paper'),officialFigure:tr('原始 Figure / 网页','Original figure / webpage'),license:tr('授权条款 CC BY 4.0','License CC BY 4.0'),editable:tr('获取可编辑文件/说明','Editable source / instructions')}[key] || key)).join('')+

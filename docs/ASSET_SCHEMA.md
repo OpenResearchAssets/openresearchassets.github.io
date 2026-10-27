@@ -145,3 +145,17 @@ python3 tests/browser_offline_smoke.py   # Playwright 与 Chromium 可用时
 新增独立 `SKILL.md` 经过官方源文件审阅，记录 `execution.inputs/outputs/requirements/steps/checks`（均为 `{zh:[...],en:[...]}`）、`source_file_sha`（上游 Git blob 的 40 位 SHA）、`source_checked_on` 和 `scope=source-metadata-reviewed-not-executed`。这里的可执行性是指**用户能够按提示准备任务与逐项验收**，不是本站拥有调用原技能的托管运行器，也不是代表我们测过效果。
 
 母仓库 GitHub Stars 必须标注 `curation.star_scope=parent-repository`，具体文件请从 `links.source` 直达。静态核对执行 `python3 tools/audit_skill_intake.py --check`，验收清单见 [审阅报告](SKILL_INTAKE_AUDIT.md)。官方源、许可证、依赖和权限需在实际使用前再次核实，外部专有 Skill 不在本站重新分发。
+
+
+## 可追溯入库与来源身份（2026-10-27）
+
+所有现存资产的 `catalogHistory` 来自公开 `catalog/index.json` 的 Git 历史首次出现记录，而非目录级 `generated_on` 时间：
+
+- `first_recorded_on`：首次出现资产 ID 的 Git commit 日期（UTC），代表首次公开入库，**不等于原论文发表日期、上游仓库提交时间或社区投稿时间**。
+- `committed_by`：该 commit 关联的 GitHub 账号，为本站编目提交者，不是原作品作者。
+- `commit_url`：可核验的首次提交永久链接。
+- `submission.github/added_on`：仅用于有明确审核记录的正式投稿，不能由编目 commit 自动推定。
+
+所有资产额外维护 `sourceIdentity`：`project-original` 为本站原创，`github-source` 记录原始 URL 中的上游账号与仓库，`external-site` 记录来源站点。这些是**来源归属的证据边界**，绝不能仅凭仓库 owner 猜测自然人作品作者。Gallery 使用 `figureIdentity.credit` 或经一手核验的 `submission.original_author` 展示作品作者，版权和原图链接独立展示。
+
+新入库资产须维护同样的 Git 历史记录（提交后以真实 commit 回填），并同步 `catalog/entries/<id>.json`。为避免循环依赖，记录首次提交的 commit 应确实已包含该资产 ID，禁止预填不存在的提交链接。

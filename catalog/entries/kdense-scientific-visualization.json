@@ -150,5 +150,17 @@
       "zh": "公开任务试运行通过。执行的是固定脚手架及本站编写的任务代码，不是完整 Agent Harness 的自动 Skill 调用。",
       "en": "Public task-based run passed. A pinned scaffold and authored scripts ran; this was not autonomous Agent Skill invocation."
     }
+  },
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-26",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+  },
+  "sourceIdentity": {
+    "origin": "github-source",
+    "publisher": "K-Dense-AI",
+    "publisher_url": "https://github.com/K-Dense-AI",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "repository_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
   }
 }

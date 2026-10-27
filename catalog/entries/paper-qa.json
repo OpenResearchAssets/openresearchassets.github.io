@@ -91,5 +91,17 @@
     "editorial_added_on": "2026-10-26",
     "homepage_order": 6
   },
-  "previewStyle": "workflow"
+  "previewStyle": "workflow",
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-26",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+  },
+  "sourceIdentity": {
+    "origin": "github-source",
+    "publisher": "Future-House",
+    "publisher_url": "https://github.com/Future-House",
+    "repository": "Future-House/paper-qa",
+    "repository_url": "https://github.com/Future-House/paper-qa"
+  }
 }

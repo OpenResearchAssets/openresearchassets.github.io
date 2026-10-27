@@ -136,5 +136,17 @@
     "editorial_added_on": "2026-10-26",
     "homepage_order": 2
   },
-  "previewStyle": "workflow"
+  "previewStyle": "workflow",
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-26",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+  },
+  "sourceIdentity": {
+    "origin": "github-source",
+    "publisher": "K-Dense-AI",
+    "publisher_url": "https://github.com/K-Dense-AI",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "repository_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+  }
 }

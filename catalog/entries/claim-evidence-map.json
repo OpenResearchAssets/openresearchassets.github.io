@@ -87,5 +87,15 @@
   "topics": [
     "experiment-design",
     "scientific-visualization"
-  ]
+  ],
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-24",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/b706897299f09116d3ff7afa81818fd48950113f"
+  },
+  "sourceIdentity": {
+    "origin": "project-original",
+    "publisher": "OpenResearchAssets",
+    "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+  }
 }

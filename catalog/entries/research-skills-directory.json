@@ -82,5 +82,17 @@
   "topics": [
     "skills-ecosystem",
     "research-automation"
-  ]
+  ],
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-24",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+  },
+  "sourceIdentity": {
+    "origin": "github-source",
+    "publisher": "neverbiasu",
+    "publisher_url": "https://github.com/neverbiasu",
+    "repository": "neverbiasu/awesome-research-skills",
+    "repository_url": "https://github.com/neverbiasu/awesome-research-skills"
+  }
 }

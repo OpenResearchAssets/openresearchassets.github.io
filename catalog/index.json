@@ -208,7 +208,10 @@
         "reuse": "reference-only",
         "preview": "external-linked-reference",
         "third_party_media": "external-linked-not-relicensed",
-        "source_image_url": "https://depth-anything-3.github.io/assets/teaser.png"
+        "source_image_url": "https://depth-anything-3.github.io/assets/teaser.png",
+        "attribution": "Haotong Lin, Sili Chen, Jun Hao Liew, Donny Y. Chen, Zhenyu Li, Guang Shi, Jiashi Feng, Bingyi Kang · Depth Anything 3 / ByteDance Seed",
+        "original_file": "https://depth-anything-3.github.io/assets/teaser.png",
+        "verification": "Image and research-team credits checked against the official project website. Author-hosted image linked, not relicensed."
       },
       "applicability": {
         "use_when": {
@@ -260,7 +263,64 @@
       "topics": [
         "scientific-visualization",
         "three-d-vision"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/97f024a4a176a75f181b7b8782b199ce90a39f92"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "depth-anything-3.github.io"
+      },
+      "figureIdentity": {
+        "type": "project-website-figure",
+        "original_name": "Depth Anything 3 official overview teaser · assets/teaser.png",
+        "original_source": "https://depth-anything-3.github.io/assets/teaser.png",
+        "capture_date": "2026-10-27",
+        "credit": "Haotong Lin, Sili Chen, Jun Hao Liew, Donny Y. Chen et al. · Depth Anything 3 / ByteDance Seed",
+        "modifications": "none; original image is externally linked"
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "用多视角图像、深度与 ray map、三维重建和指标建立连续的视觉证据链，让读者先理解空间输出，再理解方法。",
+          "en": "Inputs, depth/ray maps, 3D reconstruction and metrics form a coherent evidence chain before architectural details."
+        },
+        "composition": {
+          "zh": [
+            "顶部以多个视角的序列定义输入，聚焦统一模型而非罗列模块。",
+            "深度、光线与点云等不同空间表示通过同一场景串联，信息对应关系明确。",
+            "量化比较与视觉重建各司其职，避免用好看的渲染图代替精度结论。"
+          ],
+          "en": [
+            "The top input sequence frames the any-view setting without module clutter.",
+            "The same scene relates depth, ray maps and reconstructed geometry.",
+            "Metric plots and rendered results serve separate evidential purposes."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "选出一个具体任务，固定一组同源且视角明确的输入、表示与输出。",
+            "使用真实模型预测或实测中间结果；图中明确标记预测与测量的区别。",
+            "按论文栏宽测试标签和图像细节是否可读，并给量化结论独立证据。"
+          ],
+          "en": [
+            "Pick matched, source-grounded inputs, representations and outputs for one task.",
+            "Distinguish measured outputs from predictions and do not invent geometry.",
+            "Check readability at publication size; support quantitative claims independently."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "官网图片版权仍属于原作者，本站仅链接来源，不表示获取再分发授权。",
+            "效果图不能独立证明深度精度、相机姿态性能或跨域泛化。"
+          ],
+          "en": [
+            "The author's media remains externally linked, not relicensed here.",
+            "A teaser alone does not establish depth accuracy, camera-pose precision or generalization."
+          ]
+        }
+      }
     },
     {
       "id": "roborender-teaser",
@@ -423,7 +483,16 @@
       "topics": [
         "scientific-visualization",
         "robot-learning"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "robo-render.github.io"
+      }
     },
     {
       "id": "ros-llm-lab-experimental-setup",
@@ -599,6 +668,15 @@
         "github": "Suchenl",
         "added_on": "2026-10-27",
         "original_author": "Christopher E. Mower and ROS-LLM coauthors"
+      },
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-27",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/09512050525ec0c96894ea1f13b0f1cc144a3347"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "arxiv.org"
       }
     },
     {
@@ -774,6 +852,15 @@
         "github": "Suchenl",
         "added_on": "2026-10-27",
         "original_author": "MoveIt / PickNik Robotics (RapidPlan integration announcement)"
+      },
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-27",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/09512050525ec0c96894ea1f13b0f1cc144a3347"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "moveit.ai"
       }
     },
     {
@@ -928,7 +1015,16 @@
       "topics": [
         "project-publishing",
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "robo-render.github.io"
+      }
     },
     {
       "id": "robodojo-teaser",
@@ -1085,7 +1181,16 @@
       "topics": [
         "scientific-visualization",
         "robot-learning"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "robodojo-benchmark.com"
+      }
     },
     {
       "id": "robodojo-site",
@@ -1242,7 +1347,16 @@
       "topics": [
         "project-publishing",
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "robodojo-benchmark.com"
+      }
     },
     {
       "id": "supermimic-teaser",
@@ -1404,7 +1518,16 @@
       "topics": [
         "scientific-visualization",
         "robot-learning"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "supermimic.github.io"
+      }
     },
     {
       "id": "supermimic-site",
@@ -1565,7 +1688,16 @@
       "topics": [
         "project-publishing",
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "supermimic.github.io"
+      }
     },
     {
       "id": "instruct-pix2pix-teaser",
@@ -1709,7 +1841,16 @@
       "previewStyle": "curated-visual",
       "topics": [
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/e5a46520ba7927984539d499f9bf2848539510e4"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "instruct-pix2pix.timothybrooks.com"
+      }
     },
     {
       "id": "ultraedit-qualitative",
@@ -1854,7 +1995,16 @@
       "previewStyle": "curated-visual",
       "topics": [
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/e5a46520ba7927984539d499f9bf2848539510e4"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "ultra-editing.github.io"
+      }
     },
     {
       "id": "fastnerf-zoom-results",
@@ -2000,7 +2150,16 @@
       "topics": [
         "scientific-visualization",
         "three-d-vision"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/e5a46520ba7927984539d499f9bf2848539510e4"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "wen-yuan-zhang.github.io"
+      }
     },
     {
       "id": "specialist-diffusion-ablation",
@@ -2146,7 +2305,16 @@
       "topics": [
         "scientific-visualization",
         "experiment-design"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/e5a46520ba7927984539d499f9bf2848539510e4"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "specialist-diffusion.github.io"
+      }
     },
     {
       "id": "egoengine-ablation",
@@ -2294,7 +2462,16 @@
         "scientific-visualization",
         "robot-learning",
         "experiment-design"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/e5a46520ba7927984539d499f9bf2848539510e4"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "egoengine.github.io"
+      }
     },
     {
       "id": "nerfies-project-site",
@@ -2439,7 +2616,16 @@
       "topics": [
         "project-publishing",
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/e5a46520ba7927984539d499f9bf2848539510e4"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "nerfies.github.io"
+      }
     },
     {
       "id": "hypernerf-project-site",
@@ -2584,7 +2770,16 @@
       "topics": [
         "project-publishing",
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/e5a46520ba7927984539d499f9bf2848539510e4"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "hypernerf.github.io"
+      }
     },
     {
       "id": "topconf-figure-gallery",
@@ -2669,7 +2864,16 @@
       },
       "topics": [
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "qwdwqfwq.github.io"
+      }
     },
     {
       "id": "awesome-academic-figures",
@@ -2753,7 +2957,16 @@
       },
       "topics": [
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "doczbs.github.io"
+      }
     },
     {
       "id": "figure-atlas",
@@ -2837,7 +3050,16 @@
       },
       "topics": [
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "runtimewarning.github.io"
+      }
     },
     {
       "id": "ml-visuals",
@@ -2919,7 +3141,19 @@
       },
       "topics": [
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "dair-ai",
+        "publisher_url": "https://github.com/dair-ai",
+        "repository": "dair-ai/ml-visuals",
+        "repository_url": "https://github.com/dair-ai/ml-visuals"
+      }
     },
     {
       "id": "research-skills-directory",
@@ -3005,7 +3239,19 @@
       "topics": [
         "skills-ecosystem",
         "research-automation"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "neverbiasu",
+        "publisher_url": "https://github.com/neverbiasu",
+        "repository": "neverbiasu/awesome-research-skills",
+        "repository_url": "https://github.com/neverbiasu/awesome-research-skills"
+      }
     },
     {
       "id": "teaser-story",
@@ -3077,7 +3323,17 @@
       "previewStyle": "comparison",
       "topics": [
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "project-original",
+        "publisher": "OpenResearchAssets",
+        "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+      }
     },
     {
       "id": "method-flow",
@@ -3149,7 +3405,17 @@
       "previewStyle": "workflow",
       "topics": [
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "project-original",
+        "publisher": "OpenResearchAssets",
+        "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+      }
     },
     {
       "id": "results-panel",
@@ -3221,7 +3487,17 @@
       "previewStyle": "comparison",
       "topics": [
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "project-original",
+        "publisher": "OpenResearchAssets",
+        "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+      }
     },
     {
       "id": "project-homepage-layout",
@@ -3309,7 +3585,17 @@
       "previewStyle": "editorial",
       "topics": [
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/b706897299f09116d3ff7afa81818fd48950113f"
+      },
+      "sourceIdentity": {
+        "origin": "project-original",
+        "publisher": "OpenResearchAssets",
+        "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+      }
     },
     {
       "id": "claim-evidence-map",
@@ -3400,7 +3686,17 @@
       "topics": [
         "experiment-design",
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/b706897299f09116d3ff7afa81818fd48950113f"
+      },
+      "sourceIdentity": {
+        "origin": "project-original",
+        "publisher": "OpenResearchAssets",
+        "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+      }
     },
     {
       "id": "quality-critic-skill",
@@ -3474,7 +3770,17 @@
       "topics": [
         "scientific-visualization",
         "experiment-design"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/2b4029850a0f29b32ea01932346170894645ca98"
+      },
+      "sourceIdentity": {
+        "origin": "project-original",
+        "publisher": "OpenResearchAssets",
+        "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+      }
     },
     {
       "id": "literature-triage",
@@ -3547,7 +3853,17 @@
       },
       "topics": [
         "literature-discovery"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/a74c4eef3e164793cd3ddafe6933b182d1c2d6a2"
+      },
+      "sourceIdentity": {
+        "origin": "project-original",
+        "publisher": "OpenResearchAssets",
+        "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+      }
     },
     {
       "id": "experiment-planning",
@@ -3622,7 +3938,17 @@
       },
       "topics": [
         "experiment-design"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/a74c4eef3e164793cd3ddafe6933b182d1c2d6a2"
+      },
+      "sourceIdentity": {
+        "origin": "project-original",
+        "publisher": "OpenResearchAssets",
+        "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+      }
     },
     {
       "id": "paper-evidence-story",
@@ -3697,7 +4023,17 @@
       "topics": [
         "paper-writing",
         "scientific-visualization"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/a74c4eef3e164793cd3ddafe6933b182d1c2d6a2"
+      },
+      "sourceIdentity": {
+        "origin": "project-original",
+        "publisher": "OpenResearchAssets",
+        "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+      }
     },
     {
       "id": "research-release",
@@ -3783,7 +4119,17 @@
       },
       "topics": [
         "project-publishing"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-24",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/a74c4eef3e164793cd3ddafe6933b182d1c2d6a2"
+      },
+      "sourceIdentity": {
+        "origin": "project-original",
+        "publisher": "OpenResearchAssets",
+        "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+      }
     },
     {
       "id": "anthropic-agent-skills",
@@ -3869,7 +4215,19 @@
       "previewStyle": "workflow",
       "topics": [
         "skills-ecosystem"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/ef47cc21067ea5e956f3938ce62c703b8fc231d1"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "anthropics",
+        "publisher_url": "https://github.com/anthropics",
+        "repository": "anthropics/skills",
+        "repository_url": "https://github.com/anthropics/skills"
+      }
     },
     {
       "id": "codex-skills",
@@ -3955,7 +4313,19 @@
       "topics": [
         "skills-ecosystem",
         "software-engineering"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/ef47cc21067ea5e956f3938ce62c703b8fc231d1"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "openai",
+        "publisher_url": "https://github.com/openai",
+        "repository": "openai/skills",
+        "repository_url": "https://github.com/openai/skills"
+      }
     },
     {
       "id": "microsoft-markitdown",
@@ -4042,7 +4412,19 @@
       "previewStyle": "workflow",
       "topics": [
         "document-parsing"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/ef47cc21067ea5e956f3938ce62c703b8fc231d1"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "microsoft",
+        "publisher_url": "https://github.com/microsoft",
+        "repository": "microsoft/markitdown",
+        "repository_url": "https://github.com/microsoft/markitdown"
+      }
     },
     {
       "id": "vercel-agent-skills",
@@ -4128,7 +4510,19 @@
       "topics": [
         "skills-ecosystem",
         "project-publishing"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/ef47cc21067ea5e956f3938ce62c703b8fc231d1"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "vercel-labs",
+        "publisher_url": "https://github.com/vercel-labs",
+        "repository": "vercel-labs/agent-skills",
+        "repository_url": "https://github.com/vercel-labs/agent-skills"
+      }
     },
     {
       "id": "source-to-figure",
@@ -4223,7 +4617,17 @@
       "topics": [
         "scientific-visualization",
         "paper-writing"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/ef47cc21067ea5e956f3938ce62c703b8fc231d1"
+      },
+      "sourceIdentity": {
+        "origin": "project-original",
+        "publisher": "OpenResearchAssets",
+        "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+      }
     },
     {
       "id": "vggt-architecture",
@@ -4370,7 +4774,16 @@
       "topics": [
         "scientific-visualization",
         "three-d-vision"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/d1d8fa009fe5459a2e4a38fcceca858fd688b891"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "vgg-t.github.io"
+      }
     },
     {
       "id": "dreamdojo-overview",
@@ -4518,7 +4931,16 @@
       "topics": [
         "scientific-visualization",
         "robot-learning"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/d1d8fa009fe5459a2e4a38fcceca858fd688b891"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "dreamdojo-world.github.io"
+      }
     },
     {
       "id": "videomimic-real2sim",
@@ -4665,7 +5087,16 @@
       "topics": [
         "scientific-visualization",
         "robot-learning"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/d1d8fa009fe5459a2e4a38fcceca858fd688b891"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "www.videomimic.net"
+      }
     },
     {
       "id": "videomimic-approach",
@@ -4812,7 +5243,16 @@
       "topics": [
         "scientific-visualization",
         "robot-learning"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/d1d8fa009fe5459a2e4a38fcceca858fd688b891"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "www.videomimic.net"
+      }
     },
     {
       "id": "wonderzoom-teaser",
@@ -4958,7 +5398,16 @@
       "topics": [
         "scientific-visualization",
         "three-d-vision"
-      ]
+      ],
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-25",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/d1d8fa009fe5459a2e4a38fcceca858fd688b891"
+      },
+      "sourceIdentity": {
+        "origin": "external-site",
+        "source_host": "wonderzoom.github.io"
+      }
     },
     {
       "id": "superpowers",
@@ -5052,7 +5501,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "obra",
+        "publisher_url": "https://github.com/obra",
+        "repository": "obra/superpowers",
+        "repository_url": "https://github.com/obra/superpowers"
+      }
     },
     {
       "id": "browser-use",
@@ -5146,7 +5607,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "browser-use",
+        "publisher_url": "https://github.com/browser-use",
+        "repository": "browser-use/browser-use",
+        "repository_url": "https://github.com/browser-use/browser-use"
+      }
     },
     {
       "id": "docling",
@@ -5241,7 +5714,19 @@
         "editorial_added_on": "2026-10-26",
         "homepage_order": 7
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "docling-project",
+        "publisher_url": "https://github.com/docling-project",
+        "repository": "docling-project/docling",
+        "repository_url": "https://github.com/docling-project/docling"
+      }
     },
     {
       "id": "mineru",
@@ -5335,7 +5820,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "opendatalab",
+        "publisher_url": "https://github.com/opendatalab",
+        "repository": "opendatalab/MinerU",
+        "repository_url": "https://github.com/opendatalab/MinerU"
+      }
     },
     {
       "id": "paper-qa",
@@ -5430,7 +5927,19 @@
         "editorial_added_on": "2026-10-26",
         "homepage_order": 6
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "Future-House",
+        "publisher_url": "https://github.com/Future-House",
+        "repository": "Future-House/paper-qa",
+        "repository_url": "https://github.com/Future-House/paper-qa"
+      }
     },
     {
       "id": "lightrag",
@@ -5524,7 +6033,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "HKUDS",
+        "publisher_url": "https://github.com/HKUDS",
+        "repository": "HKUDS/LightRAG",
+        "repository_url": "https://github.com/HKUDS/LightRAG"
+      }
     },
     {
       "id": "graphrag",
@@ -5618,7 +6139,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "microsoft",
+        "publisher_url": "https://github.com/microsoft",
+        "repository": "microsoft/graphrag",
+        "repository_url": "https://github.com/microsoft/graphrag"
+      }
     },
     {
       "id": "firecrawl",
@@ -5712,7 +6245,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "firecrawl",
+        "publisher_url": "https://github.com/firecrawl",
+        "repository": "firecrawl/firecrawl",
+        "repository_url": "https://github.com/firecrawl/firecrawl"
+      }
     },
     {
       "id": "openhands",
@@ -5806,7 +6351,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "OpenHands",
+        "publisher_url": "https://github.com/OpenHands",
+        "repository": "OpenHands/OpenHands",
+        "repository_url": "https://github.com/OpenHands/OpenHands"
+      }
     },
     {
       "id": "langgraph",
@@ -5901,7 +6458,19 @@
         "editorial_added_on": "2026-10-26",
         "homepage_order": 8
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "langchain-ai",
+        "publisher_url": "https://github.com/langchain-ai",
+        "repository": "langchain-ai/langgraph",
+        "repository_url": "https://github.com/langchain-ai/langgraph"
+      }
     },
     {
       "id": "openai-agents-sdk",
@@ -5995,7 +6564,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "openai",
+        "publisher_url": "https://github.com/openai",
+        "repository": "openai/openai-agents-python",
+        "repository_url": "https://github.com/openai/openai-agents-python"
+      }
     },
     {
       "id": "agent-lightning",
@@ -6090,7 +6671,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "microsoft",
+        "publisher_url": "https://github.com/microsoft",
+        "repository": "microsoft/agent-lightning",
+        "repository_url": "https://github.com/microsoft/agent-lightning"
+      }
     },
     {
       "id": "spec-kit",
@@ -6184,7 +6777,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "github",
+        "publisher_url": "https://github.com/github",
+        "repository": "github/spec-kit",
+        "repository_url": "https://github.com/github/spec-kit"
+      }
     },
     {
       "id": "playwright-mcp",
@@ -6278,7 +6883,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "microsoft",
+        "publisher_url": "https://github.com/microsoft",
+        "repository": "microsoft/playwright-mcp",
+        "repository_url": "https://github.com/microsoft/playwright-mcp"
+      }
     },
     {
       "id": "llamaindex",
@@ -6372,7 +6989,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "run-llama",
+        "publisher_url": "https://github.com/run-llama",
+        "repository": "run-llama/llama_index",
+        "repository_url": "https://github.com/run-llama/llama_index"
+      }
     },
     {
       "id": "anthropic-skill-creator",
@@ -6461,7 +7090,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "anthropics",
+        "publisher_url": "https://github.com/anthropics",
+        "repository": "anthropics/skills",
+        "repository_url": "https://github.com/anthropics/skills"
+      }
     },
     {
       "id": "anthropic-frontend-design",
@@ -6550,7 +7191,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "anthropics",
+        "publisher_url": "https://github.com/anthropics",
+        "repository": "anthropics/skills",
+        "repository_url": "https://github.com/anthropics/skills"
+      }
     },
     {
       "id": "superpowers-debugging",
@@ -6640,7 +7293,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "obra",
+        "publisher_url": "https://github.com/obra",
+        "repository": "obra/superpowers",
+        "repository_url": "https://github.com/obra/superpowers"
+      }
     },
     {
       "id": "superpowers-verification",
@@ -6730,7 +7395,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "obra",
+        "publisher_url": "https://github.com/obra",
+        "repository": "obra/superpowers",
+        "repository_url": "https://github.com/obra/superpowers"
+      }
     },
     {
       "id": "kdense-paper-lookup",
@@ -6864,7 +7541,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "K-Dense-AI",
+        "publisher_url": "https://github.com/K-Dense-AI",
+        "repository": "K-Dense-AI/scientific-agent-skills",
+        "repository_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      }
     },
     {
       "id": "kdense-literature-review",
@@ -7004,7 +7693,19 @@
         "editorial_added_on": "2026-10-26",
         "homepage_order": 1
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "K-Dense-AI",
+        "publisher_url": "https://github.com/K-Dense-AI",
+        "repository": "K-Dense-AI/scientific-agent-skills",
+        "repository_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      }
     },
     {
       "id": "kdense-experimental-design",
@@ -7144,7 +7845,19 @@
         "editorial_added_on": "2026-10-26",
         "homepage_order": 2
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "K-Dense-AI",
+        "publisher_url": "https://github.com/K-Dense-AI",
+        "repository": "K-Dense-AI/scientific-agent-skills",
+        "repository_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      }
     },
     {
       "id": "kdense-statistical-power",
@@ -7283,7 +7996,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "K-Dense-AI",
+        "publisher_url": "https://github.com/K-Dense-AI",
+        "repository": "K-Dense-AI/scientific-agent-skills",
+        "repository_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      }
     },
     {
       "id": "kdense-scientific-visualization",
@@ -7437,6 +8162,18 @@
           "zh": "公开任务试运行通过。执行的是固定脚手架及本站编写的任务代码，不是完整 Agent Harness 的自动 Skill 调用。",
           "en": "Public task-based run passed. A pinned scaffold and authored scripts ran; this was not autonomous Agent Skill invocation."
         }
+      },
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "K-Dense-AI",
+        "publisher_url": "https://github.com/K-Dense-AI",
+        "repository": "K-Dense-AI/scientific-agent-skills",
+        "repository_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
       }
     },
     {
@@ -7575,7 +8312,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "K-Dense-AI",
+        "publisher_url": "https://github.com/K-Dense-AI",
+        "repository": "K-Dense-AI/scientific-agent-skills",
+        "repository_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      }
     },
     {
       "id": "kdense-scientific-critical-thinking",
@@ -7714,7 +8463,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "K-Dense-AI",
+        "publisher_url": "https://github.com/K-Dense-AI",
+        "repository": "K-Dense-AI/scientific-agent-skills",
+        "repository_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      }
     },
     {
       "id": "kdense-peer-review",
@@ -7853,7 +8614,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "K-Dense-AI",
+        "publisher_url": "https://github.com/K-Dense-AI",
+        "repository": "K-Dense-AI/scientific-agent-skills",
+        "repository_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      }
     },
     {
       "id": "anthropic-pdf",
@@ -7988,7 +8761,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "anthropics",
+        "publisher_url": "https://github.com/anthropics",
+        "repository": "anthropics/skills",
+        "repository_url": "https://github.com/anthropics/skills"
+      }
     },
     {
       "id": "anthropic-pptx",
@@ -8125,7 +8910,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "anthropics",
+        "publisher_url": "https://github.com/anthropics",
+        "repository": "anthropics/skills",
+        "repository_url": "https://github.com/anthropics/skills"
+      }
     },
     {
       "id": "openai-jupyter-notebook",
@@ -8280,6 +9077,18 @@
           "zh": "公开任务试运行通过。执行的是固定脚手架及本站编写的任务代码，不是完整 Agent Harness 的自动 Skill 调用。",
           "en": "Public task-based run passed. A pinned scaffold and authored scripts ran; this was not autonomous Agent Skill invocation."
         }
+      },
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "openai",
+        "publisher_url": "https://github.com/openai",
+        "repository": "openai/skills",
+        "repository_url": "https://github.com/openai/skills"
       }
     },
     {
@@ -8419,7 +9228,19 @@
         },
         "editorial_added_on": "2026-10-26"
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "obra",
+        "publisher_url": "https://github.com/obra",
+        "repository": "obra/superpowers",
+        "repository_url": "https://github.com/obra/superpowers"
+      }
     },
     {
       "id": "superpowers-test-driven-development",
@@ -8559,7 +9380,19 @@
         "editorial_added_on": "2026-10-26",
         "homepage_order": 3
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/43d79e6cca68e073490c450bd750a7be7a86104e"
+      },
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "obra",
+        "publisher_url": "https://github.com/obra",
+        "repository": "obra/superpowers",
+        "repository_url": "https://github.com/obra/superpowers"
+      }
     },
     {
       "id": "skill-source-intake",
@@ -8662,7 +9495,17 @@
           ".github/workflows/validate.yml"
         ]
       },
-      "previewStyle": "workflow"
+      "previewStyle": "workflow",
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/ffb79ffa4db1a7afcde559d5b5d84be2392391da"
+      },
+      "sourceIdentity": {
+        "origin": "project-original",
+        "publisher": "OpenResearchAssets",
+        "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+      }
     },
     {
       "id": "catalog-skill-trials",
@@ -8776,6 +9619,16 @@
           "zh": "首轮两项任务执行成功，7/7 客观检查通过；属于脚本化试运行，不是模型能力改进实验。",
           "en": "Two scripted tasks passed 7/7 checks; this does not establish model capability improvement."
         }
+      },
+      "catalogHistory": {
+        "first_recorded_on": "2026-10-26",
+        "committed_by": "Suchenl",
+        "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/4e3d0b5d9cb330fab6da1319a40444aba6ca5d1f"
+      },
+      "sourceIdentity": {
+        "origin": "project-original",
+        "publisher": "OpenResearchAssets",
+        "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
       }
     }
   ]

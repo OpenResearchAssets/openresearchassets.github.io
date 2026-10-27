@@ -82,5 +82,17 @@
   "topics": [
     "skills-ecosystem",
     "software-engineering"
-  ]
+  ],
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-25",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/ef47cc21067ea5e956f3938ce62c703b8fc231d1"
+  },
+  "sourceIdentity": {
+    "origin": "github-source",
+    "publisher": "openai",
+    "publisher_url": "https://github.com/openai",
+    "repository": "openai/skills",
+    "repository_url": "https://github.com/openai/skills"
+  }
 }

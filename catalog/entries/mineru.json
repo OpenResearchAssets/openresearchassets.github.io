@@ -90,5 +90,17 @@
     },
     "editorial_added_on": "2026-10-26"
   },
-  "previewStyle": "workflow"
+  "previewStyle": "workflow",
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-26",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/023df1bc11213a8ca15ebb5aabc8321603f3541c"
+  },
+  "sourceIdentity": {
+    "origin": "github-source",
+    "publisher": "opendatalab",
+    "publisher_url": "https://github.com/opendatalab",
+    "repository": "opendatalab/MinerU",
+    "repository_url": "https://github.com/opendatalab/MinerU"
+  }
 }

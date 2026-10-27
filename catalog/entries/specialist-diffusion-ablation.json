@@ -142,5 +142,14 @@
   "topics": [
     "scientific-visualization",
     "experiment-design"
-  ]
+  ],
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-25",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/e5a46520ba7927984539d499f9bf2848539510e4"
+  },
+  "sourceIdentity": {
+    "origin": "external-site",
+    "source_host": "specialist-diffusion.github.io"
+  }
 }
