@@ -119,6 +119,15 @@ python3 tests/browser_offline_smoke.py   # Playwright 与 Chromium 可用时
 - Project Site：评价站点导航、交互和证据路径；如果预览只是官网某张图或滑杆端点，`figureIdentity.type=project-website-media`，**不得标为实际首屏截图**。
 - 第三方媒体默认只存准确的外链，保留作者原图版权，不重新分发为本站原生 SVG。
 
+## 实验设置与三维空间可视化（2026-10-27）
+
+科研 Gallery 不局限于 Teaser、Results、Ablation 和项目主页。当确有独特、可借鉴的视觉证据组织方式时，允许两类经一手核验的技术视觉参考，仍使用 `kind=visual-reference`：
+
+- `curation.visual_category=experimental-setup`：真实实验照片 + 精简语义标注；必须核实真实设备/场景来源，不得把实拍图说成算法图、性能结果或自己实验现场。
+- `curation.visual_category=spatial-visualization`：以真实场景几何、占据图、空间姿态为内容的 3D 技术可视化；有无碰撞安全证据取决于原始数据与验证机制，不因颜色/体素看起来高级而自动成立。
+
+这两类均要求 `applicability.use_when / learn / avoid`、双语 `caseStudy`、`figureIdentity` 及 `links.source / officialFigure` 的原图身份确认。许可不明确时只以 `visual.kind=external-reference-image` 外链对应来源图像，保留原作者版权，不提交第三方原图二进制。首批核实样例为 [ROS-LLM 实验设置 Figure 3](../asset.html?id=ros-llm-lab-experimental-setup) 与 [MoveIt RapidPlan 场景可视化](../asset.html?id=moveit-rapidplan-voxel-visualization)。
+
 ## 视觉审美的硬性退选规则（2026-10-25）
 
 **科学内容正确、方法新颖、论文知名或来源可核实都不构成高审美入库资格。** 先实际浏览原作者的原尺寸图/主页，主观编辑评审至少包含：视觉第一眼的辨识度、构图留白与层次、配色克制、标签可读性、结果展示的公平性、是否值得反复用作参考。缺乏明显设计亮点的普通框图、杂乱拼贴或视觉拥挤样例应从精选库移出，不应为了类型配额勉强保留；此原则同样适用于未来提名。经维护者直接否定的作品立即撤出 Gallery，清理索引与首页导航，不留下“热门但丑”的前台候选。**展示科研主页时必须有明确的直达原作者网站链接，最好图片、标题均可直接点击；本站的文字分析永远是次级入口。**
