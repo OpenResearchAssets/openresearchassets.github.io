@@ -1,0 +1,175 @@
+{
+  "id": "moveit-rapidplan-voxel-visualization",
+  "title": "MoveIt × RapidPlan · 体素碰撞与运动规划可视化",
+  "kind": "visual-reference",
+  "stages": [
+    "methods",
+    "experiments",
+    "writing",
+    "communication"
+  ],
+  "domains": [
+    "robotics"
+  ],
+  "topics": [
+    "scientific-visualization",
+    "three-d-vision",
+    "robot-learning"
+  ],
+  "tasks": [
+    "robot-motion-planning-visualization",
+    "collision-environment-visualization",
+    "voxel-occupancy-illustration",
+    "3d-technical-figure"
+  ],
+  "description": {
+    "zh": "MoveIt 官方 RapidPlan 集成文章中的真实可视化：橙色机械臂、绿色占据体素、红色环境障碍与坐标轴在统一三维视图中构成机器人运动规划的空间语义层次。",
+    "en": "Original visualization in MoveIt's RapidPlan integration post: orange manipulator, green occupancy voxels, red obstacles, and coordinate axes create a layered spatial view of robot planning."
+  },
+  "keywords": {
+    "zh": [
+      "MoveIt",
+      "RapidPlan",
+      "Realtime Robotics",
+      "体素网格",
+      "场景碰撞",
+      "三维可视化",
+      "运动规划",
+      "机械臂",
+      "避障",
+      "ROS"
+    ],
+    "en": [
+      "MoveIt",
+      "RapidPlan",
+      "Realtime Robotics",
+      "voxel grid",
+      "occupancy",
+      "motion planning",
+      "collision visualization",
+      "3D robotics"
+    ]
+  },
+  "year": "2019",
+  "language": "zh+en",
+  "links": {
+    "source": "https://moveit.ai/moveit!/ros/2019/04/16/realtime-robotics.html",
+    "officialFigure": "https://moveit.ai/assets/images/plan_visualization.png",
+    "linkedPreview": "https://moveit.ai/assets/images/plan_visualization.png"
+  },
+  "rights": {
+    "reuse": "reference-only",
+    "preview": "external-linked-reference",
+    "third_party_media": "external-linked-not-relicensed",
+    "source_image_url": "https://moveit.ai/assets/images/plan_visualization.png",
+    "attribution": "MoveIt / PickNik Robotics, official RapidPlan integration announcement (2019)",
+    "original_file": "https://moveit.ai/assets/images/plan_visualization.png",
+    "verification": "Exact image matched against MoveIt's April 16, 2019 official announcement. External media link only; no license to redistribute is inferred."
+  },
+  "applicability": {
+    "use_when": {
+      "zh": [
+        "解释规划场景、机器人模型和占据空间如何共存于同一三维坐标系",
+        "需要展示避障或运动规划系统的中间几何表示与调试结果",
+        "论文技术视觉或项目主页需要传达空间结构，且确有对应几何数据支撑"
+      ],
+      "en": [
+        "Explaining a robot model, planning scene and occupancy space in one 3D frame",
+        "Visualizing geometric intermediates for motion planning and collision debugging",
+        "Presenting true spatial structure with evidence-backed geometry"
+      ]
+    },
+    "learn": {
+      "zh": [
+        "深石墨背景让橙色机械臂成为明确的视觉锚点，绿色半透明体素提供空间尺度与占据证据",
+        "几何网格、机器人结构、红色物体和蓝色坐标轴按层组织，避免只有抽象箭头",
+        "保留透视空间与尺度关系，让读者看到障碍相对机械臂的位置而非只看算法名称"
+      ],
+      "en": [
+        "A dark graphite background foregrounds the orange robot; translucent green voxels explain occupied space",
+        "Robot geometry, objects and frame axes form separate visual layers instead of a purely symbolic flowchart",
+        "Use perspective, relative scale and occlusion to convey the relationship of obstacles to the manipulator"
+      ]
+    },
+    "avoid": {
+      "zh": [
+        "体素图是规划/场景表达示例，不自动证明碰撞检测正确、动态避障成功或真实机器人安全",
+        "如果没有真实的规划几何数据，不应为了好看而画虚构体素作为实验结果",
+        "颜色应有图例和物理解释；低对比度体素在论文缩小印刷时可能丢失，需要局部放大"
+      ],
+      "en": [
+        "A voxel screenshot is a scene illustration, not proof that the planner is correct, collision-free or safe on hardware",
+        "Never fabricate voxel occupancy and present it as a measured planning result",
+        "Provide a legend and check small-format readability; translucent voxels may disappear in print"
+      ]
+    }
+  },
+  "visual": {
+    "src": "https://moveit.ai/assets/images/plan_visualization.png",
+    "kind": "external-reference-image",
+    "alt": {
+      "zh": "MoveIt 官方 RapidPlan 三维可视化：橙色机器人、绿色占据体素、红色障碍和蓝色坐标轴",
+      "en": "Official MoveIt RapidPlan image with orange robot, green occupancy voxels, red obstacle and blue axes"
+    },
+    "label": {
+      "zh": "MoveIt 官方文章配图 · 原站外链",
+      "en": "MOVEIT ARTICLE IMAGE · LINKED SOURCE"
+    }
+  },
+  "curation": {
+    "visual_category": "spatial-visualization"
+  },
+  "caseStudy": {
+    "insight": {
+      "zh": "最值得学习的是通过配色、透视和真实几何叠加，把抽象碰撞空间变成直观空间证据；不是让画面具有赛博科技感就算好图。",
+      "en": "Its value is the use of color, perspective and true geometry to make abstract occupancy constraints visually intelligible, not decorative sci-fi styling."
+    },
+    "composition": {
+      "zh": [
+        "橙色主机械臂作为前景主体，深灰色场景提供层次和留白",
+        "绿色细粒度体素栅格强调体积与可见空间约束，红色块状物成为障碍对照",
+        "RGB 坐标轴让端点/姿态有可参考的局部尺度，但没有证据的色块不应被解释成性能数字"
+      ],
+      "en": [
+        "Orange robot is the foreground anchor against a dark workcell background",
+        "Fine green occupancy voxels encode the spatial field while a red object provides a contrastive obstacle",
+        "Coordinate axes communicate local frame orientation but colors should not be mistaken for measured performance"
+      ]
+    },
+    "reuseSteps": {
+      "zh": [
+        "从真实 URDF/机器人姿态、规划场景障碍与有来源的占据网格导出同一坐标系下的几何",
+        "分层设置机器人、不透明障碍、半透明体素、坐标轴的材质与透明度",
+        "配上精简图例说明规划可行性和实际执行状态各是哪一级证据"
+      ],
+      "en": [
+        "Export matched robot geometry, planning obstacles and source-grounded occupancy data in one coordinate frame",
+        "Layer an opaque robot, obstacles, translucent voxels and clearly drawn axes",
+        "Add a short legend distinguishing a computed candidate path from execution verification"
+      ]
+    },
+    "verification": {
+      "zh": [
+        "已核实为 MoveIt 2019-04-16 RapidPlan Integration 公告实际配图，非 ROS-LLM 论文图",
+        "MoveIt 文中描述占据网格转换与规划后端性能；单张图自身不验证真实场景碰撞安全"
+      ],
+      "en": [
+        "Verified as a real image on MoveIt's April 16, 2019 RapidPlan integration announcement, not a ROS-LLM paper figure",
+        "The announcement discusses occupancy-grid conversion and planning speed; the image alone does not certify runtime collision safety"
+      ]
+    }
+  },
+  "figureIdentity": {
+    "type": "project-website-media",
+    "original_name": "plan_visualization.png · RapidPlan motion planning scene",
+    "original_source": "https://moveit.ai/assets/images/plan_visualization.png",
+    "capture_date": "2026-10-27",
+    "credit": "MoveIt / PickNik Robotics · Realtime Robotics RapidPlan integration",
+    "modifications": "none; original image externally linked"
+  },
+  "submission": {
+    "github": "Suchenl",
+    "added_on": "2026-10-27",
+    "original_author": "MoveIt / PickNik Robotics (RapidPlan integration announcement)"
+  }
+}

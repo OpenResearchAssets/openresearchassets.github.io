@@ -47,7 +47,18 @@ OpenResearchAssets 面向科研生命周期，整理值得学习的论文视觉�
 | **真正的消融** | [Specialist Diffusion](https://openresearchassets.github.io/asset.html?id=specialist-diffusion-ablation) · [EgoEngine](https://openresearchassets.github.io/asset.html?id=egoengine-ablation) | 保持输入条件不变，对照移除组件的结果与量化效果 |
 | **交互式主页** | [Nerfies · 原作者主页](https://nerfies.github.io/) · [HyperNeRF · 原作者主页](https://hypernerf.github.io/) | 视频优先、交互参数与输出同步展示；预览只是官网功能素材，**不是网站首屏截图** |
 
-所有入选原图仍从**作者实际网站或仓库提供外链**，我们只进行原创的构图与复用分析。结果、消融和网站交互不能由静态缩略图替代科学验收。本批最终精选 7 条（GridAR 已因视觉质量不达标移除）。Gallery 目前为 28 条视觉资产，完整目录 73 条记录；Skills / Workflows 中热门精选 36 条、公开项目实践 2 条，其余为候选协议。
+所有入选原图仍从**作者实际网站或仓库提供外链**，我们只进行原创的构图与复用分析。结果、消融和网站交互不能由静态缩略图替代科学验收。本批最终精选 7 条（GridAR 已因视觉质量不达标移除）。Gallery 目前为 30 条视觉资产，完整目录 75 条记录；Skills / Workflows 中热门精选 36 条、公开项目实践 2 条，其余为候选协议。
+
+## 机器人视觉表达补充：真实实验设置与空间规划场景（2026-10-27）
+
+这两项采用**官方已核实来源的图片外链 + 原创设计分析**，不在本仓库复制、改编或重新授权第三方原图。它们是科研配图视觉案例，不是我们自称完成的机器人实验：
+
+| 视觉案例 | 为什么值得学习 | 何时适用 | 官方来源与站内解读 |
+|---|---|---|---|
+| ROS-LLM · Figure 3 实机实验设置 | 真实工作台、硬件、操作对象与 AprilTag 通过统一标签建立清晰空间语义 | Experimental Setup、真实机器人系统与硬件介绍；不替代任务成功证据 | [原论文](https://arxiv.org/abs/2406.19741) · [设计分析](asset.html?id=ros-llm-lab-experimental-setup) |
+| MoveIt × RapidPlan · 空间体素可视化 | 深灰背景 + 橙色机器人 + 半透明绿色占据网格，把抽象碰撞空间转为清晰的几何层次 | 规划/避障后端讲解、占据网格与运动学调试；不能将概念体素冒充实验数据或安全证明 | [原作者文章](https://moveit.ai/moveit!/ros/2019/04/16/realtime-robotics.html) · [设计分析](asset.html?id=moveit-rapidplan-voxel-visualization) |
+
+两类配图**不强行标记成 Teaser、Results 或 Ablation**。它们分别属于实验环境介绍与技术空间可视化；详情页保留中文首选、英文完整说明、来源链接及适用边界。
 
 ## 本轮新增高审美视觉精选（2026-10-25）
 
@@ -94,7 +105,7 @@ OpenResearchAssets 由独立 GitHub Organization 维护，目标是建设**项�
 | 内容 | 实际交付 | 边界 |
 |---|---|---|
 | [任务搜索与多维筛选](https://openresearchassets.github.io/#references) | 双语关键词、科研阶段、领域、研究主题、资产类型过滤；Skills 另可按 Tool / Skill / Workflow 筛选；独立详情页 | 当前是浏览器本地筛选，不是语义向量检索 |
-| [结构化资产目录](catalog/index.json) · [轻量 AI 索引](catalog/manifest.json) | 以 `catalog/index.json` 为唯一事实源，当前 73 条资产记录，其中 Gallery 有 28 条视觉资产；新收录的 7 条 Teaser/结果/消融/科研主页参考提供原作者直达入口 | 既有六张案例封面均已核实对应论文 Figure 1 或官方主页首屏（RoboRender 论文图为 CC BY 4.0；其余按具体来源与评论预览说明处理） |
+| [结构化资产目录](catalog/index.json) · [轻量 AI 索引](catalog/manifest.json) | 以 `catalog/index.json` 为唯一事实源，当前 75 条资产记录，其中 Gallery 有 30 条视觉资产；新收录的 7 条 Teaser/结果/消融/科研主页参考提供原作者直达入口 | 既有六张案例封面均已核实对应论文 Figure 1 或官方主页首屏（RoboRender 论文图为 CC BY 4.0；其余按具体来源与评论预览说明处理） |
 | [AI 使用指南](for-agents/) · [llms.txt](llms.txt) | 无需认证的 JSON、Markdown 导航和来源链接 | AI 的具体执行能力取决于 Agent 文件与工具权限 |
 | [原创可编辑 SVG](assets/templates/) | 5 份概念模板：Teaser、流程、结果、主页故事板、论点—证据映射 | 只展示结构和占位，不代表真实实验 |
 | [人工质量自查](quality.html) | 五类审核对象、问题手工勾选和 Markdown 报告 | **不自动读取或诊断图片** |
@@ -164,7 +175,7 @@ RoboRender、RoboDojo、SuperMimic 的论文类条目现在展示真正的 Figur
 
 ### 精确 Skill 文件与任务级使用说明
 
-新增 13 条已审阅官方具体 `SKILL.md`：在详情页分别展示**需要的输入、预期产出、实际依赖、操作顺序、验收条件**以及文件 Blob SHA。目录共有 **73 条**，其中 **36 条热门外部项目与独立技能，4 条有公开实践证据的工作流**；仓库热度不等于单项技能的使用量，也不等于本站效果验证。审阅来源记录见 [Skill 审计报告](docs/SKILL_INTAKE_AUDIT.md)，完整入库步骤见 [来源核验流程](workflows/skill-source-intake.md)。
+新增 13 条已审阅官方具体 `SKILL.md`：在详情页分别展示**需要的输入、预期产出、实际依赖、操作顺序、验收条件**以及文件 Blob SHA。目录现有 **75 条**（新增两项视觉参考，Skill 审阅批次仍按原记录计），其中 **36 条热门外部项目与独立技能，4 条有公开实践证据的工作流**；仓库热度不等于单项技能的使用量，也不等于本站效果验证。审阅来源记录见 [Skill 审计报告](docs/SKILL_INTAKE_AUDIT.md)，完整入库步骤见 [来源核验流程](workflows/skill-source-intake.md)。
 
 ### 真实任务的公开运行证据
 

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "catalog_source": "catalog/index.json",
-  "generated_on": "2026-10-26",
+  "generated_on": "2026-10-27",
   "instructions": {
     "zh": "先匹配此轻量目录，再沿 entry 路径只读取最相关条目。第三方图片默认不可复制，只有单条 rights 明确授权才可复用。",
     "en": "Select from this lightweight manifest, then fetch only relevant entry JSON files. External visuals are not licensed for copying by default; inspect each entry's rights."
@@ -228,6 +228,100 @@
       ],
       "description_zh": "RoboRender 论文首页 Figure 1：左侧仿真机器人数据，中间真实感多视角生成视频，右侧真实机器人执行结果；不是训练数据图或方法结构图。",
       "entry": "catalog/entries/roborender-teaser.json"
+    },
+    {
+      "id": "ros-llm-lab-experimental-setup",
+      "title": "ROS-LLM · Figure 3 实机实验环境标注",
+      "kind": "visual-reference",
+      "stages": [
+        "experiments",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics",
+        "agents"
+      ],
+      "topics": [
+        "scientific-visualization",
+        "reproducible-experiments",
+        "robot-learning"
+      ],
+      "tasks": [
+        "experimental-setup-figure",
+        "robot-hardware-annotation",
+        "real-world-robot-demonstration",
+        "environment-explanation"
+      ],
+      "keywords": [
+        "ROS-LLM",
+        "UR5",
+        "实验设置图",
+        "实机照片",
+        "机器人硬件",
+        "AprilTag",
+        "场景标注",
+        "夹爪",
+        "科研视觉",
+        "复现性",
+        "ROS-LLM",
+        "UR5",
+        "experimental setup",
+        "real-robot laboratory",
+        "hardware annotation",
+        "AprilTags",
+        "Robotiq gripper",
+        "robotics figure"
+      ],
+      "description_zh": "ROS-LLM 论文 Figure 3：一张真实实验照片中逐一定位 UR5、Robotiq 2F-85 夹爪、咖啡机、杯子、柜子和 AprilTag。通过实体标注把本体、末端、任务对象与环境关系放到同一空间语境。",
+      "entry": "catalog/entries/ros-llm-lab-experimental-setup.json"
+    },
+    {
+      "id": "moveit-rapidplan-voxel-visualization",
+      "title": "MoveIt × RapidPlan · 体素碰撞与运动规划可视化",
+      "kind": "visual-reference",
+      "stages": [
+        "methods",
+        "experiments",
+        "writing",
+        "communication"
+      ],
+      "domains": [
+        "robotics"
+      ],
+      "topics": [
+        "scientific-visualization",
+        "three-d-vision",
+        "robot-learning"
+      ],
+      "tasks": [
+        "robot-motion-planning-visualization",
+        "collision-environment-visualization",
+        "voxel-occupancy-illustration",
+        "3d-technical-figure"
+      ],
+      "keywords": [
+        "MoveIt",
+        "RapidPlan",
+        "Realtime Robotics",
+        "体素网格",
+        "场景碰撞",
+        "三维可视化",
+        "运动规划",
+        "机械臂",
+        "避障",
+        "ROS",
+        "MoveIt",
+        "RapidPlan",
+        "Realtime Robotics",
+        "voxel grid",
+        "occupancy",
+        "motion planning",
+        "collision visualization",
+        "3D robotics"
+      ],
+      "description_zh": "MoveIt 官方 RapidPlan 集成文章中的真实可视化：橙色机械臂、绿色占据体素、红色环境障碍与坐标轴在统一三维视图中构成机器人运动规划的空间语义层次。",
+      "entry": "catalog/entries/moveit-rapidplan-voxel-visualization.json"
     },
     {
       "id": "roborender-site",

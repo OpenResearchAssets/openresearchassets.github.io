@@ -63,7 +63,7 @@
     const localLicensed=(visual.kind==='licensed-source-image'||visual.kind==='licensed-paper-figure') &&
       /^assets\/third-party\/[a-z0-9-]+\/[a-z0-9-]+\.png$/.test(visual.src || '');
     const remote=visual.kind==='external-reference-image' &&
-      /^https:\/\/(?:depth-anything-3\.github\.io|media\.luminis-sim\.com|tianxingchen\.github\.io|supermimic\.github\.io|raw\.githubusercontent\.com|instruct-pix2pix\.timothybrooks\.com|opengraph\.githubassets\.com)\//.test(visual.src || '');
+      /^https:\/\/(?:depth-anything-3\.github\.io|media\.luminis-sim\.com|tianxingchen\.github\.io|supermimic\.github\.io|raw\.githubusercontent\.com|instruct-pix2pix\.timothybrooks\.com|opengraph\.githubassets\.com|figures\.semanticscholar\.org|moveit\.ai)\//.test(visual.src || '');
     if(localLicensed||remote){
       const caption=local(localLicensed ? visual.label : visual.alt);
       const mark=local(visual.label);
@@ -249,7 +249,9 @@
       'teaser':[ 'Teaser','Teaser'],
       'results':['结果展示','Results'],
       'ablation':['消融实验','Ablation'],
-      'project-site':['交互主页','Project site']
+      'project-site':['交互主页','Project site'],
+      'experimental-setup':['实验设置','Experimental setup'],
+      'spatial-visualization':['空间可视化','Spatial visualization']
     };
     const name=e.curation?.visual_category;
     const label=labels[name];
