@@ -253,11 +253,15 @@ with sync_playwright() as pw:
         workflow=page.locator('.ora-workflow-overview img')
         assert workflow.count()==1
         assert workflow.get_attribute('src')=='assets/editorials/researchboost-agent.svg'
-        assert workflow.evaluate('(n)=>n.complete && n.naturalWidth>0')
-        assert page.locator('.ora-workflow-overview').bounding_box()['width']>page.locator('.ora-detail-main').bounding_box()['width']
+        page.wait_for_function("()=>[...document.querySelectorAll('.ora-workflow-overview img')].every(n=>n.complete && n.naturalWidth>0)")
+        diagram_width=page.locator('.ora-workflow-overview').bounding_box()['width']
+        if w>720:
+            assert diagram_width>page.locator('.ora-detail-main').bounding_box()['width']
+        else:
+            assert diagram_width<=w,('workflow diagram overflows mobile viewport',label)
         page.locator('.lang-toggle').click()
         assert page.locator('.ora-workflow-overview img').get_attribute('src')=='assets/editorials/researchboost-agent.en.svg'
-        assert page.locator('.ora-workflow-overview img').evaluate('(n)=>n.complete && n.naturalWidth>0')
+        page.wait_for_function("()=>[...document.querySelectorAll('.ora-workflow-overview img')].every(n=>n.complete && n.naturalWidth>0)")
         assert 'Workflow at a glance' in page.locator('.ora-workflow-heading').inner_text()
         page.locator('.lang-toggle').click()
         page.goto('https://ora.local/asset.html?id=supermimic-site',wait_until='load')
