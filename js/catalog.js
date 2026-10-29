@@ -391,7 +391,7 @@
         '<div class="ora-lesson"><h2>'+safe(tr('需要避免','What to avoid'))+'</h2>'+points(local(app.avoid))+'</div>');
     const diagram=e.workflowDiagram;
     const diagramSrc=local(diagram?.src);
-    const diagramValid=typeof diagramSrc==='string' && /^assets\\/editorials\\/[a-z0-9.-]+\\.svg$/.test(diagramSrc);
+    const diagramValid=typeof diagramSrc==='string' && /^assets[/]editorials[/][a-z0-9.-]+[.]svg$/.test(diagramSrc);
     const overview=diagramValid ? '<section class="ora-workflow-overview" aria-labelledby="ora-workflow-heading">'+
       '<div class="ora-workflow-heading"><div><span>'+safe(tr('HOW IT WORKS · 原创流程解读','HOW IT WORKS · EDITORIAL DIAGRAM'))+'</span><h2 id="ora-workflow-heading">'+safe(tr('工作流程，一图看懂','Workflow at a glance'))+'</h2></div>'+
       '<a href="'+safe(diagramSrc)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('打开可缩放 SVG','Open scalable SVG'))+' ↗</a></div>'+

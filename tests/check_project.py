@@ -73,7 +73,7 @@ for item in entries:
     if not diagram:continue
     for language in ('zh','en'):
         rel=diagram.get('src',{}).get(language,'')
-        if not re.fullmatch(r'assets/editorials/[a-z0-9.-]+\\.svg',rel):
+        if not re.fullmatch(r'assets/editorials/[a-z0-9.-]+[.]svg',rel):
             errors.append(f"{item['id']}: invalid {language} workflow diagram path")
             continue
         file=ROOT/rel
