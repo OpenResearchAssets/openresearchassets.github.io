@@ -190,5 +190,10 @@
     "publisher_url": "https://github.com/AI4AI-for-Anything",
     "repository": "AI4AI-for-Anything/ResearchBoost-Agent",
     "repository_url": "https://github.com/AI4AI-for-Anything/ResearchBoost-Agent"
+  },
+  "catalogHistory": {
+    "first_recorded_on": "2026-10-29",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/966111db5b8f3a1b78ac4a638d9fe6b1362b459d"
   }
 }
