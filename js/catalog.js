@@ -389,6 +389,16 @@
     const baseLessons='<div class="ora-lesson"><h2>'+safe(tr('什么时候使用','When to use'))+'</h2>'+points(local(app.use_when))+'</div>'+
       (study ? '' : '<div class="ora-lesson"><h2>'+safe(tr('值得学习的做法','Transferable lessons'))+'</h2>'+points(local(app.learn))+'</div>'+
         '<div class="ora-lesson"><h2>'+safe(tr('需要避免','What to avoid'))+'</h2>'+points(local(app.avoid))+'</div>');
+    const diagram=e.workflowDiagram;
+    const diagramSrc=local(diagram?.src);
+    const diagramValid=typeof diagramSrc==='string' && /^assets\\/editorials\\/[a-z0-9.-]+\\.svg$/.test(diagramSrc);
+    const overview=diagramValid ? '<section class="ora-workflow-overview" aria-labelledby="ora-workflow-heading">'+
+      '<div class="ora-workflow-heading"><div><span>'+safe(tr('HOW IT WORKS · 原创流程解读','HOW IT WORKS · EDITORIAL DIAGRAM'))+'</span><h2 id="ora-workflow-heading">'+safe(tr('工作流程，一图看懂','Workflow at a glance'))+'</h2></div>'+
+      '<a href="'+safe(diagramSrc)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('打开可缩放 SVG','Open scalable SVG'))+' ↗</a></div>'+
+      '<div class="ora-workflow-viewport" tabindex="0" role="region" aria-label="'+safe(tr('ResearchBoost-Agent 流程图，手机端可左右滚动','ResearchBoost-Agent workflow diagram, scroll horizontally on mobile'))+'">'+
+      '<img src="'+safe(diagramSrc)+'" alt="'+safe(local(diagram.alt))+'" width="1400" height="850" loading="eager" decoding="async"></div>'+
+      '<p class="ora-workflow-caption">'+safe(local(diagram.caption))+' <span>'+safe(tr('移动端可左右滑动查看。','Swipe horizontally on mobile.'))+'</span></p>'+
+      '</section>' : '';
     const isFigure=e.visual?.kind==='verified-paper-figure';
     const isSite=e.visual?.kind==='verified-site-screenshot';
     const rightsNote=isFigure
@@ -401,7 +411,7 @@
       : tr('外部参考或原创分析，按单项版权元数据核对','External reference or authored analysis; review item-specific rights');
     detail.innerHTML='<div class="ora-detail-heading"><p class="ora-eyebrow">'+safe(kind(e))+' / '+safe(e.id)+'</p>'+
       '<h1>'+safe(e.title)+'</h1><p>'+safe(local(e.description))+'</p>'+provenance(e,true)+'</div>'+
-      '<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+trialEvidence+executionGuide+(e.analysisVisual ? '<p class="ora-analysis-link"><a target="_blank" rel="noopener noreferrer" href="'+safe(e.analysisVisual.src)+'">'+safe(tr('查看本站原创结构分析 SVG','View authored structure-analysis SVG'))+' ↗</a></p>' : '')+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.label))+' · '+
+      overview+'<div class="ora-detail-grid"><section class="ora-detail-main"><div class="ora-detail-preview">'+media(e)+'</div>'+trialEvidence+executionGuide+(e.analysisVisual ? '<p class="ora-analysis-link"><a target="_blank" rel="noopener noreferrer" href="'+safe(e.analysisVisual.src)+'">'+safe(tr('查看本站原创结构分析 SVG','View authored structure-analysis SVG'))+' ↗</a></p>' : '')+(e.visual ? '<p class="ora-disclosure">'+safe(local(e.visual.label))+' · '+
         (e.figureIdentity ? '<strong>'+safe(e.figureIdentity.original_name)+'</strong> · '+
           safe(tr('原始作者与来源见资产档案；图片是带出处的缩略预览，不是自制科研结果。','See author/source details; this is an attributed preview, not our experiment.')) :
           safe(tr('请打开官方来源核对原始内容','Open the official source to verify original media')))+

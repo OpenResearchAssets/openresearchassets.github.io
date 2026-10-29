@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850" role="img" aria-labelledby="title desc">
+<title id="title">Training acceleration with a frozen judge</title><desc id="desc">The optimizer may edit code; it cannot rewrite the evaluation criteria.</desc>
+<style>text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif} .small{letter-spacing:.08em}</style>
+<rect x="3" y="3" width="1394" height="844" rx="24" fill="#fcfdff" stroke="#e0e6ed" stroke-width="2"/>
+<text x="93" y="51" fill="#42709f" font-size="16" font-weight="750" text-anchor="start" class="small">RESEARCHBOOST-AGENT / WORKFLOW</text>
+<text x="93" y="98" fill="#15273c" font-size="36" font-weight="800" text-anchor="start" >Training acceleration with a frozen judge</text>
+<text x="93" y="130" fill="#607389" font-size="19" font-weight="450" text-anchor="start" >The optimizer may edit code; it cannot rewrite the evaluation criteria.</text>
+<rect x="93" y="153" width="1214" height="102" rx="20" fill="#ffffff" stroke="#dfe7ef" stroke-width="1.6"/>
+<circle cx="139" cy="203" r="25" fill="#e9f0fa"/><text x="139" y="210" fill="#315e9c" font-size="21" font-weight="750" text-anchor="middle" >01</text>
+<text x="194" y="200" fill="#16283e" font-size="25" font-weight="760" text-anchor="start" >Formulator · Define task</text>
+<text x="194" y="229" fill="#607389" font-size="18" font-weight="450" text-anchor="start" >Inspect code, training command, GPU allocation, baseline and immutable constraints.</text>
+<path d="M700 259 V275" fill="none" stroke="#8a9db2" stroke-width="3" stroke-linecap="round"/><path d="M689 265 L700 276 L711 265" fill="none" stroke="#8a9db2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="93" y="286" width="1214" height="103" rx="20" fill="#f6f9fd" stroke="#bfd2e9" stroke-width="2"/>
+<circle cx="139" cy="336" r="25" fill="#e9f0fa"/><text x="139" y="343" fill="#315e9c" font-size="21" font-weight="750" text-anchor="middle" >02</text>
+<text x="194" y="333" fill="#16283e" font-size="25" font-weight="760" text-anchor="start" >Frozen Judge · Lock validation</text>
+<text x="194" y="362" fill="#607389" font-size="18" font-weight="450" text-anchor="start" >Fix the workload, correctness checks, numerical tolerances and timing protocol first.</text>
+<path d="M700 393 V411" fill="none" stroke="#8a9db2" stroke-width="3" stroke-linecap="round"/><path d="M689 401 L700 412 L711 401" fill="none" stroke="#8a9db2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="93" y="420" width="1214" height="222" rx="20" fill="#f7fafd" stroke="#dfe7ef" stroke-width="1.6"/>
+<circle cx="139" cy="470" r="25" fill="#e9f0fa"/><text x="139" y="477" fill="#315e9c" font-size="21" font-weight="750" text-anchor="middle" >03</text>
+<text x="194" y="467" fill="#16283e" font-size="25" font-weight="760" text-anchor="start" >Optimizer · Codex / Claude Code</text>
+<text x="194" y="494" fill="#607389" font-size="17" font-weight="450" text-anchor="start" >One round: profile the bottleneck, edit a candidate, measure speed and validate.</text>
+<rect x="125" y="518" width="264" height="73" rx="14" fill="#ffffff" stroke="#dfe7ef" stroke-width="1.4"/>
+<text x="143" y="544" fill="#7a91aa" font-size="16" font-weight="700" text-anchor="start" >01</text>
+<text x="143" y="576" fill="#263b55" font-size="22" font-weight="680" text-anchor="start" >Profile</text>
+<path d="M399 555 h12" stroke="#8ca2b9" stroke-width="2.5" stroke-linecap="round"/><path d="M405 550 l6 5 l-6 5" stroke="#8ca2b9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<rect x="420" y="518" width="264" height="73" rx="14" fill="#ffffff" stroke="#dfe7ef" stroke-width="1.4"/>
+<text x="438" y="544" fill="#7a91aa" font-size="16" font-weight="700" text-anchor="start" >02</text>
+<text x="438" y="576" fill="#263b55" font-size="22" font-weight="680" text-anchor="start" >Edit code</text>
+<path d="M694 555 h12" stroke="#8ca2b9" stroke-width="2.5" stroke-linecap="round"/><path d="M700 550 l6 5 l-6 5" stroke="#8ca2b9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<rect x="715" y="518" width="264" height="73" rx="14" fill="#ffffff" stroke="#dfe7ef" stroke-width="1.4"/>
+<text x="733" y="544" fill="#7a91aa" font-size="16" font-weight="700" text-anchor="start" >03</text>
+<text x="733" y="576" fill="#263b55" font-size="22" font-weight="680" text-anchor="start" >Time A/B/A</text>
+<path d="M989 555 h12" stroke="#8ca2b9" stroke-width="2.5" stroke-linecap="round"/><path d="M995 550 l6 5 l-6 5" stroke="#8ca2b9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<rect x="1010" y="518" width="264" height="73" rx="14" fill="#ffffff" stroke="#dfe7ef" stroke-width="1.4"/>
+<text x="1028" y="544" fill="#7a91aa" font-size="16" font-weight="700" text-anchor="start" >04</text>
+<text x="1028" y="576" fill="#263b55" font-size="22" font-weight="680" text-anchor="start" >Validate</text>
+<path d="M260 616 a8 8 0 1 1 7 4" fill="none" stroke="#386b9a" stroke-width="2.6" stroke-linecap="round"/><path d="M266 616 l1 6 l6 -3" fill="none" stroke="#386b9a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="740" y="622" fill="#386b9a" font-size="18" font-weight="550" text-anchor="middle" >If checks fail or the target is unmet: log and continue the next round.</text>
+<path d="M700 647 V665" fill="none" stroke="#8a9db2" stroke-width="3" stroke-linecap="round"/><path d="M689 655 L700 666 L711 655" fill="none" stroke="#8a9db2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="93" y="677" width="1214" height="104" rx="20" fill="#ffffff" stroke="#bdcad9" stroke-width="1.6"/>
+<circle cx="139" cy="729" r="25" fill="#e9f0fa"/><text x="139" y="736" fill="#315e9c" font-size="21" font-weight="750" text-anchor="middle" >04</text>
+<text x="194" y="727" fill="#16283e" font-size="25" font-weight="760" text-anchor="start" >Final acceptance · Independent full check</text>
+<text x="194" y="757" fill="#607389" font-size="18" font-weight="450" text-anchor="start" >Full frozen judge PASS, followed by real end-to-end training or evaluation.</text>
+<text x="700" y="824" fill="#8190a0" font-size="14" font-weight="400" text-anchor="middle" >Editorial diagram · Based on upstream README, goal-mode.md and judge.md · Not a reproduction claim</text>
+</svg>

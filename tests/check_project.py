@@ -67,6 +67,29 @@ for e in entries:
 ids=[e.get('id') for e in entries]
 if any(not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', str(eid)) for eid in ids):errors.append('catalog: unsafe ID; expected kebab-case')
 if len(ids)!=len(set(ids)):errors.append('catalog: duplicate IDs')
+# Workflow diagrams are authored editable SVGs, not upstream figures or screenshots.
+for item in entries:
+    diagram=item.get('workflowDiagram')
+    if not diagram:continue
+    for language in ('zh','en'):
+        rel=diagram.get('src',{}).get(language,'')
+        if not re.fullmatch(r'assets/editorials/[a-z0-9.-]+\\.svg',rel):
+            errors.append(f"{item['id']}: invalid {language} workflow diagram path")
+            continue
+        file=ROOT/rel
+        if not file.is_file():
+            errors.append(f"{item['id']}: missing {language} workflow SVG")
+            continue
+        try:
+            root=ET.parse(file).getroot()
+            nodes=list(root.iter())
+            if len(nodes)<35 or any(n.tag.split('}')[-1]=='image' for n in nodes):
+                errors.append(f"{item['id']}: workflow SVG must contain editable vector elements")
+        except ET.ParseError as err:
+            errors.append(f"{item['id']}: invalid workflow SVG: {err}")
+        if not diagram.get('alt',{}).get(language) or not diagram.get('caption',{}).get(language):
+            errors.append(f"{item['id']}: missing {language} diagram alt or caption")
+
 if 'roborender-model-architecture' in ids:errors.append('unwanted RoboRender model architecture record was reintroduced')
 if 'depth-anything-3-visual' not in ids:errors.append('missing Depth Anything 3 preferred visual')
 for rid in ('roborender-teaser','roborender-site','robodojo-teaser','robodojo-site','supermimic-teaser','supermimic-site','project-homepage-layout','claim-evidence-map'):

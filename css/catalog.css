@@ -331,3 +331,16 @@
 .ora-detail-heading .ora-provenance{font-size:12px;gap:7px 16px}
 .ora-provenance span{align-items:center;flex-wrap:wrap}
 .ora-provenance a{overflow-wrap:anywhere}
+
+/* Full-width, language-aware vector explainer for documented workflows. */
+.ora-workflow-overview{margin:0 0 38px;border:1px solid #dce6f0;border-radius:20px;background:#fff;overflow:hidden}
+.ora-workflow-heading{padding:23px 27px 15px;display:flex;align-items:end;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.ora-workflow-heading span{font-size:11px;font-weight:780;color:#527499;letter-spacing:.1em}
+.ora-workflow-heading h2{font-size:clamp(21px,2.3vw,29px);line-height:1.25;margin:7px 0 0;color:#1e334c;letter-spacing:-.035em}
+.ora-workflow-heading>a{color:#315b84;font-size:13px;font-weight:730;text-decoration:underline;text-underline-offset:3px}
+.ora-workflow-viewport{width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-color:#bbcadc #f1f5fa;background:#fcfdff}
+.ora-workflow-viewport img{display:block;width:100%;min-width:780px;height:auto;object-fit:contain}
+.ora-workflow-viewport:focus-visible{outline:3px solid #557dad;outline-offset:-3px}
+.ora-workflow-caption{margin:0;padding:10px 26px 17px;font-size:12px;line-height:1.7;color:#6a7c90}
+.ora-workflow-caption span{display:none}
+@media(max-width:840px){.ora-workflow-viewport img{min-width:1050px}.ora-workflow-caption span{display:inline}.ora-workflow-heading{padding:17px 18px 12px}.ora-workflow-caption{padding:12px 18px 16px}}

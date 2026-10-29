@@ -159,3 +159,7 @@ python3 tests/browser_offline_smoke.py   # Playwright 与 Chromium 可用时
 所有资产额外维护 `sourceIdentity`：`project-original` 为本站原创，`github-source` 记录原始 URL 中的上游账号与仓库，`external-site` 记录来源站点。这些是**来源归属的证据边界**，绝不能仅凭仓库 owner 猜测自然人作品作者。Gallery 使用 `figureIdentity.credit` 或经一手核验的 `submission.original_author` 展示作品作者，版权和原图链接独立展示。
 
 新入库资产须维护同样的 Git 历史记录（提交后以真实 commit 回填），并同步 `catalog/entries/<id>.json`。为避免循环依赖，记录首次提交的 commit 应确实已包含该资产 ID，禁止预填不存在的提交链接。
+
+## 工具 / Workflow 的一图解读（流程性资产可选）
+
+当工作流的核心价值在于执行顺序、循环或独立验收时，可给目录条目增加 `workflowDiagram`：`src.{zh,en}`、`alt.{zh,en}`、`caption.{zh,en}` 和 `references[]`。两张 `assets/editorials/*.svg` 必须是本站原创矢量图，清楚标注与上游的关系；不能冒充上游官方图或真实实验结果。详情页在长篇使用指南之前以全宽显示流程图，移动端可以横向滚动并打开 SVG 原图。图中的标题、约束与执行循环必须与真实上游文档一致，中文和英文图均应维护。

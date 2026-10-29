@@ -9828,6 +9828,25 @@
         "first_recorded_on": "2026-10-29",
         "committed_by": "Suchenl",
         "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/966111db5b8f3a1b78ac4a638d9fe6b1362b459d"
+      },
+      "workflowDiagram": {
+        "src": {
+          "zh": "assets/editorials/researchboost-agent.svg",
+          "en": "assets/editorials/researchboost-agent.en.svg"
+        },
+        "alt": {
+          "zh": "ResearchBoost-Agent 的四阶段工作流：定义任务、冻结评测器、Agent 循环优化、独立完整验收。",
+          "en": "The four-stage ResearchBoost-Agent workflow: task formulation, frozen judge, agent optimization loop and independent final acceptance."
+        },
+        "caption": {
+          "zh": "本站根据上游 README、goal-mode.md、judge.md 绘制的原创流程解读；不是官方原图，也不是本站独立复现的结果。",
+          "en": "Original editorial diagram based on upstream README, goal-mode.md and judge.md; not an official figure or independently reproduced result."
+        },
+        "references": [
+          "https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/blob/main/README.zh-CN.md",
+          "https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/blob/main/docs/goal-mode.md",
+          "https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/blob/main/docs/judge.md"
+        ]
       }
     }
   ]

@@ -247,6 +247,19 @@ with sync_playwright() as pw:
                 assert page.locator('html').get_attribute('lang')=='zh-CN'
             print('CHECK',label,asset_id)
         # Retain the familiar single-detail alias for compact CI logs.
+        # Training optimization workflow uses a full-width editable diagram, not only text fields.
+        page.goto('https://ora.local/asset.html?id=researchboost-agent',wait_until='load')
+        page.locator('.ora-workflow-overview img').wait_for()
+        workflow=page.locator('.ora-workflow-overview img')
+        assert workflow.count()==1
+        assert workflow.get_attribute('src')=='assets/editorials/researchboost-agent.svg'
+        assert workflow.evaluate('(n)=>n.complete && n.naturalWidth>0')
+        assert page.locator('.ora-workflow-overview').bounding_box()['width']>page.locator('.ora-detail-main').bounding_box()['width']
+        page.locator('.lang-toggle').click()
+        assert page.locator('.ora-workflow-overview img').get_attribute('src')=='assets/editorials/researchboost-agent.en.svg'
+        assert page.locator('.ora-workflow-overview img').evaluate('(n)=>n.complete && n.naturalWidth>0')
+        assert 'Workflow at a glance' in page.locator('.ora-workflow-heading').inner_text()
+        page.locator('.lang-toggle').click()
         page.goto('https://ora.local/asset.html?id=supermimic-site',wait_until='load')
         page.locator('.ora-case-study').wait_for()
         page.screenshot(path=str(ROOT/'tests'/f'_local_detail_{label}.png'),full_page=True)
