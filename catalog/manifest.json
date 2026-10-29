@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "catalog_source": "catalog/index.json",
-  "generated_on": "2026-10-27",
+  "generated_on": "2026-10-29",
   "instructions": {
     "zh": "先匹配此轻量目录，再沿 entry 路径只读取最相关条目。第三方图片默认不可复制，只有单条 rights 明确授权才可复用。",
     "en": "Select from this lightweight manifest, then fetch only relevant entry JSON files. External visuals are not licensed for copying by default; inspect each entry's rights."
@@ -2786,6 +2786,59 @@
       ],
       "description_zh": "在本项目真实资产目录上执行 Notebook 生成与科研绘图试验，发布可复现实验代码、GitHub Actions 运行日志和量化检查，公开区分试运行与 Skill 效果验证。",
       "entry": "catalog/entries/catalog-skill-trials.json"
+    },
+    {
+      "id": "researchboost-agent",
+      "title": "ResearchBoost-Agent · 训练代码自动加速与数值验证",
+      "kind": "workflow",
+      "stages": [
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "ml-systems",
+        "agents",
+        "vision",
+        "robotics"
+      ],
+      "topics": [
+        "research-automation",
+        "software-engineering",
+        "reproducible-experiments",
+        "experiment-design",
+        "skills-ecosystem"
+      ],
+      "tasks": [
+        "training-code-optimization",
+        "gpu-profiling",
+        "reproducible-training",
+        "numerical-equivalence",
+        "coding-agent",
+        "benchmark-validation"
+      ],
+      "keywords": [
+        "ResearchBoost-Agent",
+        "训练加速",
+        "训练代码性能优化",
+        "数值等价性",
+        "GPU profiling",
+        "Codex",
+        "Claude Code",
+        "固定评测器",
+        "实验可复现",
+        "AI 自动优化",
+        "ResearchBoost-Agent",
+        "AI training acceleration",
+        "training optimization agent",
+        "numerical equivalence",
+        "GPU profiling",
+        "Codex",
+        "Claude Code",
+        "frozen judge",
+        "reproducible training"
+      ],
+      "description_zh": "面向真实 AI 训练代码的 Agent 优化工作流：先冻结基线工作负载和评测规则，再让 Codex/Claude Code 分析性能瓶颈、修改代码、测量加速，并检查结构、数值轨迹与端到端结果。附有训练优化 Skills、任务模板与上游作者报告的案例；本站尚未独立运行验证。",
+      "entry": "catalog/entries/researchboost-agent.json"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_on": "2026-10-27",
+  "generated_on": "2026-10-29",
   "default_language": "zh",
   "notice": {
     "zh": "所有第三方论文图、网站图与截图保留原权利；本站未收录其原始图片文件。卡片结构示意为本站原创，不代表原作截图。",
@@ -9629,6 +9629,200 @@
         "origin": "project-original",
         "publisher": "OpenResearchAssets",
         "publisher_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io"
+      }
+    },
+    {
+      "id": "researchboost-agent",
+      "title": "ResearchBoost-Agent · 训练代码自动加速与数值验证",
+      "kind": "workflow",
+      "stages": [
+        "experiments",
+        "evaluation"
+      ],
+      "domains": [
+        "ml-systems",
+        "agents",
+        "vision",
+        "robotics"
+      ],
+      "topics": [
+        "research-automation",
+        "software-engineering",
+        "reproducible-experiments",
+        "experiment-design",
+        "skills-ecosystem"
+      ],
+      "tasks": [
+        "training-code-optimization",
+        "gpu-profiling",
+        "reproducible-training",
+        "numerical-equivalence",
+        "coding-agent",
+        "benchmark-validation"
+      ],
+      "description": {
+        "zh": "面向真实 AI 训练代码的 Agent 优化工作流：先冻结基线工作负载和评测规则，再让 Codex/Claude Code 分析性能瓶颈、修改代码、测量加速，并检查结构、数值轨迹与端到端结果。附有训练优化 Skills、任务模板与上游作者报告的案例；本站尚未独立运行验证。",
+        "en": "An agent-driven workflow for optimizing real AI training code. It freezes the baseline workload and judge before Codex/Claude Code profiles, edits, times and validates candidates, with training optimization skills, task templates and upstream-reported case studies. Not independently reproduced by this catalog."
+      },
+      "keywords": {
+        "zh": [
+          "ResearchBoost-Agent",
+          "训练加速",
+          "训练代码性能优化",
+          "数值等价性",
+          "GPU profiling",
+          "Codex",
+          "Claude Code",
+          "固定评测器",
+          "实验可复现",
+          "AI 自动优化"
+        ],
+        "en": [
+          "ResearchBoost-Agent",
+          "AI training acceleration",
+          "training optimization agent",
+          "numerical equivalence",
+          "GPU profiling",
+          "Codex",
+          "Claude Code",
+          "frozen judge",
+          "reproducible training"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://github.com/AI4AI-for-Anything/ResearchBoost-Agent",
+        "repository": "https://github.com/AI4AI-for-Anything/ResearchBoost-Agent",
+        "documentation": "https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/blob/main/README.zh-CN.md",
+        "usage": "https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/blob/main/docs/run-a-task.md",
+        "goal_template": "https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/blob/main/goal/templates/FORMULATOR_BRIEF.md",
+        "evaluation": "https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/blob/main/docs/judge.md",
+        "results": "https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/tree/main/docs/results"
+      },
+      "rights": {
+        "reuse": "reference-only; no root LICENSE detected at review; check per-file/upstream licenses before copying, modifying or redistributing code",
+        "preview": "external-repository-text-card",
+        "third_party_media": "none; no third-party images/logo copied"
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "已有可运行的模型训练或评测仓库，希望在不改变科学任务定义的前提下优化 GPU 时间。",
+            "愿意先固定训练命令、数据、精度约束、对照实验和验收规则，再允许 Agent 改动训练实现。"
+          ],
+          "en": [
+            "You have a runnable model training/evaluation repository and want to reduce GPU time without changing the scientific workload.",
+            "You can freeze commands, data, numerical constraints, controls and acceptance rules before allowing code edits."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "用 Codex 或 Claude Code 在 Linux GPU 主机上启动；先由 Formulator 检查代码、GPU、训练负载和数值约束，搭建基线与冻结的 bench/judge。",
+            "优化会话按 Profile → 修改 → 计时 → 数值检查 → 记录循环进行；使用独立监督和可恢复会话。",
+            "正式验收检查结构/数据等价、真实加速收益、逐位一致性或多随机种子统计轨迹；最后用真实端到端训练或评测复核。"
+          ],
+          "en": [
+            "Start Codex or Claude Code on a Linux GPU host; let the formulator inspect the repository, GPUs, workload and numeric constraints, then freeze baseline and judge.",
+            "Use the profile → edit → time → validate → log loop with separate supervision and resumable sessions.",
+            "Accept only after structure/data checks, measured speedup, bitwise or paired-seed trajectory checks, and a real end-to-end run."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "上游 README 报告跨 12 个项目、5 个领域的加速结果，不能作为本站独立复现或任意项目的性能保证。",
+            "短轨迹等价性无法证明长时间训练收敛、最终精度完全相同；仅测稳态 step-time 也不能覆盖启动与预处理成本。",
+            "bubblewrap 不可用时会退化为直连模式，失去文件系统隔离；不要在未经审计的敏感训练环境中直接开放修改权限。",
+            "当前根目录未见统一 LICENSE；复制代码、改编或二次分发前核对各文件及依赖的授权。"
+          ],
+          "en": [
+            "Upstream reports 12 projects across five domains; these are not independent reproductions or universal speedup guarantees.",
+            "Short trajectory agreement cannot prove identical long-run convergence; steady-state step timing excludes some setup and preprocessing costs.",
+            "Without bubblewrap the runner may fall back to direct mode without filesystem isolation; review permissions before use on sensitive hosts.",
+            "No top-level LICENSE was found at review; inspect per-file and dependency licenses before reuse."
+          ]
+        }
+      },
+      "execution": {
+        "inputs": {
+          "zh": [
+            "可运行的训练仓库、基线命令、数据/权重位置、GPU 预算、训练精度与不可修改约束。"
+          ],
+          "en": [
+            "Runnable training repository and baseline command, data/weights, GPU budget, precision and non-negotiable constraints."
+          ]
+        },
+        "outputs": {
+          "zh": [
+            "候选优化代码与开关、性能分析、固定评测报告 check.json、迭代日志 WORK_LOG.md 和最终验收结论。"
+          ],
+          "en": [
+            "Optimized candidate with switches, profiles, frozen-judge check.json, WORK_LOG.md iterations and a final acceptance verdict."
+          ]
+        },
+        "requirements": {
+          "zh": [
+            "Linux + NVIDIA GPU；可用的 Codex 或 Claude Code；可访问训练环境/权重/数据；claw-orchestrator；建议安装 bubblewrap 用于隔离（缺失时需审查直接模式风险）。"
+          ],
+          "en": [
+            "Linux with NVIDIA GPUs, Codex or Claude Code access, workload dependencies/assets, claw-orchestrator; bubblewrap recommended for isolation (review direct-mode risks)."
+          ]
+        },
+        "steps": {
+          "zh": [
+            "在训练仓库启动 Codex/Claude Code，粘贴：用 ResearchBoost-Agent（https://github.com/AI4AI-for-Anything/ResearchBoost-Agent）加速我的训练。把它克隆到我的仓库之外，从 goal/templates/FORMULATOR_BRIEF.md 第 0.5 节开始执行。",
+            "确认训练命令、GPU 分配、基线精度和哪些参数必须保持一致；先由 Agent 构建并冻结评测器。",
+            "只在独立工作区执行优化循环，审查候选修改与可恢复的执行记录。",
+            "要求完整 bench.py check 通过，再跑真实端到端任务确认收益。"
+          ],
+          "en": [
+            "In your training repository, ask Codex/Claude Code to clone ResearchBoost-Agent outside your repository and follow goal/templates/FORMULATOR_BRIEF.md §0.5.",
+            "Confirm training command, GPU allocation, baseline precision and immutable constraints; freeze the evaluator first.",
+            "Run optimization in a separate workspace and inspect candidate diffs and resumable logs.",
+            "Require a full bench.py check and independently rerun the real end-to-end workload."
+          ]
+        },
+        "checks": {
+          "zh": [
+            "固定评测器哈希与训练入口，确认同一工作负载且基线无漂移；拒绝通过减少训练步骤、改变同步或破坏梯度制造的假加速。",
+            "核实 Gate 0 结构 → Gate 1 真实收益 → Gate 2 逐位 → Gate 3 配对随机种子统计等价；数值容差 δ 必须在候选评测前冻结。",
+            "跟踪总 GPU-hours、最终训练效果、稳态/端到端成本差异，明确上游案例与本站验证的区别。"
+          ],
+          "en": [
+            "Freeze judge hash and workload; reject fake gains from fewer steps, changed synchronization or broken gradients.",
+            "Check Gate 0 structure → Gate 1 benefit → Gate 2 bitwise → Gate 3 paired-seed statistical equivalence, with δ fixed before judging candidates.",
+            "Track GPU-hours, final training outcome and step-time versus end-to-end cost; separate upstream claims from local evidence."
+          ]
+        },
+        "scope": "upstream-documentation-and-source-reviewed-not-locally-executed",
+        "source_checked_on": "2026-10-29"
+      },
+      "curation": {
+        "track": "popular",
+        "type": "workflow",
+        "github_repo": "AI4AI-for-Anything/ResearchBoost-Agent",
+        "stars_snapshot": 171,
+        "stars_checked_on": "2026-10-29",
+        "verification": "official-repository-and-documentation-reviewed-not-locally-tested",
+        "selection_reason": {
+          "zh": "针对训练代码加速提供可执行的 Agent 优化闭环与冻结数值验证；171 Stars 为当日上游仓库关注量快照，不是效果证明，早期项目的真实普及程度仍待观察。",
+          "en": "Provides an actionable agent optimization loop and frozen numerical checks for training code. The 171 GitHub stars are a dated repository snapshot, not evidence of performance or widespread adoption."
+        },
+        "editorial_added_on": "2026-10-29"
+      },
+      "submission": {
+        "github": "Suchenl",
+        "added_on": "2026-10-29",
+        "original_author": "AI4AI-for-Anything",
+        "issue_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/3"
+      },
+      "previewStyle": "workflow",
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "AI4AI-for-Anything",
+        "publisher_url": "https://github.com/AI4AI-for-Anything",
+        "repository": "AI4AI-for-Anything/ResearchBoost-Agent",
+        "repository_url": "https://github.com/AI4AI-for-Anything/ResearchBoost-Agent"
       }
     }
   ]
