@@ -5,6 +5,7 @@ from html.parser import HTMLParser
 from urllib.parse import urlparse
 import re
 import json
+from datetime import date, timedelta
 import subprocess
 import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
@@ -511,7 +512,18 @@ if 'data/findings.json' not in findings_js:
 for entry in entries:
     history=entry.get('catalogHistory',{})
     ident=entry.get('sourceIdentity',{})
-    if not re.fullmatch(r'2026-10-(24|25|26|27)',history.get('first_recorded_on','')):
+    # Validate new and historical records without freezing the acceptable dates to the
+    # initial October intake. Git history, not this field alone, is the provenance.
+    recorded = history.get('first_recorded_on', '')
+    try:
+        indexed_on = date.fromisoformat(recorded)
+        valid_index_date = (
+            recorded == indexed_on.isoformat()
+            and date(2026, 10, 24) <= indexed_on <= date.today() + timedelta(days=1)
+        )
+    except (TypeError, ValueError):
+        valid_index_date = False
+    if not valid_index_date:
         errors.append(f"{entry['id']}: unverified first-indexed date")
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9-]{0,38}',history.get('committed_by','')):
         errors.append(f"{entry['id']}: missing Git commit account")
