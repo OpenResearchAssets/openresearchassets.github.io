@@ -72,7 +72,7 @@
       (!owner && src.source_host ? '<dt>'+safe(tr('来源网站','Source website'))+'</dt><dd>'+safe(src.source_host)+'</dd>' : '')+
       (entry.year ? '<dt>'+safe(tr('作品关联年份','Reference year'))+'</dt><dd>'+safe(entry.year)+'</dd>' : '')+
       (entry.curation?.stars_checked_on ? '<dt>'+safe(tr('Stars 核对日','Stars checked on'))+'</dt><dd>'+safe(entry.curation.stars_checked_on)+'</dd>' : '')+
-      (entry.execution?.source_checked_on ? '<dt>'+safe(tr('Skill 源文件核对日','Skill source checked on'))+'</dt><dd>'+safe(entry.execution.source_checked_on)+'</dd>' : '')+
+      (entry.execution?.source_checked_on ? '<dt>'+safe(entry.execution?.source_file_sha ? tr('Skill 源文件核对日','Skill source checked on') : tr('上游资料核对日','Upstream docs checked on'))+'</dt><dd>'+safe(entry.execution.source_checked_on)+'</dd>' : '')+
       (originalMedia && originalMedia!==safeUrl(entry.links?.officialFigure) ? '<dt>'+safe(tr('预览素材出处','Preview media source'))+'</dt><dd><a href="'+safe(originalMedia)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('打开上游原图','Open original image'))+' ↗</a></dd>' : '')+
       '<dt>'+safe(tr('来源身份说明','Attribution scope'))+'</dt><dd>'+safe(evidenceScope)+'</dd>'+
       (entry.catalogHistory?.first_recorded_on ? '<dt>'+safe(tr('首次入库日期口径','Indexing date definition'))+'</dt><dd>'+safe(tr('根据公开目录的首次 Git 提交核对；不是论文发表或第三方投稿日期。','Based on the first public catalog Git commit, not the paper publication date or third-party submission.'))+'</dd>' : '');
@@ -371,17 +371,18 @@
       '<section><h3>'+safe(tr('迁移到自己论文的步骤','How to transfer the design'))+'</h3>'+points(local(study.reuseSteps))+'</section></div>'+
       '<div class="ora-case-check"><h3>'+safe(tr('事实、风险与授权检查','Scientific and rights checks'))+'</h3>'+points(local(study.verification))+'</div></section>' : '';
     const exec=e.execution;
+    const sourceIsSkill=Boolean(exec?.source_file_sha);
     const executionGuide=exec ? '<section class="ora-execution"><div class="ora-execution-head"><span>'+safe(e.trial?tr('有公开试运行 · 未自动调用 Skill','SOURCE-GUIDED TRIAL · NO NATIVE SKILL INVOCATION'):tr('来源已核实 · 未实际运行','SOURCE REVIEWED · NOT EXECUTED'))+'</span>'+
       '<h2>'+safe(tr('如何使用这项能力','How to use this capability'))+'</h2>'+
-      '<p>'+safe(tr('这是一份根据上游 SKILL.md 整理的用法提要，不是已安装的 Skill；请在执行前复核原文、当前依赖、权限与许可。','This is a curated note from the original SKILL.md, not an installed skill. Recheck current dependencies, permissions and license.'))+'</p></div>'+
+      '<p>'+safe(sourceIsSkill ? tr('这是一份根据上游 SKILL.md 整理的用法提要，不是已安装的 Skill；请在执行前复核原文、当前依赖、权限与许可。','This is a curated note from the original SKILL.md, not an installed skill. Recheck current dependencies, permissions and license.') : tr('这是一份根据上游仓库文档整理的工作流指南，并非本站独立运行结果。执行前请核对原始说明、依赖、权限与许可。','This workflow guide summarizes upstream repository documentation; it is not a locally executed result. Verify original instructions, dependencies, permissions and license before use.'))+'</p></div>'+
       '<div class="ora-execution-grid"><div><h3>'+safe(tr('需要准备','Inputs'))+'</h3>'+points(local(exec.inputs))+'</div>'+
       '<div><h3>'+safe(tr('预期产出','Outputs'))+'</h3>'+points(local(exec.outputs))+'</div>'+
       '<div><h3>'+safe(tr('运行条件','Requirements'))+'</h3>'+points(local(exec.requirements))+'</div>'+
       '<div><h3>'+safe(tr('如何验收','Checks'))+'</h3>'+points(local(exec.checks))+'</div></div>'+
       '<h3>'+safe(tr('操作步骤','Steps'))+'</h3><ol class="ora-execution-steps">'+(local(exec.steps)||[]).map(v=>'<li>'+safe(v)+'</li>').join('')+'</ol>'+
-      '<div class="ora-execution-actions">'+link(e.links?.source,tr('打开完整 SKILL.md','Read full SKILL.md'))+
+      '<div class="ora-execution-actions">'+link(e.links?.source,sourceIsSkill ? tr('打开完整 SKILL.md','Read full SKILL.md') : tr('查看上游仓库','Open upstream repository'))+
       '<button type="button" id="ora-copy-execution">'+safe(tr('复制使用说明','Copy usage brief'))+'</button></div>'+
-      '<p class="ora-execution-provenance">'+safe(tr('上游文件 Blob SHA','Upstream file blob SHA'))+': <code>'+safe(exec.source_file_sha||'')+'</code> · '+safe(exec.source_checked_on||'')+'</p></section>' : '';
+      (sourceIsSkill ? '<p class="ora-execution-provenance">'+safe(tr('上游文件 Blob SHA','Upstream file blob SHA'))+': <code>'+safe(exec.source_file_sha)+'</code> · '+safe(exec.source_checked_on||'')+'</p>' : '<p class="ora-execution-provenance">'+safe(tr('官方仓库资料核对日','Upstream documentation reviewed on'))+': '+safe(exec.source_checked_on||'')+'</p>')+'</section>' : '';
     const trialEvidence=e.trial?.run_url ? '<aside class="ora-trial-evidence"><h3>'+safe(tr('公开试运行证据','Public trial evidence'))+'</h3>'+
       '<p>'+safe(local(e.trial.summary))+'</p><p>'+safe(tr('这不是 Skill 安装证据，也不是和无 Skill 基线的受控比较。','Not proof of installing a Skill, nor a controlled comparison with a no-Skill baseline.'))+'</p>'+
       '<a href="'+safe(e.trial.run_url)+'" target="_blank" rel="noopener noreferrer">'+safe(tr('查看实际 CI 记录与下载产物','View real CI run and outputs'))+' ↗</a></aside>' : '';
