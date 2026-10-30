@@ -44,6 +44,7 @@
       [path('quality.html'),'质量自查','Quality check'],
       [path('principles.html'),'设计原则','Principles'],
       [path('for-agents/'),'给 AI 使用','For AI'],
+      ['https://github.com/OpenResearchAssets/openresearchassets.github.io','GitHub 仓库','GitHub repository'],
       [path('docs/ASSET_POLICY.md'),'版权与来源','Licensing'],
       ['https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/new?template=asset-removal.yml','撤除与纠错','Removal & corrections']
     ];
@@ -51,7 +52,7 @@
       '" alt="" width="24" height="24"><span>OpenResearchAssets</span></a>'+
       '<span class="ora-footer-motto">'+escapeHtml(translate('精选好图与实用研究资产','Research visuals & useful workflows'))+'</span>'+
       '<nav class="ora-footer-links" aria-label="'+escapeHtml(translate('更多信息','More information'))+'">'+
-      secondary.map(([href,zh,en])=>'<a href="'+escapeHtml(href)+'">'+escapeHtml(translate(zh,en))+'</a>').join('')+'</nav>';
+      secondary.map(([href,zh,en])=>'<a href="'+escapeHtml(href)+'"'+(href.startsWith('https://')?' target="_blank" rel="noopener noreferrer"':'')+'>'+escapeHtml(translate(zh,en))+'</a>').join('')+'</nav>';
   }
   function setOpen(open){
     button.setAttribute('aria-expanded',String(open));

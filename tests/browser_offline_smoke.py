@@ -53,7 +53,13 @@ with sync_playwright() as pw:
         assert page.locator('h1').inner_text().startswith('收藏真正出色的图')
         assert [a.get_attribute('href') for a in page.locator('#site-nav a').all()]==['index.html','community.html','findings.html','contribute.html']
         assert page.locator('.nav-cta').first.get_attribute('href')=='contribute.html'
-        assert page.locator('.ora-footer-links a').count()==5
+        source=page.locator('.hero-actions .repo-source')
+        assert source.count()==1
+        assert source.get_attribute('href')=='https://github.com/OpenResearchAssets/openresearchassets.github.io'
+        assert source.get_attribute('target')=='_blank'
+        assert 'GitHub 仓库' in source.inner_text()
+        assert page.locator('.ora-footer-links a[href="https://github.com/OpenResearchAssets/openresearchassets.github.io"]').count()==1
+        assert page.locator('.ora-footer-links a').count()==6
         assert page.locator('.ora-main-path').count()==2
         assert page.locator('.ora-main-path').nth(0).get_attribute('href')=='#gallery'
         assert page.locator('.ora-main-path').nth(1).get_attribute('href')=='#skills'
@@ -140,6 +146,8 @@ with sync_playwright() as pw:
         assert page.locator('html').get_attribute('lang')=='en'
         assert page.locator('h1').inner_text().startswith('Remarkable research figures')
         assert 'Beautiful research visuals' in page.locator('.ora-main-paths').inner_text()
+        assert 'GitHub repository' in page.locator('.repo-source').inner_text()
+        assert 'GitHub repository' in page.locator('.ora-footer-links').inner_text()
         assert 'Visit official site' in page.locator('.ora-featured-site').first.inner_text()
         assert 'Popular open-source picks' in page.locator('#skills').inner_text()
         assert 'Rights holders may request removal' in page.locator('.ora-rights-notice').inner_text()
@@ -355,7 +363,7 @@ with sync_playwright() as pw:
             page.set_content(page_html(name),wait_until='load')
             assert page.locator('html').get_attribute('lang')=='zh-CN'
             assert page.locator('#site-nav a').count()==4
-            assert page.locator('.ora-footer-links a').count()==5
+            assert page.locator('.ora-footer-links a').count()==6
             assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+2'),name
             if name=='contribute.html':
                 assert page.locator('.ora-submit-cta').count()==1
