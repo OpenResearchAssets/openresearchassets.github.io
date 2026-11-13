@@ -194,5 +194,10 @@
     "added_on": "2026-11-13",
     "original_author": "Swann Bessa and e-means collaborators",
     "issue_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/4"
+  },
+  "catalogHistory": {
+    "first_recorded_on": "2026-11-13",
+    "committed_by": "Suchenl",
+    "commit_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/commit/0e2370c668839e5821960a7c567e0d372065ccbf"
   }
 }
