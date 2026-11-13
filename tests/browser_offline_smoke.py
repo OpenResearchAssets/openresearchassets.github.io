@@ -103,7 +103,9 @@ with sync_playwright() as pw:
         assert '异议' in page.locator('.ora-rights-notice').inner_text()
         assert 'asset-removal.yml' in page.locator('.ora-rights-notice a').get_attribute('href')
         assert page.locator('.ora-resource-card').count()==9
-        assert page.locator('.ora-featured-site').count()==2
+        assert page.locator('.ora-featured-site').count()==sum(e['kind']=='website-reference' and e.get('curation',{}).get('visual_category')=='project-site' for e in catalog_data['entries'])
+        assert page.locator('.ora-featured-site').filter(has_text='e-means').count()==1
+        assert page.locator('.ora-featured-site').filter(has_text='e-means').locator('.ora-featured-preview').get_attribute('href')=='https://e-means.github.io/'
         assert page.locator('.ora-featured-site').nth(0).locator('.ora-open-source').get_attribute('href')=='https://nerfies.github.io/'
         assert page.locator('.ora-featured-site').nth(1).locator('.ora-open-source').get_attribute('href')=='https://hypernerf.github.io/'
         assert page.locator('.ora-featured-site').nth(0).locator('.ora-featured-preview').get_attribute('href')=='https://nerfies.github.io/'
