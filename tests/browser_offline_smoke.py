@@ -133,7 +133,9 @@ with sync_playwright() as pw:
         page.locator('#catalog-more').click()
         assert page.locator('.ora-resource-card').count()==sum(e['kind'] in ('visual-reference','website-reference','editable-template') or (e['kind']=='resource-index' and e['id']!='research-skills-directory') for e in catalog_data['entries'])
         page.locator('#facet-kind').select_option('website-reference')
-        assert page.locator('.ora-resource-card').count()==5
+        assert page.locator('.ora-resource-card').count()==sum(e['kind']=='website-reference' for e in catalog_data['entries'])
+        assert page.locator('.ora-resource-card').filter(has_text='e-means').count()==1
+        assert page.locator('.ora-resource-card').filter(has_text='e-means').locator('.ora-resource-visual').get_attribute('href')=='https://e-means.github.io/'
         assert page.locator('.ora-resource-card').filter(has_text='Nerfies').locator('.ora-resource-visual').get_attribute('href')=='https://nerfies.github.io/'
         assert page.locator('.ora-resource-card').filter(has_text='HyperNeRF').locator('.ora-resource-content h3 a').get_attribute('href')=='https://hypernerf.github.io/'
         assert page.locator('.ora-resource-card').filter(has_text='Nerfies').locator('.ora-open-source').get_attribute('target')=='_blank'

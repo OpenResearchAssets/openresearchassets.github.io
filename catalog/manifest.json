@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "catalog_source": "catalog/index.json",
-  "generated_on": "2026-10-29",
+  "generated_on": "2026-11-13",
   "instructions": {
     "zh": "先匹配此轻量目录，再沿 entry 路径只读取最相关条目。第三方图片默认不可复制，只有单条 rights 明确授权才可复用。",
     "en": "Select from this lightweight manifest, then fetch only relevant entry JSON files. External visuals are not licensed for copying by default; inspect each entry's rights."
@@ -2839,6 +2839,53 @@
       ],
       "description_zh": "面向真实 AI 训练代码的 Agent 优化工作流：先冻结基线工作负载和评测规则，再让 Codex/Claude Code 分析性能瓶颈、修改代码、测量加速，并检查结构、数值轨迹与端到端结果。附有训练优化 Skills、任务模板与上游作者报告的案例；本站尚未独立运行验证。",
       "entry": "catalog/entries/researchboost-agent.json"
+    },
+    {
+      "id": "e-means-project-site",
+      "title": "e-means · 可交互的聚类算法研究主页",
+      "kind": "website-reference",
+      "stages": [
+        "communication"
+      ],
+      "domains": [
+        "ml-systems",
+        "general"
+      ],
+      "topics": [
+        "project-publishing",
+        "scientific-visualization"
+      ],
+      "tasks": [
+        "project-website",
+        "interactive-demo",
+        "algorithm-explainer",
+        "results-storytelling",
+        "scientific-communication"
+      ],
+      "keywords": [
+        "e-means",
+        "k-means",
+        "Lloyd",
+        "科研项目主页",
+        "交互演示",
+        "聚类",
+        "研究叙事",
+        "Playground",
+        "结果可视化",
+        "Meta FAIR",
+        "e-means",
+        "k-means",
+        "Lloyd",
+        "research project site",
+        "interactive demonstration",
+        "clustering",
+        "scientific storytelling",
+        "playground",
+        "interactive results",
+        "Meta FAIR"
+      ],
+      "description_zh": "用 Lloyd k-means 与 e-means 的同步可播放聚类过程和 MSE 曲线建立直觉，再衔接公式推导、消融实验、结果地图及可调参数的 Playground；预览为官方讲解视频海报，并非整页截图。",
+      "entry": "catalog/entries/e-means-project-site.json"
     }
   ]
 }

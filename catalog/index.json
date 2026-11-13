@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_on": "2026-10-29",
+  "generated_on": "2026-11-13",
   "default_language": "zh",
   "notice": {
     "zh": "所有第三方论文图、网站图与截图保留原权利；本站未收录其原始图片文件。卡片结构示意为本站原创，不代表原作截图。",
@@ -9847,6 +9847,204 @@
           "https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/blob/main/docs/goal-mode.md",
           "https://github.com/AI4AI-for-Anything/ResearchBoost-Agent/blob/main/docs/judge.md"
         ]
+      }
+    },
+    {
+      "id": "e-means-project-site",
+      "title": "e-means · 可交互的聚类算法研究主页",
+      "kind": "website-reference",
+      "stages": [
+        "communication"
+      ],
+      "domains": [
+        "ml-systems",
+        "general"
+      ],
+      "topics": [
+        "project-publishing",
+        "scientific-visualization"
+      ],
+      "tasks": [
+        "project-website",
+        "interactive-demo",
+        "algorithm-explainer",
+        "results-storytelling",
+        "scientific-communication"
+      ],
+      "description": {
+        "zh": "用 Lloyd k-means 与 e-means 的同步可播放聚类过程和 MSE 曲线建立直觉，再衔接公式推导、消融实验、结果地图及可调参数的 Playground；预览为官方讲解视频海报，并非整页截图。",
+        "en": "A research explainer that opens with a synchronized, playable Lloyd-versus-e-means clustering comparison and loss curves, then connects equations, ablations, results maps and a parameterized playground. Preview is the official explainer-video poster, not a site screenshot."
+      },
+      "keywords": {
+        "zh": [
+          "e-means",
+          "k-means",
+          "Lloyd",
+          "科研项目主页",
+          "交互演示",
+          "聚类",
+          "研究叙事",
+          "Playground",
+          "结果可视化",
+          "Meta FAIR"
+        ],
+        "en": [
+          "e-means",
+          "k-means",
+          "Lloyd",
+          "research project site",
+          "interactive demonstration",
+          "clustering",
+          "scientific storytelling",
+          "playground",
+          "interactive results",
+          "Meta FAIR"
+        ]
+      },
+      "year": "2026",
+      "language": "zh+en",
+      "links": {
+        "source": "https://e-means.github.io/",
+        "paper": "https://arxiv.org/abs/2611.09501",
+        "repository": "https://github.com/e-means/e-means.github.io",
+        "officialFigure": "https://github.com/e-means/e-means.github.io/blob/main/assets/emeans_video_v3_poster.jpg",
+        "playground": "https://e-means.github.io/playground.html",
+        "results_map": "https://e-means.github.io/results-map.html",
+        "video": "https://e-means.github.io/video.html",
+        "code": "https://github.com/facebookresearch/faiss/tree/main/faiss/contrib/e_means"
+      },
+      "rights": {
+        "reuse": "reference-only",
+        "preview": "external-linked-reference",
+        "third_party_media": "externally-linked-not-relicensed",
+        "source_image_url": "https://raw.githubusercontent.com/e-means/e-means.github.io/main/assets/emeans_video_v3_poster.jpg",
+        "attribution": "Swann Bessa et al.; e-means project website / Meta FAIR",
+        "licensing_note": "The upstream repository MIT license covers site JavaScript only, explicitly excluding text, figures, images and video. Media is linked to the creator-hosted URL, not copied or relicensed here."
+      },
+      "applicability": {
+        "use_when": {
+          "zh": [
+            "设计需要直观解释算法行为、迭代收敛或性能对比的科研项目主页。",
+            "希望把静态结果曲线升级为可交互实验，让读者自行观察参数影响。"
+          ],
+          "en": [
+            "Designing a research site that explains algorithm behavior, iterative convergence or performance differences.",
+            "Turning static result plots into interactive demonstrations where readers can explore parameter changes."
+          ]
+        },
+        "learn": {
+          "zh": [
+            "让双栏对照动画与同一时间轴上的误差曲线共同承担首屏论证，尽量减少读者在图表之间来回猜测。",
+            "把入门演示与深入交互分层：首屏可快速观看，独立 Playground 开放数据规模、簇数、轮数与随机种子等控制。",
+            "按“核心主张 → 可视化直觉 → 更新规则与机制 → 实验和消融 → 代码/论文”组织长篇技术内容。"
+          ],
+          "en": [
+            "Pair synchronized side-by-side animations with loss curves in the opening evidence, reducing the cognitive gap between motion and metrics.",
+            "Separate a lightweight first-impression demo from the configurable playground with data size, cluster count, epochs and seeds.",
+            "Sequence claim → visual intuition → algorithmic mechanics → evaluations and ablations → code/paper."
+          ]
+        },
+        "avoid": {
+          "zh": [
+            "官方视频海报不是网页首屏截图，更不能代表可实际操作的 Playground；交互要在作者网站核验。",
+            "网站报告的加速幅度由任务、硬件及对比基线决定；读者不能把作者报告当作本站独立复现。",
+            "上游 MIT 许可证仅覆盖 JavaScript，文字、图像和视频没有相同的复制授权；仅做来源明确的链接式参考。"
+          ],
+          "en": [
+            "The official video poster is not a screenshot or proof that the playground works; verify interactions on the original site.",
+            "Reported acceleration depends on workload, hardware and baselines; the catalog has not independently reproduced the results.",
+            "The site's MIT license covers JavaScript only, not text, images or video; this entry uses attributed links rather than copying media."
+          ]
+        }
+      },
+      "visual": {
+        "kind": "external-reference-image",
+        "src": "https://raw.githubusercontent.com/e-means/e-means.github.io/main/assets/emeans_video_v3_poster.jpg",
+        "alt": {
+          "zh": "e-means 官方讲解视频海报：红色 Lloyd k-means 与蓝色 e-means 的二维聚类/Voronoi 单元并列，右侧为训练损失图；该素材不是主页首屏截图。",
+          "en": "Official e-means explainer-video poster comparing red Lloyd k-means and blue e-means 2D Voronoi clustering, with a training-loss plot on the right; not a homepage screenshot."
+        },
+        "label": {
+          "zh": "原站讲解视频海报 · 非网页截图",
+          "en": "OFFICIAL EXPLAINER POSTER · NOT SITE SCREENSHOT"
+        }
+      },
+      "figureIdentity": {
+        "type": "project-website-media",
+        "original_name": "Official e-means explainer-video poster · assets/emeans_video_v3_poster.jpg (not the first-viewport screenshot)",
+        "original_source": "https://github.com/e-means/e-means.github.io/blob/main/assets/emeans_video_v3_poster.jpg",
+        "capture_date": "2026-11-13",
+        "credit": "Swann Bessa et al.; e-means project website / Meta FAIR",
+        "modifications": "No cropping or modifications; the catalog hotlinks to the original repository-hosted image, without copying or relicensing media."
+      },
+      "caseStudy": {
+        "insight": {
+          "zh": "这个主页的亮点不是单张漂亮图，而是把“算法比基线快多少”转化为读者能直接观察和操纵的过程：同步聚类动画解释发生了什么，loss 曲线解释收敛到哪里，Playground 再让读者验证不同设置下的行为。",
+          "en": "The strength is not a decorative figure but a manipulable explanation of the speed–quality claim: synchronized clustering animations show what changes, loss curves show where it converges, and the playground exposes configurable conditions."
+        },
+        "composition": {
+          "zh": [
+            "首屏使用醒目的定量主张，并将 Lloyd/e-means 双栏动态聚类与同步 MSE 曲线并列，视觉上先回答“更快且精度如何”。",
+            "正文不是堆图，而是把经典 k-means、EMA 更新、scaling laws、dead-cluster revival 等机制逐节解释，配合公式与对应的图形证据。",
+            "Playground、Results Map、视频、Paper、Code 分成不同入口：快速体验与实验细查互不干扰。",
+            "整体采用克制的留白、少量强调色和信息层级，视觉编码与算法对照一致。"
+          ],
+          "en": [
+            "Lead with a quantified claim, then align Lloyd/e-means animations and the live MSE trace to immediately clarify speed and convergence.",
+            "Structure the long-form explanation around k-means, EMA updates, scaling laws and dead-cluster revival, pairing each mechanism with relevant evidence.",
+            "Separate Playground, Results Map, video, Paper and Code so quick exploration and deep checking have distinct paths.",
+            "Use restrained whitespace, a small consistent palette and clear hierarchy, preserving color identity across comparisons."
+          ]
+        },
+        "reuseSteps": {
+          "zh": [
+            "先选一个最能体现核心贡献的可视化变量，设计“基线 vs 方法”同步播放与统一指标轴。",
+            "首屏只展示能够即时理解的最小演示；完整参数选择、复现实验和数据集切换放进独立 Playground。",
+            "将论文阅读路线拆成“主张 → 直觉 → 机制 → 评估 → 复现”；每个关键结论附近提供原始实验口径或论文锚点。",
+            "为所有图、视频、数据表提供论文和代码来源链接，并在移动端控制计算量与交互复杂度。"
+          ],
+          "en": [
+            "Choose one decisive behavior, with synchronized baseline–method playback and a shared metric axis.",
+            "Use a minimal immediately legible hero demo; move full parameter control, reruns and dataset variation into a dedicated playground.",
+            "Organize claim → intuition → mechanism → evaluation → reproducibility, keeping evidence near the claim it supports.",
+            "Link media and results to source context, and bound browser compute and interaction complexity on mobile."
+          ]
+        },
+        "verification": {
+          "zh": [
+            "此条目使用作者原仓库中的视频海报作为外部预览，不是网页首屏截图；动画、Playground 和结果地图仍需从原站打开。",
+            "页面列出的 10–45× GPU 与 8–15× CPU 等数值属于作者在特定基线与规模下报告的结果；本站未运行复现或独立验证。",
+            "上游 README 明确 MIT 仅覆盖网站 JavaScript，不包括文字、图表、照片或视频；不得直接复制海报和网页素材到其他项目。"
+          ],
+          "en": [
+            "The preview links the author-hosted video poster, not a first-viewport screenshot; animations, playground and results map must be explored on the live website.",
+            "The site's 10–45× GPU and 8–15× CPU claims are upstream benchmark reports under specific setups, not independently reproduced by this catalog.",
+            "The upstream README explicitly limits MIT to site JavaScript and excludes text, figures, images and video; do not copy the media into another project."
+          ]
+        }
+      },
+      "curation": {
+        "track": "visual",
+        "visual_category": "project-site",
+        "selected_on": "2026-11-13",
+        "source_verification": "official-project-website-github-repo-and-media-path",
+        "verified_site_section": "Interactive blog's synchronized Lloyd/e-means clustering demo, playground and results; preview from author's video poster (not homepage screenshot)",
+        "editorial_scope": "interactive-scientific-storytelling-visual-evidence",
+        "asset_residency": "external-original-no-hosted-copy"
+      },
+      "previewStyle": "curated-visual",
+      "sourceIdentity": {
+        "origin": "github-source",
+        "publisher": "e-means",
+        "publisher_url": "https://github.com/e-means",
+        "repository": "e-means/e-means.github.io",
+        "repository_url": "https://github.com/e-means/e-means.github.io"
+      },
+      "submission": {
+        "github": "Suchenl",
+        "added_on": "2026-11-13",
+        "original_author": "Swann Bessa and e-means collaborators",
+        "issue_url": "https://github.com/OpenResearchAssets/openresearchassets.github.io/issues/4"
       }
     }
   ]
